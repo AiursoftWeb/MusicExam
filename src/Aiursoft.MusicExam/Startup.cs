@@ -21,6 +21,7 @@ public class Startup : IWebStartup
     {
         // AppSettings.
         services.Configure<AppSettings>(configuration.GetSection("AppSettings"));
+        services.Configure<DataSettings>(configuration.GetSection("DataSettings"));
 
         // Relational database
         var (connectionString, dbType, allowCache) = configuration.GetDbSettings();
@@ -46,6 +47,7 @@ public class Startup : IWebStartup
         // Background job queue
         services.AddSingleton<Services.BackgroundJobs.BackgroundJobQueue>();
         services.AddHostedService<Services.BackgroundJobs.QueueWorkerService>();
+        services.AddHostedService<Services.DataImporter>();
 
         // Controllers and localization
         services.AddControllersWithViews()
