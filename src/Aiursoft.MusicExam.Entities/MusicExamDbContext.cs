@@ -10,6 +10,12 @@ namespace Aiursoft.MusicExam.Entities;
 public abstract class TemplateDbContext(DbContextOptions options) : IdentityDbContext<User>(options), ICanMigrate
 {
     public DbSet<GlobalSetting> GlobalSettings => Set<GlobalSetting>();
+    public DbSet<School> Schools => Set<School>();
+    public DbSet<ExamPaper> ExamPapers => Set<ExamPaper>();
+    public DbSet<Question> Questions => Set<Question>();
+    public DbSet<Option> Options => Set<Option>();
+    public DbSet<ExamPaperSubmission> ExamPaperSubmissions => Set<ExamPaperSubmission>();
+    public DbSet<QuestionSubmission> QuestionSubmissions => Set<QuestionSubmission>();
 
     public virtual  Task MigrateAsync(CancellationToken cancellationToken) =>
         Database.MigrateAsync(cancellationToken);
