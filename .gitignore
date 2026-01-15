@@ -20,4 +20,3 @@ app.db*
 .angular/
 .yarn/
 *.tsbuildinfo
-data/
