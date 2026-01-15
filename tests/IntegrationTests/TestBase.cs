@@ -6,6 +6,7 @@ using Aiursoft.MusicExam.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Linq;
 using static Aiursoft.WebTools.Extends;
 
 namespace Aiursoft.MusicExam.Tests.IntegrationTests;
@@ -36,8 +37,62 @@ public abstract class TestBase
     {
         Server = await AppAsync<Startup>([], port: Port);
         await Server.UpdateDbAsync<TemplateDbContext>();
-        await Server.SeedAsync();
+        await Server.SeedAsync(); // Seeds the default admin user and roles
+        
+        // ============================ Mock Data for Tests (Start) ============================
+        // This section adds fake data specifically for integration tests.
+        // It's separated for easy removal or modification later.
+        using var scope = Server.Services.CreateScope();
+        var dbContext = scope.ServiceProvider.GetRequiredService<TemplateDbContext>();
+        await SeedMockDataAsync(dbContext);
+        // ============================ Mock Data for Tests (End) ============================
+        
         await Server.StartAsync();
+    }
+
+    protected async Task SeedMockDataAsync(TemplateDbContext dbContext)
+    {
+        // Mock School
+        var school = new School { Name = "Test Academy" };
+        await dbContext.Schools.AddAsync(school);
+
+        // Mock Exam Paper
+        var paper = new ExamPaper
+        {
+            Id = 16, // Use the ID 16 which is referenced in AuthorizationTests.cs
+            Title = "Basic Music Theory Exam",
+            School = school
+        };
+        await dbContext.ExamPapers.AddAsync(paper);
+
+        // Mock Question 1 (Multiple Choice)
+        var question1 = new Question
+        {
+            Content = "What note is this?",
+            AssetPath = "[\"/importer-assets/images/note_c.png\"]", // Example asset path
+            Paper = paper,
+            QuestionType = QuestionType.MultipleChoice,
+            Order = 1
+        };
+        await dbContext.Questions.AddAsync(question1);
+
+        await dbContext.Options.AddAsync(new Option { Content = "C", Question = question1, IsCorrect = false, DisplayOrder = 0 });
+        await dbContext.Options.AddAsync(new Option { Content = "D", Question = question1, IsCorrect = true, DisplayOrder = 1 });
+        await dbContext.Options.AddAsync(new Option { Content = "E", Question = question1, IsCorrect = false, DisplayOrder = 2 });
+        await dbContext.Options.AddAsync(new Option { Content = "F", Question = question1, IsCorrect = false, DisplayOrder = 3 });
+
+        // Mock Question 2 (Sight Singing)
+        var question2 = new Question
+        {
+            Content = "Sing this melody (Audio asset).",
+            AssetPath = "[\"/importer-assets/audio/melody.mp3\"]", // Example asset path
+            Paper = paper,
+            QuestionType = QuestionType.SightSinging,
+            Order = 2
+        };
+        await dbContext.Questions.AddAsync(question2);
+        
+        await dbContext.SaveChangesAsync();
     }
 
     [TestCleanup]
