@@ -1,10 +1,10 @@
 using System.Text.Json;
-using Aiursoft.CSTools.Tools;
 using Aiursoft.MusicExam.Configuration;
 using Aiursoft.MusicExam.Models.DataTransferModels;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Aiursoft.MusicExam.Entities;
+using Aiursoft.MusicExam.Services.FileStorage;
 
 namespace Aiursoft.MusicExam.Services;
 
@@ -13,22 +13,19 @@ public class DataImporter : IHostedService
     private readonly ILogger<DataImporter> _logger;
     private readonly IServiceProvider _serviceProvider;
     private readonly DataSettings _dataSettings;
-    private readonly string _webRootPath;
-    private readonly string _importerAssetsFolder;
-    private readonly string _importerAssetsWwwRoot;
+    private readonly StorageService _storageService;
+    private const string AssetBucket = "importer-assets";
 
     public DataImporter(
         ILogger<DataImporter> logger,
         IServiceProvider serviceProvider,
         IOptions<DataSettings> dataSettings,
-        IWebHostEnvironment env)
+        StorageService storageService)
     {
         _logger = logger;
         _serviceProvider = serviceProvider;
         _dataSettings = dataSettings.Value;
-        _webRootPath = env.WebRootPath;
-        _importerAssetsFolder = Path.Combine(_webRootPath, "importer-assets");
-        _importerAssetsWwwRoot = "/importer-assets";
+        _storageService = storageService;
     }
 
     public async Task StartAsync(CancellationToken cancellationToken)
@@ -46,7 +43,7 @@ public class DataImporter : IHostedService
         }
 
         var json = await File.ReadAllTextAsync(indexJsonPath, cancellationToken);
-        var indexData = JsonSerializer.Deserialize<IndexJson>(json);
+        var indexData = JsonSerializer.Deserialize<IndexJson>(json, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
         if (indexData?.Data == null)
         {
             _logger.LogWarning("Data importer: Could not parse index.json. Skipping import.");
@@ -100,13 +97,14 @@ public class DataImporter : IHostedService
                 }
                 
                 var paperJsonContent = await File.ReadAllTextAsync(paperJson, cancellationToken);
-                var paperCategories = JsonSerializer.Deserialize<PaperCategoriesFileDto>(paperJsonContent);
+                var paperCategories = JsonSerializer.Deserialize<PaperCategoriesFileDto>(paperJsonContent, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
                 if (paperCategories?.Data == null)
                 {
                     _logger.LogWarning("Could not parse paper category JSON for {PaperTitle}.", paper.Title);
                     continue;
                 }
 
+                var questionOrder = 0;
                 foreach (var (categoryName, questionGroups) in paperCategories.Data)
                 {
                     foreach (var questionGroup in questionGroups)
@@ -114,39 +112,47 @@ public class DataImporter : IHostedService
                         var questionGroupDir = Path.Combine(paperDir, categoryName, questionGroup.Title);
                         if (!Directory.Exists(questionGroupDir)) continue;
 
-                        var questionFiles = Directory.GetFiles(questionGroupDir, "question_*.json");
+                        var questionFiles = Directory.GetFiles(questionGroupDir, "question_*.json").OrderBy(f => f);
                         foreach (var questionFile in questionFiles)
                         {
                             var questionJson = await File.ReadAllTextAsync(questionFile, cancellationToken);
-                            var questionDto = JsonSerializer.Deserialize<QuestionDto>(questionJson);
+                            var questionDto = JsonSerializer.Deserialize<QuestionDto>(questionJson, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
                             if (questionDto == null) continue;
                             
                             var questionAssets = new List<string>();
-                            questionAssets.AddRange(questionDto.LocalAudios.Select(localAudio => CopyAsset(localAudio, Path.GetDirectoryName(questionFile)!)));
-                            questionAssets.AddRange(questionDto.LocalImages.Select(localImage => CopyAsset(localImage, Path.GetDirectoryName(questionFile)!)));
+                            var questionAssetTasks = new List<Task<string>>();
+
+                            var sourceAssetDir = Path.GetDirectoryName(questionFile)!;
+                            questionAssetTasks.AddRange(questionDto.LocalAudios.Select(localAudio => CopyAsset(localAudio, sourceAssetDir)));
+                            questionAssetTasks.AddRange(questionDto.LocalImages.Select(localImage => CopyAsset(localImage, sourceAssetDir)));
                             
+                            questionAssets.AddRange(await Task.WhenAll(questionAssetTasks));
+
                             var newQuestion = new Question
                             {
                                 Content = questionDto.Question,
-                                AssetPath = JsonSerializer.Serialize(questionAssets),
+                                AssetPath = JsonSerializer.Serialize(questionAssets.Where(q => !string.IsNullOrWhiteSpace(q))),
                                 Paper = paper,
+                                Order = questionOrder++,
                                 QuestionType = questionDto.Options.Any() ? QuestionType.MultipleChoice : QuestionType.SightSinging,
                                 Options = new List<Option>()
                             };
 
-                            var correctAnswers = questionDto.CorrectAnswer.Split(',').Select(a => a.Trim()).ToList();
-                            
+                            var correctAnswers = questionDto.CorrectAnswer?.Split(',').Select(a => a.Trim()).ToList() ?? new List<string>();
+
+                            var optionDisplayOrder = 0;
                             foreach (var optionDto in questionDto.Options)
                             {
-                                string? optionAssetPath = null;
+                                string optionContent = optionDto.Content ?? string.Empty;
                                 if (optionDto.Type != "text" && !string.IsNullOrEmpty(optionDto.LocalContent))
                                 {
-                                    optionAssetPath = CopyAsset(optionDto.LocalContent, Path.GetDirectoryName(questionFile)!);
+                                    optionContent = await CopyAsset(optionDto.LocalContent, sourceAssetDir);
                                 }
                                 
                                 var newOption = new Option
                                 {
-                                    Content = optionDto.Type == "text" ? optionDto.Content : optionAssetPath ?? string.Empty,
+                                    Content = optionContent,
+                                    DisplayOrder = optionDisplayOrder++,
                                     Question = newQuestion,
                                     IsCorrect = correctAnswers.Contains(IndexToLetter(optionDto.Value))
                                 };
@@ -163,32 +169,32 @@ public class DataImporter : IHostedService
         _logger.LogInformation("Data importer has finished processing all files.");
     }
     
-    private string IndexToLetter(string index)
+    private string IndexToLetter(string? index)
     {
+        if (string.IsNullOrWhiteSpace(index)) return "?";
         return int.TryParse(index, out var i) ? ((char)('A' + i)).ToString() : "?";
     }
 
-    private string CopyAsset(string relativeAssetPath, string sourceDir)
+    private async Task<string> CopyAsset(string relativeAssetPath, string sourceDir)
     {
-        var sourcePath = Path.Combine(sourceDir, relativeAssetPath);
-        var destPath = Path.Combine(_importerAssetsFolder, relativeAssetPath.Replace("assets" + Path.DirectorySeparatorChar, string.Empty));
-        
-        var destDir = Path.GetDirectoryName(destPath);
-        if (destDir != null && !Directory.Exists(destDir))
-        {
-            Directory.CreateDirectory(destDir);
-        }
+        if (string.IsNullOrWhiteSpace(relativeAssetPath)) return string.Empty;
 
+        var sourcePath = Path.Combine(sourceDir, relativeAssetPath);
         if (File.Exists(sourcePath))
         {
-            File.Copy(sourcePath, destPath, overwrite: true);
-        }
-        else
-        {
-            _logger.LogWarning("Asset file not found at {Path}!", sourcePath);
+            try
+            {
+                return await _storageService.SaveFileFromPhysicalPath(sourcePath, AssetBucket);
+            }
+            catch (Exception e)
+            {
+                _logger.LogWarning(e, "Could not copy asset file from {Path}!", sourcePath);
+                return string.Empty;
+            }
         }
 
-        return Path.Combine(_importerAssetsWwwRoot, relativeAssetPath.Replace("assets" + Path.DirectorySeparatorChar, string.Empty)).Replace(Path.DirectorySeparatorChar, '/');
+        _logger.LogWarning("Asset file not found at {Path}!", sourcePath);
+        return string.Empty;
     }
 
     public Task StopAsync(CancellationToken cancellationToken)
@@ -197,3 +203,4 @@ public class DataImporter : IHostedService
         return Task.CompletedTask;
     }
 }
+

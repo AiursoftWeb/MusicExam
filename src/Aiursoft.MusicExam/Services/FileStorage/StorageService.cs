@@ -104,4 +104,33 @@ public class StorageService(
     {
         return $"/download/{RelativePathToUriPath(relativePath)}";
     }
+
+    public async Task<string> SaveFileFromPhysicalPath(string sourcePath, string bucketName)
+    {
+        if (!File.Exists(sourcePath))
+        {
+            throw new FileNotFoundException("The source file for import was not found.", sourcePath);
+        }
+
+        var extension = Path.GetExtension(sourcePath);
+        var logicalPath = $"{bucketName}/{DateTime.UtcNow:yyyy-MM-dd}/{Guid.NewGuid()}{extension}";
+        
+        var workspaceRoot = folders.GetWorkspaceFolder();
+        var physicalPath = Path.GetFullPath(Path.Combine(workspaceRoot, logicalPath));
+        
+        if (!physicalPath.StartsWith(workspaceRoot, StringComparison.OrdinalIgnoreCase))
+        {
+            throw new ArgumentException("Path traversal attempt detected!");
+        }
+        
+        var directory = Path.GetDirectoryName(physicalPath);
+        if (directory != null && !Directory.Exists(directory))
+        {
+            Directory.CreateDirectory(directory);
+        }
+        
+        await Task.Run(() => File.Copy(sourcePath, physicalPath));
+
+        return logicalPath.Replace("\\", "/");
+    }
 }
