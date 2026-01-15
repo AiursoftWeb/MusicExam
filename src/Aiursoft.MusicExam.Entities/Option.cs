@@ -38,7 +38,7 @@ public class Option
 
     // ================= 关联关系 =================
 
-    public required int QuestionId { get; set; }
+    public int QuestionId { get; set; }
 
     [JsonIgnore]
     [ForeignKey(nameof(QuestionId))]

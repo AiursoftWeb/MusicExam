@@ -3,6 +3,9 @@ using System.Text.RegularExpressions;
 using Aiursoft.CSTools.Tools;
 using Aiursoft.DbTools;
 using Aiursoft.MusicExam.Entities;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using static Aiursoft.WebTools.Extends;
 
 namespace Aiursoft.MusicExam.Tests.IntegrationTests;
@@ -103,6 +106,54 @@ public abstract class TestBase
             { "Password", "admin123" }
         });
         Assert.AreEqual(HttpStatusCode.Found, loginResponse.StatusCode);
+    }
+
+    protected async Task LogoutAsync()
+    {
+        var response = await Http.GetAsync("/Account/Logout");
+        Assert.AreEqual(HttpStatusCode.Found, response.StatusCode);
+    }
+
+    protected async Task<(string userId, string email, string password)> RegisterNewUserAsync()
+    {
+        var email = $"test-{Guid.NewGuid()}@aiursoft.com";
+        var password = "Test-Password-123";
+        var userName = email.Split('@')[0];
+
+        // Ensure we are not logged in before trying to register a new user.
+        await LogoutAsync();
+
+        var registerPage = await Http.GetAsync("/Account/Register");
+        var token = await GetAntiCsrfToken("/Account/Register");
+        
+        var registerResponse = await PostForm("/Account/Register", new Dictionary<string, string>
+        {
+            { "__RequestVerificationToken", token },
+            { "UserName", userName },
+            { "DisplayName", userName },
+            { "Email", email },
+            { "Password", password },
+            { "ConfirmPassword", password }
+        });
+
+        if (registerResponse.StatusCode != HttpStatusCode.Found ||
+            !registerResponse.Headers.Location!.OriginalString.Contains("/Account/Login"))
+        {
+            var content = await registerResponse.Content.ReadAsStringAsync();
+            Assert.Fail($"Registration failed. Status: {registerResponse.StatusCode}. Location: {registerResponse.Headers.Location}. Content: {content}");
+        }
+
+        // To get the user ID, we need to log in as an admin and find the user.
+        await LoginAsAdmin();
+        var scope = Server!.Services.CreateScope();
+        var userManager = scope.ServiceProvider.GetRequiredService<UserManager<User>>();
+        var user = await userManager.FindByEmailAsync(email);
+        if (user == null)
+        {
+            Assert.Fail($"Could not find newly registered user with email {email}");
+        }
+        await LogoutAsync();
+        return (user.Id, email, password);
     }
 
     protected async Task<(string email, string password)> RegisterAndLoginAsync()

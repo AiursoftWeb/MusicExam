@@ -38,7 +38,7 @@ public class Question
     
     // ================= 关联关系 =================
     
-    public required int PaperId { get; set; }
+    public int PaperId { get; set; }
 
     [JsonIgnore]
     [ForeignKey(nameof(PaperId))]

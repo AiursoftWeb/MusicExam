@@ -20,7 +20,7 @@ public class ExamPaper
 
     // ================= 关联关系 =================
 
-    public required int SchoolId { get; set; }
+    public int SchoolId { get; set; }
 
     [JsonIgnore]
     [ForeignKey(nameof(SchoolId))]

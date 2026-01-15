@@ -36,7 +36,7 @@ public class DataImporter : IHostedService
         _logger.LogInformation("Data importer is starting.");
         
         using var scope = _serviceProvider.CreateScope();
-        var dbContext = scope.ServiceProvider.GetRequiredService<MusicExamDbContext>();
+        var dbContext = scope.ServiceProvider.GetRequiredService<TemplateDbContext>();
         
         var indexJsonPath = Path.Combine(_dataSettings.Path, "index.json");
         if (!File.Exists(indexJsonPath))
@@ -68,8 +68,7 @@ public class DataImporter : IHostedService
             foreach (var paperDto in schoolDto.Subjects)
             {
                 var isNewPaper = false;
-                var paper = await dbContext.Papers
-                    .Include(p => p.Questions)
+                var paper = await dbContext.ExamPapers
                     .FirstOrDefaultAsync(p => p.Id == paperDto.Id, cancellationToken: cancellationToken);
                 
                 if (paper == null)
@@ -80,7 +79,7 @@ public class DataImporter : IHostedService
                         Title = paperDto.SubjectTitle,
                         School = school
                     };
-                    await dbContext.Papers.AddAsync(paper, cancellationToken);
+                    await dbContext.ExamPapers.AddAsync(paper, cancellationToken);
                     _logger.LogInformation("Paper '{PaperTitle}' not found in DB. Creating it.", paperDto.SubjectTitle);
                     isNewPaper = true;
                 }

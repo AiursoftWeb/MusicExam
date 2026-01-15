@@ -1,110 +1,50 @@
-@using Aiursoft.MusicExam.Services.FileStorage
+@using Aiursoft.MusicExam.Authorization
 @model Aiursoft.MusicExam.Models.UsersViewModels.IndexViewModel
-@inject StorageService StorageService
-@* The page-specific style is preserved. *@
-<style>
-    .clickable-row {
-        cursor: pointer;
-    }
-</style>
 
-@* A standard page header, consistent with the Roles management page. *@
-<div class="row mb-2 mb-xl-3">
-    <div class="col-auto d-none d-sm-block">
-        <h3>@Localizer["Manage Users"]</h3>
-    </div>
-
-    <div class="col-auto ms-auto mt-n1">
+<div class="container-fluid">
+    <div class="d-flex justify-content-between align-items-center">
+        <h1>@Model.PageTitle</h1>
         <a asp-action="Create" class="btn btn-primary">
-            @* Icon is updated to the theme's standard Lucide icon set. *@
-            <i class="align-middle" data-lucide="user-plus"></i> @Localizer["Create a new user"]
+            <i class="fa fa-plus"></i> Create New User
         </a>
     </div>
-</div>
 
-<div class="card">
-    <div class="card-header">
-        <h5 class="card-title">@Localizer["All Users"]</h5>
-        <h6 class="card-subtitle text-muted">@Localizer["A list of all user accounts registered in the system."]</h6>
-    </div>
-    @* table-responsive is added as a best practice for tables on small screens. *@
-    <div class="table-responsive">
-        @* The mb-0 class ensures the table fits snugly within the card. *@
-        <table class="table table-hover mb-0">
-            <thead>
+    <table class="table table-striped table-bordered">
+        <thead class="thead-dark">
             <tr>
-                <th>@Localizer["Avatar"]</th>
-                <th>@Localizer["User name"]</th>
-                <th>@Localizer["Name"]</th>
-                <th>@Localizer["Email"]</th>
-                <th>@Localizer["Roles"]</th>
-                <th class="text-end">@Localizer["Actions"]</th>
+                <th>Username</th>
+                <th>Display Name</th>
+                <th>Email</th>
+                <th>Activated</th>
+                <th>Roles</th>
+                <th class="text-end">Actions</th>
             </tr>
-            </thead>
-            <tbody>
-            @foreach (var item in Model.Users)
+        </thead>
+        <tbody>
+            @foreach (var userWithRoles in Model.Users)
             {
-                @* The clickable-row class and data-href attribute are fully preserved. *@
-                <tr class="clickable-row" data-href="@Url.Action("Details", new { id = item.User.Id })">
+                <tr>
+                    <td>@userWithRoles.User.UserName</td>
+                    <td>@userWithRoles.User.DisplayName</td>
+                    <td>@userWithRoles.User.Email</td>
                     <td>
-                        <img src="@StorageService.RelativePathToInternetUrl(item.User.AvatarRelativePath)?w=72&square=true" alt="@item.User.DisplayName" class="rounded-circle" width="36" height="36" />
-                    </td>
-                    <td>@item.User.UserName</td>
-                    <td>@item.User.DisplayName</td>
-                    <td>@item.User.Email</td>
-                    <td>
-                        @* The complex C# presentation logic for roles is identified and fully preserved. *@
-                        @{
-                            const int maxRolesToShow = 3;
-                            var roles = item.Roles;
-                            string displayRoles;
-                            if (roles.Count > maxRolesToShow)
-                            {
-                                displayRoles = string.Join(", ", roles.Take(maxRolesToShow)) + "...";
-                            }
-                            else
-                            {
-                                displayRoles = string.Join(", ", roles);
-                            }
-                        }
-                        @if (!string.IsNullOrWhiteSpace(displayRoles))
+                        @if (userWithRoles.User.IsActivated)
                         {
-                            <label>@displayRoles</label>
+                            <span class="badge bg-success">Yes</span>
                         }
                         else
                         {
-                            <span class="text-muted">@Localizer["(no role assigned)"]</span>
+                            <span class="badge bg-danger">No</span>
                         }
                     </td>
+                    <td>@string.Join(", ", userWithRoles.Roles)</td>
                     <td class="text-end">
-                        <a asp-action="Edit" asp-route-id="@item.User.Id" class="btn btn-sm btn-outline-primary">
-                            <i class="align-middle" data-lucide="edit-2"></i> @Localizer["Edit"]
-                        </a>
-                        <a asp-action="Delete" asp-route-id="@item.User.Id" class="btn btn-sm btn-outline-danger">
-                            <i class="align-middle" data-lucide="trash-2"></i> @Localizer["Delete"]
-                        </a>
+                        <a asp-action="Details" asp-route-id="@userWithRoles.User.Id" class="btn btn-sm btn-info">Details</a>
+                        <a asp-action="Edit" asp-route-id="@userWithRoles.User.Id" class="btn btn-sm btn-warning">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@userWithRoles.User.Id" class="btn btn-sm btn-danger">Delete</a>
                     </td>
                 </tr>
             }
-            </tbody>
-        </table>
-    </div>
+        </tbody>
+    </table>
 </div>
-
-@* ReSharper disable once Razor.SectionNotResolved *@
-@section scripts {
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const rows = document.querySelectorAll(".clickable-row");
-            rows.forEach(row => {
-                row.addEventListener("click", function (event) {
-                    const target = event.target;
-                    // Prevent navigation if a link or button was clicked
-                    if (!target.matches('a, a *, button, button *')) {
-                        window.location.href = row.dataset.href;
-                    }
-                });
-            });
-        });
-    </script>
-}

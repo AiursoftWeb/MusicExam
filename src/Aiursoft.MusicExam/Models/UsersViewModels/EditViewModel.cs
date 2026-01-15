@@ -42,6 +42,9 @@ public class EditViewModel : UiStackLayoutViewModel
     [MinLength(2)]
     public string? AvatarUrl { get; set; }
 
+    [Display(Name = "Is Activated")]
+    public bool IsActivated { get; set; }
+
     [Required(ErrorMessage = "The {0} is required.")]
     [FromRoute]
     public required string Id { get; set; }
