@@ -46,5 +46,5 @@ public class Question
     public ExamPaper? Paper { get; set; }
     
     [InverseProperty(nameof(Option.Question))]
-    public IEnumerable<Option> Options { get; init; } = new List<Option>();
+    public ICollection<Option> Options { get; set; } = new List<Option>();
 }

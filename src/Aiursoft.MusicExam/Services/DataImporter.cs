@@ -69,6 +69,7 @@ public class DataImporter : IHostedService
             {
                 var isNewPaper = false;
                 var paper = await dbContext.ExamPapers
+                    .Include(p => p.Questions)
                     .FirstOrDefaultAsync(p => p.Id == paperDto.Id, cancellationToken: cancellationToken);
                 
                 if (paper == null)
@@ -149,9 +150,9 @@ public class DataImporter : IHostedService
                                     Question = newQuestion,
                                     IsCorrect = correctAnswers.Contains(IndexToLetter(optionDto.Value))
                                 };
-                                ((List<Option>)newQuestion.Options).Add(newOption);
+                                newQuestion.Options.Add(newOption);
                             }
-                            ((List<Question>)paper.Questions).Add(newQuestion);
+                            paper.Questions.Add(newQuestion);
                         }
                     }
                 }

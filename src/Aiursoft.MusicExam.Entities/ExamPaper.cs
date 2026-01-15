@@ -28,8 +28,8 @@ public class ExamPaper
     public School? School { get; set; }
 
     [InverseProperty(nameof(Question.Paper))]
-    public IEnumerable<Question> Questions { get; init; } = new List<Question>();
+    public ICollection<Question> Questions { get; set; } = new List<Question>();
     
     [InverseProperty(nameof(ExamPaperSubmission.Paper))]
-    public IEnumerable<ExamPaperSubmission> Submissions { get; init; } = new List<ExamPaperSubmission>();
+    public ICollection<ExamPaperSubmission> Submissions { get; set; } = new List<ExamPaperSubmission>();
 }
