@@ -13,7 +13,7 @@ public class User : IdentityUser
 
     [MaxLength(150)] [MinLength(2)] public string AvatarRelativePath { get; set; } = DefaultAvatarPath;
     
-    public bool IsActivated { get; set; } = false;
+    public bool IsActivated { get; set; }
 
     public DateTime CreationTime { get; init; } = DateTime.UtcNow;
 }

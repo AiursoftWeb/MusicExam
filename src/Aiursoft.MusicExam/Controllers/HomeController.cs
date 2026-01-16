@@ -29,6 +29,6 @@ public class HomeController : Controller
         {
             Schools = schools
         };
-        return this.SimpleView(model);
+        return this.StackView(model);
     }
 }

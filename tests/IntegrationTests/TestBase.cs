@@ -6,7 +6,6 @@ using Aiursoft.MusicExam.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Linq;
 using static Aiursoft.WebTools.Extends;
 
 namespace Aiursoft.MusicExam.Tests.IntegrationTests;
@@ -50,16 +49,17 @@ public abstract class TestBase
         await Server.StartAsync();
     }
 
+    protected int? SeededExamPaperId { get; private set; }
+
     protected async Task SeedMockDataAsync(TemplateDbContext dbContext)
     {
         // Mock School
         var school = new School { Name = "Test Academy" };
         await dbContext.Schools.AddAsync(school);
 
-        // Mock Exam Paper
+        // Mock Exam Paper - Do not hardcode ID, let EF auto-generate it
         var paper = new ExamPaper
         {
-            Id = 16, // Use the ID 16 which is referenced in AuthorizationTests.cs
             Title = "Basic Music Theory Exam",
             School = school
         };
@@ -93,6 +93,9 @@ public abstract class TestBase
         await dbContext.Questions.AddAsync(question2);
         
         await dbContext.SaveChangesAsync();
+        
+        // Store the generated ID for use in tests
+        SeededExamPaperId = paper.Id;
     }
 
     [TestCleanup]
@@ -178,7 +181,6 @@ public abstract class TestBase
         // Ensure we are not logged in before trying to register a new user.
         await LogoutAsync();
 
-        var registerPage = await Http.GetAsync("/Account/Register");
         var token = await GetAntiCsrfToken("/Account/Register");
         
         var registerResponse = await PostForm("/Account/Register", new Dictionary<string, string>

@@ -1,5 +1,6 @@
 using Aiursoft.MusicExam.Entities;
 using Aiursoft.MusicExam.Models.ExamViewModels;
+using Aiursoft.MusicExam.Services;
 using Aiursoft.WebTools.Attributes;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -39,11 +40,8 @@ public class ExamController : Controller
             return NotFound();
         }
 
-        var model = new TakeViewModel
-        {
-            Paper = paper
-        };
+        var model = new TakeViewModel(paper);
         
-        return View(model);
+        return this.StackView(model);
     }
 }

@@ -5,10 +5,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Aiursoft.MusicExam.Entities;
 using Aiursoft.MusicExam.Services.FileStorage;
+using Aiursoft.Scanner.Abstractions;
 
 namespace Aiursoft.MusicExam.Services;
 
-public class DataImporter : IHostedService
+public class DataImporter : ISingletonDependency
 {
     private readonly ILogger<DataImporter> _logger;
     private readonly IServiceProvider _serviceProvider;
@@ -138,12 +139,12 @@ public class DataImporter : IHostedService
                                 Options = new List<Option>()
                             };
 
-                            var correctAnswers = questionDto.CorrectAnswer?.Split(',').Select(a => a.Trim()).ToList() ?? new List<string>();
+                            var correctAnswers = questionDto.CorrectAnswer.Split(',').Select(a => a.Trim()).ToList();
 
                             var optionDisplayOrder = 0;
                             foreach (var optionDto in questionDto.Options)
                             {
-                                string optionContent = optionDto.Content ?? string.Empty;
+                                string optionContent = optionDto.Content;
                                 if (optionDto.Type != "text" && !string.IsNullOrEmpty(optionDto.LocalContent))
                                 {
                                     optionContent = await CopyAsset(optionDto.LocalContent, sourceAssetDir);

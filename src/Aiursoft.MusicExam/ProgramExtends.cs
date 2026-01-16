@@ -105,4 +105,13 @@ public static class ProgramExtends
 
         return host;
     }
+
+    public static async Task<IHost> ImportData(this IHost host)
+    {
+        using var scope = host.Services.CreateScope();
+        var services = scope.ServiceProvider;
+        var dataImporter = services.GetRequiredService<DataImporter>();
+        await dataImporter.StartAsync(CancellationToken.None);
+        return host;
+    }
 }

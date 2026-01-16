@@ -1,5 +1,6 @@
 @using System.Text.Json
 @using Aiursoft.MusicExam.Entities
+@inject Aiursoft.MusicExam.Services.FileStorage.StorageService Storage
 @model Aiursoft.MusicExam.Models.ExamViewModels.TakeViewModel
 @{
     ViewData["Title"] = Model.Paper.Title;
@@ -19,18 +20,21 @@
             <div class="question-panel" id="question-@i" style="display: @(i == 0 ? "block" : "none");">
                 <h4>(@(i + 1)/@orderedQuestions.Count) @question.Content</h4>
 
-                @foreach (var asset in questionAssets)
+                @if (questionAssets != null)
                 {
+                    @foreach (var asset in questionAssets)
+                    {
                     if (asset.EndsWith(".mp3", StringComparison.OrdinalIgnoreCase))
                     {
                         <audio controls class="my-2">
-                            <source src="@asset" type="audio/mpeg">
+                            <source src="@Storage.RelativePathToInternetUrl(asset)" type="audio/mpeg">
                             Your browser does not support the audio element.
                         </audio>
                     }
                     else if (asset.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || asset.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
                     {
-                        <img src="@asset" class="img-fluid my-2" alt="Question asset" />
+                        <img src="@Storage.RelativePathToInternetUrl(asset)" class="img-fluid my-2" alt="Question asset" />
+                    }
                     }
                 }
 
@@ -42,7 +46,7 @@
                             @foreach (var option in question.Options.OrderBy(o => o.Id))
                             {
                                 <label class="list-group-item">
-                                    <input class="@(correctAnswersCount > 1 ? "form-check-input me-2" : "form-check-input me-2")" 
+                                    <input class="form-check-input me-2" 
                                            type="@(correctAnswersCount > 1 ? "checkbox" : "radio")" 
                                            name="question-@question.Id" 
                                            value="@option.Id">
@@ -50,12 +54,12 @@
                                     @if (option.Content.EndsWith(".mp3", StringComparison.OrdinalIgnoreCase))
                                     {
                                         <audio controls class="my-2 d-inline-block align-middle" style="max-height: 50px;">
-                                            <source src="@option.Content" type="audio/mpeg">
+                                            <source src="@Storage.RelativePathToInternetUrl(option.Content)" type="audio/mpeg">
                                         </audio>
                                     }
                                     else if (option.Content.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || option.Content.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
                                     {
-                                        <img src="@option.Content" class="img-fluid my-2" style="max-height: 100px;" alt="Option asset" />
+                                        <img src="@Storage.RelativePathToInternetUrl(option.Content)" class="img-fluid my-2" style="max-height: 100px;" alt="Option asset" />
                                     }
                                     else
                                     {
@@ -88,7 +92,7 @@
     </form>
 </div>
 
-@section scripts {
+@section Scripts {
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             let currentQuestionIndex = 0;

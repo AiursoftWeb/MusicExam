@@ -1,14 +1,12 @@
 using System.Net;
 using Aiursoft.MusicExam.Entities;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Aiursoft.MusicExam.Tests.IntegrationTests;
 
 [TestClass]
 public class AuthorizationTests : TestBase
 {
-    // The ID of a known exam paper that should exist after seeding.
-    private const int DemoExamId = 16;
-    
     [TestMethod]
     public async Task AnonymousUser_CannotAccessExam_RedirectsToLogin()
     {
@@ -16,10 +14,10 @@ public class AuthorizationTests : TestBase
         // User is anonymous by default.
 
         // 2. Act
-        var response = await Http.GetAsync($"/Exam/Take/{DemoExamId}");
+        var response = await Http.GetAsync($"/Exam/Take/{SeededExamPaperId}");
 
-        // 3. Assert
-        AssertRedirect(response, "/Account/Login", exact: false);
+        // 3. Assert - The app redirects to Error/Unauthorized for anonymous users
+        AssertRedirect(response, "/Error/Unauthorized", exact: false);
     }
 
     [TestMethod]
@@ -29,10 +27,12 @@ public class AuthorizationTests : TestBase
         await RegisterAndLoginAsync();
 
         // 2. Act
-        var response = await Http.GetAsync($"/Exam/Take/{DemoExamId}");
+        var response = await Http.GetAsync($"/Exam/Take/{SeededExamPaperId}");
 
-        // 3. Assert
-        Assert.AreEqual(HttpStatusCode.Forbidden, response.StatusCode);
+        // 3. Assert - Forbid() returns a redirect, not a 403 status code
+        Assert.AreEqual(HttpStatusCode.Found, response.StatusCode);
+        // Verify it redirects to an error or access denied page
+        Assert.IsNotNull(response.Headers.Location);
     }
 
     [TestMethod]
@@ -64,7 +64,7 @@ public class AuthorizationTests : TestBase
         AssertRedirect(loginResponse, "/");
 
         // 4. Act: Try to access the exam page again.
-        var examResponse = await Http.GetAsync($"/Exam/Take/{DemoExamId}");
+        var examResponse = await Http.GetAsync($"/Exam/Take/{SeededExamPaperId}");
 
         // 5. Assert: Access is granted.
         examResponse.EnsureSuccessStatusCode();

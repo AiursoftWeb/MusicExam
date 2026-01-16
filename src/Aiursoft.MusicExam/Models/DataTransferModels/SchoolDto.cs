@@ -8,5 +8,5 @@ public class SchoolDto
     public required string SubjectTitle { get; set; }
     
     [JsonPropertyName("subjects")]
-    public required List<PaperDto> Subjects { get; set; }
+    public required List<PaperDto> Subjects { get; init; }
 }
