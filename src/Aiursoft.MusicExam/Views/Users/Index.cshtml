@@ -14,7 +14,7 @@
                 <th>Username</th>
                 <th>Display Name</th>
                 <th>Email</th>
-                <th>Activated</th>
+
                 <th>Roles</th>
                 <th class="text-end">Actions</th>
             </tr>
@@ -26,16 +26,7 @@
                     <td>@userWithRoles.User.UserName</td>
                     <td>@userWithRoles.User.DisplayName</td>
                     <td>@userWithRoles.User.Email</td>
-                    <td>
-                        @if (userWithRoles.User.IsActivated)
-                        {
-                            <span class="badge bg-success">Yes</span>
-                        }
-                        else
-                        {
-                            <span class="badge bg-danger">No</span>
-                        }
-                    </td>
+
                     <td>@string.Join(", ", userWithRoles.Roles)</td>
                     <td class="text-end">
                         <a asp-action="Details" asp-route-id="@userWithRoles.User.Id" class="btn btn-sm btn-info">Details</a>

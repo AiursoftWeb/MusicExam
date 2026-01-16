@@ -2,6 +2,8 @@ using Aiursoft.MusicExam.Entities;
 using Aiursoft.MusicExam.Models.ExamViewModels;
 using Aiursoft.MusicExam.Services;
 using Aiursoft.WebTools.Attributes;
+using Microsoft.AspNetCore.Authorization;
+using Aiursoft.MusicExam.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -21,10 +23,11 @@ public class ExamController : Controller
     }
 
     [HttpGet]
+    [Authorize(Policy = AppPermissionNames.CanTakeExam)]
     public async Task<IActionResult> Take(int id)
     {
         var user = await _userManager.GetUserAsync(User);
-        if (user == null || !user.IsActivated)
+        if (user == null)
         {
             return Forbid();
         }

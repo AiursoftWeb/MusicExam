@@ -221,9 +221,6 @@ namespace Aiursoft.MusicExam.Sqlite.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("INTEGER");
 
-                    b.Property<bool>("IsActivated")
-                        .HasColumnType("INTEGER");
-
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("INTEGER");
 
