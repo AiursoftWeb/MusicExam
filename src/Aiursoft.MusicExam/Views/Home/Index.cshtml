@@ -1,0 +1,21 @@
+@model Aiursoft.MusicExam.Models.HomeViewModels.IndexViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <h1 class="my-4">@Localizer["Available Exams"]</h1>
+
+    @foreach (var school in Model.Schools)
+    {
+        <h3 class="mt-5">@school.Name</h3>
+        <div class="list-group">
+            @foreach (var paper in school.Papers.OrderBy(p => p.Id))
+            {
+                <a asp-controller="Exam" asp-action="Take" asp-route-id="@paper.Id" class="list-group-item list-group-item-action">
+                    @paper.Title
+                </a>
+            }
+        </div>
+    }
+</div>

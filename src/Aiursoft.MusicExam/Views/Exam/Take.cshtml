@@ -1,0 +1,131 @@
+@using System.Text.Json
+@using Aiursoft.MusicExam.Entities
+@inject Aiursoft.MusicExam.Services.FileStorage.StorageService Storage
+@model Aiursoft.MusicExam.Models.ExamViewModels.TakeViewModel
+@{
+    ViewData["Title"] = Model.Paper.Title;
+    var orderedQuestions = Model.Paper.Questions.OrderBy(q => q.Order).ToList();
+}
+
+<div class="container">
+    <h1 class="my-4">@Model.Paper.Title</h1>
+    <hr />
+
+    <form>
+        @for (var i = 0; i < orderedQuestions.Count; i++)
+        {
+            var question = orderedQuestions[i];
+            var questionAssets = !string.IsNullOrWhiteSpace(question.AssetPath) ? JsonSerializer.Deserialize<List<string>>(question.AssetPath) : new List<string>();
+            
+            <div class="question-panel" id="question-@i" style="display: @(i == 0 ? "block" : "none");">
+                <h4>(@(i + 1)/@orderedQuestions.Count) @question.Content</h4>
+
+                @if (questionAssets != null)
+                {
+                    @foreach (var asset in questionAssets)
+                    {
+                    if (asset.EndsWith(".mp3", StringComparison.OrdinalIgnoreCase))
+                    {
+                        <audio controls class="my-2">
+                            <source src="@Storage.RelativePathToInternetUrl(asset)" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    }
+                    else if (asset.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || asset.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                    {
+                        <img src="@Storage.RelativePathToInternetUrl(asset)" class="img-fluid my-2" alt="Question asset" />
+                    }
+                    }
+                }
+
+                @switch (question.QuestionType)
+                {
+                    case QuestionType.MultipleChoice:
+                        var correctAnswersCount = question.Options.Count(o => o.IsCorrect);
+                        <div class="list-group mt-3">
+                            @foreach (var option in question.Options.OrderBy(o => o.Id))
+                            {
+                                <label class="list-group-item">
+                                    <input class="form-check-input me-2" 
+                                           type="@(correctAnswersCount > 1 ? "checkbox" : "radio")" 
+                                           name="question-@question.Id" 
+                                           value="@option.Id">
+
+                                    @if (option.Content.EndsWith(".mp3", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <audio controls class="my-2 d-inline-block align-middle" style="max-height: 50px;">
+                                            <source src="@Storage.RelativePathToInternetUrl(option.Content)" type="audio/mpeg">
+                                        </audio>
+                                    }
+                                    else if (option.Content.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || option.Content.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <img src="@Storage.RelativePathToInternetUrl(option.Content)" class="img-fluid my-2" style="max-height: 100px;" alt="Option asset" />
+                                    }
+                                    else
+                                    {
+                                        @option.Content
+                                    }
+                                </label>
+                            }
+                        </div>
+                        if (correctAnswersCount > 1)
+                        {
+                            <small class="form-text text-muted">@Localizer["This is a multiple choice question."]</small>
+                        }
+                        break;
+
+                    case QuestionType.SightSinging:
+                        <div class="alert alert-info mt-3">
+                            @Localizer["This is a sight-singing question. Please review the sheet music and sing aloud."]
+                        </div>
+                        break;
+                }
+                <hr />
+            </div>
+        }
+
+        <div class="d-flex justify-content-between my-4">
+            <button type="button" id="prev-btn" class="btn btn-secondary" disabled>@Localizer["Previous"]</button>
+            <button type="button" id="next-btn" class="btn btn-primary">@Localizer["Next"]</button>
+            <button type="submit" id="submit-btn" class="btn btn-success" style="display: none;">@Localizer["Submit Exam"]</button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let currentQuestionIndex = 0;
+            const questions = document.querySelectorAll(".question-panel");
+            const prevBtn = document.getElementById("prev-btn");
+            const nextBtn = document.getElementById("next-btn");
+            const submitBtn = document.getElementById("submit-btn");
+
+            function showQuestion(index) {
+                questions.forEach((q, i) => {
+                    q.style.display = i === index ? "block" : "none";
+                });
+
+                prevBtn.disabled = index === 0;
+                nextBtn.style.display = index === questions.length - 1 ? "none" : "block";
+                submitBtn.style.display = index === questions.length - 1 ? "block" : "none";
+            }
+
+            prevBtn.addEventListener("click", function () {
+                if (currentQuestionIndex > 0) {
+                    currentQuestionIndex--;
+                    showQuestion(currentQuestionIndex);
+                }
+            });
+
+            nextBtn.addEventListener("click", function () {
+                if (currentQuestionIndex < questions.length - 1) {
+                    currentQuestionIndex++;
+                    showQuestion(currentQuestionIndex);
+                }
+            });
+
+            showQuestion(0);
+        });
+    </script>
+}
