@@ -15,8 +15,8 @@ public class AuthorizationTests : TestBase
         // 2. Act
         var response = await Http.GetAsync($"/Exam/Take/{SeededExamPaperId}");
 
-        // 3. Assert - The app redirects to Error/Unauthorized for anonymous users
-        AssertRedirect(response, "/Error/Unauthorized", exact: false);
+        // 3. Assert - The app redirects to Login for anonymous users
+        AssertRedirect(response, "/Account/Login", exact: false);
     }
 
     [TestMethod]
@@ -67,7 +67,7 @@ public class AuthorizationTests : TestBase
         {
             { "AllRoles[0].RoleName", "Student" },
             { "AllRoles[0].IsSelected", "true" }
-        });
+        }, tokenUrl: $"/Users/Edit/{userId}");
 
         // 3. Arrange: Log in as the user.
         await LogoutAsync();
@@ -76,7 +76,7 @@ public class AuthorizationTests : TestBase
             { "EmailOrUserName", email },
             { "Password", password }
         });
-        AssertRedirect(loginResponse, "/");
+        AssertRedirect(loginResponse, "/Dashboard/Index");
 
         // 4. Act: Try to access the exam page.
         var examResponse = await Http.GetAsync($"/Exam/Take/{SeededExamPaperId}");
