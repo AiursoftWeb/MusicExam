@@ -4,8 +4,7 @@ using Aiursoft.CSTools.Tools;
 using Aiursoft.DbTools;
 using Aiursoft.MusicExam.Entities;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+
 using static Aiursoft.WebTools.Extends;
 
 namespace Aiursoft.MusicExam.Tests.IntegrationTests;
@@ -168,7 +167,7 @@ public abstract class TestBase
 
     protected async Task LogoutAsync()
     {
-        var response = await Http.GetAsync("/Account/Logout");
+        var response = await Http.GetAsync("/Account/LogOff");
         Assert.AreEqual(HttpStatusCode.Found, response.StatusCode);
     }
 
@@ -194,7 +193,7 @@ public abstract class TestBase
         });
 
         if (registerResponse.StatusCode != HttpStatusCode.Found ||
-            !registerResponse.Headers.Location!.OriginalString.Contains("/Account/Login"))
+            !registerResponse.Headers.Location!.OriginalString.Contains("/Dashboard/Index"))
         {
             var content = await registerResponse.Content.ReadAsStringAsync();
             Assert.Fail($"Registration failed. Status: {registerResponse.StatusCode}. Location: {registerResponse.Headers.Location}. Content: {content}");

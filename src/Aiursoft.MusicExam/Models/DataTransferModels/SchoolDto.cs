@@ -8,5 +8,6 @@ public class SchoolDto
     public required string SubjectTitle { get; set; }
     
     [JsonPropertyName("subjects")]
+    // ReSharper disable once CollectionNeverUpdated.Global
     public required List<PaperDto> Subjects { get; init; }
 }

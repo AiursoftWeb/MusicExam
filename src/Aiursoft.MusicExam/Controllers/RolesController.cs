@@ -183,6 +183,7 @@ public class RolesController(
                 {
                     ModelState.AddModelError(string.Empty, error.Description);
                 }
+                RepopulateClaimsMetadata(model);
                 return this.StackView(model);
             }
 
@@ -211,7 +212,22 @@ public class RolesController(
 
             return RedirectToAction(nameof(Details), new { id = role.Id });
         }
+        RepopulateClaimsMetadata(model);
         return this.StackView(model);
+    }
+
+    private static void RepopulateClaimsMetadata(EditViewModel model)
+    {
+        var allPermissions = AppPermissions.GetAllPermissions();
+        foreach (var claim in model.Claims)
+        {
+            var match = allPermissions.FirstOrDefault(p => p.Key == claim.Key);
+            if (match != null)
+            {
+                claim.Name = match.Name;
+                claim.Description = match.Description;
+            }
+        }
     }
 
     // GET: Roles/Delete/5
