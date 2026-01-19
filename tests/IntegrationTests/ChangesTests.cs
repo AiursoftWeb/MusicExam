@@ -1,4 +1,3 @@
-using System.Net;
 using Aiursoft.MusicExam.Authorization;
 using Aiursoft.MusicExam.Entities;
 using Aiursoft.MusicExam.Services;

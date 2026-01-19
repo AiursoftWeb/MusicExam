@@ -10,7 +10,7 @@ public class ActiveUserInfo
     public string Id { get; set; } = string.Empty;
     public string UserName { get; set; } = string.Empty;
     public string DisplayName { get; set; } = string.Empty;
-    public string AvatarRelativePath { get; set; } = Entities.User.DefaultAvatarPath;
+    public string AvatarRelativePath { get; set; } = User.DefaultAvatarPath;
 }
 
 public class ActiveUserDetail
@@ -146,7 +146,7 @@ public class ChangeService(TemplateDbContext dbContext) : IScopedDependency
                     Id = userId,
                     UserName = "deleted",
                     DisplayName = userNames.GetValueOrDefault(userId, "Deleted User"),
-                    AvatarRelativePath = Entities.User.DefaultAvatarPath
+                    AvatarRelativePath = User.DefaultAvatarPath
                 };
             }
             
