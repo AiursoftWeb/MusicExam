@@ -114,8 +114,65 @@ public class ExamController : Controller
             model.Answers.Add(result);
         }
 
+        // Save Attempt
+        var submission = new ExamPaperSubmission
+        {
+            Id = Guid.NewGuid(),
+            UserId = user.Id,
+            PaperId = paper.Id,
+            Score = model.Score,
+            SubmissionTime = DateTime.UtcNow
+        };
+        _dbContext.ExamPaperSubmissions.Add(submission);
+        await _dbContext.SaveChangesAsync();
+
+        var questionSubmissions = new List<QuestionSubmission>();
+        foreach (var answer in model.Answers)
+        {
+            var userAnswerString = string.Empty;
+            if (answer.UserSelectedOptionIds != null && answer.UserSelectedOptionIds.Any())
+            {
+                userAnswerString = string.Join(",", answer.UserSelectedOptionIds.OrderBy(x => x));
+            }
+
+            questionSubmissions.Add(new QuestionSubmission
+            {
+                Id = Guid.NewGuid(),
+                ExamPaperSubmissionId = submission.Id,
+                QuestionId = answer.Question.Id,
+                UserAnswer = userAnswerString
+            });
+        }
+        _dbContext.QuestionSubmissions.AddRange(questionSubmissions);
+        await _dbContext.SaveChangesAsync();
+
         model.PageTitle = "Result - " + paper.Title;
 
         return View("Result", model);
+    }
+
+    [HttpGet]
+    [Authorize(Policy = AppPermissionNames.CanTakeExam)]
+    public async Task<IActionResult> History()
+    {
+        var user = await _userManager.GetUserAsync(User);
+        if (user == null)
+        {
+            return Forbid();
+        }
+
+        var submissions = await _dbContext.ExamPaperSubmissions
+            .Include(s => s.Paper)
+            .Where(s => s.UserId == user.Id)
+            .OrderByDescending(s => s.SubmissionTime)
+            .ToListAsync();
+
+        var model = new HistoryViewModel
+        {
+            Submissions = submissions,
+            PageTitle = "My Exam Records"
+        };
+
+        return this.StackView(model);
     }
 }
