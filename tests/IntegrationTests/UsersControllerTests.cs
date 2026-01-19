@@ -59,7 +59,7 @@ public class UsersControllerTests : TestBase
             { "id", userId },
             { "AllRoles[0].RoleName", "Administrators" },
             { "AllRoles[0].IsSelected", "true" }
-        });
+        }, tokenUrl: $"/Users/Edit/{userId}");
         AssertRedirect(manageRolesResponse, "/Users/Details/", exact: false);
 
         // 7. Delete (GET)
