@@ -16,7 +16,7 @@
         {
             var question = orderedQuestions[i];
             var questionAssets = !string.IsNullOrWhiteSpace(question.AssetPath) ? JsonSerializer.Deserialize<List<string>>(question.AssetPath) : new List<string>();
-            
+
             <div class="question-panel" id="question-@i" style="display: @(i == 0 ? "block" : "none");">
                 <h4>(@(i + 1)/@orderedQuestions.Count) @question.Content</h4>
 
@@ -46,9 +46,9 @@
                             @foreach (var option in question.Options.OrderBy(o => o.Id))
                             {
                                 <label class="list-group-item">
-                                    <input class="form-check-input me-2" 
-                                           type="@(correctAnswersCount > 1 ? "checkbox" : "radio")" 
-                                           name="question-@question.Id" 
+                                    <input class="form-check-input me-2"
+                                           type="@(correctAnswersCount > 1 ? "checkbox" : "radio")"
+                                           name="question-@question.Id"
                                            value="@option.Id">
 
                                     @if (option.Content.EndsWith(".mp3", StringComparison.OrdinalIgnoreCase))
@@ -102,7 +102,25 @@
             const nextBtn = document.getElementById("next-btn");
             const submitBtn = document.getElementById("submit-btn");
 
+            // Add mutual exclusion for audio
+            const allAudios = document.querySelectorAll('audio');
+            allAudios.forEach(playAudio => {
+                playAudio.addEventListener('play', function () {
+                    allAudios.forEach(otherAudio => {
+                        if (otherAudio !== playAudio) {
+                            otherAudio.pause();
+                        }
+                    });
+                });
+            });
+
             function showQuestion(index) {
+                // Pause all audio elements
+                document.querySelectorAll('audio').forEach(audio => {
+                    audio.pause();
+                    audio.currentTime = 0;
+                });
+
                 questions.forEach((q, i) => {
                     q.style.display = i === index ? "block" : "none";
                 });
