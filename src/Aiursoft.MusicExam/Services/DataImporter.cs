@@ -60,66 +60,106 @@ public class DataImporter : ISingletonDependency
                 await dbContext.Schools.AddAsync(school, cancellationToken);
                 _logger.LogInformation("School '{SchoolName}' not found in DB. Creating it.", schoolDto.SubjectTitle);
             }
+            // Ensure school ID is available
+            await dbContext.SaveChangesAsync(cancellationToken);
 
-            foreach (var paperDto in schoolDto.Subjects)
+            foreach (var levelDto in schoolDto.Subjects)
             {
-                var isNewPaper = false;
-                var paper = await dbContext.ExamPapers
-                    .Include(p => p.Questions)
-                    .FirstOrDefaultAsync(p => p.Id == paperDto.Id, cancellationToken: cancellationToken);
+                var levelName = levelDto.SubjectTitle;
+                _logger.LogInformation("Processing Level: {LevelName}", levelName);
 
-                if (paper == null)
-                {
-                    paper = new ExamPaper
-                    {
-                        Id = paperDto.Id,
-                        Title = paperDto.SubjectTitle,
-                        School = school
-                    };
-                    await dbContext.ExamPapers.AddAsync(paper, cancellationToken);
-                    _logger.LogInformation("Paper '{PaperTitle}' not found in DB. Creating it.", paperDto.SubjectTitle);
-                    isNewPaper = true;
-                }
+                // Find the level JSON file
+                // The directory structure seems to use "1_Title" format usually, but we need to find the specific file.
+                // Based on previous code: schoolDir/id_Title.json
 
-                if (!isNewPaper && paper.Questions.Any())
+                var levelDirName = $"{levelDto.Id}_{levelDto.SubjectTitle}";
+                var levelJsonPath = Path.Combine(_dataSettings.Path, school.Name, $"{levelDirName}.json");
+                var levelDirPath = Path.Combine(_dataSettings.Path, school.Name, levelDirName);
+
+                if (!File.Exists(levelJsonPath))
                 {
-                    _logger.LogInformation("Paper '{PaperTitle}' already exists in DB. Skipping question import.", paperDto.SubjectTitle);
+                    _logger.LogWarning("Level JSON file not found at {Path}. Skipping level.", levelJsonPath);
                     continue;
                 }
 
-                var paperDir = Path.Combine(_dataSettings.Path, school.Name, $"{paper.Id}_{paper.Title}");
-                var paperJson = Path.Combine(_dataSettings.Path, school.Name, $"{paper.Id}_{paper.Title}.json");
-                if (!File.Exists(paperJson))
+                var levelJsonContent = await File.ReadAllTextAsync(levelJsonPath, cancellationToken);
+                var levelData = JsonSerializer.Deserialize<PaperCategoriesFileDto>(levelJsonContent, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+
+                if (levelData?.Data == null)
                 {
-                    throw new FileNotFoundException($"Paper JSON file not found at {paperJson}.");
+                    _logger.LogWarning("Could not parse level JSON for {LevelName}.", levelName);
+                    continue;
                 }
 
-                var paperJsonContent = await File.ReadAllTextAsync(paperJson, cancellationToken);
-                var paperCategories = JsonSerializer.Deserialize<PaperCategoriesFileDto>(paperJsonContent, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
-                if (paperCategories?.Data == null)
+                foreach (var (categoryName, papers) in levelData.Data)
                 {
-                    throw new InvalidDataException($"Could not parse paper category JSON for {paper.Title}.");
-                }
-
-                var questionOrder = 0;
-                foreach (var (categoryName, questionGroups) in paperCategories.Data)
-                {
-                    foreach (var questionGroup in questionGroups)
+                    foreach (var paperDto in papers)
                     {
-                        var categoryDir = Path.Combine(paperDir, categoryName);
-                        if (!Directory.Exists(categoryDir))
+                        var paperId = paperDto.Id;
+                        var paperTitle = paperDto.Title;
+
+                        var paper = await dbContext.ExamPapers
+                            .Include(p => p.Questions)
+                            .FirstOrDefaultAsync(p => p.Id == paperId, cancellationToken: cancellationToken);
+
+                        if (paper == null)
                         {
-                            throw new DirectoryNotFoundException($"Category directory not found: {categoryDir}");
+                            paper = new ExamPaper
+                            {
+                                Id = paperId,
+                                Title = paperTitle,
+                                School = school,
+                                Level = levelName,
+                                Category = categoryName
+                            };
+                            await dbContext.ExamPapers.AddAsync(paper, cancellationToken);
+                            _logger.LogInformation("Creating ExamPaper: {Title} (Level: {Level}, Category: {Category})", paperTitle, levelName, categoryName);
+                        }
+                        else
+                        {
+                            // Update metadata if it exists
+                            if (paper.Level != levelName || paper.Category != categoryName)
+                            {
+                                paper.Level = levelName;
+                                paper.Category = categoryName;
+                                _logger.LogInformation("Updating ExamPaper metadata: {Title}", paperTitle);
+                            }
                         }
 
-                        var questionGroupDir = GetBestMatchingDirectory(categoryDir, questionGroup.Title);
-                        if (string.IsNullOrEmpty(questionGroupDir))
+                        if (paper.Questions.Any())
                         {
-                            _logger.LogWarning("Question group directory not found: {Path}. Searched in {ParentDir}. Skipping.", Path.Combine(categoryDir, questionGroup.Title), categoryDir);
+                            // Skip importing questions if already populate
+                            // But we might want to update questions? For now, stick to skip for performance/safety logic.
                             continue;
                         }
 
-                        var questionFiles = Directory.GetFiles(questionGroupDir, "question_*.json").OrderBy(f => f);
+                        // Import Questions
+                        // Directory structure: Data/School/LevelDir/Category/PaperTitle
+                        // We need to resolve the Category Directory and Paper Directory
+
+                        var categoryDir = Path.Combine(levelDirPath, categoryName);
+                        // Category dir might not exist or might optionally have different naming?
+                        // Previous code used GetBestMatchingDirectory, lets reuse that logic if possible or assume exact match first.
+                        if (!Directory.Exists(categoryDir))
+                        {
+                            // Try to find best match? Or currently strict.
+                            if (!Directory.Exists(categoryDir))
+                            {
+                                _logger.LogWarning("Category directory missing: {Path}", categoryDir);
+                                continue;
+                            }
+                        }
+
+                        var paperDir = GetBestMatchingDirectory(categoryDir, paperTitle);
+                        if (string.IsNullOrEmpty(paperDir))
+                        {
+                            _logger.LogWarning("Paper directory not found for: {PaperTitle} in {CategoryDir}", paperTitle, categoryDir);
+                            continue;
+                        }
+
+                        // Now import questions from paperDir
+                        var questionFiles = Directory.GetFiles(paperDir, "question_*.json").OrderBy(f => f);
+                        var questionOrder = 0;
                         foreach (var questionFile in questionFiles)
                         {
                             var questionJson = await File.ReadAllTextAsync(questionFile, cancellationToken);
@@ -130,6 +170,7 @@ public class DataImporter : ISingletonDependency
                             var questionAssetTasks = new List<Task<string>>();
 
                             var sourceAssetDir = Path.GetDirectoryName(questionFile)!;
+                            // Assuming CopyAsset is available as private method
                             questionAssetTasks.AddRange(questionDto.LocalAudios.Select(localAudio => CopyAsset(localAudio, sourceAssetDir)));
                             questionAssetTasks.AddRange(questionDto.LocalImages.Select(localImage => CopyAsset(localImage, sourceAssetDir)));
 
@@ -141,7 +182,7 @@ public class DataImporter : ISingletonDependency
                                 AssetPath = JsonSerializer.Serialize(questionAssets.Where(q => !string.IsNullOrWhiteSpace(q))),
                                 Paper = paper,
                                 Order = questionOrder++,
-                                QuestionType = questionDto.Options.Any() ? QuestionType.MultipleChoice : QuestionType.SightSinging,
+                                QuestionType = questionDto.Options.Any() ? QuestionType.MultipleChoice : QuestionType.SightSinging, // Heuristic
                                 Options = new List<Option>()
                             };
 

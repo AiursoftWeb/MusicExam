@@ -16,6 +16,12 @@ public class ExamPaper
     [MaxLength(200)]
     public required string Title { get; set; }
 
+    [MaxLength(200)]
+    public string? Level { get; set; }
+
+    [MaxLength(200)]
+    public string? Category { get; set; }
+
     public DateTime CreationTime { get; init; } = DateTime.UtcNow;
 
     // ================= 关联关系 =================
@@ -29,7 +35,7 @@ public class ExamPaper
 
     [InverseProperty(nameof(Question.Paper))]
     public ICollection<Question> Questions { get; set; } = new List<Question>();
-    
+
     [InverseProperty(nameof(ExamPaperSubmission.Paper))]
     public ICollection<ExamPaperSubmission> Submissions { get; set; } = new List<ExamPaperSubmission>();
 }

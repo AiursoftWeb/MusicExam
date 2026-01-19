@@ -8,14 +8,40 @@
 
     @foreach (var school in Model.Schools)
     {
-        <h3 class="mt-5">@school.Name</h3>
-        <div class="list-group">
-            @foreach (var paper in school.Papers.OrderBy(p => p.Id))
-            {
-                <a asp-controller="Exam" asp-action="Take" asp-route-id="@paper.Id" class="list-group-item list-group-item-action">
-                    @paper.Title
-                </a>
-            }
-        </div>
+            <h2 class="mt-5 text-primary">@school.Name</h2>
+
+        var levels = school.Papers
+            .GroupBy(p => p.Level ?? "Uncategorized")
+            .OrderBy(g => g.Key);
+
+        foreach (var levelGroup in levels)
+        {
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-light">
+                            <h4 class="mb-0">@levelGroup.Key</h4>
+                        </div>
+                        <div class="card-body">
+                    @{
+                        var categories = levelGroup
+                            .GroupBy(p => p.Category ?? "General")
+                            .OrderBy(g => g.Key);
+                    }
+
+                    @foreach (var categoryGroup in categories)
+                    {
+                                    <h5 class="card-title mt-3 border-bottom pb-2">@categoryGroup.Key</h5>
+                                    <div class="list-group list-group-flush mb-3">
+                            @foreach (var paper in categoryGroup.OrderBy(p => p.Title))
+                            {
+                                                <a asp-controller="Exam" asp-action="Take" asp-route-id="@paper.Id" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                    @paper.Title
+                                                    <span class="badge bg-primary rounded-pill">Start</span>
+                                                </a>
+                            }
+                                    </div>
+                    }
+                        </div>
+                    </div>
+        }
     }
 </div>
