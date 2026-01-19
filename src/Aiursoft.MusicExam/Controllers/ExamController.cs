@@ -130,7 +130,7 @@ public class ExamController : Controller
         foreach (var answer in model.Answers)
         {
             var userAnswerString = string.Empty;
-            if (answer.UserSelectedOptionIds != null && answer.UserSelectedOptionIds.Any())
+            if (answer.UserSelectedOptionIds.Any())
             {
                 userAnswerString = string.Join(",", answer.UserSelectedOptionIds.OrderBy(x => x));
             }
