@@ -20,7 +20,8 @@ namespace Aiursoft.MusicExam.Controllers;
 public class RolesController(
     UserManager<User> userManager,
     TemplateDbContext context,
-    RoleManager<IdentityRole> roleManager)
+    RoleManager<IdentityRole> roleManager,
+    ChangeRecorder changeRecorder)
     : Controller
 {
     // GET: Roles
@@ -187,6 +188,7 @@ public class RolesController(
             }
 
             var existingClaims = await roleManager.GetClaimsAsync(role);
+            var triggerUser = await userManager.GetUserAsync(User);
 
             // Remove unselected claims
             foreach (var existingClaim in existingClaims)
@@ -195,6 +197,12 @@ public class RolesController(
                 if (!model.Claims.Any(c => c.Key == existingClaim.Value && c.IsSelected))
                 {
                     await roleManager.RemoveClaimAsync(role, existingClaim);
+                    await changeRecorder.Record(
+                        ChangeType.RoleLostPermission, 
+                        triggerUser?.Id, 
+                        targetRoleId: role.Id, 
+                        targetPermission: existingClaim.Value,
+                        details: $"Role {role.Name} lost permission {existingClaim.Value}.");
                 }
             }
 
@@ -206,6 +214,12 @@ public class RolesController(
                 {
                     // Add the claim using the Key
                     await roleManager.AddClaimAsync(role, new Claim(AppPermissions.Type, claimViewModel.Key));
+                    await changeRecorder.Record(
+                        ChangeType.RoleGainedPermission, 
+                        triggerUser?.Id, 
+                        targetRoleId: role.Id, 
+                        targetPermission: claimViewModel.Key,
+                        details: $"Role {role.Name} gained permission {claimViewModel.Key}.");
                 }
             }
 

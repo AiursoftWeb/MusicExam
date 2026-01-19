@@ -16,6 +16,7 @@ public abstract class TemplateDbContext(DbContextOptions options) : IdentityDbCo
     public DbSet<Option> Options => Set<Option>();
     public DbSet<ExamPaperSubmission> ExamPaperSubmissions => Set<ExamPaperSubmission>();
     public DbSet<QuestionSubmission> QuestionSubmissions => Set<QuestionSubmission>();
+    public DbSet<Change> Changes => Set<Change>();
 
     public virtual  Task MigrateAsync(CancellationToken cancellationToken) =>
         Database.MigrateAsync(cancellationToken);

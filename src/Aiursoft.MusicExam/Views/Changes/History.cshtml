@@ -1,0 +1,39 @@
+@model Aiursoft.MusicExam.Models.ChangesViewModels.HistoryViewModel
+
+<div class="row mb-2 mb-xl-3">
+    <div class="col-auto d-none d-sm-block">
+        <h3>@Localizer["Change History"]</h3>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h5 class="card-title">@Localizer["All Changes"]</h5>
+        <h6 class="card-subtitle text-muted">@Localizer["A chronological list of all recorded system changes."]</h6>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-hover mb-0">
+            <thead>
+            <tr>
+                <th>@Localizer["Time"]</th>
+                <th>@Localizer["Type"]</th>
+                <th>@Localizer["Triggered By"]</th>
+                <th>@Localizer["Details"]</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in Model.Changes)
+            {
+                <tr>
+                    <td>@item.CreateTime.ToLocalTime().ToString("g")</td>
+                    <td>
+                        <span class="badge bg-info">@item.Type</span>
+                    </td>
+                    <td>@(item.TriggerUser?.DisplayName ?? item.TriggerUserId ?? Localizer["System"].Value)</td>
+                    <td>@item.Details</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>

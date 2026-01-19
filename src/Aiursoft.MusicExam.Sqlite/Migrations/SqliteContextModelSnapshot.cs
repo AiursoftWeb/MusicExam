@@ -17,6 +17,45 @@ namespace Aiursoft.MusicExam.Sqlite.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "10.0.2");
 
+            modelBuilder.Entity("Aiursoft.MusicExam.Entities.Change", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("CreateTime")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Details")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("TargetDisplayName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("TargetPermission")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("TargetRoleId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("TargetUserId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("TriggerUserId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Type")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TriggerUserId");
+
+                    b.ToTable("Changes");
+                });
+
             modelBuilder.Entity("Aiursoft.MusicExam.Entities.ExamPaper", b =>
                 {
                     b.Property<int>("Id")
@@ -400,6 +439,15 @@ namespace Aiursoft.MusicExam.Sqlite.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("Aiursoft.MusicExam.Entities.Change", b =>
+                {
+                    b.HasOne("Aiursoft.MusicExam.Entities.User", "TriggerUser")
+                        .WithMany()
+                        .HasForeignKey("TriggerUserId");
+
+                    b.Navigation("TriggerUser");
                 });
 
             modelBuilder.Entity("Aiursoft.MusicExam.Entities.ExamPaper", b =>
