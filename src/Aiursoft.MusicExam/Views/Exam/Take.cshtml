@@ -11,7 +11,7 @@
     <h1 class="my-4">@Model.Paper.Title</h1>
     <hr />
 
-    <form>
+    <form method="post" id="exam-form">
         @for (var i = 0; i < orderedQuestions.Count; i++)
         {
             var question = orderedQuestions[i];
@@ -42,14 +42,15 @@
                 {
                     case QuestionType.MultipleChoice:
                         var correctAnswersCount = question.Options.Count(o => o.IsCorrect);
-                        <div class="list-group mt-3">
+                        <div class="list-group mt-3" id="options-group-@i">
                             @foreach (var option in question.Options.OrderBy(o => o.Id))
                             {
-                                <label class="list-group-item">
+                                <label class="list-group-item option-label" id="label-@option.Id">
                                     <input class="form-check-input me-2"
                                            type="@(correctAnswersCount > 1 ? "checkbox" : "radio")"
                                            name="question-@question.Id"
-                                           value="@option.Id">
+                                           value="@option.Id"
+                                           data-is-correct="@option.IsCorrect.ToString().ToLower()">
 
                                     @if (option.Content.EndsWith(".mp3", StringComparison.OrdinalIgnoreCase))
                                     {
@@ -68,6 +69,7 @@
                                 </label>
                             }
                         </div>
+                        <div class="feedback-area mt-2" id="feedback-@i" style="display:none;"></div>
                         if (correctAnswersCount > 1)
                         {
                             <small class="form-text text-muted">@Localizer["This is a multiple choice question."]</small>
@@ -86,7 +88,8 @@
 
         <div class="d-flex justify-content-between my-4">
             <button type="button" id="prev-btn" class="btn btn-secondary" disabled>@Localizer["Previous"]</button>
-            <button type="button" id="next-btn" class="btn btn-primary">@Localizer["Next"]</button>
+            <button type="button" id="check-btn" class="btn btn-info">@Localizer["Check Answer"]</button>
+            <button type="button" id="next-btn" class="btn btn-primary" style="display: none;">@Localizer["Next"]</button>
             <button type="submit" id="submit-btn" class="btn btn-success" style="display: none;">@Localizer["Submit Exam"]</button>
         </div>
     </form>
@@ -100,6 +103,7 @@
             const questions = document.querySelectorAll(".question-panel");
             const prevBtn = document.getElementById("prev-btn");
             const nextBtn = document.getElementById("next-btn");
+            const checkBtn = document.getElementById("check-btn");
             const submitBtn = document.getElementById("submit-btn");
 
             // Add mutual exclusion for audio
@@ -126,9 +130,74 @@
                 });
 
                 prevBtn.disabled = index === 0;
-                nextBtn.style.display = index === questions.length - 1 ? "none" : "block";
-                submitBtn.style.display = index === questions.length - 1 ? "block" : "none";
+
+                // Reset buttons state for new question
+                checkBtn.style.display = "block";
+                nextBtn.style.display = "none";
+                submitBtn.style.display = "none";
+
+                // If already checked (could be implemented if we want to support going back and seeing result),
+                // but for now let's reset or just keep it simple.
+                // Since verification requires "Check Answer", and we might move back/forth,
+                // we should probably check if feedback is already visible.
+                const feedback = document.getElementById(`feedback-${index}`);
+                if (feedback && feedback.style.display === "block") {
+                     checkBtn.style.display = "none";
+                     if (index === questions.length - 1) {
+                         submitBtn.style.display = "block";
+                     } else {
+                         nextBtn.style.display = "block";
+                     }
+                }
             }
+
+            checkBtn.addEventListener("click", function() {
+                const currentQuestion = questions[currentQuestionIndex];
+                const inputs = currentQuestion.querySelectorAll("input");
+
+                // If no inputs (e.g. sight singing), just show correct/info
+                if (inputs.length === 0) {
+                     // Auto pass
+                } else {
+                    let answered = false;
+                    inputs.forEach(input => {
+                        if (input.checked) answered = true;
+                    });
+
+                    if (!answered) {
+                        alert("@Localizer["Please select an answer first."]");
+                        return;
+                    }
+                }
+
+                // Show feedback
+                inputs.forEach(input => {
+                    const isCorrect = input.getAttribute("data-is-correct") === "true";
+                    const label = document.getElementById(`label-${input.value}`);
+
+                    if (isCorrect) {
+                        label.classList.add("list-group-item-success");
+                        label.classList.add("fw-bold");
+                    } else if (input.checked) {
+                        label.classList.add("list-group-item-danger");
+                    }
+
+                    input.disabled = true; // Disable inputs after checking
+                });
+
+                const feedback = document.getElementById(`feedback-${currentQuestionIndex}`);
+                if(feedback) {
+                    feedback.style.display = "block";
+                    // Could add text here if needed
+                }
+
+                checkBtn.style.display = "none";
+                if (currentQuestionIndex === questions.length - 1) {
+                    submitBtn.style.display = "block";
+                } else {
+                    nextBtn.style.display = "block";
+                }
+            });
 
             prevBtn.addEventListener("click", function () {
                 if (currentQuestionIndex > 0) {

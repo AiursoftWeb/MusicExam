@@ -1,0 +1,121 @@
+@using Aiursoft.MusicExam.Entities
+@using System.Text.Json
+@inject Aiursoft.MusicExam.Services.FileStorage.StorageService Storage
+@model Aiursoft.MusicExam.Models.ExamViewModels.ResultViewModel
+@{
+    ViewData["Title"] = Model.Title + " - " + Localizer["Result"];
+}
+
+<div class="container">
+    <div class="card my-4">
+        <div class="card-body text-center">
+            <h1 class="card-title">@Model.Title</h1>
+            <h2 class="display-4 my-3">
+                @Localizer["Score"]: @Model.Score / @Model.TotalQuestions
+            </h2>
+            <div class="progress" style="height: 30px;">
+                <div class="progress-bar @(Model.Score == Model.TotalQuestions ? "bg-success" : "bg-warning")"
+                     role="progressbar"
+                     style="width: @((double)Model.Score / Model.TotalQuestions * 100)%;"
+                     aria-valuenow="@Model.Score"
+                     aria-valuemin="0"
+                     aria-valuemax="@Model.TotalQuestions">
+                    @((double)Model.Score / Model.TotalQuestions * 100)%
+                </div>
+            </div>
+            <div class="mt-4">
+                <a asp-controller="Dashboard" asp-action="Index" class="btn btn-secondary">@Localizer["Back to Dashboard"]</a>
+                <a href="javascript:window.location.reload();" class="btn btn-primary">@Localizer["Retake Exam"]</a>
+            </div>
+        </div>
+    </div>
+
+    @for (var i = 0; i < Model.Answers.Count; i++)
+    {
+        var answer = Model.Answers[i];
+        var question = answer.Question;
+        var questionAssets = !string.IsNullOrWhiteSpace(question.AssetPath) ? JsonSerializer.Deserialize<List<string>>(question.AssetPath) : new List<string>();
+        var isCorrect = answer.IsCorrect;
+
+            <div class="card mb-4 @(isCorrect ? "border-success" : "border-danger")">
+                <div class="card-header @(isCorrect ? "text-success" : "text-danger")">
+                    <strong>@Localizer["Question"] @(i + 1)</strong> - @(isCorrect ? Localizer["Correct"] : Localizer["Incorrect"])
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">@question.Content</h5>
+
+                @if (questionAssets != null)
+                {
+                    @foreach (var asset in questionAssets)
+                    {
+                        if (asset.EndsWith(".mp3", StringComparison.OrdinalIgnoreCase))
+                        {
+                                            <audio controls class="my-2">
+                                                <source src="@Storage.RelativePathToInternetUrl(asset)" type="audio/mpeg">
+                                                Your browser does not support the audio element.
+                                            </audio>
+                        }
+                        else if (asset.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || asset.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                        {
+                                            <img src="@Storage.RelativePathToInternetUrl(asset)" class="img-fluid my-2" alt="Question asset" />
+                        }
+                    }
+                }
+
+                @if (question.QuestionType == QuestionType.MultipleChoice)
+                {
+                            <div class="list-group mt-3">
+                        @foreach (var option in question.Options.OrderBy(o => o.Id))
+                        {
+                            var isUserSelected = answer.UserSelectedOptionIds.Contains(option.Id);
+                            var isCorrectOption = answer.CorrectOptionIds.Contains(option.Id);
+                            var itemClass = "";
+
+                            if (isCorrectOption)
+                            {
+                                itemClass = "list-group-item-success";
+                            }
+                            else if (isUserSelected) // Selected but wrong
+                            {
+                                itemClass = "list-group-item-danger";
+                            }
+
+                                        <div class="list-group-item @itemClass">
+                                            <div class="d-flex w-100 justify-content-between">
+                                                <span class="@(isUserSelected ? "fw-bold" : "")">
+                                        @if (isUserSelected)
+                                        {
+                                            <i class="fas fa-check-circle me-2"></i>
+                                        }
+                                        @option.Content
+                                                </span>
+                                    @if (isCorrectOption)
+                                    {
+                                                        <span class="badge bg-success">@Localizer["Correct Answer"]</span>
+                                    }
+                                            </div>
+
+                                @if (option.Content.EndsWith(".mp3", StringComparison.OrdinalIgnoreCase))
+                                {
+                                                    <audio controls class="my-2 d-inline-block align-middle" style="max-height: 50px;">
+                                                        <source src="@Storage.RelativePathToInternetUrl(option.Content)" type="audio/mpeg">
+                                                    </audio>
+                                }
+                                else if (option.Content.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || option.Content.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                {
+                                                    <img src="@Storage.RelativePathToInternetUrl(option.Content)" class="img-fluid my-2" style="max-height: 100px;" alt="Option asset" />
+                                }
+                                        </div>
+                        }
+                            </div>
+                }
+                else
+                {
+                            <div class="alert alert-info mt-3">
+                        @Localizer["No detailed breakdown for this question type."]
+                            </div>
+                }
+                </div>
+            </div>
+    }
+</div>

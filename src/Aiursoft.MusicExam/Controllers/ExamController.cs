@@ -31,7 +31,7 @@ public class ExamController : Controller
         {
             return Forbid();
         }
-        
+
         var paper = await _dbContext.ExamPapers
             .Include(p => p.Questions)
             .ThenInclude(q => q.Options)
@@ -44,7 +44,78 @@ public class ExamController : Controller
         }
 
         var model = new TakeViewModel(paper);
-        
+
         return this.StackView(model);
+    }
+
+    [HttpPost]
+    [Authorize(Policy = AppPermissionNames.CanTakeExam)]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Take(int id, IFormCollection form)
+    {
+        var user = await _userManager.GetUserAsync(User);
+        if (user == null)
+        {
+            return Forbid();
+        }
+
+        var paper = await _dbContext.ExamPapers
+            .Include(p => p.Questions)
+            .ThenInclude(q => q.Options)
+            .AsSplitQuery()
+            .FirstOrDefaultAsync(p => p.Id == id);
+
+        if (paper == null)
+        {
+            return NotFound();
+        }
+
+        var model = new ResultViewModel
+        {
+            Title = paper.Title,
+            TotalQuestions = paper.Questions.Count,
+            Score = 0
+        };
+
+        foreach (var question in paper.Questions)
+        {
+            var result = new QuestionAnswerResult
+            {
+                Question = question,
+                CorrectOptionIds = question.Options.Where(o => o.IsCorrect).Select(o => o.Id).ToList()
+            };
+
+            var userSelection = form[$"question-{question.Id}"];
+            if (!string.IsNullOrEmpty(userSelection))
+            {
+                result.UserSelectedOptionIds = userSelection.Select(s => int.Parse(s!)).ToList();
+            }
+
+            // Grading Logic
+            if (question.QuestionType == QuestionType.MultipleChoice)
+            {
+                var correctIds = result.CorrectOptionIds.OrderBy(x => x).ToList();
+                var userIds = result.UserSelectedOptionIds.OrderBy(x => x).ToList();
+                result.IsCorrect = correctIds.SequenceEqual(userIds);
+            }
+            else
+            {
+                // For other types (like SightSinging), we might count it as correct by default or handle differently
+                // For now, assuming if it's not multiple choice, it's manually graded or practice, so maybe correct?
+                // Or maybe just skip grading. Let's mark it as correct if it's SightSinging since there's no input.
+                result.IsCorrect = true;
+            }
+
+            if (result.IsCorrect)
+            {
+                model.Score++;
+            }
+
+            model.Answers.Add(result);
+        }
+
+        model.PageTitle = "Result - " + paper.Title;
+
+        return View("Result", model);
     }
 }
