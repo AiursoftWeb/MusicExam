@@ -171,6 +171,7 @@
                 }
 
                 // Show feedback
+                let allCorrect = true;
                 inputs.forEach(input => {
                     const isCorrect = input.getAttribute("data-is-correct") === "true";
                     const label = document.getElementById(`label-${input.value}`);
@@ -180,15 +181,27 @@
                         label.classList.add("fw-bold");
                     } else if (input.checked) {
                         label.classList.add("list-group-item-danger");
+                        allCorrect = false;
+                    } else {
+                         // If it's not checked and not correct, do nothing
                     }
 
-                    input.disabled = true; // Disable inputs after checking
+                    // We DO NOT disable inputs here, because disabled inputs are not submitted.
+                    // Instead we disable interaction via CSS/event prevention if needed, or simply let it be.
+                    // To prevent changing answers after checking, we can disable them but must re-enable on submit.
+                    // Let's use the 'onclick return false' trick or just re-enable on submit.
+                    // Re-enabling on submit is safer.
+                    input.disabled = true;
                 });
 
                 const feedback = document.getElementById(`feedback-${currentQuestionIndex}`);
                 if(feedback) {
                     feedback.style.display = "block";
-                    // Could add text here if needed
+                    if(allCorrect) {
+                        feedback.innerHTML = '<div class="alert alert-success">@Localizer["Correct!"]</div>';
+                    } else {
+                        feedback.innerHTML = '<div class="alert alert-danger">@Localizer["Incorrect! Please check the correct answer highlighted above."]</div>';
+                    }
                 }
 
                 checkBtn.style.display = "none";
@@ -197,6 +210,14 @@
                 } else {
                     nextBtn.style.display = "block";
                 }
+            });
+
+            // Re-enable inputs before submit
+            document.getElementById("exam-form").addEventListener("submit", function() {
+                const inputs = document.querySelectorAll("input");
+                inputs.forEach(input => {
+                    input.disabled = false;
+                });
             });
 
             prevBtn.addEventListener("click", function () {
