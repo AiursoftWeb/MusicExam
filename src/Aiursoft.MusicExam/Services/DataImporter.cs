@@ -238,7 +238,12 @@ public class DataImporter : ISingletonDependency
         {
             try
             {
-                return await _storageService.SaveFileFromPhysicalPath(sourcePath, AssetBucket);
+                // Generate a logical path for the asset: AssetBucket/year/month/day/filename
+                var now = DateTime.UtcNow;
+                var fileName = Path.GetFileName(sourcePath);
+                var destinationLogicalPath = $"{AssetBucket}/{now:yyyy}/{now:MM}/{now:dd}/{fileName}";
+                
+                return await _storageService.SaveFileFromPhysicalPath(sourcePath, destinationLogicalPath, isVault: false);
             }
             catch (Exception e)
             {

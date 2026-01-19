@@ -75,6 +75,70 @@ public class StorageService(
     }
 
     /// <summary>
+    /// Saves a file from a physical path to the storage.
+    /// </summary>
+    /// <param name="sourcePhysicalPath">The physical path of the source file to copy.</param>
+    /// <param name="destinationLogicalPath">The logical path (relative to Workspace/Vault) where the file will be saved.</param>
+    /// <param name="isVault">Whether to save to the private Vault.</param>
+    /// <returns>The actual logical path where the file is saved (may differ if renamed).</returns>
+    public async Task<string> SaveFileFromPhysicalPath(string sourcePhysicalPath, string destinationLogicalPath, bool isVault = false)
+    {
+        // 1. Validate source file exists
+        if (!File.Exists(sourcePhysicalPath))
+        {
+            throw new FileNotFoundException($"Source file not found: {sourcePhysicalPath}");
+        }
+
+        // 2. Get destination Workspace root
+        var root = isVault ? folders.GetVaultFolder() : folders.GetWorkspaceFolder();
+
+        // 3. Resolve physical destination path
+        var physicalPath = Path.GetFullPath(Path.Combine(root, destinationLogicalPath));
+
+        // 4. Security check: Ensure path is within Workspace
+        if (!physicalPath.StartsWith(root, StringComparison.OrdinalIgnoreCase))
+        {
+            throw new ArgumentException("Path traversal attempt detected!");
+        }
+
+        // 5. Create directory if needed
+        var directory = Path.GetDirectoryName(physicalPath);
+        if (!Directory.Exists(directory))
+        {
+             Directory.CreateDirectory(directory!);
+        }
+
+        // 6. Handle collisions (Renaming)
+        // Lock on the directory to prevent race conditions during renaming
+        var lockObj = fileLockProvider.GetLock(directory!);
+        await lockObj.WaitAsync();
+        try
+        {
+            var expectedFileName = Path.GetFileName(physicalPath);
+            while (File.Exists(physicalPath))
+            {
+                expectedFileName = "_" + expectedFileName;
+                physicalPath = Path.Combine(directory!, expectedFileName);
+            }
+
+            // Create placeholder to reserve name
+            File.Create(physicalPath).Close();
+        }
+        finally
+        {
+            lockObj.Release();
+        }
+
+        // 7. Copy file content
+        await using var sourceStream = new FileStream(sourcePhysicalPath, FileMode.Open, FileAccess.Read);
+        await using var destinationStream = new FileStream(physicalPath, FileMode.Create);
+        await sourceStream.CopyToAsync(destinationStream);
+
+        // 8. Return logical path (relative to Workspace)
+        return Path.GetRelativePath(root, physicalPath).Replace("\\", "/");
+    }
+
+    /// <summary>
     /// Retrieves the physical file path for a given logical path.
     /// Defaults to Workspace.
     /// </summary>
