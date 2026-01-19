@@ -1,6 +1,3 @@
-using Aiursoft.MusicExam.Entities;
-using Aiursoft.MusicExam.Models.ExamViewModels;
-using Microsoft.Extensions.DependencyInjection;
 using System.Net;
 
 namespace Aiursoft.MusicExam.Tests.IntegrationTests;
