@@ -3,8 +3,6 @@ using System.Text.RegularExpressions;
 using Aiursoft.CSTools.Tools;
 using Aiursoft.DbTools;
 using Aiursoft.MusicExam.Entities;
-using Microsoft.AspNetCore.Identity;
-
 using static Aiursoft.WebTools.Extends;
 
 namespace Aiursoft.MusicExam.Tests.IntegrationTests;
@@ -35,66 +33,8 @@ public abstract class TestBase
     {
         Server = await AppAsync<Startup>([], port: Port);
         await Server.UpdateDbAsync<TemplateDbContext>();
-        await Server.SeedAsync(); // Seeds the default admin user and roles
-        
-        // ============================ Mock Data for Tests (Start) ============================
-        // This section adds fake data specifically for integration tests.
-        // It's separated for easy removal or modification later.
-        using var scope = Server.Services.CreateScope();
-        var dbContext = scope.ServiceProvider.GetRequiredService<TemplateDbContext>();
-        await SeedMockDataAsync(dbContext);
-        // ============================ Mock Data for Tests (End) ============================
-        
+        await Server.SeedAsync();
         await Server.StartAsync();
-    }
-
-    protected int? SeededExamPaperId { get; private set; }
-
-    protected async Task SeedMockDataAsync(TemplateDbContext dbContext)
-    {
-        // Mock School
-        var school = new School { Name = "Test Academy" };
-        await dbContext.Schools.AddAsync(school);
-
-        // Mock Exam Paper - Do not hardcode ID, let EF auto-generate it
-        var paper = new ExamPaper
-        {
-            Title = "Basic Music Theory Exam",
-            School = school
-        };
-        await dbContext.ExamPapers.AddAsync(paper);
-
-        // Mock Question 1 (Multiple Choice)
-        var question1 = new Question
-        {
-            Content = "What note is this?",
-            AssetPath = "[\"/importer-assets/images/note_c.png\"]", // Example asset path
-            Paper = paper,
-            QuestionType = QuestionType.MultipleChoice,
-            Order = 1
-        };
-        await dbContext.Questions.AddAsync(question1);
-
-        await dbContext.Options.AddAsync(new Option { Content = "C", Question = question1, IsCorrect = false, DisplayOrder = 0 });
-        await dbContext.Options.AddAsync(new Option { Content = "D", Question = question1, IsCorrect = true, DisplayOrder = 1 });
-        await dbContext.Options.AddAsync(new Option { Content = "E", Question = question1, IsCorrect = false, DisplayOrder = 2 });
-        await dbContext.Options.AddAsync(new Option { Content = "F", Question = question1, IsCorrect = false, DisplayOrder = 3 });
-
-        // Mock Question 2 (Sight Singing)
-        var question2 = new Question
-        {
-            Content = "Sing this melody (Audio asset).",
-            AssetPath = "[\"/importer-assets/audio/melody.mp3\"]", // Example asset path
-            Paper = paper,
-            QuestionType = QuestionType.SightSinging,
-            Order = 2
-        };
-        await dbContext.Questions.AddAsync(question2);
-        
-        await dbContext.SaveChangesAsync();
-        
-        // Store the generated ID for use in tests
-        SeededExamPaperId = paper.Id;
     }
 
     [TestCleanup]
@@ -165,53 +105,6 @@ public abstract class TestBase
         Assert.AreEqual(HttpStatusCode.Found, loginResponse.StatusCode);
     }
 
-    protected async Task LogoutAsync()
-    {
-        var response = await Http.GetAsync("/Account/LogOff");
-        Assert.AreEqual(HttpStatusCode.Found, response.StatusCode);
-    }
-
-    protected async Task<(string userId, string email, string password)> RegisterNewUserAsync()
-    {
-        var email = $"test-{Guid.NewGuid()}@aiursoft.com";
-        var password = "Test-Password-123";
-        var userName = email.Split('@')[0];
-
-        // Ensure we are not logged in before trying to register a new user.
-        await LogoutAsync();
-
-        var token = await GetAntiCsrfToken("/Account/Register");
-        
-        var registerResponse = await PostForm("/Account/Register", new Dictionary<string, string>
-        {
-            { "__RequestVerificationToken", token },
-            { "UserName", userName },
-            { "DisplayName", userName },
-            { "Email", email },
-            { "Password", password },
-            { "ConfirmPassword", password }
-        });
-
-        if (registerResponse.StatusCode != HttpStatusCode.Found ||
-            !registerResponse.Headers.Location!.OriginalString.Contains("/Dashboard/Index"))
-        {
-            var content = await registerResponse.Content.ReadAsStringAsync();
-            Assert.Fail($"Registration failed. Status: {registerResponse.StatusCode}. Location: {registerResponse.Headers.Location}. Content: {content}");
-        }
-
-        // To get the user ID, we need to log in as an admin and find the user.
-        await LoginAsAdmin();
-        var scope = Server!.Services.CreateScope();
-        var userManager = scope.ServiceProvider.GetRequiredService<UserManager<User>>();
-        var user = await userManager.FindByEmailAsync(email);
-        if (user == null)
-        {
-            Assert.Fail($"Could not find newly registered user with email {email}");
-        }
-        await LogoutAsync();
-        return (user.Id, email, password);
-    }
-
     protected async Task<(string email, string password)> RegisterAndLoginAsync()
     {
         var email = $"test-{Guid.NewGuid()}@aiursoft.com";
@@ -226,5 +119,11 @@ public abstract class TestBase
         Assert.AreEqual(HttpStatusCode.Found, registerResponse.StatusCode);
 
         return (email, password);
+    }
+
+    protected T GetService<T>() where T : notnull
+    {
+        if (Server == null) throw new InvalidOperationException("Server is not started.");
+        return Server.Services.GetRequiredService<T>();
     }
 }
