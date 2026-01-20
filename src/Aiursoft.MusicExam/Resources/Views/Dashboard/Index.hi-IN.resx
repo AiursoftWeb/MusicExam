@@ -171,5 +171,59 @@
   <data name="Why use the Aiursoft Template?" xml:space="preserve">
     <value>Aiursoft टेम्पलेट क्यों उपयोग करें?</value>
   </data>
+  <data name="View My Progress" xml:space="preserve">
+    <value>मेरी प्रगति देखें</value>
+  </data>
+  <data name="Our Features" xml:space="preserve">
+    <value>हमारी विशेषताएँ</value>
+  </data>
+  <data name="Start Practice" xml:space="preserve">
+    <value>अभ्यास शुरू करें</value>
+  </data>
+  <data name="Your journey to mastering music theory starts here." xml:space="preserve">
+    <value>संगीत सिद्धांत में महारत हासिल करने की आपकी यात्रा यहीं से शुरू होती है।</value>
+  </data>
+  <data name="Welcome to the Music Exam Platform" xml:space="preserve">
+    <value>संगीत परीक्षा प्लेटफ़ॉर्म में आपका स्वागत है</value>
+  </data>
+  <data name="Comprehensive Question Bank" xml:space="preserve">
+    <value>व्यापक प्रश्न बैंक</value>
+  </data>
+  <data name="A comprehensive platform designed to help you excel in your music exams." xml:space="preserve">
+    <value>एक व्यापक प्लेटफ़ॉर्म जो आपके संगीत परीक्षाओं में उत्कृष्ट प्रदर्शन करने में आपकी सहायता के लिए डिज़ाइन किया गया है।</value>
+  </data>
+  <data name="Realistic Mock Exams" xml:space="preserve">
+    <value>यथार्थ मॉक परीक्षाएँ</value>
+  </data>
+  <data name="Practice with thousands of questions from official sources, covering all levels and topics." xml:space="preserve">
+    <value>आधिकारिक स्रोतों से हजारों प्रश्नों के साथ अभ्यास करें, जो सभी स्तरों और विषयों को कवर करते हैं।</value>
+  </data>
+  <data name="Detailed Analytics" xml:space="preserve">
+    <value>विस्तृत विश्लेषण</value>
+  </data>
+  <data name="Simulate the real exam environment with timed mock tests and get a feel for the actual challenge." xml:space="preserve">
+    <value>समयबद्ध मॉक टेस्ट के साथ वास्तविक परीक्षा के माहौल का अनुकरण करें और वास्तविक चुनौती का अनुभव प्राप्त करें।</value>
+  </data>
+  <data name="Sight-Singing Practice" xml:space="preserve">
+    <value>दृष्टि-गायन अभ्यास</value>
+  </data>
+  <data name="Track your performance, view detailed score reports, and identify your strengths and weaknesses." xml:space="preserve">
+    <value>अपने प्रदर्शन पर नज़र रखें, विस्तृत स्कोर रिपोर्ट देखें, और अपनी ताकत और कमजोरियों की पहचान करें।</value>
+  </data>
+  <data name="Cross-Platform Access" xml:space="preserve">
+    <value>क्रॉस-प्लेटफ़ॉर्म एक्सेस</value>
+  </data>
+  <data name="Official Curriculum" xml:space="preserve">
+    <value>आधिकारिक पाठ्यक्रम</value>
+  </data>
+  <data name="Sharpen your sight-singing skills with a vast library of melodies and interactive exercises." xml:space="preserve">
+    <value>विस्तृत मेलोडीज़ और इंटरैक्टिव अभ्यासों के पुस्तकालय के साथ अपने साइट-सिंगिंग कौशल को निखारें।</value>
+  </data>
+  <data name="All content is based on the official curriculum of major music conservatories." xml:space="preserve">
+    <value>सभी सामग्री प्रमुख संगीत विद्यालयों के आधिकारिक पाठ्यक्रम पर आधारित है।</value>
+  </data>
+  <data name="Practice anytime, anywhere. Our platform is fully responsive and works on all your devices." xml:space="preserve">
+    <value>कभी भी, कहीं भी अभ्यास करें। हमारा प्लेटफ़ॉर्म पूरी तरह से उत्तरदायी है और आपके सभी उपकरणों पर काम करता है।</value>
+  </data>
 
 </root>

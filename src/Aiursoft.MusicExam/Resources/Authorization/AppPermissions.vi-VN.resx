@@ -102,5 +102,29 @@
   <data name="View System Context" xml:space="preserve">
     <value>Xem Ngữ cảnh Hệ thống</value>
   </data>
+  <data name="Take Exam" xml:space="preserve">
+    <value>Thi</value>
+  </data>
+  <data name="Allows the user to participate in exams." xml:space="preserve">
+    <value>Cho phép người dùng tham gia kỳ thi.</value>
+  </data>
+  <data name="Allows viewing monthly active user statistics and details." xml:space="preserve">
+    <value>Cho phép xem thống kê người dùng hoạt động hàng tháng và chi tiết.</value>
+  </data>
+  <data name="Allows viewing the history of all user and role changes." xml:space="preserve">
+    <value>Cho phép xem lịch sử thay đổi của tất cả người dùng và vai trò.</value>
+  </data>
+  <data name="View Change History" xml:space="preserve">
+    <value>Xem lịch sử thay đổi</value>
+  </data>
+  <data name="View Accounting" xml:space="preserve">
+    <value>Xem Kế toán</value>
+  </data>
+  <data name="Allows viewing system statistics like user counts and usage data." xml:space="preserve">
+    <value>Cho phép xem các thống kê hệ thống như số lượng người dùng và dữ liệu sử dụng.</value>
+  </data>
+  <data name="View Active Users" xml:space="preserve">
+    <value>Xem người dùng đang hoạt động</value>
+  </data>
 
 </root>

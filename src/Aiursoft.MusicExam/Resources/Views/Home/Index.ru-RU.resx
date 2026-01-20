@@ -276,5 +276,11 @@
   <data name="You&apos;ll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
     <value>Вам понадобятся .NET 10 SDK, npm и ваша любимая IDE, например Visual Studio или JetBrains Rider. Полное руководство по настройке вы найдёте в нашей документации.</value>
   </data>
+  <data name="Available Exams" xml:space="preserve">
+    <value>Доступные экзамены</value>
+  </data>
+  <data name="Select your school and level to start practicing" xml:space="preserve">
+    <value>Выберите вашу школу и уровень, чтобы начать практиковаться</value>
+  </data>
 
 </root>

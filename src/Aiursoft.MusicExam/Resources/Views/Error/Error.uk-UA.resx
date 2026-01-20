@@ -42,5 +42,26 @@
   <data name="We&apos;re sorry, something went wrong while processing your request." xml:space="preserve">
     <value>Нам дуже шкода, сталася помилка під час обробки вашого запиту.</value>
   </data>
+  <data name="Sorry, you do not have the necessary permissions to access this page." xml:space="preserve">
+    <value>Вибачте, у вас недостатньо прав для доступу до цієї сторінки.</value>
+  </data>
+  <data name="Try again" xml:space="preserve">
+    <value>Спробувати знову</value>
+  </data>
+  <data name="The page you are looking for might have been removed, had its name changed, or is temporarily unavailable." xml:space="preserve">
+    <value>Сторінку, яку ви шукаєте, можливо, було видалено, її назву змінено або вона тимчасово недоступна.</value>
+  </data>
+  <data name="If you believe you should have access, please contact your system administrator. Or try signing out and signing in again." xml:space="preserve">
+    <value>Якщо ви вважаєте, що маєте мати доступ, будь ласка, зверніться до вашого системного адміністратора. Або спробуйте вийти з облікового запису та увійти знову.</value>
+  </data>
+  <data name="Please check your request and try again. If you believe this is a server error, please contact support." xml:space="preserve">
+    <value>Будь ласка, перевірте ваш запит і спробуйте ще раз. Якщо ви вважаєте, що це помилка сервера, будь ласка, зверніться до служби підтримки.</value>
+  </data>
+  <data name="Your browser sent a request that this server could not understand." xml:space="preserve">
+    <value>Ваш браузер надіслав запит, який цей сервер не зміг обробити.</value>
+  </data>
+  <data name="Please check the URL and try again. If you believe this is a server error, please contact support." xml:space="preserve">
+    <value>Будь ласка, перевірте URL-адресу та спробуйте ще раз. Якщо ви вважаєте, що це помилка сервера, будь ласка, зверніться до служби підтримки.</value>
+  </data>
 
 </root>

@@ -276,5 +276,11 @@
   <data name="You&apos;ll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
     <value>您需要安装 .NET 10 SDK、npm 以及您喜欢的 IDE（如 Visual Studio 或 JetBrains Rider）。完整的设置指南可在我们的文档中找到。</value>
   </data>
+  <data name="Available Exams" xml:space="preserve">
+    <value>可用考试</value>
+  </data>
+  <data name="Select your school and level to start practicing" xml:space="preserve">
+    <value>选择您的学校和级别开始练习</value>
+  </data>
 
 </root>

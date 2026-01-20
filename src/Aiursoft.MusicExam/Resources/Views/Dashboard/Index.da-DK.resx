@@ -171,5 +171,59 @@
   <data name="Why use the Aiursoft Template?" xml:space="preserve">
     <value>Hvorfor bruge Aiursoft Template?</value>
   </data>
+  <data name="Welcome to the Music Exam Platform" xml:space="preserve">
+    <value>Velkommen til Music Exam Platform</value>
+  </data>
+  <data name="View My Progress" xml:space="preserve">
+    <value>Se min status</value>
+  </data>
+  <data name="Start Practice" xml:space="preserve">
+    <value>Start øvelse</value>
+  </data>
+  <data name="Practice with thousands of questions from official sources, covering all levels and topics." xml:space="preserve">
+    <value>Øv med tusindvis af spørgsmål fra officielle kilder, der dækker alle niveauer og emner.</value>
+  </data>
+  <data name="Our Features" xml:space="preserve">
+    <value>Vores Funktioner</value>
+  </data>
+  <data name="Your journey to mastering music theory starts here." xml:space="preserve">
+    <value>Din rejse til at mestre musiklære starter her.</value>
+  </data>
+  <data name="A comprehensive platform designed to help you excel in your music exams." xml:space="preserve">
+    <value>En omfattende platform designet til at hjælpe dig med at udmærke dig i dine musikprøver.</value>
+  </data>
+  <data name="Comprehensive Question Bank" xml:space="preserve">
+    <value>Omfattende spørgsmålsbank</value>
+  </data>
+  <data name="Detailed Analytics" xml:space="preserve">
+    <value>Detaljerede analyser</value>
+  </data>
+  <data name="Sight-Singing Practice" xml:space="preserve">
+    <value>Sang fra bladet-øvelser</value>
+  </data>
+  <data name="Realistic Mock Exams" xml:space="preserve">
+    <value>Realistiske Prøveeksamener</value>
+  </data>
+  <data name="Simulate the real exam environment with timed mock tests and get a feel for the actual challenge." xml:space="preserve">
+    <value>Simuler det rigtige eksamensmiljø med tidsbegrænsede prøveeksamener og få en fornemmelse af den faktiske udfordring.</value>
+  </data>
+  <data name="Track your performance, view detailed score reports, and identify your strengths and weaknesses." xml:space="preserve">
+    <value>Følg din præstation, se detaljerede scoringsrapporter, og identificer dine styrker og svagheder.</value>
+  </data>
+  <data name="Sharpen your sight-singing skills with a vast library of melodies and interactive exercises." xml:space="preserve">
+    <value>Forbedr dine synssangsfærdigheder med et omfattende bibliotek af melodier og interaktive øvelser.</value>
+  </data>
+  <data name="Cross-Platform Access" xml:space="preserve">
+    <value>Tværgående platformadgang</value>
+  </data>
+  <data name="Official Curriculum" xml:space="preserve">
+    <value>Officielt pensum</value>
+  </data>
+  <data name="Practice anytime, anywhere. Our platform is fully responsive and works on all your devices." xml:space="preserve">
+    <value>Øv når som helst, hvor som helst. Vores platform er fuldt responsiv og virker på alle dine enheder.</value>
+  </data>
+  <data name="All content is based on the official curriculum of major music conservatories." xml:space="preserve">
+    <value>Alt indhold er baseret på de officielle pensa fra de store musikkonservatorier.</value>
+  </data>
 
 </root>

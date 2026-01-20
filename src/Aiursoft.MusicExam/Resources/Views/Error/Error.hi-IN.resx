@@ -42,5 +42,26 @@
   <data name="We&apos;re sorry, something went wrong while processing your request." xml:space="preserve">
     <value>हमें खेद है, आपके अनुरोध को संसाधित करते समय कुछ गलत हो गया।</value>
   </data>
+  <data name="Try again" xml:space="preserve">
+    <value>फिर से प्रयास करें</value>
+  </data>
+  <data name="Your browser sent a request that this server could not understand." xml:space="preserve">
+    <value>आपके ब्राउज़र ने एक ऐसा अनुरोध भेजा जिसे यह सर्वर समझ नहीं सका।</value>
+  </data>
+  <data name="Sorry, you do not have the necessary permissions to access this page." xml:space="preserve">
+    <value>क्षमा करें, आपके पास इस पृष्ठ तक पहुँचने के लिए आवश्यक अनुमतियाँ नहीं हैं।</value>
+  </data>
+  <data name="Please check the URL and try again. If you believe this is a server error, please contact support." xml:space="preserve">
+    <value>कृपया URL जाँचें और पुनः प्रयास करें। यदि आपको लगता है कि यह सर्वर त्रुटि है, तो कृपया सहायता से संपर्क करें।</value>
+  </data>
+  <data name="Please check your request and try again. If you believe this is a server error, please contact support." xml:space="preserve">
+    <value>कृपया अपना अनुरोध जाँचें और पुनः प्रयास करें। यदि आपको लगता है कि यह सर्वर त्रुटि है, तो कृपया सहायता से संपर्क करें।</value>
+  </data>
+  <data name="If you believe you should have access, please contact your system administrator. Or try signing out and signing in again." xml:space="preserve">
+    <value>यदि आपको लगता है कि आपको पहुंच होनी चाहिए, तो कृपया अपने सिस्टम प्रशासक से संपर्क करें। या फिर साइन आउट करके दोबारा साइन इन करने का प्रयास करें।</value>
+  </data>
+  <data name="The page you are looking for might have been removed, had its name changed, or is temporarily unavailable." xml:space="preserve">
+    <value>जिस पृष्ठ की आप तलाश कर रहे हैं, वह हटाया गया हो सकता है, उसका नाम बदल दिया गया हो सकता है, या वह अस्थायी रूप से अनुपलब्ध है।</value>
+  </data>
 
 </root>

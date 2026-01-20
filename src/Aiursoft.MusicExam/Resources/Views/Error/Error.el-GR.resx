@@ -42,5 +42,26 @@
   <data name="We&apos;re sorry, something went wrong while processing your request." xml:space="preserve">
     <value>Συγγνώμη, κάτι πήγε στραβά κατά την επεξεργασία του αιτήματός σας.</value>
   </data>
+  <data name="Try again" xml:space="preserve">
+    <value>Δοκιμάστε ξανά</value>
+  </data>
+  <data name="Your browser sent a request that this server could not understand." xml:space="preserve">
+    <value>Ο περιηγητής σας έστειλε ένα αίτημα που ο διακομιστής δεν μπόρεσε να κατανοήσει.</value>
+  </data>
+  <data name="The page you are looking for might have been removed, had its name changed, or is temporarily unavailable." xml:space="preserve">
+    <value>Η σελίδα που αναζητάτε μπορεί να έχει αφαιρεθεί, να άλλαξε το όνομά της ή να είναι προσωρινά μη διαθέσιμη.</value>
+  </data>
+  <data name="Sorry, you do not have the necessary permissions to access this page." xml:space="preserve">
+    <value>Συγγνώμη, δεν έχετε τα απαραίτητα δικαιώματα για πρόσβαση σε αυτήν τη σελίδα.</value>
+  </data>
+  <data name="Please check your request and try again. If you believe this is a server error, please contact support." xml:space="preserve">
+    <value>Παρακαλώ ελέγξτε το αίτημά σας και δοκιμάστε ξανά. Αν πιστεύετε ότι πρόκειται για σφάλμα του διακομιστή, παρακαλώ επικοινωνήστε με την υποστήριξη.</value>
+  </data>
+  <data name="Please check the URL and try again. If you believe this is a server error, please contact support." xml:space="preserve">
+    <value>Παρακαλώ ελέγξτε τη διεύθυνση URL και δοκιμάστε ξανά. Αν πιστεύετε ότι πρόκειται για σφάλμα του διακομιστή, παρακαλώ επικοινωνήστε με την υποστήριξη.</value>
+  </data>
+  <data name="If you believe you should have access, please contact your system administrator. Or try signing out and signing in again." xml:space="preserve">
+    <value>Αν πιστεύετε ότι θα έπρεπε να έχετε πρόσβαση, παρακαλώ επικοινωνήστε με τον διαχειριστή του συστήματός σας. Ή δοκιμάστε να αποσυνδεθείτε και να συνδεθείτε ξανά.</value>
+  </data>
 
 </root>

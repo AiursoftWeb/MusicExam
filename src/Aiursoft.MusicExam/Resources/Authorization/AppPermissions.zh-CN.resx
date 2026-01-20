@@ -102,5 +102,29 @@
   <data name="View System Context" xml:space="preserve">
     <value>查看系统上下文</value>
   </data>
+  <data name="Allows the user to participate in exams." xml:space="preserve">
+    <value>允许用户参加考试。</value>
+  </data>
+  <data name="Take Exam" xml:space="preserve">
+    <value>参加考试</value>
+  </data>
+  <data name="View Active Users" xml:space="preserve">
+    <value>查看活跃用户</value>
+  </data>
+  <data name="View Accounting" xml:space="preserve">
+    <value>查看会计</value>
+  </data>
+  <data name="View Change History" xml:space="preserve">
+    <value>查看变更历史</value>
+  </data>
+  <data name="Allows viewing system statistics like user counts and usage data." xml:space="preserve">
+    <value>允许查看系统统计数据，例如用户数量和使用数据。</value>
+  </data>
+  <data name="Allows viewing monthly active user statistics and details." xml:space="preserve">
+    <value>允许查看月活跃用户统计数据和详细信息。</value>
+  </data>
+  <data name="Allows viewing the history of all user and role changes." xml:space="preserve">
+    <value>允许查看所有用户和角色的变更历史。</value>
+  </data>
 
 </root>

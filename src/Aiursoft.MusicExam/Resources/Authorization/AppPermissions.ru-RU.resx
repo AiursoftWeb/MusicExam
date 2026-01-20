@@ -102,5 +102,29 @@
   <data name="View System Context" xml:space="preserve">
     <value>Просмотр контекста системы</value>
   </data>
+  <data name="Take Exam" xml:space="preserve">
+    <value>Пройти экзамен</value>
+  </data>
+  <data name="Allows viewing monthly active user statistics and details." xml:space="preserve">
+    <value>Позволяет просматривать статистику ежемесячно активных пользователей и детали.</value>
+  </data>
+  <data name="Allows the user to participate in exams." xml:space="preserve">
+    <value>Позволяет пользователю участвовать в экзаменах.</value>
+  </data>
+  <data name="View Accounting" xml:space="preserve">
+    <value>Просмотр учета</value>
+  </data>
+  <data name="Allows viewing system statistics like user counts and usage data." xml:space="preserve">
+    <value>Позволяет просматривать статистику системы, такую как количество пользователей и данные использования.</value>
+  </data>
+  <data name="View Change History" xml:space="preserve">
+    <value>Просмотр истории изменений</value>
+  </data>
+  <data name="View Active Users" xml:space="preserve">
+    <value>Просмотр активных пользователей</value>
+  </data>
+  <data name="Allows viewing the history of all user and role changes." xml:space="preserve">
+    <value>Позволяет просматривать историю всех изменений пользователей и ролей.</value>
+  </data>
 
 </root>

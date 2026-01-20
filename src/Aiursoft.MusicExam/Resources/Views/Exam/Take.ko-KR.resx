@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Previous" xml:space="preserve">
+    <value>이전</value>
+  </data>
+  <data name="Category:" xml:space="preserve">
+    <value>카테고리:</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>다음</value>
+  </data>
+  <data name="Check Answer" xml:space="preserve">
+    <value>정답 확인</value>
+  </data>
+  <data name="This is a multiple choice question." xml:space="preserve">
+    <value>이것은 객관식 문제입니다.</value>
+  </data>
+  <data name="Submit Exam" xml:space="preserve">
+    <value>시험 제출</value>
+  </data>
+  <data name="This is a sight-singing question. Please review the sheet music and sing aloud." xml:space="preserve">
+    <value>이것은 시창(sight-singing) 문제입니다. 악보를 확인하고 소리 내어 노래해 주세요.</value>
+  </data>
+  <data name="Correct!" xml:space="preserve">
+    <value>정답입니다!</value>
+  </data>
+  <data name="Please select an answer first." xml:space="preserve">
+    <value>먼저 답변을 선택해 주세요.</value>
+  </data>
+  <data name="Incorrect! Please check the correct answer highlighted above." xml:space="preserve">
+    <value>틀렸습니다! 위에 강조된 정답을 확인해 주세요.</value>
+  </data>
+
+</root>

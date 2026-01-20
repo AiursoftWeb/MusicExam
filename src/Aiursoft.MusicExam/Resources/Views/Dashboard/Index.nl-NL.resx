@@ -171,5 +171,59 @@
   <data name="Why use the Aiursoft Template?" xml:space="preserve">
     <value>Waarom de Aiursoft Template gebruiken?</value>
   </data>
+  <data name="Start Practice" xml:space="preserve">
+    <value>Start met oefenen</value>
+  </data>
+  <data name="Welcome to the Music Exam Platform" xml:space="preserve">
+    <value>Welkom bij het Muziekexamenplatform</value>
+  </data>
+  <data name="Your journey to mastering music theory starts here." xml:space="preserve">
+    <value>Jouw reis naar het beheersen van muziektheorie begint hier.</value>
+  </data>
+  <data name="View My Progress" xml:space="preserve">
+    <value>Mijn voortgang bekijken</value>
+  </data>
+  <data name="Realistic Mock Exams" xml:space="preserve">
+    <value>Realistische Proefexamens</value>
+  </data>
+  <data name="Our Features" xml:space="preserve">
+    <value>Onze kenmerken</value>
+  </data>
+  <data name="A comprehensive platform designed to help you excel in your music exams." xml:space="preserve">
+    <value>Een uitgebreid platform ontworpen om je te helpen uitblinken in je muziekexamens.</value>
+  </data>
+  <data name="Practice with thousands of questions from official sources, covering all levels and topics." xml:space="preserve">
+    <value>Oefen met duizenden vragen uit officiële bronnen, die alle niveaus en onderwerpen dekken.</value>
+  </data>
+  <data name="Comprehensive Question Bank" xml:space="preserve">
+    <value>Uitgebreide Vragenbank</value>
+  </data>
+  <data name="Detailed Analytics" xml:space="preserve">
+    <value>Gedetailleerde analyses</value>
+  </data>
+  <data name="Simulate the real exam environment with timed mock tests and get a feel for the actual challenge." xml:space="preserve">
+    <value>Simuleer de echte examenomgeving met getimede proefexamens en krijg een gevoel voor de werkelijke uitdaging.</value>
+  </data>
+  <data name="Cross-Platform Access" xml:space="preserve">
+    <value>Platformonafhankelijke Toegang</value>
+  </data>
+  <data name="Official Curriculum" xml:space="preserve">
+    <value>Officieel Curriculum</value>
+  </data>
+  <data name="Sight-Singing Practice" xml:space="preserve">
+    <value>Sight-zingen Oefenen</value>
+  </data>
+  <data name="Track your performance, view detailed score reports, and identify your strengths and weaknesses." xml:space="preserve">
+    <value>Volg je prestaties, bekijk gedetailleerde scoringsrapporten en identificeer je sterke en zwakke punten.</value>
+  </data>
+  <data name="Sharpen your sight-singing skills with a vast library of melodies and interactive exercises." xml:space="preserve">
+    <value>Scherp je bladzangvaardigheden aan met een uitgebreide bibliotheek van melodieën en interactieve oefeningen.</value>
+  </data>
+  <data name="Practice anytime, anywhere. Our platform is fully responsive and works on all your devices." xml:space="preserve">
+    <value>Oefen altijd en overal. Ons platform is volledig responsief en werkt op al je apparaten.</value>
+  </data>
+  <data name="All content is based on the official curriculum of major music conservatories." xml:space="preserve">
+    <value>Alle inhoud is gebaseerd op het officiële curriculum van grote muziekconservatoria.</value>
+  </data>
 
 </root>

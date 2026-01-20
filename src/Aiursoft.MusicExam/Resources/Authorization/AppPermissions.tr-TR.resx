@@ -102,5 +102,29 @@
   <data name="View System Context" xml:space="preserve">
     <value>Sistem Bağlamını Görüntüle</value>
   </data>
+  <data name="Take Exam" xml:space="preserve">
+    <value>Sınava Gir</value>
+  </data>
+  <data name="Allows the user to participate in exams." xml:space="preserve">
+    <value>Kullanıcının sınavlara katılmasına izin verir.</value>
+  </data>
+  <data name="View Change History" xml:space="preserve">
+    <value>Değişiklik Geçmişini Görüntüle</value>
+  </data>
+  <data name="Allows viewing monthly active user statistics and details." xml:space="preserve">
+    <value>Aylık aktif kullanıcı istatistiklerini ve detaylarını görüntülemeye izin verir.</value>
+  </data>
+  <data name="Allows viewing the history of all user and role changes." xml:space="preserve">
+    <value>Tüm kullanıcı ve rol değişikliklerinin geçmişini görüntülemeye izin verir.</value>
+  </data>
+  <data name="Allows viewing system statistics like user counts and usage data." xml:space="preserve">
+    <value>Kullanıcı sayıları ve kullanım verileri gibi sistem istatistiklerini görüntülemeye izin verir.</value>
+  </data>
+  <data name="View Accounting" xml:space="preserve">
+    <value>Muhasebeyi Görüntüle</value>
+  </data>
+  <data name="View Active Users" xml:space="preserve">
+    <value>Aktif Kullanıcıları Görüntüle</value>
+  </data>
 
 </root>

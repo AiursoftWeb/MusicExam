@@ -102,5 +102,29 @@
   <data name="View System Context" xml:space="preserve">
     <value>システムコンテキストの表示</value>
   </data>
+  <data name="Take Exam" xml:space="preserve">
+    <value>試験を受ける</value>
+  </data>
+  <data name="Allows viewing system statistics like user counts and usage data." xml:space="preserve">
+    <value>ユーザー数や利用データなどのシステム統計を表示できます。</value>
+  </data>
+  <data name="View Active Users" xml:space="preserve">
+    <value>アクティブユーザーを表示</value>
+  </data>
+  <data name="Allows the user to participate in exams." xml:space="preserve">
+    <value>ユーザーが試験に参加できるようにします。</value>
+  </data>
+  <data name="Allows viewing monthly active user statistics and details." xml:space="preserve">
+    <value>月間アクティブユーザーの統計および詳細を表示できます。</value>
+  </data>
+  <data name="View Change History" xml:space="preserve">
+    <value>変更履歴を表示</value>
+  </data>
+  <data name="View Accounting" xml:space="preserve">
+    <value>会計の表示</value>
+  </data>
+  <data name="Allows viewing the history of all user and role changes." xml:space="preserve">
+    <value>ユーザーおよびロールのすべての変更履歴を表示できます。</value>
+  </data>
 
 </root>

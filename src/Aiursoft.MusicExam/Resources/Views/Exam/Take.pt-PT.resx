@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Submit Exam" xml:space="preserve">
+    <value>Submeter Exame</value>
+  </data>
+  <data name="This is a multiple choice question." xml:space="preserve">
+    <value>Esta é uma pergunta de escolha múltipla.</value>
+  </data>
+  <data name="Check Answer" xml:space="preserve">
+    <value>Verificar Resposta</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Seguinte</value>
+  </data>
+  <data name="Category:" xml:space="preserve">
+    <value>Categoria:</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Anterior</value>
+  </data>
+  <data name="Please select an answer first." xml:space="preserve">
+    <value>Por favor, selecione uma resposta primeiro.</value>
+  </data>
+  <data name="This is a sight-singing question. Please review the sheet music and sing aloud." xml:space="preserve">
+    <value>Esta é uma questão de leitura à primeira vista. Por favor, reveja a partitura e cante em voz alta.</value>
+  </data>
+  <data name="Incorrect! Please check the correct answer highlighted above." xml:space="preserve">
+    <value>Incorreto! Por favor, verifique a resposta correta destacada acima.</value>
+  </data>
+  <data name="Correct!" xml:space="preserve">
+    <value>Correto!</value>
+  </data>
+
+</root>

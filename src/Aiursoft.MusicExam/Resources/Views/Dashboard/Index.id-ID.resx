@@ -171,5 +171,59 @@
   <data name="Why use the Aiursoft Template?" xml:space="preserve">
     <value>Menggunakan Template Aiursoft?</value>
   </data>
+  <data name="Start Practice" xml:space="preserve">
+    <value>Mulai Latihan</value>
+  </data>
+  <data name="Our Features" xml:space="preserve">
+    <value>Fitur Kami</value>
+  </data>
+  <data name="Comprehensive Question Bank" xml:space="preserve">
+    <value>Bank Soal Komprehensif</value>
+  </data>
+  <data name="Your journey to mastering music theory starts here." xml:space="preserve">
+    <value>Perjalanan Anda untuk menguasai teori musik dimulai di sini.</value>
+  </data>
+  <data name="A comprehensive platform designed to help you excel in your music exams." xml:space="preserve">
+    <value>Platform komprehensif yang dirancang untuk membantu Anda unggul dalam ujian musik Anda.</value>
+  </data>
+  <data name="Practice with thousands of questions from official sources, covering all levels and topics." xml:space="preserve">
+    <value>Berlatihlah dengan ribuan soal dari sumber resmi, mencakup semua tingkat dan topik.</value>
+  </data>
+  <data name="View My Progress" xml:space="preserve">
+    <value>Lihat Kemajuan Saya</value>
+  </data>
+  <data name="Welcome to the Music Exam Platform" xml:space="preserve">
+    <value>Selamat Datang di Platform Ujian Musik</value>
+  </data>
+  <data name="Detailed Analytics" xml:space="preserve">
+    <value>Analisis Mendetail</value>
+  </data>
+  <data name="Realistic Mock Exams" xml:space="preserve">
+    <value>Ujian Tiruan yang Realistis</value>
+  </data>
+  <data name="Simulate the real exam environment with timed mock tests and get a feel for the actual challenge." xml:space="preserve">
+    <value>Simulasikan lingkungan ujian nyata dengan tes tiruan berbatas waktu dan rasakan tantangan sesungguhnya.</value>
+  </data>
+  <data name="Sight-Singing Practice" xml:space="preserve">
+    <value>Latihan Sight-Singing</value>
+  </data>
+  <data name="Track your performance, view detailed score reports, and identify your strengths and weaknesses." xml:space="preserve">
+    <value>Pantau kinerja Anda, lihat laporan skor terperinci, dan identifikasi kekuatan serta kelemahan Anda.</value>
+  </data>
+  <data name="Cross-Platform Access" xml:space="preserve">
+    <value>Akses Lintas Platform</value>
+  </data>
+  <data name="Official Curriculum" xml:space="preserve">
+    <value>Kurikulum Resmi</value>
+  </data>
+  <data name="Practice anytime, anywhere. Our platform is fully responsive and works on all your devices." xml:space="preserve">
+    <value>Berlatih kapan saja, di mana saja. Platform kami sepenuhnya responsif dan berfungsi di semua perangkat Anda.</value>
+  </data>
+  <data name="Sharpen your sight-singing skills with a vast library of melodies and interactive exercises." xml:space="preserve">
+    <value>Asah keterampilan sight-singing Anda dengan perpustakaan melodi yang luas dan latihan interaktif.</value>
+  </data>
+  <data name="All content is based on the official curriculum of major music conservatories." xml:space="preserve">
+    <value>Semua konten didasarkan pada kurikulum resmi dari konservatori musik utama.</value>
+  </data>
 
 </root>

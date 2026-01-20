@@ -102,5 +102,29 @@
   <data name="View System Context" xml:space="preserve">
     <value>Lihat Konteks Sistem</value>
   </data>
+  <data name="Allows the user to participate in exams." xml:space="preserve">
+    <value>Memungkinkan pengguna untuk mengikuti ujian.</value>
+  </data>
+  <data name="Take Exam" xml:space="preserve">
+    <value>Ikuti Ujian</value>
+  </data>
+  <data name="View Active Users" xml:space="preserve">
+    <value>Lihat Pengguna Aktif</value>
+  </data>
+  <data name="Allows viewing system statistics like user counts and usage data." xml:space="preserve">
+    <value>Memungkinkan melihat statistik sistem seperti jumlah pengguna dan data penggunaan.</value>
+  </data>
+  <data name="View Change History" xml:space="preserve">
+    <value>Lihat Riwayat Perubahan</value>
+  </data>
+  <data name="View Accounting" xml:space="preserve">
+    <value>Lihat Akuntansi</value>
+  </data>
+  <data name="Allows viewing monthly active user statistics and details." xml:space="preserve">
+    <value>Memungkinkan melihat statistik dan detail pengguna aktif bulanan.</value>
+  </data>
+  <data name="Allows viewing the history of all user and role changes." xml:space="preserve">
+    <value>Memungkinkan melihat riwayat semua perubahan pengguna dan peran.</value>
+  </data>
 
 </root>

@@ -102,5 +102,29 @@
   <data name="View System Context" xml:space="preserve">
     <value>Visa systemkontext</value>
   </data>
+  <data name="View Active Users" xml:space="preserve">
+    <value>Visa aktiva användare</value>
+  </data>
+  <data name="Take Exam" xml:space="preserve">
+    <value>Ta prov</value>
+  </data>
+  <data name="View Accounting" xml:space="preserve">
+    <value>Visa Redovisning</value>
+  </data>
+  <data name="View Change History" xml:space="preserve">
+    <value>Visa Ändringshistorik</value>
+  </data>
+  <data name="Allows viewing system statistics like user counts and usage data." xml:space="preserve">
+    <value>Tillåter visning av systemstatistik, t.ex. användarantal och användningsdata.</value>
+  </data>
+  <data name="Allows viewing the history of all user and role changes." xml:space="preserve">
+    <value>Tillåter visning av historiken över alla användar- och rolländringar.</value>
+  </data>
+  <data name="Allows viewing monthly active user statistics and details." xml:space="preserve">
+    <value>Tillåter visning av statistik över månadsaktiva användare och detaljer.</value>
+  </data>
+  <data name="Allows the user to participate in exams." xml:space="preserve">
+    <value>Tillåter användaren att delta i prov.</value>
+  </data>
 
 </root>

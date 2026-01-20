@@ -102,5 +102,29 @@
   <data name="View System Context" xml:space="preserve">
     <value>Vizualizare Context Sistem</value>
   </data>
+  <data name="Take Exam" xml:space="preserve">
+    <value>Susține Examenul</value>
+  </data>
+  <data name="View Accounting" xml:space="preserve">
+    <value>Vizualizare Contabilitate</value>
+  </data>
+  <data name="Allows the user to participate in exams." xml:space="preserve">
+    <value>Permite utilizatorului să participe la examene.</value>
+  </data>
+  <data name="View Active Users" xml:space="preserve">
+    <value>Vizualizați Utilizatorii Activi</value>
+  </data>
+  <data name="Allows viewing monthly active user statistics and details." xml:space="preserve">
+    <value>Permite vizualizarea statisticilor și detaliilor utilizatorilor activi lunar.</value>
+  </data>
+  <data name="View Change History" xml:space="preserve">
+    <value>Vizualizează Istoricul Modificărilor</value>
+  </data>
+  <data name="Allows viewing the history of all user and role changes." xml:space="preserve">
+    <value>Permite vizualizarea istoricului tuturor modificărilor utilizatorilor și rolurilor.</value>
+  </data>
+  <data name="Allows viewing system statistics like user counts and usage data." xml:space="preserve">
+    <value>Permite vizualizarea statisticilor sistemului, cum ar fi numărul de utilizatori și datele de utilizare.</value>
+  </data>
 
 </root>

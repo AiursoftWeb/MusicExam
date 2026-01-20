@@ -102,5 +102,29 @@
   <data name="View System Context" xml:space="preserve">
     <value>Systemkontext anzeigen</value>
   </data>
+  <data name="Take Exam" xml:space="preserve">
+    <value>Prüfung ablegen</value>
+  </data>
+  <data name="View Change History" xml:space="preserve">
+    <value>Änderungsverlauf anzeigen</value>
+  </data>
+  <data name="View Accounting" xml:space="preserve">
+    <value>Buchhaltung anzeigen</value>
+  </data>
+  <data name="Allows viewing the history of all user and role changes." xml:space="preserve">
+    <value>Erlaubt das Anzeigen des Verlaufs aller Benutzer- und Rollenänderungen.</value>
+  </data>
+  <data name="Allows viewing system statistics like user counts and usage data." xml:space="preserve">
+    <value>Erlaubt das Anzeigen von Systemstatistiken wie Benutzerzahlen und Nutzungsdaten.</value>
+  </data>
+  <data name="Allows the user to participate in exams." xml:space="preserve">
+    <value>Erlaubt dem Benutzer, an Prüfungen teilzunehmen.</value>
+  </data>
+  <data name="View Active Users" xml:space="preserve">
+    <value>Aktive Benutzer anzeigen</value>
+  </data>
+  <data name="Allows viewing monthly active user statistics and details." xml:space="preserve">
+    <value>Erlaubt das Anzeigen von Statistiken und Details der monatlich aktiven Benutzer.</value>
+  </data>
 
 </root>

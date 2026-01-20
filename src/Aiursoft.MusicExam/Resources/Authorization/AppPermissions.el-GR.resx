@@ -102,5 +102,29 @@
   <data name="View System Context" xml:space="preserve">
     <value>Προβολή Συστημικού Περιεχομένου</value>
   </data>
+  <data name="View Active Users" xml:space="preserve">
+    <value>Προβολή Ενεργών Χρηστών</value>
+  </data>
+  <data name="View Change History" xml:space="preserve">
+    <value>Προβολή Ιστορικού Αλλαγών</value>
+  </data>
+  <data name="View Accounting" xml:space="preserve">
+    <value>Προβολή Λογιστικών</value>
+  </data>
+  <data name="Take Exam" xml:space="preserve">
+    <value>Δώστε Εξέταση</value>
+  </data>
+  <data name="Allows the user to participate in exams." xml:space="preserve">
+    <value>Επιτρέπει στον χρήστη να συμμετέχει σε εξετάσεις.</value>
+  </data>
+  <data name="Allows viewing system statistics like user counts and usage data." xml:space="preserve">
+    <value>Επιτρέπει την προβολή στατιστικών συστήματος όπως αριθμός χρηστών και δεδομένα χρήσης.</value>
+  </data>
+  <data name="Allows viewing the history of all user and role changes." xml:space="preserve">
+    <value>Επιτρέπει την προβολή του ιστορικού όλων των αλλαγών χρηστών και ρόλων.</value>
+  </data>
+  <data name="Allows viewing monthly active user statistics and details." xml:space="preserve">
+    <value>Επιτρέπει την προβολή στατιστικών και λεπτομερειών μηνιαίων ενεργών χρηστών.</value>
+  </data>
 
 </root>

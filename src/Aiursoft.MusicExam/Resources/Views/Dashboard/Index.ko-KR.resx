@@ -171,5 +171,59 @@
   <data name="Why use the Aiursoft Template?" xml:space="preserve">
     <value>Aiursoft 템플릿을 사용하는 이유는 무엇인가요?</value>
   </data>
+  <data name="Start Practice" xml:space="preserve">
+    <value>연습 시작</value>
+  </data>
+  <data name="Our Features" xml:space="preserve">
+    <value>주요 기능</value>
+  </data>
+  <data name="View My Progress" xml:space="preserve">
+    <value>내 진행 상황 보기</value>
+  </data>
+  <data name="Comprehensive Question Bank" xml:space="preserve">
+    <value>종합 문제 은행</value>
+  </data>
+  <data name="Practice with thousands of questions from official sources, covering all levels and topics." xml:space="preserve">
+    <value>공식 출처의 수천 개 문제로 모든 레벨과 주제를 아우르며 연습하세요.</value>
+  </data>
+  <data name="Your journey to mastering music theory starts here." xml:space="preserve">
+    <value>음악 이론을 마스터하기 위한 여러분의 여정이 여기서 시작됩니다.</value>
+  </data>
+  <data name="A comprehensive platform designed to help you excel in your music exams." xml:space="preserve">
+    <value>음악 시험에서 뛰어난 성과를 거둘 수 있도록 설계된 종합적인 플랫폼입니다.</value>
+  </data>
+  <data name="Welcome to the Music Exam Platform" xml:space="preserve">
+    <value>음악 시험 플랫폼에 오신 것을 환영합니다</value>
+  </data>
+  <data name="Detailed Analytics" xml:space="preserve">
+    <value>상세 분석</value>
+  </data>
+  <data name="Realistic Mock Exams" xml:space="preserve">
+    <value>실전 모의고사</value>
+  </data>
+  <data name="Sight-Singing Practice" xml:space="preserve">
+    <value>시창 연습</value>
+  </data>
+  <data name="Cross-Platform Access" xml:space="preserve">
+    <value>크로스 플랫폼 접근</value>
+  </data>
+  <data name="Simulate the real exam environment with timed mock tests and get a feel for the actual challenge." xml:space="preserve">
+    <value>시간 제한이 있는 모의고사로 실제 시험 환경을 시뮬레이션하고, 실제 시험의 난이도를 체험해 보세요.</value>
+  </data>
+  <data name="Track your performance, view detailed score reports, and identify your strengths and weaknesses." xml:space="preserve">
+    <value>성과를 추적하고, 상세한 점수 보고서를 확인하며, 자신의 강점과 약점을 파악하세요.</value>
+  </data>
+  <data name="Official Curriculum" xml:space="preserve">
+    <value>공식 커리큘럼</value>
+  </data>
+  <data name="All content is based on the official curriculum of major music conservatories." xml:space="preserve">
+    <value>모든 콘텐츠는 주요 음악 대학의 공식 커리큘럼을 기반으로 합니다.</value>
+  </data>
+  <data name="Sharpen your sight-singing skills with a vast library of melodies and interactive exercises." xml:space="preserve">
+    <value>방대한 멜로디 라이브러리와 인터랙티브 연습을 통해 시창 실력을 연마하세요.</value>
+  </data>
+  <data name="Practice anytime, anywhere. Our platform is fully responsive and works on all your devices." xml:space="preserve">
+    <value>언제 어디서나 연습하세요. 당사의 플랫폼은 완벽하게 반응형이며 모든 기기에서 작동합니다.</value>
+  </data>
 
 </root>

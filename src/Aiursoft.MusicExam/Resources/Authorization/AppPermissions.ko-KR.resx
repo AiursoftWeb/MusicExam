@@ -102,5 +102,29 @@
   <data name="View System Context" xml:space="preserve">
     <value>시스템 컨텍스트 보기</value>
   </data>
+  <data name="Take Exam" xml:space="preserve">
+    <value>시험 응시</value>
+  </data>
+  <data name="Allows viewing the history of all user and role changes." xml:space="preserve">
+    <value>모든 사용자 및 역할 변경 이력을 조회할 수 있습니다.</value>
+  </data>
+  <data name="View Change History" xml:space="preserve">
+    <value>변경 이력 보기</value>
+  </data>
+  <data name="Allows viewing system statistics like user counts and usage data." xml:space="preserve">
+    <value>사용자 수 및 사용 데이터 등의 시스템 통계를 볼 수 있습니다.</value>
+  </data>
+  <data name="Allows viewing monthly active user statistics and details." xml:space="preserve">
+    <value>월간 활성 사용자 통계 및 세부 정보를 조회할 수 있습니다.</value>
+  </data>
+  <data name="View Accounting" xml:space="preserve">
+    <value>회계 조회</value>
+  </data>
+  <data name="View Active Users" xml:space="preserve">
+    <value>활성 사용자 조회</value>
+  </data>
+  <data name="Allows the user to participate in exams." xml:space="preserve">
+    <value>사용자가 시험에 참여할 수 있도록 허용합니다.</value>
+  </data>
 
 </root>

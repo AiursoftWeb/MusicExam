@@ -102,5 +102,29 @@
   <data name="View System Context" xml:space="preserve">
     <value>Se Systemkontekst</value>
   </data>
+  <data name="View Accounting" xml:space="preserve">
+    <value>Se Regnskab</value>
+  </data>
+  <data name="View Active Users" xml:space="preserve">
+    <value>Se aktive brugere</value>
+  </data>
+  <data name="View Change History" xml:space="preserve">
+    <value>Se ændringshistorik</value>
+  </data>
+  <data name="Take Exam" xml:space="preserve">
+    <value>Tag eksamen</value>
+  </data>
+  <data name="Allows viewing system statistics like user counts and usage data." xml:space="preserve">
+    <value>Giver mulighed for at se systemstatistikker som brugerantal og brugsdata.</value>
+  </data>
+  <data name="Allows viewing monthly active user statistics and details." xml:space="preserve">
+    <value>Giver mulighed for at se statistik og detaljer for månedlige aktive brugere.</value>
+  </data>
+  <data name="Allows the user to participate in exams." xml:space="preserve">
+    <value>Giver brugeren mulighed for at deltage i eksamener.</value>
+  </data>
+  <data name="Allows viewing the history of all user and role changes." xml:space="preserve">
+    <value>Giver mulighed for at se historikken for alle bruger- og rolleændringer.</value>
+  </data>
 
 </root>
