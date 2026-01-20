@@ -1,23 +1,18 @@
-<div class="text-center mt-5">
-    <h1 class="display-4">@Localizer["Welcome to the Music Exam Platform"]</h1>
-    <p>@Localizer["Your journey to mastering music theory starts here."]</p>
-</div>
+<div class="row mb-2 mb-xl-3 justify-content-center">
+    <div class="col-auto text-center mt-5">
+        <h1 class="display-4 mb-3">@Localizer["Welcome to the Music Exam Platform"]</h1>
+        <p class="lead mb-4">@Localizer["Your journey to mastering music theory starts here."]</p>
 
-<div class="container-fluid p-5">
-    <div class="row mb-2 mb-xl-3">
-        <div class="col-auto d-none d-sm-block">
-            <h3>@Localizer["Dashboard"]</h3>
-        </div>
-
-        <div class="col-auto ms-auto text-end mt-n1">
-            <a asp-controller="Home" asp-action="Index" class="btn btn-primary me-2 shadow-sm">
-                <i class="align-middle" data-lucide="play-circle"></i> @Localizer["Start Practice"]
+        <div class="d-flex justify-content-center gap-3">
+            <a asp-controller="Home" asp-action="Index" class="btn btn-primary btn-lg shadow-sm px-4">
+                <i class="align-middle me-2" data-lucide="play-circle"></i> @Localizer["Start Practice"]
             </a>
-            <a asp-controller="Exam" asp-action="History" class="btn btn-outline-primary shadow-sm">
-                <i class="align-middle" data-lucide="pie-chart"></i> @Localizer["View My Progress"]
+            <a asp-controller="Exam" asp-action="History" class="btn btn-outline-primary btn-lg shadow-sm px-4">
+                <i class="align-middle me-2" data-lucide="pie-chart"></i> @Localizer["View My Progress"]
             </a>
         </div>
     </div>
+</div>
 
     <div class="row">
         <div class="col-12">
