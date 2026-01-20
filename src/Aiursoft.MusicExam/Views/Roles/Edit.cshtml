@@ -60,10 +60,10 @@
                                     <input asp-for="@Model.Claims[i].IsSelected" class="form-check-input" />
 
                                     <label class="form-check-label" for="@Html.IdFor(m => m.Claims[i].IsSelected)">
-                                        <strong>@PermissionLocalizer[Model.Claims[i].Name]</strong>
+                                        <strong>@PermissionLocalizer[Model.Claims[i].Name ?? Model.Claims[i].Key]</strong>
                                     </label>
                                     <div class="text-muted ms-4">
-                                        <small>@PermissionLocalizer[Model.Claims[i].Description]</small>
+                                        <small>@PermissionLocalizer[Model.Claims[i].Description ?? string.Empty]</small>
                                     </div>
                                 </div>
                             </div>
