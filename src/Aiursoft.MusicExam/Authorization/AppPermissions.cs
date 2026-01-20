@@ -69,7 +69,13 @@ public class AppPermissions
                 localizer["Allows viewing the background job dashboard and managing jobs."]),
             new(AppPermissionNames.CanManageGlobalSettings,
                 localizer["Manage Global Settings"],
-                localizer["Allows viewing and modifying global application settings."])
+                localizer["Allows viewing and modifying global application settings."]),
+            new(AppPermissionNames.CanViewChangeHistory,
+                localizer["View Change History"],
+                localizer["Allows viewing the history of all user and role changes."]),
+            new(AppPermissionNames.CanViewActiveUsers,
+                localizer["View Active Users"],
+                localizer["Allows viewing monthly active user statistics and details."])
         ];
         return allPermission;
     }

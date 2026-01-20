@@ -19,7 +19,8 @@ namespace Aiursoft.MusicExam.Controllers;
 public class UsersController(
     RoleManager<IdentityRole> roleManager,
     UserManager<User> userManager,
-    TemplateDbContext context)
+    TemplateDbContext context,
+    ChangeRecorder changeRecorder)
     : Controller
 {
     [Authorize(Policy = AppPermissionNames.CanReadUsers)]
@@ -114,6 +115,14 @@ public class UsersController(
                 return this.StackView(newUser);
             }
 
+            var triggerUser = await userManager.GetUserAsync(User);
+            await changeRecorder.Record(
+                ChangeType.UserCreated, 
+                triggerUser?.Id, 
+                targetUserId: user.Id, 
+                targetDisplayName: user.DisplayName,
+                details: $"User {user.UserName} was created.");
+
             return RedirectToAction(nameof(Details), new { id = user.Id });
         }
         return this.StackView(newUser);
@@ -193,11 +202,36 @@ public class UsersController(
             .Select(r => r.RoleName)
             .ToArray();
 
-        var rolesToAdd = selectedRoles.Except(userCurrentRoles);
+        var rolesToAdd = selectedRoles.Except(userCurrentRoles).ToList();
         await userManager.AddToRolesAsync(userInDb, rolesToAdd);
 
-        var rolesToRemove = userCurrentRoles.Except(selectedRoles);
+        var rolesToRemove = userCurrentRoles.Except(selectedRoles).ToList();
         await userManager.RemoveFromRolesAsync(userInDb, rolesToRemove);
+
+        var triggerUser = await userManager.GetUserAsync(User);
+        foreach (var roleName in rolesToAdd)
+        {
+            var role = await roleManager.FindByNameAsync(roleName);
+            await changeRecorder.Record(
+                ChangeType.UserJoinedRole, 
+                triggerUser?.Id, 
+                targetUserId: userInDb.Id, 
+                targetDisplayName: userInDb.DisplayName,
+                targetRoleId: role?.Id,
+                details: $"User {userInDb.UserName} joined role {roleName}.");
+        }
+
+        foreach (var roleName in rolesToRemove)
+        {
+            var role = await roleManager.FindByNameAsync(roleName);
+            await changeRecorder.Record(
+                ChangeType.UserLeftRole, 
+                triggerUser?.Id, 
+                targetUserId: userInDb.Id, 
+                targetDisplayName: userInDb.DisplayName,
+                targetRoleId: role?.Id,
+                details: $"User {userInDb.UserName} left role {roleName}.");
+        }
 
         return RedirectToAction(nameof(Details), new { id = userInDb.Id });
     }
@@ -234,6 +268,15 @@ public class UsersController(
         {
             return NotFound();
         }
+        
+        var triggerUser = await userManager.GetUserAsync(User);
+        await changeRecorder.Record(
+            ChangeType.UserDeleted, 
+            triggerUser?.Id, 
+            targetUserId: user.Id, 
+            targetDisplayName: user.DisplayName,
+            details: $"User {user.UserName} was deleted.");
+            
         await userManager.DeleteAsync(user);
         return RedirectToAction(nameof(Index));
     }
