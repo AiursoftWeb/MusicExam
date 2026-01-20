@@ -16,15 +16,16 @@ public class HomeController : Controller
     {
         _dbContext = dbContext;
     }
-    
+
     public async Task<IActionResult> Index()
     {
         var schools = await _dbContext
             .Schools
             .Include(s => s.Papers)
-            .OrderBy(s => s.Id)
+            .OrderBy(s => s.Name)
+            .ThenBy(s => s.Id)
             .ToListAsync();
-        
+
         var model = new IndexViewModel
         {
             Schools = schools
