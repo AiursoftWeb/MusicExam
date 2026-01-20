@@ -29,4 +29,7 @@ public static class AppPermissionNames
     public const string CanManageGlobalSettings = nameof(CanManageGlobalSettings);
     public const string CanViewChangeHistory = nameof(CanViewChangeHistory);
     public const string CanViewActiveUsers = nameof(CanViewActiveUsers);
+
+    // Accounting
+    public const string CanViewAccounting = nameof(CanViewAccounting);
 }

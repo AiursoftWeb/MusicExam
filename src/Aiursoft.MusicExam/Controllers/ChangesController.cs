@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace Aiursoft.MusicExam.Controllers;
 
 [Authorize]
@@ -20,7 +21,7 @@ public class ChangesController(
     [RenderInNavBar(
         NavGroupName = "Administration",
         NavGroupOrder = 9999,
-        CascadedLinksGroupName = "System",
+        CascadedLinksGroupName = "Statistics",
         CascadedLinksIcon = "settings",
         CascadedLinksOrder = 9999,
         LinkText = "Change History",
@@ -42,7 +43,7 @@ public class ChangesController(
     [RenderInNavBar(
         NavGroupName = "Administration",
         NavGroupOrder = 9999,
-        CascadedLinksGroupName = "System",
+        CascadedLinksGroupName = "Statistics",
         CascadedLinksIcon = "settings",
         CascadedLinksOrder = 9999,
         LinkText = "Active Users",
@@ -61,7 +62,7 @@ public class ChangesController(
     {
         var start = new DateTime(month.Year, month.Month, 1, 0, 0, 0, DateTimeKind.Utc);
         var end = start.AddMonths(1).AddTicks(-1);
-        
+
         var report = await changeService.GetReportForMonth(start, end);
         return this.StackView(new ActiveUsersDetailsViewModel
         {

@@ -75,7 +75,10 @@ public class AppPermissions
                 localizer["Allows viewing the history of all user and role changes."]),
             new(AppPermissionNames.CanViewActiveUsers,
                 localizer["View Active Users"],
-                localizer["Allows viewing monthly active user statistics and details."])
+                localizer["Allows viewing monthly active user statistics and details."]),
+            new(AppPermissionNames.CanViewAccounting,
+                localizer["View Accounting"],
+                localizer["Allows viewing system statistics like user counts and usage data."])
         ];
         return allPermission;
     }
