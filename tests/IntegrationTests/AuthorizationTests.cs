@@ -1,39 +1,10 @@
 using System.Net;
-using Microsoft.EntityFrameworkCore;
-using Aiursoft.MusicExam.Entities;
 
 namespace Aiursoft.MusicExam.Tests.IntegrationTests;
 
 [TestClass]
 public class AuthorizationTests : TestBase
 {
-    private int SeededExamPaperId
-    {
-        get
-        {
-            var db = GetService<TemplateDbContext>();
-            var paper = db.ExamPapers.FirstOrDefault();
-            if (paper == null)
-            {
-                var school = new School { Name = "Test School" };
-                db.Schools.Add(school);
-                db.SaveChanges();
-
-                paper = new ExamPaper
-                {
-                    Title = "Test Paper",
-                    SchoolId = school.Id,
-                    Level = "1",
-                    Category = "Test"
-                };
-                db.ExamPapers.Add(paper);
-                db.SaveChanges();
-            }
-
-            return paper.Id;
-        }
-    }
-
     [TestMethod]
     public async Task AnonymousUser_CannotAccessExam_RedirectsToLogin()
     {
@@ -60,27 +31,6 @@ public class AuthorizationTests : TestBase
         Assert.AreEqual(HttpStatusCode.Found, response.StatusCode);
         // Verify it redirects to an error or access denied page
         Assert.IsNotNull(response.Headers.Location);
-    }
-
-    protected async Task LogoutAsync()
-    {
-        await Http.PostAsync("/Account/Logout", new FormUrlEncodedContent(new Dictionary<string, string>()));
-    }
-
-    protected async Task<(string userId, string email, string password)> RegisterNewUserAsync()
-    {
-        var email = $"test-{Guid.NewGuid()}@aiursoft.com";
-        var password = "Test-Password-123";
-
-        await PostForm("/Account/Register", new Dictionary<string, string>
-        {
-            { "Email", email },
-            { "Password", password },
-            { "ConfirmPassword", password }
-        });
-
-        var user = await GetService<TemplateDbContext>().Users.FirstAsync(u => u.Email == email);
-        return (user.Id, email, password);
     }
 
     [TestMethod]
