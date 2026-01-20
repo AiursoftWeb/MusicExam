@@ -41,6 +41,30 @@ public class AccountingController(TemplateDbContext dbContext) : Controller
             TotalQuestionsSubmitted = totalQuestionsSubmitted
         };
 
+        // Populate Chart Data
+        var today = DateTime.UtcNow.Date;
+        var day30DaysAgo = today.AddDays(-30);
+
+        var usersHistory = await dbContext.Users
+            .Where(t => t.CreationTime > day30DaysAgo)
+            .GroupBy(t => t.CreationTime.Date)
+            .Select(t => new { Time = t.Key, Count = t.Count() })
+            .ToListAsync();
+
+        var submissionHistory = await dbContext.ExamPaperSubmissions
+            .Where(t => t.SubmissionTime > day30DaysAgo)
+            .GroupBy(t => t.SubmissionTime.Date)
+            .Select(t => new { Time = t.Key, Count = t.Count() })
+            .ToListAsync();
+
+        for (var i = 0; i <= 30; i++)
+        {
+            var date = day30DaysAgo.AddDays(i);
+            model.ChartLabels.Add(date.ToString("MM-dd"));
+            model.NewUsersData.Add(usersHistory.FirstOrDefault(t => t.Time == date)?.Count ?? 0);
+            model.NewSubmissionsData.Add(submissionHistory.FirstOrDefault(t => t.Time == date)?.Count ?? 0);
+        }
+
         return this.StackView(model);
     }
 }
