@@ -28,12 +28,34 @@ public abstract class TestBase
         };
     }
 
+    protected int SeededExamPaperId { get; set; }
+
     [TestInitialize]
     public virtual async Task CreateServer()
     {
         Server = await AppAsync<Startup>([], port: Port);
         await Server.UpdateDbAsync<TemplateDbContext>();
         await Server.SeedAsync();
+
+        using (var scope = Server.Services.CreateScope())
+        {
+            var db = scope.ServiceProvider.GetRequiredService<TemplateDbContext>();
+            var school = new School { Name = "Test School" };
+            db.Schools.Add(school);
+            await db.SaveChangesAsync();
+
+            var paper = new ExamPaper
+            {
+                Title = "Test Paper",
+                SchoolId = school.Id,
+                Category = "General",
+                Level = "1"
+            };
+            db.ExamPapers.Add(paper);
+            await db.SaveChangesAsync();
+            SeededExamPaperId = paper.Id;
+        }
+
         await Server.StartAsync();
     }
 
@@ -43,6 +65,31 @@ public abstract class TestBase
         if (Server == null) return;
         await Server.StopAsync();
         Server.Dispose();
+    }
+
+    protected async Task LogoutAsync()
+    {
+        await PostForm("/Account/LogOff", new Dictionary<string, string>(), includeToken: false);
+    }
+
+    protected async Task<(string userId, string email, string password)> RegisterNewUserAsync()
+    {
+        var email = $"test-{Guid.NewGuid()}@aiursoft.com";
+        var password = "Test-Password-123";
+
+        var registerResponse = await PostForm("/Account/Register", new Dictionary<string, string>
+        {
+            { "Email", email },
+            { "Password", password },
+            { "ConfirmPassword", password }
+        });
+        Assert.AreEqual(HttpStatusCode.Found, registerResponse.StatusCode);
+
+        using var scope = Server!.Services.CreateScope();
+        var db = scope.ServiceProvider.GetRequiredService<TemplateDbContext>();
+        var user = db.Users.First(u => u.Email == email);
+
+        return (user.Id, email, password);
     }
 
     protected async Task<string> GetAntiCsrfToken(string url)
