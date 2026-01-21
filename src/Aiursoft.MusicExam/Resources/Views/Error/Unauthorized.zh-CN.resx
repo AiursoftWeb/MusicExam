@@ -34,4 +34,7 @@
     <value>重试</value>
   </data>
 
+  <data name="Please contact the administrator to pay and activate your account. Or try signing out and signing in again." xml:space="preserve">
+    <value>请联系管理员付款开通账号。或者尝试退出后重新登录。</value>
+  </data>
 </root>

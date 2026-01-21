@@ -25,7 +25,7 @@
                 @foreach (var submission in Model.Submissions)
                 {
                     <tr>
-                        <td>@submission.Paper?.Title</td>
+                        <td>@submission.Paper.Title</td>
                         <td><span data-utc-time="@submission.SubmissionTime.ToString("o")"></span></td>
                         <td>
                             @if (submission.Score.HasValue)
@@ -38,7 +38,7 @@
                             }
                         </td>
                         <td>
-                            <a class="btn btn-sm btn-outline-primary" asp-controller="Exam" asp-action="SubmissionDetails" asp-route-id="@submission.Id">
+                            <a class="btn btn-sm btn-outline-primary disabled">
                                 <i class="align-middle" data-lucide="eye"></i> @Localizer["View Submission"]
                             </a>
                         </td>
