@@ -35,7 +35,7 @@ public class PaymentManagementController(
         var usageCounts = await context.ExamPaperSubmissions
             .GroupBy(s => s.UserId)
             .Select(g => new { UserId = g.Key, Count = g.Count() })
-            .ToDictionaryAsync(k => k.UserId!, v => v.Count);
+            .ToDictionaryAsync(k => k.UserId, v => v.Count);
 
         var allUsers = await context.Users.ToListAsync();
         var usersWithRoles = new List<UserWithRolesViewModel>();
