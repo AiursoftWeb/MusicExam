@@ -35,7 +35,13 @@ public class Question
     /// 题目的类型。
     /// </summary>
     public required QuestionType QuestionType { get; set; }
-    
+
+    /// <summary>
+    /// 题目的解析。
+    /// </summary>
+    [MaxLength(4000)]
+    public string? Explanation { get; set; }
+
     // ================= 关联关系 =================
     
     public int PaperId { get; set; }

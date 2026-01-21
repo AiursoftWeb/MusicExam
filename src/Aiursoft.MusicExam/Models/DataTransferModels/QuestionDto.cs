@@ -12,7 +12,10 @@ public class QuestionDto
     
     [JsonPropertyName("correctAnswer")]
     public required string CorrectAnswer { get; set; }
-    
+
+    [JsonPropertyName("explanation")]
+    public string? Explanation { get; set; }
+
     [JsonPropertyName("local_audios")]
     public List<string> LocalAudios { get; set; } = new();
     

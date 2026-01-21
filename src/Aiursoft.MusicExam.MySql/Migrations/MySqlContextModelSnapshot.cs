@@ -188,6 +188,10 @@ namespace Aiursoft.MusicExam.MySql.Migrations
                         .HasMaxLength(4000)
                         .HasColumnType("varchar(4000)");
 
+                    b.Property<string>("Explanation")
+                        .HasMaxLength(4000)
+                        .HasColumnType("varchar(4000)");
+
                     b.Property<int>("Order")
                         .HasColumnType("int");
 

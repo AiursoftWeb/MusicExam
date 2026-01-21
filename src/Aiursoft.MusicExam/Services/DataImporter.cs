@@ -179,6 +179,7 @@ public class DataImporter : ISingletonDependency
                             var newQuestion = new Question
                             {
                                 Content = questionDto.Question,
+                                Explanation = questionDto.Explanation,
                                 AssetPath = JsonSerializer.Serialize(questionAssets.Where(q => !string.IsNullOrWhiteSpace(q))),
                                 Paper = paper,
                                 Order = questionOrder++,

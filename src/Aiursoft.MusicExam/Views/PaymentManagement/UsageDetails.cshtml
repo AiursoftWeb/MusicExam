@@ -9,7 +9,7 @@
 <div class="card">
     <div class="card-header">
         <h5 class="card-title">@Localizer["Exam Submissions"]</h5>
-        <h6 class="card-subtitle text-muted">@Localizer["Here are all the exam submissions for user {0}.", Model.TargetUser.Email]</h6>
+        <h6 class="card-subtitle text-muted">@Localizer["Here are all the exam submissions for user {0}.", Model.TargetUser.Email ?? Model.TargetUser.DisplayName]</h6>
     </div>
     <div class="table-responsive">
         <table class="table table-hover mb-0">
