@@ -64,4 +64,7 @@
     <value>请检查您的请求并重试。如果您认为这是服务器错误，请联系支持人员。</value>
   </data>
 
+  <data name="Please contact the administrator to pay and activate your account. Or try signing out and signing in again." xml:space="preserve">
+    <value>请联系管理员付款开通账号。或者尝试退出后重新登录。</value>
+  </data>
 </root>
