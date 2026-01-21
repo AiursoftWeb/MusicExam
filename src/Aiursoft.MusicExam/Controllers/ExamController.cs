@@ -32,6 +32,11 @@ public class ExamController : Controller
             return Forbid();
         }
 
+        if (user.ExpireAt != null && user.ExpireAt < DateTime.UtcNow)
+        {
+            return Forbid();
+        }
+
         var paper = await _dbContext.ExamPapers
             .Include(p => p.Questions)
             .ThenInclude(q => q.Options)
@@ -58,6 +63,12 @@ public class ExamController : Controller
         {
             return Forbid();
         }
+
+        if (user.ExpireAt != null && user.ExpireAt < DateTime.UtcNow)
+        {
+            return Forbid();
+        }
+
 
         var paper = await _dbContext.ExamPapers
             .Include(p => p.Questions)

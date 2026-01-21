@@ -1,3 +1,4 @@
+using System.Security.Claims;
 using Aiursoft.MusicExam.Authorization;
 using Aiursoft.MusicExam.Entities;
 using Aiursoft.MusicExam.Models.PaymentManagementViewModels;
@@ -35,7 +36,7 @@ public class PaymentManagementController(
             .GroupBy(s => s.UserId)
             .Select(g => new { UserId = g.Key, Count = g.Count() })
             .ToDictionaryAsync(k => k.UserId!, v => v.Count);
-        
+
         var allUsers = await context.Users.ToListAsync();
         var usersWithRoles = new List<UserWithRolesViewModel>();
         foreach (var user in allUsers)
@@ -76,7 +77,7 @@ public class PaymentManagementController(
         };
         return this.StackView(model);
     }
-    
+
     [HttpPost]
     [ValidateAntiForgeryToken]
     [Authorize(Policy = AppPermissionNames.CanEditUsers)]
@@ -99,6 +100,34 @@ public class PaymentManagementController(
             targetUserId: user.Id,
             targetDisplayName: user.DisplayName,
             details: $"Updated user {user.Email}'s expiration from {oldExpireAt?.ToString("O")} to {expireAt?.ToString("O")}.");
+
+        // Sync permissions
+        var userClaims = await userManager.GetClaimsAsync(user);
+        var hasPermission = userClaims.Any(c => c.Type == AppPermissions.Type && c.Value == AppPermissionNames.CanTakeExam);
+        var isPaid = expireAt > DateTime.UtcNow;
+
+        if (isPaid && !hasPermission)
+        {
+            await userManager.AddClaimAsync(user, new Claim(AppPermissions.Type, AppPermissionNames.CanTakeExam));
+            await changeRecorder.Record(
+                ChangeType.RoleGainedPermission, // Reusing RoleGainedPermission or similar. Using 'UserGainedPermission' if available would be better but keeping simple context.
+                triggerUser?.Id,
+                targetUserId: user.Id,
+                targetDisplayName: user.DisplayName,
+                details: $"User {user.Email} gained permission {AppPermissionNames.CanTakeExam} due to payment.");
+        }
+        else if (!isPaid && hasPermission)
+        {
+            await userManager.RemoveClaimAsync(user, userClaims.First(c => c.Type == AppPermissions.Type && c.Value == AppPermissionNames.CanTakeExam));
+            await changeRecorder.Record(
+                ChangeType.RoleLostPermission,
+                triggerUser?.Id,
+                targetUserId: user.Id,
+                targetDisplayName: user.DisplayName,
+                details: $"User {user.Email} lost permission {AppPermissionNames.CanTakeExam} due to expiration.");
+        }
+
+        await userManager.UpdateSecurityStampAsync(user);
 
         return Json(new { success = true, newExpireAt = expireAt?.ToString("O") });
     }
