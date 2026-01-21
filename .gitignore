@@ -21,3 +21,4 @@ app.db*
 .yarn/
 *.tsbuildinfo
 data
+storage

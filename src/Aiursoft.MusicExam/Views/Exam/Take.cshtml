@@ -11,7 +11,7 @@
     <h1 class="my-4">@Model.Paper.Title</h1>
     @if (!string.IsNullOrEmpty(Model.Paper.Category))
     {
-        <p class="text-muted mb-2">@Localizer["Category:"] @Model.Paper.Category</p>
+            <p class="text-muted mb-2">@Localizer["Category:"] @Model.Paper.Category</p>
     }
     <div class="progress mb-4" style="height: 25px;">
         <div id="progress-bar" class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 0%; transition: width 0.5s ease;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
@@ -24,24 +24,24 @@
             var question = orderedQuestions[i];
             var questionAssets = !string.IsNullOrWhiteSpace(question.AssetPath) ? JsonSerializer.Deserialize<List<string>>(question.AssetPath) : new List<string>();
 
-            <div class="question-panel" id="question-@i" style="display: @(i == 0 ? "block" : "none");">
-                <h4>(@(i + 1)/@orderedQuestions.Count) @question.Content</h4>
+                <div class="question-panel" id="question-@i" style="display: @(i == 0 ? "block" : "none");">
+                    <h4>(@(i + 1)/@orderedQuestions.Count) @question.Content</h4>
 
                 @if (questionAssets != null)
                 {
                     @foreach (var asset in questionAssets)
                     {
-                    if (asset.EndsWith(".mp3", StringComparison.OrdinalIgnoreCase))
-                    {
-                        <audio controls class="my-2">
-                            <source src="@Storage.RelativePathToInternetUrl(asset)" type="audio/mpeg">
-                            Your browser does not support the audio element.
-                        </audio>
-                    }
-                    else if (asset.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || asset.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
-                    {
-                        <img src="@Storage.RelativePathToInternetUrl(asset)" class="img-fluid my-2" alt="Question asset" />
-                    }
+                        if (asset.EndsWith(".mp3", StringComparison.OrdinalIgnoreCase))
+                        {
+                                        <audio controls class="my-2">
+                                            <source src="@Storage.RelativePathToInternetUrl(asset)" type="audio/mpeg">
+                                            Your browser does not support the audio element.
+                                        </audio>
+                        }
+                        else if (asset.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || asset.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                        {
+                                        <img src="@Storage.RelativePathToInternetUrl(asset)" class="img-fluid my-2" alt="Question asset" />
+                        }
                     }
                 }
 
@@ -49,48 +49,57 @@
                 {
                     case QuestionType.MultipleChoice:
                         var correctAnswersCount = question.Options.Count(o => o.IsCorrect);
-                        <div class="list-group mt-3" id="options-group-@i">
+                                    <div class="list-group mt-3" id="options-group-@i">
                             @foreach (var option in question.Options.OrderBy(o => o.Id))
                             {
-                                <label class="list-group-item option-label" id="label-@option.Id">
-                                    <input class="form-check-input me-2"
-                                           type="@(correctAnswersCount > 1 ? "checkbox" : "radio")"
-                                           name="question-@question.Id"
-                                           value="@option.Id"
-                                           data-is-correct="@option.IsCorrect.ToString().ToLower()">
+                                                <label class="list-group-item option-label" id="label-@option.Id">
+                                                    <input class="form-check-input me-2"
+                                                           type="@(correctAnswersCount > 1 ? "checkbox" : "radio")"
+                                                           name="question-@question.Id"
+                                                           value="@option.Id"
+                                                           data-is-correct="@option.IsCorrect.ToString().ToLower()">
 
                                     @if (option.Content.EndsWith(".mp3", StringComparison.OrdinalIgnoreCase))
                                     {
-                                        <audio controls class="my-2 d-inline-block align-middle" style="max-height: 50px;">
-                                            <source src="@Storage.RelativePathToInternetUrl(option.Content)" type="audio/mpeg">
-                                        </audio>
+                                                            <audio controls class="my-2 d-inline-block align-middle" style="max-height: 50px;">
+                                                                <source src="@Storage.RelativePathToInternetUrl(option.Content)" type="audio/mpeg">
+                                                            </audio>
                                     }
                                     else if (option.Content.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || option.Content.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
                                     {
-                                        <img src="@Storage.RelativePathToInternetUrl(option.Content)" class="img-fluid my-2" style="max-height: 100px;" alt="Option asset" />
+                                                            <img src="@Storage.RelativePathToInternetUrl(option.Content)" class="img-fluid my-2" style="max-height: 100px;" alt="Option asset" />
                                     }
                                     else
                                     {
                                         @option.Content
                                     }
-                                </label>
+                                                </label>
                             }
-                        </div>
-                        <div class="feedback-area mt-2" id="feedback-@i" style="display:none;"></div>
+                                    </div>
+                                    <div class="feedback-area mt-2" id="feedback-@i" style="display:none;"></div>
                         if (correctAnswersCount > 1)
                         {
-                            <small class="form-text text-muted">@Localizer["This is a multiple choice question."]</small>
+                                            <small class="form-text text-muted">@Localizer["This is a multiple choice question."]</small>
                         }
                         break;
 
                     case QuestionType.SightSinging:
-                        <div class="alert alert-info mt-3">
+                                    <div class="alert alert-info mt-3">
                             @Localizer["This is a sight-singing question. Please review the sheet music and sing aloud."]
-                        </div>
+                                    </div>
                         break;
                 }
-                <hr />
-            </div>
+
+
+                @if (!string.IsNullOrWhiteSpace(question.Explanation))
+                {
+                            <div id="explanation-@i" style="display: none;" class="alert alert-secondary mt-2">
+                                <strong>@Localizer["Explanation"]:</strong>
+                                <p>@question.Explanation</p>
+                            </div>
+                }
+                    <hr />
+                </div>
         }
 
         <div class="d-flex justify-content-between my-4">
@@ -104,153 +113,158 @@
 
 @* ReSharper disable once Razor.SectionNotResolved *@
 @section Scripts {
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            let currentQuestionIndex = 0;
-            const questions = document.querySelectorAll(".question-panel");
-            const prevBtn = document.getElementById("prev-btn");
-            const nextBtn = document.getElementById("next-btn");
-            const checkBtn = document.getElementById("check-btn");
-            const submitBtn = document.getElementById("submit-btn");
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                let currentQuestionIndex = 0;
+                const questions = document.querySelectorAll(".question-panel");
+                const prevBtn = document.getElementById("prev-btn");
+                const nextBtn = document.getElementById("next-btn");
+                const checkBtn = document.getElementById("check-btn");
+                const submitBtn = document.getElementById("submit-btn");
 
-            // Add mutual exclusion for audio
-            const allAudios = document.querySelectorAll('audio');
-            allAudios.forEach(playAudio => {
-                playAudio.addEventListener('play', function () {
-                    allAudios.forEach(otherAudio => {
-                        if (otherAudio !== playAudio) {
-                            otherAudio.pause();
+                // Add mutual exclusion for audio
+                const allAudios = document.querySelectorAll('audio');
+                allAudios.forEach(playAudio => {
+                    playAudio.addEventListener('play', function () {
+                        allAudios.forEach(otherAudio => {
+                            if (otherAudio !== playAudio) {
+                                otherAudio.pause();
+                            }
+                        });
+                    });
+                });
+
+                function showQuestion(index) {
+                    // Pause all audio elements
+                    document.querySelectorAll('audio').forEach(audio => {
+                        audio.pause();
+                        audio.currentTime = 0;
+                    });
+
+                    questions.forEach((q, i) => {
+                        q.style.display = i === index ? "block" : "none";
+                    });
+
+                    prevBtn.disabled = index === 0;
+
+                    // Update progress bar
+                    if (questions.length > 0) {
+                        const progress = ((index + 1) / questions.length) * 100;
+                        const progressBar = document.getElementById("progress-bar");
+                        progressBar.style.width = progress + "%";
+                        progressBar.setAttribute("aria-valuenow", progress);
+                        progressBar.innerText = Math.round(progress) + "%";
+                    }
+
+                    // Reset buttons state for new question
+                    checkBtn.style.display = "block";
+                    nextBtn.style.display = "none";
+                    submitBtn.style.display = "none";
+
+                    // If already checked (could be implemented if we want to support going back and seeing result),
+                    // but for now let's reset or just keep it simple.
+                    // Since verification requires "Check Answer", and we might move back/forth,
+                    // we should probably check if feedback is already visible.
+                    const feedback = document.getElementById(`feedback-${index}`);
+                    if (feedback && feedback.style.display === "block") {
+                         checkBtn.style.display = "none";
+                         if (index === questions.length - 1) {
+                             submitBtn.style.display = "block";
+                         } else {
+                             nextBtn.style.display = "block";
+                         }
+                    }
+                }
+
+                checkBtn.addEventListener("click", function() {
+                    const currentQuestion = questions[currentQuestionIndex];
+                    const inputs = currentQuestion.querySelectorAll("input");
+
+                    // If no inputs (e.g. sight singing), just show correct/info
+                    if (inputs.length === 0) {
+                         // Auto pass
+                    } else {
+                        let answered = false;
+                        inputs.forEach(input => {
+                            if (input.checked) answered = true;
+                        });
+
+                        if (!answered) {
+                            alert("@Localizer["Please select an answer first."]");
+                            return;
                         }
-                    });
-                });
-            });
+                    }
 
-            function showQuestion(index) {
-                // Pause all audio elements
-                document.querySelectorAll('audio').forEach(audio => {
-                    audio.pause();
-                    audio.currentTime = 0;
-                });
-
-                questions.forEach((q, i) => {
-                    q.style.display = i === index ? "block" : "none";
-                });
-
-                prevBtn.disabled = index === 0;
-
-                // Update progress bar
-                if (questions.length > 0) {
-                    const progress = ((index + 1) / questions.length) * 100;
-                    const progressBar = document.getElementById("progress-bar");
-                    progressBar.style.width = progress + "%";
-                    progressBar.setAttribute("aria-valuenow", progress);
-                    progressBar.innerText = Math.round(progress) + "%";
-                }
-
-                // Reset buttons state for new question
-                checkBtn.style.display = "block";
-                nextBtn.style.display = "none";
-                submitBtn.style.display = "none";
-
-                // If already checked (could be implemented if we want to support going back and seeing result),
-                // but for now let's reset or just keep it simple.
-                // Since verification requires "Check Answer", and we might move back/forth,
-                // we should probably check if feedback is already visible.
-                const feedback = document.getElementById(`feedback-${index}`);
-                if (feedback && feedback.style.display === "block") {
-                     checkBtn.style.display = "none";
-                     if (index === questions.length - 1) {
-                         submitBtn.style.display = "block";
-                     } else {
-                         nextBtn.style.display = "block";
-                     }
-                }
-            }
-
-            checkBtn.addEventListener("click", function() {
-                const currentQuestion = questions[currentQuestionIndex];
-                const inputs = currentQuestion.querySelectorAll("input");
-
-                // If no inputs (e.g. sight singing), just show correct/info
-                if (inputs.length === 0) {
-                     // Auto pass
-                } else {
-                    let answered = false;
+                    // Show feedback
+                    let allCorrect = true;
                     inputs.forEach(input => {
-                        if (input.checked) answered = true;
+                        const isCorrect = input.getAttribute("data-is-correct") === "true";
+                        const label = document.getElementById(`label-${input.value}`);
+
+                        if (isCorrect) {
+                            label.classList.add("list-group-item-success");
+                            label.classList.add("fw-bold");
+                        } else if (input.checked) {
+                            label.classList.add("list-group-item-danger");
+                            allCorrect = false;
+                        } else {
+                             // If it's not checked and not correct, do nothing
+                        }
+
+                        // We DO NOT disable inputs here, because disabled inputs are not submitted.
+                        // Instead we disable interaction via CSS/event prevention if needed, or simply let it be.
+                        // To prevent changing answers after checking, we can disable them but must re-enable on submit.
+                        // Let's use the 'onclick return false' trick or just re-enable on submit.
+                        // Re-enabling on submit is safer.
+                        input.disabled = true;
                     });
 
-                    if (!answered) {
-                        alert("@Localizer["Please select an answer first."]");
-                        return;
+                    const feedback = document.getElementById(`feedback-${currentQuestionIndex}`);
+                    if(feedback) {
+                        feedback.style.display = "block";
+                        if(allCorrect) {
+                            feedback.innerHTML = '<div class="alert alert-success">@Localizer["Correct!"]</div>';
+                        } else {
+                            feedback.innerHTML = '<div class="alert alert-danger">@Localizer["Incorrect! Please check the correct answer highlighted above."]</div>';
+                        }
                     }
-                }
 
-                // Show feedback
-                let allCorrect = true;
-                inputs.forEach(input => {
-                    const isCorrect = input.getAttribute("data-is-correct") === "true";
-                    const label = document.getElementById(`label-${input.value}`);
+                    const explanation = document.getElementById(`explanation-${currentQuestionIndex}`);
+                    if (explanation) {
+                        explanation.style.display = "block";
+                    }
 
-                    if (isCorrect) {
-                        label.classList.add("list-group-item-success");
-                        label.classList.add("fw-bold");
-                    } else if (input.checked) {
-                        label.classList.add("list-group-item-danger");
-                        allCorrect = false;
+                    checkBtn.style.display = "none";
+                    if (currentQuestionIndex === questions.length - 1) {
+                        submitBtn.style.display = "block";
                     } else {
-                         // If it's not checked and not correct, do nothing
+                        nextBtn.style.display = "block";
                     }
-
-                    // We DO NOT disable inputs here, because disabled inputs are not submitted.
-                    // Instead we disable interaction via CSS/event prevention if needed, or simply let it be.
-                    // To prevent changing answers after checking, we can disable them but must re-enable on submit.
-                    // Let's use the 'onclick return false' trick or just re-enable on submit.
-                    // Re-enabling on submit is safer.
-                    input.disabled = true;
                 });
 
-                const feedback = document.getElementById(`feedback-${currentQuestionIndex}`);
-                if(feedback) {
-                    feedback.style.display = "block";
-                    if(allCorrect) {
-                        feedback.innerHTML = '<div class="alert alert-success">@Localizer["Correct!"]</div>';
-                    } else {
-                        feedback.innerHTML = '<div class="alert alert-danger">@Localizer["Incorrect! Please check the correct answer highlighted above."]</div>';
-                    }
-                }
-
-                checkBtn.style.display = "none";
-                if (currentQuestionIndex === questions.length - 1) {
-                    submitBtn.style.display = "block";
-                } else {
-                    nextBtn.style.display = "block";
-                }
-            });
-
-            // Re-enable inputs before submit
-            document.getElementById("exam-form").addEventListener("submit", function() {
-                const inputs = document.querySelectorAll("input");
-                inputs.forEach(input => {
-                    input.disabled = false;
+                // Re-enable inputs before submit
+                document.getElementById("exam-form").addEventListener("submit", function() {
+                    const inputs = document.querySelectorAll("input");
+                    inputs.forEach(input => {
+                        input.disabled = false;
+                    });
                 });
-            });
 
-            prevBtn.addEventListener("click", function () {
-                if (currentQuestionIndex > 0) {
-                    currentQuestionIndex--;
-                    showQuestion(currentQuestionIndex);
-                }
-            });
+                prevBtn.addEventListener("click", function () {
+                    if (currentQuestionIndex > 0) {
+                        currentQuestionIndex--;
+                        showQuestion(currentQuestionIndex);
+                    }
+                });
 
-            nextBtn.addEventListener("click", function () {
-                if (currentQuestionIndex < questions.length - 1) {
-                    currentQuestionIndex++;
-                    showQuestion(currentQuestionIndex);
-                }
-            });
+                nextBtn.addEventListener("click", function () {
+                    if (currentQuestionIndex < questions.length - 1) {
+                        currentQuestionIndex++;
+                        showQuestion(currentQuestionIndex);
+                    }
+                });
 
-            showQuestion(0);
-        });
-    </script>
+                showQuestion(0);
+            });
+        </script>
 }

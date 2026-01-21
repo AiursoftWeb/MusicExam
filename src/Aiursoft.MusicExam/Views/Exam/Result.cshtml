@@ -116,6 +116,14 @@
                         @Localizer["No detailed breakdown for this question type."]
                             </div>
                 }
+
+                @if (!string.IsNullOrWhiteSpace(question.Explanation))
+                {
+                    <div class="alert alert-secondary mt-3">
+                        <strong>@Localizer["Explanation"]:</strong>
+                        <p class="mb-0">@question.Explanation</p>
+                    </div>
+                }
                 </div>
             </div>
     }
