@@ -38,10 +38,15 @@ public class UsersController(
         var usersWithRoles = new List<UserWithRolesViewModel>();
         foreach (var user in allUsers)
         {
+            var usageCount = await context.ExamPaperSubmissions
+                .Where(s => s.UserId == user.Id)
+                .CountAsync();
+
             usersWithRoles.Add(new UserWithRolesViewModel
             {
                 User = user,
-                Roles = await userManager.GetRolesAsync(user)
+                Roles = await userManager.GetRolesAsync(user),
+                UsageCount = usageCount
             });
         }
 
@@ -117,9 +122,9 @@ public class UsersController(
 
             var triggerUser = await userManager.GetUserAsync(User);
             await changeRecorder.Record(
-                ChangeType.UserCreated, 
-                triggerUser?.Id, 
-                targetUserId: user.Id, 
+                ChangeType.UserCreated,
+                triggerUser?.Id,
+                targetUserId: user.Id,
                 targetDisplayName: user.DisplayName,
                 details: $"User {user.UserName} was created.");
 
@@ -213,9 +218,9 @@ public class UsersController(
         {
             var role = await roleManager.FindByNameAsync(roleName);
             await changeRecorder.Record(
-                ChangeType.UserJoinedRole, 
-                triggerUser?.Id, 
-                targetUserId: userInDb.Id, 
+                ChangeType.UserJoinedRole,
+                triggerUser?.Id,
+                targetUserId: userInDb.Id,
                 targetDisplayName: userInDb.DisplayName,
                 targetRoleId: role?.Id,
                 details: $"User {userInDb.UserName} joined role {roleName}.");
@@ -225,9 +230,9 @@ public class UsersController(
         {
             var role = await roleManager.FindByNameAsync(roleName);
             await changeRecorder.Record(
-                ChangeType.UserLeftRole, 
-                triggerUser?.Id, 
-                targetUserId: userInDb.Id, 
+                ChangeType.UserLeftRole,
+                triggerUser?.Id,
+                targetUserId: userInDb.Id,
                 targetDisplayName: userInDb.DisplayName,
                 targetRoleId: role?.Id,
                 details: $"User {userInDb.UserName} left role {roleName}.");
@@ -268,15 +273,15 @@ public class UsersController(
         {
             return NotFound();
         }
-        
+
         var triggerUser = await userManager.GetUserAsync(User);
         await changeRecorder.Record(
-            ChangeType.UserDeleted, 
-            triggerUser?.Id, 
-            targetUserId: user.Id, 
+            ChangeType.UserDeleted,
+            triggerUser?.Id,
+            targetUserId: user.Id,
             targetDisplayName: user.DisplayName,
             details: $"User {user.UserName} was deleted.");
-            
+
         await userManager.DeleteAsync(user);
         return RedirectToAction(nameof(Index));
     }

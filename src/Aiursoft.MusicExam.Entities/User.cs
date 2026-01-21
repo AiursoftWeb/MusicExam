@@ -11,7 +11,9 @@ public class User : IdentityUser
     [MinLength(2)]
     public required string DisplayName { get; set; }
 
-    [MaxLength(150)] [MinLength(2)] public string AvatarRelativePath { get; set; } = DefaultAvatarPath;
+    [MaxLength(150)][MinLength(2)] public string AvatarRelativePath { get; set; } = DefaultAvatarPath;
 
     public DateTime CreationTime { get; init; } = DateTime.UtcNow;
+
+    public DateTime? ExpireAt { get; set; }
 }

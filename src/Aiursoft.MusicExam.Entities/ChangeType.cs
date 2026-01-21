@@ -7,5 +7,6 @@ public enum ChangeType
     UserJoinedRole = 2,
     UserLeftRole = 3,
     RoleGainedPermission = 4,
-    RoleLostPermission = 5
+    RoleLostPermission = 5,
+    UserPaymentInfoUpdated = 6
 }

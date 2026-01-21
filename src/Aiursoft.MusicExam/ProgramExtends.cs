@@ -1,3 +1,4 @@
+using Aiursoft.CSTools.Tools;
 using Aiursoft.MusicExam.Authorization;
 using Aiursoft.MusicExam.Entities;
 using Microsoft.AspNetCore.Identity;
@@ -12,6 +13,18 @@ public static class ProgramExtends
 {
     private static async Task<bool> ShouldSeedAsync(TemplateDbContext dbContext)
     {
+        if (EntryExtends.IsInUnitTests())
+        {
+            // Always seed in unit tests to ensure a clean state.
+            // The seeder logic is idempotent and will handle existing data.
+            using var transaction = await dbContext.Database.BeginTransactionAsync();
+            dbContext.Users.RemoveRange(dbContext.Users);
+            dbContext.Roles.RemoveRange(dbContext.Roles);
+            await dbContext.SaveChangesAsync();
+            await transaction.CommitAsync();
+            return true;
+        }
+
         var haveUsers = await dbContext.Users.AnyAsync();
         var haveRoles = await dbContext.Roles.AnyAsync();
         return !haveUsers && !haveRoles;

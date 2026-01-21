@@ -1,0 +1,50 @@
+@model Aiursoft.MusicExam.Models.PaymentManagementViewModels.UsageDetailsViewModel
+
+<div class="row mb-2 mb-xl-3">
+    <div class="col-auto d-none d-sm-block">
+        <h3>@Localizer["Usage Details for {0}", Model.TargetUser.DisplayName]</h3>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h5 class="card-title">@Localizer["Exam Submissions"]</h5>
+        <h6 class="card-subtitle text-muted">@Localizer["Here are all the exam submissions for user {0}.", Model.TargetUser.Email]</h6>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-hover mb-0">
+            <thead>
+                <tr>
+                    <th>@Localizer["Paper Name"]</th>
+                    <th>@Localizer["Submission Time"]</th>
+                    <th>@Localizer["Score"]</th>
+                    <th>@Localizer["Actions"]</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var submission in Model.Submissions)
+                {
+                    <tr>
+                        <td>@submission.Paper?.Title</td>
+                        <td><span data-utc-time="@submission.SubmissionTime.ToString("o")"></span></td>
+                        <td>
+                            @if (submission.Score.HasValue)
+                            {
+                                <span>@submission.Score</span>
+                            }
+                            else
+                            {
+                                <span class="text-muted">@Localizer["Not scored yet"]</span>
+                            }
+                        </td>
+                        <td>
+                            <a class="btn btn-sm btn-outline-primary" asp-controller="Exam" asp-action="SubmissionDetails" asp-route-id="@submission.Id">
+                                <i class="align-middle" data-lucide="eye"></i> @Localizer["View Submission"]
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,203 @@
+@using Aiursoft.MusicExam.Services.FileStorage
+@model Aiursoft.MusicExam.Models.UsersViewModels.IndexViewModel
+@inject StorageService StorageService
+<style>
+    .clickable-row {
+        cursor: pointer;
+    }
+</style>
+
+<div class="row mb-2 mb-xl-3">
+    <div class="col-auto d-none d-sm-block">
+        <h3>@Localizer["Payment Management"]</h3>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h5 class="card-title">@Localizer["Paid Users"]</h5>
+        <h6 class="card-subtitle text-muted">@Localizer["Manage user payments and expirations."]</h6>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-hover mb-0">
+            <thead>
+                <tr>
+                    <th>@Localizer["Avatar"]</th>
+                    <th>@Localizer["User name"]</th>
+                    <th>@Localizer["Email"]</th>
+                    <th>@Localizer["Paid Status"]</th>
+                    <th>@Localizer["Expire At"]</th>
+                    <th>@Localizer["Usage"]</th>
+                    <th class="text-end">@Localizer["Actions"]</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Users)
+                {
+                    <tr class="clickable-row"
+                        data-href="@Url.Action("UsageDetails", "PaymentManagement", new { id = item.User.Id })">
+                        <td>
+                            <img src="@StorageService.RelativePathToInternetUrl(item.User.AvatarRelativePath)?w=72&square=true"
+                                alt="@item.User.DisplayName" class="rounded-circle" width="36" height="36" />
+                        </td>
+                        <td>@item.User.DisplayName</td>
+                        <td>@item.User.Email</td>
+                        <td data-column="paid-status">
+                            @if (item.User.ExpireAt > DateTime.UtcNow)
+                            {
+                                <span class="text-success">@Localizer["Paid"]</span>
+                            }
+                            else
+                            {
+                                <span class="text-muted">@Localizer["Free"]</span>
+                            }
+                        </td>
+                        <td data-column="expire-at">
+                            <span class="text-muted" data-utc-time="@item.User.ExpireAt?.ToString("o")">
+                                @item.User.ExpireAt
+                            </span>
+                        </td>
+                        <td>
+                            <a asp-controller="PaymentManagement" asp-action="UsageDetails" asp-route-id="@item.User.Id">
+                                @item.UsageCount
+                            </a>
+                        </td>
+                        <td class="text-end">
+                            <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal"
+                                data-bs-target="#editUserModal" data-user-id="@item.User.Id"
+                                data-user-email="@item.User.Email"
+                                data-expire-at="@item.User.ExpireAt?.ToString("yyyy-MM-dd")">
+                                <i class="align-middle" data-lucide="edit-2"></i> @Localizer["Manage"]
+                            </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="editUserModal" tabindex="-1" aria-labelledby="editUserModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editUserModalLabel">@Localizer["Edit Payment Info"]</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form id="editUserForm">
+                <div class="modal-body">
+                    <p>@Localizer["Editing user"]: <strong id="userEmail"></strong></p>
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" id="userId" name="id">
+                    <div class="mb-3">
+                        <label for="expireAt" class="form-label">@Localizer["New Expiration Date"]</label>
+                        <input type="date" class="form-control" id="expireAt" name="expireAt">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@Localizer["Close"]</button>
+                    <button type="submit" class="btn btn-primary">@Localizer["Save changes"]</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+@section scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const rows = document.querySelectorAll(".clickable-row");
+            rows.forEach(row => {
+                row.addEventListener("click", function (event) {
+                    const target = event.target;
+                    if (!target.matches('a, a *, button, button *')) {
+                        window.location.href = row.dataset.href;
+                    }
+                });
+            });
+
+            const editUserModal = document.getElementById('editUserModal');
+            editUserModal.addEventListener('show.bs.modal', function (event) {
+                const button = event.relatedTarget;
+                const userId = button.getAttribute('data-user-id');
+                const userEmail = button.getAttribute('data-user-email');
+                const expireAt = button.getAttribute('data-expire-at');
+
+                const modalTitle = editUserModal.querySelector('.modal-title');
+                const modalUserEmail = editUserModal.querySelector('#userEmail');
+                const modalUserIdInput = editUserModal.querySelector('#userId');
+                const modalExpireAtInput = editUserModal.querySelector('#expireAt');
+
+                modalUserEmail.textContent = userEmail;
+                modalUserIdInput.value = userId;
+                modalExpireAtInput.value = expireAt;
+            });
+
+            const editUserForm = document.getElementById('editUserForm');
+            editUserForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                const userId = document.getElementById('userId').value;
+                const expireAt = document.getElementById('expireAt').value;
+                const formData = new FormData();
+                formData.append('id', userId);
+                formData.append('expireAt', expireAt);
+                formData.append('__RequestVerificationToken', document.querySelector('input[name="__RequestVerificationToken"]').value);
+
+                fetch('/PaymentManagement/UpdatePaymentInfo', {
+                    method: 'POST',
+                    body: new URLSearchParams(formData)
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            const modal = bootstrap.Modal.getInstance(editUserModal);
+                            modal.hide();
+
+                            // Update the table row dynamically
+                            const row = document.querySelector(`button[data-user-id='${userId}']`).closest('tr');
+                            const expireAtCell = row.querySelector('td[data-column="expire-at"] span');
+                            const paidStatusCell = row.querySelector('td[data-column="paid-status"]');
+
+                            const newDate = new Date(data.newExpireAt);
+
+                            // Use the injected partial view to render the time correctly.
+                            expireAtCell.dataset.utcTime = data.newExpireAt;
+
+                            // Re-render the time on the fly. This will require the partial view logic to be re-run or mimicked.
+                            // For simplicity, we just update the text content. A full solution might need an AJAX call to a partial view renderer.
+                            if (data.newExpireAt) {
+                                expireAtCell.textContent = newDate.toLocaleString();
+                            } else {
+                                expireAtCell.textContent = '';
+                            }
+
+                            const paidSpan = document.createElement('span');
+                            if (newDate > new Date()) {
+                                paidSpan.className = 'text-success';
+                                paidSpan.textContent = '@Localizer["Paid"]';
+                            } else {
+                                paidSpan.className = 'text-muted';
+                                paidSpan.textContent = '@Localizer["Free"]';
+                            }
+                            paidStatusCell.innerHTML = '';
+                            paidStatusCell.appendChild(paidSpan);
+
+                            // After updating the row, re-initialize any components if necessary.
+                            // For example, if you use a library for pretty dates, you'd call it here.
+
+                        } else {
+                            alert('Failed to update.');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert('An error occurred.');
+                    });
+            });
+        });
+    </script>
+}
+
