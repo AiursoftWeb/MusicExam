@@ -21,7 +21,8 @@ public class RolesController(
     UserManager<User> userManager,
     TemplateDbContext context,
     RoleManager<IdentityRole> roleManager,
-    ChangeRecorder changeRecorder)
+    ChangeRecorder changeRecorder,
+    ChangeMessageFormatter messageFormatter)
     : Controller
 {
     // GET: Roles
@@ -202,7 +203,7 @@ public class RolesController(
                         triggerUser?.Id, 
                         targetRoleId: role.Id, 
                         targetPermission: existingClaim.Value,
-                        details: $"Role {role.Name} lost permission {existingClaim.Value}.");
+                        details: messageFormatter.FormatRoleLostPermission(role.Name!, existingClaim.Value));
                 }
             }
 
@@ -219,7 +220,7 @@ public class RolesController(
                         triggerUser?.Id, 
                         targetRoleId: role.Id, 
                         targetPermission: claimViewModel.Key,
-                        details: $"Role {role.Name} gained permission {claimViewModel.Key}.");
+                        details: messageFormatter.FormatRoleGainedPermission(role.Name!, claimViewModel.Key));
                 }
             }
 

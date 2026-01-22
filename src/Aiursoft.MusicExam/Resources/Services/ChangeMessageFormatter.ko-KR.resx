@@ -19,25 +19,25 @@
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
       <data name="RoleGainedPermission" xml:space="preserve">
-    <value>角色 {0} 获得了权限 {1}。</value>
+    <value>역할이 권한을 획득했습니다</value>
   </data>
   <data name="RoleLostPermission" xml:space="preserve">
-    <value>角色 {0} 失去了权限 {1}。</value>
+    <value>역할 권한 상실</value>
   </data>
   <data name="SystemBackfill" xml:space="preserve">
-    <value>系统补填缺失日志。</value>
+    <value>시스템 백필</value>
   </data>
   <data name="UserCreated" xml:space="preserve">
-    <value>用户 {0} 已创建。</value>
+    <value>사용자 생성됨</value>
   </data>
   <data name="UserDeleted" xml:space="preserve">
-    <value>用户 {0} 已删除。</value>
+    <value>사용자 삭제됨</value>
   </data>
   <data name="UserJoinedRole" xml:space="preserve">
-    <value>用户 {0} 加入了角色 {1}。</value>
+    <value>사용자가 역할에 참여했습니다</value>
   </data>
   <data name="UserLeftRole" xml:space="preserve">
-    <value>用户 {0} 离开了角色 {1}。</value>
+    <value>사용자가 역할을 떠났습니다</value>
   </data>
 
 </root>

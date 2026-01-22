@@ -1,4 +1,7 @@
 @using Aiursoft.WebTools
+@using Aiursoft.MusicExam.Entities
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer<ChangeType> ChangeTypeLocalizer
 @model Aiursoft.MusicExam.Models.ChangesViewModels.HistoryViewModel
 
 <div class="row mb-2 mb-xl-3">
@@ -30,7 +33,7 @@
                         <label data-utc-time="@item.CreateTime.ToHtmlDateTime()" class="text-monospace"></label>
                     </td>
                     <td>
-                        <span class="badge bg-info">@item.Type</span>
+                        <span class="badge bg-info">@ChangeTypeLocalizer[item.Type.ToString()]</span>
                     </td>
                     <td>@(item.TriggerUser?.DisplayName ?? item.TriggerUserId ?? Localizer["System"].Value)</td>
                     <td>@item.Details</td>

@@ -19,25 +19,25 @@
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
       <data name="RoleGainedPermission" xml:space="preserve">
-    <value>角色 {0} 获得了权限 {1}。</value>
+    <value>Vai trò đã nhận quyền hạn</value>
   </data>
   <data name="RoleLostPermission" xml:space="preserve">
-    <value>角色 {0} 失去了权限 {1}。</value>
+    <value>Vai trò đã mất quyền hạn</value>
   </data>
   <data name="SystemBackfill" xml:space="preserve">
-    <value>系统补填缺失日志。</value>
+    <value>Hồi phục hệ thống</value>
   </data>
   <data name="UserCreated" xml:space="preserve">
-    <value>用户 {0} 已创建。</value>
+    <value>Người dùng đã được tạo</value>
   </data>
   <data name="UserDeleted" xml:space="preserve">
-    <value>用户 {0} 已删除。</value>
+    <value>Người dùng đã bị xóa</value>
   </data>
   <data name="UserJoinedRole" xml:space="preserve">
-    <value>用户 {0} 加入了角色 {1}。</value>
+    <value>Người dùng đã tham gia vai trò</value>
   </data>
   <data name="UserLeftRole" xml:space="preserve">
-    <value>用户 {0} 离开了角色 {1}。</value>
+    <value>Người dùng đã rời vai trò</value>
   </data>
 
 </root>

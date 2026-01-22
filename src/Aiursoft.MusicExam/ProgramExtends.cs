@@ -11,7 +11,7 @@ namespace Aiursoft.MusicExam;
 
 public static class ProgramExtends
 {
-    private static async Task SyncChangeLogs(TemplateDbContext dbContext, UserManager<User> userManager, RoleManager<IdentityRole> roleManager)
+    private static async Task SyncChangeLogs(TemplateDbContext dbContext, UserManager<User> userManager, RoleManager<IdentityRole> roleManager, ChangeMessageFormatter messageFormatter)
     {
         var roles = await roleManager.Roles.ToListAsync();
         foreach (var role in roles)
@@ -33,7 +33,7 @@ public static class ProgramExtends
                         TargetRoleId = role.Id,
                         TargetPermission = AppPermissionNames.CanTakeExam,
                         CreateTime = DateTime.MinValue, // Historic permission
-                        Details = "System backfilled missing log."
+                        Details = messageFormatter.FormatSystemBackfill()
                     });
                 }
 
@@ -54,7 +54,7 @@ public static class ProgramExtends
                             TargetUserId = user.Id,
                             TargetRoleId = role.Id,
                             CreateTime = user.CreationTime,
-                            Details = "System backfilled missing log."
+                            Details = messageFormatter.FormatSystemBackfill()
                         });
                     }
                 }
@@ -119,6 +119,7 @@ public static class ProgramExtends
         var services = scope.ServiceProvider;
         var db = services.GetRequiredService<TemplateDbContext>();
         var logger = services.GetRequiredService<ILogger<Program>>();
+        var messageFormatter = services.GetRequiredService<ChangeMessageFormatter>();
         
         var settingsService = services.GetRequiredService<GlobalSettingsService>();
         await settingsService.SeedSettingsAsync();
@@ -130,7 +131,7 @@ public static class ProgramExtends
         if (!shouldSeed)
         {
             logger.LogInformation("Do not need to seed the database. There are already users or roles present.");
-            await SyncChangeLogs(db, userManager, roleManager);
+            await SyncChangeLogs(db, userManager, roleManager, messageFormatter);
             return host;
         }
 
@@ -171,7 +172,7 @@ public static class ProgramExtends
             await userManager.AddToRoleAsync(user, "Administrators");
         }
         
-        await SyncChangeLogs(db, userManager, roleManager);
+        await SyncChangeLogs(db, userManager, roleManager, messageFormatter);
 
         return host;
     }

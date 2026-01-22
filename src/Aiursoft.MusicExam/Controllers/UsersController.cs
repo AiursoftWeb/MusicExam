@@ -20,7 +20,8 @@ public class UsersController(
     RoleManager<IdentityRole> roleManager,
     UserManager<User> userManager,
     TemplateDbContext context,
-    ChangeRecorder changeRecorder)
+    ChangeRecorder changeRecorder,
+    ChangeMessageFormatter messageFormatter)
     : Controller
 {
     [Authorize(Policy = AppPermissionNames.CanReadUsers)]
@@ -126,7 +127,7 @@ public class UsersController(
                 triggerUser?.Id,
                 targetUserId: user.Id,
                 targetDisplayName: user.DisplayName,
-                details: $"User {user.UserName} was created.");
+                details: messageFormatter.FormatUserCreated(user.UserName!));
 
             return RedirectToAction(nameof(Details), new { id = user.Id });
         }
@@ -223,7 +224,7 @@ public class UsersController(
                 targetUserId: userInDb.Id,
                 targetDisplayName: userInDb.DisplayName,
                 targetRoleId: role?.Id,
-                details: $"User {userInDb.UserName} joined role {roleName}.");
+                details: messageFormatter.FormatUserJoinedRole(userInDb.UserName!, roleName));
         }
 
         foreach (var roleName in rolesToRemove)
@@ -235,7 +236,7 @@ public class UsersController(
                 targetUserId: userInDb.Id,
                 targetDisplayName: userInDb.DisplayName,
                 targetRoleId: role?.Id,
-                details: $"User {userInDb.UserName} left role {roleName}.");
+                details: messageFormatter.FormatUserLeftRole(userInDb.UserName!, roleName));
         }
 
         return RedirectToAction(nameof(Details), new { id = userInDb.Id });
@@ -280,7 +281,7 @@ public class UsersController(
             triggerUser?.Id,
             targetUserId: user.Id,
             targetDisplayName: user.DisplayName,
-            details: $"User {user.UserName} was deleted.");
+            details: messageFormatter.FormatUserDeleted(user.UserName!));
 
         await userManager.DeleteAsync(user);
         return RedirectToAction(nameof(Index));
