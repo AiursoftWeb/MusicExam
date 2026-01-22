@@ -114,6 +114,7 @@ public class DataImporter : ISingletonDependency
 
                         // Import Questions
                         var questionFiles = Directory.GetFiles(paperDir, "question_*.json")
+                            .Concat(Directory.GetFiles(paperDir, "sight_singing.json"))
                             .Select(f => new { Path = f, Index = GetQuestionIndex(Path.GetFileName(f)) })
                             .OrderBy(x => x.Index)
                             .Select(x => x.Path)

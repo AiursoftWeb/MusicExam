@@ -4,7 +4,7 @@
 @model Aiursoft.MusicExam.Models.ExamViewModels.TakeViewModel
 @{
     ViewData["Title"] = Model.Paper.Title;
-    var orderedQuestions = Model.Paper.Questions.OrderBy(q => q.Order).ToList();
+    var orderedQuestions = Model.Paper.Questions.OrderBy(q => q.Id).ToList();
 }
 
 <div class="container">
@@ -24,7 +24,7 @@
             var question = orderedQuestions[i];
             var questionAssets = !string.IsNullOrWhiteSpace(question.AssetPath) ? JsonSerializer.Deserialize<List<string>>(question.AssetPath) : new List<string>();
 
-                <div class="question-panel" id="question-@i" style="display: @(i == 0 ? "block" : "none");">
+                <div class="question-panel" id="question-@i" style="display: @(i == 0 ? "block" : "none");" data-question-type="@question.QuestionType">
                     <h4>(@(i + 1)/@orderedQuestions.Count) @question.Content</h4>
 
                 @if (questionAssets != null)
@@ -154,6 +154,19 @@
                     checkBtn.style.display = "block";
                     nextBtn.style.display = "none";
                     submitBtn.style.display = "none";
+
+                    // Check for Sight Singing or non-interactive questions to skip "Check Answer"
+                    const currentPanel = questions[index];
+                    const qType = currentPanel.getAttribute("data-question-type");
+
+                    if (qType === "SightSinging") {
+                         checkBtn.style.display = "none";
+                         if (index === questions.length - 1) {
+                             submitBtn.style.display = "block";
+                         } else {
+                             nextBtn.style.display = "block";
+                         }
+                    }
 
                     // If already checked (could be implemented if we want to support going back and seeing result),
                     // but for now let's reset or just keep it simple.
