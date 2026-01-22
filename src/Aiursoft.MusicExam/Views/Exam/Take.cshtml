@@ -4,7 +4,7 @@
 @model Aiursoft.MusicExam.Models.ExamViewModels.TakeViewModel
 @{
     ViewData["Title"] = Model.Paper.Title;
-    var orderedQuestions = Model.Paper.Questions.OrderBy(q => q.Order).ToList();
+    var orderedQuestions = Model.Paper.Questions.OrderBy(q => q.Id).ToList();
 }
 
 <div class="container">

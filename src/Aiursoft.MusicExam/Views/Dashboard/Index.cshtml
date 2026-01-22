@@ -14,7 +14,7 @@
         {
             var levels = school.Papers
             .GroupBy(p => p.Level ?? "Uncategorized")
-            .OrderBy(g => g.Key);
+            .OrderBy(g => g.Min(p => p.Id));
 
             foreach (var levelGroup in levels)
             {
@@ -34,7 +34,7 @@
                             @{
                                 var categories = levelGroup
                                 .GroupBy(p => p.Category ?? "General")
-                                .OrderBy(g => g.Key);
+                                .OrderBy(g => g.Min(p => p.Id));
                             }
 
                             @foreach (var categoryGroup in categories)
