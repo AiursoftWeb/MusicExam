@@ -18,23 +18,23 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Exam" xml:space="preserve">
-    <value>Sınav</value>
+      <data name="Action" xml:space="preserve">
+    <value>İşlem</value>
   </data>
   <data name="Date" xml:space="preserve">
     <value>Tarih</value>
   </data>
-  <data name="Score" xml:space="preserve">
-    <value>Puan</value>
-  </data>
-  <data name="Action" xml:space="preserve">
-    <value>İşlem</value>
-  </data>
-  <data name="You haven&apos;t taken any exams yet." xml:space="preserve">
-    <value>Henüz hiç sınav olmadınız.</value>
+  <data name="Exam" xml:space="preserve">
+    <value>Sınav</value>
   </data>
   <data name="N/A" xml:space="preserve">
     <value>Mevcut Değil</value>
+  </data>
+  <data name="Score" xml:space="preserve">
+    <value>Puan</value>
+  </data>
+  <data name="You haven&apos;t taken any exams yet." xml:space="preserve">
+    <value>Henüz hiç sınav olmadınız.</value>
   </data>
 
 </root>

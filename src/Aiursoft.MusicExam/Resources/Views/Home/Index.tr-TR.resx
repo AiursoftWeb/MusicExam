@@ -66,6 +66,9 @@
   <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
     <value>28 dilde otomatik, yapay zeka destekli çeviri.</value>
   </data>
+  <data name="Available Exams" xml:space="preserve">
+    <value>Mevcut Sınavlar</value>
+  </data>
   <data name="Background Job Processing" xml:space="preserve">
     <value>Arka Plan İşlem İşleme</value>
   </data>
@@ -219,6 +222,9 @@
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Herhangi bir OpenID Connect sağlayıcısıyla sorunsuz bir şekilde entegre olun, otomatik rol senkronizasyonu ile.</value>
   </data>
+  <data name="Select your school and level to start practicing" xml:space="preserve">
+    <value>Alıştırma yapmaya başlamak için okulunuzu ve seviyenizi seçin</value>
+  </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>Akıllı Yapılandırma Geçersiz Kılma</value>
   </data>
@@ -275,12 +281,6 @@
   </data>
   <data name="You&apos;ll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
     <value>.NET 10 SDK&apos;ye, npm&apos;ye ve Visual Studio veya JetBrains Rider gibi favori IDE&apos;nize ihtiyacınız olacak. Tüm kurulum kılavuzunu belgelerimizde bulabilirsiniz.</value>
-  </data>
-  <data name="Available Exams" xml:space="preserve">
-    <value>Mevcut Sınavlar</value>
-  </data>
-  <data name="Select your school and level to start practicing" xml:space="preserve">
-    <value>Alıştırma yapmaya başlamak için okulunuzu ve seviyenizi seçin</value>
   </data>
 
 </root>

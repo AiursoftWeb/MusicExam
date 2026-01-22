@@ -18,8 +18,8 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="N/A" xml:space="preserve">
-    <value>N/D</value>
+      <data name="Action" xml:space="preserve">
+    <value>Akcja</value>
   </data>
   <data name="Date" xml:space="preserve">
     <value>Data</value>
@@ -27,11 +27,11 @@
   <data name="Exam" xml:space="preserve">
     <value>Egzamin</value>
   </data>
+  <data name="N/A" xml:space="preserve">
+    <value>N/D</value>
+  </data>
   <data name="Score" xml:space="preserve">
     <value>Wynik</value>
-  </data>
-  <data name="Action" xml:space="preserve">
-    <value>Akcja</value>
   </data>
   <data name="You haven&apos;t taken any exams yet." xml:space="preserve">
     <value>Nie przystąpiłeś jeszcze do żadnych egzaminów.</value>

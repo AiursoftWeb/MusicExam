@@ -27,6 +27,9 @@
   <data name="If you believe you should have access, please contact your system administrator. Or try signing out and signing in again." xml:space="preserve">
     <value>Dacă crezi că ar trebui să ai acces, te rugăm să contactezi administratorul de sistem. Sau încearcă să te deconectezi și să te conectezi din nou.</value>
   </data>
+  <data name="Please contact the administrator to pay and activate your account. Or try signing out and signing in again." xml:space="preserve">
+    <value>Vă rugăm să contactați administratorul pentru a plăti și a activa contul dumneavoastră. Sau încercați să vă deconectați și să vă conectați din nou.</value>
+  </data>
   <data name="Sorry, you do not have the necessary permissions to access this page." xml:space="preserve">
     <value>Ne pare rău, nu aveți permisiunile necesare pentru a accesa această pagină.</value>
   </data>

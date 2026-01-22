@@ -18,8 +18,17 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Score" xml:space="preserve">
-    <value>Scor</value>
+      <data name="Back to Dashboard" xml:space="preserve">
+    <value>Înapoi la Panoul de control</value>
+  </data>
+  <data name="Correct Answer" xml:space="preserve">
+    <value>Răspuns corect</value>
+  </data>
+  <data name="Explanation" xml:space="preserve">
+    <value>Explicație</value>
+  </data>
+  <data name="No detailed breakdown for this question type." xml:space="preserve">
+    <value>Nu există o analiză detaliată pentru acest tip de întrebare.</value>
   </data>
   <data name="Question" xml:space="preserve">
     <value>Întrebare</value>
@@ -27,17 +36,11 @@
   <data name="Retake Exam" xml:space="preserve">
     <value>Reia testul</value>
   </data>
+  <data name="Score" xml:space="preserve">
+    <value>Scor</value>
+  </data>
   <data name="View History" xml:space="preserve">
     <value>Vezi Istoric</value>
-  </data>
-  <data name="No detailed breakdown for this question type." xml:space="preserve">
-    <value>Nu există o analiză detaliată pentru acest tip de întrebare.</value>
-  </data>
-  <data name="Back to Dashboard" xml:space="preserve">
-    <value>Înapoi la Panoul de control</value>
-  </data>
-  <data name="Correct Answer" xml:space="preserve">
-    <value>Răspuns corect</value>
   </data>
 
 </root>

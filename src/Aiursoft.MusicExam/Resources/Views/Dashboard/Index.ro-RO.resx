@@ -30,6 +30,9 @@
   <data name="A complete solution for user authentication and profile management." xml:space="preserve">
     <value>O soluție completă pentru autentificarea utilizatorilor și gestionarea profilurilor.</value>
   </data>
+  <data name="A comprehensive platform designed to help you excel in your music exams." xml:space="preserve">
+    <value>O platformă cuprinzătoare concepută pentru a te ajuta să te remarci la examenele tale de muzică.</value>
+  </data>
   <data name="A fully responsive layout that looks great on both desktop and mobile devices." xml:space="preserve">
     <value>Un layout complet responsive care arată excelent atât pe dispozitive desktop, cât și pe cele mobile.</value>
   </data>
@@ -38,6 +41,9 @@
   </data>
   <data name="AI-Powered Translations" xml:space="preserve">
     <value>Traduceri alimentate de Inteligență Artificială</value>
+  </data>
+  <data name="All content is based on the official curriculum of major music conservatories." xml:space="preserve">
+    <value>Toate materialele se bazează pe programa oficială a marilor conservatoare de muzică.</value>
   </data>
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>Toate dependențele sunt înregistrate automat și sunt întotdeauna disponibile prin injectare în constructor.</value>
@@ -57,6 +63,9 @@
   <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
     <value>Traducere automată, alimentată de inteligență artificială, în 28 de limbi.</value>
   </data>
+  <data name="Available Exams" xml:space="preserve">
+    <value>Examen Disponibile</value>
+  </data>
   <data name="Background Job Processing" xml:space="preserve">
     <value>Procesare sarcini în fundal</value>
   </data>
@@ -72,8 +81,17 @@
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>Documentație Cuprinzătoare</value>
   </data>
+  <data name="Comprehensive Question Bank" xml:space="preserve">
+    <value>Bancă de Întrebări Cuprinzătoare</value>
+  </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>Validare de consistență</value>
+  </data>
+  <data name="Cross-Platform Access" xml:space="preserve">
+    <value>Acces Cross-Platform</value>
+  </data>
+  <data name="Detailed Analytics" xml:space="preserve">
+    <value>Analize Detaliate</value>
   </data>
   <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
     <value>Dezvoltați exclusiv în UTC, în timp ce sistemul convertește și afișează automat datele în fusul orar local al utilizatorului.</value>
@@ -123,14 +141,29 @@
   <data name="Multiple Database Support" xml:space="preserve">
     <value>Suport pentru Multiple Baze de Date</value>
   </data>
+  <data name="Official Curriculum" xml:space="preserve">
+    <value>Curriculum Oficial</value>
+  </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>Integrare OpenID Connect</value>
+  </data>
+  <data name="Our Features" xml:space="preserve">
+    <value>Funcționalitățile Noastre</value>
+  </data>
+  <data name="Practice anytime, anywhere. Our platform is fully responsive and works on all your devices." xml:space="preserve">
+    <value>Exersează oricând, oriunde. Platforma noastră este complet adaptabilă și funcționează pe toate dispozitivele tale.</value>
+  </data>
+  <data name="Practice with thousands of questions from official sources, covering all levels and topics." xml:space="preserve">
+    <value>Exersează cu mii de întrebări din surse oficiale, acoperind toate nivelurile și subiectele.</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>Autorizare RBAC</value>
   </data>
   <data name="Read the document" xml:space="preserve">
     <value>Citește documentația</value>
+  </data>
+  <data name="Realistic Mock Exams" xml:space="preserve">
+    <value>Examene Simulate Realiste</value>
   </data>
   <data name="Responsive Design" xml:space="preserve">
     <value>Design Responsiv</value>
@@ -144,6 +177,18 @@
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Integrați-vă fără probleme cu orice furnizor OpenID Connect, cu sincronizare automată a rolurilor.</value>
   </data>
+  <data name="Select your school and level to start practicing" xml:space="preserve">
+    <value>Selectați școala și nivelul pentru a începe antrenamentul</value>
+  </data>
+  <data name="Sharpen your sight-singing skills with a vast library of melodies and interactive exercises." xml:space="preserve">
+    <value>Perfecționați-vă abilitățile de sight-singing cu o vastă bibliotecă de melodii și exerciții interactive.</value>
+  </data>
+  <data name="Sight-Singing Practice" xml:space="preserve">
+    <value>Exersare de Citire la Vedere</value>
+  </data>
+  <data name="Simulate the real exam environment with timed mock tests and get a feel for the actual challenge." xml:space="preserve">
+    <value>Simulează mediul real de examen cu teste practice cronometrate și simte provocarea reală.</value>
+  </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>Supravățuiri inteligente de configurare</value>
   </data>
@@ -156,6 +201,9 @@
   <data name="Start a new project" xml:space="preserve">
     <value>Începeți un proiect nou</value>
   </data>
+  <data name="Start Practice" xml:space="preserve">
+    <value>Începeți exersarea</value>
+  </data>
   <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
     <value>Suportă atât variabilele de mediu, cât și setările stocate în baza de date, cu prioritate automată acordată variabilelor de mediu pentru suprascrieri fără efort.</value>
   </data>
@@ -165,65 +213,23 @@
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>Acesta este un proiect tip, de unde începem călătoria...</value>
   </data>
-  <data name="Welcome" xml:space="preserve">
-    <value>Bun venit</value>
-  </data>
-  <data name="Why use the Aiursoft Template?" xml:space="preserve">
-    <value>De ce să folosești Șablonul Aiursoft?</value>
+  <data name="Track your performance, view detailed score reports, and identify your strengths and weaknesses." xml:space="preserve">
+    <value>Urmăriți-vă performanța, vizualizați rapoarte detaliate ale scorurilor și identificați-vă punctele forte și punctele slabe.</value>
   </data>
   <data name="View My Progress" xml:space="preserve">
     <value>Vezi Progresul Meu</value>
   </data>
-  <data name="Our Features" xml:space="preserve">
-    <value>Funcționalitățile Noastre</value>
+  <data name="Welcome" xml:space="preserve">
+    <value>Bun venit</value>
   </data>
   <data name="Welcome to the Music Exam Platform" xml:space="preserve">
     <value>Bine ați venit pe Platforma de Examene de Muzică</value>
   </data>
-  <data name="Comprehensive Question Bank" xml:space="preserve">
-    <value>Bancă de Întrebări Cuprinzătoare</value>
-  </data>
-  <data name="Start Practice" xml:space="preserve">
-    <value>Începeți exersarea</value>
+  <data name="Why use the Aiursoft Template?" xml:space="preserve">
+    <value>De ce să folosești Șablonul Aiursoft?</value>
   </data>
   <data name="Your journey to mastering music theory starts here." xml:space="preserve">
     <value>Călătoria ta spre a stăpâni teoria muzicală începe aici.</value>
-  </data>
-  <data name="A comprehensive platform designed to help you excel in your music exams." xml:space="preserve">
-    <value>O platformă cuprinzătoare concepută pentru a te ajuta să te remarci la examenele tale de muzică.</value>
-  </data>
-  <data name="Realistic Mock Exams" xml:space="preserve">
-    <value>Examene Simulate Realiste</value>
-  </data>
-  <data name="Detailed Analytics" xml:space="preserve">
-    <value>Analize Detaliate</value>
-  </data>
-  <data name="Practice with thousands of questions from official sources, covering all levels and topics." xml:space="preserve">
-    <value>Exersează cu mii de întrebări din surse oficiale, acoperind toate nivelurile și subiectele.</value>
-  </data>
-  <data name="Cross-Platform Access" xml:space="preserve">
-    <value>Acces Cross-Platform</value>
-  </data>
-  <data name="Simulate the real exam environment with timed mock tests and get a feel for the actual challenge." xml:space="preserve">
-    <value>Simulează mediul real de examen cu teste practice cronometrate și simte provocarea reală.</value>
-  </data>
-  <data name="Sight-Singing Practice" xml:space="preserve">
-    <value>Exersare de Citire la Vedere</value>
-  </data>
-  <data name="Official Curriculum" xml:space="preserve">
-    <value>Curriculum Oficial</value>
-  </data>
-  <data name="Sharpen your sight-singing skills with a vast library of melodies and interactive exercises." xml:space="preserve">
-    <value>Perfecționați-vă abilitățile de sight-singing cu o vastă bibliotecă de melodii și exerciții interactive.</value>
-  </data>
-  <data name="Track your performance, view detailed score reports, and identify your strengths and weaknesses." xml:space="preserve">
-    <value>Urmăriți-vă performanța, vizualizați rapoarte detaliate ale scorurilor și identificați-vă punctele forte și punctele slabe.</value>
-  </data>
-  <data name="All content is based on the official curriculum of major music conservatories." xml:space="preserve">
-    <value>Toate materialele se bazează pe programa oficială a marilor conservatoare de muzică.</value>
-  </data>
-  <data name="Practice anytime, anywhere. Our platform is fully responsive and works on all your devices." xml:space="preserve">
-    <value>Exersează oricând, oriunde. Platforma noastră este complet adaptabilă și funcționează pe toate dispozitivele tale.</value>
   </data>
 
 </root>

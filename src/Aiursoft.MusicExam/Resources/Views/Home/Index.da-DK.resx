@@ -30,6 +30,9 @@
   <data name="A complete solution for user authentication and profile management." xml:space="preserve">
     <value>En komplet løsning til brugerautentificering og profilhåndtering.</value>
   </data>
+  <data name="A comprehensive platform designed to help you excel in your music exams. Practice with thousands of questions from official sources." xml:space="preserve">
+    <value>En omfattende platform, der er designet til at hjælpe dig med at fremstå fremragende i dine musikprøver. Øv dig med tusinder af spørgsmål fra officielle kilder.</value>
+  </data>
   <data name="A fully responsive layout that looks great on both desktop and mobile devices." xml:space="preserve">
     <value>En fuldt responsiv layout, der ser fantastisk ud på både stationære og mobile enheder.</value>
   </data>
@@ -44,6 +47,9 @@
   </data>
   <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
     <value>Aiursoft Template er vores endegyldige valg til enterprise-projekter! Den er bygget til udviklere og er letvægtig, men alligevel kraftfuld. Vi kan springe al standardkode til godkendelse og brugeradministration over.</value>
+  </data>
+  <data name="All content is based on the official curriculum of major music conservatories." xml:space="preserve">
+    <value>Alt indhold er baseret på den officielle undervisningsplan fra de største musikskoler.</value>
   </data>
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>Alle afhængigheder registreres automatisk og er altid tilgængelige via konstruktor-injektion.</value>
@@ -66,6 +72,9 @@
   <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
     <value>Automatisk, AI-drevet oversættelse til 28 sprog.</value>
   </data>
+  <data name="Available Exams" xml:space="preserve">
+    <value>Tilgængelige eksamener</value>
+  </data>
   <data name="Background Job Processing" xml:space="preserve">
     <value>Baggrundstaskbehandling</value>
   </data>
@@ -84,11 +93,23 @@
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>Omfattende Dokumentation</value>
   </data>
+  <data name="Comprehensive Question Bank" xml:space="preserve">
+    <value>Udvidet spørgsmålsbank</value>
+  </data>
+  <data name="Comprehensive Question Bank, Realistic Mock Exams, Detailed Analytics." xml:space="preserve">
+    <value>Komplet spørgsmålsbank, realistiske prøveeksamener, detaljerede analyser.</value>
+  </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>Konsistensvalidering</value>
   </data>
+  <data name="Cross-Platform Access" xml:space="preserve">
+    <value>Krydsplattformstilgang</value>
+  </data>
   <data name="Dashboard Website" xml:space="preserve">
     <value>Dashboard-websted</value>
+  </data>
+  <data name="Detailed Analytics" xml:space="preserve">
+    <value>Uddybende analyser</value>
   </data>
   <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
     <value>Udvikl eksklusivt i UTC, mens systemet automatisk konverterer og viser datoer i brugeren&apos;s lokale tidszone.</value>
@@ -177,6 +198,9 @@
   <data name="Markdown To HTML" xml:space="preserve">
     <value>Markdown til HTML</value>
   </data>
+  <data name="Master Your Music Theory" xml:space="preserve">
+    <value>Ejer Din Musikteori</value>
+  </data>
   <data name="MIT Licence" xml:space="preserve">
     <value>MIT-licens</value>
   </data>
@@ -192,17 +216,32 @@
   <data name="Music Tools" xml:space="preserve">
     <value>Musikværktøjer</value>
   </data>
+  <data name="Official Curriculum" xml:space="preserve">
+    <value>Officiel undervisningsplan</value>
+  </data>
   <data name="Open Source" xml:space="preserve">
     <value>Open Source</value>
   </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>OpenID Connect-integration</value>
   </data>
+  <data name="Practice anytime, anywhere. Our platform is fully responsive and works on all your devices." xml:space="preserve">
+    <value>Øv hver gang, hvor som helst. Vores platform er fuldt responsiv og fungerer på alle dine enheder.</value>
+  </data>
+  <data name="Practice with thousands of questions from official sources, covering all levels and topics." xml:space="preserve">
+    <value>Øv dig med tusinder af spørgsmål fra officielle kilder, der dækker alle niveauer og emner.</value>
+  </data>
+  <data name="Progress" xml:space="preserve">
+    <value>Fremskridt</value>
+  </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>RBAC-godkendelse</value>
   </data>
   <data name="Read the document" xml:space="preserve">
     <value>Læs dokumentationen</value>
+  </data>
+  <data name="Realistic Mock Exams" xml:space="preserve">
+    <value>Realistiske prøveeksamener</value>
   </data>
   <data name="Responsive Design" xml:space="preserve">
     <value>Responsivt Design</value>
@@ -219,6 +258,18 @@
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Integrer problemfrit med enhver OpenID Connect-udbyder med automatisk rolle-synkronisering.</value>
   </data>
+  <data name="Select your school and level to start practicing" xml:space="preserve">
+    <value>Vælg din skole og niveau for at begynde at øve</value>
+  </data>
+  <data name="Sharpen your sight-singing skills with a vast library of melodies and interactive exercises." xml:space="preserve">
+    <value>Forspids dine sight-singing-færdigheder med en omfattende bibliotek af melodi og interaktive øvelser.</value>
+  </data>
+  <data name="Sight-Singing Practice" xml:space="preserve">
+    <value>Øjensyns-sangøvelse</value>
+  </data>
+  <data name="Simulate the real exam environment with timed mock tests and get a feel for the actual challenge." xml:space="preserve">
+    <value>Simuler den virkelige eksamensmiljø med tidsbegrænsede prøveeksamener og få en fornemmelse af den faktiske udfordring.</value>
+  </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>Smarte konfigurationsgenveje</value>
   </data>
@@ -230,6 +281,9 @@
   </data>
   <data name="Start a new project" xml:space="preserve">
     <value>Start et nyt projekt</value>
+  </data>
+  <data name="Start Practice" xml:space="preserve">
+    <value>Start øvelse</value>
   </data>
   <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
     <value>Støtter både miljøvariabler og databasebaserede indstillinger, med automatisk prioritet til miljøvariabler for smertefri overtagelser.</value>
@@ -249,6 +303,9 @@
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>Dette er et skabelonprojekt, hvor vi starter rejsen...</value>
   </data>
+  <data name="Track your performance, view detailed score reports, and identify your strengths and weaknesses." xml:space="preserve">
+    <value>Overvåg din præstation, vis detaljerede resultatrapporter og identificer dine styrker og svagheder.</value>
+  </data>
   <data name="Usage" xml:space="preserve">
     <value>Brug</value>
   </data>
@@ -264,6 +321,9 @@
   <data name="What our developers say" xml:space="preserve">
     <value>Hvad vores udviklere siger</value>
   </data>
+  <data name="Why choose Music Exam Platform?" xml:space="preserve">
+    <value>Hvorfor vælge Music Exam Platform?</value>
+  </data>
   <data name="Why use the Aiursoft Template?" xml:space="preserve">
     <value>Hvorfor bruge Aiursoft Template?</value>
   </data>
@@ -275,12 +335,6 @@
   </data>
   <data name="You&apos;ll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
     <value>Du skal bruge .NET 10 SDK, npm og din foretrukne IDE, som f.eks. Visual Studio eller JetBrains Rider. Du kan finde den fulde opsætningsvejledning i vores dokumentation.</value>
-  </data>
-  <data name="Available Exams" xml:space="preserve">
-    <value>Tilgængelige eksamener</value>
-  </data>
-  <data name="Select your school and level to start practicing" xml:space="preserve">
-    <value>Vælg din skole og niveau for at begynde at øve</value>
   </data>
 
 </root>

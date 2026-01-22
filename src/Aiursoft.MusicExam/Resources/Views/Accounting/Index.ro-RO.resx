@@ -18,23 +18,29 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Users" xml:space="preserve">
-    <value>Utilizatori</value>
-  </data>
-  <data name="Dashboard" xml:space="preserve">
+      <data name="Dashboard" xml:space="preserve">
     <value>Panou de control</value>
-  </data>
-  <data name="Paid Members" xml:space="preserve">
-    <value>Membri cu plată</value>
   </data>
   <data name="Exam Submissions" xml:space="preserve">
     <value>Trimiteri la examen</value>
+  </data>
+  <data name="New Submissions (Last 30 Days)" xml:space="preserve">
+    <value>Înregistrări noi (ultimele 30 de zile)</value>
+  </data>
+  <data name="New Users (Last 30 Days)" xml:space="preserve">
+    <value>Utilizatori noi (ultimele 30 de zile)</value>
+  </data>
+  <data name="Paid Members" xml:space="preserve">
+    <value>Membri cu plată</value>
   </data>
   <data name="Quizzes Taken" xml:space="preserve">
     <value>Teste Parcurse</value>
   </data>
   <data name="System Statistics" xml:space="preserve">
     <value>Statistici Sistem</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Utilizatori</value>
   </data>
 
 </root>

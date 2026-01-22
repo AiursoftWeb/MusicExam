@@ -18,11 +18,11 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Monthly Statistics" xml:space="preserve">
-    <value>Statistici lunare</value>
+      <data name="Actions" xml:space="preserve">
+    <value>Acțiuni</value>
   </data>
-  <data name="Monthly Active Users Statistics" xml:space="preserve">
-    <value>Statistici lunare ale utilizatorilor activi</value>
+  <data name="Active Users Count" xml:space="preserve">
+    <value>Număr de Utilizatori Activi</value>
   </data>
   <data name="Details" xml:space="preserve">
     <value>Detalii</value>
@@ -30,11 +30,11 @@
   <data name="Month" xml:space="preserve">
     <value>Lună</value>
   </data>
-  <data name="Actions" xml:space="preserve">
-    <value>Acțiuni</value>
+  <data name="Monthly Active Users Statistics" xml:space="preserve">
+    <value>Statistici lunare ale utilizatorilor activi</value>
   </data>
-  <data name="Active Users Count" xml:space="preserve">
-    <value>Număr de Utilizatori Activi</value>
+  <data name="Monthly Statistics" xml:space="preserve">
+    <value>Statistici lunare</value>
   </data>
   <data name="Number of users who had the TakeExam permission at any point during each month." xml:space="preserve">
     <value>Numărul de utilizatori care au avut permisiunea TakeExam în orice moment din fiecare lună.</value>

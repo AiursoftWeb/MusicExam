@@ -18,26 +18,26 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Active Users Count" xml:space="preserve">
-    <value>Antal aktive brugere</value>
-  </data>
-  <data name="Actions" xml:space="preserve">
+      <data name="Actions" xml:space="preserve">
     <value>Handlinger</value>
   </data>
-  <data name="Monthly Statistics" xml:space="preserve">
-    <value>Månedlig statistik</value>
-  </data>
-  <data name="Month" xml:space="preserve">
-    <value>Måned</value>
+  <data name="Active Users Count" xml:space="preserve">
+    <value>Antal aktive brugere</value>
   </data>
   <data name="Details" xml:space="preserve">
     <value>Detaljer</value>
   </data>
-  <data name="Number of users who had the TakeExam permission at any point during each month." xml:space="preserve">
-    <value>Antallet af brugere, der havde TakeExam-tilladelsen på et hvilket som helst tidspunkt i hver måned.</value>
+  <data name="Month" xml:space="preserve">
+    <value>Måned</value>
   </data>
   <data name="Monthly Active Users Statistics" xml:space="preserve">
     <value>Statistik over månedlige aktive brugere</value>
+  </data>
+  <data name="Monthly Statistics" xml:space="preserve">
+    <value>Månedlig statistik</value>
+  </data>
+  <data name="Number of users who had the TakeExam permission at any point during each month." xml:space="preserve">
+    <value>Antallet af brugere, der havde TakeExam-tilladelsen på et hvilket som helst tidspunkt i hver måned.</value>
   </data>
 
 </root>

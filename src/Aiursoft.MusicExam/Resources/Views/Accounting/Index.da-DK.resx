@@ -21,20 +21,26 @@
       <data name="Dashboard" xml:space="preserve">
     <value>Dashboard</value>
   </data>
+  <data name="Exam Submissions" xml:space="preserve">
+    <value>Eksamensafleveringer</value>
+  </data>
+  <data name="New Submissions (Last 30 Days)" xml:space="preserve">
+    <value>Nye indsendelser (sidste 30 dage)</value>
+  </data>
+  <data name="New Users (Last 30 Days)" xml:space="preserve">
+    <value>Nye brugere (sidste 30 dage)</value>
+  </data>
+  <data name="Paid Members" xml:space="preserve">
+    <value>Betalende medlemmer</value>
+  </data>
+  <data name="Quizzes Taken" xml:space="preserve">
+    <value>Afholdte quizzer</value>
+  </data>
   <data name="System Statistics" xml:space="preserve">
     <value>Systemstatistik</value>
   </data>
   <data name="Users" xml:space="preserve">
     <value>Brugere</value>
-  </data>
-  <data name="Quizzes Taken" xml:space="preserve">
-    <value>Afholdte quizzer</value>
-  </data>
-  <data name="Exam Submissions" xml:space="preserve">
-    <value>Eksamensafleveringer</value>
-  </data>
-  <data name="Paid Members" xml:space="preserve">
-    <value>Betalende medlemmer</value>
   </data>
 
 </root>

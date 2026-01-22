@@ -21,32 +21,35 @@
       <data name="Category:" xml:space="preserve">
     <value>Kategori:</value>
   </data>
-  <data name="Previous" xml:space="preserve">
-    <value>Önceki</value>
-  </data>
   <data name="Check Answer" xml:space="preserve">
     <value>Cevabı Kontrol Et</value>
-  </data>
-  <data name="This is a multiple choice question." xml:space="preserve">
-    <value>Bu bir çoktan seçmeli sorudur.</value>
-  </data>
-  <data name="Next" xml:space="preserve">
-    <value>Sonraki</value>
-  </data>
-  <data name="Submit Exam" xml:space="preserve">
-    <value>Sınavı Gönder</value>
-  </data>
-  <data name="This is a sight-singing question. Please review the sheet music and sing aloud." xml:space="preserve">
-    <value>Bu bir nota okuma sorusudur. Lütfen nota kağıdını inceleyin ve yüksek sesle söyleyin.</value>
-  </data>
-  <data name="Please select an answer first." xml:space="preserve">
-    <value>Lütfen önce bir cevap seçin.</value>
   </data>
   <data name="Correct!" xml:space="preserve">
     <value>Doğru!</value>
   </data>
+  <data name="Explanation" xml:space="preserve">
+    <value>Açıklama</value>
+  </data>
   <data name="Incorrect! Please check the correct answer highlighted above." xml:space="preserve">
     <value>Yanlış! Lütfen yukarıda vurgulanan doğru cevabı kontrol edin.</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Sonraki</value>
+  </data>
+  <data name="Please select an answer first." xml:space="preserve">
+    <value>Lütfen önce bir cevap seçin.</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Önceki</value>
+  </data>
+  <data name="Submit Exam" xml:space="preserve">
+    <value>Sınavı Gönder</value>
+  </data>
+  <data name="This is a multiple choice question." xml:space="preserve">
+    <value>Bu bir çoktan seçmeli sorudur.</value>
+  </data>
+  <data name="This is a sight-singing question. Please review the sheet music and sing aloud." xml:space="preserve">
+    <value>Bu bir nota okuma sorusudur. Lütfen nota kağıdını inceleyin ve yüksek sesle söyleyin.</value>
   </data>
 
 </root>

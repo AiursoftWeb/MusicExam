@@ -18,23 +18,23 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="N/A" xml:space="preserve">
-    <value>Ikke tilgængelig</value>
-  </data>
-  <data name="Score" xml:space="preserve">
-    <value>Score</value>
-  </data>
-  <data name="Action" xml:space="preserve">
+      <data name="Action" xml:space="preserve">
     <value>Handling</value>
-  </data>
-  <data name="You haven&apos;t taken any exams yet." xml:space="preserve">
-    <value>Du har ikke taget nogle eksamener endnu.</value>
   </data>
   <data name="Date" xml:space="preserve">
     <value>Dato</value>
   </data>
   <data name="Exam" xml:space="preserve">
     <value>Eksamen</value>
+  </data>
+  <data name="N/A" xml:space="preserve">
+    <value>Ikke tilgængelig</value>
+  </data>
+  <data name="Score" xml:space="preserve">
+    <value>Score</value>
+  </data>
+  <data name="You haven&apos;t taken any exams yet." xml:space="preserve">
+    <value>Du har ikke taget nogle eksamener endnu.</value>
   </data>
 
 </root>

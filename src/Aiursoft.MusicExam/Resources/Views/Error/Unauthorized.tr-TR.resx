@@ -27,6 +27,9 @@
   <data name="If you believe you should have access, please contact your system administrator. Or try signing out and signing in again." xml:space="preserve">
     <value>Erişiminiz olması gerektiğini düşünüyorsanız, lütfen sistem yöneticinizle iletişime geçin. Veya oturumu kapatıp tekrar açmayı deneyin.</value>
   </data>
+  <data name="Please contact the administrator to pay and activate your account. Or try signing out and signing in again." xml:space="preserve">
+    <value>Lütfen hesabınızı ödemeniz ve etkinleştirmeniz için yöneticiyle iletişime geçin. Veya çıkış yapın ve tekrar giriş yapmayı deneyin.</value>
+  </data>
   <data name="Sorry, you do not have the necessary permissions to access this page." xml:space="preserve">
     <value>Üzgünüz, bu sayfaya erişmek için gerekli izinlere sahip değilsiniz.</value>
   </data>

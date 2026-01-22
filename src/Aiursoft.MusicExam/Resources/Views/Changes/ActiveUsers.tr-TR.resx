@@ -18,23 +18,23 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Monthly Statistics" xml:space="preserve">
-    <value>Aylık İstatistikler</value>
-  </data>
-  <data name="Month" xml:space="preserve">
-    <value>Ay</value>
-  </data>
-  <data name="Actions" xml:space="preserve">
+      <data name="Actions" xml:space="preserve">
     <value>İşlemler</value>
-  </data>
-  <data name="Details" xml:space="preserve">
-    <value>Detaylar</value>
   </data>
   <data name="Active Users Count" xml:space="preserve">
     <value>Aktif Kullanıcı Sayısı</value>
   </data>
+  <data name="Details" xml:space="preserve">
+    <value>Detaylar</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Ay</value>
+  </data>
   <data name="Monthly Active Users Statistics" xml:space="preserve">
     <value>Aylık Aktif Kullanıcı İstatistikleri</value>
+  </data>
+  <data name="Monthly Statistics" xml:space="preserve">
+    <value>Aylık İstatistikler</value>
   </data>
   <data name="Number of users who had the TakeExam permission at any point during each month." xml:space="preserve">
     <value>Her ay içinde herhangi bir noktada TakeExam iznine sahip olan kullanıcı sayısı.</value>

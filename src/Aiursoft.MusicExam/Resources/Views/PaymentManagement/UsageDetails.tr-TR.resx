@@ -18,26 +18,26 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Active Users Details" xml:space="preserve">
-    <value>Detalii Utilizatori Activi</value>
+      <data name="Actions" xml:space="preserve">
+    <value>Eylemler</value>
   </data>
-  <data name="Active Users List" xml:space="preserve">
-    <value>Lista utilizatorilor activi</value>
+  <data name="Exam Submissions" xml:space="preserve">
+    <value>Sınav Gönderileri</value>
   </data>
-  <data name="Avatar" xml:space="preserve">
-    <value>Avatar</value>
+  <data name="Not scored yet" xml:space="preserve">
+    <value>Henüz puanlanmadı</value>
   </data>
-  <data name="Back to Statistics" xml:space="preserve">
-    <value>Înapoi la Statistici</value>
+  <data name="Paper Name" xml:space="preserve">
+    <value>Sınav Adı</value>
   </data>
-  <data name="Detailed list of users who were active this month and why." xml:space="preserve">
-    <value>Listă detaliată a utilizatorilor care au fost activi în această lună și de ce.</value>
+  <data name="Score" xml:space="preserve">
+    <value>Puan</value>
   </data>
-  <data name="Reason" xml:space="preserve">
-    <value>Motiv</value>
+  <data name="Submission Time" xml:space="preserve">
+    <value>Gönderim Zamanı</value>
   </data>
-  <data name="User" xml:space="preserve">
-    <value>Utilizator</value>
+  <data name="View Submission" xml:space="preserve">
+    <value>Gönderiyi Görüntüle</value>
   </data>
 
 </root>
