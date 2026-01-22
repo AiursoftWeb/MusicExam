@@ -113,7 +113,11 @@ public class DataImporter : ISingletonDependency
                         }
 
                         // Import Questions
-                        var questionFiles = Directory.GetFiles(paperDir, "question_*.json").OrderBy(f => f).ToArray();
+                        var questionFiles = Directory.GetFiles(paperDir, "question_*.json")
+                            .Select(f => new { Path = f, Index = GetQuestionIndex(Path.GetFileName(f)) })
+                            .OrderBy(x => x.Index)
+                            .Select(x => x.Path)
+                            .ToArray();
                         var questionOrder = 0;
                         foreach (var questionFile in questionFiles)
                         {
@@ -176,6 +180,24 @@ public class DataImporter : ISingletonDependency
     {
         if (string.IsNullOrWhiteSpace(index)) return "?";
         return int.TryParse(index, out var i) ? ((char)('A' + i)).ToString() : "?";
+    }
+
+    private int GetQuestionIndex(string fileName)
+    {
+        try
+        {
+            var nameWithoutExtension = Path.GetFileNameWithoutExtension(fileName);
+            var parts = nameWithoutExtension.Split('_');
+            if (parts.Length >= 2 && int.TryParse(parts.Last(), out var index))
+            {
+                return index;
+            }
+        }
+        catch
+        {
+            // Ignore
+        }
+        return int.MaxValue;
     }
 
     private async Task<string> CopyAsset(string relativeAssetPath, string sourceDir)
