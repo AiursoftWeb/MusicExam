@@ -5,6 +5,7 @@ namespace Aiursoft.MusicExam.Configuration;
 public class SettingsMap
 {
     public const string AllowUserAdjustNickname = "Allow_User_Adjust_Nickname";
+    public const string ProjectName = "Project_Name";
 
     public class FakeLocalizer
     {
@@ -22,6 +23,14 @@ public class SettingsMap
             Description = Localizer["Allow users to adjust their nickname in the profile management page."],
             Type = SettingType.Bool,
             DefaultValue = "True"
+        },
+        new GlobalSettingDefinition
+        {
+            Key = ProjectName,
+            Name = Localizer["Project Name"],
+            Description = Localizer["The name of the project displayed throughout the application."],
+            Type = SettingType.Text,
+            DefaultValue = "Music Exam"
         }
     };
 }
