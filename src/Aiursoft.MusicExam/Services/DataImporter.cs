@@ -62,7 +62,10 @@ public class DataImporter : ISingletonDependency
             var levelDirs = Directory.GetDirectories(schoolDir).OrderBy(d => d).ToArray();
             foreach (var levelDir in levelDirs)
             {
-                var levelName = Path.GetFileName(levelDir);
+                var levelDirName = Path.GetFileName(levelDir);
+                var levelName = levelDirName.Contains('_')
+                    ? levelDirName.Split('_', 2)[1]
+                    : levelDirName;
 
                 // Level 3: Categories
                 var categoryDirs = Directory.GetDirectories(levelDir).OrderBy(d => d).ToArray();
