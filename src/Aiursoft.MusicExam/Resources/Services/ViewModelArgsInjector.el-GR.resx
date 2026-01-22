@@ -78,6 +78,9 @@
   <data name="Error" xml:space="preserve">
     <value>Σφάλμα</value>
   </data>
+  <data name="Exam History" xml:space="preserve">
+    <value>Ιστορικό Εξετάσεων</value>
+  </data>
   <data name="Features" xml:space="preserve">
     <value>Λειτουργίες</value>
   </data>

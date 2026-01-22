@@ -13,17 +13,17 @@ class MusicExamAudioPlayer {
 
     render() {
         this.container.innerHTML = `
-            <div class="custom-audio-player">
-                <button class="btn btn-sm btn-primary play-pause-btn" type="button">
+            <div class="custom-audio-player d-flex align-items-center">
+                <button class="btn btn-sm btn-primary play-pause-btn d-flex align-items-center justify-content-center" style="height: 32px; width: 32px; padding: 0;" type="button">
                     <i class="fas fa-play"></i>
                 </button>
-                <div class="progress-container mx-2">
+                <div class="progress-container mx-2 flex-grow-1">
                     <div class="progress-bar"></div>
                 </div>
-                <button class="btn btn-sm btn-outline-secondary replay-btn" type="button">
+                <button class="btn btn-sm btn-outline-secondary replay-btn d-flex align-items-center justify-content-center" style="height: 32px; width: 32px; padding: 0;" type="button">
                     <i class="fas fa-redo"></i>
                 </button>
-                <div class="time-display ms-2 small text-muted">0:00 / 0:00</div>
+                <div class="time-display ms-2 small text-muted text-nowrap">0:00 / 0:00</div>
             </div>
         `;
 
@@ -75,16 +75,22 @@ class MusicExamAudioPlayer {
         }
     }
 
-    play() {
+    async play() {
         // Stop currently active player if it's not this one
         if (MusicExamAudioPlayer.activePlayer && MusicExamAudioPlayer.activePlayer !== this) {
             MusicExamAudioPlayer.activePlayer.pause();
         }
 
-        this.audio.play();
-        this.isPlaying = true;
-        MusicExamAudioPlayer.activePlayer = this;
-        this.updateIcon();
+        try {
+            await this.audio.play();
+            this.isPlaying = true;
+            MusicExamAudioPlayer.activePlayer = this;
+            this.updateIcon();
+        } catch (err) {
+            console.error("Autoplay failed or was blocked:", err);
+            this.isPlaying = false;
+            this.updateIcon();
+        }
     }
 
     pause() {

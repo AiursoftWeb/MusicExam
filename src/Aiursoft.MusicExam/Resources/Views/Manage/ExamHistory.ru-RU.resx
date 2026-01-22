@@ -18,35 +18,26 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Back to Dashboard" xml:space="preserve">
-    <value>대시보드로 돌아가기</value>
+      <data name="Date" xml:space="preserve">
+    <value>Дата</value>
   </data>
-  <data name="Correct" xml:space="preserve">
-    <value>정답</value>
+  <data name="Exam" xml:space="preserve">
+    <value>Экзамен</value>
   </data>
-  <data name="Correct Answer" xml:space="preserve">
-    <value>정답</value>
+  <data name="History" xml:space="preserve">
+    <value>История</value>
   </data>
-  <data name="Explanation" xml:space="preserve">
-    <value>해설</value>
+  <data name="My Exam History" xml:space="preserve">
+    <value>История моих экзаменов</value>
   </data>
-  <data name="Incorrect" xml:space="preserve">
-    <value>오답</value>
-  </data>
-  <data name="No detailed breakdown for this question type." xml:space="preserve">
-    <value>이 문제 유형에 대한 상세 분석은 제공되지 않습니다.</value>
-  </data>
-  <data name="Question" xml:space="preserve">
-    <value>질문</value>
-  </data>
-  <data name="Retake Exam" xml:space="preserve">
-    <value>재시험</value>
+  <data name="N/A" xml:space="preserve">
+    <value>Н/Д</value>
   </data>
   <data name="Score" xml:space="preserve">
-    <value>점수</value>
+    <value>Оценка</value>
   </data>
-  <data name="View History" xml:space="preserve">
-    <value>기록 보기</value>
+  <data name="You haven&apos;t taken any exams yet." xml:space="preserve">
+    <value>Вы еще не сдавали никаких экзаменов.</value>
   </data>
 
 </root>

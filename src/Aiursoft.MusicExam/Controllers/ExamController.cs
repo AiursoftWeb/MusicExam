@@ -31,9 +31,6 @@ public class ExamController : Controller
         {
             return Forbid();
         }
-
-
-
         var paper = await _dbContext.ExamPapers
             .Include(p => p.Questions)
             .ThenInclude(q => q.Options)
@@ -153,4 +150,83 @@ public class ExamController : Controller
         return this.StackView(model);
     }
 
+
+    [HttpGet]
+    [Authorize(Policy = AppPermissionNames.CanTakeExam)]
+    public async Task<IActionResult> Review(Guid id)
+    {
+        var user = await _userManager.GetUserAsync(User);
+        if (user == null)
+        {
+            return Forbid();
+        }
+
+        var submission = await _dbContext.ExamPaperSubmissions
+            .Include(s => s.Paper)
+            .Include(s => s.QuestionSubmissions)
+            .FirstOrDefaultAsync(s => s.Id == id);
+
+        if (submission == null)
+        {
+            return NotFound();
+        }
+
+        if (submission.UserId != user.Id)
+        {
+            return Forbid();
+        }
+
+        var paper = await _dbContext.ExamPapers
+            .Include(p => p.Questions)
+            .ThenInclude(q => q.Options)
+            .AsSplitQuery()
+            .FirstOrDefaultAsync(p => p.Id == submission.PaperId);
+
+        if (paper == null)
+        {
+            return NotFound();
+        }
+
+        var model = new ResultViewModel
+        {
+            Title = paper.Title,
+            TotalQuestions = paper.Questions.Count,
+            Score = submission.Score ?? 0,
+            PageTitle = "Review - " + paper.Title
+        };
+
+        foreach (var question in paper.Questions)
+        {
+            var questionSubmission = submission.QuestionSubmissions.FirstOrDefault(qs => qs.QuestionId == question.Id);
+            var result = new QuestionAnswerResult
+            {
+                Question = question,
+                CorrectOptionIds = question.Options.Where(o => o.IsCorrect).Select(o => o.Id).ToList()
+            };
+
+            if (questionSubmission != null && !string.IsNullOrEmpty(questionSubmission.UserAnswer))
+            {
+                result.UserSelectedOptionIds = questionSubmission.UserAnswer
+                    .Split(',', StringSplitOptions.RemoveEmptyEntries)
+                    .Select(int.Parse)
+                    .ToList();
+            }
+
+            // Re-calculate correctness for display purposes
+             if (question.QuestionType == QuestionType.MultipleChoice)
+            {
+                var correctIds = result.CorrectOptionIds.OrderBy(x => x).ToList();
+                var userIds = result.UserSelectedOptionIds.OrderBy(x => x).ToList();
+                result.IsCorrect = correctIds.SequenceEqual(userIds);
+            }
+            else
+            {
+                result.IsCorrect = true;
+            }
+
+            model.Answers.Add(result);
+        }
+
+        return this.StackView(model, nameof(Result));
+    }
 }

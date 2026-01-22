@@ -29,8 +29,11 @@
                         @foreach (var submission in Model.Submissions)
                         {
                             <tr>
-                                <td>@submission.Paper?.Title</td>
                                 <td>
+                                    <a asp-controller="Exam" asp-action="Review" asp-route-id="@submission.Id">
+                                        @submission.Paper?.Title
+                                    </a>
+                                </td>                                <td>
                                     @if (submission.Score.HasValue)
                                     {
                                         <span class="badge bg-primary">@submission.Score</span>

@@ -78,6 +78,9 @@
   <data name="Error" xml:space="preserve">
     <value>त्रुटि</value>
   </data>
+  <data name="Exam History" xml:space="preserve">
+    <value>परीक्षा इतिहास</value>
+  </data>
   <data name="Features" xml:space="preserve">
     <value>विशेषताएँ</value>
   </data>

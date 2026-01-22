@@ -23,7 +23,8 @@
                 </div>
             </div>
             <div class="mt-4">
-                <a asp-controller="Dashboard" asp-action="Index" class="btn btn-secondary">@Localizer["Back to Dashboard"]</a>
+                <a asp-controller="Dashboard" asp-action="Index"
+                   class="btn btn-secondary">@Localizer["Back to Dashboard"]</a>
                 <a asp-controller="Manage" asp-action="ExamHistory" class="btn btn-info">@Localizer["View History"]</a>
                 <a href="javascript:window.location.reload();" class="btn btn-primary">@Localizer["Retake Exam"]</a>
             </div>
@@ -37,12 +38,15 @@
         var questionAssets = !string.IsNullOrWhiteSpace(question.AssetPath) ? JsonSerializer.Deserialize<List<string>>(question.AssetPath) : new List<string>();
         var isCorrect = answer.IsCorrect;
 
-            <div class="card mb-4 @(isCorrect ? "border-success" : "border-danger")">
-                <div class="card-header @(isCorrect ? "text-success" : "text-danger")">
-                    <strong>@Localizer["Question"] @(i + 1)</strong> - @(isCorrect ? Localizer["Correct"] : Localizer["Incorrect"])
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">@question.Content</h5>
+        <div class="card mb-4 @(isCorrect ? "border-success" : "border-danger")">
+            <div class="card-header @(isCorrect ? "text-success" : "text-danger")">
+                <strong>@Localizer["Question"] @(i + 1)</strong>
+                - @(isCorrect ? Localizer["Correct"] : Localizer["Incorrect"])
+            </div>
+            <div class="card-body">
+                @* @Localizer["Correct"] *@
+                @* @Localizer["Incorrect"] *@
+                <h5 class="card-title">@question.Content</h5>
 
                 @if (questionAssets != null)
                 {
@@ -50,18 +54,20 @@
                     {
                         if (asset.EndsWith(".mp3", StringComparison.OrdinalIgnoreCase))
                         {
-                                            <div class="audio-player-wrapper" data-audio-src="@Storage.RelativePathToInternetUrl(asset)"></div>
+                            <div class="audio-player-wrapper"
+                                 data-audio-src="@Storage.RelativePathToInternetUrl(asset)"></div>
                         }
                         else if (asset.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || asset.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
                         {
-                                            <img src="@Storage.RelativePathToInternetUrl(asset)" class="img-fluid my-2" alt="Question asset" />
+                            <img src="@Storage.RelativePathToInternetUrl(asset)" class="img-fluid my-2"
+                                 alt="Question asset"/>
                         }
                     }
                 }
 
                 @if (question.QuestionType == QuestionType.MultipleChoice)
                 {
-                            <div class="list-group mt-3">
+                    <div class="list-group mt-3">
                         @foreach (var option in question.Options.OrderBy(o => o.Id))
                         {
                             var isUserSelected = answer.UserSelectedOptionIds.Contains(option.Id);
@@ -77,9 +83,9 @@
                                 itemClass = "list-group-item-danger";
                             }
 
-                                        <div class="list-group-item @itemClass">
-                                            <div class="d-flex w-100 justify-content-between">
-                                                <span class="@(isUserSelected ? "fw-bold" : "")">
+                            <div class="list-group-item @itemClass">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <span class="@(isUserSelected ? "fw-bold" : "")">
                                         @if (isUserSelected)
                                         {
                                             <i class="fas fa-check-circle me-2"></i>
@@ -91,35 +97,37 @@
                                         {
                                             @option.Content
                                         }
-                                                </span>
+                                    </span>
                                     @if (isCorrectOption)
                                     {
-                                                        <span class="badge bg-success">@Localizer["Correct Answer"]</span>
+                                        <span class="badge bg-success">@Localizer["Correct Answer"]</span>
                                     }
-                                            </div>
+                                </div>
 
                                 @if (option.Content.EndsWith(".mp3", StringComparison.OrdinalIgnoreCase))
                                 {
-                                                    <div class="audio-player-wrapper d-inline-block align-middle" style="width: 300px;" data-audio-src="@Storage.RelativePathToInternetUrl(option.Content)"></div>
+                                    <div class="audio-player-wrapper d-inline-block align-middle" style="width: 300px;"
+                                         data-audio-src="@Storage.RelativePathToInternetUrl(option.Content)"></div>
                                 }
                                 else if (option.Content.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || option.Content.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
                                 {
-                                                    <img src="@Storage.RelativePathToInternetUrl(option.Content)" class="img-fluid my-2" style="max-height: 100px;" alt="Option asset" />
+                                    <img src="@Storage.RelativePathToInternetUrl(option.Content)" class="img-fluid my-2"
+                                         style="max-height: 100px;" alt="Option asset"/>
                                 }
-                                        </div>
-                        }
                             </div>
+                        }
+                    </div>
                 }
                 else
                 {
-                            <div class="alert alert-info alert-outline-coloured mt-3" role="alert">
-                                <div class="alert-icon">
-                                    <i class="fas fa-fw fa-info-circle"></i>
-                                </div>
-                                <div class="alert-message">
-                                    @Localizer["No detailed breakdown for this question type."]
-                                </div>
-                            </div>
+                    <div class="alert alert-info alert-outline-coloured mt-3" role="alert">
+                        <div class="alert-icon">
+                            <i class="fas fa-fw fa-info-circle"></i>
+                        </div>
+                        <div class="alert-message">
+                            @Localizer["No detailed breakdown for this question type."]
+                        </div>
+                    </div>
                 }
 
                 @if (!string.IsNullOrWhiteSpace(question.Explanation))
@@ -134,12 +142,13 @@
                         </div>
                     </div>
                 }
-                </div>
             </div>
+        </div>
     }
 </div>
 
 @* ReSharper disable once Razor.SectionNotResolved *@
+
 @section Scripts {
     <script src="~/scripts/audioPlayer.js"></script>
     <script>

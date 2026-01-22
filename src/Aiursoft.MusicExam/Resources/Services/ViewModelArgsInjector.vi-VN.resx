@@ -81,6 +81,9 @@
   <data name="Error" xml:space="preserve">
     <value>Lỗi</value>
   </data>
+  <data name="Exam History" xml:space="preserve">
+    <value>Lịch sử bài kiểm tra</value>
+  </data>
   <data name="Features" xml:space="preserve">
     <value>Tính năng</value>
   </data>

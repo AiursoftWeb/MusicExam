@@ -21,11 +21,17 @@
       <data name="Back to Dashboard" xml:space="preserve">
     <value>Volver al Panel de Control</value>
   </data>
+  <data name="Correct" xml:space="preserve">
+    <value>Correcto</value>
+  </data>
   <data name="Correct Answer" xml:space="preserve">
     <value>Respuesta Correcta</value>
   </data>
   <data name="Explanation" xml:space="preserve">
     <value>Explicación</value>
+  </data>
+  <data name="Incorrect" xml:space="preserve">
+    <value>Incorrect</value>
   </data>
   <data name="No detailed breakdown for this question type." xml:space="preserve">
     <value>No hay un desglose detallado para este tipo de pregunta.</value>

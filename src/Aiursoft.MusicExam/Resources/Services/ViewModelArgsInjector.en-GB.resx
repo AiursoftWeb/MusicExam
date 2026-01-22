@@ -81,6 +81,9 @@
   <data name="Error" xml:space="preserve">
     <value>Error</value>
   </data>
+  <data name="Exam History" xml:space="preserve">
+    <value>Exam History</value>
+  </data>
   <data name="Features" xml:space="preserve">
     <value>Features</value>
   </data>

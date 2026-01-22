@@ -78,6 +78,9 @@
   <data name="Error" xml:space="preserve">
     <value>Hata</value>
   </data>
+  <data name="Exam History" xml:space="preserve">
+    <value>Sınav Geçmişi</value>
+  </data>
   <data name="Features" xml:space="preserve">
     <value>Özellikler</value>
   </data>

@@ -21,11 +21,17 @@
       <data name="Back to Dashboard" xml:space="preserve">
     <value>Quay lại Bảng điều khiển</value>
   </data>
+  <data name="Correct" xml:space="preserve">
+    <value>Đúng</value>
+  </data>
   <data name="Correct Answer" xml:space="preserve">
     <value>Đáp án đúng</value>
   </data>
   <data name="Explanation" xml:space="preserve">
     <value>Giải thích</value>
+  </data>
+  <data name="Incorrect" xml:space="preserve">
+    <value>Sai</value>
   </data>
   <data name="No detailed breakdown for this question type." xml:space="preserve">
     <value>Không có phân tích chi tiết cho loại câu hỏi này.</value>

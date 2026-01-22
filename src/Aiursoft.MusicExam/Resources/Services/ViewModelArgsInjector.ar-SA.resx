@@ -78,6 +78,9 @@
   <data name="Error" xml:space="preserve">
     <value>خطأ</value>
   </data>
+  <data name="Exam History" xml:space="preserve">
+    <value>سجل الاختبارات</value>
+  </data>
   <data name="Features" xml:space="preserve">
     <value>الميزات</value>
   </data>

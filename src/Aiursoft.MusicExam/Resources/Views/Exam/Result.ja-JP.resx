@@ -21,11 +21,17 @@
       <data name="Back to Dashboard" xml:space="preserve">
     <value>ダッシュボードに戻る</value>
   </data>
+  <data name="Correct" xml:space="preserve">
+    <value>正解</value>
+  </data>
   <data name="Correct Answer" xml:space="preserve">
     <value>正解</value>
   </data>
   <data name="Explanation" xml:space="preserve">
     <value>解説</value>
+  </data>
+  <data name="Incorrect" xml:space="preserve">
+    <value>不正解</value>
   </data>
   <data name="No detailed breakdown for this question type." xml:space="preserve">
     <value>この問題タイプの詳細な内訳はありません。</value>

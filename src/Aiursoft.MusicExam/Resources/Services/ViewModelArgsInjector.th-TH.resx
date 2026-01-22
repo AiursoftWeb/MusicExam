@@ -81,6 +81,9 @@
   <data name="Error" xml:space="preserve">
     <value>ข้อผิดพลาด</value>
   </data>
+  <data name="Exam History" xml:space="preserve">
+    <value>ประวัติการสอบ</value>
+  </data>
   <data name="Features" xml:space="preserve">
     <value>คุณสมบัติ</value>
   </data>

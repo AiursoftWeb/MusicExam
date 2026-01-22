@@ -78,6 +78,9 @@
   <data name="Error" xml:space="preserve">
     <value>Fel</value>
   </data>
+  <data name="Exam History" xml:space="preserve">
+    <value>Examinationshistorik</value>
+  </data>
   <data name="Features" xml:space="preserve">
     <value>Funktioner</value>
   </data>

@@ -39,6 +39,9 @@
   <data name="Change your profile" xml:space="preserve">
     <value>更改个人资料</value>
   </data>
+  <data name="My Exam Records" xml:space="preserve">
+    <value>我的考试记录</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>密码</value>
   </data>
