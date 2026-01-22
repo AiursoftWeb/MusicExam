@@ -18,35 +18,38 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Please select an answer first." xml:space="preserve">
-    <value>まず回答を選択してください。</value>
-  </data>
-  <data name="This is a multiple choice question." xml:space="preserve">
-    <value>これは複数選択問題です。</value>
-  </data>
-  <data name="Next" xml:space="preserve">
-    <value>次へ</value>
-  </data>
-  <data name="Category:" xml:space="preserve">
+      <data name="Category:" xml:space="preserve">
     <value>カテゴリー:</value>
-  </data>
-  <data name="Submit Exam" xml:space="preserve">
-    <value>試験を提出</value>
-  </data>
-  <data name="This is a sight-singing question. Please review the sheet music and sing aloud." xml:space="preserve">
-    <value>これは視唱問題です。楽譜を確認し、声に出して歌ってください。</value>
   </data>
   <data name="Check Answer" xml:space="preserve">
     <value>回答を確認</value>
   </data>
-  <data name="Previous" xml:space="preserve">
-    <value>前へ</value>
-  </data>
   <data name="Correct!" xml:space="preserve">
     <value>正解！</value>
   </data>
+  <data name="Explanation" xml:space="preserve">
+    <value>解説</value>
+  </data>
   <data name="Incorrect! Please check the correct answer highlighted above." xml:space="preserve">
     <value>不正解です！上記でハイライトされている正しい答えを確認してください。</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>次へ</value>
+  </data>
+  <data name="Please select an answer first." xml:space="preserve">
+    <value>まず回答を選択してください。</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>前へ</value>
+  </data>
+  <data name="Submit Exam" xml:space="preserve">
+    <value>試験を提出</value>
+  </data>
+  <data name="This is a multiple choice question." xml:space="preserve">
+    <value>これは複数選択問題です。</value>
+  </data>
+  <data name="This is a sight-singing question. Please review the sheet music and sing aloud." xml:space="preserve">
+    <value>これは視唱問題です。楽譜を確認し、声に出して歌ってください。</value>
   </data>
 
 </root>

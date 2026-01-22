@@ -18,10 +18,7 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Month" xml:space="preserve">
-    <value>Mes</value>
-  </data>
-  <data name="Actions" xml:space="preserve">
+      <data name="Actions" xml:space="preserve">
     <value>Acciones</value>
   </data>
   <data name="Active Users Count" xml:space="preserve">
@@ -30,11 +27,14 @@
   <data name="Details" xml:space="preserve">
     <value>Detalles</value>
   </data>
-  <data name="Monthly Statistics" xml:space="preserve">
-    <value>Estadísticas Mensuales</value>
+  <data name="Month" xml:space="preserve">
+    <value>Mes</value>
   </data>
   <data name="Monthly Active Users Statistics" xml:space="preserve">
     <value>Estadísticas de Usuarios Activos Mensuales</value>
+  </data>
+  <data name="Monthly Statistics" xml:space="preserve">
+    <value>Estadísticas Mensuales</value>
   </data>
   <data name="Number of users who had the TakeExam permission at any point during each month." xml:space="preserve">
     <value>Número de usuarios que tuvieron el permiso TakeExam en algún momento durante cada mes.</value>

@@ -21,8 +21,8 @@
       <data name="Action" xml:space="preserve">
     <value>操作</value>
   </data>
-  <data name="Score" xml:space="preserve">
-    <value>得点</value>
+  <data name="Date" xml:space="preserve">
+    <value>日付</value>
   </data>
   <data name="Exam" xml:space="preserve">
     <value>試験</value>
@@ -30,11 +30,11 @@
   <data name="N/A" xml:space="preserve">
     <value>該当なし</value>
   </data>
+  <data name="Score" xml:space="preserve">
+    <value>得点</value>
+  </data>
   <data name="You haven&apos;t taken any exams yet." xml:space="preserve">
     <value>まだ試験を受けていません。</value>
-  </data>
-  <data name="Date" xml:space="preserve">
-    <value>日付</value>
   </data>
 
 </root>

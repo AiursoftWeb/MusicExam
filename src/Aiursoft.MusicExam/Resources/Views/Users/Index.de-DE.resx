@@ -45,14 +45,26 @@
   <data name="Email" xml:space="preserve">
     <value>E-Mail</value>
   </data>
+  <data name="Expire" xml:space="preserve">
+    <value>Ablauf</value>
+  </data>
+  <data name="Free" xml:space="preserve">
+    <value>Kostenlos</value>
+  </data>
   <data name="Manage Users" xml:space="preserve">
     <value>Benutzer verwalten</value>
   </data>
   <data name="Name" xml:space="preserve">
     <value>Name</value>
   </data>
+  <data name="Paid" xml:space="preserve">
+    <value>Bezahlt</value>
+  </data>
   <data name="Roles" xml:space="preserve">
     <value>Rollen</value>
+  </data>
+  <data name="Usage" xml:space="preserve">
+    <value>Verwendung</value>
   </data>
   <data name="User name" xml:space="preserve">
     <value>Benutzername</value>

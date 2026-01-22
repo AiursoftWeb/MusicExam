@@ -18,23 +18,23 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Date" xml:space="preserve">
-    <value>日期</value>
-  </data>
-  <data name="Action" xml:space="preserve">
+      <data name="Action" xml:space="preserve">
     <value>操作</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>日期</value>
   </data>
   <data name="Exam" xml:space="preserve">
     <value>考试</value>
   </data>
-  <data name="You haven&apos;t taken any exams yet." xml:space="preserve">
-    <value>您尚未参加任何考试。</value>
+  <data name="N/A" xml:space="preserve">
+    <value>不适用</value>
   </data>
   <data name="Score" xml:space="preserve">
     <value>分数</value>
   </data>
-  <data name="N/A" xml:space="preserve">
-    <value>不适用</value>
+  <data name="You haven&apos;t taken any exams yet." xml:space="preserve">
+    <value>您尚未参加任何考试。</value>
   </data>
 
 </root>

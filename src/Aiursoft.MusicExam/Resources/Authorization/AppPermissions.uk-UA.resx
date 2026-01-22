@@ -39,14 +39,26 @@
   <data name="Allows the permanent deletion of user accounts." xml:space="preserve">
     <value>Дозволяє остаточне видалення облікових записів користувачів.</value>
   </data>
+  <data name="Allows the user to participate in exams." xml:space="preserve">
+    <value>Дозволяє користувачу брати участь у іспитах.</value>
+  </data>
   <data name="Allows viewing and modifying global application settings." xml:space="preserve">
     <value>Дозволяє переглядати та змінювати глобальні налаштування додатку.</value>
+  </data>
+  <data name="Allows viewing monthly active user statistics and details." xml:space="preserve">
+    <value>Дозволяє переглядати статистику та деталі щомісячних активних користувачів.</value>
+  </data>
+  <data name="Allows viewing system statistics like user counts and usage data." xml:space="preserve">
+    <value>Дозволяє переглядати системну статистику, таку як кількість користувачів та дані про використання.</value>
   </data>
   <data name="Allows viewing system-level information and settings." xml:space="preserve">
     <value>Дозволяє перегляд системної інформації та налаштувань.</value>
   </data>
   <data name="Allows viewing the background job dashboard and managing jobs." xml:space="preserve">
     <value>Дозволяє переглядати панель керування фоновими завданнями та керувати завданнями.</value>
+  </data>
+  <data name="Allows viewing the history of all user and role changes." xml:space="preserve">
+    <value>Дозволяє переглядати історію всіх змін користувачів та ролей.</value>
   </data>
   <data name="Allows viewing the list of all permissions and their assignments to roles and users." xml:space="preserve">
     <value>Дозволяє переглядати список усіх дозволів та їх призначення ролям і користувачам.</value>
@@ -96,35 +108,23 @@
   <data name="Reboot This App" xml:space="preserve">
     <value>Перезавантажити цей додаток</value>
   </data>
-  <data name="View Background Jobs" xml:space="preserve">
-    <value>Переглянути фонові завдання</value>
-  </data>
-  <data name="View System Context" xml:space="preserve">
-    <value>Перегляд системного контексту</value>
+  <data name="Take Exam" xml:space="preserve">
+    <value>Пройти іспит</value>
   </data>
   <data name="View Accounting" xml:space="preserve">
     <value>Перегляд обліку</value>
   </data>
-  <data name="Allows the user to participate in exams." xml:space="preserve">
-    <value>Дозволяє користувачу брати участь у іспитах.</value>
-  </data>
-  <data name="Take Exam" xml:space="preserve">
-    <value>Пройти іспит</value>
-  </data>
-  <data name="Allows viewing monthly active user statistics and details." xml:space="preserve">
-    <value>Дозволяє переглядати статистику та деталі щомісячних активних користувачів.</value>
-  </data>
-  <data name="Allows viewing the history of all user and role changes." xml:space="preserve">
-    <value>Дозволяє переглядати історію всіх змін користувачів та ролей.</value>
-  </data>
-  <data name="Allows viewing system statistics like user counts and usage data." xml:space="preserve">
-    <value>Дозволяє переглядати системну статистику, таку як кількість користувачів та дані про використання.</value>
-  </data>
   <data name="View Active Users" xml:space="preserve">
     <value>Переглянути активних користувачів</value>
   </data>
+  <data name="View Background Jobs" xml:space="preserve">
+    <value>Переглянути фонові завдання</value>
+  </data>
   <data name="View Change History" xml:space="preserve">
     <value>Перегляд історії змін</value>
+  </data>
+  <data name="View System Context" xml:space="preserve">
+    <value>Перегляд системного контексту</value>
   </data>
 
 </root>

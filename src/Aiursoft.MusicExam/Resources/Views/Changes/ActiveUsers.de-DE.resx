@@ -21,17 +21,17 @@
       <data name="Actions" xml:space="preserve">
     <value>Aktionen</value>
   </data>
-  <data name="Monthly Active Users Statistics" xml:space="preserve">
-    <value>Statistik der monatlich aktiven Benutzer</value>
-  </data>
-  <data name="Month" xml:space="preserve">
-    <value>Monat</value>
+  <data name="Active Users Count" xml:space="preserve">
+    <value>Anzahl aktiver Benutzer</value>
   </data>
   <data name="Details" xml:space="preserve">
     <value>Details</value>
   </data>
-  <data name="Active Users Count" xml:space="preserve">
-    <value>Anzahl aktiver Benutzer</value>
+  <data name="Month" xml:space="preserve">
+    <value>Monat</value>
+  </data>
+  <data name="Monthly Active Users Statistics" xml:space="preserve">
+    <value>Statistik der monatlich aktiven Benutzer</value>
   </data>
   <data name="Monthly Statistics" xml:space="preserve">
     <value>Monatliche Statistiken</value>

@@ -18,26 +18,26 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Time" xml:space="preserve">
-    <value>Thời gian</value>
-  </data>
-  <data name="Change History" xml:space="preserve">
-    <value>Lịch Sử Thay Đổi</value>
-  </data>
-  <data name="Type" xml:space="preserve">
-    <value>Loại</value>
+      <data name="A chronological list of all recorded system changes." xml:space="preserve">
+    <value>Danh sách theo trình tự thời gian của tất cả các thay đổi hệ thống đã được ghi nhận.</value>
   </data>
   <data name="All Changes" xml:space="preserve">
     <value>Tất Cả Thay Đổi</value>
   </data>
-  <data name="Triggered By" xml:space="preserve">
-    <value>Được kích hoạt bởi</value>
+  <data name="Change History" xml:space="preserve">
+    <value>Lịch Sử Thay Đổi</value>
   </data>
   <data name="Details" xml:space="preserve">
     <value>Chi tiết</value>
   </data>
-  <data name="A chronological list of all recorded system changes." xml:space="preserve">
-    <value>Danh sách theo trình tự thời gian của tất cả các thay đổi hệ thống đã được ghi nhận.</value>
+  <data name="Time" xml:space="preserve">
+    <value>Thời gian</value>
+  </data>
+  <data name="Triggered By" xml:space="preserve">
+    <value>Được kích hoạt bởi</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Loại</value>
   </data>
 
 </root>

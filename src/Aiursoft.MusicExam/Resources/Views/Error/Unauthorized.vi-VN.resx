@@ -27,6 +27,9 @@
   <data name="If you believe you should have access, please contact your system administrator. Or try signing out and signing in again." xml:space="preserve">
     <value>Nếu bạn tin rằng bạn nên có quyền truy cập, vui lòng liên hệ với quản trị viên hệ thống của bạn. Hoặc thử đăng xuất và đăng nhập lại.</value>
   </data>
+  <data name="Please contact the administrator to pay and activate your account. Or try signing out and signing in again." xml:space="preserve">
+    <value>Vui lòng liên hệ quản trị viên để thanh toán và kích hoạt tài khoản của bạn. Hoặc thử đăng xuất rồi đăng nhập lại.</value>
+  </data>
   <data name="Sorry, you do not have the necessary permissions to access this page." xml:space="preserve">
     <value>Xin lỗi, bạn không có quyền cần thiết để truy cập trang này.</value>
   </data>

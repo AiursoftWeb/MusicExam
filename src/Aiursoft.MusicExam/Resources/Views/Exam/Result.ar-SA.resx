@@ -18,7 +18,19 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Question" xml:space="preserve">
+      <data name="Back to Dashboard" xml:space="preserve">
+    <value>العودة إلى لوحة التحكم</value>
+  </data>
+  <data name="Correct Answer" xml:space="preserve">
+    <value>الإجابة الصحيحة</value>
+  </data>
+  <data name="Explanation" xml:space="preserve">
+    <value>التفسير</value>
+  </data>
+  <data name="No detailed breakdown for this question type." xml:space="preserve">
+    <value>لا يوجد تفصيل مفصل لهذا النوع من الأسئلة.</value>
+  </data>
+  <data name="Question" xml:space="preserve">
     <value>سؤال</value>
   </data>
   <data name="Retake Exam" xml:space="preserve">
@@ -29,15 +41,6 @@
   </data>
   <data name="View History" xml:space="preserve">
     <value>عرض السجل</value>
-  </data>
-  <data name="Back to Dashboard" xml:space="preserve">
-    <value>العودة إلى لوحة التحكم</value>
-  </data>
-  <data name="Correct Answer" xml:space="preserve">
-    <value>الإجابة الصحيحة</value>
-  </data>
-  <data name="No detailed breakdown for this question type." xml:space="preserve">
-    <value>لا يوجد تفصيل مفصل لهذا النوع من الأسئلة.</value>
   </data>
 
 </root>

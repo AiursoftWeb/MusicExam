@@ -18,11 +18,11 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Reason" xml:space="preserve">
-    <value>Lý do</value>
+      <data name="Active Users Details" xml:space="preserve">
+    <value>Chi Tiết Người Dùng Hoạt Động</value>
   </data>
-  <data name="User" xml:space="preserve">
-    <value>Người dùng</value>
+  <data name="Active Users List" xml:space="preserve">
+    <value>Danh sách người dùng hoạt động</value>
   </data>
   <data name="Avatar" xml:space="preserve">
     <value>Ảnh đại diện</value>
@@ -30,14 +30,14 @@
   <data name="Back to Statistics" xml:space="preserve">
     <value>Quay lại Thống kê</value>
   </data>
-  <data name="Active Users List" xml:space="preserve">
-    <value>Danh sách người dùng hoạt động</value>
-  </data>
-  <data name="Active Users Details" xml:space="preserve">
-    <value>Chi Tiết Người Dùng Hoạt Động</value>
-  </data>
   <data name="Detailed list of users who were active this month and why." xml:space="preserve">
     <value>Danh sách chi tiết những người dùng đã hoạt động trong tháng này và lý do.</value>
+  </data>
+  <data name="Reason" xml:space="preserve">
+    <value>Lý do</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>Người dùng</value>
   </data>
 
 </root>

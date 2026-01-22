@@ -39,14 +39,26 @@
   <data name="Allows the permanent deletion of user accounts." xml:space="preserve">
     <value>Allows the permanent deletion of user accounts.</value>
   </data>
+  <data name="Allows the user to participate in exams." xml:space="preserve">
+    <value>Allows the user to take exams.</value>
+  </data>
   <data name="Allows viewing and modifying global application settings." xml:space="preserve">
     <value>Allows viewing and modifying global application settings.</value>
+  </data>
+  <data name="Allows viewing monthly active user statistics and details." xml:space="preserve">
+    <value>Allows viewing monthly active user statistics and details.</value>
+  </data>
+  <data name="Allows viewing system statistics like user counts and usage data." xml:space="preserve">
+    <value>Allows viewing system statistics like user counts and usage data.</value>
   </data>
   <data name="Allows viewing system-level information and settings." xml:space="preserve">
     <value>Allows viewing system-level information and settings.</value>
   </data>
   <data name="Allows viewing the background job dashboard and managing jobs." xml:space="preserve">
     <value>Allows viewing the background job dashboard and managing jobs.</value>
+  </data>
+  <data name="Allows viewing the history of all user and role changes." xml:space="preserve">
+    <value>Allows viewing the history of all user and role changes.</value>
   </data>
   <data name="Allows viewing the list of all permissions and their assignments to roles and users." xml:space="preserve">
     <value>Allows viewing the list of all permissions and their assignments to roles and users.</value>
@@ -96,35 +108,23 @@
   <data name="Reboot This App" xml:space="preserve">
     <value>Restart This Application</value>
   </data>
-  <data name="View Background Jobs" xml:space="preserve">
-    <value>View Background Jobs</value>
-  </data>
-  <data name="View System Context" xml:space="preserve">
-    <value>View System Context</value>
-  </data>
-  <data name="View Change History" xml:space="preserve">
-    <value>View Change History</value>
-  </data>
   <data name="Take Exam" xml:space="preserve">
     <value>Sit Exam</value>
-  </data>
-  <data name="Allows viewing monthly active user statistics and details." xml:space="preserve">
-    <value>Allows viewing monthly active user statistics and details.</value>
-  </data>
-  <data name="View Active Users" xml:space="preserve">
-    <value>View Active Users</value>
-  </data>
-  <data name="Allows viewing system statistics like user counts and usage data." xml:space="preserve">
-    <value>Allows viewing system statistics like user counts and usage data.</value>
   </data>
   <data name="View Accounting" xml:space="preserve">
     <value>View Accounting</value>
   </data>
-  <data name="Allows viewing the history of all user and role changes." xml:space="preserve">
-    <value>Allows viewing the history of all user and role changes.</value>
+  <data name="View Active Users" xml:space="preserve">
+    <value>View Active Users</value>
   </data>
-  <data name="Allows the user to participate in exams." xml:space="preserve">
-    <value>Allows the user to take exams.</value>
+  <data name="View Background Jobs" xml:space="preserve">
+    <value>View Background Jobs</value>
+  </data>
+  <data name="View Change History" xml:space="preserve">
+    <value>View Change History</value>
+  </data>
+  <data name="View System Context" xml:space="preserve">
+    <value>View System Context</value>
   </data>
 
 </root>

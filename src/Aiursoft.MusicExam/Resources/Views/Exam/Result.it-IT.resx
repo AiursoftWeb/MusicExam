@@ -18,26 +18,29 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Question" xml:space="preserve">
+      <data name="Back to Dashboard" xml:space="preserve">
+    <value>Torna alla Dashboard</value>
+  </data>
+  <data name="Correct Answer" xml:space="preserve">
+    <value>Risposta Corretta</value>
+  </data>
+  <data name="Explanation" xml:space="preserve">
+    <value>Spiegazione</value>
+  </data>
+  <data name="No detailed breakdown for this question type." xml:space="preserve">
+    <value>Nessuna suddivisione dettagliata per questo tipo di domanda.</value>
+  </data>
+  <data name="Question" xml:space="preserve">
     <value>Domanda</value>
+  </data>
+  <data name="Retake Exam" xml:space="preserve">
+    <value>Riprendi l&apos;esame</value>
   </data>
   <data name="Score" xml:space="preserve">
     <value>Punteggio</value>
   </data>
   <data name="View History" xml:space="preserve">
     <value>Visualizza Cronologia</value>
-  </data>
-  <data name="Back to Dashboard" xml:space="preserve">
-    <value>Torna alla Dashboard</value>
-  </data>
-  <data name="Correct Answer" xml:space="preserve">
-    <value>Risposta Corretta</value>
-  </data>
-  <data name="Retake Exam" xml:space="preserve">
-    <value>Riprendi l&apos;esame</value>
-  </data>
-  <data name="No detailed breakdown for this question type." xml:space="preserve">
-    <value>Nessuna suddivisione dettagliata per questo tipo di domanda.</value>
   </data>
 
 </root>

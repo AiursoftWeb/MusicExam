@@ -66,6 +66,9 @@
   <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
     <value>28か国語への自動的、AI駆動型の翻訳。</value>
   </data>
+  <data name="Available Exams" xml:space="preserve">
+    <value>利用可能な試験</value>
+  </data>
   <data name="Background Job Processing" xml:space="preserve">
     <value>バックグラウンドジョブ処理</value>
   </data>
@@ -219,6 +222,9 @@
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>あらゆるOpenID Connectプロバイダーとシームレスに統合し、自動的なロール同期を実現します。</value>
   </data>
+  <data name="Select your school and level to start practicing" xml:space="preserve">
+    <value>学校とレベルを選択して練習を始めましょう</value>
+  </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>スマートな設定オーバーライド</value>
   </data>
@@ -275,12 +281,6 @@
   </data>
   <data name="You&apos;ll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
     <value>.NET 10 SDK、npm、そしてVisual StudioやJetBrains Riderのようなお好みのIDEが必要です。完全なセットアップガイドはドキュメントでご覧いただけます。</value>
-  </data>
-  <data name="Available Exams" xml:space="preserve">
-    <value>利用可能な試験</value>
-  </data>
-  <data name="Select your school and level to start practicing" xml:space="preserve">
-    <value>学校とレベルを選択して練習を始めましょう</value>
   </data>
 
 </root>

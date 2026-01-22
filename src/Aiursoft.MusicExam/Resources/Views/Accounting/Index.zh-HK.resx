@@ -18,23 +18,29 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="System Statistics" xml:space="preserve">
-    <value>系統統計</value>
-  </data>
-  <data name="Users" xml:space="preserve">
-    <value>用戶</value>
+      <data name="Dashboard" xml:space="preserve">
+    <value>儀表板</value>
   </data>
   <data name="Exam Submissions" xml:space="preserve">
     <value>考試提交</value>
   </data>
-  <data name="Quizzes Taken" xml:space="preserve">
-    <value>已參與測驗次數</value>
+  <data name="New Submissions (Last 30 Days)" xml:space="preserve">
+    <value>新提交 (過去 30 日)</value>
   </data>
-  <data name="Dashboard" xml:space="preserve">
-    <value>儀表板</value>
+  <data name="New Users (Last 30 Days)" xml:space="preserve">
+    <value>新用戶 (過去 30 日)</value>
   </data>
   <data name="Paid Members" xml:space="preserve">
     <value>付費會員</value>
+  </data>
+  <data name="Quizzes Taken" xml:space="preserve">
+    <value>已參與測驗次數</value>
+  </data>
+  <data name="System Statistics" xml:space="preserve">
+    <value>系統統計</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>用戶</value>
   </data>
 
 </root>

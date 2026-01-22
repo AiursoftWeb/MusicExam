@@ -21,20 +21,26 @@
       <data name="Dashboard" xml:space="preserve">
     <value>Bảng điều khiển</value>
   </data>
+  <data name="Exam Submissions" xml:space="preserve">
+    <value>Bài thi đã nộp</value>
+  </data>
+  <data name="New Submissions (Last 30 Days)" xml:space="preserve">
+    <value>Bài nộp mới (30 ngày gần nhất)</value>
+  </data>
+  <data name="New Users (Last 30 Days)" xml:space="preserve">
+    <value>Người dùng mới (30 ngày gần nhất)</value>
+  </data>
   <data name="Paid Members" xml:space="preserve">
     <value>Thành viên trả phí</value>
-  </data>
-  <data name="Users" xml:space="preserve">
-    <value>Người dùng</value>
   </data>
   <data name="Quizzes Taken" xml:space="preserve">
     <value>Bài kiểm tra đã thực hiện</value>
   </data>
-  <data name="Exam Submissions" xml:space="preserve">
-    <value>Bài thi đã nộp</value>
-  </data>
   <data name="System Statistics" xml:space="preserve">
     <value>Thống kê Hệ thống</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Người dùng</value>
   </data>
 
 </root>

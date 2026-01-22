@@ -39,14 +39,26 @@
   <data name="Allows the permanent deletion of user accounts." xml:space="preserve">
     <value>ユーザーアカウントの完全削除を許可します。</value>
   </data>
+  <data name="Allows the user to participate in exams." xml:space="preserve">
+    <value>ユーザーが試験に参加できるようにします。</value>
+  </data>
   <data name="Allows viewing and modifying global application settings." xml:space="preserve">
     <value>グローバルなアプリケーション設定の表示および編集を許可します。</value>
+  </data>
+  <data name="Allows viewing monthly active user statistics and details." xml:space="preserve">
+    <value>月間アクティブユーザーの統計および詳細を表示できます。</value>
+  </data>
+  <data name="Allows viewing system statistics like user counts and usage data." xml:space="preserve">
+    <value>ユーザー数や利用データなどのシステム統計を表示できます。</value>
   </data>
   <data name="Allows viewing system-level information and settings." xml:space="preserve">
     <value>システムレベルの情報と設定の表示を許可します。</value>
   </data>
   <data name="Allows viewing the background job dashboard and managing jobs." xml:space="preserve">
     <value>バックグラウンドジョブダッシュボードの表示とジョブの管理を許可します。</value>
+  </data>
+  <data name="Allows viewing the history of all user and role changes." xml:space="preserve">
+    <value>ユーザーおよびロールのすべての変更履歴を表示できます。</value>
   </data>
   <data name="Allows viewing the list of all permissions and their assignments to roles and users." xml:space="preserve">
     <value>すべての権限とそれらのロールおよびユーザーへの割り当ての一覧を表示できます。</value>
@@ -96,35 +108,23 @@
   <data name="Reboot This App" xml:space="preserve">
     <value>このアプリを再起動</value>
   </data>
-  <data name="View Background Jobs" xml:space="preserve">
-    <value>バックグラウンドジョブの表示</value>
-  </data>
-  <data name="View System Context" xml:space="preserve">
-    <value>システムコンテキストの表示</value>
-  </data>
   <data name="Take Exam" xml:space="preserve">
     <value>試験を受ける</value>
-  </data>
-  <data name="Allows viewing system statistics like user counts and usage data." xml:space="preserve">
-    <value>ユーザー数や利用データなどのシステム統計を表示できます。</value>
-  </data>
-  <data name="View Active Users" xml:space="preserve">
-    <value>アクティブユーザーを表示</value>
-  </data>
-  <data name="Allows the user to participate in exams." xml:space="preserve">
-    <value>ユーザーが試験に参加できるようにします。</value>
-  </data>
-  <data name="Allows viewing monthly active user statistics and details." xml:space="preserve">
-    <value>月間アクティブユーザーの統計および詳細を表示できます。</value>
-  </data>
-  <data name="View Change History" xml:space="preserve">
-    <value>変更履歴を表示</value>
   </data>
   <data name="View Accounting" xml:space="preserve">
     <value>会計の表示</value>
   </data>
-  <data name="Allows viewing the history of all user and role changes." xml:space="preserve">
-    <value>ユーザーおよびロールのすべての変更履歴を表示できます。</value>
+  <data name="View Active Users" xml:space="preserve">
+    <value>アクティブユーザーを表示</value>
+  </data>
+  <data name="View Background Jobs" xml:space="preserve">
+    <value>バックグラウンドジョブの表示</value>
+  </data>
+  <data name="View Change History" xml:space="preserve">
+    <value>変更履歴を表示</value>
+  </data>
+  <data name="View System Context" xml:space="preserve">
+    <value>システムコンテキストの表示</value>
   </data>
 
 </root>

@@ -18,26 +18,26 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Month" xml:space="preserve">
+      <data name="Actions" xml:space="preserve">
+    <value>작업</value>
+  </data>
+  <data name="Active Users Count" xml:space="preserve">
+    <value>활성 사용자 수</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>상세 정보</value>
+  </data>
+  <data name="Month" xml:space="preserve">
     <value>월</value>
   </data>
   <data name="Monthly Active Users Statistics" xml:space="preserve">
     <value>월간 활성 사용자 통계</value>
   </data>
-  <data name="Active Users Count" xml:space="preserve">
-    <value>활성 사용자 수</value>
-  </data>
   <data name="Monthly Statistics" xml:space="preserve">
     <value>월간 통계</value>
   </data>
-  <data name="Actions" xml:space="preserve">
-    <value>작업</value>
-  </data>
   <data name="Number of users who had the TakeExam permission at any point during each month." xml:space="preserve">
     <value>각 월 중 어느 시점에서든 TakeExam 권한을 가진 사용자 수.</value>
-  </data>
-  <data name="Details" xml:space="preserve">
-    <value>상세 정보</value>
   </data>
 
 </root>

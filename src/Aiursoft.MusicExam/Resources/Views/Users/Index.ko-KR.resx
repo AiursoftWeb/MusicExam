@@ -45,14 +45,26 @@
   <data name="Email" xml:space="preserve">
     <value>이메일</value>
   </data>
+  <data name="Expire" xml:space="preserve">
+    <value>만료</value>
+  </data>
+  <data name="Free" xml:space="preserve">
+    <value>무료</value>
+  </data>
   <data name="Manage Users" xml:space="preserve">
     <value>사용자 관리</value>
   </data>
   <data name="Name" xml:space="preserve">
     <value>이름</value>
   </data>
+  <data name="Paid" xml:space="preserve">
+    <value>결제됨</value>
+  </data>
   <data name="Roles" xml:space="preserve">
     <value>역할</value>
+  </data>
+  <data name="Usage" xml:space="preserve">
+    <value>사용량</value>
   </data>
   <data name="User name" xml:space="preserve">
     <value>사용자 이름</value>

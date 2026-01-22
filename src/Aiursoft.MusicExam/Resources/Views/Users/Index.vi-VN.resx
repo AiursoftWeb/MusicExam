@@ -45,14 +45,26 @@
   <data name="Email" xml:space="preserve">
     <value>Email</value>
   </data>
+  <data name="Expire" xml:space="preserve">
+    <value>Hết hạn</value>
+  </data>
+  <data name="Free" xml:space="preserve">
+    <value>Miễn phí</value>
+  </data>
   <data name="Manage Users" xml:space="preserve">
     <value>Quản lý Người dùng</value>
   </data>
   <data name="Name" xml:space="preserve">
     <value>Tên</value>
   </data>
+  <data name="Paid" xml:space="preserve">
+    <value>Đã thanh toán</value>
+  </data>
   <data name="Roles" xml:space="preserve">
     <value>Vai trò</value>
+  </data>
+  <data name="Usage" xml:space="preserve">
+    <value>Sử dụng</value>
   </data>
   <data name="User name" xml:space="preserve">
     <value>Tên người dùng</value>

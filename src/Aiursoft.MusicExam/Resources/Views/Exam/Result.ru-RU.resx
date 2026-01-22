@@ -18,26 +18,29 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Score" xml:space="preserve">
-    <value>Баллы</value>
+      <data name="Back to Dashboard" xml:space="preserve">
+    <value>Назад в панель управления</value>
   </data>
   <data name="Correct Answer" xml:space="preserve">
     <value>Правильный ответ</value>
   </data>
-  <data name="Question" xml:space="preserve">
-    <value>Вопрос</value>
-  </data>
-  <data name="Back to Dashboard" xml:space="preserve">
-    <value>Назад в панель управления</value>
+  <data name="Explanation" xml:space="preserve">
+    <value>Объяснение</value>
   </data>
   <data name="No detailed breakdown for this question type." xml:space="preserve">
     <value>Для данного типа вопроса нет подробной разбивки.</value>
   </data>
-  <data name="View History" xml:space="preserve">
-    <value>Просмотреть историю</value>
+  <data name="Question" xml:space="preserve">
+    <value>Вопрос</value>
   </data>
   <data name="Retake Exam" xml:space="preserve">
     <value>Пройти тест заново</value>
+  </data>
+  <data name="Score" xml:space="preserve">
+    <value>Баллы</value>
+  </data>
+  <data name="View History" xml:space="preserve">
+    <value>Просмотреть историю</value>
   </data>
 
 </root>

@@ -18,26 +18,29 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Score" xml:space="preserve">
-    <value>Score</value>
-  </data>
-  <data name="Back to Dashboard" xml:space="preserve">
+      <data name="Back to Dashboard" xml:space="preserve">
     <value>Terug naar Dashboard</value>
-  </data>
-  <data name="Question" xml:space="preserve">
-    <value>Vraag</value>
   </data>
   <data name="Correct Answer" xml:space="preserve">
     <value>Juiste Antwoord</value>
   </data>
-  <data name="Retake Exam" xml:space="preserve">
-    <value>Examen opnieuw maken</value>
-  </data>
-  <data name="View History" xml:space="preserve">
-    <value>Geschiedenis bekijken</value>
+  <data name="Explanation" xml:space="preserve">
+    <value>Uitleg</value>
   </data>
   <data name="No detailed breakdown for this question type." xml:space="preserve">
     <value>Geen gedetailleerde uitsplitsing voor dit vraagtype.</value>
+  </data>
+  <data name="Question" xml:space="preserve">
+    <value>Vraag</value>
+  </data>
+  <data name="Retake Exam" xml:space="preserve">
+    <value>Examen opnieuw maken</value>
+  </data>
+  <data name="Score" xml:space="preserve">
+    <value>Score</value>
+  </data>
+  <data name="View History" xml:space="preserve">
+    <value>Geschiedenis bekijken</value>
   </data>
 
 </root>

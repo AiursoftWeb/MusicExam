@@ -21,23 +21,26 @@
       <data name="Back to Dashboard" xml:space="preserve">
     <value>Zurück zum Dashboard</value>
   </data>
-  <data name="Retake Exam" xml:space="preserve">
-    <value>Prüfung wiederholen</value>
+  <data name="Correct Answer" xml:space="preserve">
+    <value>Richtige Antwort</value>
+  </data>
+  <data name="Explanation" xml:space="preserve">
+    <value>Erläuterung</value>
+  </data>
+  <data name="No detailed breakdown for this question type." xml:space="preserve">
+    <value>Für diesen Fragetyp liegt keine detaillierte Aufschlüsselung vor.</value>
   </data>
   <data name="Question" xml:space="preserve">
     <value>Frage</value>
   </data>
-  <data name="View History" xml:space="preserve">
-    <value>Verlauf anzeigen</value>
-  </data>
-  <data name="Correct Answer" xml:space="preserve">
-    <value>Richtige Antwort</value>
+  <data name="Retake Exam" xml:space="preserve">
+    <value>Prüfung wiederholen</value>
   </data>
   <data name="Score" xml:space="preserve">
     <value>Punktzahl</value>
   </data>
-  <data name="No detailed breakdown for this question type." xml:space="preserve">
-    <value>Für diesen Fragetyp liegt keine detaillierte Aufschlüsselung vor.</value>
+  <data name="View History" xml:space="preserve">
+    <value>Verlauf anzeigen</value>
   </data>
 
 </root>

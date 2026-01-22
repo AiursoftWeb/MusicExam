@@ -39,14 +39,26 @@
   <data name="Allows the permanent deletion of user accounts." xml:space="preserve">
     <value>Giver mulighed for den permanente sletning af brugerkonti.</value>
   </data>
+  <data name="Allows the user to participate in exams." xml:space="preserve">
+    <value>Giver brugeren mulighed for at deltage i eksamener.</value>
+  </data>
   <data name="Allows viewing and modifying global application settings." xml:space="preserve">
     <value>Tillader visning og ændring af globale applikationsindstillinger.</value>
+  </data>
+  <data name="Allows viewing monthly active user statistics and details." xml:space="preserve">
+    <value>Giver mulighed for at se statistik og detaljer for månedlige aktive brugere.</value>
+  </data>
+  <data name="Allows viewing system statistics like user counts and usage data." xml:space="preserve">
+    <value>Giver mulighed for at se systemstatistikker som brugerantal og brugsdata.</value>
   </data>
   <data name="Allows viewing system-level information and settings." xml:space="preserve">
     <value>Giver mulighed for at se systemniveauoplysninger og -indstillinger.</value>
   </data>
   <data name="Allows viewing the background job dashboard and managing jobs." xml:space="preserve">
     <value>Tillader visning af baggrundsjob-dashboardet og administration af jobs.</value>
+  </data>
+  <data name="Allows viewing the history of all user and role changes." xml:space="preserve">
+    <value>Giver mulighed for at se historikken for alle bruger- og rolleændringer.</value>
   </data>
   <data name="Allows viewing the list of all permissions and their assignments to roles and users." xml:space="preserve">
     <value>Giver mulighed for at se listen over alle tilladelser og deres tildelinger til roller og brugere.</value>
@@ -96,11 +108,8 @@
   <data name="Reboot This App" xml:space="preserve">
     <value>Genstart denne app</value>
   </data>
-  <data name="View Background Jobs" xml:space="preserve">
-    <value>Vis baggrundsjob</value>
-  </data>
-  <data name="View System Context" xml:space="preserve">
-    <value>Se Systemkontekst</value>
+  <data name="Take Exam" xml:space="preserve">
+    <value>Tag eksamen</value>
   </data>
   <data name="View Accounting" xml:space="preserve">
     <value>Se Regnskab</value>
@@ -108,23 +117,14 @@
   <data name="View Active Users" xml:space="preserve">
     <value>Se aktive brugere</value>
   </data>
+  <data name="View Background Jobs" xml:space="preserve">
+    <value>Vis baggrundsjob</value>
+  </data>
   <data name="View Change History" xml:space="preserve">
     <value>Se ændringshistorik</value>
   </data>
-  <data name="Take Exam" xml:space="preserve">
-    <value>Tag eksamen</value>
-  </data>
-  <data name="Allows viewing system statistics like user counts and usage data." xml:space="preserve">
-    <value>Giver mulighed for at se systemstatistikker som brugerantal og brugsdata.</value>
-  </data>
-  <data name="Allows viewing monthly active user statistics and details." xml:space="preserve">
-    <value>Giver mulighed for at se statistik og detaljer for månedlige aktive brugere.</value>
-  </data>
-  <data name="Allows the user to participate in exams." xml:space="preserve">
-    <value>Giver brugeren mulighed for at deltage i eksamener.</value>
-  </data>
-  <data name="Allows viewing the history of all user and role changes." xml:space="preserve">
-    <value>Giver mulighed for at se historikken for alle bruger- og rolleændringer.</value>
+  <data name="View System Context" xml:space="preserve">
+    <value>Se Systemkontekst</value>
   </data>
 
 </root>

@@ -66,6 +66,9 @@
   <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
     <value>Dịch tự động, được điều khiển bởi AI sang 28 ngôn ngữ.</value>
   </data>
+  <data name="Available Exams" xml:space="preserve">
+    <value>Các Kỳ Thi Có Sẵn</value>
+  </data>
   <data name="Background Job Processing" xml:space="preserve">
     <value>Xử lý công việc nền</value>
   </data>
@@ -219,6 +222,9 @@
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Tích hợp liền mạch với bất kỳ nhà cung cấp OpenID Connect nào, đồng thời tự động đồng bộ hóa vai trò.</value>
   </data>
+  <data name="Select your school and level to start practicing" xml:space="preserve">
+    <value>Chọn trường và cấp độ của bạn để bắt đầu luyện tập</value>
+  </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>Ghi đè cấu hình thông minh</value>
   </data>
@@ -275,12 +281,6 @@
   </data>
   <data name="You&apos;ll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
     <value>Bạn sẽ cần .NET 10 SDK, npm và IDE yêu thích của bạn, như Visual Studio hoặc JetBrains Rider. Bạn có thể tìm thấy hướng dẫn thiết lập đầy đủ trong tài liệu của chúng tôi.</value>
-  </data>
-  <data name="Available Exams" xml:space="preserve">
-    <value>Các Kỳ Thi Có Sẵn</value>
-  </data>
-  <data name="Select your school and level to start practicing" xml:space="preserve">
-    <value>Chọn trường và cấp độ của bạn để bắt đầu luyện tập</value>
   </data>
 
 </root>

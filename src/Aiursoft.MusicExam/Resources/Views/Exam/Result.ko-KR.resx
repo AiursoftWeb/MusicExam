@@ -18,14 +18,17 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Correct Answer" xml:space="preserve">
+      <data name="Back to Dashboard" xml:space="preserve">
+    <value>대시보드로 돌아가기</value>
+  </data>
+  <data name="Correct Answer" xml:space="preserve">
     <value>정답</value>
   </data>
-  <data name="View History" xml:space="preserve">
-    <value>기록 보기</value>
+  <data name="Explanation" xml:space="preserve">
+    <value>해설</value>
   </data>
-  <data name="Score" xml:space="preserve">
-    <value>점수</value>
+  <data name="No detailed breakdown for this question type." xml:space="preserve">
+    <value>이 문제 유형에 대한 상세 분석은 제공되지 않습니다.</value>
   </data>
   <data name="Question" xml:space="preserve">
     <value>질문</value>
@@ -33,11 +36,11 @@
   <data name="Retake Exam" xml:space="preserve">
     <value>재시험</value>
   </data>
-  <data name="No detailed breakdown for this question type." xml:space="preserve">
-    <value>이 문제 유형에 대한 상세 분석은 제공되지 않습니다.</value>
+  <data name="Score" xml:space="preserve">
+    <value>점수</value>
   </data>
-  <data name="Back to Dashboard" xml:space="preserve">
-    <value>대시보드로 돌아가기</value>
+  <data name="View History" xml:space="preserve">
+    <value>기록 보기</value>
   </data>
 
 </root>

@@ -27,6 +27,9 @@
   <data name="If you believe you should have access, please contact your system administrator. Or try signing out and signing in again." xml:space="preserve">
     <value>如果您認為您應該擁有存取權限，請聯繫您的系統管理員。或者嘗試登出後再重新登入。</value>
   </data>
+  <data name="Please contact the administrator to pay and activate your account. Or try signing out and signing in again." xml:space="preserve">
+    <value>請聯絡管理員繳費並啟用您的帳戶。或嘗試登出後重新登入。</value>
+  </data>
   <data name="Sorry, you do not have the necessary permissions to access this page." xml:space="preserve">
     <value>抱歉，您沒有存取此頁面所需的權限。</value>
   </data>

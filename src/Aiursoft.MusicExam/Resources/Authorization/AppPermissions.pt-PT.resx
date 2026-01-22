@@ -39,14 +39,26 @@
   <data name="Allows the permanent deletion of user accounts." xml:space="preserve">
     <value>Permite a eliminação permanente de contas de utilizador.</value>
   </data>
+  <data name="Allows the user to participate in exams." xml:space="preserve">
+    <value>Permite ao utilizador participar em exames.</value>
+  </data>
   <data name="Allows viewing and modifying global application settings." xml:space="preserve">
     <value>Permite visualizar e modificar as configurações globais da aplicação.</value>
+  </data>
+  <data name="Allows viewing monthly active user statistics and details." xml:space="preserve">
+    <value>Permite visualizar as estatísticas mensais de utilizadores ativos e detalhes.</value>
+  </data>
+  <data name="Allows viewing system statistics like user counts and usage data." xml:space="preserve">
+    <value>Permite visualizar estatísticas do sistema, como o número de utilizadores e dados de utilização.</value>
   </data>
   <data name="Allows viewing system-level information and settings." xml:space="preserve">
     <value>Permite visualizar informações e definições a nível do sistema.</value>
   </data>
   <data name="Allows viewing the background job dashboard and managing jobs." xml:space="preserve">
     <value>Permite visualizar o painel de controlo de tarefas em segundo plano e gerir tarefas.</value>
+  </data>
+  <data name="Allows viewing the history of all user and role changes." xml:space="preserve">
+    <value>Permite visualizar o histórico de todas as alterações nos utilizadores e nas funções.</value>
   </data>
   <data name="Allows viewing the list of all permissions and their assignments to roles and users." xml:space="preserve">
     <value>Permite visualizar a lista de todas as permissões e as suas atribuições a funções e utilizadores.</value>
@@ -96,35 +108,23 @@
   <data name="Reboot This App" xml:space="preserve">
     <value>Reiniciar Esta Aplicação</value>
   </data>
-  <data name="View Background Jobs" xml:space="preserve">
-    <value>Ver Trabalhos em Segundo Plano</value>
-  </data>
-  <data name="View System Context" xml:space="preserve">
-    <value>Ver Contexto do Sistema</value>
-  </data>
-  <data name="Allows the user to participate in exams." xml:space="preserve">
-    <value>Permite ao utilizador participar em exames.</value>
-  </data>
-  <data name="Allows viewing the history of all user and role changes." xml:space="preserve">
-    <value>Permite visualizar o histórico de todas as alterações nos utilizadores e nas funções.</value>
-  </data>
-  <data name="Allows viewing monthly active user statistics and details." xml:space="preserve">
-    <value>Permite visualizar as estatísticas mensais de utilizadores ativos e detalhes.</value>
-  </data>
   <data name="Take Exam" xml:space="preserve">
     <value>Fazer Exame</value>
+  </data>
+  <data name="View Accounting" xml:space="preserve">
+    <value>Ver Contabilidade</value>
   </data>
   <data name="View Active Users" xml:space="preserve">
     <value>Ver Utilizadores Ativos</value>
   </data>
-  <data name="Allows viewing system statistics like user counts and usage data." xml:space="preserve">
-    <value>Permite visualizar estatísticas do sistema, como o número de utilizadores e dados de utilização.</value>
+  <data name="View Background Jobs" xml:space="preserve">
+    <value>Ver Trabalhos em Segundo Plano</value>
   </data>
   <data name="View Change History" xml:space="preserve">
     <value>Ver Histórico de Alterações</value>
   </data>
-  <data name="View Accounting" xml:space="preserve">
-    <value>Ver Contabilidade</value>
+  <data name="View System Context" xml:space="preserve">
+    <value>Ver Contexto do Sistema</value>
   </data>
 
 </root>

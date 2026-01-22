@@ -39,14 +39,26 @@
   <data name="Allows the permanent deletion of user accounts." xml:space="preserve">
     <value>Consente l&apos;eliminazione permanente degli account utente.</value>
   </data>
+  <data name="Allows the user to participate in exams." xml:space="preserve">
+    <value>Consente all&apos;utente di partecipare agli esami.</value>
+  </data>
   <data name="Allows viewing and modifying global application settings." xml:space="preserve">
     <value>Consente di visualizzare e modificare le impostazioni globali dell&apos;applicazione.</value>
+  </data>
+  <data name="Allows viewing monthly active user statistics and details." xml:space="preserve">
+    <value>Consente di visualizzare le statistiche mensili degli utenti attivi e i dettagli.</value>
+  </data>
+  <data name="Allows viewing system statistics like user counts and usage data." xml:space="preserve">
+    <value>Consente di visualizzare le statistiche di sistema, come il numero di utenti e i dati di utilizzo.</value>
   </data>
   <data name="Allows viewing system-level information and settings." xml:space="preserve">
     <value>Consente di visualizzare informazioni e impostazioni a livello di sistema.</value>
   </data>
   <data name="Allows viewing the background job dashboard and managing jobs." xml:space="preserve">
     <value>Consente di visualizzare il dashboard dei processi in background e di gestire i processi.</value>
+  </data>
+  <data name="Allows viewing the history of all user and role changes." xml:space="preserve">
+    <value>Consente di visualizzare la cronologia di tutte le modifiche agli utenti e ai ruoli.</value>
   </data>
   <data name="Allows viewing the list of all permissions and their assignments to roles and users." xml:space="preserve">
     <value>Consente di visualizzare l&apos;elenco di tutti i permessi e la loro assegnazione a ruoli e utenti.</value>
@@ -96,35 +108,23 @@
   <data name="Reboot This App" xml:space="preserve">
     <value>Riavvia Questa App</value>
   </data>
-  <data name="View Background Jobs" xml:space="preserve">
-    <value>Visualizza i processi in background</value>
-  </data>
-  <data name="View System Context" xml:space="preserve">
-    <value>Visualizza Contesto di Sistema</value>
-  </data>
   <data name="Take Exam" xml:space="preserve">
     <value>Sostenere Esame</value>
   </data>
   <data name="View Accounting" xml:space="preserve">
     <value>Visualizza Contabilità</value>
   </data>
-  <data name="Allows viewing monthly active user statistics and details." xml:space="preserve">
-    <value>Consente di visualizzare le statistiche mensili degli utenti attivi e i dettagli.</value>
+  <data name="View Active Users" xml:space="preserve">
+    <value>Visualizza Utenti Attivi</value>
   </data>
-  <data name="Allows viewing the history of all user and role changes." xml:space="preserve">
-    <value>Consente di visualizzare la cronologia di tutte le modifiche agli utenti e ai ruoli.</value>
-  </data>
-  <data name="Allows the user to participate in exams." xml:space="preserve">
-    <value>Consente all&apos;utente di partecipare agli esami.</value>
+  <data name="View Background Jobs" xml:space="preserve">
+    <value>Visualizza i processi in background</value>
   </data>
   <data name="View Change History" xml:space="preserve">
     <value>Visualizza Cronologia modifiche</value>
   </data>
-  <data name="View Active Users" xml:space="preserve">
-    <value>Visualizza Utenti Attivi</value>
-  </data>
-  <data name="Allows viewing system statistics like user counts and usage data." xml:space="preserve">
-    <value>Consente di visualizzare le statistiche di sistema, come il numero di utenti e i dati di utilizzo.</value>
+  <data name="View System Context" xml:space="preserve">
+    <value>Visualizza Contesto di Sistema</value>
   </data>
 
 </root>

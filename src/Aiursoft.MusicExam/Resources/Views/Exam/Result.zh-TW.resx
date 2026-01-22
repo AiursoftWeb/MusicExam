@@ -21,23 +21,26 @@
       <data name="Back to Dashboard" xml:space="preserve">
     <value>返回儀表板</value>
   </data>
+  <data name="Correct Answer" xml:space="preserve">
+    <value>正確答案</value>
+  </data>
+  <data name="Explanation" xml:space="preserve">
+    <value>解釋</value>
+  </data>
   <data name="No detailed breakdown for this question type." xml:space="preserve">
     <value>此題型無詳細解析。</value>
-  </data>
-  <data name="Score" xml:space="preserve">
-    <value>分數</value>
   </data>
   <data name="Question" xml:space="preserve">
     <value>問題</value>
   </data>
-  <data name="View History" xml:space="preserve">
-    <value>查看歷史</value>
-  </data>
   <data name="Retake Exam" xml:space="preserve">
     <value>重新測驗</value>
   </data>
-  <data name="Correct Answer" xml:space="preserve">
-    <value>正確答案</value>
+  <data name="Score" xml:space="preserve">
+    <value>分數</value>
+  </data>
+  <data name="View History" xml:space="preserve">
+    <value>查看歷史</value>
   </data>
 
 </root>

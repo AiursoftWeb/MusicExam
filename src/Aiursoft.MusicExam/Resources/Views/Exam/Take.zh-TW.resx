@@ -21,6 +21,18 @@
       <data name="Category:" xml:space="preserve">
     <value>類別：</value>
   </data>
+  <data name="Check Answer" xml:space="preserve">
+    <value>檢查答案</value>
+  </data>
+  <data name="Correct!" xml:space="preserve">
+    <value>正確！</value>
+  </data>
+  <data name="Explanation" xml:space="preserve">
+    <value>解析</value>
+  </data>
+  <data name="Incorrect! Please check the correct answer highlighted above." xml:space="preserve">
+    <value>錯誤！請查看上方標示的正確答案。</value>
+  </data>
   <data name="Next" xml:space="preserve">
     <value>下一題</value>
   </data>
@@ -33,20 +45,11 @@
   <data name="Submit Exam" xml:space="preserve">
     <value>提交測驗</value>
   </data>
-  <data name="This is a sight-singing question. Please review the sheet music and sing aloud." xml:space="preserve">
-    <value>這是一道視唱題。請先閱覽樂譜，然後大聲唱出來。</value>
-  </data>
   <data name="This is a multiple choice question." xml:space="preserve">
     <value>這是一個多選題。</value>
   </data>
-  <data name="Incorrect! Please check the correct answer highlighted above." xml:space="preserve">
-    <value>錯誤！請查看上方標示的正確答案。</value>
-  </data>
-  <data name="Correct!" xml:space="preserve">
-    <value>正確！</value>
-  </data>
-  <data name="Check Answer" xml:space="preserve">
-    <value>檢查答案</value>
+  <data name="This is a sight-singing question. Please review the sheet music and sing aloud." xml:space="preserve">
+    <value>這是一道視唱題。請先閱覽樂譜，然後大聲唱出來。</value>
   </data>
 
 </root>

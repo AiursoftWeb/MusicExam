@@ -18,26 +18,26 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Time" xml:space="preserve">
-    <value>Tijd</value>
-  </data>
-  <data name="Details" xml:space="preserve">
-    <value>Details</value>
-  </data>
-  <data name="Type" xml:space="preserve">
-    <value>Type</value>
+      <data name="A chronological list of all recorded system changes." xml:space="preserve">
+    <value>Een chronologische lijst van alle vastgelegde systeemwijzigingen.</value>
   </data>
   <data name="All Changes" xml:space="preserve">
     <value>Alle Wijzigingen</value>
   </data>
-  <data name="Triggered By" xml:space="preserve">
-    <value>Uitgevoerd door</value>
-  </data>
   <data name="Change History" xml:space="preserve">
     <value>Wijzigingsgeschiedenis</value>
   </data>
-  <data name="A chronological list of all recorded system changes." xml:space="preserve">
-    <value>Een chronologische lijst van alle vastgelegde systeemwijzigingen.</value>
+  <data name="Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Tijd</value>
+  </data>
+  <data name="Triggered By" xml:space="preserve">
+    <value>Uitgevoerd door</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
   </data>
 
 </root>

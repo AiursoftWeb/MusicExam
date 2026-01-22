@@ -45,14 +45,26 @@
   <data name="Email" xml:space="preserve">
     <value>Электронная почта</value>
   </data>
+  <data name="Expire" xml:space="preserve">
+    <value>Срок действия</value>
+  </data>
+  <data name="Free" xml:space="preserve">
+    <value>Бесплатно</value>
+  </data>
   <data name="Manage Users" xml:space="preserve">
     <value>Управление пользователями</value>
   </data>
   <data name="Name" xml:space="preserve">
     <value>Имя</value>
   </data>
+  <data name="Paid" xml:space="preserve">
+    <value>Оплачен</value>
+  </data>
   <data name="Roles" xml:space="preserve">
     <value>Роли</value>
+  </data>
+  <data name="Usage" xml:space="preserve">
+    <value>Использование</value>
   </data>
   <data name="User name" xml:space="preserve">
     <value>Имя пользователя</value>

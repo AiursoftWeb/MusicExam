@@ -27,6 +27,9 @@
   <data name="If you believe you should have access, please contact your system administrator. Or try signing out and signing in again." xml:space="preserve">
     <value>Wenn Sie glauben, dass Sie Zugriff haben sollten, wenden Sie sich bitte an Ihren Systemadministrator. Oder versuchen Sie, sich ab- und wieder anzumelden.</value>
   </data>
+  <data name="Please contact the administrator to pay and activate your account. Or try signing out and signing in again." xml:space="preserve">
+    <value>Bitte wenden Sie sich an den Administrator, um Ihr Konto zu bezahlen und zu aktivieren. Oder versuchen Sie, sich abzumelden und erneut anzumelden.</value>
+  </data>
   <data name="Sorry, you do not have the necessary permissions to access this page." xml:space="preserve">
     <value>Entschuldigung, Sie verfügen nicht über die erforderlichen Berechtigungen, um auf diese Seite zuzugreifen.</value>
   </data>

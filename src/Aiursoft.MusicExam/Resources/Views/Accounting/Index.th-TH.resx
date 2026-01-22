@@ -18,23 +18,29 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Users" xml:space="preserve">
-    <value>ผู้ใช้งาน</value>
+      <data name="Dashboard" xml:space="preserve">
+    <value>แดชบอร์ด</value>
   </data>
   <data name="Exam Submissions" xml:space="preserve">
     <value>การส่งข้อสอบ</value>
   </data>
-  <data name="Dashboard" xml:space="preserve">
-    <value>แดชบอร์ด</value>
+  <data name="New Submissions (Last 30 Days)" xml:space="preserve">
+    <value>การส่งใหม่ (30 วันที่ผ่านมา)</value>
+  </data>
+  <data name="New Users (Last 30 Days)" xml:space="preserve">
+    <value>ผู้ใช้ใหม่ (30 วันที่ผ่านมา)</value>
   </data>
   <data name="Paid Members" xml:space="preserve">
     <value>สมาชิกแบบชำระเงิน</value>
   </data>
+  <data name="Quizzes Taken" xml:space="preserve">
+    <value>แบบทดสอบที่ทำแล้ว</value>
+  </data>
   <data name="System Statistics" xml:space="preserve">
     <value>สถิติระบบ</value>
   </data>
-  <data name="Quizzes Taken" xml:space="preserve">
-    <value>แบบทดสอบที่ทำแล้ว</value>
+  <data name="Users" xml:space="preserve">
+    <value>ผู้ใช้งาน</value>
   </data>
 
 </root>

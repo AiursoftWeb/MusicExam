@@ -39,14 +39,26 @@
   <data name="Allows the permanent deletion of user accounts." xml:space="preserve">
     <value>يسمح بالحذف الدائم لحسابات المستخدمين.</value>
   </data>
+  <data name="Allows the user to participate in exams." xml:space="preserve">
+    <value>يسمح للمستخدم بالمشاركة في الامتحانات.</value>
+  </data>
   <data name="Allows viewing and modifying global application settings." xml:space="preserve">
     <value>يُمكّن من عرض الإعدادات العامة للتطبيق وتعديلها.</value>
+  </data>
+  <data name="Allows viewing monthly active user statistics and details." xml:space="preserve">
+    <value>يسمح بعرض إحصائيات المستخدمين النشطين شهريًا والتفاصيل.</value>
+  </data>
+  <data name="Allows viewing system statistics like user counts and usage data." xml:space="preserve">
+    <value>يسمح بعرض إحصائيات النظام مثل عدد المستخدمين وبيانات الاستخدام.</value>
   </data>
   <data name="Allows viewing system-level information and settings." xml:space="preserve">
     <value>يسمح بعرض معلومات وإعدادات على مستوى النظام.</value>
   </data>
   <data name="Allows viewing the background job dashboard and managing jobs." xml:space="preserve">
     <value>يُتيح عرض لوحة تحكم المهام الخلفية وإدارة المهام.</value>
+  </data>
+  <data name="Allows viewing the history of all user and role changes." xml:space="preserve">
+    <value>يسمح بعرض سجل جميع تغييرات المستخدمين والأدوار</value>
   </data>
   <data name="Allows viewing the list of all permissions and their assignments to roles and users." xml:space="preserve">
     <value>يسمح بعرض قائمة جميع الأذونات وتعييناتها للأدوار والمستخدمين.</value>
@@ -96,35 +108,23 @@
   <data name="Reboot This App" xml:space="preserve">
     <value>إعادة تشغيل هذا التطبيق</value>
   </data>
-  <data name="View Background Jobs" xml:space="preserve">
-    <value>عرض المهام الخلفية</value>
-  </data>
-  <data name="View System Context" xml:space="preserve">
-    <value>عرض سياق النظام</value>
-  </data>
-  <data name="Allows the user to participate in exams." xml:space="preserve">
-    <value>يسمح للمستخدم بالمشاركة في الامتحانات.</value>
+  <data name="Take Exam" xml:space="preserve">
+    <value>أداء الامتحان</value>
   </data>
   <data name="View Accounting" xml:space="preserve">
     <value>عرض المحاسبة</value>
   </data>
-  <data name="Allows viewing the history of all user and role changes." xml:space="preserve">
-    <value>يسمح بعرض سجل جميع تغييرات المستخدمين والأدوار</value>
-  </data>
-  <data name="Allows viewing system statistics like user counts and usage data." xml:space="preserve">
-    <value>يسمح بعرض إحصائيات النظام مثل عدد المستخدمين وبيانات الاستخدام.</value>
-  </data>
-  <data name="Take Exam" xml:space="preserve">
-    <value>أداء الامتحان</value>
-  </data>
   <data name="View Active Users" xml:space="preserve">
     <value>عرض المستخدمين النشطين</value>
+  </data>
+  <data name="View Background Jobs" xml:space="preserve">
+    <value>عرض المهام الخلفية</value>
   </data>
   <data name="View Change History" xml:space="preserve">
     <value>عرض سجل التغييرات</value>
   </data>
-  <data name="Allows viewing monthly active user statistics and details." xml:space="preserve">
-    <value>يسمح بعرض إحصائيات المستخدمين النشطين شهريًا والتفاصيل.</value>
+  <data name="View System Context" xml:space="preserve">
+    <value>عرض سياق النظام</value>
   </data>
 
 </root>

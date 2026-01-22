@@ -18,26 +18,26 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Back to Statistics" xml:space="preserve">
-    <value>返回统计</value>
-  </data>
-  <data name="Active Users Details" xml:space="preserve">
+      <data name="Active Users Details" xml:space="preserve">
     <value>活跃用户详情</value>
+  </data>
+  <data name="Active Users List" xml:space="preserve">
+    <value>活跃用户列表</value>
   </data>
   <data name="Avatar" xml:space="preserve">
     <value>头像</value>
   </data>
-  <data name="User" xml:space="preserve">
-    <value>用户</value>
-  </data>
-  <data name="Active Users List" xml:space="preserve">
-    <value>活跃用户列表</value>
+  <data name="Back to Statistics" xml:space="preserve">
+    <value>返回统计</value>
   </data>
   <data name="Detailed list of users who were active this month and why." xml:space="preserve">
     <value>本月活跃用户的详细列表及其原因。</value>
   </data>
   <data name="Reason" xml:space="preserve">
     <value>原因</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>用户</value>
   </data>
 
 </root>

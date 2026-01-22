@@ -39,14 +39,26 @@
   <data name="Allows the permanent deletion of user accounts." xml:space="preserve">
     <value>Kullanıcı hesaplarının kalıcı olarak silinmesine izin verir.</value>
   </data>
+  <data name="Allows the user to participate in exams." xml:space="preserve">
+    <value>Kullanıcının sınavlara katılmasına izin verir.</value>
+  </data>
   <data name="Allows viewing and modifying global application settings." xml:space="preserve">
     <value>Genel uygulama ayarlarını görüntüleme ve değiştirme izni verir.</value>
+  </data>
+  <data name="Allows viewing monthly active user statistics and details." xml:space="preserve">
+    <value>Aylık aktif kullanıcı istatistiklerini ve detaylarını görüntülemeye izin verir.</value>
+  </data>
+  <data name="Allows viewing system statistics like user counts and usage data." xml:space="preserve">
+    <value>Kullanıcı sayıları ve kullanım verileri gibi sistem istatistiklerini görüntülemeye izin verir.</value>
   </data>
   <data name="Allows viewing system-level information and settings." xml:space="preserve">
     <value>Sistem düzeyindeki bilgileri ve ayarları görüntülemeye izin verir.</value>
   </data>
   <data name="Allows viewing the background job dashboard and managing jobs." xml:space="preserve">
     <value>Arka plan işi panosunu görüntülemeye ve işleri yönetmeye izin verir.</value>
+  </data>
+  <data name="Allows viewing the history of all user and role changes." xml:space="preserve">
+    <value>Tüm kullanıcı ve rol değişikliklerinin geçmişini görüntülemeye izin verir.</value>
   </data>
   <data name="Allows viewing the list of all permissions and their assignments to roles and users." xml:space="preserve">
     <value>Tüm izinlerin listesini ve bunların roller ve kullanıcılara atanmalarını görüntülemeye izin verir.</value>
@@ -96,35 +108,23 @@
   <data name="Reboot This App" xml:space="preserve">
     <value>Bu Uygulamayı Yeniden Başlat</value>
   </data>
-  <data name="View Background Jobs" xml:space="preserve">
-    <value>Arka Plan İşlerini Görüntüle</value>
-  </data>
-  <data name="View System Context" xml:space="preserve">
-    <value>Sistem Bağlamını Görüntüle</value>
-  </data>
   <data name="Take Exam" xml:space="preserve">
     <value>Sınava Gir</value>
-  </data>
-  <data name="Allows the user to participate in exams." xml:space="preserve">
-    <value>Kullanıcının sınavlara katılmasına izin verir.</value>
-  </data>
-  <data name="View Change History" xml:space="preserve">
-    <value>Değişiklik Geçmişini Görüntüle</value>
-  </data>
-  <data name="Allows viewing monthly active user statistics and details." xml:space="preserve">
-    <value>Aylık aktif kullanıcı istatistiklerini ve detaylarını görüntülemeye izin verir.</value>
-  </data>
-  <data name="Allows viewing the history of all user and role changes." xml:space="preserve">
-    <value>Tüm kullanıcı ve rol değişikliklerinin geçmişini görüntülemeye izin verir.</value>
-  </data>
-  <data name="Allows viewing system statistics like user counts and usage data." xml:space="preserve">
-    <value>Kullanıcı sayıları ve kullanım verileri gibi sistem istatistiklerini görüntülemeye izin verir.</value>
   </data>
   <data name="View Accounting" xml:space="preserve">
     <value>Muhasebeyi Görüntüle</value>
   </data>
   <data name="View Active Users" xml:space="preserve">
     <value>Aktif Kullanıcıları Görüntüle</value>
+  </data>
+  <data name="View Background Jobs" xml:space="preserve">
+    <value>Arka Plan İşlerini Görüntüle</value>
+  </data>
+  <data name="View Change History" xml:space="preserve">
+    <value>Değişiklik Geçmişini Görüntüle</value>
+  </data>
+  <data name="View System Context" xml:space="preserve">
+    <value>Sistem Bağlamını Görüntüle</value>
   </data>
 
 </root>

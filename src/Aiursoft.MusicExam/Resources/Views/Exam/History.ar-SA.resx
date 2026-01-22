@@ -18,23 +18,23 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Score" xml:space="preserve">
-    <value>الدرجة</value>
+      <data name="Action" xml:space="preserve">
+    <value>الإجراء</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>التاريخ</value>
   </data>
   <data name="Exam" xml:space="preserve">
     <value>الامتحان</value>
   </data>
-  <data name="You haven&apos;t taken any exams yet." xml:space="preserve">
-    <value>لم تقدم أي امتحانات بعد.</value>
-  </data>
-  <data name="Action" xml:space="preserve">
-    <value>الإجراء</value>
-  </data>
   <data name="N/A" xml:space="preserve">
     <value>غير متوفر</value>
   </data>
-  <data name="Date" xml:space="preserve">
-    <value>التاريخ</value>
+  <data name="Score" xml:space="preserve">
+    <value>الدرجة</value>
+  </data>
+  <data name="You haven&apos;t taken any exams yet." xml:space="preserve">
+    <value>لم تقدم أي امتحانات بعد.</value>
   </data>
 
 </root>

@@ -18,17 +18,29 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Check Answer" xml:space="preserve">
-    <value>檢查答案</value>
-  </data>
-  <data name="Category:" xml:space="preserve">
+      <data name="Category:" xml:space="preserve">
     <value>類別：</value>
   </data>
-  <data name="Previous" xml:space="preserve">
-    <value>上一題</value>
+  <data name="Check Answer" xml:space="preserve">
+    <value>檢查答案</value>
+  </data>
+  <data name="Correct!" xml:space="preserve">
+    <value>正確！</value>
+  </data>
+  <data name="Explanation" xml:space="preserve">
+    <value>詳解</value>
+  </data>
+  <data name="Incorrect! Please check the correct answer highlighted above." xml:space="preserve">
+    <value>錯誤！請查看上方標示的正確答案。</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>下一題</value>
   </data>
   <data name="Please select an answer first." xml:space="preserve">
     <value>請先選擇一個答案。</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>上一題</value>
   </data>
   <data name="Submit Exam" xml:space="preserve">
     <value>提交試卷</value>
@@ -38,15 +50,6 @@
   </data>
   <data name="This is a sight-singing question. Please review the sheet music and sing aloud." xml:space="preserve">
     <value>這係一個視唱題目。請睇下份樂譜，然後大聲唱出嚟。</value>
-  </data>
-  <data name="Next" xml:space="preserve">
-    <value>下一題</value>
-  </data>
-  <data name="Correct!" xml:space="preserve">
-    <value>正確！</value>
-  </data>
-  <data name="Incorrect! Please check the correct answer highlighted above." xml:space="preserve">
-    <value>錯誤！請查看上方標示的正確答案。</value>
   </data>
 
 </root>

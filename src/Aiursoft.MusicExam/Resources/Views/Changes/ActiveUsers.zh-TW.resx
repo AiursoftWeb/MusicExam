@@ -18,8 +18,14 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Monthly Statistics" xml:space="preserve">
-    <value>每月統計</value>
+      <data name="Actions" xml:space="preserve">
+    <value>操作</value>
+  </data>
+  <data name="Active Users Count" xml:space="preserve">
+    <value>活躍使用者數量</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>詳細資料</value>
   </data>
   <data name="Month" xml:space="preserve">
     <value>月份</value>
@@ -27,14 +33,8 @@
   <data name="Monthly Active Users Statistics" xml:space="preserve">
     <value>每月活躍用戶統計</value>
   </data>
-  <data name="Details" xml:space="preserve">
-    <value>詳細資料</value>
-  </data>
-  <data name="Actions" xml:space="preserve">
-    <value>操作</value>
-  </data>
-  <data name="Active Users Count" xml:space="preserve">
-    <value>活躍使用者數量</value>
+  <data name="Monthly Statistics" xml:space="preserve">
+    <value>每月統計</value>
   </data>
   <data name="Number of users who had the TakeExam permission at any point during each month." xml:space="preserve">
     <value>每月任何時間點曾擁有 TakeExam 權限的使用者數量。</value>

@@ -45,14 +45,26 @@
   <data name="Email" xml:space="preserve">
     <value>อีเมล</value>
   </data>
+  <data name="Expire" xml:space="preserve">
+    <value>หมดอายุ</value>
+  </data>
+  <data name="Free" xml:space="preserve">
+    <value>ฟรี</value>
+  </data>
   <data name="Manage Users" xml:space="preserve">
     <value>จัดการผู้ใช้</value>
   </data>
   <data name="Name" xml:space="preserve">
     <value>ชื่อ</value>
   </data>
+  <data name="Paid" xml:space="preserve">
+    <value>ชำระแล้ว</value>
+  </data>
   <data name="Roles" xml:space="preserve">
     <value>บทบาท</value>
+  </data>
+  <data name="Usage" xml:space="preserve">
+    <value>การใช้งาน</value>
   </data>
   <data name="User name" xml:space="preserve">
     <value>ชื่อผู้ใช้</value>

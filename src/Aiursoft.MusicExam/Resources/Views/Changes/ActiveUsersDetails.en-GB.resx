@@ -18,17 +18,17 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Avatar" xml:space="preserve">
+      <data name="Active Users Details" xml:space="preserve">
+    <value>Active Users Details</value>
+  </data>
+  <data name="Active Users List" xml:space="preserve">
+    <value>List of Active Users</value>
+  </data>
+  <data name="Avatar" xml:space="preserve">
     <value>Avatar</value>
   </data>
   <data name="Back to Statistics" xml:space="preserve">
     <value>Back to Statistics</value>
-  </data>
-  <data name="User" xml:space="preserve">
-    <value>User</value>
-  </data>
-  <data name="Active Users List" xml:space="preserve">
-    <value>List of Active Users</value>
   </data>
   <data name="Detailed list of users who were active this month and why." xml:space="preserve">
     <value>Detailed list of users who were active this month and why.</value>
@@ -36,8 +36,8 @@
   <data name="Reason" xml:space="preserve">
     <value>Reason</value>
   </data>
-  <data name="Active Users Details" xml:space="preserve">
-    <value>Active Users Details</value>
+  <data name="User" xml:space="preserve">
+    <value>User</value>
   </data>
 
 </root>

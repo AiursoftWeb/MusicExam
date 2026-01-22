@@ -21,20 +21,20 @@
       <data name="Actions" xml:space="preserve">
     <value>Acties</value>
   </data>
-  <data name="Month" xml:space="preserve">
-    <value>Maand</value>
+  <data name="Active Users Count" xml:space="preserve">
+    <value>Aantal actieve gebruikers</value>
   </data>
   <data name="Details" xml:space="preserve">
     <value>Details</value>
   </data>
-  <data name="Active Users Count" xml:space="preserve">
-    <value>Aantal actieve gebruikers</value>
-  </data>
-  <data name="Monthly Statistics" xml:space="preserve">
-    <value>Maandelijkse Statistieken</value>
+  <data name="Month" xml:space="preserve">
+    <value>Maand</value>
   </data>
   <data name="Monthly Active Users Statistics" xml:space="preserve">
     <value>Statistieken van Maandelijks Actieve Gebruikers</value>
+  </data>
+  <data name="Monthly Statistics" xml:space="preserve">
+    <value>Maandelijkse Statistieken</value>
   </data>
   <data name="Number of users who had the TakeExam permission at any point during each month." xml:space="preserve">
     <value>Aantal gebruikers die op enig moment gedurende elke maand de TakeExam-machtiging hadden.</value>

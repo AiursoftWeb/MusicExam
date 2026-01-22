@@ -18,26 +18,29 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="View History" xml:space="preserve">
-    <value>查看历史</value>
+      <data name="Back to Dashboard" xml:space="preserve">
+    <value>返回仪表板</value>
   </data>
   <data name="Correct Answer" xml:space="preserve">
     <value>正确答案</value>
   </data>
-  <data name="Retake Exam" xml:space="preserve">
-    <value>重新参加考试</value>
+  <data name="Explanation" xml:space="preserve">
+    <value>解释</value>
+  </data>
+  <data name="No detailed breakdown for this question type." xml:space="preserve">
+    <value>此题型无详细解析。</value>
   </data>
   <data name="Question" xml:space="preserve">
     <value>问题</value>
   </data>
+  <data name="Retake Exam" xml:space="preserve">
+    <value>重新参加考试</value>
+  </data>
   <data name="Score" xml:space="preserve">
     <value>分数</value>
   </data>
-  <data name="Back to Dashboard" xml:space="preserve">
-    <value>返回仪表板</value>
-  </data>
-  <data name="No detailed breakdown for this question type." xml:space="preserve">
-    <value>此题型无详细解析。</value>
+  <data name="View History" xml:space="preserve">
+    <value>查看历史</value>
   </data>
 
 </root>

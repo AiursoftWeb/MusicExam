@@ -18,23 +18,29 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="System Statistics" xml:space="preserve">
-    <value>Статистика системы</value>
-  </data>
-  <data name="Paid Members" xml:space="preserve">
-    <value>Платные участники</value>
-  </data>
-  <data name="Users" xml:space="preserve">
-    <value>Пользователи</value>
+      <data name="Dashboard" xml:space="preserve">
+    <value>Панель управления</value>
   </data>
   <data name="Exam Submissions" xml:space="preserve">
     <value>Сданные экзамены</value>
   </data>
+  <data name="New Submissions (Last 30 Days)" xml:space="preserve">
+    <value>Новые отправки (последние 30 дней)</value>
+  </data>
+  <data name="New Users (Last 30 Days)" xml:space="preserve">
+    <value>Новые пользователи (последние 30 дней)</value>
+  </data>
+  <data name="Paid Members" xml:space="preserve">
+    <value>Платные участники</value>
+  </data>
   <data name="Quizzes Taken" xml:space="preserve">
     <value>Пройдено тестов</value>
   </data>
-  <data name="Dashboard" xml:space="preserve">
-    <value>Панель управления</value>
+  <data name="System Statistics" xml:space="preserve">
+    <value>Статистика системы</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Пользователи</value>
   </data>
 
 </root>

@@ -21,20 +21,20 @@
       <data name="Actions" xml:space="preserve">
     <value>操作</value>
   </data>
-  <data name="Month" xml:space="preserve">
-    <value>月份</value>
-  </data>
   <data name="Active Users Count" xml:space="preserve">
     <value>活躍用戶數目</value>
-  </data>
-  <data name="Monthly Statistics" xml:space="preserve">
-    <value>每月統計</value>
   </data>
   <data name="Details" xml:space="preserve">
     <value>詳情</value>
   </data>
+  <data name="Month" xml:space="preserve">
+    <value>月份</value>
+  </data>
   <data name="Monthly Active Users Statistics" xml:space="preserve">
     <value>每月活躍用戶統計</value>
+  </data>
+  <data name="Monthly Statistics" xml:space="preserve">
+    <value>每月統計</value>
   </data>
   <data name="Number of users who had the TakeExam permission at any point during each month." xml:space="preserve">
     <value>於每個月內任何時間曾擁有 TakeExam 權限的用戶數量。</value>

@@ -18,26 +18,29 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Retake Exam" xml:space="preserve">
+      <data name="Back to Dashboard" xml:space="preserve">
+    <value>ダッシュボードに戻る</value>
+  </data>
+  <data name="Correct Answer" xml:space="preserve">
+    <value>正解</value>
+  </data>
+  <data name="Explanation" xml:space="preserve">
+    <value>解説</value>
+  </data>
+  <data name="No detailed breakdown for this question type." xml:space="preserve">
+    <value>この問題タイプの詳細な内訳はありません。</value>
+  </data>
+  <data name="Question" xml:space="preserve">
+    <value>問題</value>
+  </data>
+  <data name="Retake Exam" xml:space="preserve">
     <value>再受験</value>
   </data>
   <data name="Score" xml:space="preserve">
     <value>得点</value>
   </data>
-  <data name="Correct Answer" xml:space="preserve">
-    <value>正解</value>
-  </data>
   <data name="View History" xml:space="preserve">
     <value>履歴を表示</value>
-  </data>
-  <data name="Question" xml:space="preserve">
-    <value>問題</value>
-  </data>
-  <data name="Back to Dashboard" xml:space="preserve">
-    <value>ダッシュボードに戻る</value>
-  </data>
-  <data name="No detailed breakdown for this question type." xml:space="preserve">
-    <value>この問題タイプの詳細な内訳はありません。</value>
   </data>
 
 </root>

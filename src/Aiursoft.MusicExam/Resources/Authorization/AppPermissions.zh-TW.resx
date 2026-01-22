@@ -39,14 +39,26 @@
   <data name="Allows the permanent deletion of user accounts." xml:space="preserve">
     <value>允許永久刪除使用者帳戶。</value>
   </data>
+  <data name="Allows the user to participate in exams." xml:space="preserve">
+    <value>允許用戶參加考試</value>
+  </data>
   <data name="Allows viewing and modifying global application settings." xml:space="preserve">
     <value>允許檢視和修改全域應用程式設定。</value>
+  </data>
+  <data name="Allows viewing monthly active user statistics and details." xml:space="preserve">
+    <value>允許檢視月活用戶統計數據及詳細資訊。</value>
+  </data>
+  <data name="Allows viewing system statistics like user counts and usage data." xml:space="preserve">
+    <value>允許檢視系統統計資料，例如使用者數量及使用資料。</value>
   </data>
   <data name="Allows viewing system-level information and settings." xml:space="preserve">
     <value>允許檢視系統層級的資訊與設定。</value>
   </data>
   <data name="Allows viewing the background job dashboard and managing jobs." xml:space="preserve">
     <value>允許檢視背景工作儀表板並管理工作。</value>
+  </data>
+  <data name="Allows viewing the history of all user and role changes." xml:space="preserve">
+    <value>允許檢視所有使用者及角色變更的歷史。</value>
   </data>
   <data name="Allows viewing the list of all permissions and their assignments to roles and users." xml:space="preserve">
     <value>允許檢視所有權限及其分配給角色和使用者的清單。</value>
@@ -96,35 +108,23 @@
   <data name="Reboot This App" xml:space="preserve">
     <value>重新啟動此應用程式</value>
   </data>
-  <data name="View Background Jobs" xml:space="preserve">
-    <value>檢視背景工作</value>
-  </data>
-  <data name="View System Context" xml:space="preserve">
-    <value>檢視系統內容</value>
-  </data>
-  <data name="Allows the user to participate in exams." xml:space="preserve">
-    <value>允許用戶參加考試</value>
-  </data>
   <data name="Take Exam" xml:space="preserve">
     <value>參加考試</value>
-  </data>
-  <data name="View Active Users" xml:space="preserve">
-    <value>查看活躍用戶</value>
-  </data>
-  <data name="View Change History" xml:space="preserve">
-    <value>檢視變更歷史</value>
   </data>
   <data name="View Accounting" xml:space="preserve">
     <value>查看會計</value>
   </data>
-  <data name="Allows viewing the history of all user and role changes." xml:space="preserve">
-    <value>允許檢視所有使用者及角色變更的歷史。</value>
+  <data name="View Active Users" xml:space="preserve">
+    <value>查看活躍用戶</value>
   </data>
-  <data name="Allows viewing monthly active user statistics and details." xml:space="preserve">
-    <value>允許檢視月活用戶統計數據及詳細資訊。</value>
+  <data name="View Background Jobs" xml:space="preserve">
+    <value>檢視背景工作</value>
   </data>
-  <data name="Allows viewing system statistics like user counts and usage data." xml:space="preserve">
-    <value>允許檢視系統統計資料，例如使用者數量及使用資料。</value>
+  <data name="View Change History" xml:space="preserve">
+    <value>檢視變更歷史</value>
+  </data>
+  <data name="View System Context" xml:space="preserve">
+    <value>檢視系統內容</value>
   </data>
 
 </root>

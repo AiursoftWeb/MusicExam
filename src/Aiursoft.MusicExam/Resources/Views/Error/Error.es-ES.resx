@@ -30,30 +30,6 @@
   <data name="Error." xml:space="preserve">
     <value>Error.</value>
   </data>
-  <data name="Please contact the administrator for help." xml:space="preserve">
-    <value>Por favor, contacte con el administrador para obtener ayuda.</value>
-  </data>
-  <data name="Please try again later or contact support if the problem persists." xml:space="preserve">
-    <value>Por favor, inténtelo de nuevo más tarde o contacte con soporte si el problema persiste.</value>
-  </data>
-  <data name="Request ID:" xml:space="preserve">
-    <value>ID de solicitud:</value>
-  </data>
-  <data name="We&apos;re sorry, something went wrong while processing your request." xml:space="preserve">
-    <value>Lo sentimos, ha ocurrido un error al procesar su solicitud.</value>
-  </data>
-  <data name="Try again" xml:space="preserve">
-    <value>Intentar de nuevo</value>
-  </data>
-  <data name="Sorry, you do not have the necessary permissions to access this page." xml:space="preserve">
-    <value>Lo sentimos, no tienes los permisos necesarios para acceder a esta página.</value>
-  </data>
-  <data name="Your browser sent a request that this server could not understand." xml:space="preserve">
-    <value>Su navegador envió una solicitud que este servidor no pudo entender.</value>
-  </data>
-  <data name="The page you are looking for might have been removed, had its name changed, or is temporarily unavailable." xml:space="preserve">
-    <value>Es posible que la página que buscas haya sido eliminada, haya cambiado de nombre o no esté disponible temporalmente.</value>
-  </data>
   <data name="If you believe you should have access, please contact your system administrator. Or try signing out and signing in again." xml:space="preserve">
     <value>Si cree que debería tener acceso, póngase en contacto con el administrador del sistema. O intente cerrar sesión y volver a iniciarla.</value>
   </data>
@@ -62,6 +38,33 @@
   </data>
   <data name="Please check your request and try again. If you believe this is a server error, please contact support." xml:space="preserve">
     <value>Por favor, comprueba tu solicitud e inténtalo de nuevo. Si crees que se trata de un error del servidor, por favor, contacta con soporte.</value>
+  </data>
+  <data name="Please contact the administrator for help." xml:space="preserve">
+    <value>Por favor, contacte con el administrador para obtener ayuda.</value>
+  </data>
+  <data name="Please contact the administrator to pay and activate your account. Or try signing out and signing in again." xml:space="preserve">
+    <value>Por favor, póngase en contacto con el administrador para pagar y activar su cuenta. O intente cerrar sesión y volver a iniciar sesión.</value>
+  </data>
+  <data name="Please try again later or contact support if the problem persists." xml:space="preserve">
+    <value>Por favor, inténtelo de nuevo más tarde o contacte con soporte si el problema persiste.</value>
+  </data>
+  <data name="Request ID:" xml:space="preserve">
+    <value>ID de solicitud:</value>
+  </data>
+  <data name="Sorry, you do not have the necessary permissions to access this page." xml:space="preserve">
+    <value>Lo sentimos, no tienes los permisos necesarios para acceder a esta página.</value>
+  </data>
+  <data name="The page you are looking for might have been removed, had its name changed, or is temporarily unavailable." xml:space="preserve">
+    <value>Es posible que la página que buscas haya sido eliminada, haya cambiado de nombre o no esté disponible temporalmente.</value>
+  </data>
+  <data name="Try again" xml:space="preserve">
+    <value>Intentar de nuevo</value>
+  </data>
+  <data name="We&apos;re sorry, something went wrong while processing your request." xml:space="preserve">
+    <value>Lo sentimos, ha ocurrido un error al procesar su solicitud.</value>
+  </data>
+  <data name="Your browser sent a request that this server could not understand." xml:space="preserve">
+    <value>Su navegador envió una solicitud que este servidor no pudo entender.</value>
   </data>
 
 </root>

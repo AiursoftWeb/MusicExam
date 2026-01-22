@@ -21,8 +21,8 @@
       <data name="Action" xml:space="preserve">
     <value>Actie</value>
   </data>
-  <data name="Score" xml:space="preserve">
-    <value>Score</value>
+  <data name="Date" xml:space="preserve">
+    <value>Datum</value>
   </data>
   <data name="Exam" xml:space="preserve">
     <value>Examen</value>
@@ -30,8 +30,8 @@
   <data name="N/A" xml:space="preserve">
     <value>N.v.t.</value>
   </data>
-  <data name="Date" xml:space="preserve">
-    <value>Datum</value>
+  <data name="Score" xml:space="preserve">
+    <value>Score</value>
   </data>
   <data name="You haven&apos;t taken any exams yet." xml:space="preserve">
     <value>Je hebt nog geen examens gemaakt.</value>

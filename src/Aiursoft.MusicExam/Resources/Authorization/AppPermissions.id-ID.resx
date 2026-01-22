@@ -39,14 +39,26 @@
   <data name="Allows the permanent deletion of user accounts." xml:space="preserve">
     <value>Memungkinkan penghapusan permanen akun pengguna.</value>
   </data>
+  <data name="Allows the user to participate in exams." xml:space="preserve">
+    <value>Memungkinkan pengguna untuk mengikuti ujian.</value>
+  </data>
   <data name="Allows viewing and modifying global application settings." xml:space="preserve">
     <value>Memungkinkan melihat dan mengubah pengaturan aplikasi global.</value>
+  </data>
+  <data name="Allows viewing monthly active user statistics and details." xml:space="preserve">
+    <value>Memungkinkan melihat statistik dan detail pengguna aktif bulanan.</value>
+  </data>
+  <data name="Allows viewing system statistics like user counts and usage data." xml:space="preserve">
+    <value>Memungkinkan melihat statistik sistem seperti jumlah pengguna dan data penggunaan.</value>
   </data>
   <data name="Allows viewing system-level information and settings." xml:space="preserve">
     <value>Memungkinkan melihat informasi dan pengaturan tingkat sistem.</value>
   </data>
   <data name="Allows viewing the background job dashboard and managing jobs." xml:space="preserve">
     <value>Memungkinkan melihat dasbor pekerjaan latar belakang dan mengelola pekerjaan.</value>
+  </data>
+  <data name="Allows viewing the history of all user and role changes." xml:space="preserve">
+    <value>Memungkinkan melihat riwayat semua perubahan pengguna dan peran.</value>
   </data>
   <data name="Allows viewing the list of all permissions and their assignments to roles and users." xml:space="preserve">
     <value>Memungkinkan melihat daftar semua izin dan penugasannya ke peran dan pengguna.</value>
@@ -96,35 +108,23 @@
   <data name="Reboot This App" xml:space="preserve">
     <value>Mulai Ulang Aplikasi Ini</value>
   </data>
-  <data name="View Background Jobs" xml:space="preserve">
-    <value>Lihat Pekerjaan Latar Belakang</value>
-  </data>
-  <data name="View System Context" xml:space="preserve">
-    <value>Lihat Konteks Sistem</value>
-  </data>
-  <data name="Allows the user to participate in exams." xml:space="preserve">
-    <value>Memungkinkan pengguna untuk mengikuti ujian.</value>
-  </data>
   <data name="Take Exam" xml:space="preserve">
     <value>Ikuti Ujian</value>
-  </data>
-  <data name="View Active Users" xml:space="preserve">
-    <value>Lihat Pengguna Aktif</value>
-  </data>
-  <data name="Allows viewing system statistics like user counts and usage data." xml:space="preserve">
-    <value>Memungkinkan melihat statistik sistem seperti jumlah pengguna dan data penggunaan.</value>
-  </data>
-  <data name="View Change History" xml:space="preserve">
-    <value>Lihat Riwayat Perubahan</value>
   </data>
   <data name="View Accounting" xml:space="preserve">
     <value>Lihat Akuntansi</value>
   </data>
-  <data name="Allows viewing monthly active user statistics and details." xml:space="preserve">
-    <value>Memungkinkan melihat statistik dan detail pengguna aktif bulanan.</value>
+  <data name="View Active Users" xml:space="preserve">
+    <value>Lihat Pengguna Aktif</value>
   </data>
-  <data name="Allows viewing the history of all user and role changes." xml:space="preserve">
-    <value>Memungkinkan melihat riwayat semua perubahan pengguna dan peran.</value>
+  <data name="View Background Jobs" xml:space="preserve">
+    <value>Lihat Pekerjaan Latar Belakang</value>
+  </data>
+  <data name="View Change History" xml:space="preserve">
+    <value>Lihat Riwayat Perubahan</value>
+  </data>
+  <data name="View System Context" xml:space="preserve">
+    <value>Lihat Konteks Sistem</value>
   </data>
 
 </root>

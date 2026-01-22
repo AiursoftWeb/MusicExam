@@ -66,6 +66,9 @@
   <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
     <value>自动、由人工智能驱动的28种语言翻译。</value>
   </data>
+  <data name="Available Exams" xml:space="preserve">
+    <value>可用考试</value>
+  </data>
   <data name="Background Job Processing" xml:space="preserve">
     <value>后台任务处理</value>
   </data>
@@ -219,6 +222,9 @@
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>无缝集成任何 OpenID Connect 提供商，并支持自动角色同步。</value>
   </data>
+  <data name="Select your school and level to start practicing" xml:space="preserve">
+    <value>选择您的学校和级别开始练习</value>
+  </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>智能配置覆盖</value>
   </data>
@@ -275,12 +281,6 @@
   </data>
   <data name="You&apos;ll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
     <value>您需要安装 .NET 10 SDK、npm 以及您喜欢的 IDE（如 Visual Studio 或 JetBrains Rider）。完整的设置指南可在我们的文档中找到。</value>
-  </data>
-  <data name="Available Exams" xml:space="preserve">
-    <value>可用考试</value>
-  </data>
-  <data name="Select your school and level to start practicing" xml:space="preserve">
-    <value>选择您的学校和级别开始练习</value>
   </data>
 
 </root>

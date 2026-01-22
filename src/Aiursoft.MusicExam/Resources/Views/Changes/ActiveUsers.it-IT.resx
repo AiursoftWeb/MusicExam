@@ -21,23 +21,23 @@
       <data name="Actions" xml:space="preserve">
     <value>Azioni</value>
   </data>
-  <data name="Month" xml:space="preserve">
-    <value>Mese</value>
-  </data>
   <data name="Active Users Count" xml:space="preserve">
     <value>Numero Utenti Attivi</value>
   </data>
   <data name="Details" xml:space="preserve">
     <value>Dettagli</value>
   </data>
-  <data name="Number of users who had the TakeExam permission at any point during each month." xml:space="preserve">
-    <value>Numero di utenti che hanno avuto il permesso TakeExam in qualsiasi momento durante ogni mese.</value>
+  <data name="Month" xml:space="preserve">
+    <value>Mese</value>
+  </data>
+  <data name="Monthly Active Users Statistics" xml:space="preserve">
+    <value>Statistiche Mensili degli Utenti Attivi</value>
   </data>
   <data name="Monthly Statistics" xml:space="preserve">
     <value>Statistiche Mensili</value>
   </data>
-  <data name="Monthly Active Users Statistics" xml:space="preserve">
-    <value>Statistiche Mensili degli Utenti Attivi</value>
+  <data name="Number of users who had the TakeExam permission at any point during each month." xml:space="preserve">
+    <value>Numero di utenti che hanno avuto il permesso TakeExam in qualsiasi momento durante ogni mese.</value>
   </data>
 
 </root>

@@ -66,6 +66,9 @@
   <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
     <value>Traducción automática, impulsada por IA, a 28 idiomas.</value>
   </data>
+  <data name="Available Exams" xml:space="preserve">
+    <value>Exámenes Disponibles</value>
+  </data>
   <data name="Background Job Processing" xml:space="preserve">
     <value>Procesamiento de trabajos en segundo plano</value>
   </data>
@@ -219,6 +222,9 @@
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Integración sin problemas con cualquier proveedor de OpenID Connect, con sincronización automática de roles.</value>
   </data>
+  <data name="Select your school and level to start practicing" xml:space="preserve">
+    <value>Selecciona tu escuela y nivel para empezar a practicar</value>
+  </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>Sobrescrituras de configuración inteligentes</value>
   </data>
@@ -275,12 +281,6 @@
   </data>
   <data name="You&apos;ll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
     <value>Necesitarás el SDK de .NET 10, npm y tu IDE favorito, como Visual Studio o JetBrains Rider. Puedes encontrar la guía de configuración completa en nuestra documentación.</value>
-  </data>
-  <data name="Available Exams" xml:space="preserve">
-    <value>Exámenes Disponibles</value>
-  </data>
-  <data name="Select your school and level to start practicing" xml:space="preserve">
-    <value>Selecciona tu escuela y nivel para empezar a practicar</value>
   </data>
 
 </root>

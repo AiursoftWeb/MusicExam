@@ -18,26 +18,26 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Type" xml:space="preserve">
-    <value>유형</value>
-  </data>
-  <data name="Change History" xml:space="preserve">
-    <value>변경 이력</value>
-  </data>
-  <data name="Time" xml:space="preserve">
-    <value>시간</value>
-  </data>
-  <data name="A chronological list of all recorded system changes." xml:space="preserve">
+      <data name="A chronological list of all recorded system changes." xml:space="preserve">
     <value>기록된 모든 시스템 변경 사항의 연대순 목록입니다.</value>
   </data>
   <data name="All Changes" xml:space="preserve">
     <value>모든 변경 사항</value>
   </data>
-  <data name="Triggered By" xml:space="preserve">
-    <value>작성자</value>
+  <data name="Change History" xml:space="preserve">
+    <value>변경 이력</value>
   </data>
   <data name="Details" xml:space="preserve">
     <value>세부 정보</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>시간</value>
+  </data>
+  <data name="Triggered By" xml:space="preserve">
+    <value>작성자</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>유형</value>
   </data>
 
 </root>

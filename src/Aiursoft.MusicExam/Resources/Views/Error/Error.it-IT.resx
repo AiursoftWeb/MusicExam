@@ -30,30 +30,6 @@
   <data name="Error." xml:space="preserve">
     <value>Errore.</value>
   </data>
-  <data name="Please contact the administrator for help." xml:space="preserve">
-    <value>Si prega di contattare l&apos;amministratore per assistenza.</value>
-  </data>
-  <data name="Please try again later or contact support if the problem persists." xml:space="preserve">
-    <value>Per favore, riprova più tardi o contatta l&apos;assistenza se il problema persiste.</value>
-  </data>
-  <data name="Request ID:" xml:space="preserve">
-    <value>ID richiesta:</value>
-  </data>
-  <data name="We&apos;re sorry, something went wrong while processing your request." xml:space="preserve">
-    <value>Ci scusiamo, si è verificato un errore durante l&apos;elaborazione della tua richiesta.</value>
-  </data>
-  <data name="Try again" xml:space="preserve">
-    <value>Riprova</value>
-  </data>
-  <data name="Your browser sent a request that this server could not understand." xml:space="preserve">
-    <value>Il tuo browser ha inviato una richiesta che questo server non è riuscito a comprendere.</value>
-  </data>
-  <data name="The page you are looking for might have been removed, had its name changed, or is temporarily unavailable." xml:space="preserve">
-    <value>La pagina che stai cercando potrebbe essere stata rimossa, aver cambiato nome o essere temporaneamente non disponibile.</value>
-  </data>
-  <data name="Sorry, you do not have the necessary permissions to access this page." xml:space="preserve">
-    <value>Spiacenti, non si dispone delle autorizzazioni necessarie per accedere a questa pagina.</value>
-  </data>
   <data name="If you believe you should have access, please contact your system administrator. Or try signing out and signing in again." xml:space="preserve">
     <value>Se ritieni di dover avere accesso, contatta il tuo amministratore di sistema. Oppure prova a uscire e accedere di nuovo.</value>
   </data>
@@ -62,6 +38,33 @@
   </data>
   <data name="Please check your request and try again. If you believe this is a server error, please contact support." xml:space="preserve">
     <value>Per favore, controlla la tua richiesta e riprova. Se ritieni che si tratti di un errore del server, contatta l&apos;assistenza.</value>
+  </data>
+  <data name="Please contact the administrator for help." xml:space="preserve">
+    <value>Si prega di contattare l&apos;amministratore per assistenza.</value>
+  </data>
+  <data name="Please contact the administrator to pay and activate your account. Or try signing out and signing in again." xml:space="preserve">
+    <value>Si prega di contattare l&apos;amministratore per pagare e attivare il proprio account. Oppure provare a disconnettersi e accedere nuovamente.</value>
+  </data>
+  <data name="Please try again later or contact support if the problem persists." xml:space="preserve">
+    <value>Per favore, riprova più tardi o contatta l&apos;assistenza se il problema persiste.</value>
+  </data>
+  <data name="Request ID:" xml:space="preserve">
+    <value>ID richiesta:</value>
+  </data>
+  <data name="Sorry, you do not have the necessary permissions to access this page." xml:space="preserve">
+    <value>Spiacenti, non si dispone delle autorizzazioni necessarie per accedere a questa pagina.</value>
+  </data>
+  <data name="The page you are looking for might have been removed, had its name changed, or is temporarily unavailable." xml:space="preserve">
+    <value>La pagina che stai cercando potrebbe essere stata rimossa, aver cambiato nome o essere temporaneamente non disponibile.</value>
+  </data>
+  <data name="Try again" xml:space="preserve">
+    <value>Riprova</value>
+  </data>
+  <data name="We&apos;re sorry, something went wrong while processing your request." xml:space="preserve">
+    <value>Ci scusiamo, si è verificato un errore durante l&apos;elaborazione della tua richiesta.</value>
+  </data>
+  <data name="Your browser sent a request that this server could not understand." xml:space="preserve">
+    <value>Il tuo browser ha inviato una richiesta che questo server non è riuscito a comprendere.</value>
   </data>
 
 </root>

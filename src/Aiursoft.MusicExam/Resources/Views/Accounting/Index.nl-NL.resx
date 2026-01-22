@@ -18,8 +18,17 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Users" xml:space="preserve">
-    <value>Gebruikers</value>
+      <data name="Dashboard" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="Exam Submissions" xml:space="preserve">
+    <value>Exameninzendingen</value>
+  </data>
+  <data name="New Submissions (Last 30 Days)" xml:space="preserve">
+    <value>Nieuwe inzendingen (laatste 30 dagen)</value>
+  </data>
+  <data name="New Users (Last 30 Days)" xml:space="preserve">
+    <value>Nieuwe gebruikers (laatste 30 dagen)</value>
   </data>
   <data name="Paid Members" xml:space="preserve">
     <value>Betaalde leden</value>
@@ -27,14 +36,11 @@
   <data name="Quizzes Taken" xml:space="preserve">
     <value>Afgelegde Quizzen</value>
   </data>
-  <data name="Exam Submissions" xml:space="preserve">
-    <value>Exameninzendingen</value>
-  </data>
   <data name="System Statistics" xml:space="preserve">
     <value>Systeemstatistieken</value>
   </data>
-  <data name="Dashboard" xml:space="preserve">
-    <value>Dashboard</value>
+  <data name="Users" xml:space="preserve">
+    <value>Gebruikers</value>
   </data>
 
 </root>

@@ -39,14 +39,26 @@
   <data name="Allows the permanent deletion of user accounts." xml:space="preserve">
     <value>Permite ștergerea permanentă a conturilor de utilizator.</value>
   </data>
+  <data name="Allows the user to participate in exams." xml:space="preserve">
+    <value>Permite utilizatorului să participe la examene.</value>
+  </data>
   <data name="Allows viewing and modifying global application settings." xml:space="preserve">
     <value>Permite vizualizarea și modificarea setărilor globale ale aplicației.</value>
+  </data>
+  <data name="Allows viewing monthly active user statistics and details." xml:space="preserve">
+    <value>Permite vizualizarea statisticilor și detaliilor utilizatorilor activi lunar.</value>
+  </data>
+  <data name="Allows viewing system statistics like user counts and usage data." xml:space="preserve">
+    <value>Permite vizualizarea statisticilor sistemului, cum ar fi numărul de utilizatori și datele de utilizare.</value>
   </data>
   <data name="Allows viewing system-level information and settings." xml:space="preserve">
     <value>Permite vizualizarea informațiilor și setărilor la nivel de sistem.</value>
   </data>
   <data name="Allows viewing the background job dashboard and managing jobs." xml:space="preserve">
     <value>Permite vizualizarea panoului de control al sarcinilor în fundal și gestionarea sarcinilor.</value>
+  </data>
+  <data name="Allows viewing the history of all user and role changes." xml:space="preserve">
+    <value>Permite vizualizarea istoricului tuturor modificărilor utilizatorilor și rolurilor.</value>
   </data>
   <data name="Allows viewing the list of all permissions and their assignments to roles and users." xml:space="preserve">
     <value>Permite vizualizarea listei tuturor permisiunilor și a atribuirilor acestora către roluri și utilizatori.</value>
@@ -96,35 +108,23 @@
   <data name="Reboot This App" xml:space="preserve">
     <value>Repornește această aplicație</value>
   </data>
-  <data name="View Background Jobs" xml:space="preserve">
-    <value>Vizualizează sarcinile în fundal</value>
-  </data>
-  <data name="View System Context" xml:space="preserve">
-    <value>Vizualizare Context Sistem</value>
-  </data>
   <data name="Take Exam" xml:space="preserve">
     <value>Susține Examenul</value>
   </data>
   <data name="View Accounting" xml:space="preserve">
     <value>Vizualizare Contabilitate</value>
   </data>
-  <data name="Allows the user to participate in exams." xml:space="preserve">
-    <value>Permite utilizatorului să participe la examene.</value>
-  </data>
   <data name="View Active Users" xml:space="preserve">
     <value>Vizualizați Utilizatorii Activi</value>
   </data>
-  <data name="Allows viewing monthly active user statistics and details." xml:space="preserve">
-    <value>Permite vizualizarea statisticilor și detaliilor utilizatorilor activi lunar.</value>
+  <data name="View Background Jobs" xml:space="preserve">
+    <value>Vizualizează sarcinile în fundal</value>
   </data>
   <data name="View Change History" xml:space="preserve">
     <value>Vizualizează Istoricul Modificărilor</value>
   </data>
-  <data name="Allows viewing the history of all user and role changes." xml:space="preserve">
-    <value>Permite vizualizarea istoricului tuturor modificărilor utilizatorilor și rolurilor.</value>
-  </data>
-  <data name="Allows viewing system statistics like user counts and usage data." xml:space="preserve">
-    <value>Permite vizualizarea statisticilor sistemului, cum ar fi numărul de utilizatori și datele de utilizare.</value>
+  <data name="View System Context" xml:space="preserve">
+    <value>Vizualizare Context Sistem</value>
   </data>
 
 </root>

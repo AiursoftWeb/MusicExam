@@ -18,26 +18,29 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Question" xml:space="preserve">
-    <value>Câu hỏi</value>
-  </data>
-  <data name="Retake Exam" xml:space="preserve">
-    <value>Làm lại bài thi</value>
-  </data>
-  <data name="View History" xml:space="preserve">
-    <value>Xem Lịch Sử</value>
-  </data>
-  <data name="Back to Dashboard" xml:space="preserve">
+      <data name="Back to Dashboard" xml:space="preserve">
     <value>Quay lại Bảng điều khiển</value>
   </data>
   <data name="Correct Answer" xml:space="preserve">
     <value>Đáp án đúng</value>
   </data>
+  <data name="Explanation" xml:space="preserve">
+    <value>Giải thích</value>
+  </data>
   <data name="No detailed breakdown for this question type." xml:space="preserve">
     <value>Không có phân tích chi tiết cho loại câu hỏi này.</value>
   </data>
+  <data name="Question" xml:space="preserve">
+    <value>Câu hỏi</value>
+  </data>
+  <data name="Retake Exam" xml:space="preserve">
+    <value>Làm lại bài thi</value>
+  </data>
   <data name="Score" xml:space="preserve">
     <value>Điểm</value>
+  </data>
+  <data name="View History" xml:space="preserve">
+    <value>Xem Lịch Sử</value>
   </data>
 
 </root>
