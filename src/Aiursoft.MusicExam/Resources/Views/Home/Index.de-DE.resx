@@ -30,6 +30,9 @@
   <data name="A complete solution for user authentication and profile management." xml:space="preserve">
     <value>Eine vollständige Lösung für die Benutzerauthentifizierung und Profilverwaltung.</value>
   </data>
+  <data name="A comprehensive platform designed to help you excel in your music exams. Practice with thousands of questions from official sources." xml:space="preserve">
+    <value>Eine umfassende Plattform, die Ihnen helfen soll, bei Ihren Musikprüfungen hervorragend abzuschneiden. Üben Sie mit Tausenden von Fragen aus offiziellen Quellen.</value>
+  </data>
   <data name="A fully responsive layout that looks great on both desktop and mobile devices." xml:space="preserve">
     <value>Ein vollständig responsives Layout, das sowohl auf Desktop- als auch auf Mobilgeräten großartig aussieht.</value>
   </data>
@@ -44,6 +47,9 @@
   </data>
   <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
     <value>Aiursoft Template ist unsere endgültige Wahl für Unternehmensprojekte! Er wurde für Entwickler entwickelt und ist leichtgewichtig, aber dennoch leistungsstark. Wir können den gesamten Standardcode für Authentifizierung und Benutzerverwaltung überspringen.</value>
+  </data>
+  <data name="All content is based on the official curriculum of major music conservatories." xml:space="preserve">
+    <value>Alle Inhalte basieren auf dem offiziellen Lehrplan renommierter Musikschulen.</value>
   </data>
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>Alle Abhängigkeiten werden automatisch registriert und sind stets über Constructor Injection verfügbar.</value>
@@ -87,11 +93,23 @@
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>Umfassende Dokumentation</value>
   </data>
+  <data name="Comprehensive Question Bank" xml:space="preserve">
+    <value>Umfassende Fragebank</value>
+  </data>
+  <data name="Comprehensive Question Bank, Realistic Mock Exams, Detailed Analytics." xml:space="preserve">
+    <value>Umfangreiche Fragebank, Realistische Probeklausuren, Detaillierte Analysen.</value>
+  </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>Konsistenzüberprüfung</value>
   </data>
+  <data name="Cross-Platform Access" xml:space="preserve">
+    <value>Plattformübergreifender Zugriff</value>
+  </data>
   <data name="Dashboard Website" xml:space="preserve">
     <value>Dashboard-Website</value>
+  </data>
+  <data name="Detailed Analytics" xml:space="preserve">
+    <value>Detaillierte Analytik</value>
   </data>
   <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
     <value>Entwickeln Sie ausschließlich in UTC, während das System Daten automatisch in die lokale Zeitzone des Benutzers konvertiert und anzeigt.</value>
@@ -180,6 +198,9 @@
   <data name="Markdown To HTML" xml:space="preserve">
     <value>Markdown zu HTML</value>
   </data>
+  <data name="Master Your Music Theory" xml:space="preserve">
+    <value>Beherrsche Deine Musiktheorie</value>
+  </data>
   <data name="MIT Licence" xml:space="preserve">
     <value>MIT-Lizenz</value>
   </data>
@@ -195,17 +216,32 @@
   <data name="Music Tools" xml:space="preserve">
     <value>Musik-Tools</value>
   </data>
+  <data name="Official Curriculum" xml:space="preserve">
+    <value>Offizieller Lehrplan</value>
+  </data>
   <data name="Open Source" xml:space="preserve">
     <value>Open Source</value>
   </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>OpenID Connect-Integration</value>
   </data>
+  <data name="Practice anytime, anywhere. Our platform is fully responsive and works on all your devices." xml:space="preserve">
+    <value>Üben Sie jederzeit und überall. Unsere Plattform ist vollständig responsiv und funktioniert auf allen Ihren Geräten.</value>
+  </data>
+  <data name="Practice with thousands of questions from official sources, covering all levels and topics." xml:space="preserve">
+    <value>Üben Sie mit Tausenden von Fragen aus offiziellen Quellen, die alle Niveaus und Themen abdecken.</value>
+  </data>
+  <data name="Progress" xml:space="preserve">
+    <value>Fortschritt</value>
+  </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>RBAC-Autorisierung</value>
   </data>
   <data name="Read the document" xml:space="preserve">
     <value>Dokumentation lesen</value>
+  </data>
+  <data name="Realistic Mock Exams" xml:space="preserve">
+    <value>Realistische Probeklausuren</value>
   </data>
   <data name="Responsive Design" xml:space="preserve">
     <value>Responsives Design</value>
@@ -225,6 +261,15 @@
   <data name="Select your school and level to start practicing" xml:space="preserve">
     <value>Wählen Sie Ihre Schule und Ihr Niveau aus, um mit dem Üben zu beginnen.</value>
   </data>
+  <data name="Sharpen your sight-singing skills with a vast library of melodies and interactive exercises." xml:space="preserve">
+    <value>Schärfen Sie Ihre Noten- und Gesangsfähigkeiten mit einer umfangreichen Bibliothek an Melodien und interaktiven Übungen.</value>
+  </data>
+  <data name="Sight-Singing Practice" xml:space="preserve">
+    <value>Sichtgesangstraining</value>
+  </data>
+  <data name="Simulate the real exam environment with timed mock tests and get a feel for the actual challenge." xml:space="preserve">
+    <value>Simulieren Sie die echte Prüfungssituation mit zeitgesteuerten Übungstests und gewinnen Sie ein Gefühl für die echte Herausforderung.</value>
+  </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>Intelligente Konfigurationsüberschreibungen</value>
   </data>
@@ -236,6 +281,9 @@
   </data>
   <data name="Start a new project" xml:space="preserve">
     <value>Ein neues Projekt starten</value>
+  </data>
+  <data name="Start Practice" xml:space="preserve">
+    <value>Übung starten</value>
   </data>
   <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
     <value>Unterstützt sowohl Umgebungsvariablen als auch datenbankbasierte Einstellungen, wobei Umgebungsvariablen automatisch Vorrang erhalten, um nahtlose Überschreibungen zu ermöglichen.</value>
@@ -255,6 +303,9 @@
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>Dies ist ein Template-Projekt, in dem wir die Reise des Voyagers beginnen...</value>
   </data>
+  <data name="Track your performance, view detailed score reports, and identify your strengths and weaknesses." xml:space="preserve">
+    <value>Verfolgen Sie Ihre Leistung, sehen Sie detaillierte Punkteberichte an und identifizieren Sie Ihre Stärken und Schwächen.</value>
+  </data>
   <data name="Usage" xml:space="preserve">
     <value>Verwendung</value>
   </data>
@@ -269,6 +320,9 @@
   </data>
   <data name="What our developers say" xml:space="preserve">
     <value>Was unsere Entwickler sagen</value>
+  </data>
+  <data name="Why choose Music Exam Platform?" xml:space="preserve">
+    <value>Warum die Music Exam Platform wählen?</value>
   </data>
   <data name="Why use the Aiursoft Template?" xml:space="preserve">
     <value>Warum das Aiursoft Template verwenden?</value>

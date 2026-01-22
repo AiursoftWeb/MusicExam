@@ -15,5 +15,5 @@ public class User : IdentityUser
 
     public DateTime CreationTime { get; init; } = DateTime.UtcNow;
 
-    public DateTime? ExpireAt { get; set; }
+
 }

@@ -30,6 +30,9 @@
   <data name="A complete solution for user authentication and profile management." xml:space="preserve">
     <value>Μια πλήρης λύση για την πιστοποίηση χρηστών και τη διαχείριση προφίλ.</value>
   </data>
+  <data name="A comprehensive platform designed to help you excel in your music exams. Practice with thousands of questions from official sources." xml:space="preserve">
+    <value>Μια εκτεταμένη πλατφόρμα που σχεδιάστηκε για να σας βοηθήσει να επιτύχετε στις εξετάσεις μουσικής. Προετοιμασία με χιλιάδες ερωτήσεις από επίσημες πηγές.</value>
+  </data>
   <data name="A fully responsive layout that looks great on both desktop and mobile devices." xml:space="preserve">
     <value>Μια πλήρως ανταποκρινόμενη διάταξη που φαίνεται εξαιρετική τόσο σε επιτραπέζιους υπολογιστές όσο και σε κινητές συσκευές.</value>
   </data>
@@ -44,6 +47,9 @@
   </data>
   <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
     <value>Το Aiursoft Template είναι η απόλυτη μας επιλογή για εταιρικά έργα! Είναι φτιαγμένο για προγραμματιστές και είναι ελαφρύ αλλά και ισχυρό. Μπορούμε να παραλείψουμε όλο τον τυπικό κώδικα για την ταυτοποίηση και τη διαχείριση χρηστών.</value>
+  </data>
+  <data name="All content is based on the official curriculum of major music conservatories." xml:space="preserve">
+    <value>Όλα τα περιεχόμενα βασίζονται στο επίσημο πρόγραμμα σπουδών των κυριότερων μουσικών σχολών.</value>
   </data>
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>Όλες οι εξαρτήσεις εγγράφονται αυτόματα και είναι πάντα διαθέσιμες μέσω της εισαγωγής από κατασκευαστή.</value>
@@ -66,6 +72,9 @@
   <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
     <value>Αυτόματη, AI-οδηγούμενη μετάφραση σε 28 γλώσσες.</value>
   </data>
+  <data name="Available Exams" xml:space="preserve">
+    <value>Διαθέσιμα Εξετάσεις</value>
+  </data>
   <data name="Background Job Processing" xml:space="preserve">
     <value>Επεξεργασία Υπόβαθρο Εργασίας</value>
   </data>
@@ -84,11 +93,23 @@
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>Πληρέστερη Τεκμηρίωση</value>
   </data>
+  <data name="Comprehensive Question Bank" xml:space="preserve">
+    <value>Πλήρης Βάση Ερωτήσεων</value>
+  </data>
+  <data name="Comprehensive Question Bank, Realistic Mock Exams, Detailed Analytics." xml:space="preserve">
+    <value>Εκτενής Βάση Ερωτήσεων, Πραγματικές Προσομοιώσεις Εξετάσεων, Λεπτομερή Αναλύσεις</value>
+  </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>Έλεγχος Συνοχής</value>
   </data>
+  <data name="Cross-Platform Access" xml:space="preserve">
+    <value>Πρόσβαση από διάφορες πλατφόρμες</value>
+  </data>
   <data name="Dashboard Website" xml:space="preserve">
     <value>Ιστοσελίδα Πίνακα Ελέγχου</value>
+  </data>
+  <data name="Detailed Analytics" xml:space="preserve">
+    <value>Λεπτομερής Ανάλυση</value>
   </data>
   <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
     <value>Αναπτύξτε αποκλειστικά στο UTC, ενώ το σύστημα μετατρέπει αυτόματα και εμφανίζει τις ημερομηνίες στην τοπική ώρα του χρήστη.</value>
@@ -177,6 +198,9 @@
   <data name="Markdown To HTML" xml:space="preserve">
     <value>Markdown σε HTML</value>
   </data>
+  <data name="Master Your Music Theory" xml:space="preserve">
+    <value>Εξασκήσου τη Θεωρία Μουσικής σου</value>
+  </data>
   <data name="MIT Licence" xml:space="preserve">
     <value>Άδεια MIT</value>
   </data>
@@ -192,17 +216,32 @@
   <data name="Music Tools" xml:space="preserve">
     <value>Εργαλεία Μουσικής</value>
   </data>
+  <data name="Official Curriculum" xml:space="preserve">
+    <value>Επίσημο Πρόγραμμα Σπουδών</value>
+  </data>
   <data name="Open Source" xml:space="preserve">
     <value>Ανοιχτού Κώδικα</value>
   </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>Ενσωμάτωση OpenID Connect</value>
   </data>
+  <data name="Practice anytime, anywhere. Our platform is fully responsive and works on all your devices." xml:space="preserve">
+    <value>Πρακτική οποιαδήποτε στιγμή, οπουδήποτε. Το πλατφόρμα μας είναι εντελώς ευέλικτο και λειτουργεί σε όλες τις συσκευές σας.</value>
+  </data>
+  <data name="Practice with thousands of questions from official sources, covering all levels and topics." xml:space="preserve">
+    <value>Άσκηση με χιλιάδες ερωτήσεις από επίσημες πηγές, που καλύπτουν όλα τα επίπεδα και τα θέματα.</value>
+  </data>
+  <data name="Progress" xml:space="preserve">
+    <value>Πρόοδος</value>
+  </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>Εξουσιοδότηση RBAC</value>
   </data>
   <data name="Read the document" xml:space="preserve">
     <value>Διαβάστε το έγγραφο</value>
+  </data>
+  <data name="Realistic Mock Exams" xml:space="preserve">
+    <value>Πραγματικά Μοντέλα Εξετάσεων</value>
   </data>
   <data name="Responsive Design" xml:space="preserve">
     <value>Αποκρισιμό Σχεδιασμό</value>
@@ -219,6 +258,18 @@
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Απολαύστε απρόσκοπτη ενσωμάτωση με οποιονδήποτε πάροχο OpenID Connect, με αυτόματο συγχρονισμό ρόλων.</value>
   </data>
+  <data name="Select your school and level to start practicing" xml:space="preserve">
+    <value>Επιλέξτε το σχολείο και το επίπεδό σας για να ξεκινήσετε την εξάσκηση.</value>
+  </data>
+  <data name="Sharpen your sight-singing skills with a vast library of melodies and interactive exercises." xml:space="preserve">
+    <value>Βελτιώστε τις δεξιότητές σας στην υποκειμενική εκτέλεση με μία εκτεταμένη βιβλιοθήκη μελωδιών και αλληλεπιδραστικές ασκήσεις.</value>
+  </data>
+  <data name="Sight-Singing Practice" xml:space="preserve">
+    <value>Άσκηση Ακολουθίας Τραγουδιού</value>
+  </data>
+  <data name="Simulate the real exam environment with timed mock tests and get a feel for the actual challenge." xml:space="preserve">
+    <value>Προσομοίωση του πραγματικού περιβάλλοντος εξετάσεων με χρονομετρημένα μοντέλα εξετάσεων και αισθητική της πραγματικής πρόκλησης.</value>
+  </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>Έξυπνες Υπερκαλύψεις Ρυθμίσεων</value>
   </data>
@@ -230,6 +281,9 @@
   </data>
   <data name="Start a new project" xml:space="preserve">
     <value>Ξεκινήστε ένα νέο έργο</value>
+  </data>
+  <data name="Start Practice" xml:space="preserve">
+    <value>Ξεκίνα Πράξη</value>
   </data>
   <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
     <value>Υποστηρίζει και τις δύο μεταβλητές περιβάλλοντος και ρυθμίσεις που βασίζονται σε βάση δεδομένων, με αυτόματη προτεραιότητα προς τις μεταβλητές περιβάλλοντος για ομαλή αντικατάσταση.</value>
@@ -249,6 +303,9 @@
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>Αυτό είναι ένα πρότυπο έργο, από όπου ξεκινάμε το ταξίδι...</value>
   </data>
+  <data name="Track your performance, view detailed score reports, and identify your strengths and weaknesses." xml:space="preserve">
+    <value>Παρακολουθήστε την επίδοσή σας, ανακαλύψτε λεπτομερείς αναφορές βαθμολογίας και αναγνωρίστε τις δυνάμεις και τα αδύναμα σας.</value>
+  </data>
   <data name="Usage" xml:space="preserve">
     <value>Χρήση</value>
   </data>
@@ -264,6 +321,9 @@
   <data name="What our developers say" xml:space="preserve">
     <value>Τι λένε οι προγραμματιστές μας</value>
   </data>
+  <data name="Why choose Music Exam Platform?" xml:space="preserve">
+    <value>Γιατί να επιλέξετε την πλατφόρμα Music Exam;</value>
+  </data>
   <data name="Why use the Aiursoft Template?" xml:space="preserve">
     <value>Γιατί να χρησιμοποιήσετε το Πρότυπο Aiursoft;</value>
   </data>
@@ -275,12 +335,6 @@
   </data>
   <data name="You&apos;ll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
     <value>Θα χρειαστείτε το .NET 10 SDK, το npm και το αγαπημένο σας περιβάλλον ανάπτυξης (IDE), όπως το Visual Studio ή το JetBrains Rider. Μπορείτε να βρείτε τον πλήρη οδηγό ρύθμισης στην τεκμηρίωσή μας.</value>
-  </data>
-  <data name="Available Exams" xml:space="preserve">
-    <value>Διαθέσιμα Εξετάσεις</value>
-  </data>
-  <data name="Select your school and level to start practicing" xml:space="preserve">
-    <value>Επιλέξτε το σχολείο και το επίπεδό σας για να ξεκινήσετε την εξάσκηση.</value>
   </data>
 
 </root>

@@ -30,6 +30,9 @@
   <data name="A complete solution for user authentication and profile management." xml:space="preserve">
     <value>Kullanıcı kimlik doğrulama ve profil yönetimi için tam bir çözüm.</value>
   </data>
+  <data name="A comprehensive platform designed to help you excel in your music exams. Practice with thousands of questions from official sources." xml:space="preserve">
+    <value>Resmi kaynaklardan binlerce soruyla pratik yaparak müzik sınavlarında başarılı olmanıza yardımcı olacak kapsamlı bir platform.</value>
+  </data>
   <data name="A fully responsive layout that looks great on both desktop and mobile devices." xml:space="preserve">
     <value>Hem masaüstü hem de mobil cihazlarda harika görünen tamamen duyarlı bir düzen.</value>
   </data>
@@ -44,6 +47,9 @@
   </data>
   <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
     <value>Aiursoft Template, kurumsal projeler için nihai tercihimizdir! Geliştiriciler için tasarlandı, hafif ama güçlüdür. Kimlik doğrulama ve kullanıcı yönetimi için gerekli tüm standart kodlardan kurtulabiliriz.</value>
+  </data>
+  <data name="All content is based on the official curriculum of major music conservatories." xml:space="preserve">
+    <value>Tüm içerik büyük müzik konservatuvarlarının resmi müfredatına dayanmaktadır.</value>
   </data>
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>Tüm bağımlılıklar otomatik olere kaydedilir ve constructor injection yoluyla her zaman kullanılabilir.</value>
@@ -87,11 +93,23 @@
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>Kapsamlı Dokümantasyon</value>
   </data>
+  <data name="Comprehensive Question Bank" xml:space="preserve">
+    <value>Kapsamlı Soru Bankası</value>
+  </data>
+  <data name="Comprehensive Question Bank, Realistic Mock Exams, Detailed Analytics." xml:space="preserve">
+    <value>Kapsamlı Soru Bankası, Gerçekçi Deneme Sınavları, Detaylı Analitikler.</value>
+  </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>Tutarlılık Doğrulama</value>
   </data>
+  <data name="Cross-Platform Access" xml:space="preserve">
+    <value>Çapraz Platform Erişimi</value>
+  </data>
   <data name="Dashboard Website" xml:space="preserve">
     <value>Kontrol Paneli Web Sitesi</value>
+  </data>
+  <data name="Detailed Analytics" xml:space="preserve">
+    <value>Ayrıntılı Analitikler</value>
   </data>
   <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
     <value>UTC&apos;de özel olarak geliştirin, sistem tarihleri otomatik olarak kullanıcıya özel saat diliminde dönüştürür ve görüntüler.</value>
@@ -180,6 +198,9 @@
   <data name="Markdown To HTML" xml:space="preserve">
     <value>Markdown&apos;dan HTML&apos;e</value>
   </data>
+  <data name="Master Your Music Theory" xml:space="preserve">
+    <value>Müzik Kuramını Kendine Aşır</value>
+  </data>
   <data name="MIT Licence" xml:space="preserve">
     <value>MIT Lisansı</value>
   </data>
@@ -195,17 +216,32 @@
   <data name="Music Tools" xml:space="preserve">
     <value>Müzik Araçları</value>
   </data>
+  <data name="Official Curriculum" xml:space="preserve">
+    <value>Resmi Müfredat</value>
+  </data>
   <data name="Open Source" xml:space="preserve">
     <value>Açık Kaynak</value>
   </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>OpenID Connect Entegrasyonu</value>
   </data>
+  <data name="Practice anytime, anywhere. Our platform is fully responsive and works on all your devices." xml:space="preserve">
+    <value>Her zaman, her yerde pratik yapın. Platformumuz tamamen uyumlu ve tüm cihazlarınızda çalışır.</value>
+  </data>
+  <data name="Practice with thousands of questions from official sources, covering all levels and topics." xml:space="preserve">
+    <value>Resmi kaynaklardan binlerce soruyla pratik yapın, tüm seviyeleri ve konuları kapsayacak şekilde.</value>
+  </data>
+  <data name="Progress" xml:space="preserve">
+    <value>İlerleme</value>
+  </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>RBAC Yetkilendirmesi</value>
   </data>
   <data name="Read the document" xml:space="preserve">
     <value>Belgeyi okuyun</value>
+  </data>
+  <data name="Realistic Mock Exams" xml:space="preserve">
+    <value>Gerçekçi Deneme Sınavları</value>
   </data>
   <data name="Responsive Design" xml:space="preserve">
     <value>Duyarlı Tasarım</value>
@@ -225,6 +261,15 @@
   <data name="Select your school and level to start practicing" xml:space="preserve">
     <value>Alıştırma yapmaya başlamak için okulunuzu ve seviyenizi seçin</value>
   </data>
+  <data name="Sharpen your sight-singing skills with a vast library of melodies and interactive exercises." xml:space="preserve">
+    <value>Görme şarkı söyleme becerilerinizi, büyük bir melodi kütüphanesi ve etkileşimli alıştırmalarla geliştirin.</value>
+  </data>
+  <data name="Sight-Singing Practice" xml:space="preserve">
+    <value>Görme Sesi Pratikleri</value>
+  </data>
+  <data name="Simulate the real exam environment with timed mock tests and get a feel for the actual challenge." xml:space="preserve">
+    <value>Gerçek sınav ortamını zamanlı taklit sınavlarla simüle edin ve gerçek zorlukla tanışın.</value>
+  </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>Akıllı Yapılandırma Geçersiz Kılma</value>
   </data>
@@ -236,6 +281,9 @@
   </data>
   <data name="Start a new project" xml:space="preserve">
     <value>Yeni bir proje başlat</value>
+  </data>
+  <data name="Start Practice" xml:space="preserve">
+    <value>Pratik Yapmaya Başla</value>
   </data>
   <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
     <value>Ortam değişkenleri ve veritabanı tabanlı ayarlar destekler, sorunsuz geçişler için ortam değişkenlerine otomatik öncelik verilir.</value>
@@ -255,6 +303,9 @@
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>Bu, yolculuğa başladığımız bir şablon projedir...</value>
   </data>
+  <data name="Track your performance, view detailed score reports, and identify your strengths and weaknesses." xml:space="preserve">
+    <value>Performansınızı takip edin, detaylı puan raporlarını görüntüleyin ve güçlü ve zayıf yönlerinizi belirleyin.</value>
+  </data>
   <data name="Usage" xml:space="preserve">
     <value>Kullanım</value>
   </data>
@@ -269,6 +320,9 @@
   </data>
   <data name="What our developers say" xml:space="preserve">
     <value>Geliştiricilerimizin Görüşleri</value>
+  </data>
+  <data name="Why choose Music Exam Platform?" xml:space="preserve">
+    <value>Neden Müzik Sınav Platformunu Seçmelisiniz?</value>
   </data>
   <data name="Why use the Aiursoft Template?" xml:space="preserve">
     <value>Neden Aiursoft Template Kullanmalısınız?</value>

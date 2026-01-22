@@ -30,6 +30,9 @@
   <data name="A complete solution for user authentication and profile management." xml:space="preserve">
     <value>ユーザー認証およびプロファイル管理の完全なソリューション。</value>
   </data>
+  <data name="A comprehensive platform designed to help you excel in your music exams. Practice with thousands of questions from official sources." xml:space="preserve">
+    <value>あなたの音楽試験で優れた成績を収めるのを支援する包括的なプラットフォームです。公式ソースからの数千問の問題で練習しましょう。</value>
+  </data>
   <data name="A fully responsive layout that looks great on both desktop and mobile devices." xml:space="preserve">
     <value>デスクトップとモバイルの両方のデバイスで美しく表示される、完全なレスポンシブレイアウト。</value>
   </data>
@@ -44,6 +47,9 @@
   </data>
   <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
     <value>Aiursoft Templateは、エンタープライズプロジェクトにおける私たちの確固たる選択です！開発者のために構築されており、軽量でありながら強力です。認証やユーザー管理に関する定型コードをすべて省略できます。</value>
+  </data>
+  <data name="All content is based on the official curriculum of major music conservatories." xml:space="preserve">
+    <value>すべてのコンテンツは、主要な音楽科大学院の公式カリキュラムに基づいています。</value>
   </data>
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>すべての依存関係は自動的に登録され、コンストラクタインジェクションを通じて常に利用可能です。</value>
@@ -87,11 +93,23 @@
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>包括的なドキュメント</value>
   </data>
+  <data name="Comprehensive Question Bank" xml:space="preserve">
+    <value>包括的な問題集</value>
+  </data>
+  <data name="Comprehensive Question Bank, Realistic Mock Exams, Detailed Analytics." xml:space="preserve">
+    <value>包括的な問題データベース、本格的な模擬試験、詳細な分析</value>
+  </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>整合性検証</value>
   </data>
+  <data name="Cross-Platform Access" xml:space="preserve">
+    <value>クロスプラットフォームアクセス</value>
+  </data>
   <data name="Dashboard Website" xml:space="preserve">
     <value>ダッシュボードウェブサイト</value>
+  </data>
+  <data name="Detailed Analytics" xml:space="preserve">
+    <value>詳細な分析</value>
   </data>
   <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
     <value>開発はUTCで行うだけで、システムが自動的に日付をユーザーのローカルタイムゾーンに変換して表示します。</value>
@@ -180,6 +198,9 @@
   <data name="Markdown To HTML" xml:space="preserve">
     <value>MarkdownからHTMLへ</value>
   </data>
+  <data name="Master Your Music Theory" xml:space="preserve">
+    <value>音楽理論をマスターしよう</value>
+  </data>
   <data name="MIT Licence" xml:space="preserve">
     <value>MITライセンス</value>
   </data>
@@ -195,17 +216,32 @@
   <data name="Music Tools" xml:space="preserve">
     <value>音楽ツール</value>
   </data>
+  <data name="Official Curriculum" xml:space="preserve">
+    <value>公式カリキュラム</value>
+  </data>
   <data name="Open Source" xml:space="preserve">
     <value>オープンソース</value>
   </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>OpenID Connect 連携</value>
   </data>
+  <data name="Practice anytime, anywhere. Our platform is fully responsive and works on all your devices." xml:space="preserve">
+    <value>いつでも、どこでも練習できます。当プラットフォームは完全に応答性があり、すべてのデバイスで動作します。</value>
+  </data>
+  <data name="Practice with thousands of questions from official sources, covering all levels and topics." xml:space="preserve">
+    <value>公式のソースから数千問の問題を練習し、すべてのレベルとトピックをカバーします。</value>
+  </data>
+  <data name="Progress" xml:space="preserve">
+    <value>進捗</value>
+  </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>RBAC認可</value>
   </data>
   <data name="Read the document" xml:space="preserve">
     <value>ドキュメントを読む</value>
+  </data>
+  <data name="Realistic Mock Exams" xml:space="preserve">
+    <value>本格的な模擬試験</value>
   </data>
   <data name="Responsive Design" xml:space="preserve">
     <value>レスポンシブデザイン</value>
@@ -225,6 +261,15 @@
   <data name="Select your school and level to start practicing" xml:space="preserve">
     <value>学校とレベルを選択して練習を始めましょう</value>
   </data>
+  <data name="Sharpen your sight-singing skills with a vast library of melodies and interactive exercises." xml:space="preserve">
+    <value>広大なメロディーのライブラリとインタラクティブな演習で、視唱のスキルを磨きましょう。</value>
+  </data>
+  <data name="Sight-Singing Practice" xml:space="preserve">
+    <value>楽譜読み練習</value>
+  </data>
+  <data name="Simulate the real exam environment with timed mock tests and get a feel for the actual challenge." xml:space="preserve">
+    <value>時間制限付き模擬試験で本番の試験環境を再現し、実際の課題感を体験しましょう。</value>
+  </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>スマートな設定オーバーライド</value>
   </data>
@@ -236,6 +281,9 @@
   </data>
   <data name="Start a new project" xml:space="preserve">
     <value>新規プロジェクトを開始</value>
+  </data>
+  <data name="Start Practice" xml:space="preserve">
+    <value>練習を開始する</value>
   </data>
   <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
     <value>環境変数とデータベースベースの設定の両方をサポートしており、環境変数に自動的に優先順位が与えられ、スムーズな上書きが可能になります。</value>
@@ -255,6 +303,9 @@
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>これはテンプレートプロジェクトであり、ここからボイジャーの旅が始まります...</value>
   </data>
+  <data name="Track your performance, view detailed score reports, and identify your strengths and weaknesses." xml:space="preserve">
+    <value>あなたのパフォーマンスを追跡し、詳細なスコアレポートを確認し、あなたの強みと弱みを特定します。</value>
+  </data>
   <data name="Usage" xml:space="preserve">
     <value>使用方法</value>
   </data>
@@ -269,6 +320,9 @@
   </data>
   <data name="What our developers say" xml:space="preserve">
     <value>開発者の声</value>
+  </data>
+  <data name="Why choose Music Exam Platform?" xml:space="preserve">
+    <value>音楽試験プラットフォームを選ばれる理由は？</value>
   </data>
   <data name="Why use the Aiursoft Template?" xml:space="preserve">
     <value>Aiursoftテンプレートを使用する理由</value>

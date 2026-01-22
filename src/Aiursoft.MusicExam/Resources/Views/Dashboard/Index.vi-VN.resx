@@ -63,6 +63,9 @@
   <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
     <value>Dịch tự động, được hỗ trợ bởi AI sang 28 ngôn ngữ.</value>
   </data>
+  <data name="Available Exams" xml:space="preserve">
+    <value>Bài kiểm tra sẵn có</value>
+  </data>
   <data name="Background Job Processing" xml:space="preserve">
     <value>Xử lý công việc nền</value>
   </data>
@@ -173,6 +176,9 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Tích hợp liền mạch với mọi nhà cung cấp OpenID Connect, kèm theo đồng bộ hóa vai trò tự động.</value>
+  </data>
+  <data name="Select your school and level to start practicing" xml:space="preserve">
+    <value>Chọn trường và cấp độ của bạn để bắt đầu luyện tập</value>
   </data>
   <data name="Sharpen your sight-singing skills with a vast library of melodies and interactive exercises." xml:space="preserve">
     <value>Rèn luyện kỹ năng xướng âm thị tấu của bạn với một thư viện giai điệu phong phú và các bài tập tương tác.</value>

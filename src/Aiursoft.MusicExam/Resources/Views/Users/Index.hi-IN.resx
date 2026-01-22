@@ -45,14 +45,26 @@
   <data name="Email" xml:space="preserve">
     <value>ईमेल</value>
   </data>
+  <data name="Expire" xml:space="preserve">
+    <value>समाप्त होना</value>
+  </data>
+  <data name="Free" xml:space="preserve">
+    <value>मुफ्त</value>
+  </data>
   <data name="Manage Users" xml:space="preserve">
     <value>उपयोगकर्ताओं का प्रबंधन</value>
   </data>
   <data name="Name" xml:space="preserve">
     <value>नाम</value>
   </data>
+  <data name="Paid" xml:space="preserve">
+    <value>भुगतान किया गया</value>
+  </data>
   <data name="Roles" xml:space="preserve">
     <value>भूमिकाएँ</value>
+  </data>
+  <data name="Usage" xml:space="preserve">
+    <value>उपयोग</value>
   </data>
   <data name="User name" xml:space="preserve">
     <value>उपयोगकर्ता नाम</value>

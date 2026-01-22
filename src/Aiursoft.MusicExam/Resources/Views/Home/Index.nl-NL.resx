@@ -30,6 +30,9 @@
   <data name="A complete solution for user authentication and profile management." xml:space="preserve">
     <value>Een complete oplossing voor gebruikersverificatie en profielbeheer.</value>
   </data>
+  <data name="A comprehensive platform designed to help you excel in your music exams. Practice with thousands of questions from official sources." xml:space="preserve">
+    <value>Een uitgebreid platform ontworpen om je te helpen slagen in je muziekexamen. Oefen met duizenden vragen van officiële bronnen.</value>
+  </data>
   <data name="A fully responsive layout that looks great on both desktop and mobile devices." xml:space="preserve">
     <value>Een volledig responsieve lay-out die er geweldig uitziet op zowel desktop- als mobiele apparaten.</value>
   </data>
@@ -44,6 +47,9 @@
   </data>
   <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
     <value>Aiursoft Template is onze definitieve keuze voor enterprise projecten! Het is gebouwd voor ontwikkelaars en is lichtgewicht maar krachtig. We kunnen alle standaardcode voor authenticatie en gebruikersbeheer overslaan.</value>
+  </data>
+  <data name="All content is based on the official curriculum of major music conservatories." xml:space="preserve">
+    <value>Alle inhoud is gebaseerd op het officiële curriculum van grote muziekscholen.</value>
   </data>
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>Alle afhankelijkheden worden automatisch geregistreerd en zijn altijd beschikbaar via constructorinjectie.</value>
@@ -87,11 +93,23 @@
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>Uitgebreide documentatie</value>
   </data>
+  <data name="Comprehensive Question Bank" xml:space="preserve">
+    <value>Uitgebreide vragenbank</value>
+  </data>
+  <data name="Comprehensive Question Bank, Realistic Mock Exams, Detailed Analytics." xml:space="preserve">
+    <value>Uitgebreide vragenbank, realistische proefexamens, gedetailleerde analytiek.</value>
+  </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>Consistency Validatie</value>
   </data>
+  <data name="Cross-Platform Access" xml:space="preserve">
+    <value>Toegang vanaf meerdere platforms</value>
+  </data>
   <data name="Dashboard Website" xml:space="preserve">
     <value>Dashboardwebsite</value>
+  </data>
+  <data name="Detailed Analytics" xml:space="preserve">
+    <value>Uitgebreide analyses</value>
   </data>
   <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
     <value>Ontwikkel uitsluitend in UTC terwijl het systeem automatisch datums converteert en weergeeft in de lokale tijdzone van de gebruiker.</value>
@@ -180,6 +198,9 @@
   <data name="Markdown To HTML" xml:space="preserve">
     <value>Markdown naar HTML</value>
   </data>
+  <data name="Master Your Music Theory" xml:space="preserve">
+    <value>Beheers je muziektheorie</value>
+  </data>
   <data name="MIT Licence" xml:space="preserve">
     <value>MIT-licentie</value>
   </data>
@@ -195,17 +216,32 @@
   <data name="Music Tools" xml:space="preserve">
     <value>Muziekhulpmiddelen</value>
   </data>
+  <data name="Official Curriculum" xml:space="preserve">
+    <value>Officiële leerstof</value>
+  </data>
   <data name="Open Source" xml:space="preserve">
     <value>Open Source</value>
   </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>OpenID Connect-integratie</value>
   </data>
+  <data name="Practice anytime, anywhere. Our platform is fully responsive and works on all your devices." xml:space="preserve">
+    <value>Oefen op elk moment, op elke plek. Onze platform is volledig responsief en werkt op al je apparaten.</value>
+  </data>
+  <data name="Practice with thousands of questions from official sources, covering all levels and topics." xml:space="preserve">
+    <value>Oefen met duizenden vragen van officiële bronnen, die alle niveaus en onderwerpen behandelen.</value>
+  </data>
+  <data name="Progress" xml:space="preserve">
+    <value>Voortgang</value>
+  </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>RBAC-autorisatie</value>
   </data>
   <data name="Read the document" xml:space="preserve">
     <value>Lees het document</value>
+  </data>
+  <data name="Realistic Mock Exams" xml:space="preserve">
+    <value>Realistische oefentoetsen</value>
   </data>
   <data name="Responsive Design" xml:space="preserve">
     <value>Responsief Ontwerp</value>
@@ -225,6 +261,15 @@
   <data name="Select your school and level to start practicing" xml:space="preserve">
     <value>Selecteer je school en niveau om te beginnen met oefenen</value>
   </data>
+  <data name="Sharpen your sight-singing skills with a vast library of melodies and interactive exercises." xml:space="preserve">
+    <value>Scherp je zangvaardigheden met een uitgebreide bibliotheek aan melodieën en interactieve oefeningen.</value>
+  </data>
+  <data name="Sight-Singing Practice" xml:space="preserve">
+    <value>Zienzang oefening</value>
+  </data>
+  <data name="Simulate the real exam environment with timed mock tests and get a feel for the actual challenge." xml:space="preserve">
+    <value>De echte examenomgeving simuleren met tijdgebonden oefentoetsen en een gevoel krijgen voor de daadwerkelijke uitdaging.</value>
+  </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>Slimme configuratie-overschrijvingen</value>
   </data>
@@ -236,6 +281,9 @@
   </data>
   <data name="Start a new project" xml:space="preserve">
     <value>Start een nieuw project</value>
+  </data>
+  <data name="Start Practice" xml:space="preserve">
+    <value>Begin oefenen</value>
   </data>
   <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
     <value>Ondersteunt zowel omgevingsvariabelen als database-gebaseerde instellingen, met automatische prioriteit voor omgevingsvariabelen voor naadloze overschrijvingen.</value>
@@ -255,6 +303,9 @@
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>Dit is een templateproject, waar we de verkenning beginnen...</value>
   </data>
+  <data name="Track your performance, view detailed score reports, and identify your strengths and weaknesses." xml:space="preserve">
+    <value>Volg je prestaties, bekijk gedetailleerde scorerapporten en identificeer je sterktes en zwaktes.</value>
+  </data>
   <data name="Usage" xml:space="preserve">
     <value>Gebruik</value>
   </data>
@@ -269,6 +320,9 @@
   </data>
   <data name="What our developers say" xml:space="preserve">
     <value>Wat onze ontwikkelaars zeggen</value>
+  </data>
+  <data name="Why choose Music Exam Platform?" xml:space="preserve">
+    <value>Waarom kiest u Music Exam Platform?</value>
   </data>
   <data name="Why use the Aiursoft Template?" xml:space="preserve">
     <value>Waarom de Aiursoft Template gebruiken?</value>

@@ -63,6 +63,9 @@
   <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
     <value>自動、AI駆動の28言語への翻訳</value>
   </data>
+  <data name="Available Exams" xml:space="preserve">
+    <value>利用可能な試験</value>
+  </data>
   <data name="Background Job Processing" xml:space="preserve">
     <value>バックグラウンドジョブ処理</value>
   </data>
@@ -173,6 +176,9 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>あらゆるOpenID Connectプロバイダーとシームレスに統合し、ロールの自動同期を実現します。</value>
+  </data>
+  <data name="Select your school and level to start practicing" xml:space="preserve">
+    <value>学校とレベルを選択して練習を始めましょう</value>
   </data>
   <data name="Sharpen your sight-singing skills with a vast library of melodies and interactive exercises." xml:space="preserve">
     <value>膨大なメロディのライブラリとインタラクティブな練習問題で、視唱のスキルを磨きましょう。</value>

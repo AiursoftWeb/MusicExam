@@ -63,6 +63,9 @@
   <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
     <value>Automatisk, AI-driven översättning till 28 språk.</value>
   </data>
+  <data name="Available Exams" xml:space="preserve">
+    <value>Tillgängliga prov</value>
+  </data>
   <data name="Background Job Processing" xml:space="preserve">
     <value>Bakgrundsjobbshantering</value>
   </data>
@@ -173,6 +176,9 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Integrera sömlöst med valfri OpenID Connect-leverantör, med automatisk rollsynkronisering.</value>
+  </data>
+  <data name="Select your school and level to start practicing" xml:space="preserve">
+    <value>Välj din skola och nivå för att börja öva</value>
   </data>
   <data name="Sharpen your sight-singing skills with a vast library of melodies and interactive exercises." xml:space="preserve">
     <value>Vässa dina notläsningsfärdigheter med ett omfattande bibliotek av melodier och interaktiva övningar.</value>

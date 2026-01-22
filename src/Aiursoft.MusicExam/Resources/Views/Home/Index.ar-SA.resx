@@ -30,6 +30,9 @@
   <data name="A complete solution for user authentication and profile management." xml:space="preserve">
     <value>حل كامل لإدارة المصادقة وملف التعريف للمستخدم.</value>
   </data>
+  <data name="A comprehensive platform designed to help you excel in your music exams. Practice with thousands of questions from official sources." xml:space="preserve">
+    <value>منصة شاملة مصممة لمساعدتك على التفوق في امتحانات الموسيقى الخاصة بك. تدرب على آلاف الأسئلة من مصادر رسمية.</value>
+  </data>
   <data name="A fully responsive layout that looks great on both desktop and mobile devices." xml:space="preserve">
     <value>تصميم متجاوب بالكامل يبدو رائعًا على كل من أجهزة الكمبيوتر المكتبية والهواتف المحمولة.</value>
   </data>
@@ -44,6 +47,9 @@
   </data>
   <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
     <value>يُعتبر قالب Aiursoft خيارنا النهائي لمشاريع المؤسسات! فهو مصمم خصيصًا للمطورين، ويتميز بخفته مع قوته. يمكننا تخطي جميع الإجراءات الروتينية للمصادقة وإدارة المستخدمين.</value>
+  </data>
+  <data name="All content is based on the official curriculum of major music conservatories." xml:space="preserve">
+    <value>جميع المحتويات مبنية على المقرر الرسمي لمعاهد الموسيقى الكبرى.</value>
   </data>
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>يتم تسجيل جميع التبعيات تلقائيًا وهي متاحة دائمًا عبر حقن المُنشئ.</value>
@@ -87,11 +93,23 @@
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>توثيق شامل</value>
   </data>
+  <data name="Comprehensive Question Bank" xml:space="preserve">
+    <value>مكتبة أسئلة شاملة</value>
+  </data>
+  <data name="Comprehensive Question Bank, Realistic Mock Exams, Detailed Analytics." xml:space="preserve">
+    <value>مكتبة أسئلة شاملة، امتحانات وهمية واقعية، تحليلات مفصلة</value>
+  </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>التحقق من الاتساق</value>
   </data>
+  <data name="Cross-Platform Access" xml:space="preserve">
+    <value>الوصول عبر المنصات المختلفة</value>
+  </data>
   <data name="Dashboard Website" xml:space="preserve">
     <value>موقع لوحة التحكم</value>
+  </data>
+  <data name="Detailed Analytics" xml:space="preserve">
+    <value>تحليلات مفصلة</value>
   </data>
   <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
     <value>قم بتطوير النظام بشكل حصري باستخدام التوقيت العالمي الموحد (UTC) بينما يقوم النظام تلقائيًا بتحويل التواريخ وعرضها بتوقيت المستخدم المحلي.</value>
@@ -180,6 +198,9 @@
   <data name="Markdown To HTML" xml:space="preserve">
     <value>تحويل Markdown إلى HTML</value>
   </data>
+  <data name="Master Your Music Theory" xml:space="preserve">
+    <value>أتقن نظريات الموسيقى الخاصة بك</value>
+  </data>
   <data name="MIT Licence" xml:space="preserve">
     <value>رخصة MIT</value>
   </data>
@@ -195,17 +216,32 @@
   <data name="Music Tools" xml:space="preserve">
     <value>أدوات الموسيقى</value>
   </data>
+  <data name="Official Curriculum" xml:space="preserve">
+    <value>المنهاج الرسمي</value>
+  </data>
   <data name="Open Source" xml:space="preserve">
     <value>مفتوح المصدر</value>
   </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>دمج OpenID Connect</value>
   </data>
+  <data name="Practice anytime, anywhere. Our platform is fully responsive and works on all your devices." xml:space="preserve">
+    <value>تدرّب في أي وقت وفي أي مكان. منصتنا متجاوبة بالكامل وتعمل على جميع أجهزتك.</value>
+  </data>
+  <data name="Practice with thousands of questions from official sources, covering all levels and topics." xml:space="preserve">
+    <value>مارس مع آلاف الأسئلة من المصادر الرسمية، تغطي جميع المستويات والمواضيع.</value>
+  </data>
+  <data name="Progress" xml:space="preserve">
+    <value>التقدم</value>
+  </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>التحكم في الوصول القائم على الأدوار (RBAC)</value>
   </data>
   <data name="Read the document" xml:space="preserve">
     <value>اقرأ المستند</value>
+  </data>
+  <data name="Realistic Mock Exams" xml:space="preserve">
+    <value>امتحانات وهمية واقعية</value>
   </data>
   <data name="Responsive Design" xml:space="preserve">
     <value>تصميم متجاوب</value>
@@ -225,6 +261,15 @@
   <data name="Select your school and level to start practicing" xml:space="preserve">
     <value>اختر مدرستك ومستواك لبدء التدريب</value>
   </data>
+  <data name="Sharpen your sight-singing skills with a vast library of melodies and interactive exercises." xml:space="preserve">
+    <value>حَدِّد مهاراتك في الغناء من الورق باستخدام مكتبة واسعة من الألحان والتمارين التفاعلية.</value>
+  </data>
+  <data name="Sight-Singing Practice" xml:space="preserve">
+    <value>تمارين الغناء من الورق</value>
+  </data>
+  <data name="Simulate the real exam environment with timed mock tests and get a feel for the actual challenge." xml:space="preserve">
+    <value>نمّم بيئة الامتحان الفعلية باستخدام اختبارات وهمية موقتة واحسِس بواقع التحدي الحقيقي.</value>
+  </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>تجاوزات الإعداد الذكية</value>
   </data>
@@ -236,6 +281,9 @@
   </data>
   <data name="Start a new project" xml:space="preserve">
     <value>بدء مشروع جديد</value>
+  </data>
+  <data name="Start Practice" xml:space="preserve">
+    <value>ابدأ التمرين</value>
   </data>
   <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
     <value>يدعم كلًا من متغيرات البيئة والإعدادات المخزنة في قاعدة البيانات، مع إعطاء الأولوية التلقائية لمتغيرات البيئة لضمان التفادي السلس.</value>
@@ -255,6 +303,9 @@
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>هذا مشروع قالب، حيث نبدأ رحلة المستكشف...</value>
   </data>
+  <data name="Track your performance, view detailed score reports, and identify your strengths and weaknesses." xml:space="preserve">
+    <value>تابع أداءك، واعرض تقارير الدرجات التفصيلية، وحدد نقاط قوتك وضعفك.</value>
+  </data>
   <data name="Usage" xml:space="preserve">
     <value>الاستخدام</value>
   </data>
@@ -269,6 +320,9 @@
   </data>
   <data name="What our developers say" xml:space="preserve">
     <value>ماذا يقول مطورونا</value>
+  </data>
+  <data name="Why choose Music Exam Platform?" xml:space="preserve">
+    <value>لماذا تختار منصة امتحانات الموسيقى؟</value>
   </data>
   <data name="Why use the Aiursoft Template?" xml:space="preserve">
     <value>لماذا تستخدم قالب Aiursoft؟</value>

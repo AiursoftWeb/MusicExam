@@ -14,12 +14,11 @@
         <h6 class="card-subtitle text-muted">@Localizer["Detailed list of users who were active this month and why."]</h6>
     </div>
     <div class="table-responsive">
-        <table class="table table-hover mb-0">
             <thead>
             <tr>
                 <th>@Localizer["Avatar"]</th>
                 <th>@Localizer["User"]</th>
-                <th>@Localizer["Reason"]</th>
+                <th>@Localizer["Active Time Spans"]</th>
             </tr>
             </thead>
             <tbody>
@@ -32,11 +31,21 @@
                     <td>
                         <strong>@detail.User.DisplayName</strong> (@detail.User.UserName)
                     </td>
-                    <td>@detail.Reason</td>
+                    <td>
+                        @foreach(var span in detail.ActiveTimes)
+                        {
+                            var activeDuration = span.End - span.Start;
+                            <div>
+                                <span class="badge bg-success">@span.Start.ToString("yyyy-MM-dd HH:mm:ss")</span>
+                                -
+                                <span class="badge bg-secondary">@span.End.ToString("yyyy-MM-dd HH:mm:ss")</span>
+                                <span class="text-muted small">(@activeDuration.ToString(@"dd\.hh\:mm\:ss"))</span>
+                            </div>
+                        }
+                    </td>
                 </tr>
             }
             </tbody>
-        </table>
     </div>
 </div>
 

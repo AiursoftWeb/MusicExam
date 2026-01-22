@@ -13,10 +13,16 @@ public class ActiveUserInfo
     public string AvatarRelativePath { get; set; } = User.DefaultAvatarPath;
 }
 
+public class PermissionTimeSpan
+{
+    public DateTime Start { get; set; }
+    public DateTime End { get; set; }
+}
+
 public class ActiveUserDetail
 {
     public required ActiveUserInfo User { get; set; }
-    public required string Reason { get; set; }
+    public List<PermissionTimeSpan> ActiveTimes { get; set; } = [];
 }
 
 public class MonthlyActiveUserReport
@@ -54,10 +60,12 @@ public class ChangeService(TemplateDbContext dbContext) : IScopedDependency
         var userStates = new Dictionary<string, bool>(); // UserId -> IsDeleted
         var rolePermissions = new Dictionary<string, HashSet<string>>(); // RoleId -> Permissions
         var userRoles = new Dictionary<string, HashSet<string>>(); // UserId -> RoleIds
-        
         var userNames = new Dictionary<string, string>(); // UserId -> DisplayName
         
-        var activeInMonth = new Dictionary<string, string>(); // UserId -> Reason
+        // Track active spans: UserId -> List of spans
+        var usersHistory = new Dictionary<string, List<PermissionTimeSpan>>();
+        // Track currently active start time: UserId -> StartTime
+        var currentActiveStart = new Dictionary<string, DateTime>();
 
         bool HasTakeExam(string userId)
         {
@@ -74,87 +82,145 @@ public class ChangeService(TemplateDbContext dbContext) : IScopedDependency
             return false;
         }
 
-        var preStartChanges = allChanges.Where(c => c.CreateTime < start).ToList();
-        foreach (var change in preStartChanges)
+        void CheckUserStatus(string userId, DateTime time)
         {
-            ApplyChange(change, userStates, rolePermissions, userRoles, userNames);
-        }
+            bool isNowActive = HasTakeExam(userId);
+            bool wasActive = currentActiveStart.ContainsKey(userId);
 
-        // Initial check at start
-        foreach (var userId in userStates.Keys)
-        {
-            if (HasTakeExam(userId))
+            if (isNowActive && !wasActive)
             {
-                activeInMonth[userId] = "Had permission at the start of the month.";
+                // User just became active
+                // If this is before the month start, we'll cap it at month start later effectively
+                // But for logic, we track the actual time they became active
+                currentActiveStart[userId] = time;
+            }
+            else if (!isNowActive && wasActive)
+            {
+                // User just became inactive
+                var startTime = currentActiveStart[userId];
+                currentActiveStart.Remove(userId);
+
+                // Add to history
+                if (!usersHistory.ContainsKey(userId)) usersHistory[userId] = [];
+                usersHistory[userId].Add(new PermissionTimeSpan
+                {
+                    Start = startTime,
+                    End = time
+                });
             }
         }
 
-        // Process changes during month
-        var duringMonthChanges = allChanges.Where(c => c.CreateTime >= start && c.CreateTime <= end).ToList();
-        foreach (var change in duringMonthChanges)
+        // Replay all history
+        foreach (var change in allChanges)
         {
+            // Apply state change
             ApplyChange(change, userStates, rolePermissions, userRoles, userNames);
             
-            // Check who became active
-            if (change.TargetUserId != null)
+            // Check status impact
+            // Users involved could be TargetUserId, or all users with TargetRoleId
+            var usersToCheck = new HashSet<string>();
+            if (change.TargetUserId != null) usersToCheck.Add(change.TargetUserId);
+            
+            if (change.TargetRoleId != null)
             {
-                if (!activeInMonth.ContainsKey(change.TargetUserId) && HasTakeExam(change.TargetUserId))
-                {
-                    activeInMonth[change.TargetUserId] = $"Gained permission during month: {change.Details}";
-                }
+                 // If permission changed for a role, check all users in that role
+                 // Or if user joined/left role, check that user (already handled by TargetUserId)
+                 if (change.Type == ChangeType.RoleGainedPermission || change.Type == ChangeType.RoleLostPermission)
+                 {
+                     foreach(var kvp in userRoles)
+                     {
+                         if (kvp.Value.Contains(change.TargetRoleId))
+                         {
+                             usersToCheck.Add(kvp.Key);
+                         }
+                     }
+                 }
             }
-            else if (change.TargetRoleId != null && change.TargetPermission == AppPermissionNames.CanTakeExam)
+
+            foreach (var userId in usersToCheck)
             {
-                foreach (var userEntry in userRoles)
-                {
-                    if (userEntry.Value.Contains(change.TargetRoleId))
-                    {
-                        if (!activeInMonth.ContainsKey(userEntry.Key) && HasTakeExam(userEntry.Key))
-                        {
-                            activeInMonth[userEntry.Key] = $"Role {change.TargetRoleId} gained permission: {change.Details}";
-                        }
-                    }
-                }
+                CheckUserStatus(userId, change.CreateTime);
             }
         }
 
+        // Finish up: Close any open spans at 'end'
+        foreach (var userId in currentActiveStart.Keys)
+        {
+            if (!usersHistory.ContainsKey(userId)) usersHistory[userId] = [];
+            usersHistory[userId].Add(new PermissionTimeSpan
+            {
+                Start = currentActiveStart[userId],
+                End = end 
+            });
+        }
+        
+        // Prepare list of users to fetch
+        var userIdsWithActivity = new HashSet<string>();
+        foreach (var kvp in usersHistory)
+        {
+            var userId = kvp.Key;
+            var spans = kvp.Value;
+            // Check if any span overlaps with the month
+            if (spans.Any(s => s.Start < end && s.End > start))
+            {
+                userIdsWithActivity.Add(userId);
+            }
+        }
+
+        // Batch fetch real users
         var realUsers = await dbContext.Users
-            .Where(u => activeInMonth.Keys.Contains(u.Id))
+            .Where(u => userIdsWithActivity.Contains(u.Id))
             .ToDictionaryAsync(u => u.Id);
 
         var reportDetails = new List<ActiveUserDetail>();
-        foreach (var entry in activeInMonth)
+        
+        foreach (var kvp in usersHistory)
         {
-            var userId = entry.Key;
-            var reason = entry.Value;
-            
-            ActiveUserInfo userInfo;
-            if (realUsers.TryGetValue(userId, out var user))
+            var userId = kvp.Key;
+            var spans = kvp.Value;
+            var monthlySpans = new List<PermissionTimeSpan>();
+
+            foreach (var span in spans)
             {
-                userInfo = new ActiveUserInfo
+                var overlapStart = span.Start > start ? span.Start : start;
+                var overlapEnd = span.End < end ? span.End : end;
+
+                if (overlapStart <= overlapEnd) 
                 {
-                    Id = user.Id,
-                    UserName = user.UserName ?? string.Empty,
-                    DisplayName = user.DisplayName,
-                    AvatarRelativePath = user.AvatarRelativePath
-                };
+                     monthlySpans.Add(new PermissionTimeSpan { Start = overlapStart, End = overlapEnd });
+                }
             }
-            else
+
+            if (monthlySpans.Count > 0)
             {
-                userInfo = new ActiveUserInfo
+                ActiveUserInfo userInfo;
+                if (realUsers.TryGetValue(userId, out var user))
                 {
-                    Id = userId,
-                    UserName = "deleted",
-                    DisplayName = userNames.GetValueOrDefault(userId, "Deleted User"),
-                    AvatarRelativePath = User.DefaultAvatarPath
-                };
+                    userInfo = new ActiveUserInfo
+                    {
+                        Id = user.Id,
+                        UserName = user.UserName ?? string.Empty,
+                        DisplayName = user.DisplayName,
+                        AvatarRelativePath = user.AvatarRelativePath
+                    };
+                }
+                else
+                {
+                    userInfo = new ActiveUserInfo
+                    {
+                        Id = userId,
+                        UserName = "deleted",
+                        DisplayName = userNames.GetValueOrDefault(userId, "Deleted User"),
+                        AvatarRelativePath = User.DefaultAvatarPath
+                    };
+                }
+
+                reportDetails.Add(new ActiveUserDetail
+                {
+                    User = userInfo,
+                    ActiveTimes = monthlySpans
+                });
             }
-            
-            reportDetails.Add(new ActiveUserDetail
-            {
-                User = userInfo,
-                Reason = reason
-            });
         }
 
         return new MonthlyActiveUserReport

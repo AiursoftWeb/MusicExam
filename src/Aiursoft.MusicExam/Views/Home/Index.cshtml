@@ -1,88 +1,120 @@
-@model Aiursoft.MusicExam.Models.HomeViewModels.IndexViewModel
-@{
-    ViewData["Title"] = "Home Page";
-}
+@model Aiursoft.MusicExam.Models.DashboardViewModels.IndexViewModel
 
-<div class="container py-5">
-    <div class="text-center mb-5">
-        <h1 class="display-5 fw-bold text-primary mb-3">@Localizer["Available Exams"]</h1>
-        <p class="lead text-muted">@Localizer["Select your school and level to start practicing"]</p>
+<vc:marketing-navbar></vc:marketing-navbar>
+
+<section class="landing-intro text-bg-dark pt-5 pt-lg-6 pb-5 pb-lg-7">
+    <div class="landing-intro-content container h-100">
+        <div class="row align-items-center h-100">
+            <div class="col-lg-5 mx-auto">
+                <span class="badge badge-subtle-primary p-1">@Localizer["Open Source"]</span>
+                <span class="badge badge-subtle-primary p-1">@Localizer["Free"]</span>
+                <h1 id="main-slogan" class="my-4 text-white" style="font-size: 3rem;">
+                    @Localizer["Master Your Music Theory"]
+                </h1>
+                <p class="text-lg text-white-50">@Localizer["A comprehensive platform designed to help you excel in your music exams. Practice with thousands of questions from official sources."]</p>
+                <div class="my-4">
+                    <a class="btn btn-primary btn-lg btn-pill" asp-controller="Dashboard" asp-action="Index">@Localizer["Start Practice"]</a>
+                    <a asp-controller="Exam" asp-action="History" class="btn btn-outline-primary btn-lg btn-pill">@Localizer["Progress"]</a>
+                </div>
+            </div>
+            <div class="col-lg-7 d-none d-lg-flex mx-auto text-center">
+                <div class="landing-intro-screenshot">
+                     <!-- Placeholder for screenshot if available, or just remove -->
+                     <i data-lucide="music" style="width: 200px; height: 200px; color: white;"></i>
+                </div>
+            </div>
+        </div>
     </div>
+</section>
 
-    <div class="accordion" id="examAccordion">
-        @foreach (var school in Model.Schools)
-        {
-            var levels = school.Papers
-            .GroupBy(p => p.Level ?? "Uncategorized")
-            .OrderBy(g => g.Key);
-
-            foreach (var levelGroup in levels)
-            {
-                var collapseId = "collapse-" + Guid.NewGuid().ToString("N");
-                <div class="accordion-item border-0 shadow-sm mb-3 rounded overflow-hidden">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed py-4 bg-white" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#@collapseId" aria-expanded="false">
-                            <div class="d-flex flex-column flex-md-row align-items-md-center w-100">
-                                <span class="badge bg-primary me-md-3 mb-2 mb-md-0 px-3 py-2 rounded-pill">@school.Name</span>
-                                <span class="fs-5 fw-bold text-dark">@levelGroup.Key</span>
-                            </div>
-                        </button>
-                    </h2>
-                    <div id="@collapseId" class="accordion-collapse collapse" data-bs-parent="#examAccordion">
-                        <div class="accordion-body bg-light p-4">
-                            @{
-                                var categories = levelGroup
-                                .GroupBy(p => p.Category ?? "General")
-                                .OrderBy(g => g.Key);
-                            }
-
-                            @foreach (var categoryGroup in categories)
-                            {
-                                <div class="mb-4 last-mb-0">
-                                    <h5 class="text-uppercase text-muted fw-bold small ls-1 mb-3"><i
-                                            class="bi bi-collection me-2"></i>@categoryGroup.Key</h5>
-                                    <div class="row g-3">
-                                        @foreach (var paper in categoryGroup.OrderBy(p => p.Title))
-                                        {
-                                            <div class="col-md-6 col-lg-4">
-                                                <a asp-controller="Exam" asp-action="Take" asp-route-id="@paper.Id"
-                                                    class="card h-100 text-decoration-none border-0 shadow-sm hover-lift transition-base">
-                                                    <div class="card-body d-flex align-items-center justify-content-between p-3">
-                                                        <span class="text-dark fw-medium text-truncate me-2"
-                                                            title="@paper.Title">@paper.Title</span>
-                                                        <span class="badge bg-light text-primary rounded-pill"><i
-                                                                class="bi bi-play-fill text-primary"></i> Start</span>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        }
-                                    </div>
-                                </div>
-                            }
-                        </div>
+<section class="py-6">
+    <div class="container">
+        <div class="mb-5 text-center">
+            <span class="text-uppercase text-primary text-sm fw-medium mb-1 d-block">@Localizer["Features"]</span>
+            <h2 class="h1">@Localizer["Why choose Music Exam Platform?"]</h2>
+            <p class="text-muted fs-lg">@Localizer["Comprehensive Question Bank, Realistic Mock Exams, Detailed Analytics."]
+            </p>
+        </div>
+        <div class="row text-start">
+            <div class="col-12 col-md-4">
+                <div class="d-flex align-items-start py-3">
+                    <div class="landing-feature">
+                        <i data-lucide="library"></i>
+                    </div>
+                    <div class="flex-grow-1">
+                        <h4 class="mt-0">@Localizer["Comprehensive Question Bank"]</h4>
+                        <p class="fs-lg">@Localizer["Practice with thousands of questions from official sources, covering all levels and topics."]</p>
                     </div>
                 </div>
-            }
-        }
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="d-flex align-items-start py-3">
+                    <div class="landing-feature">
+                        <i data-lucide="file-check"></i>
+                    </div>
+                    <div class="flex-grow-1">
+                        <h4 class="mt-0">@Localizer["Realistic Mock Exams"]</h4>
+                        <p class="fs-lg">@Localizer["Simulate the real exam environment with timed mock tests and get a feel for the actual challenge."]</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="d-flex align-items-start py-3">
+                    <div class="landing-feature">
+                        <i data-lucide="trending-up"></i>
+                    </div>
+                    <div class="flex-grow-1">
+                        <h4 class="mt-0">@Localizer["Detailed Analytics"]</h4>
+                        <p class="fs-lg">@Localizer["Track your performance, view detailed score reports, and identify your strengths and weaknesses."]</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="d-flex align-items-start py-3">
+                    <div class="landing-feature">
+                        <i data-lucide="music"></i>
+                    </div>
+                    <div class="flex-grow-1">
+                        <h4 class="mt-0">@Localizer["Sight-Singing Practice"]</h4>
+                        <p class="fs-lg">@Localizer["Sharpen your sight-singing skills with a vast library of melodies and interactive exercises."]</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="d-flex align-items-start py-3">
+                    <div class="landing-feature">
+                        <i data-lucide="smartphone"></i>
+                    </div>
+                    <div class="flex-grow-1">
+                        <h4 class="mt-0">@Localizer["Cross-Platform Access"]</h4>
+                        <p class="fs-lg">@Localizer["Practice anytime, anywhere. Our platform is fully responsive and works on all your devices."]</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="d-flex align-items-start py-3">
+                    <div class="landing-feature">
+                        <i data-lucide="award"></i>
+                    </div>
+                    <div class="flex-grow-1">
+                        <h4 class="mt-0">@Localizer["Official Curriculum"]</h4>
+                        <p class="fs-lg">@Localizer["All content is based on the official curriculum of major music conservatories."]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+</section>
 
-<style>
-    .hover-lift {
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
+<vc:marketing-footer></vc:marketing-footer>
 
-    .hover-lift:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
-    }
+@* ReSharper disable once Razor.SectionNotResolved *@
+@section scripts {
+    <script src="~/js/index.js" asp-append-version="true" defer></script>
+}
 
-    .ls-1 {
-        letter-spacing: 1px;
-    }
 
-    .last-mb-0:last-child {
-        margin-bottom: 0 !important;
-    }
-</style>
+@* ReSharper disable once Razor.SectionNotResolved *@
+@section styles {
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true">
+}

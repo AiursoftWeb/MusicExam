@@ -27,6 +27,9 @@
   <data name="If you believe you should have access, please contact your system administrator. Or try signing out and signing in again." xml:space="preserve">
     <value>Εάν πιστεύετε ότι θα έπρεπε να έχετε πρόσβαση, παρακαλούμε επικοινωνήστε με τον διαχειριστή του συστήματός σας. Ή δοκιμάστε να αποσυνδεθείτε και να συνδεθείτε ξανά.</value>
   </data>
+  <data name="Please contact the administrator to pay and activate your account. Or try signing out and signing in again." xml:space="preserve">
+    <value>Παρακαλούμε επικοινωνήστε με τον διαχειριστή για να πληρώσετε και να ενεργοποιήσετε το λογαριασμό σας. Ή προσπαθήστε να αποσυνδεθείτε και να συνδεθείτε ξανά.</value>
+  </data>
   <data name="Sorry, you do not have the necessary permissions to access this page." xml:space="preserve">
     <value>Συγγνώμη, δεν έχετε τα απαραίτητα δικαιώματα για να αποκτήσετε πρόσβαση σε αυτήν τη σελίδα.</value>
   </data>

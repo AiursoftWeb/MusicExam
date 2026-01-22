@@ -10,26 +10,8 @@ namespace Aiursoft.MusicExam.Controllers;
 [LimitPerMin]
 public class HomeController : Controller
 {
-    private readonly TemplateDbContext _dbContext;
-
-    public HomeController(TemplateDbContext dbContext)
+    public IActionResult Index()
     {
-        _dbContext = dbContext;
-    }
-
-    public async Task<IActionResult> Index()
-    {
-        var schools = await _dbContext
-            .Schools
-            .Include(s => s.Papers)
-            .OrderBy(s => s.Name)
-            .ThenBy(s => s.Id)
-            .ToListAsync();
-
-        var model = new IndexViewModel
-        {
-            Schools = schools
-        };
-        return this.StackView(model);
+        return this.SimpleView(new Aiursoft.MusicExam.Models.DashboardViewModels.IndexViewModel());
     }
 }

@@ -30,6 +30,9 @@
   <data name="A complete solution for user authentication and profile management." xml:space="preserve">
     <value>用戶身分驗證和個人資料管理的完整解決方案。</value>
   </data>
+  <data name="A comprehensive platform designed to help you excel in your music exams. Practice with thousands of questions from official sources." xml:space="preserve">
+    <value>一個全面的平台，專為協助您在音樂考試中表現出色而設計。透過來自官方來源的數千道題目進行練習。</value>
+  </data>
   <data name="A fully responsive layout that looks great on both desktop and mobile devices." xml:space="preserve">
     <value>完全響應式佈局，在桌面和行動裝置上都能呈現絕佳外觀。</value>
   </data>
@@ -44,6 +47,9 @@
   </data>
   <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
     <value>Aiursoft Template 是我們企業級專案的不二之選！它專為開發者打造，輕量卻功能強大。我們可以直接跳過所有身份驗證和使用者管理的樣板程式碼。</value>
+  </data>
+  <data name="All content is based on the official curriculum of major music conservatories." xml:space="preserve">
+    <value>所有內容均依據主要音樂學院的官方課程設計。</value>
   </data>
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>所有依賴項都會自動註冊，並始終可透過建構函式注入使用。</value>
@@ -87,11 +93,23 @@
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>完整說明文件</value>
   </data>
+  <data name="Comprehensive Question Bank" xml:space="preserve">
+    <value>完整的題庫</value>
+  </data>
+  <data name="Comprehensive Question Bank, Realistic Mock Exams, Detailed Analytics." xml:space="preserve">
+    <value>完整的題庫、逼真的模擬考試、詳細的分析報告</value>
+  </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>一致性驗證</value>
   </data>
+  <data name="Cross-Platform Access" xml:space="preserve">
+    <value>跨平台存取</value>
+  </data>
   <data name="Dashboard Website" xml:space="preserve">
     <value>儀表板網站</value>
+  </data>
+  <data name="Detailed Analytics" xml:space="preserve">
+    <value>詳細分析</value>
   </data>
   <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
     <value>專注於 UTC 進行開發，而系統會自動將日期轉換並顯示為使用者的本地時間區。</value>
@@ -180,6 +198,9 @@
   <data name="Markdown To HTML" xml:space="preserve">
     <value>Markdown 轉 HTML</value>
   </data>
+  <data name="Master Your Music Theory" xml:space="preserve">
+    <value>精通你的音樂理論</value>
+  </data>
   <data name="MIT Licence" xml:space="preserve">
     <value>MIT 授權</value>
   </data>
@@ -195,17 +216,32 @@
   <data name="Music Tools" xml:space="preserve">
     <value>音樂工具</value>
   </data>
+  <data name="Official Curriculum" xml:space="preserve">
+    <value>官方課程</value>
+  </data>
   <data name="Open Source" xml:space="preserve">
     <value>開放原始碼</value>
   </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>OpenID Connect 整合</value>
   </data>
+  <data name="Practice anytime, anywhere. Our platform is fully responsive and works on all your devices." xml:space="preserve">
+    <value>隨時隨地練習。本平台完全支援響應式設計，可在所有裝置上順暢運作。</value>
+  </data>
+  <data name="Practice with thousands of questions from official sources, covering all levels and topics." xml:space="preserve">
+    <value>透過來自官方來源的數千道題目練習，涵蓋所有程度與主題。</value>
+  </data>
+  <data name="Progress" xml:space="preserve">
+    <value>進度</value>
+  </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>RBAC 授權</value>
   </data>
   <data name="Read the document" xml:space="preserve">
     <value>閱讀文件</value>
+  </data>
+  <data name="Realistic Mock Exams" xml:space="preserve">
+    <value>模擬考試</value>
   </data>
   <data name="Responsive Design" xml:space="preserve">
     <value>響應式設計</value>
@@ -225,6 +261,15 @@
   <data name="Select your school and level to start practicing" xml:space="preserve">
     <value>選擇您的學校和級別以開始練習</value>
   </data>
+  <data name="Sharpen your sight-singing skills with a vast library of melodies and interactive exercises." xml:space="preserve">
+    <value>透過龐大的旋律資料庫與互動練習，提升你的視唱能力。</value>
+  </data>
+  <data name="Sight-Singing Practice" xml:space="preserve">
+    <value>視譜練唱練習</value>
+  </data>
+  <data name="Simulate the real exam environment with timed mock tests and get a feel for the actual challenge." xml:space="preserve">
+    <value>模擬真實考試環境，透過計時模擬考感受實際挑戰。</value>
+  </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>智慧型設定覆蓋</value>
   </data>
@@ -236,6 +281,9 @@
   </data>
   <data name="Start a new project" xml:space="preserve">
     <value>開始新專案</value>
+  </data>
+  <data name="Start Practice" xml:space="preserve">
+    <value>開始練習</value>
   </data>
   <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
     <value>支援環境變數和資料庫支援的設定，並自動優先使用環境變數以實現無縫覆蓋。</value>
@@ -255,6 +303,9 @@
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>這是一個模板專案，我們從這裡開啟航程...</value>
   </data>
+  <data name="Track your performance, view detailed score reports, and identify your strengths and weaknesses." xml:space="preserve">
+    <value>追蹤您的表現，檢視詳細的分數報表，並找出您的優勢與弱點。</value>
+  </data>
   <data name="Usage" xml:space="preserve">
     <value>使用方式</value>
   </data>
@@ -269,6 +320,9 @@
   </data>
   <data name="What our developers say" xml:space="preserve">
     <value>我們的開發者怎麼說</value>
+  </data>
+  <data name="Why choose Music Exam Platform?" xml:space="preserve">
+    <value>為什麼選擇音樂考試平台？</value>
   </data>
   <data name="Why use the Aiursoft Template?" xml:space="preserve">
     <value>為什麼使用 Aiursoft 模板？</value>

@@ -38,8 +38,6 @@
                     <th>@Localizer["Name"]</th>
                     <th>@Localizer["Email"]</th>
                     <th>@Localizer["Roles"]</th>
-                    <th>@Localizer["Paid"]</th>
-                    <th>@Localizer["Expire"]</th>
                     <th>@Localizer["Usage"]</th>
                     <th class="text-end">@Localizer["Actions"]</th>
                 </tr>
@@ -79,21 +77,6 @@
                             {
                                 <span class="text-muted">@Localizer["(no role assigned)"]</span>
                             }
-                        </td>
-                        <td>
-                            @if (item.User.ExpireAt > DateTime.UtcNow)
-                            {
-                                <span class="text-success">@Localizer["Paid"]</span>
-                            }
-                            else
-                            {
-                                <span class="text-muted">@Localizer["Free"]</span>
-                            }
-                        </td>
-                        <td>
-                            <span class="text-muted" data-utc-time="@item.User.ExpireAt?.ToString("o")">
-                                @item.User.ExpireAt
-                            </span>
                         </td>
                         <td>
                             <a asp-controller="Accounting" asp-action="Index" asp-route-userId="@item.User.Id">

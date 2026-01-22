@@ -63,6 +63,9 @@
   <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
     <value>Otomatik, yapay zeka destekli 28 dilde çeviri.</value>
   </data>
+  <data name="Available Exams" xml:space="preserve">
+    <value>Mevcut Sınavlar</value>
+  </data>
   <data name="Background Job Processing" xml:space="preserve">
     <value>Arka Plan İşlem İşleme</value>
   </data>
@@ -173,6 +176,9 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Herhangi bir OpenID Connect sağlayıcısıyla sorunsuz entegre olun, otomatik rol senkronizasyonu ile.</value>
+  </data>
+  <data name="Select your school and level to start practicing" xml:space="preserve">
+    <value>Okulunuzu ve seviyenizi seçerek pratik yapmaya başlayın</value>
   </data>
   <data name="Sharpen your sight-singing skills with a vast library of melodies and interactive exercises." xml:space="preserve">
     <value>Geniş bir melodi kütüphanesi ve interaktif alıştırmalarla nota okuma ve söyleme becerilerinizi geliştirin.</value>

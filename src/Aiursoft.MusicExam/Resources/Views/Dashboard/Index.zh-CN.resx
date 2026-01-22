@@ -63,6 +63,9 @@
   <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
     <value>自动、由人工智能驱动的 28 种语言翻译。</value>
   </data>
+  <data name="Available Exams" xml:space="preserve">
+    <value>可参加的考试</value>
+  </data>
   <data name="Background Job Processing" xml:space="preserve">
     <value>后台任务处理</value>
   </data>
@@ -173,6 +176,9 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>无缝集成任何 OpenID Connect 提供商，并自动同步角色信息。</value>
+  </data>
+  <data name="Select your school and level to start practicing" xml:space="preserve">
+    <value>选择您的学校和年级以开始练习</value>
   </data>
   <data name="Sharpen your sight-singing skills with a vast library of melodies and interactive exercises." xml:space="preserve">
     <value>通过丰富的旋律库和互动练习，提升您的视唱技能。</value>

@@ -63,6 +63,9 @@
   <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
     <value>Traduction automatique, pilotée par l&apos;IA, en 28 langues.</value>
   </data>
+  <data name="Available Exams" xml:space="preserve">
+    <value>Examens disponibles</value>
+  </data>
   <data name="Background Job Processing" xml:space="preserve">
     <value>Traitement des tâches en arrière-plan</value>
   </data>
@@ -173,6 +176,9 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Intégration transparente avec n&apos;importe quel fournisseur OpenID Connect, avec synchronisation automatique des rôles.</value>
+  </data>
+  <data name="Select your school and level to start practicing" xml:space="preserve">
+    <value>Sélectionnez votre école et votre niveau pour commencer à vous entraîner</value>
   </data>
   <data name="Sharpen your sight-singing skills with a vast library of melodies and interactive exercises." xml:space="preserve">
     <value>Affinez vos compétences en lecture à vue grâce à une vaste bibliothèque de mélodies et des exercices interactifs.</value>

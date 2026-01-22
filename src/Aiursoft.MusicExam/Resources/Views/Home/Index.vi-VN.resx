@@ -30,6 +30,9 @@
   <data name="A complete solution for user authentication and profile management." xml:space="preserve">
     <value>Một giải pháp toàn diện cho xác thực người dùng và quản lý hồ sơ.</value>
   </data>
+  <data name="A comprehensive platform designed to help you excel in your music exams. Practice with thousands of questions from official sources." xml:space="preserve">
+    <value>Một nền tảng toàn diện được thiết kế để giúp bạn xuất sắc trong các kỳ thi âm nhạc của mình. Luyện tập với hàng nghìn câu hỏi từ các nguồn chính thức.</value>
+  </data>
   <data name="A fully responsive layout that looks great on both desktop and mobile devices." xml:space="preserve">
     <value>Bố cục hoàn toàn thích ứng, hiển thị đẹp mắt trên cả thiết bị máy tính để bàn và thiết bị di động.</value>
   </data>
@@ -44,6 +47,9 @@
   </data>
   <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
     <value>Aiursoft Template là lựa chọn tối ưu cho các dự án doanh nghiệp! Nó được xây dựng cho nhà phát triển, nhẹ nhàng nhưng mạnh mẽ. Chúng ta có thể bỏ qua tất cả các mã mẫu cho xác thực và quản lý người dùng.</value>
+  </data>
+  <data name="All content is based on the official curriculum of major music conservatories." xml:space="preserve">
+    <value>Toàn bộ nội dung đều dựa trên chương trình chính thức của các học viện âm nhạc hàng đầu.</value>
   </data>
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>Tất cả các dependency đều được tự động đăng ký và luôn sẵn sàng thông qua constructor injection.</value>
@@ -87,11 +93,23 @@
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>Tài liệu Toàn diện</value>
   </data>
+  <data name="Comprehensive Question Bank" xml:space="preserve">
+    <value>Cơ sở dữ liệu câu hỏi toàn diện</value>
+  </data>
+  <data name="Comprehensive Question Bank, Realistic Mock Exams, Detailed Analytics." xml:space="preserve">
+    <value>Cơ sở dữ liệu câu hỏi toàn diện, Kỳ thi mô phỏng thực tế, Phân tích chi tiết</value>
+  </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>Xác thực tính nhất quán</value>
   </data>
+  <data name="Cross-Platform Access" xml:space="preserve">
+    <value>Truy cập đa nền tảng</value>
+  </data>
   <data name="Dashboard Website" xml:space="preserve">
     <value>Trang Tổng quan</value>
+  </data>
+  <data name="Detailed Analytics" xml:space="preserve">
+    <value>Phân tích chi tiết</value>
   </data>
   <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
     <value>Phát triển chỉ với UTC trong khi hệ thống tự động chuyển đổi và hiển thị ngày tháng theo múi giờ địa phương của người dùng.</value>
@@ -180,6 +198,9 @@
   <data name="Markdown To HTML" xml:space="preserve">
     <value>Chuyển Đổi Markdown Sang HTML</value>
   </data>
+  <data name="Master Your Music Theory" xml:space="preserve">
+    <value>Thành thạo Lý thuyết Âm nhạc của bạn</value>
+  </data>
   <data name="MIT Licence" xml:space="preserve">
     <value>Giấy phép MIT</value>
   </data>
@@ -195,17 +216,32 @@
   <data name="Music Tools" xml:space="preserve">
     <value>Công cụ Âm nhạc</value>
   </data>
+  <data name="Official Curriculum" xml:space="preserve">
+    <value>Chương trình chính thức</value>
+  </data>
   <data name="Open Source" xml:space="preserve">
     <value>Mã nguồn mở</value>
   </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>Tích hợp OpenID Connect</value>
   </data>
+  <data name="Practice anytime, anywhere. Our platform is fully responsive and works on all your devices." xml:space="preserve">
+    <value>Luyện tập bất cứ lúc nào, bất cứ nơi đâu. Nền tảng của chúng tôi hoàn toàn phản hồi và hoạt động trên tất cả thiết bị của bạn.</value>
+  </data>
+  <data name="Practice with thousands of questions from official sources, covering all levels and topics." xml:space="preserve">
+    <value>Luyện tập với hàng ngàn câu hỏi từ các nguồn chính thức, bao gồm tất cả các cấp độ và chủ đề.</value>
+  </data>
+  <data name="Progress" xml:space="preserve">
+    <value>Tiến độ</value>
+  </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>Ủy quyền RBAC</value>
   </data>
   <data name="Read the document" xml:space="preserve">
     <value>Đọc tài liệu</value>
+  </data>
+  <data name="Realistic Mock Exams" xml:space="preserve">
+    <value>Đề thi mô phỏng thực tế</value>
   </data>
   <data name="Responsive Design" xml:space="preserve">
     <value>Thiết kế đáp ứng</value>
@@ -225,6 +261,15 @@
   <data name="Select your school and level to start practicing" xml:space="preserve">
     <value>Chọn trường và cấp độ của bạn để bắt đầu luyện tập</value>
   </data>
+  <data name="Sharpen your sight-singing skills with a vast library of melodies and interactive exercises." xml:space="preserve">
+    <value>Rèn luyện kỹ năng hát nhạc nhìn với kho nhạc khổng lồ và các bài tập tương tác.</value>
+  </data>
+  <data name="Sight-Singing Practice" xml:space="preserve">
+    <value>Luyện tập đọc nhạc sight-singing</value>
+  </data>
+  <data name="Simulate the real exam environment with timed mock tests and get a feel for the actual challenge." xml:space="preserve">
+    <value>Mô phỏng môi trường thi thực tế với các bài kiểm tra mô phỏng có giới hạn thời gian và cảm nhận được thử thách thực sự.</value>
+  </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>Ghi đè cấu hình thông minh</value>
   </data>
@@ -236,6 +281,9 @@
   </data>
   <data name="Start a new project" xml:space="preserve">
     <value>Bắt đầu một dự án mới</value>
+  </data>
+  <data name="Start Practice" xml:space="preserve">
+    <value>Bắt đầu luyện tập</value>
   </data>
   <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
     <value>Hỗ trợ cả biến môi trường và cài đặt dựa trên cơ sở dữ liệu, với ưu tiên tự động cho biến môi trường để ghi đè một cách liền mạch.</value>
@@ -255,6 +303,9 @@
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>Đây là một dự án mẫu, nơi chúng ta bắt đầu hành trình khám phá...</value>
   </data>
+  <data name="Track your performance, view detailed score reports, and identify your strengths and weaknesses." xml:space="preserve">
+    <value>Theo dõi hiệu suất của bạn, xem báo cáo điểm số chi tiết và xác định điểm mạnh cũng như điểm yếu của bạn.</value>
+  </data>
   <data name="Usage" xml:space="preserve">
     <value>Cách sử dụng</value>
   </data>
@@ -269,6 +320,9 @@
   </data>
   <data name="What our developers say" xml:space="preserve">
     <value>Những gì nhà phát triển của chúng tôi nói</value>
+  </data>
+  <data name="Why choose Music Exam Platform?" xml:space="preserve">
+    <value>Tại sao chọn Music Exam Platform?</value>
   </data>
   <data name="Why use the Aiursoft Template?" xml:space="preserve">
     <value>Tại sao nên sử dụng Mẫu Aiursoft?</value>

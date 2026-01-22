@@ -18,8 +18,11 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Type" xml:space="preserve">
-    <value>Τύπος</value>
+      <data name="A chronological list of all recorded system changes." xml:space="preserve">
+    <value>Μια χρονολογική λίστα όλων των καταγεγραμμένων αλλαγών του συστήματος.</value>
+  </data>
+  <data name="All Changes" xml:space="preserve">
+    <value>Όλες οι Αλλαγές</value>
   </data>
   <data name="Change History" xml:space="preserve">
     <value>Ιστορικό Αλλαγών</value>
@@ -27,17 +30,14 @@
   <data name="Details" xml:space="preserve">
     <value>Λεπτομέρειες</value>
   </data>
-  <data name="Triggered By" xml:space="preserve">
-    <value>Προκλήθηκε Από</value>
-  </data>
   <data name="Time" xml:space="preserve">
     <value>Χρόνος</value>
   </data>
-  <data name="All Changes" xml:space="preserve">
-    <value>Όλες οι Αλλαγές</value>
+  <data name="Triggered By" xml:space="preserve">
+    <value>Προκλήθηκε Από</value>
   </data>
-  <data name="A chronological list of all recorded system changes." xml:space="preserve">
-    <value>Μια χρονολογική λίστα όλων των καταγεγραμμένων αλλαγών του συστήματος.</value>
+  <data name="Type" xml:space="preserve">
+    <value>Τύπος</value>
   </data>
 
 </root>

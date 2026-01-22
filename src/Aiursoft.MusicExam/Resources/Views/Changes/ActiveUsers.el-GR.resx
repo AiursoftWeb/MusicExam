@@ -18,23 +18,23 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Month" xml:space="preserve">
-    <value>Μήνας</value>
-  </data>
-  <data name="Actions" xml:space="preserve">
+      <data name="Actions" xml:space="preserve">
     <value>Ενέργειες</value>
-  </data>
-  <data name="Monthly Active Users Statistics" xml:space="preserve">
-    <value>Στατιστικά Μηνιαίων Ενεργών Χρηστών</value>
-  </data>
-  <data name="Monthly Statistics" xml:space="preserve">
-    <value>Μηνιαία Στατιστικά</value>
   </data>
   <data name="Active Users Count" xml:space="preserve">
     <value>Αριθμός Ενεργών Χρηστών</value>
   </data>
   <data name="Details" xml:space="preserve">
     <value>Λεπτομέρειες</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Μήνας</value>
+  </data>
+  <data name="Monthly Active Users Statistics" xml:space="preserve">
+    <value>Στατιστικά Μηνιαίων Ενεργών Χρηστών</value>
+  </data>
+  <data name="Monthly Statistics" xml:space="preserve">
+    <value>Μηνιαία Στατιστικά</value>
   </data>
   <data name="Number of users who had the TakeExam permission at any point during each month." xml:space="preserve">
     <value>Αριθμός χρηστών που είχαν την άδεια TakeExam σε οποιοδήποτε σημείο κατά τη διάρκεια κάθε μήνα.</value>

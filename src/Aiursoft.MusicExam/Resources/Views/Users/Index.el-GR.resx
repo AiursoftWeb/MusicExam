@@ -54,6 +54,9 @@
   <data name="Roles" xml:space="preserve">
     <value>Ρόλοι</value>
   </data>
+  <data name="Usage" xml:space="preserve">
+    <value>Χρήση</value>
+  </data>
   <data name="User name" xml:space="preserve">
     <value>Όνομα χρήστη</value>
   </data>
