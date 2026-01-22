@@ -39,5 +39,23 @@
   <data name="Number of users who had the TakeExam permission at any point during each month." xml:space="preserve">
     <value>Кількість користувачів, які мали дозвіл TakeExam у будь-який момент протягом кожного місяця.</value>
   </data>
+  <data name="接单数量" xml:space="preserve">
+    <value>Кількість замовлень</value>
+  </data>
+  <data name="操作" xml:space="preserve">
+    <value>Операції</value>
+  </data>
+  <data name="月份" xml:space="preserve">
+    <value>Місяць</value>
+  </data>
+  <data name="月度统计" xml:space="preserve">
+    <value>Місячний звіт</value>
+  </data>
+  <data name="月接单统计" xml:space="preserve">
+    <value>Місячна статистика замовлень</value>
+  </data>
+  <data name="每月拥有考试权限的用户数量统计" xml:space="preserve">
+    <value>Статистика кількості користувачів, які мають доступ до екзаменів щомісяця</value>
+  </data>
 
 </root>

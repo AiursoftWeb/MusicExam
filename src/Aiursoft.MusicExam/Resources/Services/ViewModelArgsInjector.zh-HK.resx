@@ -105,6 +105,9 @@
   <data name="Manage" xml:space="preserve">
     <value>管理</value>
   </data>
+  <data name="Monthly finance report" xml:space="preserve">
+    <value>每月財務報告</value>
+  </data>
   <data name="Permissions" xml:space="preserve">
     <value>權限</value>
   </data>

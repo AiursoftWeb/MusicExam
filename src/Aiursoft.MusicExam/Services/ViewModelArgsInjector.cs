@@ -73,6 +73,8 @@ public class ViewModelArgsInjector(
         _ = localizer["Active Users"];
         _ = localizer["Change History"];
         _ = localizer["Statistics"];
+    
+        _ = localizer["Monthly finance report"];
     }
 
     public void InjectSimple(

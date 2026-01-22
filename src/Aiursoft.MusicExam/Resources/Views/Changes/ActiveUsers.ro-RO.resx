@@ -39,5 +39,23 @@
   <data name="Number of users who had the TakeExam permission at any point during each month." xml:space="preserve">
     <value>Numărul de utilizatori care au avut permisiunea TakeExam în orice moment din fiecare lună.</value>
   </data>
+  <data name="接单数量" xml:space="preserve">
+    <value>Numărul de comenzi primite</value>
+  </data>
+  <data name="操作" xml:space="preserve">
+    <value>Operațiune</value>
+  </data>
+  <data name="月份" xml:space="preserve">
+    <value>Luna</value>
+  </data>
+  <data name="月度统计" xml:space="preserve">
+    <value>Statistici lunare</value>
+  </data>
+  <data name="月接单统计" xml:space="preserve">
+    <value>Statistici comenzi lunare</value>
+  </data>
+  <data name="每月拥有考试权限的用户数量统计" xml:space="preserve">
+    <value>Statistica numărului de utilizatori care au acces la examen lunar</value>
+  </data>
 
 </root>

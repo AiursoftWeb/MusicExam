@@ -46,7 +46,7 @@ public class ChangesController(
         CascadedLinksGroupName = "Statistics",
         CascadedLinksIcon = "settings",
         CascadedLinksOrder = 9999,
-        LinkText = "Active Users",
+        LinkText = "Monthly finance report",
         LinkOrder = 5)]
     public async Task<IActionResult> ActiveUsers()
     {

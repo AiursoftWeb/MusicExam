@@ -39,5 +39,23 @@
   <data name="Number of users who had the TakeExam permission at any point during each month." xml:space="preserve">
     <value>Kuukausittainen käyttäjämäärä, joilla oli TakeExam-oikeus milloin tahansa kuukauden aikana.</value>
   </data>
+  <data name="接单数量" xml:space="preserve">
+    <value>Tilauksien määrä</value>
+  </data>
+  <data name="操作" xml:space="preserve">
+    <value>Toiminnot</value>
+  </data>
+  <data name="月份" xml:space="preserve">
+    <value>Kuukausi</value>
+  </data>
+  <data name="月度统计" xml:space="preserve">
+    <value>Kuukausittainen tilasto</value>
+  </data>
+  <data name="月接单统计" xml:space="preserve">
+    <value>Kuukauden tilaukset</value>
+  </data>
+  <data name="每月拥有考试权限的用户数量统计" xml:space="preserve">
+    <value>Käyttäjien määrä, joilla on kokeen käyttöoikeus kuukaudessa</value>
+  </data>
 
 </root>

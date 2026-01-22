@@ -102,6 +102,9 @@
   <data name="Manage" xml:space="preserve">
     <value>Управление</value>
   </data>
+  <data name="Monthly finance report" xml:space="preserve">
+    <value>Ежемесячный финансовый отчет</value>
+  </data>
   <data name="Permissions" xml:space="preserve">
     <value>Разрешения</value>
   </data>

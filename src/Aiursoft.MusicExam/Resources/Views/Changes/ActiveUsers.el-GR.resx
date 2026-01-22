@@ -39,5 +39,23 @@
   <data name="Number of users who had the TakeExam permission at any point during each month." xml:space="preserve">
     <value>Αριθμός χρηστών που είχαν την άδεια TakeExam σε οποιοδήποτε σημείο κατά τη διάρκεια κάθε μήνα.</value>
   </data>
+  <data name="接单数量" xml:space="preserve">
+    <value>Ποσότητα εντολών</value>
+  </data>
+  <data name="操作" xml:space="preserve">
+    <value>Ενέργεια</value>
+  </data>
+  <data name="月份" xml:space="preserve">
+    <value>Μήνας</value>
+  </data>
+  <data name="月度统计" xml:space="preserve">
+    <value>Μηνιαία στατιστική</value>
+  </data>
+  <data name="月接单统计" xml:space="preserve">
+    <value>Στατιστική εντολών ανά μήνα</value>
+  </data>
+  <data name="每月拥有考试权限的用户数量统计" xml:space="preserve">
+    <value>Στατιστική του αριθμού χρηστών που έχουν δικαίωμα εξετάσεων κάθε μήνα</value>
+  </data>
 
 </root>

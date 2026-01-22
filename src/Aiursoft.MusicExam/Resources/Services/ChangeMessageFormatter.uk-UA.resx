@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="RoleGainedPermission" xml:space="preserve">
+    <value>Роль отримала дозвіл</value>
+  </data>
+  <data name="RoleLostPermission" xml:space="preserve">
+    <value>РольВтраченоДозвіл</value>
+  </data>
+  <data name="SystemBackfill" xml:space="preserve">
+    <value>SystemBackfill</value>
+  </data>
+  <data name="UserCreated" xml:space="preserve">
+    <value>Користувач створений</value>
+  </data>
+  <data name="UserDeleted" xml:space="preserve">
+    <value>Користувача видалено</value>
+  </data>
+  <data name="UserJoinedRole" xml:space="preserve">
+    <value>Користувач приєднався до ролі</value>
+  </data>
+  <data name="UserLeftRole" xml:space="preserve">
+    <value>Користувач покинув роль</value>
+  </data>
+
+</root>

@@ -39,5 +39,23 @@
   <data name="Number of users who had the TakeExam permission at any point during each month." xml:space="preserve">
     <value>Antallet af brugere, der havde TakeExam-tilladelsen på et hvilket som helst tidspunkt i hver måned.</value>
   </data>
+  <data name="接单数量" xml:space="preserve">
+    <value>Antal ordre modtaget</value>
+  </data>
+  <data name="操作" xml:space="preserve">
+    <value>Handling</value>
+  </data>
+  <data name="月份" xml:space="preserve">
+    <value>Måned</value>
+  </data>
+  <data name="月度统计" xml:space="preserve">
+    <value>Månedlig statistik</value>
+  </data>
+  <data name="月接单统计" xml:space="preserve">
+    <value>Månedlig bestillingsstatistik</value>
+  </data>
+  <data name="每月拥有考试权限的用户数量统计" xml:space="preserve">
+    <value>Månedlig statistik over antallet af brugere med adgang til eksamen</value>
+  </data>
 
 </root>
