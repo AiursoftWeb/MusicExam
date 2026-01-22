@@ -36,7 +36,23 @@
                                 </td>                                <td>
                                     @if (submission.Score.HasValue)
                                     {
-                                        <span class="badge bg-primary">@submission.Score</span>
+                                        var totalQuestions = submission.Paper?.Questions?.Count ?? 0;
+                                        var percentage = totalQuestions > 0 ? (double)submission.Score.Value / totalQuestions * 100 : 0;
+                                        
+                                        <div>
+                                            <span class="badge @(submission.Score == totalQuestions ? "bg-success" : "bg-primary")">
+                                                @submission.Score / @totalQuestions
+                                            </span>
+                                        </div>
+                                        <div class="progress mt-2" style="height: 5px; width: 100px;">
+                                            <div class="progress-bar @(submission.Score == totalQuestions ? "bg-success" : "bg-primary")" 
+                                                 role="progressbar" 
+                                                 style="width: @percentage%" 
+                                                 aria-valuenow="@submission.Score" 
+                                                 aria-valuemin="0" 
+                                                 aria-valuemax="@totalQuestions">
+                                            </div>
+                                        </div>
                                     }
                                     else
                                     {

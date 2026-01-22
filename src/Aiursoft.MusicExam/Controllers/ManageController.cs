@@ -214,6 +214,7 @@ public class ManageController(
 
         var submissions = await dbContext.ExamPaperSubmissions
             .Include(s => s.Paper)
+            .ThenInclude(p => p.Questions)
             .Where(s => s.UserId == user.Id)
             .OrderByDescending(s => s.SubmissionTime)
             .ToListAsync();
