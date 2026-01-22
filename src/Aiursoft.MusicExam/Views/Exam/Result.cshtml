@@ -87,7 +87,13 @@
                                         {
                                             <i class="fas fa-check-circle me-2"></i>
                                         }
-                                        @option.Content
+                                        
+                                        @if (!option.Content.EndsWith(".mp3", StringComparison.OrdinalIgnoreCase) && 
+                                             !option.Content.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) && 
+                                             !option.Content.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                        {
+                                            @option.Content
+                                        }
                                                 </span>
                                     @if (isCorrectOption)
                                     {

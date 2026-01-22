@@ -18,7 +18,7 @@
     </div>
     <hr />
 
-    <form method="post" id="exam-form">
+    <form method="post" id="exam-form" asp-action="Result" asp-route-id="@Model.Paper.Id">
         @for (var i = 0; i < orderedQuestions.Count; i++)
         {
             var question = orderedQuestions[i];

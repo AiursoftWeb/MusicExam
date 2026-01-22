@@ -53,7 +53,7 @@ public class ExamController : Controller
     [HttpPost]
     [Authorize(Policy = AppPermissionNames.CanTakeExam)]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Take(int id, IFormCollection form)
+    public async Task<IActionResult> Result(int id, IFormCollection form)
     {
         var user = await _userManager.GetUserAsync(User);
         if (user == null)
@@ -153,7 +153,7 @@ public class ExamController : Controller
 
         model.PageTitle = "Result - " + paper.Title;
 
-        return View("Result", model);
+        return this.StackView(model);
     }
 
     [HttpGet]
