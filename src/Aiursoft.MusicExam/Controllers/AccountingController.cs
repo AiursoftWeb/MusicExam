@@ -27,8 +27,12 @@ public class AccountingController(TemplateDbContext dbContext) : Controller
     public async Task<IActionResult> Index()
     {
         var totalUsers = await dbContext.Users.CountAsync();
-        // Placeholder for PaidUsers as there is no specific logic for it yet
-        var paidUsers = 0;
+        var paidUsers = await dbContext.Users
+            .Where(u =>
+                dbContext.UserClaims.Any(uc => uc.UserId == u.Id && uc.ClaimType == AppPermissions.Type && uc.ClaimValue == AppPermissionNames.CanTakeExam) ||
+                dbContext.UserRoles.Any(ur => ur.UserId == u.Id &&
+                    dbContext.RoleClaims.Any(rc => rc.RoleId == ur.RoleId && rc.ClaimType == AppPermissions.Type && rc.ClaimValue == AppPermissionNames.CanTakeExam)))
+            .CountAsync();
 
         var totalSubmissions = await dbContext.ExamPaperSubmissions.CountAsync();
         var totalQuestionsSubmitted = await dbContext.QuestionSubmissions.CountAsync();
