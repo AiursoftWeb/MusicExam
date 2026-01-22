@@ -102,6 +102,9 @@
   <data name="Manage" xml:space="preserve">
     <value>Διαχείριση</value>
   </data>
+  <data name="Monthly finance report" xml:space="preserve">
+    <value>Μηνιαίο αναφορά χρηματοοικονομικών</value>
+  </data>
   <data name="Permissions" xml:space="preserve">
     <value>Άδειες</value>
   </data>
