@@ -1,4 +1,4 @@
-using Aiursoft.MusicExam.Models.ManageViewModels;
+using Aiursoft.MusicExam.Models.ThemeViewModels;
 
 namespace Aiursoft.MusicExam.Tests.IntegrationTests;
 

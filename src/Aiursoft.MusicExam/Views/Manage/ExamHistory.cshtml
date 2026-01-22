@@ -1,0 +1,53 @@
+@using Aiursoft.WebTools
+@model Aiursoft.MusicExam.Models.ManageViewModels.ExamHistoryViewModel
+
+<h1 class="h3 mb-3">@Localizer["My Exam History"]</h1>
+
+<div class="card">
+    <div class="card-header">
+        <h5 class="card-title mb-0">@Localizer["History"]</h5>
+    </div>
+    <div class="card-body">
+        @if (!Model.Submissions.Any())
+        {
+            <div class="alert alert-info">
+                @Localizer["You haven't taken any exams yet."]
+            </div>
+        }
+        else
+        {
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>@Localizer["Exam"]</th>
+                            <th>@Localizer["Score"]</th>
+                            <th>@Localizer["Date"]</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var submission in Model.Submissions)
+                        {
+                            <tr>
+                                <td>@submission.Paper?.Title</td>
+                                <td>
+                                    @if (submission.Score.HasValue)
+                                    {
+                                        <span class="badge bg-primary">@submission.Score</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-secondary">@Localizer["N/A"]</span>
+                                    }
+                                </td>
+                                <td>
+                                    <label data-utc-time="@submission.SubmissionTime.ToHtmlDateTime()" class="text-monospace"></label>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+    </div>
+</div>

@@ -12,6 +12,6 @@ public class HomeController : Controller
 {
     public IActionResult Index()
     {
-        return this.SimpleView(new Aiursoft.MusicExam.Models.DashboardViewModels.IndexViewModel());
+        return this.SimpleView(new IndexViewModel());
     }
 }

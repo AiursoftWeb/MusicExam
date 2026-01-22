@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Aiursoft.MusicExam.Models.ManageViewModels;
+namespace Aiursoft.MusicExam.Models.ThemeViewModels;
 
 public class SwitchThemeViewModel
 {

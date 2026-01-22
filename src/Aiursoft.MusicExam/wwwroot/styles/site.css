@@ -23,3 +23,51 @@ nav.navbar{
 .landing-intro{
     padding-top:160px!important
 }
+
+/* Custom Audio Player Styles */
+.custom-audio-player {
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 50rem;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.custom-audio-player .progress-container {
+    flex-grow: 1;
+    height: 6px;
+    background-color: #e9ecef;
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.custom-audio-player .progress-bar {
+    height: 100%;
+    background-color: #0d6efd;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+.custom-audio-player .btn-sm {
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-audio-player .time-display {
+    min-width: 80px;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+    font-size: 0.8rem;
+}

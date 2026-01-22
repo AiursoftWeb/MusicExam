@@ -61,9 +61,6 @@ public class ExamController : Controller
             return Forbid();
         }
 
-
-
-
         var paper = await _dbContext.ExamPapers
             .Include(p => p.Questions)
             .ThenInclude(q => q.Options)
@@ -156,28 +153,4 @@ public class ExamController : Controller
         return this.StackView(model);
     }
 
-    [HttpGet]
-    [Authorize(Policy = AppPermissionNames.CanTakeExam)]
-    public async Task<IActionResult> History()
-    {
-        var user = await _userManager.GetUserAsync(User);
-        if (user == null)
-        {
-            return Forbid();
-        }
-
-        var submissions = await _dbContext.ExamPaperSubmissions
-            .Include(s => s.Paper)
-            .Where(s => s.UserId == user.Id)
-            .OrderByDescending(s => s.SubmissionTime)
-            .ToListAsync();
-
-        var model = new HistoryViewModel
-        {
-            Submissions = submissions,
-            PageTitle = "My Exam Records"
-        };
-
-        return this.StackView(model);
-    }
 }

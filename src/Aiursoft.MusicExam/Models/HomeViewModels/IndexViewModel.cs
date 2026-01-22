@@ -5,9 +5,8 @@ namespace Aiursoft.MusicExam.Models.HomeViewModels;
 
 public class IndexViewModel : UiStackLayoutViewModel
 {
-    public required IEnumerable<School> Schools { get; init; }
     public IndexViewModel()
     {
-        PageTitle = "Home";
+        PageTitle = "Music Exam Dashboard";
     }
 }

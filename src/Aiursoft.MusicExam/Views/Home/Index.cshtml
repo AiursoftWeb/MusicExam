@@ -1,4 +1,4 @@
-@model Aiursoft.MusicExam.Models.DashboardViewModels.IndexViewModel
+@model Aiursoft.MusicExam.Models.HomeViewModels.IndexViewModel
 
 <vc:marketing-navbar></vc:marketing-navbar>
 
@@ -14,7 +14,7 @@
                 <p class="text-lg text-white-50">@Localizer["A comprehensive platform designed to help you excel in your music exams. Practice with thousands of questions from official sources."]</p>
                 <div class="my-4">
                     <a class="btn btn-primary btn-lg btn-pill" asp-controller="Dashboard" asp-action="Index">@Localizer["Start Practice"]</a>
-                    <a asp-controller="Exam" asp-action="History" class="btn btn-outline-primary btn-lg btn-pill">@Localizer["Progress"]</a>
+                    <a asp-controller="Manage" asp-action="ExamHistory" class="btn btn-outline-primary btn-lg btn-pill">@Localizer["Progress"]</a>
                 </div>
             </div>
             <div class="col-lg-7 d-none d-lg-flex mx-auto text-center">

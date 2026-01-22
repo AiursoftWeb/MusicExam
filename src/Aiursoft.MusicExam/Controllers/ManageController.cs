@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Options;
+using Microsoft.EntityFrameworkCore;
 
 namespace Aiursoft.MusicExam.Controllers;
 
@@ -21,6 +22,7 @@ namespace Aiursoft.MusicExam.Controllers;
 public class ManageController(
     ImageProcessingService image,
     StorageService storageService,
+    TemplateDbContext dbContext,
     IStringLocalizer<ManageController> localizer,
     IOptions<AppSettings> appSettings,
     UserManager<User> userManager,
@@ -184,6 +186,42 @@ public class ManageController(
             await signInManager.SignInAsync(user, isPersistent: false);
             return RedirectToAction(nameof(Index), new { Message = ManageMessageId.ChangeAvatarSuccess });
         }
+
+        return this.StackView(model);
+    }
+
+
+
+
+    //
+    // GET: /Manage/ExamHistory
+    [HttpGet]
+    [RenderInNavBar(
+        NavGroupName = "Settings",
+        NavGroupOrder = 9998,
+        CascadedLinksGroupName = "Personal",
+        CascadedLinksIcon = "user-circle",
+        CascadedLinksOrder = 1,
+        LinkText = "Exam History",
+        LinkOrder = 4)]
+    public async Task<IActionResult> ExamHistory()
+    {
+        var user = await GetCurrentUserAsync();
+        if (user == null)
+        {
+            return NotFound();
+        }
+
+        var submissions = await dbContext.ExamPaperSubmissions
+            .Include(s => s.Paper)
+            .Where(s => s.UserId == user.Id)
+            .OrderByDescending(s => s.SubmissionTime)
+            .ToListAsync();
+
+        var model = new ExamHistoryViewModel
+        {
+            Submissions = submissions
+        };
 
         return this.StackView(model);
     }

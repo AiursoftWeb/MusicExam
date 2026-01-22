@@ -37,6 +37,14 @@
             <i class="align-middle" data-lucide="chevron-right"></i>
         </a>
 
+        <a asp-controller="Manage" asp-action="ExamHistory" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+            <span>
+                <i class="align-middle me-2" data-lucide="history"></i>
+                @Localizer["My Exam Records"]
+            </span>
+            <i class="align-middle" data-lucide="chevron-right"></i>
+        </a>
+
         @* The server-side conditional logic is seamlessly integrated into the new component structure. *@
         @if (AppSettings.Value.LocalEnabled)
         {

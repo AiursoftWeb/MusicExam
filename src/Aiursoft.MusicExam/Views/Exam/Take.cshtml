@@ -33,10 +33,7 @@
                     {
                         if (asset.EndsWith(".mp3", StringComparison.OrdinalIgnoreCase))
                         {
-                                        <audio controls class="my-2">
-                                            <source src="@Storage.RelativePathToInternetUrl(asset)" type="audio/mpeg">
-                                            Your browser does not support the audio element.
-                                        </audio>
+                                        <div class="audio-player-wrapper" data-audio-src="@Storage.RelativePathToInternetUrl(asset)"></div>
                         }
                         else if (asset.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || asset.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
                         {
@@ -61,9 +58,7 @@
 
                                     @if (option.Content.EndsWith(".mp3", StringComparison.OrdinalIgnoreCase))
                                     {
-                                                            <audio controls class="my-2 d-inline-block align-middle" style="max-height: 50px;">
-                                                                <source src="@Storage.RelativePathToInternetUrl(option.Content)" type="audio/mpeg">
-                                                            </audio>
+                                                            <div class="audio-player-wrapper d-inline-block align-middle" style="width: 300px;" data-audio-src="@Storage.RelativePathToInternetUrl(option.Content)"></div>
                                     }
                                     else if (option.Content.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || option.Content.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
                                     {
@@ -132,24 +127,14 @@
                 const checkBtn = document.getElementById("check-btn");
                 const submitBtn = document.getElementById("submit-btn");
 
-                // Add mutual exclusion for audio
-                const allAudios = document.querySelectorAll('audio');
-                allAudios.forEach(playAudio => {
-                    playAudio.addEventListener('play', function () {
-                        allAudios.forEach(otherAudio => {
-                            if (otherAudio !== playAudio) {
-                                otherAudio.pause();
-                            }
-                        });
-                    });
-                });
+                // Add mutual exclusion for audio - Handled by MusicExamAudioPlayer class
+
 
                 function showQuestion(index) {
                     // Pause all audio elements
-                    document.querySelectorAll('audio').forEach(audio => {
-                        audio.pause();
-                        audio.currentTime = 0;
-                    });
+                    if (MusicExamAudioPlayer.activePlayer) {
+                        MusicExamAudioPlayer.activePlayer.pause();
+                    }
 
                     questions.forEach((q, i) => {
                         q.style.display = i === index ? "block" : "none";
@@ -289,7 +274,14 @@
                     }
                 });
 
+                // Initialize Custom Audio Players
+                document.querySelectorAll('.audio-player-wrapper').forEach(wrapper => {
+                    const src = wrapper.getAttribute('data-audio-src');
+                    new MusicExamAudioPlayer(wrapper, src);
+                });
+
                 showQuestion(0);
             });
         </script>
+        <script src="~/scripts/audioPlayer.js"></script>
 }

@@ -37,7 +37,7 @@ public class DashboardController : Controller
             .OrderBy(s => s.Id)
             .ToListAsync();
 
-        var model = new Aiursoft.MusicExam.Models.HomeViewModels.IndexViewModel
+        var model = new IndexViewModel
         {
             Schools = schools
         };
