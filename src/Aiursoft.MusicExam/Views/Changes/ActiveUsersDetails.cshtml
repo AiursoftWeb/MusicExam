@@ -1,3 +1,4 @@
+@using Aiursoft.WebTools
 @using Aiursoft.MusicExam.Services.FileStorage
 @model Aiursoft.MusicExam.Models.ChangesViewModels.ActiveUsersDetailsViewModel
 @inject StorageService StorageService
@@ -14,9 +15,9 @@
         <h6 class="card-subtitle text-muted">@Localizer["Detailed list of users who were active this month and why."]</h6>
     </div>
     <div class="table-responsive">
+        <table class="table table-hover mb-0">
             <thead>
             <tr>
-                <th>@Localizer["Avatar"]</th>
                 <th>@Localizer["User"]</th>
                 <th>@Localizer["Active Time Spans"]</th>
             </tr>
@@ -26,26 +27,42 @@
             {
                 <tr>
                     <td>
-                        <img src="@StorageService.RelativePathToInternetUrl(detail.User.AvatarRelativePath)?w=72&square=true" alt="@detail.User.DisplayName" class="rounded-circle" width="36" height="36" />
-                    </td>
-                    <td>
-                        <strong>@detail.User.DisplayName</strong> (@detail.User.UserName)
+                        <div class="d-flex align-items-center">
+                            <img src="@StorageService.RelativePathToInternetUrl(detail.User.AvatarRelativePath)?w=72&square=true" 
+                                 alt="@detail.User.DisplayName" 
+                                 class="rounded-circle me-2" 
+                                 width="48" height="48" 
+                                 style="object-fit: cover;" />
+                            <div>
+                                <div class="fw-bold">@detail.User.DisplayName</div>
+                                <div class="small text-muted">@detail.User.UserName</div>
+                            </div>
+                        </div>
                     </td>
                     <td>
                         @foreach(var span in detail.ActiveTimes)
                         {
                             var activeDuration = span.End - span.Start;
-                            <div>
-                                <span class="badge bg-success">@span.Start.ToString("yyyy-MM-dd HH:mm:ss")</span>
-                                -
-                                <span class="badge bg-secondary">@span.End.ToString("yyyy-MM-dd HH:mm:ss")</span>
-                                <span class="text-muted small">(@activeDuration.ToString(@"dd\.hh\:mm\:ss"))</span>
+                            <div class="mb-1">
+                                <span class="badge bg-light text-dark border me-1">
+                                    <i class="align-middle me-1" data-lucide="calendar"></i>
+                                    <label data-utc-time="@span.Start.ToHtmlDateTime()"></label>
+                                </span>
+                                <i class="align-middle text-muted mx-1" data-lucide="arrow-right"></i>
+                                <span class="badge bg-light text-dark border me-1">
+                                    <label data-utc-time="@span.End.ToHtmlDateTime()"></label>
+                                </span>
+                                <span class="badge bg-primary-subtle text-primary">
+                                    <i class="align-middle me-1" data-lucide="clock"></i>
+                                    @activeDuration.ToString(@"dd\.hh\:mm\:ss")
+                                </span>
                             </div>
                         }
                     </td>
                 </tr>
             }
             </tbody>
+        </table>
     </div>
 </div>
 

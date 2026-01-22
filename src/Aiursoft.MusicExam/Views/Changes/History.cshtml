@@ -1,3 +1,4 @@
+@using Aiursoft.WebTools
 @model Aiursoft.MusicExam.Models.ChangesViewModels.HistoryViewModel
 
 <div class="row mb-2 mb-xl-3">
@@ -25,7 +26,9 @@
             @foreach (var item in Model.Changes)
             {
                 <tr>
-                    <td>@item.CreateTime.ToLocalTime().ToString("g")</td>
+                    <td>
+                        <label data-utc-time="@item.CreateTime.ToHtmlDateTime()" class="text-monospace"></label>
+                    </td>
                     <td>
                         <span class="badge bg-info">@item.Type</span>
                     </td>

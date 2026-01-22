@@ -1,3 +1,4 @@
+@using Aiursoft.WebTools
 @model Aiursoft.MusicExam.Models.ExamViewModels.HistoryViewModel
 @{
     ViewData["Title"] = Localizer["My Exam Records"];
@@ -42,7 +43,9 @@
                                             <span class="badge bg-secondary">@Localizer["N/A"]</span>
                                         }
                                     </td>
-                                    <td>@submission.SubmissionTime.ToLocalTime()</td>
+                                    <td>
+                                        <label data-utc-time="@submission.SubmissionTime.ToHtmlDateTime()" class="text-monospace"></label>
+                                    </td>
                                     <td>
                                         <!-- Future: Link to detailed review if implemented -->
                                     </td>
