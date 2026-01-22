@@ -43,7 +43,7 @@ public class DataImporter : ISingletonDependency
         }
 
         // Level 1: Schools
-        var schoolDirs = Directory.GetDirectories(rootPath).OrderBy(d => d).ToArray();
+        var schoolDirs = Directory.GetDirectories(rootPath).OrderBy(d => d, new NaturalSortComparer()).ToArray();
         _logger.LogInformation("Found {Count} schools directories.", schoolDirs.Length);
 
         foreach (var schoolDir in schoolDirs)
@@ -59,7 +59,7 @@ public class DataImporter : ISingletonDependency
             await dbContext.SaveChangesAsync(cancellationToken);
 
             // Level 2: Levels
-            var levelDirs = Directory.GetDirectories(schoolDir).OrderBy(d => d).ToArray();
+            var levelDirs = Directory.GetDirectories(schoolDir).OrderBy(d => d, new NaturalSortComparer()).ToArray();
             foreach (var levelDir in levelDirs)
             {
                 var levelDirName = Path.GetFileName(levelDir);
@@ -68,13 +68,13 @@ public class DataImporter : ISingletonDependency
                     : levelDirName;
 
                 // Level 3: Categories
-                var categoryDirs = Directory.GetDirectories(levelDir).OrderBy(d => d).ToArray();
+                var categoryDirs = Directory.GetDirectories(levelDir).OrderBy(d => d, new NaturalSortComparer()).ToArray();
                 foreach (var categoryDir in categoryDirs)
                 {
                     var categoryName = Path.GetFileName(categoryDir);
 
                     // Level 4: Exam Papers
-                    var paperDirs = Directory.GetDirectories(categoryDir).OrderBy(d => d).ToArray();
+                    var paperDirs = Directory.GetDirectories(categoryDir).OrderBy(d => d, new NaturalSortComparer()).ToArray();
                     foreach (var paperDir in paperDirs)
                     {
                         var paperTitle = Path.GetFileName(paperDir);
@@ -216,8 +216,7 @@ public class DataImporter : ISingletonDependency
 
         if (!File.Exists(sourcePath))
         {
-            _logger.LogWarning("Asset file not found at {Path}!", sourcePath);
-            return string.Empty;
+            throw new FileNotFoundException($"Asset file not found at {sourcePath}!", sourcePath);
         }
 
         try
@@ -230,8 +229,8 @@ public class DataImporter : ISingletonDependency
         }
         catch (Exception e)
         {
-            _logger.LogWarning(e, "Could not copy asset file from {Path}!", sourcePath);
-            return string.Empty;
+            _logger.LogCritical(e, "Could not copy asset file from {Path}!", sourcePath);
+            throw;
         }
     }
 
