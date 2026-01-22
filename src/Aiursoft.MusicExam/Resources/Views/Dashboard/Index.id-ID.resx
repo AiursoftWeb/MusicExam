@@ -30,6 +30,9 @@
   <data name="A complete solution for user authentication and profile management." xml:space="preserve">
     <value>Solusi lengkap untuk otentikasi pengguna dan manajemen profil.</value>
   </data>
+  <data name="A comprehensive platform designed to help you excel in your music exams." xml:space="preserve">
+    <value>Platform komprehensif yang dirancang untuk membantu Anda unggul dalam ujian musik Anda.</value>
+  </data>
   <data name="A fully responsive layout that looks great on both desktop and mobile devices." xml:space="preserve">
     <value>Tata letak yang sepenuhnya responsif sehingga tampak bagus di perangkat desktop maupun ponsel.</value>
   </data>
@@ -38,6 +41,9 @@
   </data>
   <data name="AI-Powered Translations" xml:space="preserve">
     <value>Terjemahan Berbasis AI</value>
+  </data>
+  <data name="All content is based on the official curriculum of major music conservatories." xml:space="preserve">
+    <value>Semua konten didasarkan pada kurikulum resmi dari konservatori musik utama.</value>
   </data>
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>Semua dependensi terdaftar secara otomatis dan selalu tersedia melalui constructor injection.</value>
@@ -57,6 +63,9 @@
   <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
     <value>Terjemahan otomatis, didorong oleh AI ke dalam 28 bahasa.</value>
   </data>
+  <data name="Available Exams" xml:space="preserve">
+    <value>Ujian yang Tersedia</value>
+  </data>
   <data name="Background Job Processing" xml:space="preserve">
     <value>Pemrosesan Tugas Latar Belakang</value>
   </data>
@@ -72,8 +81,17 @@
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>Dokumentasi Komprehensif</value>
   </data>
+  <data name="Comprehensive Question Bank" xml:space="preserve">
+    <value>Bank Soal Komprehensif</value>
+  </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>Validasi Konsistensi</value>
+  </data>
+  <data name="Cross-Platform Access" xml:space="preserve">
+    <value>Akses Lintas Platform</value>
+  </data>
+  <data name="Detailed Analytics" xml:space="preserve">
+    <value>Analisis Mendetail</value>
   </data>
   <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
     <value>Kembangkan secara eksklusif dalam UTC sementara sistem secara otomatis mengonversi dan menampilkan tanggal dalam zona waktu lokal pengguna.</value>
@@ -123,14 +141,29 @@
   <data name="Multiple Database Support" xml:space="preserve">
     <value>Dukungan Banyak Basis Data</value>
   </data>
+  <data name="Official Curriculum" xml:space="preserve">
+    <value>Kurikulum Resmi</value>
+  </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>Integrasi OpenID Connect</value>
+  </data>
+  <data name="Our Features" xml:space="preserve">
+    <value>Fitur Kami</value>
+  </data>
+  <data name="Practice anytime, anywhere. Our platform is fully responsive and works on all your devices." xml:space="preserve">
+    <value>Berlatih kapan saja, di mana saja. Platform kami sepenuhnya responsif dan berfungsi di semua perangkat Anda.</value>
+  </data>
+  <data name="Practice with thousands of questions from official sources, covering all levels and topics." xml:space="preserve">
+    <value>Berlatihlah dengan ribuan soal dari sumber resmi, mencakup semua tingkat dan topik.</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>Otorisasi RBAC</value>
   </data>
   <data name="Read the document" xml:space="preserve">
     <value>Baca dokumen</value>
+  </data>
+  <data name="Realistic Mock Exams" xml:space="preserve">
+    <value>Ujian Tiruan yang Realistis</value>
   </data>
   <data name="Responsive Design" xml:space="preserve">
     <value>Desain Responsif</value>
@@ -144,6 +177,18 @@
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Terintegrasi dengan mulus bersama penyedia OpenID Connect apa pun, dengan sinkronisasi peran otomatis.</value>
   </data>
+  <data name="Select your school and level to start practicing" xml:space="preserve">
+    <value>Pilih sekolah dan tingkat Anda untuk mulai berlatih</value>
+  </data>
+  <data name="Sharpen your sight-singing skills with a vast library of melodies and interactive exercises." xml:space="preserve">
+    <value>Asah keterampilan sight-singing Anda dengan perpustakaan melodi yang luas dan latihan interaktif.</value>
+  </data>
+  <data name="Sight-Singing Practice" xml:space="preserve">
+    <value>Latihan Sight-Singing</value>
+  </data>
+  <data name="Simulate the real exam environment with timed mock tests and get a feel for the actual challenge." xml:space="preserve">
+    <value>Simulasikan lingkungan ujian nyata dengan tes tiruan berbatas waktu dan rasakan tantangan sesungguhnya.</value>
+  </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>Penggantian Konfigurasi Cerdas</value>
   </data>
@@ -156,6 +201,9 @@
   <data name="Start a new project" xml:space="preserve">
     <value>Mulai proyek baru</value>
   </data>
+  <data name="Start Practice" xml:space="preserve">
+    <value>Mulai Latihan</value>
+  </data>
   <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
     <value>Mendukung variabel lingkungan dan pengaturan berbasis basis data, dengan prioritas otomatis diberikan kepada variabel lingkungan untuk override yang mulus.</value>
   </data>
@@ -165,65 +213,23 @@
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>Ini adalah proyek templat, di mana kita memulai perjalanan...</value>
   </data>
-  <data name="Welcome" xml:space="preserve">
-    <value>Selamat datang</value>
-  </data>
-  <data name="Why use the Aiursoft Template?" xml:space="preserve">
-    <value>Menggunakan Template Aiursoft?</value>
-  </data>
-  <data name="Start Practice" xml:space="preserve">
-    <value>Mulai Latihan</value>
-  </data>
-  <data name="Our Features" xml:space="preserve">
-    <value>Fitur Kami</value>
-  </data>
-  <data name="Comprehensive Question Bank" xml:space="preserve">
-    <value>Bank Soal Komprehensif</value>
-  </data>
-  <data name="Your journey to mastering music theory starts here." xml:space="preserve">
-    <value>Perjalanan Anda untuk menguasai teori musik dimulai di sini.</value>
-  </data>
-  <data name="A comprehensive platform designed to help you excel in your music exams." xml:space="preserve">
-    <value>Platform komprehensif yang dirancang untuk membantu Anda unggul dalam ujian musik Anda.</value>
-  </data>
-  <data name="Practice with thousands of questions from official sources, covering all levels and topics." xml:space="preserve">
-    <value>Berlatihlah dengan ribuan soal dari sumber resmi, mencakup semua tingkat dan topik.</value>
+  <data name="Track your performance, view detailed score reports, and identify your strengths and weaknesses." xml:space="preserve">
+    <value>Pantau kinerja Anda, lihat laporan skor terperinci, dan identifikasi kekuatan serta kelemahan Anda.</value>
   </data>
   <data name="View My Progress" xml:space="preserve">
     <value>Lihat Kemajuan Saya</value>
   </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Selamat datang</value>
+  </data>
   <data name="Welcome to the Music Exam Platform" xml:space="preserve">
     <value>Selamat Datang di Platform Ujian Musik</value>
   </data>
-  <data name="Detailed Analytics" xml:space="preserve">
-    <value>Analisis Mendetail</value>
+  <data name="Why use the Aiursoft Template?" xml:space="preserve">
+    <value>Menggunakan Template Aiursoft?</value>
   </data>
-  <data name="Realistic Mock Exams" xml:space="preserve">
-    <value>Ujian Tiruan yang Realistis</value>
-  </data>
-  <data name="Simulate the real exam environment with timed mock tests and get a feel for the actual challenge." xml:space="preserve">
-    <value>Simulasikan lingkungan ujian nyata dengan tes tiruan berbatas waktu dan rasakan tantangan sesungguhnya.</value>
-  </data>
-  <data name="Sight-Singing Practice" xml:space="preserve">
-    <value>Latihan Sight-Singing</value>
-  </data>
-  <data name="Track your performance, view detailed score reports, and identify your strengths and weaknesses." xml:space="preserve">
-    <value>Pantau kinerja Anda, lihat laporan skor terperinci, dan identifikasi kekuatan serta kelemahan Anda.</value>
-  </data>
-  <data name="Cross-Platform Access" xml:space="preserve">
-    <value>Akses Lintas Platform</value>
-  </data>
-  <data name="Official Curriculum" xml:space="preserve">
-    <value>Kurikulum Resmi</value>
-  </data>
-  <data name="Practice anytime, anywhere. Our platform is fully responsive and works on all your devices." xml:space="preserve">
-    <value>Berlatih kapan saja, di mana saja. Platform kami sepenuhnya responsif dan berfungsi di semua perangkat Anda.</value>
-  </data>
-  <data name="Sharpen your sight-singing skills with a vast library of melodies and interactive exercises." xml:space="preserve">
-    <value>Asah keterampilan sight-singing Anda dengan perpustakaan melodi yang luas dan latihan interaktif.</value>
-  </data>
-  <data name="All content is based on the official curriculum of major music conservatories." xml:space="preserve">
-    <value>Semua konten didasarkan pada kurikulum resmi dari konservatori musik utama.</value>
+  <data name="Your journey to mastering music theory starts here." xml:space="preserve">
+    <value>Perjalanan Anda untuk menguasai teori musik dimulai di sini.</value>
   </data>
 
 </root>

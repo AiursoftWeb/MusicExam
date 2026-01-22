@@ -18,23 +18,23 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Date" xml:space="preserve">
-    <value>Tanggal</value>
+      <data name="Action" xml:space="preserve">
+    <value>Aksi</value>
   </data>
-  <data name="N/A" xml:space="preserve">
-    <value>Tidak Tersedia</value>
+  <data name="Date" xml:space="preserve">
+    <value>Tanggal</value>
   </data>
   <data name="Exam" xml:space="preserve">
     <value>Ujian</value>
   </data>
-  <data name="You haven&apos;t taken any exams yet." xml:space="preserve">
-    <value>Anda belum mengikuti ujian apa pun.</value>
+  <data name="N/A" xml:space="preserve">
+    <value>Tidak Tersedia</value>
   </data>
   <data name="Score" xml:space="preserve">
     <value>Nilai</value>
   </data>
-  <data name="Action" xml:space="preserve">
-    <value>Aksi</value>
+  <data name="You haven&apos;t taken any exams yet." xml:space="preserve">
+    <value>Anda belum mengikuti ujian apa pun.</value>
   </data>
 
 </root>

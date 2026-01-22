@@ -24,12 +24,6 @@
   <data name="Active Users List" xml:space="preserve">
     <value>Daftar Pengguna Aktif</value>
   </data>
-  <data name="Reason" xml:space="preserve">
-    <value>Alasan</value>
-  </data>
-  <data name="User" xml:space="preserve">
-    <value>Pengguna</value>
-  </data>
   <data name="Avatar" xml:space="preserve">
     <value>Avatar</value>
   </data>
@@ -38,6 +32,12 @@
   </data>
   <data name="Detailed list of users who were active this month and why." xml:space="preserve">
     <value>Daftar rinci pengguna yang aktif bulan ini dan alasannya.</value>
+  </data>
+  <data name="Reason" xml:space="preserve">
+    <value>Alasan</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>Pengguna</value>
   </data>
 
 </root>

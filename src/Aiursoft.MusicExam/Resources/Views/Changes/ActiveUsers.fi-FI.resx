@@ -21,23 +21,23 @@
       <data name="Actions" xml:space="preserve">
     <value>Toimenpiteet</value>
   </data>
+  <data name="Active Users Count" xml:space="preserve">
+    <value>Aktiivisten käyttäjien määrä</value>
+  </data>
   <data name="Details" xml:space="preserve">
     <value>Yksityiskohdat</value>
-  </data>
-  <data name="Monthly Statistics" xml:space="preserve">
-    <value>Kuukausittaiset tilastot</value>
-  </data>
-  <data name="Monthly Active Users Statistics" xml:space="preserve">
-    <value>Kuukausittainen aktiivisten käyttäjien tilasto</value>
   </data>
   <data name="Month" xml:space="preserve">
     <value>Kuukausi</value>
   </data>
+  <data name="Monthly Active Users Statistics" xml:space="preserve">
+    <value>Kuukausittainen aktiivisten käyttäjien tilasto</value>
+  </data>
+  <data name="Monthly Statistics" xml:space="preserve">
+    <value>Kuukausittaiset tilastot</value>
+  </data>
   <data name="Number of users who had the TakeExam permission at any point during each month." xml:space="preserve">
     <value>Kuukausittainen käyttäjämäärä, joilla oli TakeExam-oikeus milloin tahansa kuukauden aikana.</value>
-  </data>
-  <data name="Active Users Count" xml:space="preserve">
-    <value>Aktiivisten käyttäjien määrä</value>
   </data>
 
 </root>

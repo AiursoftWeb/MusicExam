@@ -27,6 +27,9 @@
   <data name="If you believe you should have access, please contact your system administrator. Or try signing out and signing in again." xml:space="preserve">
     <value>Jika Anda merasa seharusnya memiliki akses, harap hubungi administrator sistem Anda. Atau coba keluar dan masuk kembali.</value>
   </data>
+  <data name="Please contact the administrator to pay and activate your account. Or try signing out and signing in again." xml:space="preserve">
+    <value>Silakan hubungi administrator untuk membayar dan mengaktifkan akun Anda. Atau coba keluar dari akun dan masuk kembali.</value>
+  </data>
   <data name="Sorry, you do not have the necessary permissions to access this page." xml:space="preserve">
     <value>Maaf, Anda tidak memiliki izin yang diperlukan untuk mengakses halaman ini.</value>
   </data>

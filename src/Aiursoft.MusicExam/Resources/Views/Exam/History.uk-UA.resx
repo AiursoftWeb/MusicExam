@@ -18,10 +18,7 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Score" xml:space="preserve">
-    <value>Бали</value>
-  </data>
-  <data name="Action" xml:space="preserve">
+      <data name="Action" xml:space="preserve">
     <value>Дія</value>
   </data>
   <data name="Date" xml:space="preserve">
@@ -32,6 +29,9 @@
   </data>
   <data name="N/A" xml:space="preserve">
     <value>Н/Д</value>
+  </data>
+  <data name="Score" xml:space="preserve">
+    <value>Бали</value>
   </data>
   <data name="You haven&apos;t taken any exams yet." xml:space="preserve">
     <value>Ви ще не здавали жодних іспитів.</value>

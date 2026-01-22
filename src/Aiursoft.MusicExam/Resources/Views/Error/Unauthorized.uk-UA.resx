@@ -27,6 +27,9 @@
   <data name="If you believe you should have access, please contact your system administrator. Or try signing out and signing in again." xml:space="preserve">
     <value>Якщо ви вважаєте, що маєте мати доступ, будь ласка, зверніться до вашого системного адміністратора. Або спробуйте вийти з облікового запису та увійти знову.</value>
   </data>
+  <data name="Please contact the administrator to pay and activate your account. Or try signing out and signing in again." xml:space="preserve">
+    <value>Будь ласка, зв’яжіться з адміністратором, щоб сплатити та активувати свій обліковий запис. Або спробуйте вийти з облікового запису та увійти знову.</value>
+  </data>
   <data name="Sorry, you do not have the necessary permissions to access this page." xml:space="preserve">
     <value>Вибачте, у вас недостатньо прав для доступу до цієї сторінки.</value>
   </data>

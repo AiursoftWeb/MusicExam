@@ -18,23 +18,29 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Quizzes Taken" xml:space="preserve">
-    <value>Suoritetut tietokilpailut</value>
+      <data name="Dashboard" xml:space="preserve">
+    <value>Kojelauta</value>
   </data>
   <data name="Exam Submissions" xml:space="preserve">
     <value>Tenttipalautukset</value>
   </data>
-  <data name="Dashboard" xml:space="preserve">
-    <value>Kojelauta</value>
+  <data name="New Submissions (Last 30 Days)" xml:space="preserve">
+    <value>Uudet palautukset (viimeiset 30 päivää)</value>
   </data>
-  <data name="Users" xml:space="preserve">
-    <value>Käyttäjät</value>
+  <data name="New Users (Last 30 Days)" xml:space="preserve">
+    <value>Uudet käyttäjät (viimeiset 30 päivää)</value>
+  </data>
+  <data name="Paid Members" xml:space="preserve">
+    <value>Maksulliset jäsenet</value>
+  </data>
+  <data name="Quizzes Taken" xml:space="preserve">
+    <value>Suoritetut tietokilpailut</value>
   </data>
   <data name="System Statistics" xml:space="preserve">
     <value>Järjestelmätilastot</value>
   </data>
-  <data name="Paid Members" xml:space="preserve">
-    <value>Maksulliset jäsenet</value>
+  <data name="Users" xml:space="preserve">
+    <value>Käyttäjät</value>
   </data>
 
 </root>

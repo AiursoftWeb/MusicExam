@@ -30,6 +30,9 @@
   <data name="A complete solution for user authentication and profile management." xml:space="preserve">
     <value>Täydellinen ratkaisu käyttäjäauthentikaatioon ja profiilin hallintaan.</value>
   </data>
+  <data name="A comprehensive platform designed to help you excel in your music exams. Practice with thousands of questions from official sources." xml:space="preserve">
+    <value>Kattava alusta, joka auttaa sinua menestyä musiikin kokeissa. Harjoittele tuhansien kysymysten kanssa virallisilta lähteiltä.</value>
+  </data>
   <data name="A fully responsive layout that looks great on both desktop and mobile devices." xml:space="preserve">
     <value>Täysin responsiivinen ulkoasu, joka näyttää erinomaiselta sekä työpöytä- että mobiililaitteilla.</value>
   </data>
@@ -44,6 +47,9 @@
   </data>
   <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
     <value>Aiursoft Template on ratkaiseva valintamme yritysprojekteihin! Se on rakennettu kehittäjille ja on kevyt mutta tehokas. Voimme ohittaa kaiken valmiin koodin todennukseen ja käyttäjien hallintaan.</value>
+  </data>
+  <data name="All content is based on the official curriculum of major music conservatories." xml:space="preserve">
+    <value>Kaikki sisältö perustuu suurten musiikkikonservatorien viralliseen opetussuunnitelmaan.</value>
   </data>
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>Kaikki riippuvuudet rekisteröidään automaattisesti ja ne ovat aina saatavilla konstruktorin kautta tapahtuvan injektoinnin välityksellä.</value>
@@ -66,6 +72,9 @@
   <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
     <value>Automaattinen, tekoälypohjainen käännös 28 kielelle.</value>
   </data>
+  <data name="Available Exams" xml:space="preserve">
+    <value>Saatavilla olevat kokeet</value>
+  </data>
   <data name="Background Job Processing" xml:space="preserve">
     <value>Taustakäyttöön prosessointi</value>
   </data>
@@ -84,11 +93,23 @@
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>Kattava dokumentaatio</value>
   </data>
+  <data name="Comprehensive Question Bank" xml:space="preserve">
+    <value>Kattava kysymysarkisto</value>
+  </data>
+  <data name="Comprehensive Question Bank, Realistic Mock Exams, Detailed Analytics." xml:space="preserve">
+    <value>Kattava kysymyskanta, todellinen harjoituskoe, yksityiskohtaiset analyysit.</value>
+  </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>Johdonmukaisuustarkistus</value>
   </data>
+  <data name="Cross-Platform Access" xml:space="preserve">
+    <value>Ristiplatfoimien pääsy</value>
+  </data>
   <data name="Dashboard Website" xml:space="preserve">
     <value>Kojelauta-sivusto</value>
+  </data>
+  <data name="Detailed Analytics" xml:space="preserve">
+    <value>Yksityiskohtainen analytiikka</value>
   </data>
   <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
     <value>Kehitä vain UTC:lla, kunnes järjestelmä muuntaa ja näyttää päivämäärät käyttäjän paikalliseen aikavyöhön automaattisesti.</value>
@@ -177,6 +198,9 @@
   <data name="Markdown To HTML" xml:space="preserve">
     <value>Markdownista HTML:ksi</value>
   </data>
+  <data name="Master Your Music Theory" xml:space="preserve">
+    <value>Hallitse musiikin teoriaa</value>
+  </data>
   <data name="MIT Licence" xml:space="preserve">
     <value>MIT-lisenssi</value>
   </data>
@@ -192,17 +216,32 @@
   <data name="Music Tools" xml:space="preserve">
     <value>Musiikkityökalut</value>
   </data>
+  <data name="Official Curriculum" xml:space="preserve">
+    <value>Virallinen opetussuunnitelma</value>
+  </data>
   <data name="Open Source" xml:space="preserve">
     <value>Avoin lähdekoodi</value>
   </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>OpenID Connect -integraatio</value>
   </data>
+  <data name="Practice anytime, anywhere. Our platform is fully responsive and works on all your devices." xml:space="preserve">
+    <value>Harjoittele milloin tahansa, missä tahansa. Alusta toimii täysin reagoivasti ja käytettävissä kaikilla laitteillasi.</value>
+  </data>
+  <data name="Practice with thousands of questions from official sources, covering all levels and topics." xml:space="preserve">
+    <value>Harjoittele tuhansista virallisista lähteistä peräisin olevista kysymyksistä, jotka kattavat kaikki tason ja aiheen.</value>
+  </data>
+  <data name="Progress" xml:space="preserve">
+    <value>Edistys</value>
+  </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>RBAC-valtuutus</value>
   </data>
   <data name="Read the document" xml:space="preserve">
     <value>Lue dokumentti</value>
+  </data>
+  <data name="Realistic Mock Exams" xml:space="preserve">
+    <value>Realistiset harjoituskokeet</value>
   </data>
   <data name="Responsive Design" xml:space="preserve">
     <value>Responsiivinen suunnittelu</value>
@@ -219,6 +258,18 @@
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Saatumattomasti integroi minkä tahansa OpenID Connect -palveluntarjoajan kanssa, automaattisen roolisynkronoinnin avulla.</value>
   </data>
+  <data name="Select your school and level to start practicing" xml:space="preserve">
+    <value>Valitse koulusi ja tasosi aloittaaksesi harjoittelun</value>
+  </data>
+  <data name="Sharpen your sight-singing skills with a vast library of melodies and interactive exercises." xml:space="preserve">
+    <value>Tarkenna näkölaulutaitojasi laajalla sävelmäkirjastolla ja vuorovaikutteisilla harjoituksilla.</value>
+  </data>
+  <data name="Sight-Singing Practice" xml:space="preserve">
+    <value>Näkölaulun harjoittelu</value>
+  </data>
+  <data name="Simulate the real exam environment with timed mock tests and get a feel for the actual challenge." xml:space="preserve">
+    <value>Simuloi todellista kokeiluun liittyvää ympäristöä ajoitetuilla harjoituskokeilla ja saat tunnetta todellisesta haasteesta.</value>
+  </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>Älykäs asetusten ohjaus</value>
   </data>
@@ -230,6 +281,9 @@
   </data>
   <data name="Start a new project" xml:space="preserve">
     <value>Aloita uusi projekti</value>
+  </data>
+  <data name="Start Practice" xml:space="preserve">
+    <value>Aloita harjoittelu</value>
   </data>
   <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
     <value>Tukee sekä ympäristömuuttujia että tietokantaperustaisia asetuksia, ja ympäristömuuttujilla on automaattinen etusija, jolloin korvaaminen on sujuvaa.</value>
@@ -249,6 +303,9 @@
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>Tämä on malliprojekti, josta aloitamme matkan...</value>
   </data>
+  <data name="Track your performance, view detailed score reports, and identify your strengths and weaknesses." xml:space="preserve">
+    <value>Seuraa suoritustasi, tarkastele tarkkoja tulostaulukoita ja tunnista vahvuudesi ja heikkouksesi.</value>
+  </data>
   <data name="Usage" xml:space="preserve">
     <value>Käyttö</value>
   </data>
@@ -264,6 +321,9 @@
   <data name="What our developers say" xml:space="preserve">
     <value>Mitä kehittäjämme sanovat</value>
   </data>
+  <data name="Why choose Music Exam Platform?" xml:space="preserve">
+    <value>Miksi valita Music Exam Platform?</value>
+  </data>
   <data name="Why use the Aiursoft Template?" xml:space="preserve">
     <value>Miksi käyttää Aiursoft Templatea?</value>
   </data>
@@ -275,12 +335,6 @@
   </data>
   <data name="You&apos;ll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
     <value>Tarvitset .NET 10 SDK:n, npm:n ja suosikki-IDE:si, kuten Visual Studion tai JetBrains Riderin. Löydät täydellisen asennusoppaan dokumentaatiostamme.</value>
-  </data>
-  <data name="Select your school and level to start practicing" xml:space="preserve">
-    <value>Valitse koulusi ja tasosi aloittaaksesi harjoittelun</value>
-  </data>
-  <data name="Available Exams" xml:space="preserve">
-    <value>Saatavilla olevat kokeet</value>
   </data>
 
 </root>

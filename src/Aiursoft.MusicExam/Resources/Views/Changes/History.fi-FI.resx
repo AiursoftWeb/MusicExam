@@ -18,14 +18,17 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Change History" xml:space="preserve">
-    <value>Muutoshistoria</value>
-  </data>
-  <data name="Type" xml:space="preserve">
-    <value>Tyyppi</value>
+      <data name="A chronological list of all recorded system changes." xml:space="preserve">
+    <value>Kaikkien tallennettujen järjestelmämuutosten kronologinen luettelo.</value>
   </data>
   <data name="All Changes" xml:space="preserve">
     <value>Kaikki muutokset</value>
+  </data>
+  <data name="Change History" xml:space="preserve">
+    <value>Muutoshistoria</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Yksityiskohdat</value>
   </data>
   <data name="Time" xml:space="preserve">
     <value>Aika</value>
@@ -33,11 +36,8 @@
   <data name="Triggered By" xml:space="preserve">
     <value>Käynnistäjänä</value>
   </data>
-  <data name="Details" xml:space="preserve">
-    <value>Yksityiskohdat</value>
-  </data>
-  <data name="A chronological list of all recorded system changes." xml:space="preserve">
-    <value>Kaikkien tallennettujen järjestelmämuutosten kronologinen luettelo.</value>
+  <data name="Type" xml:space="preserve">
+    <value>Tyyppi</value>
   </data>
 
 </root>

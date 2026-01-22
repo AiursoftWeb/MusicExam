@@ -18,56 +18,59 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="(no role assigned)" xml:space="preserve">
-    <value>(tidak ada peran yang ditetapkan)</value>
-  </data>
-  <data name="A list of all user accounts registered in the system." xml:space="preserve">
-    <value>Daftar semua akun pengguna yang terdaftar dalam sistem.</value>
-  </data>
-  <data name="Actions" xml:space="preserve">
+      <data name="Actions" xml:space="preserve">
     <value>Tindakan</value>
-  </data>
-  <data name="All Users" xml:space="preserve">
-    <value>Semua Pengguna</value>
   </data>
   <data name="Avatar" xml:space="preserve">
     <value>Avatar</value>
   </data>
-  <data name="Create a new user" xml:space="preserve">
-    <value>Buat pengguna baru</value>
+  <data name="Close" xml:space="preserve">
+    <value>Tutup</value>
   </data>
-  <data name="Delete" xml:space="preserve">
-    <value>Hapus</value>
+  <data name="Edit Payment Info" xml:space="preserve">
+    <value>Edit Info Pembayaran</value>
   </data>
-  <data name="Edit" xml:space="preserve">
-    <value>Edit</value>
+  <data name="Editing user" xml:space="preserve">
+    <value>Mengedit pengguna</value>
   </data>
   <data name="Email" xml:space="preserve">
-    <value>Surel</value>
+    <value>Email</value>
   </data>
-  <data name="Expire" xml:space="preserve">
-    <value>Kadaluarsa</value>
+  <data name="Expire At" xml:space="preserve">
+    <value>Berakhir Pada</value>
   </data>
   <data name="Free" xml:space="preserve">
     <value>Gratis</value>
   </data>
-  <data name="Manage Users" xml:space="preserve">
-    <value>Kelola Pengguna</value>
+  <data name="Manage" xml:space="preserve">
+    <value>Kelola</value>
   </data>
-  <data name="Name" xml:space="preserve">
-    <value>Nama</value>
+  <data name="Manage user payments and expirations." xml:space="preserve">
+    <value>Kelola pembayaran dan masa berlaku pengguna.</value>
+  </data>
+  <data name="New Expiration Date" xml:space="preserve">
+    <value>Tanggal Berakhir Baru</value>
   </data>
   <data name="Paid" xml:space="preserve">
-    <value>Berbayar</value>
+    <value>Lunas</value>
   </data>
-  <data name="Roles" xml:space="preserve">
-    <value>Peran</value>
+  <data name="Paid Status" xml:space="preserve">
+    <value>Status Berbayar</value>
+  </data>
+  <data name="Paid Users" xml:space="preserve">
+    <value>Pengguna Berbayar</value>
+  </data>
+  <data name="Payment Management" xml:space="preserve">
+    <value>Manajemen Pembayaran</value>
+  </data>
+  <data name="Save changes" xml:space="preserve">
+    <value>Simpan perubahan</value>
   </data>
   <data name="Usage" xml:space="preserve">
     <value>Penggunaan</value>
   </data>
   <data name="User name" xml:space="preserve">
-    <value>Nama Pengguna</value>
+    <value>Nama pengguna</value>
   </data>
 
 </root>

@@ -18,26 +18,29 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="View History" xml:space="preserve">
-    <value>Näytä historia</value>
-  </data>
-  <data name="Retake Exam" xml:space="preserve">
-    <value>Uusi tentti</value>
-  </data>
-  <data name="Question" xml:space="preserve">
-    <value>Kysymys</value>
-  </data>
-  <data name="Back to Dashboard" xml:space="preserve">
+      <data name="Back to Dashboard" xml:space="preserve">
     <value>Takaisin kojelautaan</value>
-  </data>
-  <data name="Score" xml:space="preserve">
-    <value>Pisteet</value>
   </data>
   <data name="Correct Answer" xml:space="preserve">
     <value>Oikea vastaus</value>
   </data>
+  <data name="Explanation" xml:space="preserve">
+    <value>Selitys</value>
+  </data>
   <data name="No detailed breakdown for this question type." xml:space="preserve">
     <value>Tälle kysymystyypille ei ole yksityiskohtaista erittelyä.</value>
+  </data>
+  <data name="Question" xml:space="preserve">
+    <value>Kysymys</value>
+  </data>
+  <data name="Retake Exam" xml:space="preserve">
+    <value>Uusi tentti</value>
+  </data>
+  <data name="Score" xml:space="preserve">
+    <value>Pisteet</value>
+  </data>
+  <data name="View History" xml:space="preserve">
+    <value>Näytä historia</value>
   </data>
 
 </root>

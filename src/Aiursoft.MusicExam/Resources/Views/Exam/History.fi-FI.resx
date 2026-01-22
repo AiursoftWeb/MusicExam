@@ -18,23 +18,23 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Score" xml:space="preserve">
-    <value>Pisteet</value>
-  </data>
-  <data name="N/A" xml:space="preserve">
-    <value>Ei saatavilla</value>
-  </data>
-  <data name="You haven&apos;t taken any exams yet." xml:space="preserve">
-    <value>Et ole vielä suorittanut yhtään koetta.</value>
+      <data name="Action" xml:space="preserve">
+    <value>Toimenpide</value>
   </data>
   <data name="Date" xml:space="preserve">
     <value>Päivämäärä</value>
   </data>
-  <data name="Action" xml:space="preserve">
-    <value>Toimenpide</value>
-  </data>
   <data name="Exam" xml:space="preserve">
     <value>Tentti</value>
+  </data>
+  <data name="N/A" xml:space="preserve">
+    <value>Ei saatavilla</value>
+  </data>
+  <data name="Score" xml:space="preserve">
+    <value>Pisteet</value>
+  </data>
+  <data name="You haven&apos;t taken any exams yet." xml:space="preserve">
+    <value>Et ole vielä suorittanut yhtään koetta.</value>
   </data>
 
 </root>

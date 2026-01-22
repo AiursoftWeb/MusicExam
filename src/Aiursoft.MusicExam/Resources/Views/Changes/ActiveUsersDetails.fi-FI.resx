@@ -18,11 +18,11 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="User" xml:space="preserve">
-    <value>Käyttäjä</value>
+      <data name="Active Users Details" xml:space="preserve">
+    <value>Aktiivisten käyttäjien tiedot</value>
   </data>
-  <data name="Reason" xml:space="preserve">
-    <value>Syy</value>
+  <data name="Active Users List" xml:space="preserve">
+    <value>Aktiivisten käyttäjien luettelo</value>
   </data>
   <data name="Avatar" xml:space="preserve">
     <value>Avatar</value>
@@ -30,14 +30,14 @@
   <data name="Back to Statistics" xml:space="preserve">
     <value>Takaisin tilastoihin</value>
   </data>
-  <data name="Active Users Details" xml:space="preserve">
-    <value>Aktiivisten käyttäjien tiedot</value>
-  </data>
-  <data name="Active Users List" xml:space="preserve">
-    <value>Aktiivisten käyttäjien luettelo</value>
-  </data>
   <data name="Detailed list of users who were active this month and why." xml:space="preserve">
     <value>Yksityiskohtainen luettelo käyttäjistä, jotka olivat aktiivisia tässä kuussa ja syystä.</value>
+  </data>
+  <data name="Reason" xml:space="preserve">
+    <value>Syy</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>Käyttäjä</value>
   </data>
 
 </root>

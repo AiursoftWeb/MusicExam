@@ -30,6 +30,9 @@
   <data name="A complete solution for user authentication and profile management." xml:space="preserve">
     <value>Täydellinen ratkaisu käyttäjätunnistukseen ja profiilin hallintaan.</value>
   </data>
+  <data name="A comprehensive platform designed to help you excel in your music exams." xml:space="preserve">
+    <value>Kattava alusta, joka on suunniteltu auttamaan sinua menestymään musiikkikokeissasi.</value>
+  </data>
   <data name="A fully responsive layout that looks great on both desktop and mobile devices." xml:space="preserve">
     <value>Täysin responsiivinen asettelu, joka näyttää erinomaiselta sekä työpöytä- että mobiililaitteilla.</value>
   </data>
@@ -38,6 +41,9 @@
   </data>
   <data name="AI-Powered Translations" xml:space="preserve">
     <value>Tekoälyn voimaan perustuvat käännökset</value>
+  </data>
+  <data name="All content is based on the official curriculum of major music conservatories." xml:space="preserve">
+    <value>Kaikki sisältö perustuu suurten musiikkikonservatorioiden viralliseen opetussuunnitelmaan.</value>
   </data>
   <data name="All dependencies are automatically registered and always available via constructor injection." xml:space="preserve">
     <value>Kaikki riippuvuudet rekisteröidään automaattisesti ja ne ovat aina saatavilla konstruktorin kautta tapahtuvan injektoinnin avulla.</value>
@@ -57,6 +63,9 @@
   <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
     <value>Automaattinen, AI-pohjainen käännös 28 kielelle.</value>
   </data>
+  <data name="Available Exams" xml:space="preserve">
+    <value>Saavutettavissa olevat kokeet</value>
+  </data>
   <data name="Background Job Processing" xml:space="preserve">
     <value>Taustatehtävien käsittely</value>
   </data>
@@ -72,8 +81,17 @@
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>Laaja dokumentaatio</value>
   </data>
+  <data name="Comprehensive Question Bank" xml:space="preserve">
+    <value>Kattava kysymyspankki</value>
+  </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>Konsistenssitarkistus</value>
+  </data>
+  <data name="Cross-Platform Access" xml:space="preserve">
+    <value>Monialustan käyttö</value>
+  </data>
+  <data name="Detailed Analytics" xml:space="preserve">
+    <value>Yksityiskohtainen analyysi</value>
   </data>
   <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
     <value>Kehitä vain UTC:ssä, kunnes järjestelmä muuntaa ja näyttää päivämäärät käyttäjän paikalliseen aikavyöhön automaattisesti.</value>
@@ -123,14 +141,29 @@
   <data name="Multiple Database Support" xml:space="preserve">
     <value>Usean tietokannan tuki</value>
   </data>
+  <data name="Official Curriculum" xml:space="preserve">
+    <value>Virallinen opetussuunnitelma</value>
+  </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>OpenID Connect -integraatio</value>
+  </data>
+  <data name="Our Features" xml:space="preserve">
+    <value>Ominen ominaisuudet</value>
+  </data>
+  <data name="Practice anytime, anywhere. Our platform is fully responsive and works on all your devices." xml:space="preserve">
+    <value>Harjoittele milloin tahansa, missä tahansa. Alustamme on täysin responsiivinen ja toimii kaikilla laitteillasi.</value>
+  </data>
+  <data name="Practice with thousands of questions from official sources, covering all levels and topics." xml:space="preserve">
+    <value>Harjoittele tuhansilla virallisista lähteistä peräisin olevilla kysymyksillä, jotka kattavat kaikki tasot ja aihealueet.</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>RBAC-valtuutus</value>
   </data>
   <data name="Read the document" xml:space="preserve">
     <value>Lue dokumentti</value>
+  </data>
+  <data name="Realistic Mock Exams" xml:space="preserve">
+    <value>Todelliset harjoituskokeet</value>
   </data>
   <data name="Responsive Design" xml:space="preserve">
     <value>Responsiivinen suunnittelu</value>
@@ -144,6 +177,18 @@
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Saatonta integrointi minkä tahansa OpenID Connect -palveluntarjoajan kanssa, automaattisella roolisynkronoinnilla.</value>
   </data>
+  <data name="Select your school and level to start practicing" xml:space="preserve">
+    <value>Valitse koulu ja taso aloittaaksesi harjoittelun</value>
+  </data>
+  <data name="Sharpen your sight-singing skills with a vast library of melodies and interactive exercises." xml:space="preserve">
+    <value>Terävistä nuotinlukutaitojasi laajan melodiakirjaston ja interaktiivisten harjoitusten avulla.</value>
+  </data>
+  <data name="Sight-Singing Practice" xml:space="preserve">
+    <value>Näkölauluharjoittelu</value>
+  </data>
+  <data name="Simulate the real exam environment with timed mock tests and get a feel for the actual challenge." xml:space="preserve">
+    <value>Simuloi todellista koeolosuhteita ajastetuilla harjoituskokeilla ja saa tuntuma todelliseen haasteeseen.</value>
+  </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>Älykäs asetusten ohittaminen</value>
   </data>
@@ -156,6 +201,9 @@
   <data name="Start a new project" xml:space="preserve">
     <value>Aloita uusi projekti</value>
   </data>
+  <data name="Start Practice" xml:space="preserve">
+    <value>Aloita harjoittelu</value>
+  </data>
   <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
     <value>Tukee sekä ympäristömuuttujia että tietokantaperustaisia asetuksia, ja annetaan ympäristömuuttujille automaattisesti etusija, jotta ylikirjoitukset sujuvat ilman hankaluuksia.</value>
   </data>
@@ -165,65 +213,23 @@
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>Tämä on malliprojekti, josta aloitamme matkamme...</value>
   </data>
-  <data name="Welcome" xml:space="preserve">
-    <value>Tervetuloa</value>
-  </data>
-  <data name="Why use the Aiursoft Template?" xml:space="preserve">
-    <value>Miksi käyttää Aiursoft Templatea?</value>
+  <data name="Track your performance, view detailed score reports, and identify your strengths and weaknesses." xml:space="preserve">
+    <value>Seuraa suoritustasi, tarkastele yksityiskohtaisia pisteytysraportteja ja tunnista vahvuutesi sekä kehityskohteesi.</value>
   </data>
   <data name="View My Progress" xml:space="preserve">
     <value>Näin edistymiseni</value>
   </data>
-  <data name="Start Practice" xml:space="preserve">
-    <value>Aloita harjoittelu</value>
-  </data>
-  <data name="Your journey to mastering music theory starts here." xml:space="preserve">
-    <value>Matkasi musiikinteorian hallitsemiseen alkaa tästä.</value>
-  </data>
-  <data name="Our Features" xml:space="preserve">
-    <value>Ominen ominaisuudet</value>
-  </data>
-  <data name="Comprehensive Question Bank" xml:space="preserve">
-    <value>Kattava kysymyspankki</value>
+  <data name="Welcome" xml:space="preserve">
+    <value>Tervetuloa</value>
   </data>
   <data name="Welcome to the Music Exam Platform" xml:space="preserve">
     <value>Tervetuloa Musiikkitentti-alustalle</value>
   </data>
-  <data name="A comprehensive platform designed to help you excel in your music exams." xml:space="preserve">
-    <value>Kattava alusta, joka on suunniteltu auttamaan sinua menestymään musiikkikokeissasi.</value>
+  <data name="Why use the Aiursoft Template?" xml:space="preserve">
+    <value>Miksi käyttää Aiursoft Templatea?</value>
   </data>
-  <data name="Practice with thousands of questions from official sources, covering all levels and topics." xml:space="preserve">
-    <value>Harjoittele tuhansilla virallisista lähteistä peräisin olevilla kysymyksillä, jotka kattavat kaikki tasot ja aihealueet.</value>
-  </data>
-  <data name="Detailed Analytics" xml:space="preserve">
-    <value>Yksityiskohtainen analyysi</value>
-  </data>
-  <data name="Realistic Mock Exams" xml:space="preserve">
-    <value>Todelliset harjoituskokeet</value>
-  </data>
-  <data name="Sight-Singing Practice" xml:space="preserve">
-    <value>Näkölauluharjoittelu</value>
-  </data>
-  <data name="Cross-Platform Access" xml:space="preserve">
-    <value>Monialustan käyttö</value>
-  </data>
-  <data name="Simulate the real exam environment with timed mock tests and get a feel for the actual challenge." xml:space="preserve">
-    <value>Simuloi todellista koeolosuhteita ajastetuilla harjoituskokeilla ja saa tuntuma todelliseen haasteeseen.</value>
-  </data>
-  <data name="Sharpen your sight-singing skills with a vast library of melodies and interactive exercises." xml:space="preserve">
-    <value>Terävistä nuotinlukutaitojasi laajan melodiakirjaston ja interaktiivisten harjoitusten avulla.</value>
-  </data>
-  <data name="Track your performance, view detailed score reports, and identify your strengths and weaknesses." xml:space="preserve">
-    <value>Seuraa suoritustasi, tarkastele yksityiskohtaisia pisteytysraportteja ja tunnista vahvuutesi sekä kehityskohteesi.</value>
-  </data>
-  <data name="Official Curriculum" xml:space="preserve">
-    <value>Virallinen opetussuunnitelma</value>
-  </data>
-  <data name="Practice anytime, anywhere. Our platform is fully responsive and works on all your devices." xml:space="preserve">
-    <value>Harjoittele milloin tahansa, missä tahansa. Alustamme on täysin responsiivinen ja toimii kaikilla laitteillasi.</value>
-  </data>
-  <data name="All content is based on the official curriculum of major music conservatories." xml:space="preserve">
-    <value>Kaikki sisältö perustuu suurten musiikkikonservatorioiden viralliseen opetussuunnitelmaan.</value>
+  <data name="Your journey to mastering music theory starts here." xml:space="preserve">
+    <value>Matkasi musiikinteorian hallitsemiseen alkaa tästä.</value>
   </data>
 
 </root>

@@ -18,26 +18,26 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Time" xml:space="preserve">
-    <value>Час</value>
-  </data>
-  <data name="Details" xml:space="preserve">
-    <value>Деталі</value>
-  </data>
-  <data name="Change History" xml:space="preserve">
-    <value>Історія змін</value>
+      <data name="A chronological list of all recorded system changes." xml:space="preserve">
+    <value>Хронологічний список усіх зареєстрованих змін у системі.</value>
   </data>
   <data name="All Changes" xml:space="preserve">
     <value>Усі зміни</value>
   </data>
-  <data name="Type" xml:space="preserve">
-    <value>Тип</value>
+  <data name="Change History" xml:space="preserve">
+    <value>Історія змін</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Деталі</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Час</value>
   </data>
   <data name="Triggered By" xml:space="preserve">
     <value>Викликано</value>
   </data>
-  <data name="A chronological list of all recorded system changes." xml:space="preserve">
-    <value>Хронологічний список усіх зареєстрованих змін у системі.</value>
+  <data name="Type" xml:space="preserve">
+    <value>Тип</value>
   </data>
 
 </root>

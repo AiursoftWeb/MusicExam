@@ -21,23 +21,23 @@
       <data name="Active Users Details" xml:space="preserve">
     <value>Деталі активних користувачів</value>
   </data>
-  <data name="Avatar" xml:space="preserve">
-    <value>Аватар</value>
-  </data>
-  <data name="User" xml:space="preserve">
-    <value>Користувач</value>
-  </data>
   <data name="Active Users List" xml:space="preserve">
     <value>Список активних користувачів</value>
   </data>
-  <data name="Reason" xml:space="preserve">
-    <value>Причина</value>
+  <data name="Avatar" xml:space="preserve">
+    <value>Аватар</value>
   </data>
   <data name="Back to Statistics" xml:space="preserve">
     <value>Назад до статистики</value>
   </data>
   <data name="Detailed list of users who were active this month and why." xml:space="preserve">
     <value>Детальний список користувачів, які були активними цього місяця, та причини їхньої активності.</value>
+  </data>
+  <data name="Reason" xml:space="preserve">
+    <value>Причина</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>Користувач</value>
   </data>
 
 </root>

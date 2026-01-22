@@ -18,50 +18,53 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="(no role assigned)" xml:space="preserve">
-    <value>(роль не призначено)</value>
-  </data>
-  <data name="A list of all user accounts registered in the system." xml:space="preserve">
-    <value>Список усіх облікових записів користувачів, зареєстрованих у системі.</value>
-  </data>
-  <data name="Actions" xml:space="preserve">
+      <data name="Actions" xml:space="preserve">
     <value>Дії</value>
-  </data>
-  <data name="All Users" xml:space="preserve">
-    <value>Усі користувачі</value>
   </data>
   <data name="Avatar" xml:space="preserve">
     <value>Аватар</value>
   </data>
-  <data name="Create a new user" xml:space="preserve">
-    <value>Створити нового користувача</value>
+  <data name="Close" xml:space="preserve">
+    <value>Закрити</value>
   </data>
-  <data name="Delete" xml:space="preserve">
-    <value>Видалити</value>
+  <data name="Edit Payment Info" xml:space="preserve">
+    <value>Редагувати інформацію про оплату</value>
   </data>
-  <data name="Edit" xml:space="preserve">
-    <value>Редагувати</value>
+  <data name="Editing user" xml:space="preserve">
+    <value>Редагування користувача</value>
   </data>
   <data name="Email" xml:space="preserve">
-    <value>Електронна пошта</value>
+    <value>Пошта</value>
   </data>
-  <data name="Expire" xml:space="preserve">
-    <value>Термін дії</value>
+  <data name="Expire At" xml:space="preserve">
+    <value>Час закінчення</value>
   </data>
   <data name="Free" xml:space="preserve">
     <value>Безкоштовно</value>
   </data>
-  <data name="Manage Users" xml:space="preserve">
-    <value>Керування користувачами</value>
+  <data name="Manage" xml:space="preserve">
+    <value>Управління</value>
   </data>
-  <data name="Name" xml:space="preserve">
-    <value>Ім&apos;я</value>
+  <data name="Manage user payments and expirations." xml:space="preserve">
+    <value>Керування платіжами користувачів та термінами їх дії.</value>
+  </data>
+  <data name="New Expiration Date" xml:space="preserve">
+    <value>Нова дата закінчення дії</value>
   </data>
   <data name="Paid" xml:space="preserve">
     <value>Оплачено</value>
   </data>
-  <data name="Roles" xml:space="preserve">
-    <value>Ролі</value>
+  <data name="Paid Status" xml:space="preserve">
+    <value>Статус оплати</value>
+  </data>
+  <data name="Paid Users" xml:space="preserve">
+    <value>Оплатні користувачі</value>
+  </data>
+  <data name="Payment Management" xml:space="preserve">
+    <value>Керування оплатою</value>
+  </data>
+  <data name="Save changes" xml:space="preserve">
+    <value>Зберегти зміни</value>
   </data>
   <data name="Usage" xml:space="preserve">
     <value>Використання</value>

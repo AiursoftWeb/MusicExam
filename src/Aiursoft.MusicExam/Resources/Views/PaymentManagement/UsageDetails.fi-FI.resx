@@ -18,29 +18,26 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Back to Dashboard" xml:space="preserve">
-    <value>Kembali ke Dasbor</value>
+      <data name="Actions" xml:space="preserve">
+    <value>Toiminnot</value>
   </data>
-  <data name="Correct Answer" xml:space="preserve">
-    <value>Jawaban Benar</value>
+  <data name="Exam Submissions" xml:space="preserve">
+    <value>Kokeen palautukset</value>
   </data>
-  <data name="Explanation" xml:space="preserve">
-    <value>Penjelasan</value>
+  <data name="Not scored yet" xml:space="preserve">
+    <value>Ei arvosteltu vielä</value>
   </data>
-  <data name="No detailed breakdown for this question type." xml:space="preserve">
-    <value>Tidak ada rincian detail untuk tipe pertanyaan ini.</value>
-  </data>
-  <data name="Question" xml:space="preserve">
-    <value>Pertanyaan</value>
-  </data>
-  <data name="Retake Exam" xml:space="preserve">
-    <value>Ulangi Ujian</value>
+  <data name="Paper Name" xml:space="preserve">
+    <value>Kokeen nimi</value>
   </data>
   <data name="Score" xml:space="preserve">
-    <value>Skor</value>
+    <value>Pisteet</value>
   </data>
-  <data name="View History" xml:space="preserve">
-    <value>Lihat Riwayat</value>
+  <data name="Submission Time" xml:space="preserve">
+    <value>Lähetyksen aika</value>
+  </data>
+  <data name="View Submission" xml:space="preserve">
+    <value>Näytä palautus</value>
   </data>
 
 </root>
