@@ -34,8 +34,7 @@ public class DashboardController : Controller
         var schools = await _dbContext
             .Schools
             .Include(s => s.Papers)
-            .OrderBy(s => s.Name)
-            .ThenBy(s => s.Id)
+            .OrderBy(s => s.Id)
             .ToListAsync();
 
         var model = new Aiursoft.MusicExam.Models.HomeViewModels.IndexViewModel

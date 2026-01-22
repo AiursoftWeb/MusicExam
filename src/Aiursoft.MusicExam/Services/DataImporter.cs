@@ -31,82 +31,59 @@ public class DataImporter : ISingletonDependency
 
     public async Task StartAsync(CancellationToken cancellationToken)
     {
-        _logger.LogInformation("Data importer is starting.");
+        _logger.LogInformation("Data importer is starting...");
 
         using var scope = _serviceProvider.CreateScope();
         var dbContext = scope.ServiceProvider.GetRequiredService<TemplateDbContext>();
 
-        var indexJsonPath = Path.Combine(_dataSettings.Path, "index.json");
-        if (!File.Exists(indexJsonPath))
+        var rootPath = _dataSettings.Path;
+        if (!Directory.Exists(rootPath))
         {
-            throw new FileNotFoundException($"Data importer: index.json not found at {indexJsonPath}.");
+            throw new DirectoryNotFoundException($"Data root directory not found at {rootPath}.");
         }
 
-        var json = await File.ReadAllTextAsync(indexJsonPath, cancellationToken);
-        var indexData = JsonSerializer.Deserialize<IndexJson>(json, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
-        if (indexData?.Data == null)
-        {
-            throw new InvalidDataException("Data importer: Could not parse index.json.");
-        }
+        // Level 1: Schools
+        var schoolDirs = Directory.GetDirectories(rootPath).OrderBy(d => d).ToArray();
+        _logger.LogInformation("Found {Count} schools directories.", schoolDirs.Length);
 
-        _logger.LogInformation("Found {Count} schools in index.json.", indexData.Data.Count);
-
-        foreach (var schoolDto in indexData.Data)
+        foreach (var schoolDir in schoolDirs)
         {
-            var school = await dbContext.Schools.FirstOrDefaultAsync(s => s.Name == schoolDto.SubjectTitle, cancellationToken: cancellationToken);
+            var schoolName = Path.GetFileName(schoolDir);
+            var school = await dbContext.Schools.FirstOrDefaultAsync(s => s.Name == schoolName, cancellationToken);
             if (school == null)
             {
-                school = new School { Name = schoolDto.SubjectTitle };
+                school = new School { Name = schoolName };
                 await dbContext.Schools.AddAsync(school, cancellationToken);
-                _logger.LogInformation("School '{SchoolName}' not found in DB. Creating it.", schoolDto.SubjectTitle);
+                _logger.LogInformation("Creating School: {SchoolName}", schoolName);
             }
-            // Ensure school ID is available
             await dbContext.SaveChangesAsync(cancellationToken);
 
-            foreach (var levelDto in schoolDto.Subjects)
+            // Level 2: Levels
+            var levelDirs = Directory.GetDirectories(schoolDir).OrderBy(d => d).ToArray();
+            foreach (var levelDir in levelDirs)
             {
-                var levelName = levelDto.SubjectTitle;
-                _logger.LogInformation("Processing Level: {LevelName}", levelName);
+                var levelName = Path.GetFileName(levelDir);
 
-                // Find the level JSON file
-                // The directory structure seems to use "1_Title" format usually, but we need to find the specific file.
-                // Based on previous code: schoolDir/id_Title.json
-
-                var levelDirName = $"{levelDto.Id}_{levelDto.SubjectTitle}";
-                var levelJsonPath = Path.Combine(_dataSettings.Path, school.Name, $"{levelDirName}.json");
-                var levelDirPath = Path.Combine(_dataSettings.Path, school.Name, levelDirName);
-
-                if (!File.Exists(levelJsonPath))
+                // Level 3: Categories
+                var categoryDirs = Directory.GetDirectories(levelDir).OrderBy(d => d).ToArray();
+                foreach (var categoryDir in categoryDirs)
                 {
-                    _logger.LogWarning("Level JSON file not found at {Path}. Skipping level.", levelJsonPath);
-                    continue;
-                }
+                    var categoryName = Path.GetFileName(categoryDir);
 
-                var levelJsonContent = await File.ReadAllTextAsync(levelJsonPath, cancellationToken);
-                var levelData = JsonSerializer.Deserialize<PaperCategoriesFileDto>(levelJsonContent, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
-
-                if (levelData?.Data == null)
-                {
-                    _logger.LogWarning("Could not parse level JSON for {LevelName}.", levelName);
-                    continue;
-                }
-
-                foreach (var (categoryName, papers) in levelData.Data)
-                {
-                    foreach (var paperDto in papers)
+                    // Level 4: Exam Papers
+                    var paperDirs = Directory.GetDirectories(categoryDir).OrderBy(d => d).ToArray();
+                    foreach (var paperDir in paperDirs)
                     {
-                        var paperId = paperDto.Id;
-                        var paperTitle = paperDto.Title;
+                        var paperTitle = Path.GetFileName(paperDir);
 
                         var paper = await dbContext.ExamPapers
                             .Include(p => p.Questions)
-                            .FirstOrDefaultAsync(p => p.Id == paperId, cancellationToken: cancellationToken);
+                            .FirstOrDefaultAsync(p => p.Title == paperTitle && p.SchoolId == school.Id, cancellationToken);
 
                         if (paper == null)
                         {
                             paper = new ExamPaper
                             {
-                                Id = paperId,
                                 Title = paperTitle,
                                 School = school,
                                 Level = levelName,
@@ -117,7 +94,7 @@ public class DataImporter : ISingletonDependency
                         }
                         else
                         {
-                            // Update metadata if it exists
+                            // Update metadata
                             if (paper.Level != levelName || paper.Category != categoryName)
                             {
                                 paper.Level = levelName;
@@ -126,39 +103,14 @@ public class DataImporter : ISingletonDependency
                             }
                         }
 
+                        // Check if we need to import questions
                         if (paper.Questions.Any())
                         {
-                            // Skip importing questions if already populate
-                            // But we might want to update questions? For now, stick to skip for performance/safety logic.
                             continue;
                         }
 
                         // Import Questions
-                        // Directory structure: Data/School/LevelDir/Category/PaperTitle
-                        // We need to resolve the Category Directory and Paper Directory
-
-                        var categoryDir = Path.Combine(levelDirPath, categoryName);
-                        // Category dir might not exist or might optionally have different naming?
-                        // Previous code used GetBestMatchingDirectory, lets reuse that logic if possible or assume exact match first.
-                        if (!Directory.Exists(categoryDir))
-                        {
-                            // Try to find best match? Or currently strict.
-                            if (!Directory.Exists(categoryDir))
-                            {
-                                _logger.LogWarning("Category directory missing: {Path}", categoryDir);
-                                continue;
-                            }
-                        }
-
-                        var paperDir = GetBestMatchingDirectory(categoryDir, paperTitle);
-                        if (string.IsNullOrEmpty(paperDir))
-                        {
-                            _logger.LogWarning("Paper directory not found for: {PaperTitle} in {CategoryDir}", paperTitle, categoryDir);
-                            continue;
-                        }
-
-                        // Now import questions from paperDir
-                        var questionFiles = Directory.GetFiles(paperDir, "question_*.json").OrderBy(f => f);
+                        var questionFiles = Directory.GetFiles(paperDir, "question_*.json").OrderBy(f => f).ToArray();
                         var questionOrder = 0;
                         foreach (var questionFile in questionFiles)
                         {
@@ -168,9 +120,8 @@ public class DataImporter : ISingletonDependency
 
                             var questionAssets = new List<string>();
                             var questionAssetTasks = new List<Task<string>>();
+                            var sourceAssetDir = paperDir;
 
-                            var sourceAssetDir = Path.GetDirectoryName(questionFile)!;
-                            // Assuming CopyAsset is available as private method
                             questionAssetTasks.AddRange(questionDto.LocalAudios.Select(localAudio => CopyAsset(localAudio, sourceAssetDir)));
                             questionAssetTasks.AddRange(questionDto.LocalImages.Select(localImage => CopyAsset(localImage, sourceAssetDir)));
 
@@ -182,12 +133,12 @@ public class DataImporter : ISingletonDependency
                                 Explanation = questionDto.Explanation,
                                 AssetPath = JsonSerializer.Serialize(questionAssets.Where(q => !string.IsNullOrWhiteSpace(q))),
                                 Paper = paper,
-                                Order = questionOrder++,
-                                QuestionType = questionDto.Options.Any() ? QuestionType.MultipleChoice : QuestionType.SightSinging, // Heuristic
+                                Order = questionOrder++, // Order based on file name sorting
+                                QuestionType = questionDto.Options.Any() ? QuestionType.MultipleChoice : QuestionType.SightSinging,
                                 Options = new List<Option>()
                             };
 
-                            var correctAnswers = questionDto.CorrectAnswer.Split(',').Select(a => a.Trim()).ToList();
+                            var correctAnswers = questionDto.CorrectAnswer?.Split(',').Select(a => a.Trim()).ToList() ?? new List<string>();
 
                             var optionDisplayOrder = 0;
                             foreach (var optionDto in questionDto.Options)
@@ -234,27 +185,28 @@ public class DataImporter : ISingletonDependency
             return relativeAssetPath;
         }
 
+        // Try to find the file
         var sourcePath = Path.Combine(sourceDir, relativeAssetPath);
-        if (File.Exists(sourcePath))
+
+        if (!File.Exists(sourcePath))
         {
-            try
-            {
-                // Generate a logical path for the asset: AssetBucket/year/month/day/filename
-                var now = DateTime.UtcNow;
-                var fileName = Path.GetFileName(sourcePath);
-                var destinationLogicalPath = $"{AssetBucket}/{now:yyyy}/{now:MM}/{now:dd}/{fileName}";
-                
-                return await _storageService.SaveFileFromPhysicalPath(sourcePath, destinationLogicalPath, isVault: false);
-            }
-            catch (Exception e)
-            {
-                _logger.LogWarning(e, "Could not copy asset file from {Path}!", sourcePath);
-                return string.Empty;
-            }
+            _logger.LogWarning("Asset file not found at {Path}!", sourcePath);
+            return string.Empty;
         }
 
-        _logger.LogWarning("Asset file not found at {Path}!", sourcePath);
-        return string.Empty;
+        try
+        {
+            var now = DateTime.UtcNow;
+            var fileName = Path.GetFileName(sourcePath);
+            var destinationLogicalPath = $"{AssetBucket}/{now:yyyy}/{now:MM}/{now:dd}/{fileName}";
+
+            return await _storageService.SaveFileFromPhysicalPath(sourcePath, destinationLogicalPath, isVault: false);
+        }
+        catch (Exception e)
+        {
+            _logger.LogWarning(e, "Could not copy asset file from {Path}!", sourcePath);
+            return string.Empty;
+        }
     }
 
     public Task StopAsync(CancellationToken cancellationToken)
@@ -262,43 +214,4 @@ public class DataImporter : ISingletonDependency
         _logger.LogInformation("Data importer is stopping.");
         return Task.CompletedTask;
     }
-    private string? GetBestMatchingDirectory(string parentDir, string expectedName)
-    {
-        var exactPath = Path.Combine(parentDir, expectedName);
-        if (Directory.Exists(exactPath))
-        {
-            return exactPath;
-        }
-
-        var expectedNormalized = NormalizeName(expectedName);
-        var subDirectories = Directory.GetDirectories(parentDir);
-
-        foreach (var dir in subDirectories)
-        {
-            var dirName = Path.GetFileName(dir);
-            if (NormalizeName(dirName) == expectedNormalized)
-            {
-                return dir;
-            }
-        }
-
-        return null;
-    }
-
-    private string NormalizeName(string name)
-    {
-        return name
-            .Replace("(", "")
-            .Replace(")", "")
-            .Replace("（", "")
-            .Replace("）", "")
-            .Replace(" ", "")
-            .Replace("-", "")
-            .Replace("•", "")
-            .Replace(".", "")
-            .Replace("，", "")
-            .Replace(",", "")
-            .Trim();
-    }
 }
-
