@@ -33,7 +33,7 @@
                     {
                         if (asset.EndsWith(".mp3", StringComparison.OrdinalIgnoreCase))
                         {
-                                        <div class="audio-player-wrapper" data-audio-src="@Storage.RelativePathToInternetUrl(asset)"></div>
+                                        <div class="audio-player-wrapper d-inline-block mb-2 me-2" data-audio-src="@Storage.RelativePathToInternetUrl(asset)"></div>
                         }
                         else if (asset.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || asset.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
                         {
@@ -58,7 +58,7 @@
 
                                     @if (option.Content.EndsWith(".mp3", StringComparison.OrdinalIgnoreCase))
                                     {
-                                                            <div class="audio-player-wrapper d-inline-block align-middle" style="width: 300px;" data-audio-src="@Storage.RelativePathToInternetUrl(option.Content)"></div>
+                                                            <div class="audio-player-wrapper d-inline-block align-middle mb-1" style="width: auto;" data-audio-src="@Storage.RelativePathToInternetUrl(option.Content)"></div>
                                     }
                                     else if (option.Content.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || option.Content.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
                                     {
@@ -93,13 +93,14 @@
 
                 @if (!string.IsNullOrWhiteSpace(question.Explanation))
                 {
-                            <div id="explanation-@i" style="display: none;" class="alert alert-secondary alert-outline-coloured mt-2" role="alert">
+                            <div id="explanation-@i" style="display: none;" class="alert alert-info alert-outline-coloured alert-dismissible mt-2" role="alert">
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                 <div class="alert-icon">
-                                    <i class="fas fa-fw fa-lightbulb"></i>
+                                    <i class="far fa-fw fa-lightbulb"></i>
                                 </div>
                                 <div class="alert-message">
                                     <strong>@Localizer["Explanation"]:</strong>
-                                    <p class="mb-0">@question.Explanation</p>
+                                    @question.Explanation
                                 </div>
                             </div>
                 }

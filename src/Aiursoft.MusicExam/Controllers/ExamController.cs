@@ -72,6 +72,7 @@ public class ExamController : Controller
         var model = new ResultViewModel
         {
             Title = paper.Title,
+            PaperId = paper.Id,
             TotalQuestions = paper.Questions.Count,
             Score = 0
         };
@@ -190,6 +191,7 @@ public class ExamController : Controller
         var model = new ResultViewModel
         {
             Title = paper.Title,
+            PaperId = paper.Id,
             TotalQuestions = paper.Questions.Count,
             Score = submission.Score ?? 0,
             PageTitle = "Review - " + paper.Title

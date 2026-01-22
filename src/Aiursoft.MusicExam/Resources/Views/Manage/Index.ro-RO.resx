@@ -39,6 +39,9 @@
   <data name="Change your profile" xml:space="preserve">
     <value>Modifică-ți profilul</value>
   </data>
+  <data name="My Exam Records" xml:space="preserve">
+    <value>Istoricul mecan de examinare</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Parolă</value>
   </data>

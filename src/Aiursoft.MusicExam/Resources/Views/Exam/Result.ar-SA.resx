@@ -21,11 +21,17 @@
       <data name="Back to Dashboard" xml:space="preserve">
     <value>العودة إلى لوحة التحكم</value>
   </data>
+  <data name="Correct" xml:space="preserve">
+    <value>صحيح</value>
+  </data>
   <data name="Correct Answer" xml:space="preserve">
     <value>الإجابة الصحيحة</value>
   </data>
   <data name="Explanation" xml:space="preserve">
     <value>التفسير</value>
+  </data>
+  <data name="Incorrect" xml:space="preserve">
+    <value>خاطئ</value>
   </data>
   <data name="No detailed breakdown for this question type." xml:space="preserve">
     <value>لا يوجد تفصيل مفصل لهذا النوع من الأسئلة.</value>

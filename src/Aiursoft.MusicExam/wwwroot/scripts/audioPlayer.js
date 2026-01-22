@@ -13,17 +13,19 @@ class MusicExamAudioPlayer {
 
     render() {
         this.container.innerHTML = `
-            <div class="custom-audio-player d-flex align-items-center">
-                <button class="btn btn-sm btn-primary play-pause-btn d-flex align-items-center justify-content-center" style="height: 32px; width: 32px; padding: 0;" type="button">
-                    <i class="fas fa-play"></i>
-                </button>
-                <div class="progress-container mx-2 flex-grow-1">
+            <div class="custom-audio-player d-inline-flex align-items-center border rounded p-1 pe-3 bg-light" style="width: auto; max-width: 100%;">
+                <div class="btn-group me-2" role="group">
+                    <button class="btn btn-sm btn-primary play-pause-btn d-flex align-items-center justify-content-center" style="height: 32px; width: 32px; padding: 0; border-top-right-radius: 0; border-bottom-right-radius: 0;" type="button">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <button class="btn btn-sm btn-outline-secondary replay-btn d-flex align-items-center justify-content-center" style="height: 32px; width: 32px; padding: 0; border-top-left-radius: 0; border-bottom-left-radius: 0;" type="button">
+                        <i class="fas fa-redo"></i>
+                    </button>
+                </div>
+                <div class="progress-container mx-2 flex-grow-1" style="min-width: 100px; max-width: 200px;">
                     <div class="progress-bar"></div>
                 </div>
-                <button class="btn btn-sm btn-outline-secondary replay-btn d-flex align-items-center justify-content-center" style="height: 32px; width: 32px; padding: 0;" type="button">
-                    <i class="fas fa-redo"></i>
-                </button>
-                <div class="time-display ms-2 small text-muted text-nowrap">0:00 / 0:00</div>
+                <div class="time-display ms-2 small text-muted text-nowrap user-select-none">0:00 / 0:00</div>
             </div>
         `;
 

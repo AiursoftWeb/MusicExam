@@ -39,6 +39,9 @@
   <data name="Change your profile" xml:space="preserve">
     <value>Profilinizi değiştirin</value>
   </data>
+  <data name="My Exam Records" xml:space="preserve">
+    <value>Sınav Geçmişim</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Şifre</value>
   </data>

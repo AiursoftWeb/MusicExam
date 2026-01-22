@@ -6,6 +6,7 @@ namespace Aiursoft.MusicExam.Models.ExamViewModels;
 public class ResultViewModel : UiStackLayoutViewModel
 {
     public required string Title { get; set; }
+    public int PaperId { get; set; }
     public int Score { get; set; }
     public int TotalQuestions { get; set; }
     public List<QuestionAnswerResult> Answers { get; set; } = new();

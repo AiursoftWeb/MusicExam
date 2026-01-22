@@ -21,11 +21,17 @@
       <data name="Back to Dashboard" xml:space="preserve">
     <value>Panoya Geri Dön</value>
   </data>
+  <data name="Correct" xml:space="preserve">
+    <value>Doğru</value>
+  </data>
   <data name="Correct Answer" xml:space="preserve">
     <value>Doğru Cevap</value>
   </data>
   <data name="Explanation" xml:space="preserve">
     <value>Açıklama</value>
+  </data>
+  <data name="Incorrect" xml:space="preserve">
+    <value>Yanlış</value>
   </data>
   <data name="No detailed breakdown for this question type." xml:space="preserve">
     <value>Bu soru türü için ayrıntılı bir döküm bulunmamaktadır.</value>

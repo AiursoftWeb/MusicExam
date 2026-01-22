@@ -18,35 +18,26 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Back to Dashboard" xml:space="preserve">
-    <value>Tilbage til Dashboard</value>
+      <data name="Date" xml:space="preserve">
+    <value>Data</value>
   </data>
-  <data name="Correct" xml:space="preserve">
-    <value>Rigtigt</value>
+  <data name="Exam" xml:space="preserve">
+    <value>Egzamin</value>
   </data>
-  <data name="Correct Answer" xml:space="preserve">
-    <value>Korrekt svar</value>
+  <data name="History" xml:space="preserve">
+    <value>Historia</value>
   </data>
-  <data name="Explanation" xml:space="preserve">
-    <value>Forklaring</value>
+  <data name="My Exam History" xml:space="preserve">
+    <value>Moja historia egzaminów</value>
   </data>
-  <data name="Incorrect" xml:space="preserve">
-    <value>Forkert</value>
-  </data>
-  <data name="No detailed breakdown for this question type." xml:space="preserve">
-    <value>Ingen detaljeret opdeling for denne spørgselstype.</value>
-  </data>
-  <data name="Question" xml:space="preserve">
-    <value>Spørgsmål</value>
-  </data>
-  <data name="Retake Exam" xml:space="preserve">
-    <value>Tag eksamen igen</value>
+  <data name="N/A" xml:space="preserve">
+    <value>N/D</value>
   </data>
   <data name="Score" xml:space="preserve">
-    <value>Score</value>
+    <value>Wynik</value>
   </data>
-  <data name="View History" xml:space="preserve">
-    <value>Se historik</value>
+  <data name="You haven&apos;t taken any exams yet." xml:space="preserve">
+    <value>Nie przystąpiłeś jeszcze do żadnych egzaminów.</value>
   </data>
 
 </root>

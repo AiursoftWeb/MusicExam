@@ -26,7 +26,7 @@
                 <a asp-controller="Dashboard" asp-action="Index"
                    class="btn btn-secondary">@Localizer["Back to Dashboard"]</a>
                 <a asp-controller="Manage" asp-action="ExamHistory" class="btn btn-info">@Localizer["View History"]</a>
-                <a href="javascript:window.location.reload();" class="btn btn-primary">@Localizer["Retake Exam"]</a>
+                <a asp-controller="Exam" asp-action="Take" asp-route-id="@Model.PaperId" class="btn btn-primary">@Localizer["Retake Exam"]</a>
             </div>
         </div>
     </div>
@@ -54,7 +54,7 @@
                     {
                         if (asset.EndsWith(".mp3", StringComparison.OrdinalIgnoreCase))
                         {
-                            <div class="audio-player-wrapper"
+                            <div class="audio-player-wrapper d-inline-block mb-2 me-2"
                                  data-audio-src="@Storage.RelativePathToInternetUrl(asset)"></div>
                         }
                         else if (asset.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || asset.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
@@ -106,7 +106,7 @@
 
                                 @if (option.Content.EndsWith(".mp3", StringComparison.OrdinalIgnoreCase))
                                 {
-                                    <div class="audio-player-wrapper d-inline-block align-middle" style="width: 300px;"
+                                    <div class="audio-player-wrapper d-inline-block align-middle mb-1" style="width: auto;"
                                          data-audio-src="@Storage.RelativePathToInternetUrl(option.Content)"></div>
                                 }
                                 else if (option.Content.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || option.Content.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
@@ -132,13 +132,14 @@
 
                 @if (!string.IsNullOrWhiteSpace(question.Explanation))
                 {
-                    <div class="alert alert-secondary alert-outline-coloured mt-3" role="alert">
+                    <div class="alert alert-info alert-outline-coloured alert-dismissible" role="alert">
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         <div class="alert-icon">
-                            <i class="fas fa-fw fa-lightbulb"></i>
+                            <i class="far fa-fw fa-lightbulb"></i>
                         </div>
                         <div class="alert-message">
                             <strong>@Localizer["Explanation"]:</strong>
-                            <p class="mb-0">@question.Explanation</p>
+                            @question.Explanation
                         </div>
                     </div>
                 }

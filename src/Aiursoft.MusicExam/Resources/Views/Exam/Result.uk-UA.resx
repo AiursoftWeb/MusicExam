@@ -21,11 +21,17 @@
       <data name="Back to Dashboard" xml:space="preserve">
     <value>Назад до Панелі керування</value>
   </data>
+  <data name="Correct" xml:space="preserve">
+    <value>Правильна</value>
+  </data>
   <data name="Correct Answer" xml:space="preserve">
     <value>Правильна відповідь</value>
   </data>
   <data name="Explanation" xml:space="preserve">
     <value>Пояснення</value>
+  </data>
+  <data name="Incorrect" xml:space="preserve">
+    <value>Неправильно</value>
   </data>
   <data name="No detailed breakdown for this question type." xml:space="preserve">
     <value>Для цього типу завдання детального розбору немає.</value>
