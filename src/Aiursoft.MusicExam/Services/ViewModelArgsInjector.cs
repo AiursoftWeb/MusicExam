@@ -102,7 +102,7 @@ public class ViewModelArgsInjector(
         toInject.Layout = UiLayout.Fluid;
         toInject.FooterMenu = new FooterMenuViewModel
         {
-            AppBrand = new Link { Text = projectName, Href = "https://gitlab.aiursoft.com/aiursoft/template" },
+            AppBrand = new Link { Text = projectName, Href = "https://gitlab.aiursoft.com/aiursoft/musicexam" },
             Links =
             [
                 new Link { Text = localizer["Home"], Href = "/" },

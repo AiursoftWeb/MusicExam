@@ -1,7 +1,7 @@
 aiur() { arg="$( cut -d ' ' -f 2- <<< "$@" )" && curl -sL https://gitlab.aiursoft.com/aiursoft/aiurscript/-/raw/master/$1.sh | sudo bash -s $arg; }
 
-app_name="musicExam"
-repo_path="https://gitlab.aiursoft.com/aiursoft/musicExam"
+app_name="musicexam"
+repo_path="https://gitlab.aiursoft.com/aiursoft/musicexam"
 proj_path="src/Aiursoft.MusicExam/Aiursoft.MusicExam.csproj"
 
 get_dll_name()

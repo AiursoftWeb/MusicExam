@@ -30,11 +30,17 @@
   <data name="Explanation" xml:space="preserve">
     <value>詳解</value>
   </data>
+  <data name="Incorrect!" xml:space="preserve">
+    <value>錯誤！</value>
+  </data>
   <data name="Incorrect! Please check the correct answer highlighted above." xml:space="preserve">
     <value>錯誤！請查看上方標示的正確答案。</value>
   </data>
   <data name="Next" xml:space="preserve">
     <value>下一題</value>
+  </data>
+  <data name="Please check the correct answer highlighted above." xml:space="preserve">
+    <value>請查看上方標示的正確答案。</value>
   </data>
   <data name="Please select an answer first." xml:space="preserve">
     <value>請先選擇一個答案。</value>

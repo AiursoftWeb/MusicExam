@@ -30,11 +30,17 @@
   <data name="Explanation" xml:space="preserve">
     <value>解説</value>
   </data>
+  <data name="Incorrect!" xml:space="preserve">
+    <value>不正解！</value>
+  </data>
   <data name="Incorrect! Please check the correct answer highlighted above." xml:space="preserve">
     <value>不正解です！上記でハイライトされている正しい答えを確認してください。</value>
   </data>
   <data name="Next" xml:space="preserve">
     <value>次へ</value>
+  </data>
+  <data name="Please check the correct answer highlighted above." xml:space="preserve">
+    <value>正解は上記で強調されているので、確認してください。</value>
   </data>
   <data name="Please select an answer first." xml:space="preserve">
     <value>まず回答を選択してください。</value>

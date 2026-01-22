@@ -91,11 +91,11 @@ public class ChangeServiceTests
         var report = await _service.GetReportForMonth(reportStart, reportEnd);
 
         // Assert
-        Assert.AreEqual(1, report.ActiveUsers.Count, "Should have 1 active user");
+        Assert.HasCount(1, report.ActiveUsers, "Should have 1 active user");
         var activeUser = report.ActiveUsers.First();
         Assert.AreEqual(userId, activeUser.User.Id);
         
-        Assert.AreEqual(1, activeUser.ActiveTimes.Count);
+        Assert.HasCount(1, activeUser.ActiveTimes);
         var span = activeUser.ActiveTimes.First();
         
         // Allowed tolerance for DB tick precision if necessary, but InMemory is usually exact.
@@ -140,7 +140,7 @@ public class ChangeServiceTests
         var report = await _service.GetReportForMonth(reportStart, reportEnd);
 
         // Assert
-        Assert.AreEqual(1, report.ActiveUsers.Count);
+        Assert.HasCount(1, report.ActiveUsers);
         var activeUser = report.ActiveUsers.First();
         Assert.AreEqual(userId, activeUser.User.Id);
         
@@ -148,5 +148,23 @@ public class ChangeServiceTests
         var span = activeUser.ActiveTimes.First();
         Assert.AreEqual(joinTime, span.Start);
         Assert.AreEqual(reportEnd, span.End);
+    }
+
+    [TestMethod]
+    public async Task TestGetMonthlyReports_ExcludesFutureMonths()
+    {
+        // Act
+        // Request a large number of months, including what would be "future" months if the logic were simple
+        var reports = await _service.GetMonthlyReports(months: 24);
+
+        // Assert
+        var now = DateTime.UtcNow;
+        var currentMonthStart = new DateTime(now.Year, now.Month, 1, 0, 0, 0, DateTimeKind.Utc);
+        
+        foreach (var report in reports)
+        {
+            Assert.IsTrue(report.Month <= currentMonthStart, 
+                $"Report for {report.Month:yyyy-MM} should not be in the future (relative to {currentMonthStart:yyyy-MM})");
+        }
     }
 }

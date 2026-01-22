@@ -1,11 +1,11 @@
 # MusicExam - A sample project
 
-[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://gitlab.aiursoft.com/aiursoft/musicExam/-/blob/master/LICENSE)
-[![Pipeline stat](https://gitlab.aiursoft.com/aiursoft/musicExam/badges/master/pipeline.svg)](https://gitlab.aiursoft.com/aiursoft/musicExam/-/pipelines)
-[![Test Coverage](https://gitlab.aiursoft.com/aiursoft/musicExam/badges/master/coverage.svg)](https://gitlab.aiursoft.com/aiursoft/musicExam/-/pipelines)
-[![Man hours](https://manhours.aiursoft.com/r/gitlab.aiursoft.com/aiursoft/musicExam.svg)](https://manhours.aiursoft.com/r/gitlab.aiursoft.com/aiursoft/musicExam.html)
-[![Website](https://img.shields.io/website?url=https%3A%2F%2FmusicExam.aiursoft.com)](https://musicExam.aiursoft.com)
-[![Docker](https://img.shields.io/docker/pulls/aiursoft/musicExam.svg)](https://hub.docker.com/r/aiursoft/musicExam)
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://gitlab.aiursoft.com/aiursoft/musicexam/-/blob/master/LICENSE)
+[![Pipeline stat](https://gitlab.aiursoft.com/aiursoft/musicexam/badges/master/pipeline.svg)](https://gitlab.aiursoft.com/aiursoft/musicexam/-/pipelines)
+[![Test Coverage](https://gitlab.aiursoft.com/aiursoft/musicexam/badges/master/coverage.svg)](https://gitlab.aiursoft.com/aiursoft/musicexam/-/pipelines)
+[![Man hours](https://manhours.aiursoft.com/r/gitlab.aiursoft.com/aiursoft/musicexam.svg)](https://manhours.aiursoft.com/r/gitlab.aiursoft.com/aiursoft/musicexam.html)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fmusicexam.aiursoft.com)](https://musicexam.aiursoft.com)
+[![Docker](https://img.shields.io/docker/pulls/aiursoft/musicexam.svg)](https://hub.docker.com/r/aiursoft/musicexam)
 
 MusicExam is a sample project.
 
@@ -25,7 +25,7 @@ Default user name is `admin@default.com` and default password is `admin123`.
 
 ## Try
 
-Try a running MusicExam [here](https://musicExam.aiursoft.com).
+Try a running MusicExam [here](https://musicexam.aiursoft.com).
 
 ## Run in Ubuntu
 
@@ -34,13 +34,13 @@ The following script will install\update this app on your Ubuntu server. Support
 On your Ubuntu server, run the following command:
 
 ```bash
-curl -sL https://gitlab.aiursoft.com/aiursoft/musicExam/-/raw/master/install.sh | sudo bash
+curl -sL https://gitlab.aiursoft.com/aiursoft/musicexam/-/raw/master/install.sh | sudo bash
 ```
 
 Of course it is suggested that append a custom port number to the command:
 
 ```bash
-curl -sL https://gitlab.aiursoft.com/aiursoft/musicExam/-/raw/master/install.sh | sudo bash -s 8080
+curl -sL https://gitlab.aiursoft.com/aiursoft/musicexam/-/raw/master/install.sh | sudo bash -s 8080
 ```
 
 It will install the app as a systemd service, and start it automatically. Binary files will be located at `/opt/apps`. Service files will be located at `/etc/systemd/system`.
@@ -66,8 +66,8 @@ First, install Docker [here](https://docs.docker.com/get-docker/).
 Then run the following commands in a Linux shell:
 
 ```bash
-image=aiursoft/musicExam
-appName=musicExam
+image=aiursoft/musicexam
+appName=musicexam
 sudo docker pull $image
 sudo docker run -d --name $appName --restart unless-stopped -p 5000:5000 -v /var/www/$appName:/data $image
 ```
@@ -78,7 +78,7 @@ The docker image has the following context:
 
 | Properties  | Value                           |
 |-------------|---------------------------------|
-| Image       | aiursoft/musicExam               |
+| Image       | aiursoft/musicexam               |
 | Ports       | 5000                            |
 | Binary path | /app                            |
 | Data path   | /data                           |

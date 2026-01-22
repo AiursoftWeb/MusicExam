@@ -13,8 +13,8 @@
     {
             <p class="text-muted mb-2">@Localizer["Category:"] @Model.Paper.Category</p>
     }
-    <div class="progress mb-4" style="height: 25px;">
-        <div id="progress-bar" class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 0%; transition: width 0.5s ease;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+    <div class="progress mb-4" style="height: 12px; border-radius: 6px;">
+        <div id="progress-bar" class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" style="width: 0%; transition: width 0.5s ease;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
     </div>
     <hr />
 
@@ -84,8 +84,13 @@
                         break;
 
                     case QuestionType.SightSinging:
-                                    <div class="alert alert-info mt-3">
-                            @Localizer["This is a sight-singing question. Please review the sheet music and sing aloud."]
+                                    <div class="alert alert-info alert-outline-coloured alert-dismissible mt-3" role="alert">
+                                        <div class="alert-icon">
+                                            <i class="fas fa-fw fa-info-circle"></i>
+                                        </div>
+                                        <div class="alert-message">
+                                            @Localizer["This is a sight-singing question. Please review the sheet music and sing aloud."]
+                                        </div>
                                     </div>
                         break;
                 }
@@ -93,9 +98,14 @@
 
                 @if (!string.IsNullOrWhiteSpace(question.Explanation))
                 {
-                            <div id="explanation-@i" style="display: none;" class="alert alert-secondary mt-2">
-                                <strong>@Localizer["Explanation"]:</strong>
-                                <p>@question.Explanation</p>
+                            <div id="explanation-@i" style="display: none;" class="alert alert-secondary alert-outline-coloured mt-2" role="alert">
+                                <div class="alert-icon">
+                                    <i class="fas fa-fw fa-lightbulb"></i>
+                                </div>
+                                <div class="alert-message">
+                                    <strong>@Localizer["Explanation"]:</strong>
+                                    <p class="mb-0">@question.Explanation</p>
+                                </div>
                             </div>
                 }
                     <hr />
@@ -153,7 +163,6 @@
                         const progressBar = document.getElementById("progress-bar");
                         progressBar.style.width = progress + "%";
                         progressBar.setAttribute("aria-valuenow", progress);
-                        progressBar.innerText = Math.round(progress) + "%";
                     }
 
                     // Reset buttons state for new question
@@ -223,9 +232,25 @@
                     if(feedback) {
                         feedback.style.display = "block";
                         if(allCorrect) {
-                            feedback.innerHTML = '<div class="alert alert-success">@Localizer["Correct!"]</div>';
+                            feedback.innerHTML = `
+                                <div class="alert alert-success alert-outline-coloured mt-2" role="alert">
+                                    <div class="alert-icon">
+                                        <i class="fas fa-fw fa-check-circle"></i>
+                                    </div>
+                                    <div class="alert-message">
+                                        <strong>@Localizer["Correct!"]</strong>
+                                    </div>
+                                </div>`;
                         } else {
-                            feedback.innerHTML = '<div class="alert alert-danger">@Localizer["Incorrect! Please check the correct answer highlighted above."]</div>';
+                            feedback.innerHTML = `
+                                <div class="alert alert-danger alert-outline-coloured mt-2" role="alert">
+                                    <div class="alert-icon">
+                                        <i class="fas fa-fw fa-times-circle"></i>
+                                    </div>
+                                    <div class="alert-message">
+                                        <strong>@Localizer["Incorrect!"]</strong> @Localizer["Please check the correct answer highlighted above."]
+                                    </div>
+                                </div>`;
                         }
                     }
 

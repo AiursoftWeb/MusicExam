@@ -30,11 +30,17 @@
   <data name="Explanation" xml:space="preserve">
     <value>Açıklama</value>
   </data>
+  <data name="Incorrect!" xml:space="preserve">
+    <value>Yanlış!</value>
+  </data>
   <data name="Incorrect! Please check the correct answer highlighted above." xml:space="preserve">
     <value>Yanlış! Lütfen yukarıda vurgulanan doğru cevabı kontrol edin.</value>
   </data>
   <data name="Next" xml:space="preserve">
     <value>Sonraki</value>
+  </data>
+  <data name="Please check the correct answer highlighted above." xml:space="preserve">
+    <value>Lütfen yukarıda vurgulanmış olan doğru cevabı kontrol edin.</value>
   </data>
   <data name="Please select an answer first." xml:space="preserve">
     <value>Lütfen önce bir cevap seçin.</value>

@@ -41,8 +41,14 @@ public class ChangeService(TemplateDbContext dbContext) : IScopedDependency
         for (var i = 0; i < months; i++)
         {
             var monthStart = new DateTime(now.Year, now.Month, 1, 0, 0, 0, DateTimeKind.Utc).AddMonths(-i);
-            var monthEnd = monthStart.AddMonths(1).AddTicks(-1);
             
+            // Skip future months
+            if (monthStart > now)
+            {
+                continue;
+            }
+
+            var monthEnd = monthStart.AddMonths(1).AddTicks(-1);
             var report = await GetReportForMonth(monthStart, monthEnd);
             reports.Add(report);
         }
