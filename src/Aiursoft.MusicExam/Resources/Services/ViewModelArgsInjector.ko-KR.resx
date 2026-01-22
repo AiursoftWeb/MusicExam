@@ -21,6 +21,12 @@
       <data name="Account Settings" xml:space="preserve">
     <value>계정 설정</value>
   </data>
+  <data name="Accounting" xml:space="preserve">
+    <value>회계</value>
+  </data>
+  <data name="Active Users" xml:space="preserve">
+    <value>활성 사용자</value>
+  </data>
   <data name="Admin" xml:space="preserve">
     <value>관리자</value>
   </data>
@@ -38,6 +44,9 @@
   </data>
   <data name="Change Avatar" xml:space="preserve">
     <value>아바타 변경</value>
+  </data>
+  <data name="Change History" xml:space="preserve">
+    <value>변경 내역</value>
   </data>
   <data name="Change Password" xml:space="preserve">
     <value>비밀번호 변경</value>
@@ -122,6 +131,9 @@
   </data>
   <data name="Sign out" xml:space="preserve">
     <value>로그아웃</value>
+  </data>
+  <data name="Statistics" xml:space="preserve">
+    <value>통계</value>
   </data>
   <data name="System" xml:space="preserve">
     <value>시스템</value>

@@ -11,6 +11,58 @@ namespace Aiursoft.MusicExam;
 
 public static class ProgramExtends
 {
+    private static async Task SyncChangeLogs(TemplateDbContext dbContext, UserManager<User> userManager, RoleManager<IdentityRole> roleManager)
+    {
+        var roles = await roleManager.Roles.ToListAsync();
+        foreach (var role in roles)
+        {
+            var claims = await roleManager.GetClaimsAsync(role);
+            if (claims.Any(c => c.Type == AppPermissions.Type && c.Value == AppPermissionNames.CanTakeExam))
+            {
+                // Ensure RoleGainedPermission event exists
+                var roleLogExists = await dbContext.Changes.AnyAsync(c =>
+                    c.Type == ChangeType.RoleGainedPermission &&
+                    c.TargetRoleId == role.Id &&
+                    c.TargetPermission == AppPermissionNames.CanTakeExam);
+
+                if (!roleLogExists)
+                {
+                    dbContext.Changes.Add(new Change
+                    {
+                        Type = ChangeType.RoleGainedPermission,
+                        TargetRoleId = role.Id,
+                        TargetPermission = AppPermissionNames.CanTakeExam,
+                        CreateTime = DateTime.MinValue, // Historic permission
+                        Details = "System backfilled missing log."
+                    });
+                }
+
+                // Ensure UserJoinedRole event exists for all users in this role
+                var users = await userManager.GetUsersInRoleAsync(role.Name!);
+                foreach (var user in users)
+                {
+                    var userLogExists = await dbContext.Changes.AnyAsync(c =>
+                        c.Type == ChangeType.UserJoinedRole &&
+                        c.TargetUserId == user.Id &&
+                        c.TargetRoleId == role.Id);
+
+                    if (!userLogExists)
+                    {
+                        dbContext.Changes.Add(new Change
+                        {
+                            Type = ChangeType.UserJoinedRole,
+                            TargetUserId = user.Id,
+                            TargetRoleId = role.Id,
+                            CreateTime = user.CreationTime,
+                            Details = "System backfilled missing log."
+                        });
+                    }
+                }
+            }
+        }
+        await dbContext.SaveChangesAsync();
+    }
+
     private static async Task<bool> ShouldSeedAsync(TemplateDbContext dbContext)
     {
         if (EntryExtends.IsInUnitTests())
@@ -72,15 +124,17 @@ public static class ProgramExtends
         await settingsService.SeedSettingsAsync();
 
         var shouldSeed = await ShouldSeedAsync(db);
+        var userManager = services.GetRequiredService<UserManager<User>>();
+        var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
+
         if (!shouldSeed)
         {
             logger.LogInformation("Do not need to seed the database. There are already users or roles present.");
+            await SyncChangeLogs(db, userManager, roleManager);
             return host;
         }
 
         logger.LogInformation("Seeding the database with initial data...");
-        var userManager = services.GetRequiredService<UserManager<User>>();
-        var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
 
         var role = await roleManager.FindByNameAsync("Administrators");
         if (role == null)
@@ -113,8 +167,11 @@ public static class ProgramExtends
                 Email = "admin@default.com",
             };
             _ = await userManager.CreateAsync(user, "admin123");
+
             await userManager.AddToRoleAsync(user, "Administrators");
         }
+        
+        await SyncChangeLogs(db, userManager, roleManager);
 
         return host;
     }

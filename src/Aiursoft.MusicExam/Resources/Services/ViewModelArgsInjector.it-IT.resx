@@ -18,7 +18,13 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Admin" xml:space="preserve">
+      <data name="Accounting" xml:space="preserve">
+    <value>Contabilità</value>
+  </data>
+  <data name="Active Users" xml:space="preserve">
+    <value>Utenti Attivi</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
     <value>Amministratore</value>
   </data>
   <data name="Administration" xml:space="preserve">
@@ -35,6 +41,9 @@
   </data>
   <data name="Change Avatar" xml:space="preserve">
     <value>Cambia Avatar</value>
+  </data>
+  <data name="Change History" xml:space="preserve">
+    <value>Cronologia modifiche</value>
   </data>
   <data name="Change Password" xml:space="preserve">
     <value>Cambia password</value>
@@ -119,6 +128,9 @@
   </data>
   <data name="Sign out" xml:space="preserve">
     <value>Esci</value>
+  </data>
+  <data name="Statistics" xml:space="preserve">
+    <value>Statistiche</value>
   </data>
   <data name="System" xml:space="preserve">
     <value>Sistema</value>

@@ -18,7 +18,13 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Admin" xml:space="preserve">
+      <data name="Accounting" xml:space="preserve">
+    <value>Akuntansi</value>
+  </data>
+  <data name="Active Users" xml:space="preserve">
+    <value>Pengguna Aktif</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
     <value>Administrator</value>
   </data>
   <data name="Administration" xml:space="preserve">
@@ -35,6 +41,9 @@
   </data>
   <data name="Change Avatar" xml:space="preserve">
     <value>Ubah Avatar</value>
+  </data>
+  <data name="Change History" xml:space="preserve">
+    <value>Riwayat Perubahan</value>
   </data>
   <data name="Change Password" xml:space="preserve">
     <value>Ubah Kata Sandi</value>
@@ -119,6 +128,9 @@
   </data>
   <data name="Sign out" xml:space="preserve">
     <value>Keluar</value>
+  </data>
+  <data name="Statistics" xml:space="preserve">
+    <value>Statistik</value>
   </data>
   <data name="System" xml:space="preserve">
     <value>Sistem</value>

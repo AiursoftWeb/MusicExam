@@ -21,6 +21,12 @@
       <data name="Account Settings" xml:space="preserve">
     <value>Account Settings</value>
   </data>
+  <data name="Accounting" xml:space="preserve">
+    <value>Accounting</value>
+  </data>
+  <data name="Active Users" xml:space="preserve">
+    <value>Active Users</value>
+  </data>
   <data name="Admin" xml:space="preserve">
     <value>Administrator</value>
   </data>
@@ -38,6 +44,9 @@
   </data>
   <data name="Change Avatar" xml:space="preserve">
     <value>Change Profile Picture</value>
+  </data>
+  <data name="Change History" xml:space="preserve">
+    <value>Change History</value>
   </data>
   <data name="Change Password" xml:space="preserve">
     <value>Change Password</value>
@@ -122,6 +131,9 @@
   </data>
   <data name="Sign out" xml:space="preserve">
     <value>Sign out</value>
+  </data>
+  <data name="Statistics" xml:space="preserve">
+    <value>Statistics</value>
   </data>
   <data name="System" xml:space="preserve">
     <value>System</value>

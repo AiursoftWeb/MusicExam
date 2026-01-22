@@ -21,6 +21,12 @@
       <data name="Account Settings" xml:space="preserve">
     <value>账户设置</value>
   </data>
+  <data name="Accounting" xml:space="preserve">
+    <value>会计</value>
+  </data>
+  <data name="Active Users" xml:space="preserve">
+    <value>活跃用户</value>
+  </data>
   <data name="Admin" xml:space="preserve">
     <value>管理员</value>
   </data>
@@ -38,6 +44,9 @@
   </data>
   <data name="Change Avatar" xml:space="preserve">
     <value>更换头像</value>
+  </data>
+  <data name="Change History" xml:space="preserve">
+    <value>变更历史</value>
   </data>
   <data name="Change Password" xml:space="preserve">
     <value>修改密码</value>
@@ -122,6 +131,9 @@
   </data>
   <data name="Sign out" xml:space="preserve">
     <value>退出登录</value>
+  </data>
+  <data name="Statistics" xml:space="preserve">
+    <value>统计</value>
   </data>
   <data name="System" xml:space="preserve">
     <value>系统</value>

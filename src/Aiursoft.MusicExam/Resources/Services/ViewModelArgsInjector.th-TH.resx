@@ -21,6 +21,12 @@
       <data name="Account Settings" xml:space="preserve">
     <value>การตั้งค่าบัญชี</value>
   </data>
+  <data name="Accounting" xml:space="preserve">
+    <value>การบัญชี</value>
+  </data>
+  <data name="Active Users" xml:space="preserve">
+    <value>ผู้ใช้งานที่ใช้งานอยู่</value>
+  </data>
   <data name="Admin" xml:space="preserve">
     <value>ผู้ดูแลระบบ</value>
   </data>
@@ -38,6 +44,9 @@
   </data>
   <data name="Change Avatar" xml:space="preserve">
     <value>เปลี่ยนรูปโปรไฟล์</value>
+  </data>
+  <data name="Change History" xml:space="preserve">
+    <value>ประวัติการเปลี่ยนแปลง</value>
   </data>
   <data name="Change Password" xml:space="preserve">
     <value>เปลี่ยนรหัสผ่าน</value>
@@ -122,6 +131,9 @@
   </data>
   <data name="Sign out" xml:space="preserve">
     <value>ออกจากระบบ</value>
+  </data>
+  <data name="Statistics" xml:space="preserve">
+    <value>สถิติ</value>
   </data>
   <data name="System" xml:space="preserve">
     <value>ระบบ</value>

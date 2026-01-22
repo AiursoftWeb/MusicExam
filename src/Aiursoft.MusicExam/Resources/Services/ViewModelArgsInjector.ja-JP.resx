@@ -21,6 +21,12 @@
       <data name="Account Settings" xml:space="preserve">
     <value>アカウント設定</value>
   </data>
+  <data name="Accounting" xml:space="preserve">
+    <value>会計</value>
+  </data>
+  <data name="Active Users" xml:space="preserve">
+    <value>アクティブユーザー</value>
+  </data>
   <data name="Admin" xml:space="preserve">
     <value>管理者</value>
   </data>
@@ -38,6 +44,9 @@
   </data>
   <data name="Change Avatar" xml:space="preserve">
     <value>アバターを変更</value>
+  </data>
+  <data name="Change History" xml:space="preserve">
+    <value>変更履歴</value>
   </data>
   <data name="Change Password" xml:space="preserve">
     <value>パスワードの変更</value>
@@ -122,6 +131,9 @@
   </data>
   <data name="Sign out" xml:space="preserve">
     <value>サインアウト</value>
+  </data>
+  <data name="Statistics" xml:space="preserve">
+    <value>統計</value>
   </data>
   <data name="System" xml:space="preserve">
     <value>システム</value>
