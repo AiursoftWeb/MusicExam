@@ -35,7 +35,7 @@
                         {
                                         <div class="audio-player-wrapper d-inline-block mb-2 me-2" data-audio-src="@Storage.RelativePathToInternetUrl(asset)"></div>
                         }
-                        else if (asset.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || asset.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                        else if (asset.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || asset.EndsWith(".png", StringComparison.OrdinalIgnoreCase) || asset.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase))
                         {
                                         <img src="@Storage.RelativePathToInternetUrl(asset)" class="img-fluid my-2" alt="Question asset" />
                         }
@@ -60,7 +60,7 @@
                                     {
                                                             <div class="audio-player-wrapper d-inline-block align-middle mb-1" style="width: auto;" data-audio-src="@Storage.RelativePathToInternetUrl(option.Content)"></div>
                                     }
-                                    else if (option.Content.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || option.Content.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                    else if (option.Content.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || option.Content.EndsWith(".png", StringComparison.OrdinalIgnoreCase) || option.Content.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase))
                                     {
                                                             <img src="@Storage.RelativePathToInternetUrl(option.Content)" class="img-fluid my-2" style="max-height: 100px;" alt="Option asset" />
                                     }
