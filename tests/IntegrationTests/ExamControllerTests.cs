@@ -28,7 +28,7 @@ public class ExamControllerTests : TestBase
         await LoginAsAdmin();
 
         // Step 2: Submit an exam
-        var postResponse = await PostForm($"/Exam/Take/{SeededExamPaperId}", new Dictionary<string, string>());
+        var postResponse = await PostForm($"/Exam/Result/{SeededExamPaperId}", new Dictionary<string, string>());
         Assert.AreEqual(HttpStatusCode.OK, postResponse.StatusCode);
         var postHtml = await postResponse.Content.ReadAsStringAsync();
         Assert.Contains("Result - Test Paper", postHtml);

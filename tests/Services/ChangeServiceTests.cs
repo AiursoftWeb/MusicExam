@@ -3,7 +3,7 @@ using Aiursoft.MusicExam.Entities;
 using Aiursoft.MusicExam.InMemory;
 using Aiursoft.MusicExam.Services;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+
 
 namespace Aiursoft.MusicExam.Tests.Services;
 

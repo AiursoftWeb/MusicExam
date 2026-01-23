@@ -144,7 +144,7 @@ public class ChangesTests : TestBase
         var userDetail = report.ActiveUsers.FirstOrDefault(u => u.User.Id == user.Id);
         
         Assert.IsNotNull(userDetail, "User should be active in the month");
-        Assert.AreEqual(1, userDetail.ActiveTimes.Count, "User should have 1 active time span");
+        Assert.HasCount(1, userDetail.ActiveTimes, "User should have 1 active time span");
         
         var span = userDetail.ActiveTimes.First();
         // Allow some tolerance for execution time difference between local time capture and DB commit time

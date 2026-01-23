@@ -55,6 +55,8 @@ public static class AuthenticationExtensions
             options.LoginPath = "/Account/Login";
             options.LogoutPath = "/Account/Logoff";
             options.AccessDeniedPath = "/Error/Code403";
+            options.Cookie.SecurePolicy = CookieSecurePolicy.SameAsRequest;
+            options.Cookie.SameSite = SameSiteMode.Lax;
         });
 
         if (appSettings.OIDCEnabled)

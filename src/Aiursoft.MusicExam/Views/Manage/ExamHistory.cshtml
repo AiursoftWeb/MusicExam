@@ -31,12 +31,12 @@
                             <tr>
                                 <td>
                                     <a asp-controller="Exam" asp-action="Review" asp-route-id="@submission.Id">
-                                        @submission.Paper?.Title
+                                        @submission.Paper.Title
                                     </a>
                                 </td>                                <td>
                                     @if (submission.Score.HasValue)
                                     {
-                                        var totalQuestions = submission.Paper?.Questions?.Count ?? 0;
+                                        var totalQuestions = submission.Paper.Questions.Count;
                                         var percentage = totalQuestions > 0 ? (double)submission.Score.Value / totalQuestions * 100 : 0;
                                         
                                         <div>

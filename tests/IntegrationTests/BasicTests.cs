@@ -1,6 +1,7 @@
 using System.Net;
-
-[assembly:DoNotParallelize]
+using Aiursoft.MusicExam.Configuration;
+using Aiursoft.MusicExam.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace Aiursoft.MusicExam.Tests.IntegrationTests;
 
@@ -221,6 +222,22 @@ await PostForm("/Account/LogOff", new Dictionary<string, string>(), includeToken
     [TestMethod]
     public async Task ChangeProfileSuccessfullyTest()
     {
+        // Step 0: key configuration
+        using (var scope = Server!.Services.CreateScope())
+        {
+            var db = scope.ServiceProvider.GetRequiredService<TemplateDbContext>();
+            var setting = await db.GlobalSettings.FirstOrDefaultAsync(s => s.Key == SettingsMap.AllowUserAdjustNickname);
+            if (setting == null)
+            {
+                db.GlobalSettings.Add(new GlobalSetting { Key = SettingsMap.AllowUserAdjustNickname, Value = "True" });
+            }
+            else
+            {
+                setting.Value = "True";
+            }
+            await db.SaveChangesAsync();
+        }
+
         // Step 1: Register and log in a new user.
         var (email, _) = await RegisterAndLoginAsync();
         var originalUserName = email.Split('@')[0];
@@ -243,3 +260,5 @@ await PostForm("/Account/LogOff", new Dictionary<string, string>(), includeToken
         Assert.DoesNotContain(originalUserName, html);
     }
 }
+
+
