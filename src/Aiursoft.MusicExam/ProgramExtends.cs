@@ -159,6 +159,19 @@ public static class ProgramExtends
             }
         }
 
+        var studentRole = await roleManager.FindByNameAsync("Students");
+        if (studentRole == null)
+        {
+            studentRole = new IdentityRole("Students");
+            await roleManager.CreateAsync(studentRole);
+        }
+
+        var studentClaims = await roleManager.GetClaimsAsync(studentRole);
+        if (studentClaims.All(c => c.Type != AppPermissions.Type || c.Value != AppPermissionNames.CanTakeExam))
+        {
+            await roleManager.AddClaimAsync(studentRole, new Claim(AppPermissions.Type, AppPermissionNames.CanTakeExam));
+        }
+
         if (!await db.Users.AnyAsync(u => u.UserName == "admin"))
         {
             var user = new User

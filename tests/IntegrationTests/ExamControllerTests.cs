@@ -34,7 +34,7 @@ public class ExamControllerTests : TestBase
         Assert.Contains("Result - Test Paper", postHtml);
 
         // Step 3: Check history
-        var historyResponse = await Http.GetAsync("/Exam/History");
+        var historyResponse = await Http.GetAsync("/Manage/ExamHistory");
         historyResponse.EnsureSuccessStatusCode();
         var historyHtml = await historyResponse.Content.ReadAsStringAsync();
         Assert.Contains("Test Paper", historyHtml);

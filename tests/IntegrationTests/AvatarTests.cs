@@ -13,13 +13,13 @@ public class AvatarTests : TestBase
         await RegisterAndLoginAsync();
 
         // 2. Upload a file
-        // 1x1 transparent GIF
-        var gifBytes = Convert.FromBase64String("R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
-        var fileContent = new ByteArrayContent(gifBytes);
-        fileContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("image/gif");
+        // 1x1 PNG
+        var pngBytes = Convert.FromBase64String("iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==");
+        var fileContent = new ByteArrayContent(pngBytes);
+        fileContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("image/png");
 
         var multipartContent = new MultipartFormDataContent();
-        multipartContent.Add(fileContent, "file", "avatar.gif");
+        multipartContent.Add(fileContent, "file", "avatar.png");
 
         var uploadResponse = await Http.PostAsync("/upload/avatars", multipartContent);
         uploadResponse.EnsureSuccessStatusCode();

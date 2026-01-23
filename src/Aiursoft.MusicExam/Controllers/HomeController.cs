@@ -1,7 +1,6 @@
 
 using Aiursoft.MusicExam.Models.HomeViewModels;
 using Aiursoft.MusicExam.Services;
-
 using Aiursoft.WebTools.Attributes;
 using Microsoft.AspNetCore.Mvc;
 
