@@ -20,7 +20,7 @@ public class DashboardController : Controller
         _dbContext = dbContext;
     }
 
-    [Authorize(Policy = AppPermissionNames.CanTakeExam)]
+    [Authorize]
     [RenderInNavBar(
         NavGroupName = "Features",
         NavGroupOrder = 1,
