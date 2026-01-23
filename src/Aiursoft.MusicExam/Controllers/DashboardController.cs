@@ -1,7 +1,6 @@
 using Aiursoft.MusicExam.Models.DashboardViewModels;
 using Aiursoft.MusicExam.Services;
 using Microsoft.AspNetCore.Authorization;
-using Aiursoft.MusicExam.Authorization;
 using Aiursoft.UiStack.Navigation;
 using Aiursoft.WebTools.Attributes;
 using Microsoft.AspNetCore.Mvc;
