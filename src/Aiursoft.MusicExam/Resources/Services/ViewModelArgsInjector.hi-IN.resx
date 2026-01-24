@@ -18,11 +18,20 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Accounting" xml:space="preserve">
+      <data name="Access Denied" xml:space="preserve">
+    <value>प्रवेश अस्वीकृत</value>
+  </data>
+  <data name="Accounting" xml:space="preserve">
     <value>लेखांकन</value>
   </data>
   <data name="Active Users" xml:space="preserve">
     <value>सक्रिय उपयोगकर्ता</value>
+  </data>
+  <data name="Active Users Details" xml:space="preserve">
+    <value>सक्रिय उपयोगकर्ता विवरण</value>
+  </data>
+  <data name="Active Users Statistics" xml:space="preserve">
+    <value>सक्रिय उपयोगकर्ता सांख्यिकी</value>
   </data>
   <data name="Admin" xml:space="preserve">
     <value>प्रशासक</value>
@@ -38,6 +47,9 @@
   </data>
   <data name="Background Jobs" xml:space="preserve">
     <value>बैकग्राउंड जॉब्स</value>
+  </data>
+  <data name="Bad Request" xml:space="preserve">
+    <value>बैड रिक्वेस्ट</value>
   </data>
   <data name="Change Avatar" xml:space="preserve">
     <value>अवतार बदलें</value>
@@ -96,6 +108,12 @@
   <data name="Info" xml:space="preserve">
     <value>जानकारी</value>
   </data>
+  <data name="Internal Server Error" xml:space="preserve">
+    <value>आ interनल सर्वर त्रुटि</value>
+  </data>
+  <data name="Lockout" xml:space="preserve">
+    <value>लॉकआउट</value>
+  </data>
   <data name="Login" xml:space="preserve">
     <value>लॉगिन</value>
   </data>
@@ -107,6 +125,18 @@
   </data>
   <data name="Monthly finance report" xml:space="preserve">
     <value>मासिक वित्त रिपोर्ट</value>
+  </data>
+  <data name="Music Exam Dashboard" xml:space="preserve">
+    <value>संगीत परीक्षा डैशबोर्ड</value>
+  </data>
+  <data name="My Exam History" xml:space="preserve">
+    <value>मेरा परीक्षा इतिहास</value>
+  </data>
+  <data name="Not Found" xml:space="preserve">
+    <value>नहीं मिला</value>
+  </data>
+  <data name="Permission Details" xml:space="preserve">
+    <value>अनुमति विवरण</value>
   </data>
   <data name="Permissions" xml:space="preserve">
     <value>अनुमतियाँ</value>
@@ -122,6 +152,12 @@
   </data>
   <data name="Register" xml:space="preserve">
     <value>पंजीकरण करें</value>
+  </data>
+  <data name="Result - " xml:space="preserve">
+    <value>परिणाम -</value>
+  </data>
+  <data name="Review - " xml:space="preserve">
+    <value>समीक्षा -</value>
   </data>
   <data name="Role Details" xml:space="preserve">
     <value>भूमिका विवरण</value>

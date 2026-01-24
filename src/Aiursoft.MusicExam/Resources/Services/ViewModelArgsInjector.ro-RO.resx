@@ -18,11 +18,20 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Accounting" xml:space="preserve">
+      <data name="Access Denied" xml:space="preserve">
+    <value>Acces respins</value>
+  </data>
+  <data name="Accounting" xml:space="preserve">
     <value>Contabilitate</value>
   </data>
   <data name="Active Users" xml:space="preserve">
     <value>Utilizatori activi</value>
+  </data>
+  <data name="Active Users Details" xml:space="preserve">
+    <value>Detalii utilizatori activi</value>
+  </data>
+  <data name="Active Users Statistics" xml:space="preserve">
+    <value>Statistici utilizatori activi</value>
   </data>
   <data name="Admin" xml:space="preserve">
     <value>Administrator</value>
@@ -38,6 +47,9 @@
   </data>
   <data name="Background Jobs" xml:space="preserve">
     <value>Joburi în fundal</value>
+  </data>
+  <data name="Bad Request" xml:space="preserve">
+    <value>Cerere invalidă</value>
   </data>
   <data name="Change Avatar" xml:space="preserve">
     <value>Schimbă Avatarul</value>
@@ -96,6 +108,12 @@
   <data name="Info" xml:space="preserve">
     <value>Informații</value>
   </data>
+  <data name="Internal Server Error" xml:space="preserve">
+    <value>Eroare internă a serverului</value>
+  </data>
+  <data name="Lockout" xml:space="preserve">
+    <value>Blocare</value>
+  </data>
   <data name="Login" xml:space="preserve">
     <value>Autentificare</value>
   </data>
@@ -107,6 +125,18 @@
   </data>
   <data name="Monthly finance report" xml:space="preserve">
     <value>Raport lunar de finanțe</value>
+  </data>
+  <data name="Music Exam Dashboard" xml:space="preserve">
+    <value>Panou de examen muzical</value>
+  </data>
+  <data name="My Exam History" xml:space="preserve">
+    <value>Istoricul Examenelor Mele</value>
+  </data>
+  <data name="Not Found" xml:space="preserve">
+    <value>Nu a fost găsit</value>
+  </data>
+  <data name="Permission Details" xml:space="preserve">
+    <value>Detalii permisiuni</value>
   </data>
   <data name="Permissions" xml:space="preserve">
     <value>Permisiuni</value>
@@ -122,6 +152,12 @@
   </data>
   <data name="Register" xml:space="preserve">
     <value>Înregistrare</value>
+  </data>
+  <data name="Result - " xml:space="preserve">
+    <value>Rezultat -</value>
+  </data>
+  <data name="Review - " xml:space="preserve">
+    <value>Revizuire -</value>
   </data>
   <data name="Role Details" xml:space="preserve">
     <value>Detalii Rol</value>

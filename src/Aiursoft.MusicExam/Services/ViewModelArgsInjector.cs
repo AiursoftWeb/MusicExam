@@ -77,6 +77,20 @@ public class ViewModelArgsInjector(
         _ = localizer["Monthly finance report"];
     
         _ = localizer["Exam History"];
+    
+        _ = localizer["Access Denied"];
+        _ = localizer["Active Users Details"];
+        _ = localizer["Active Users Statistics"];
+        _ = localizer["Bad Request"];
+        _ = localizer["Internal Server Error"];
+        _ = localizer["Lockout"];
+        _ = localizer["Music Exam Dashboard"];
+        _ = localizer["My Exam History"];
+        _ = localizer["Not Found"];
+        _ = localizer["Permission Details"];
+        _ = localizer["Register"];
+        _ = localizer["Result - "];
+        _ = localizer["Review - "];
     }
 
     public void InjectSimple(

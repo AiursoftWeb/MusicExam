@@ -18,11 +18,20 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Accounting" xml:space="preserve">
+      <data name="Access Denied" xml:space="preserve">
+    <value>Πρόσβαση αρνημένη</value>
+  </data>
+  <data name="Accounting" xml:space="preserve">
     <value>Λογιστική</value>
   </data>
   <data name="Active Users" xml:space="preserve">
     <value>Ενεργοί Χρήστες</value>
+  </data>
+  <data name="Active Users Details" xml:space="preserve">
+    <value>Λεπτομέρειες Ενεργών Χρηστών</value>
+  </data>
+  <data name="Active Users Statistics" xml:space="preserve">
+    <value>Στατιστικά Ενεργών Χρηστών</value>
   </data>
   <data name="Admin" xml:space="preserve">
     <value>Διαχειριστής</value>
@@ -38,6 +47,9 @@
   </data>
   <data name="Background Jobs" xml:space="preserve">
     <value>Ημικυκλικές Εργασίες</value>
+  </data>
+  <data name="Bad Request" xml:space="preserve">
+    <value>Λάθος αίτημα</value>
   </data>
   <data name="Change Avatar" xml:space="preserve">
     <value>Αλλαγή Avatar</value>
@@ -96,6 +108,12 @@
   <data name="Info" xml:space="preserve">
     <value>Πληροφορίες</value>
   </data>
+  <data name="Internal Server Error" xml:space="preserve">
+    <value>Internal Server Error</value>
+  </data>
+  <data name="Lockout" xml:space="preserve">
+    <value>Μπλοκάρισμα</value>
+  </data>
   <data name="Login" xml:space="preserve">
     <value>Σύνδεση</value>
   </data>
@@ -107,6 +125,18 @@
   </data>
   <data name="Monthly finance report" xml:space="preserve">
     <value>Μηνιαίο αναφορά χρηματοοικονομικών</value>
+  </data>
+  <data name="Music Exam Dashboard" xml:space="preserve">
+    <value>Μουσικό Πίνακας Εξετάσεων</value>
+  </data>
+  <data name="My Exam History" xml:space="preserve">
+    <value>Το Ιστορικό των Εξετάσεών μου</value>
+  </data>
+  <data name="Not Found" xml:space="preserve">
+    <value>Δεν βρέθηκε</value>
+  </data>
+  <data name="Permission Details" xml:space="preserve">
+    <value>Λεπτομέρειες Εξουσιοδότησης</value>
   </data>
   <data name="Permissions" xml:space="preserve">
     <value>Άδειες</value>
@@ -122,6 +152,12 @@
   </data>
   <data name="Register" xml:space="preserve">
     <value>Εγγραφή</value>
+  </data>
+  <data name="Result - " xml:space="preserve">
+    <value>Αποτέλεσμα -</value>
+  </data>
+  <data name="Review - " xml:space="preserve">
+    <value>Ανασκόπηση -</value>
   </data>
   <data name="Role Details" xml:space="preserve">
     <value>Λεπτομέρειες Ρόλου</value>
