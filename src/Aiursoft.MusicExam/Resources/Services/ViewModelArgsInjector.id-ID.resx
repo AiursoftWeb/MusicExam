@@ -18,11 +18,20 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Accounting" xml:space="preserve">
+      <data name="Access Denied" xml:space="preserve">
+    <value>Akses Ditolak</value>
+  </data>
+  <data name="Accounting" xml:space="preserve">
     <value>Akuntansi</value>
   </data>
   <data name="Active Users" xml:space="preserve">
     <value>Pengguna Aktif</value>
+  </data>
+  <data name="Active Users Details" xml:space="preserve">
+    <value>Detail Pengguna Aktif</value>
+  </data>
+  <data name="Active Users Statistics" xml:space="preserve">
+    <value>Statistik Pengguna Aktif</value>
   </data>
   <data name="Admin" xml:space="preserve">
     <value>Administrator</value>
@@ -38,6 +47,9 @@
   </data>
   <data name="Background Jobs" xml:space="preserve">
     <value>Pekerjaan Latar Belakang</value>
+  </data>
+  <data name="Bad Request" xml:space="preserve">
+    <value>Permintaan Salah</value>
   </data>
   <data name="Change Avatar" xml:space="preserve">
     <value>Ubah Avatar</value>
@@ -96,6 +108,12 @@
   <data name="Info" xml:space="preserve">
     <value>Informasi</value>
   </data>
+  <data name="Internal Server Error" xml:space="preserve">
+    <value>Kesalahan Server Internal</value>
+  </data>
+  <data name="Lockout" xml:space="preserve">
+    <value>Kunci</value>
+  </data>
   <data name="Login" xml:space="preserve">
     <value>Masuk</value>
   </data>
@@ -107,6 +125,18 @@
   </data>
   <data name="Monthly finance report" xml:space="preserve">
     <value>Laporan keuangan bulanan</value>
+  </data>
+  <data name="Music Exam Dashboard" xml:space="preserve">
+    <value>Dasbor Ujian Musik</value>
+  </data>
+  <data name="My Exam History" xml:space="preserve">
+    <value>Riwayat Ujian Saya</value>
+  </data>
+  <data name="Not Found" xml:space="preserve">
+    <value>Tidak Ditemukan</value>
+  </data>
+  <data name="Permission Details" xml:space="preserve">
+    <value>Detail Izin</value>
   </data>
   <data name="Permissions" xml:space="preserve">
     <value>Izin</value>
@@ -122,6 +152,12 @@
   </data>
   <data name="Register" xml:space="preserve">
     <value>Daftar</value>
+  </data>
+  <data name="Result - " xml:space="preserve">
+    <value>Hasil -</value>
+  </data>
+  <data name="Review - " xml:space="preserve">
+    <value>Ulasan -</value>
   </data>
   <data name="Role Details" xml:space="preserve">
     <value>Detail Peran</value>
