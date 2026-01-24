@@ -10,6 +10,9 @@ public class MarketingFooter(GlobalSettingsService globalSettingsService) : View
     {
         model ??= new MarketingFooterViewModel();
         model.ProjectName = await globalSettingsService.GetSettingValueAsync(SettingsMap.ProjectName);
+        model.BrandName = await globalSettingsService.GetSettingValueAsync(SettingsMap.BrandName);
+        model.BrandHomeUrl = await globalSettingsService.GetSettingValueAsync(SettingsMap.BrandHomeUrl);
+        model.Icp = await globalSettingsService.GetSettingValueAsync(SettingsMap.Icp);
         return View(model);
     }
 }
