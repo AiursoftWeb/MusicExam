@@ -208,6 +208,30 @@ namespace Aiursoft.MusicExam.MySql.Migrations
                     b.ToTable("Questions");
                 });
 
+            modelBuilder.Entity("Aiursoft.MusicExam.Entities.QuestionBankRole", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("RoleId")
+                        .IsRequired()
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<int>("SchoolId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RoleId");
+
+                    b.HasIndex("SchoolId");
+
+                    b.ToTable("QuestionBankRoles");
+                });
+
             modelBuilder.Entity("Aiursoft.MusicExam.Entities.QuestionSubmission", b =>
                 {
                     b.Property<Guid>("Id")
@@ -523,6 +547,25 @@ namespace Aiursoft.MusicExam.MySql.Migrations
                         .IsRequired();
 
                     b.Navigation("Paper");
+                });
+
+            modelBuilder.Entity("Aiursoft.MusicExam.Entities.QuestionBankRole", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", "Role")
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Aiursoft.MusicExam.Entities.School", "School")
+                        .WithMany()
+                        .HasForeignKey("SchoolId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Role");
+
+                    b.Navigation("School");
                 });
 
             modelBuilder.Entity("Aiursoft.MusicExam.Entities.QuestionSubmission", b =>

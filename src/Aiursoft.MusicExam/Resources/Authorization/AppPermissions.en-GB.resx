@@ -123,8 +123,14 @@
   <data name="View Change History" xml:space="preserve">
     <value>View Change History</value>
   </data>
-  <data name="View System Context" xml:space="preserve">
-    <value>View System Context</value>
-  </data>
-
-</root>
+    <data name="View System Context" xml:space="preserve">
+      <value>View System Context</value>
+    </data>
+    <data name="Manage Question Bank Roles" xml:space="preserve">
+      <value>Manage Question Bank Roles</value>
+    </data>
+    <data name="Allows managing the roles authorized to access each question bank." xml:space="preserve">
+      <value>Allows managing the roles authorized to access each question bank.</value>
+    </data>
+  </root>
+  

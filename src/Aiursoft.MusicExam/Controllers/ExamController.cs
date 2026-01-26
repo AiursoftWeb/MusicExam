@@ -22,6 +22,25 @@ public class ExamController : Controller
         _userManager = userManager;
     }
 
+    private async Task<bool> CanAccessPaper(ExamPaper paper, User user)
+    {
+        var userRoleIds = await _dbContext.UserRoles
+            .Where(ur => ur.UserId == user.Id)
+            .Select(ur => ur.RoleId)
+            .ToListAsync();
+
+        var requiredRoles = await _dbContext.QuestionBankRoles
+            .Where(r => r.SchoolId == paper.SchoolId)
+            .ToListAsync();
+
+        if (!requiredRoles.Any())
+        {
+            return true;
+        }
+
+        return requiredRoles.Any(rr => userRoleIds.Contains(rr.RoleId));
+    }
+
     [HttpGet]
     [Authorize(Policy = AppPermissionNames.CanTakeExam)]
     public async Task<IActionResult> Take(int id)
@@ -40,6 +59,11 @@ public class ExamController : Controller
         if (paper == null)
         {
             return NotFound();
+        }
+
+        if (!await CanAccessPaper(paper, user))
+        {
+            return Forbid();
         }
 
         var model = new TakeViewModel(paper);
@@ -67,6 +91,11 @@ public class ExamController : Controller
         if (paper == null)
         {
             return NotFound();
+        }
+
+        if (!await CanAccessPaper(paper, user))
+        {
+            return Forbid();
         }
 
         var model = new ResultViewModel
@@ -186,6 +215,11 @@ public class ExamController : Controller
         if (paper == null)
         {
             return NotFound();
+        }
+
+        if (!await CanAccessPaper(paper, user))
+        {
+            return Forbid();
         }
 
         var model = new ResultViewModel

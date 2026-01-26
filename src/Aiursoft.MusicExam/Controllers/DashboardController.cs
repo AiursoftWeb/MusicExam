@@ -6,6 +6,7 @@ using Aiursoft.WebTools.Attributes;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Aiursoft.MusicExam.Entities;
+using Microsoft.AspNetCore.Identity;
 
 namespace Aiursoft.MusicExam.Controllers;
 
@@ -13,10 +14,14 @@ namespace Aiursoft.MusicExam.Controllers;
 public class DashboardController : Controller
 {
     private readonly TemplateDbContext _dbContext;
+    private readonly UserManager<User> _userManager;
 
-    public DashboardController(TemplateDbContext dbContext)
+    public DashboardController(
+        TemplateDbContext dbContext,
+        UserManager<User> userManager)
     {
         _dbContext = dbContext;
+        _userManager = userManager;
     }
 
     [Authorize]
@@ -30,15 +35,38 @@ public class DashboardController : Controller
         LinkOrder = 1)]
     public async Task<IActionResult> Index()
     {
-        var schools = await _dbContext
-            .Schools
+        var user = await _userManager.GetUserAsync(User);
+        if (user == null)
+        {
+            return Forbid();
+        }
+
+        var userRoleIds = await _dbContext.UserRoles
+            .Where(ur => ur.UserId == user.Id)
+            .Select(ur => ur.RoleId)
+            .ToListAsync();
+
+        var schools = await _dbContext.Schools
             .Include(s => s.Papers)
+            .Include(s => s.AuthorizedRoles)
             .OrderBy(s => s.Id)
             .ToListAsync();
 
+        var authorizedSchools = schools.Where(s =>
+        {
+            if (!s.AuthorizedRoles.Any())
+            {
+                // Public
+                return true;
+            }
+
+            // Must have at least one of the required roles
+            return s.AuthorizedRoles.Any(rr => userRoleIds.Contains(rr.RoleId));
+        }).ToList();
+
         var model = new IndexViewModel
         {
-            Schools = schools
+            Schools = authorizedSchools
         };
         return this.StackView(model);
     }

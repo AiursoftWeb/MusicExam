@@ -1,0 +1,48 @@
+@model Aiursoft.MusicExam.Models.QuestionBankRolesViewModels.IndexViewModel
+
+<div class="row mb-2 mb-xl-3">
+    <div class="col-auto d-none d-sm-block">
+        <h3>@Localizer["Global Management"]</h3>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h5 class="card-title">@Localizer["All Question Banks"]</h5>
+        <h6 class="card-subtitle text-muted">@Localizer["Manage which roles are authorized to access each question bank."]</h6>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-hover mb-0">
+            <thead>
+            <tr>
+                <th>@Localizer["Question Bank Name"]</th>
+                <th>@Localizer["Authorized Roles"]</th>
+                <th class="text-end">@Localizer["Actions"]</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in Model.Schools)
+            {
+                <tr>
+                    <td>@item.School.Name</td>
+                    <td>
+                        @if (item.Roles.Any())
+                        {
+                            <span>@string.Join(", ", item.Roles.Select(r => r.Name))</span>
+                        }
+                        else
+                        {
+                            <span class="text-muted">@Localizer["No roles authorized (Public)"]</span>
+                        }
+                    </td>
+                    <td class="text-end">
+                        <a asp-action="Edit" asp-route-id="@item.School.Id" class="btn btn-sm btn-outline-primary">
+                            <i class="align-middle" data-lucide="edit-2"></i> @Localizer["Manage Roles"]
+                        </a>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>

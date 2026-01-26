@@ -78,7 +78,10 @@ public class AppPermissions
                 localizer["Allows viewing monthly active user statistics and details."]),
             new(AppPermissionNames.CanViewAccounting,
                 localizer["View Accounting"],
-                localizer["Allows viewing system statistics like user counts and usage data."])
+                localizer["Allows viewing system statistics like user counts and usage data."]),
+            new(AppPermissionNames.CanManageQuestionBankRoles,
+                localizer["Manage Question Bank Roles"],
+                localizer["Allows managing the roles authorized to access each question bank."])
         ];
         return allPermission;
     }

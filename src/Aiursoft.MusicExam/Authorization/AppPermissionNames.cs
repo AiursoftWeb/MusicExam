@@ -32,4 +32,7 @@ public static class AppPermissionNames
 
     // Accounting
     public const string CanViewAccounting = nameof(CanViewAccounting);
+
+    // Question Bank Management
+    public const string CanManageQuestionBankRoles = nameof(CanManageQuestionBankRoles);
 }

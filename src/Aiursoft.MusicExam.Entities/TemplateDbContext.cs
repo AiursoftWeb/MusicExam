@@ -11,6 +11,7 @@ public abstract class TemplateDbContext(DbContextOptions options) : IdentityDbCo
 {
     public DbSet<GlobalSetting> GlobalSettings => Set<GlobalSetting>();
     public DbSet<School> Schools => Set<School>();
+    public DbSet<QuestionBankRole> QuestionBankRoles => Set<QuestionBankRole>();
     public DbSet<ExamPaper> ExamPapers => Set<ExamPaper>();
     public DbSet<Question> Questions => Set<Question>();
     public DbSet<Option> Options => Set<Option>();

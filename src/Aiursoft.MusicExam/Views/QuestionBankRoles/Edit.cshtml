@@ -1,0 +1,43 @@
+@model Aiursoft.MusicExam.Models.QuestionBankRolesViewModels.EditViewModel
+
+<h1 class="h3 mb-3">@Localizer["Manage Question Bank Roles"]</h1>
+
+<div class="row justify-content-center">
+    <div class="col-lg-10 col-xl-8">
+        <form asp-action="Edit">
+            <input type="hidden" asp-for="SchoolId" />
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">@Localizer["Access Control for"] @Model.SchoolName</h5>
+                </div>
+                <div class="card-body">
+                    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                    <h5 class="mb-3">@Localizer["Select Roles Authorized to Access"]</h5>
+                    <p class="text-muted mb-4">@Localizer["If no roles are selected, this question bank will be public to all users with exam permissions."]</p>
+                    
+                    <div class="list-group list-group-flush border rounded">
+                        @for (var i = 0; i < Model.Roles.Count; i++)
+                        {
+                            <div class="list-group-item">
+                                <div class="form-check">
+                                    <input type="hidden" asp-for="@Model.Roles[i].RoleId" />
+                                    <input type="hidden" asp-for="@Model.Roles[i].RoleName" />
+                                    <input asp-for="@Model.Roles[i].IsSelected" class="form-check-input" />
+
+                                    <label class="form-check-label" for="@Html.IdFor(m => m.Roles[i].IsSelected)">
+                                        <strong>@Model.Roles[i].RoleName</strong>
+                                    </label>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary">@Localizer["Save Changes"]</button>
+                    <a asp-action="Index" class="btn btn-light">@Localizer["Back to List"]</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
