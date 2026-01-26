@@ -1,5 +1,4 @@
 using System.Net;
-using Aiursoft.MusicExam.Authorization;
 using Aiursoft.MusicExam.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -80,8 +79,8 @@ public class QuestionBankRolesTests : TestBase
         dashboardResponse.EnsureSuccessStatusCode();
         var dashboardHtml = await dashboardResponse.Content.ReadAsStringAsync();
         
-        Assert.IsTrue(dashboardHtml.Contains("Public School"));
-        Assert.IsFalse(dashboardHtml.Contains("Private School"));
+        Assert.Contains("Public School", dashboardHtml);
+        Assert.DoesNotContain("Private School", dashboardHtml);
 
         // 4. Try to access private paper directly - should be forbidden (or redirect to forbid/login)
         // Since we are logged in, it should be 403 or redirect to some error page.
@@ -130,14 +129,14 @@ public class QuestionBankRolesTests : TestBase
         dashboardResponse.EnsureSuccessStatusCode();
         dashboardHtml = await dashboardResponse.Content.ReadAsStringAsync();
         
-        Assert.IsTrue(dashboardHtml.Contains("Public School"));
-        Assert.IsTrue(dashboardHtml.Contains("Private School"));
+        Assert.Contains("Public School", dashboardHtml);
+        Assert.Contains("Private School", dashboardHtml);
 
         // 7. Access private paper directly - should be success
         takeResponse = await Http.GetAsync($"/Exam/Take/{privatePaperId}");
         takeResponse.EnsureSuccessStatusCode();
         var takeHtml = await takeResponse.Content.ReadAsStringAsync();
-        Assert.IsTrue(takeHtml.Contains("Private Paper"));
+        Assert.Contains("Private Paper", takeHtml);
 
         // 8. Test Global Management Page (as admin)
         await LogoutAsync();
@@ -146,9 +145,9 @@ public class QuestionBankRolesTests : TestBase
         var mgmtResponse = await Http.GetAsync("/QuestionBankRoles/Index");
         mgmtResponse.EnsureSuccessStatusCode();
         var mgmtHtml = await mgmtResponse.Content.ReadAsStringAsync();
-        Assert.IsTrue(mgmtHtml.Contains("Private School"));
-        Assert.IsTrue(mgmtHtml.Contains("Public School"));
-        Assert.IsTrue(mgmtHtml.Contains(roleName));
+        Assert.Contains("Private School", mgmtHtml);
+        Assert.Contains("Public School", mgmtHtml);
+        Assert.Contains(roleName, mgmtHtml);
 
         // Test Edit page
         var editUrl = $"/QuestionBankRoles/Edit/{privateSchoolId}";
