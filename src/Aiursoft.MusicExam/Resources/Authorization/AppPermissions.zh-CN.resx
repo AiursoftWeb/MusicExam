@@ -123,8 +123,14 @@
   <data name="View Change History" xml:space="preserve">
     <value>查看变更历史</value>
   </data>
-  <data name="View System Context" xml:space="preserve">
-    <value>查看系统上下文</value>
-  </data>
-
-</root>
+    <data name="View System Context" xml:space="preserve">
+      <value>查看系统上下文</value>
+    </data>
+    <data name="Manage Question Bank Roles" xml:space="preserve">
+      <value>管理题库权限</value>
+    </data>
+    <data name="Allows managing the roles authorized to access each question bank." xml:space="preserve">
+      <value>允许管理授权访问每个题库的角色。</value>
+    </data>
+  </root>
+  
