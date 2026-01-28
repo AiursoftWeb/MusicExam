@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Actions" xml:space="preserve">
+    <value>การกระทำ</value>
+  </data>
+  <data name="All Question Banks" xml:space="preserve">
+    <value>ธนาคารคำถามทั้งหมด</value>
+  </data>
+  <data name="Authorized Roles" xml:space="preserve">
+    <value>บทบาทที่ได้รับอนุญาต</value>
+  </data>
+  <data name="Global Management" xml:space="preserve">
+    <value>การจัดการทั่วโลก</value>
+  </data>
+  <data name="Manage Roles" xml:space="preserve">
+    <value>จัดการบทบาท</value>
+  </data>
+  <data name="Manage which roles are authorized to access each question bank." xml:space="preserve">
+    <value>จัดการบทบาทที่ได้รับอนุญาตให้เข้าถึงแต่ละธนาคารคำถาม</value>
+  </data>
+  <data name="No roles authorized (Public)" xml:space="preserve">
+    <value>ไม่มีบทบาทที่ได้รับอนุญาต (สาธารณะ)</value>
+  </data>
+  <data name="Question Bank Name" xml:space="preserve">
+    <value>ชื่อคลังคำถาม</value>
+  </data>
+
+</root>

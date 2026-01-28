@@ -96,6 +96,9 @@
   <data name="Features" xml:space="preserve">
     <value>Funktioner</value>
   </data>
+  <data name="Global Management" xml:space="preserve">
+    <value>Global hantering</value>
+  </data>
   <data name="Global Settings" xml:space="preserve">
     <value>Globala inställningar</value>
   </data>
@@ -122,6 +125,9 @@
   </data>
   <data name="Manage" xml:space="preserve">
     <value>Hantera</value>
+  </data>
+  <data name="Manage Question Bank Roles" xml:space="preserve">
+    <value>Hantera frågebankroller</value>
   </data>
   <data name="Monthly finance report" xml:space="preserve">
     <value>Månadens finansrapport</value>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Actions" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="All Question Banks" xml:space="preserve">
+    <value>Toutes les banques de questions</value>
+  </data>
+  <data name="Authorized Roles" xml:space="preserve">
+    <value>Rôles autorisés</value>
+  </data>
+  <data name="Global Management" xml:space="preserve">
+    <value>Gestion globale</value>
+  </data>
+  <data name="Manage Roles" xml:space="preserve">
+    <value>Gérer les rôles</value>
+  </data>
+  <data name="Manage which roles are authorized to access each question bank." xml:space="preserve">
+    <value>Gérer les rôles autorisés à accéder à chaque banque de questions.</value>
+  </data>
+  <data name="No roles authorized (Public)" xml:space="preserve">
+    <value>Aucun rôle autorisé (Public)</value>
+  </data>
+  <data name="Question Bank Name" xml:space="preserve">
+    <value>Nom de la banque de questions</value>
+  </data>
+
+</root>
