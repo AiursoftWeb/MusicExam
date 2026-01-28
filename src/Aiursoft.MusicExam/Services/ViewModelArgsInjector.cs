@@ -68,16 +68,16 @@ public class ViewModelArgsInjector(
         _ = localizer["Permissions"];
         _ = localizer["Background Jobs"];
         _ = localizer["Global Settings"];
-    
+
         _ = localizer["Accounting"];
         _ = localizer["Active Users"];
         _ = localizer["Change History"];
         _ = localizer["Statistics"];
-    
+
         _ = localizer["Monthly finance report"];
-    
+
         _ = localizer["Exam History"];
-    
+
         _ = localizer["Access Denied"];
         _ = localizer["Active Users Details"];
         _ = localizer["Active Users Statistics"];
@@ -91,7 +91,7 @@ public class ViewModelArgsInjector(
         _ = localizer["Register"];
         _ = localizer["Result - "];
         _ = localizer["Review - "];
-    
+
         _ = localizer["Global Management"];
         _ = localizer["Manage Question Bank Roles"];
     }
@@ -119,13 +119,15 @@ public class ViewModelArgsInjector(
         toInject.Theme = preferDarkTheme ? UiTheme.Dark : UiTheme.Light;
         toInject.SidebarTheme = preferDarkTheme ? UiSidebarTheme.Dark : UiSidebarTheme.Default;
         toInject.Layout = UiLayout.Fluid;
+        var brandName = Task.Run(() => globalSettingsService.GetSettingValueAsync(SettingsMap.BrandName)).Result;
+        var brandHomeUrl = Task.Run(() => globalSettingsService.GetSettingValueAsync(SettingsMap.BrandHomeUrl)).Result;
         toInject.FooterMenu = new FooterMenuViewModel
         {
-            AppBrand = new Link { Text = projectName, Href = "https://gitlab.aiursoft.com/aiursoft/musicexam" },
+            AppBrand = new Link { Text = projectName, Href = brandHomeUrl },
             Links =
             [
                 new Link { Text = localizer["Home"], Href = "/" },
-                new Link { Text = "Aiursoft", Href = "https://www.aiursoft.com" },
+                new Link { Text = brandName, Href = brandHomeUrl },
             ]
         };
         toInject.Navbar = new NavbarViewModel
