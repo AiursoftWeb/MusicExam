@@ -99,6 +99,9 @@
   <data name="Features" xml:space="preserve">
     <value>機能</value>
   </data>
+  <data name="Global Management" xml:space="preserve">
+    <value>グローバル管理</value>
+  </data>
   <data name="Global Settings" xml:space="preserve">
     <value>グローバル設定</value>
   </data>
@@ -125,6 +128,9 @@
   </data>
   <data name="Manage" xml:space="preserve">
     <value>管理</value>
+  </data>
+  <data name="Manage Question Bank Roles" xml:space="preserve">
+    <value>問題バンクロールの管理</value>
   </data>
   <data name="Monthly finance report" xml:space="preserve">
     <value>月次財務報告</value>

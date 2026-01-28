@@ -96,6 +96,9 @@
   <data name="Features" xml:space="preserve">
     <value>Özellikler</value>
   </data>
+  <data name="Global Management" xml:space="preserve">
+    <value>Genel Yönetim</value>
+  </data>
   <data name="Global Settings" xml:space="preserve">
     <value>Genel Ayarlar</value>
   </data>
@@ -122,6 +125,9 @@
   </data>
   <data name="Manage" xml:space="preserve">
     <value>Yönet</value>
+  </data>
+  <data name="Manage Question Bank Roles" xml:space="preserve">
+    <value>Soru Bankası Rollerini Yönet</value>
   </data>
   <data name="Monthly finance report" xml:space="preserve">
     <value>Aylık finans raporu</value>

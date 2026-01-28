@@ -99,6 +99,9 @@
   <data name="Features" xml:space="preserve">
     <value>功能</value>
   </data>
+  <data name="Global Management" xml:space="preserve">
+    <value>全局管理</value>
+  </data>
   <data name="Global Settings" xml:space="preserve">
     <value>全局设置</value>
   </data>
@@ -125,6 +128,9 @@
   </data>
   <data name="Manage" xml:space="preserve">
     <value>管理</value>
+  </data>
+  <data name="Manage Question Bank Roles" xml:space="preserve">
+    <value>管理题库角色</value>
   </data>
   <data name="Monthly finance report" xml:space="preserve">
     <value>月度财务报告</value>

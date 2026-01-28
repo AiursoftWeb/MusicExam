@@ -96,6 +96,9 @@
   <data name="Features" xml:space="preserve">
     <value>Функції</value>
   </data>
+  <data name="Global Management" xml:space="preserve">
+    <value>Глобальне керування</value>
+  </data>
   <data name="Global Settings" xml:space="preserve">
     <value>Глобальні налаштування</value>
   </data>
@@ -122,6 +125,9 @@
   </data>
   <data name="Manage" xml:space="preserve">
     <value>Керування</value>
+  </data>
+  <data name="Manage Question Bank Roles" xml:space="preserve">
+    <value>Керування ролями банку питань</value>
   </data>
   <data name="Monthly finance report" xml:space="preserve">
     <value>Місячний фінансовий звіт</value>

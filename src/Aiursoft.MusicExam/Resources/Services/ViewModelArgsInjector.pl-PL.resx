@@ -96,6 +96,9 @@
   <data name="Features" xml:space="preserve">
     <value>Funkcje</value>
   </data>
+  <data name="Global Management" xml:space="preserve">
+    <value>Zarządzanie globalne</value>
+  </data>
   <data name="Global Settings" xml:space="preserve">
     <value>Ustawienia globalne</value>
   </data>
@@ -122,6 +125,9 @@
   </data>
   <data name="Manage" xml:space="preserve">
     <value>Zarządzaj</value>
+  </data>
+  <data name="Manage Question Bank Roles" xml:space="preserve">
+    <value>Zarządzaj rolami banku pytań</value>
   </data>
   <data name="Monthly finance report" xml:space="preserve">
     <value>Miesięczny raport finansowy</value>

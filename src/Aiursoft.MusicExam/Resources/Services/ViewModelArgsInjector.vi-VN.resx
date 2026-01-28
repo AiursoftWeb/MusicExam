@@ -99,6 +99,9 @@
   <data name="Features" xml:space="preserve">
     <value>Tính năng</value>
   </data>
+  <data name="Global Management" xml:space="preserve">
+    <value>Quản lý Toàn cầu</value>
+  </data>
   <data name="Global Settings" xml:space="preserve">
     <value>Cài đặt chung</value>
   </data>
@@ -125,6 +128,9 @@
   </data>
   <data name="Manage" xml:space="preserve">
     <value>Quản lý</value>
+  </data>
+  <data name="Manage Question Bank Roles" xml:space="preserve">
+    <value>Quản lý vai trò ngân hàng câu hỏi</value>
   </data>
   <data name="Monthly finance report" xml:space="preserve">
     <value>Báo cáo tài chính hàng tháng</value>

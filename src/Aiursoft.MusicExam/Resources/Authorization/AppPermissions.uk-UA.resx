@@ -27,6 +27,9 @@
   <data name="Allows assigning or removing roles for any user." xml:space="preserve">
     <value>Дозволяє призначати або знімати ролі для будь-кого користувача.</value>
   </data>
+  <data name="Allows managing the roles authorized to access each question bank." xml:space="preserve">
+    <value>Дозволяє керувати ролями, які мають дозвіл на доступ до кожного банку запитань.</value>
+  </data>
   <data name="Allows modification of role names and their assigned permissions." xml:space="preserve">
     <value>Дозволяє змінювати назви ролей та призначені для них дозволи.</value>
   </data>
@@ -95,6 +98,9 @@
   </data>
   <data name="Manage Global Settings" xml:space="preserve">
     <value>Керування загальними параметрами</value>
+  </data>
+  <data name="Manage Question Bank Roles" xml:space="preserve">
+    <value>Керування ролями банку запитань</value>
   </data>
   <data name="Read Permissions" xml:space="preserve">
     <value>Читати дозволи</value>

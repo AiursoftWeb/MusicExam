@@ -99,6 +99,9 @@
   <data name="Features" xml:space="preserve">
     <value>คุณสมบัติ</value>
   </data>
+  <data name="Global Management" xml:space="preserve">
+    <value>การจัดการทั่วโลก</value>
+  </data>
   <data name="Global Settings" xml:space="preserve">
     <value>การตั้งค่าทั่วไป</value>
   </data>
@@ -125,6 +128,9 @@
   </data>
   <data name="Manage" xml:space="preserve">
     <value>จัดการ</value>
+  </data>
+  <data name="Manage Question Bank Roles" xml:space="preserve">
+    <value>จัดการบทบาทธนาคารคำถาม</value>
   </data>
   <data name="Monthly finance report" xml:space="preserve">
     <value>รายงานการเงินรายเดือน</value>
