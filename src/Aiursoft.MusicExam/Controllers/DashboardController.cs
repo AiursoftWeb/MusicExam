@@ -52,21 +52,9 @@ public class DashboardController : Controller
             .OrderBy(s => s.Id)
             .ToListAsync();
 
-        var authorizedSchools = schools.Where(s =>
-        {
-            if (!s.AuthorizedRoles.Any())
-            {
-                // Public
-                return true;
-            }
-
-            // Must have at least one of the required roles
-            return s.AuthorizedRoles.Any(rr => userRoleIds.Contains(rr.RoleId));
-        }).ToList();
-
         var model = new IndexViewModel
         {
-            Schools = authorizedSchools
+            Schools = schools
         };
         return this.StackView(model);
     }

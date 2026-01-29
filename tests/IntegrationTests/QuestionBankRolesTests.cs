@@ -74,13 +74,13 @@ public class QuestionBankRolesTests : TestBase
         });
         Assert.AreEqual(HttpStatusCode.Found, loginResponse.StatusCode);
 
-        // 3. Check Dashboard - should see public, but NOT private
+        // 3. Check Dashboard - should see BOTH now (requirement change: all visible, access restricted)
         var dashboardResponse = await Http.GetAsync("/Dashboard/Index");
         dashboardResponse.EnsureSuccessStatusCode();
         var dashboardHtml = await dashboardResponse.Content.ReadAsStringAsync();
         
         Assert.Contains("Public School", dashboardHtml);
-        Assert.DoesNotContain("Private School", dashboardHtml);
+        Assert.Contains("Private School", dashboardHtml);
 
         // 4. Try to access private paper directly - should be forbidden (or redirect to forbid/login)
         // Since we are logged in, it should be 403 or redirect to some error page.
