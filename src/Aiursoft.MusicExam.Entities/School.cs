@@ -22,7 +22,4 @@ public class School
 
     [InverseProperty(nameof(ExamPaper.School))]
     public IEnumerable<ExamPaper> Papers { get; init; } = new List<ExamPaper>();
-
-    [InverseProperty(nameof(QuestionBankRole.School))]
-    public ICollection<QuestionBankRole> AuthorizedRoles { get; set; } = new List<QuestionBankRole>();
 }

@@ -6,16 +6,16 @@ namespace Aiursoft.MusicExam.Models.QuestionBankRolesViewModels;
 
 public class IndexViewModel : UiStackLayoutViewModel
 {
-    public List<SchoolWithRoles> Schools { get; set; } = new();
+    public List<PaperWithRoles> Papers { get; set; } = new();
 
     public IndexViewModel()
     {
-        PageTitle = "Global Management";
+        PageTitle = "Global Question Bank Management";
     }
 }
 
-public class SchoolWithRoles
+public class PaperWithRoles
 {
-    public required School School { get; set; }
+    public required ExamPaper Paper { get; set; }
     public List<IdentityRole> Roles { get; set; } = new();
 }

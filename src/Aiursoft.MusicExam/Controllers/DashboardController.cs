@@ -41,14 +41,8 @@ public class DashboardController : Controller
             return Forbid();
         }
 
-        var userRoleIds = await _dbContext.UserRoles
-            .Where(ur => ur.UserId == user.Id)
-            .Select(ur => ur.RoleId)
-            .ToListAsync();
-
         var schools = await _dbContext.Schools
             .Include(s => s.Papers)
-            .Include(s => s.AuthorizedRoles)
             .OrderBy(s => s.Id)
             .ToListAsync();
 

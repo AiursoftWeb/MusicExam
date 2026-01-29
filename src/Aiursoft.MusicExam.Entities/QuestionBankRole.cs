@@ -18,9 +18,9 @@ public class QuestionBankRole
     [ForeignKey(nameof(RoleId))]
     public IdentityRole? Role { get; set; }
 
-    public int SchoolId { get; set; }
+    public int ExamPaperId { get; set; }
 
     [JsonIgnore]
-    [ForeignKey(nameof(SchoolId))]
-    public School? School { get; set; }
+    [ForeignKey(nameof(ExamPaperId))]
+    public ExamPaper? ExamPaper { get; set; }
 }

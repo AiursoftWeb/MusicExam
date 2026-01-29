@@ -38,4 +38,7 @@ public class ExamPaper
 
     [InverseProperty(nameof(ExamPaperSubmission.Paper))]
     public ICollection<ExamPaperSubmission> Submissions { get; set; } = new List<ExamPaperSubmission>();
+
+    [InverseProperty(nameof(QuestionBankRole.ExamPaper))]
+    public ICollection<QuestionBankRole> AuthorizedRoles { get; set; } = new List<QuestionBankRole>();
 }

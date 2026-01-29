@@ -4,14 +4,14 @@ namespace Aiursoft.MusicExam.Models.QuestionBankRolesViewModels;
 
 public class EditViewModel : UiStackLayoutViewModel
 {
-    public int SchoolId { get; set; }
-    public string? SchoolName { get; set; }
+    public int PaperId { get; set; }
+    public string? PaperTitle { get; set; }
 
     public List<RoleSelectionViewModel> Roles { get; set; } = new();
 
     public EditViewModel()
     {
-        PageTitle = "Manage Question Bank Roles";
+        PageTitle = "Manage Paper Roles";
     }
 }
 
