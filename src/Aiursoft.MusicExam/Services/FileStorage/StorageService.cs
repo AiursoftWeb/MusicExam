@@ -215,7 +215,7 @@ public class StorageService(
         return urlPath;
     }
 
-    public string RelativePathToInternetUrl(string relativePath, HttpContext context, bool isVault = false)
+    public string RelativePathToInternetUrl(string relativePath, HttpContext context, bool isVault)
     {
         if (isVault)
         {
@@ -225,7 +225,7 @@ public class StorageService(
         return $"{context.Request.Scheme}://{context.Request.Host}/download/{RelativePathToUriPath(relativePath)}";
     }
 
-    public string RelativePathToInternetUrl(string relativePath, bool isVault = false)
+    public string RelativePathToInternetUrl(string relativePath, bool isVault)
     {
         if (isVault)
         {

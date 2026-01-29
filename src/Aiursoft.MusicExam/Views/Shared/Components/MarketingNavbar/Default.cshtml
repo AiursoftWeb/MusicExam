@@ -6,7 +6,7 @@
 
 @{
     var brandLogo = await GlobalSettingsService.GetSettingValueAsync("BrandLogo");
-    var logoUrl = string.IsNullOrEmpty(brandLogo) ? "/logo.svg" : StorageService.RelativePathToInternetUrl(brandLogo, false);
+    var logoUrl = string.IsNullOrEmpty(brandLogo) ? "/logo.svg" : StorageService.RelativePathToInternetUrl(brandLogo, Context, false);
 }
 
 
