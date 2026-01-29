@@ -61,7 +61,7 @@ public class GlobalSettingsController(
             {
                 if (model.FileValue is { Length: > 0 })
                 {
-                    var savedFilePath = await storageService.Save("logos", model.FileValue);
+                    var savedFilePath = await storageService.Save(Path.Combine("logos", model.FileValue.FileName), model.FileValue);
                     await settingsService.UpdateSettingAsync(model.Key, savedFilePath);
                 }
             }

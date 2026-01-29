@@ -73,7 +73,7 @@
                                 else if (item.Type == SettingType.File)
                                 {
                                     <div class="input-group input-group-sm">
-                                        <input type="file" name="FileValue" class="form-control" accept="image/*" />
+                                        <input type="file" name="FileValue" class="form-control" accept="image/*,image/svg+xml" />
                                         <button class="btn btn-outline-secondary" type="submit">@Localizer["Upload"]</button>
                                     </div>
                                     @if (!string.IsNullOrEmpty(item.Value))

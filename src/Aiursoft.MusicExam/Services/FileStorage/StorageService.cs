@@ -40,6 +40,10 @@ public class StorageService(
 
         // 4. Create directory if needed
         var directory = Path.GetDirectoryName(physicalPath);
+        if (File.Exists(directory))
+        {
+            File.Delete(directory);
+        }
         if (!Directory.Exists(directory))
         {
              Directory.CreateDirectory(directory!);
