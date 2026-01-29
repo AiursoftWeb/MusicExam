@@ -196,12 +196,13 @@ public class ViewModelArgsInjector(
             }
         }
 
+        var brandLogo = globalSettingsService.GetSettingValueAsync("BrandLogo").Result;
         toInject.Sidebar = new SidebarViewModel
         {
             SideLogo = new SideLogoViewModel
             {
                 AppName = projectName,
-                LogoUrl = "/logo.svg",
+                LogoUrl = string.IsNullOrEmpty(brandLogo) ? "/logo.svg" : storageService.RelativePathToInternetUrl(brandLogo, false),
                 Href = "/"
             },
             SideMenu = new SideMenuViewModel
