@@ -24,20 +24,32 @@
   <data name="All Question Banks" xml:space="preserve">
     <value>Semua Bank Soal</value>
   </data>
+  <data name="All Question Papers" xml:space="preserve">
+    <value>Semua Naskah Soal</value>
+  </data>
   <data name="Authorized Roles" xml:space="preserve">
     <value>Peran yang Diizinkan</value>
   </data>
   <data name="Global Management" xml:space="preserve">
     <value>Manajemen Global</value>
   </data>
+  <data name="Global Question Bank Management" xml:space="preserve">
+    <value>Manajemen Bank Soal Global</value>
+  </data>
   <data name="Manage Roles" xml:space="preserve">
     <value>Kelola Peran</value>
+  </data>
+  <data name="Manage which roles are authorized to access each paper." xml:space="preserve">
+    <value>Kelola peran mana yang diizinkan mengakses setiap naskah.</value>
   </data>
   <data name="Manage which roles are authorized to access each question bank." xml:space="preserve">
     <value>Kelola peran mana yang diizinkan mengakses setiap bank soal.</value>
   </data>
   <data name="No roles authorized (Public)" xml:space="preserve">
     <value>Tidak ada peran yang diizinkan (Publik)</value>
+  </data>
+  <data name="Paper Title" xml:space="preserve">
+    <value>Judul Kertas Soal</value>
   </data>
   <data name="Question Bank Name" xml:space="preserve">
     <value>Nama Bank Soal</value>

@@ -30,6 +30,9 @@
   <data name="Brand Home URL" xml:space="preserve">
     <value>URL головної сторінки бренду</value>
   </data>
+  <data name="Brand Logo" xml:space="preserve">
+    <value>Логотип бренду</value>
+  </data>
   <data name="Brand Name" xml:space="preserve">
     <value>Назва бренду</value>
   </data>
@@ -38,6 +41,9 @@
   </data>
   <data name="Project Name" xml:space="preserve">
     <value>Назва проекту</value>
+  </data>
+  <data name="The brand logo displayed in the navbar and sidebar. Will fallback to default logo if not set." xml:space="preserve">
+    <value>Логотип бренду, що відображається в навігаційній панелі та бічній панелі. Буде використано логотип за замовчуванням, якщо не встановлено.</value>
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>Назва бренду, яка відображається в підвалі.</value>

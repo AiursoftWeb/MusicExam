@@ -24,8 +24,14 @@
   <data name="Back to List" xml:space="preserve">
     <value>Επιστροφή στη λίστα</value>
   </data>
+  <data name="If no roles are selected, this paper will be public to all users with exam permissions." xml:space="preserve">
+    <value>Αν δεν επιλεγούν ρόλοι, αυτό το εργαστήριο θα είναι δημόσιο για όλους τους χρήστες με άδεια πρόσβασης σε εξετάσεις.</value>
+  </data>
   <data name="If no roles are selected, this question bank will be public to all users with exam permissions." xml:space="preserve">
     <value>Αν δεν επιλεγούν ρόλοι, αυτή η βάση ερωτήσεων θα είναι δημόσια για όλους τους χρήστες με δικαιώματα πρόσβασης σε εξετάσεις.</value>
+  </data>
+  <data name="Manage Paper Roles" xml:space="preserve">
+    <value>Διαχείριση Ρόλων Εγγράφου</value>
   </data>
   <data name="Manage Question Bank Roles" xml:space="preserve">
     <value>Διαχείριση Ρόλων Βάσης Ερωτήσεων</value>

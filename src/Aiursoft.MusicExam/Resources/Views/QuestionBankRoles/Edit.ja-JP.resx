@@ -24,8 +24,14 @@
   <data name="Back to List" xml:space="preserve">
     <value>一覧へ戻る</value>
   </data>
+  <data name="If no roles are selected, this paper will be public to all users with exam permissions." xml:space="preserve">
+    <value>ロールが選択されていない場合、この試験問題は試験権限を持つすべてのユーザーに公開されます。</value>
+  </data>
   <data name="If no roles are selected, this question bank will be public to all users with exam permissions." xml:space="preserve">
     <value>ロールが選択されていない場合、この問題バンクは試験の権限を持つすべてのユーザーに公開されます。</value>
+  </data>
+  <data name="Manage Paper Roles" xml:space="preserve">
+    <value>用紙のロールを管理する</value>
   </data>
   <data name="Manage Question Bank Roles" xml:space="preserve">
     <value>問題バンクのロールを管理する</value>

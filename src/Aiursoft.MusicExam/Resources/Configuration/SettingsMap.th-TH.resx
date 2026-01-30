@@ -30,6 +30,9 @@
   <data name="Brand Home URL" xml:space="preserve">
     <value>URL หน้าหลักของแบรนด์</value>
   </data>
+  <data name="Brand Logo" xml:space="preserve">
+    <value>โลโก้แบรนด์</value>
+  </data>
   <data name="Brand Name" xml:space="preserve">
     <value>ชื่อแบรนด์</value>
   </data>
@@ -38,6 +41,9 @@
   </data>
   <data name="Project Name" xml:space="preserve">
     <value>ชื่อโปรเจกต์</value>
+  </data>
+  <data name="The brand logo displayed in the navbar and sidebar. Will fallback to default logo if not set." xml:space="preserve">
+    <value>โลโก้แบรนด์ที่แสดงในแถบเมนูด้านบนและแถบด้านข้าง ถ้าไม่ตั้งค่าจะใช้โลโก้เริ่มต้นแทน</value>
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>ชื่อแบรนด์ที่แสดงในส่วนท้ายหน้าเว็บ</value>

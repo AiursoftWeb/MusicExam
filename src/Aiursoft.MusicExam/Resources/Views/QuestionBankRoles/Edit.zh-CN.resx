@@ -24,8 +24,14 @@
   <data name="Back to List" xml:space="preserve">
     <value>返回列表</value>
   </data>
+  <data name="If no roles are selected, this paper will be public to all users with exam permissions." xml:space="preserve">
+    <value>如果未选择任何角色，此试卷将对所有拥有考试权限的用户公开。</value>
+  </data>
   <data name="If no roles are selected, this question bank will be public to all users with exam permissions." xml:space="preserve">
     <value>如果未选择任何角色，则此题库将对所有具有考试权限的用户公开。</value>
+  </data>
+  <data name="Manage Paper Roles" xml:space="preserve">
+    <value>管理试卷权限</value>
   </data>
   <data name="Manage Question Bank Roles" xml:space="preserve">
     <value>管理题库角色</value>

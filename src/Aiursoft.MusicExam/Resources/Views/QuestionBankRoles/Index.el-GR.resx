@@ -24,20 +24,32 @@
   <data name="All Question Banks" xml:space="preserve">
     <value>Όλες οι Βάσεις Ερωτήσεων</value>
   </data>
+  <data name="All Question Papers" xml:space="preserve">
+    <value>Όλα τα Θέματα Εξετάσεων</value>
+  </data>
   <data name="Authorized Roles" xml:space="preserve">
     <value>Εξουσιοδοτημένοι Ρόλοι</value>
   </data>
   <data name="Global Management" xml:space="preserve">
     <value>Παγκόσμια Διαχείριση</value>
   </data>
+  <data name="Global Question Bank Management" xml:space="preserve">
+    <value>Διαχείριση Παγκόσμιας Βάσης Ερωτήσεων</value>
+  </data>
   <data name="Manage Roles" xml:space="preserve">
     <value>Διαχείριση Ρόλων</value>
+  </data>
+  <data name="Manage which roles are authorized to access each paper." xml:space="preserve">
+    <value>Διαχείριση των ρόλων που έχουν εξουσία πρόσβασης σε κάθε εργασία.</value>
   </data>
   <data name="Manage which roles are authorized to access each question bank." xml:space="preserve">
     <value>Διαχείριση των ρόλων που έχουν εξουσιοδότηση για πρόσβαση σε κάθε βάση ερωτήσεων.</value>
   </data>
   <data name="No roles authorized (Public)" xml:space="preserve">
     <value>Κανένα ρόλο δεν έχει εξουσιοδότηση (Δημόσιος)</value>
+  </data>
+  <data name="Paper Title" xml:space="preserve">
+    <value>Τίτλος Ερωτηματολογίου</value>
   </data>
   <data name="Question Bank Name" xml:space="preserve">
     <value>Όνομα Βάσης Ερωτήσεων</value>

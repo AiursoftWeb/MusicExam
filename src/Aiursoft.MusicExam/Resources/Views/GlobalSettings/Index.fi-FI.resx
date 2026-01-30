@@ -54,6 +54,9 @@
   <data name="This setting is overridden by configuration." xml:space="preserve">
     <value>Tämä asetus ohitetaan määrityksellä.</value>
   </data>
+  <data name="Upload" xml:space="preserve">
+    <value>Lataa</value>
+  </data>
   <data name="Value" xml:space="preserve">
     <value>Arvo</value>
   </data>

@@ -24,20 +24,32 @@
   <data name="All Question Banks" xml:space="preserve">
     <value>所有题库</value>
   </data>
+  <data name="All Question Papers" xml:space="preserve">
+    <value>全部试题试卷</value>
+  </data>
   <data name="Authorized Roles" xml:space="preserve">
     <value>授权角色</value>
   </data>
   <data name="Global Management" xml:space="preserve">
     <value>全局管理</value>
   </data>
+  <data name="Global Question Bank Management" xml:space="preserve">
+    <value>全局题库管理</value>
+  </data>
   <data name="Manage Roles" xml:space="preserve">
     <value>管理角色</value>
+  </data>
+  <data name="Manage which roles are authorized to access each paper." xml:space="preserve">
+    <value>管理哪些角色被授权访问每份试卷。</value>
   </data>
   <data name="Manage which roles are authorized to access each question bank." xml:space="preserve">
     <value>管理哪些角色被授权访问每个题库。</value>
   </data>
   <data name="No roles authorized (Public)" xml:space="preserve">
     <value>未授权任何角色（公开）</value>
+  </data>
+  <data name="Paper Title" xml:space="preserve">
+    <value>试卷标题</value>
   </data>
   <data name="Question Bank Name" xml:space="preserve">
     <value>题库名称</value>

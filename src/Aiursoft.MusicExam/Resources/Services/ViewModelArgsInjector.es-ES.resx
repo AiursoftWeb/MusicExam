@@ -102,6 +102,9 @@
   <data name="Global Management" xml:space="preserve">
     <value>Gestión global</value>
   </data>
+  <data name="Global Question Bank Management" xml:space="preserve">
+    <value>Gestión de la biblioteca global de preguntas</value>
+  </data>
   <data name="Global Settings" xml:space="preserve">
     <value>Ajustes globales</value>
   </data>
@@ -128,6 +131,9 @@
   </data>
   <data name="Manage" xml:space="preserve">
     <value>Gestionar</value>
+  </data>
+  <data name="Manage Paper Roles" xml:space="preserve">
+    <value>Administrar roles de exámenes</value>
   </data>
   <data name="Manage Question Bank Roles" xml:space="preserve">
     <value>Gestionar roles de la biblioteca de preguntas</value>

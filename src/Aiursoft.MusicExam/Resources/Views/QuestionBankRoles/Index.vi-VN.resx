@@ -24,20 +24,32 @@
   <data name="All Question Banks" xml:space="preserve">
     <value>Tất cả Ngân hàng Câu hỏi</value>
   </data>
+  <data name="All Question Papers" xml:space="preserve">
+    <value>Tất cả đề thi</value>
+  </data>
   <data name="Authorized Roles" xml:space="preserve">
     <value>Vai trò được ủy quyền</value>
   </data>
   <data name="Global Management" xml:space="preserve">
     <value>Quản lý Toàn cầu</value>
   </data>
+  <data name="Global Question Bank Management" xml:space="preserve">
+    <value>Quản lý Thư viện Câu hỏi Toàn cầu</value>
+  </data>
   <data name="Manage Roles" xml:space="preserve">
     <value>Quản lý vai trò</value>
+  </data>
+  <data name="Manage which roles are authorized to access each paper." xml:space="preserve">
+    <value>Quản lý các vai trò được ủy quyền truy cập vào từng bài kiểm tra.</value>
   </data>
   <data name="Manage which roles are authorized to access each question bank." xml:space="preserve">
     <value>Quản lý các vai trò được ủy quyền truy cập vào từng ngân hàng câu hỏi.</value>
   </data>
   <data name="No roles authorized (Public)" xml:space="preserve">
     <value>Không có vai trò nào được ủy quyền (Công khai)</value>
+  </data>
+  <data name="Paper Title" xml:space="preserve">
+    <value>Tiêu đề đề thi</value>
   </data>
   <data name="Question Bank Name" xml:space="preserve">
     <value>Tên ngân hàng câu hỏi</value>

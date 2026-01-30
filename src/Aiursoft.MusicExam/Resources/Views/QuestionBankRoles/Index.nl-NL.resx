@@ -24,20 +24,32 @@
   <data name="All Question Banks" xml:space="preserve">
     <value>Alle vraagbanken</value>
   </data>
+  <data name="All Question Papers" xml:space="preserve">
+    <value>Alle vragenpapieren</value>
+  </data>
   <data name="Authorized Roles" xml:space="preserve">
     <value>Geautoriseerde rollen</value>
   </data>
   <data name="Global Management" xml:space="preserve">
     <value>Algemene beheer</value>
   </data>
+  <data name="Global Question Bank Management" xml:space="preserve">
+    <value>Algemene beheer van de vraagbank</value>
+  </data>
   <data name="Manage Roles" xml:space="preserve">
     <value>Rollen beheren</value>
+  </data>
+  <data name="Manage which roles are authorized to access each paper." xml:space="preserve">
+    <value>Beheer welke rollen zijn gemachtigd om toegang te krijgen tot elk examen.</value>
   </data>
   <data name="Manage which roles are authorized to access each question bank." xml:space="preserve">
     <value>Beheer welke rollen zijn gemachtigd om toegang te krijgen tot elke vragenbank.</value>
   </data>
   <data name="No roles authorized (Public)" xml:space="preserve">
     <value>Geen rollen geautoriseerd (Openbaar)</value>
+  </data>
+  <data name="Paper Title" xml:space="preserve">
+    <value>Paper Titel</value>
   </data>
   <data name="Question Bank Name" xml:space="preserve">
     <value>Naam vraagbank</value>

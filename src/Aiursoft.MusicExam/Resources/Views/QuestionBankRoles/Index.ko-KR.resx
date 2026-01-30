@@ -24,20 +24,32 @@
   <data name="All Question Banks" xml:space="preserve">
     <value>모든 문제은행</value>
   </data>
+  <data name="All Question Papers" xml:space="preserve">
+    <value>모든 문제지</value>
+  </data>
   <data name="Authorized Roles" xml:space="preserve">
     <value>권한 있는 역할</value>
   </data>
   <data name="Global Management" xml:space="preserve">
     <value>전역 관리</value>
   </data>
+  <data name="Global Question Bank Management" xml:space="preserve">
+    <value>글로벌 문제은행 관리</value>
+  </data>
   <data name="Manage Roles" xml:space="preserve">
     <value>역할 관리</value>
+  </data>
+  <data name="Manage which roles are authorized to access each paper." xml:space="preserve">
+    <value>각 문제지에 접근할 수 있는 역할을 관리합니다.</value>
   </data>
   <data name="Manage which roles are authorized to access each question bank." xml:space="preserve">
     <value>각 문제은행에 접근할 수 있는 역할을 관리합니다.</value>
   </data>
   <data name="No roles authorized (Public)" xml:space="preserve">
     <value>권한이 부여된 역할 없음 (공개)</value>
+  </data>
+  <data name="Paper Title" xml:space="preserve">
+    <value>시험지 제목</value>
   </data>
   <data name="Question Bank Name" xml:space="preserve">
     <value>질문 은행 이름</value>

@@ -54,6 +54,9 @@
   <data name="This setting is overridden by configuration." xml:space="preserve">
     <value>此設定已由設定檔覆蓋。</value>
   </data>
+  <data name="Upload" xml:space="preserve">
+    <value>上傳</value>
+  </data>
   <data name="Value" xml:space="preserve">
     <value>值</value>
   </data>

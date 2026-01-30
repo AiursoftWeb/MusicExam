@@ -30,6 +30,9 @@
   <data name="Brand Home URL" xml:space="preserve">
     <value>Brändin kotisivun URL</value>
   </data>
+  <data name="Brand Logo" xml:space="preserve">
+    <value>Brändilogotyyppi</value>
+  </data>
   <data name="Brand Name" xml:space="preserve">
     <value>Brändin nimi</value>
   </data>
@@ -38,6 +41,9 @@
   </data>
   <data name="Project Name" xml:space="preserve">
     <value>Projektin nimi</value>
+  </data>
+  <data name="The brand logo displayed in the navbar and sidebar. Will fallback to default logo if not set." xml:space="preserve">
+    <value>Brändilogon näyttöön navigointipalkissa ja sivupalkissa. Palautuu oletuslogoon, jos ei ole asetettu.</value>
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>Brändin nimi, joka näytetään alatunnisteessa.</value>

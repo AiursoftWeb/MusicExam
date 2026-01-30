@@ -102,6 +102,9 @@
   <data name="Global Management" xml:space="preserve">
     <value>Global Management</value>
   </data>
+  <data name="Global Question Bank Management" xml:space="preserve">
+    <value>Global Question Bank Management</value>
+  </data>
   <data name="Global Settings" xml:space="preserve">
     <value>Global Settings</value>
   </data>
@@ -128,6 +131,9 @@
   </data>
   <data name="Manage" xml:space="preserve">
     <value>Manage</value>
+  </data>
+  <data name="Manage Paper Roles" xml:space="preserve">
+    <value>Manage Paper Roles</value>
   </data>
   <data name="Manage Question Bank Roles" xml:space="preserve">
     <value>Manage Question Bank Roles</value>

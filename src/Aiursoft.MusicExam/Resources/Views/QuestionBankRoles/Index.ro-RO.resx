@@ -24,20 +24,32 @@
   <data name="All Question Banks" xml:space="preserve">
     <value>Toate bancale de întrebări</value>
   </data>
+  <data name="All Question Papers" xml:space="preserve">
+    <value>Toate seturile de întrebări</value>
+  </data>
   <data name="Authorized Roles" xml:space="preserve">
     <value>Roluri autorizate</value>
   </data>
   <data name="Global Management" xml:space="preserve">
     <value>Gestionare globală</value>
   </data>
+  <data name="Global Question Bank Management" xml:space="preserve">
+    <value>Gestionează Băncile Globale de Întrebări</value>
+  </data>
   <data name="Manage Roles" xml:space="preserve">
     <value>Gestionează Roluri</value>
+  </data>
+  <data name="Manage which roles are authorized to access each paper." xml:space="preserve">
+    <value>Gestionați rolurile autorizate pentru a accesa fiecare lucrare.</value>
   </data>
   <data name="Manage which roles are authorized to access each question bank." xml:space="preserve">
     <value>Gestionați rolurile autorizate pentru accesarea fiecărei baze de întrebări.</value>
   </data>
   <data name="No roles authorized (Public)" xml:space="preserve">
     <value>Fără roluri autorizate (Public)</value>
+  </data>
+  <data name="Paper Title" xml:space="preserve">
+    <value>Titlul lucrării</value>
   </data>
   <data name="Question Bank Name" xml:space="preserve">
     <value>Numele băncii de întrebări</value>

@@ -24,20 +24,32 @@
   <data name="All Question Banks" xml:space="preserve">
     <value>Todos os Bancos de Perguntas</value>
   </data>
+  <data name="All Question Papers" xml:space="preserve">
+    <value>Todos os Questionários</value>
+  </data>
   <data name="Authorized Roles" xml:space="preserve">
     <value>Papéis Autorizados</value>
   </data>
   <data name="Global Management" xml:space="preserve">
     <value>Gestão Global</value>
   </data>
+  <data name="Global Question Bank Management" xml:space="preserve">
+    <value>Gestão da Base de Questões Global</value>
+  </data>
   <data name="Manage Roles" xml:space="preserve">
     <value>Gerir Papéis</value>
+  </data>
+  <data name="Manage which roles are authorized to access each paper." xml:space="preserve">
+    <value>Gerir quais funções têm autorização para aceder a cada prova.</value>
   </data>
   <data name="Manage which roles are authorized to access each question bank." xml:space="preserve">
     <value>Gerir quais funções têm autorização para aceder a cada banco de questões.</value>
   </data>
   <data name="No roles authorized (Public)" xml:space="preserve">
     <value>Sem papéis autorizados (Público)</value>
+  </data>
+  <data name="Paper Title" xml:space="preserve">
+    <value>Título do Papel</value>
   </data>
   <data name="Question Bank Name" xml:space="preserve">
     <value>Nome da Base de Questões</value>

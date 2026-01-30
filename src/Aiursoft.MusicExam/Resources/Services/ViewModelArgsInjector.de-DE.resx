@@ -102,6 +102,9 @@
   <data name="Global Management" xml:space="preserve">
     <value>Globale Verwaltung</value>
   </data>
+  <data name="Global Question Bank Management" xml:space="preserve">
+    <value>Globale Verwaltung der Fragebank</value>
+  </data>
   <data name="Global Settings" xml:space="preserve">
     <value>Globale Einstellungen</value>
   </data>
@@ -128,6 +131,9 @@
   </data>
   <data name="Manage" xml:space="preserve">
     <value>Verwalten</value>
+  </data>
+  <data name="Manage Paper Roles" xml:space="preserve">
+    <value>Verwaltung von Papierrollen</value>
   </data>
   <data name="Manage Question Bank Roles" xml:space="preserve">
     <value>Fragebank-Rollen verwalten</value>

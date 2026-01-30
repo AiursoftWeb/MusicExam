@@ -30,6 +30,9 @@
   <data name="Brand Home URL" xml:space="preserve">
     <value>URL de la page d&apos;accueil de la marque</value>
   </data>
+  <data name="Brand Logo" xml:space="preserve">
+    <value>Logo de la marque</value>
+  </data>
   <data name="Brand Name" xml:space="preserve">
     <value>Nom de la marque</value>
   </data>
@@ -38,6 +41,9 @@
   </data>
   <data name="Project Name" xml:space="preserve">
     <value>Nom du projet</value>
+  </data>
+  <data name="The brand logo displayed in the navbar and sidebar. Will fallback to default logo if not set." xml:space="preserve">
+    <value>Le logo de la marque affiché dans la barre de navigation et la barre latérale. Passera au logo par défaut si non défini.</value>
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>Le nom de la marque affiché dans le pied de page.</value>

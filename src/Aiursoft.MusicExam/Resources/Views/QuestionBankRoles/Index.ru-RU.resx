@@ -24,20 +24,32 @@
   <data name="All Question Banks" xml:space="preserve">
     <value>Все банки вопросов</value>
   </data>
+  <data name="All Question Papers" xml:space="preserve">
+    <value>Все экзаменационные материалы</value>
+  </data>
   <data name="Authorized Roles" xml:space="preserve">
     <value>Авторизованные роли</value>
   </data>
   <data name="Global Management" xml:space="preserve">
     <value>Глобальное управление</value>
   </data>
+  <data name="Global Question Bank Management" xml:space="preserve">
+    <value>Управление глобальной базой вопросов</value>
+  </data>
   <data name="Manage Roles" xml:space="preserve">
     <value>Управление ролями</value>
+  </data>
+  <data name="Manage which roles are authorized to access each paper." xml:space="preserve">
+    <value>Управление ролями, имеющими разрешение на доступ к каждому экзаменационному варианту.</value>
   </data>
   <data name="Manage which roles are authorized to access each question bank." xml:space="preserve">
     <value>Управление ролями, имеющими разрешение на доступ к каждому банку вопросов.</value>
   </data>
   <data name="No roles authorized (Public)" xml:space="preserve">
     <value>Нет авторизованных ролей (Общедоступно)</value>
+  </data>
+  <data name="Paper Title" xml:space="preserve">
+    <value>Название теста</value>
   </data>
   <data name="Question Bank Name" xml:space="preserve">
     <value>Название банка вопросов</value>

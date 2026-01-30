@@ -24,8 +24,14 @@
   <data name="Back to List" xml:space="preserve">
     <value>Înapoi la listă</value>
   </data>
+  <data name="If no roles are selected, this paper will be public to all users with exam permissions." xml:space="preserve">
+    <value>Dacă nu sunt selectate roluri, acest document va fi accesibil tuturor utilizatorilor cu permisiuni de examen.</value>
+  </data>
   <data name="If no roles are selected, this question bank will be public to all users with exam permissions." xml:space="preserve">
     <value>Dacă nu sunt selectate roluri, această bancă de întrebări va fi disponibilă public pentru toți utilizatorii cu permisiuni de examen.</value>
+  </data>
+  <data name="Manage Paper Roles" xml:space="preserve">
+    <value>Gestionare roluri pentru lucrare</value>
   </data>
   <data name="Manage Question Bank Roles" xml:space="preserve">
     <value>Gestionare roluri bibliotecă întrebări</value>

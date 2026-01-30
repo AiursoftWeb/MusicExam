@@ -30,6 +30,9 @@
   <data name="Brand Home URL" xml:space="preserve">
     <value>Varumärkes startsida URL</value>
   </data>
+  <data name="Brand Logo" xml:space="preserve">
+    <value>Brandlogotyp</value>
+  </data>
   <data name="Brand Name" xml:space="preserve">
     <value>Brandnamn</value>
   </data>
@@ -38,6 +41,9 @@
   </data>
   <data name="Project Name" xml:space="preserve">
     <value>Projektnamn</value>
+  </data>
+  <data name="The brand logo displayed in the navbar and sidebar. Will fallback to default logo if not set." xml:space="preserve">
+    <value>Logotypen för varumärket som visas i navigeringsfältet och sidofältet. Fallback till standardlogotyp om inte angivet.</value>
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>Det varumärkesnamn som visas i sidfoten.</value>

@@ -54,6 +54,9 @@
   <data name="This setting is overridden by configuration." xml:space="preserve">
     <value>이 설정은 구성에 의해 재정의됩니다.</value>
   </data>
+  <data name="Upload" xml:space="preserve">
+    <value>업로드</value>
+  </data>
   <data name="Value" xml:space="preserve">
     <value>값</value>
   </data>

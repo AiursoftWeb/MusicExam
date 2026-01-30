@@ -24,8 +24,14 @@
   <data name="Back to List" xml:space="preserve">
     <value>Quay lại danh sách</value>
   </data>
+  <data name="If no roles are selected, this paper will be public to all users with exam permissions." xml:space="preserve">
+    <value>Nếu không chọn vai trò nào, bài kiểm tra này sẽ công khai với tất cả người dùng có quyền truy cập kỳ thi.</value>
+  </data>
   <data name="If no roles are selected, this question bank will be public to all users with exam permissions." xml:space="preserve">
     <value>Nếu không có vai trò nào được chọn, ngân hàng câu hỏi này sẽ công khai với tất cả người dùng có quyền truy cập kỳ thi.</value>
+  </data>
+  <data name="Manage Paper Roles" xml:space="preserve">
+    <value>Quản lý vai trò bài thi</value>
   </data>
   <data name="Manage Question Bank Roles" xml:space="preserve">
     <value>Quản lý vai trò kho câu hỏi</value>
