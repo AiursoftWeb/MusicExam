@@ -99,6 +99,9 @@
   <data name="Global Management" xml:space="preserve">
     <value>Globaali hallinta</value>
   </data>
+  <data name="Global Question Bank Management" xml:space="preserve">
+    <value>Globaalin kysymysbankin hallinta</value>
+  </data>
   <data name="Global Settings" xml:space="preserve">
     <value>Yleiset asetukset</value>
   </data>
@@ -125,6 +128,9 @@
   </data>
   <data name="Manage" xml:space="preserve">
     <value>Hallinnoi</value>
+  </data>
+  <data name="Manage Paper Roles" xml:space="preserve">
+    <value>Hallinnoi paperin rooleja</value>
   </data>
   <data name="Manage Question Bank Roles" xml:space="preserve">
     <value>Kysymyspankkiroolien hallinta</value>

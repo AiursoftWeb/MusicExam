@@ -99,6 +99,9 @@
   <data name="Global Management" xml:space="preserve">
     <value>Παγκόσμια Διαχείριση</value>
   </data>
+  <data name="Global Question Bank Management" xml:space="preserve">
+    <value>Διαχείριση Γενικής Βάσης Ερωτήσεων</value>
+  </data>
   <data name="Global Settings" xml:space="preserve">
     <value>Καθολικές Ρυθμίσεις</value>
   </data>
@@ -125,6 +128,9 @@
   </data>
   <data name="Manage" xml:space="preserve">
     <value>Διαχείριση</value>
+  </data>
+  <data name="Manage Paper Roles" xml:space="preserve">
+    <value>Διαχείριση Ρόλων Εξετάσεων</value>
   </data>
   <data name="Manage Question Bank Roles" xml:space="preserve">
     <value>Διαχείριση Ρόλων Βάσης Ερωτήσεων</value>

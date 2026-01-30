@@ -30,6 +30,9 @@
   <data name="Brand Home URL" xml:space="preserve">
     <value>URL Αρχικής Σελίδας Μάρκας</value>
   </data>
+  <data name="Brand Logo" xml:space="preserve">
+    <value>Λογότυπο Μάρκας</value>
+  </data>
   <data name="Brand Name" xml:space="preserve">
     <value>Όνομα Εταιρείας</value>
   </data>
@@ -38,6 +41,9 @@
   </data>
   <data name="Project Name" xml:space="preserve">
     <value>Όνομα Έργου</value>
+  </data>
+  <data name="The brand logo displayed in the navbar and sidebar. Will fallback to default logo if not set." xml:space="preserve">
+    <value>Το λογότυπο της εταιρείας που εμφανίζεται στην ναβιγατόρα και την πλευρική μπάρα. Θα επιστρέψει στο προεπιλεγμένο λογότυπο αν δεν έχει οριστεί.</value>
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>Το όνομα της εταιρείας που εμφανίζεται στον ποδοσκαλισμό.</value>

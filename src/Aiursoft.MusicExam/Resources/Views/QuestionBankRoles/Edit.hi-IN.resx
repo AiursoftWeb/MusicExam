@@ -24,8 +24,14 @@
   <data name="Back to List" xml:space="preserve">
     <value>सूची पर वापस जाएं</value>
   </data>
+  <data name="If no roles are selected, this paper will be public to all users with exam permissions." xml:space="preserve">
+    <value>यदि कोई भी भूमिका चुनी नहीं गई है, तो इस पेपर को परीक्षा की अनुमति वाले सभी उपयोगकर्ताओं के लिए सार्वजनिक कर दिया जाएगा।</value>
+  </data>
   <data name="If no roles are selected, this question bank will be public to all users with exam permissions." xml:space="preserve">
     <value>यदि कोई भी भूमिकाएँ चुनी नहीं जाती हैं, तो इस प्रश्न बैंक को सभी परीक्षा अनुमतियाँ वाले उपयोगकर्ताओं के लिए सार्वजनिक कर दिया जाएगा।</value>
+  </data>
+  <data name="Manage Paper Roles" xml:space="preserve">
+    <value>पेपर भूमिकाओं का प्रबंधन करें</value>
   </data>
   <data name="Manage Question Bank Roles" xml:space="preserve">
     <value>प्रश्न बैंक भूमिकाओं का प्रबंधन करें</value>

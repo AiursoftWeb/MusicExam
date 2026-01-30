@@ -102,6 +102,9 @@
   <data name="Global Management" xml:space="preserve">
     <value>글로벌 관리</value>
   </data>
+  <data name="Global Question Bank Management" xml:space="preserve">
+    <value>글로벌 문제은행 관리</value>
+  </data>
   <data name="Global Settings" xml:space="preserve">
     <value>전역 설정</value>
   </data>
@@ -128,6 +131,9 @@
   </data>
   <data name="Manage" xml:space="preserve">
     <value>관리</value>
+  </data>
+  <data name="Manage Paper Roles" xml:space="preserve">
+    <value>시험지 역할 관리</value>
   </data>
   <data name="Manage Question Bank Roles" xml:space="preserve">
     <value>질문은행 역할 관리</value>

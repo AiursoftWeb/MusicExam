@@ -102,6 +102,9 @@
   <data name="Global Management" xml:space="preserve">
     <value>Quản lý Toàn cầu</value>
   </data>
+  <data name="Global Question Bank Management" xml:space="preserve">
+    <value>Quản lý ngân hàng câu hỏi toàn cầu</value>
+  </data>
   <data name="Global Settings" xml:space="preserve">
     <value>Cài đặt chung</value>
   </data>
@@ -128,6 +131,9 @@
   </data>
   <data name="Manage" xml:space="preserve">
     <value>Quản lý</value>
+  </data>
+  <data name="Manage Paper Roles" xml:space="preserve">
+    <value>Quản lý vai trò đề thi</value>
   </data>
   <data name="Manage Question Bank Roles" xml:space="preserve">
     <value>Quản lý vai trò ngân hàng câu hỏi</value>

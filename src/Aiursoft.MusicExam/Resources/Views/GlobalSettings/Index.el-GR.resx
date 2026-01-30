@@ -54,6 +54,9 @@
   <data name="This setting is overridden by configuration." xml:space="preserve">
     <value>Αυτή η ρύθμιση αντικαθίσταται από τη διαμόρφωση.</value>
   </data>
+  <data name="Upload" xml:space="preserve">
+    <value>Ανέβασμα</value>
+  </data>
   <data name="Value" xml:space="preserve">
     <value>Τιμή</value>
   </data>

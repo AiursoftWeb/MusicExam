@@ -30,6 +30,9 @@
   <data name="Brand Home URL" xml:space="preserve">
     <value>브랜드 홈 URL</value>
   </data>
+  <data name="Brand Logo" xml:space="preserve">
+    <value>브랜드 로고</value>
+  </data>
   <data name="Brand Name" xml:space="preserve">
     <value>브랜드 이름</value>
   </data>
@@ -38,6 +41,9 @@
   </data>
   <data name="Project Name" xml:space="preserve">
     <value>프로젝트 이름</value>
+  </data>
+  <data name="The brand logo displayed in the navbar and sidebar. Will fallback to default logo if not set." xml:space="preserve">
+    <value>네비게이션 바와 사이드바에 표시되는 브랜드 로고입니다. 설정되지 않은 경우 기본 로고로 대체됩니다.</value>
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>푸터에 표시되는 브랜드 이름</value>

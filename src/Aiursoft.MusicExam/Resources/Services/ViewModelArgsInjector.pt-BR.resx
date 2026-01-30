@@ -99,6 +99,9 @@
   <data name="Global Management" xml:space="preserve">
     <value>Gerenciamento Global</value>
   </data>
+  <data name="Global Question Bank Management" xml:space="preserve">
+    <value>Gerenciamento do Banco de Questões Global</value>
+  </data>
   <data name="Global Settings" xml:space="preserve">
     <value>Configurações Globais</value>
   </data>
@@ -125,6 +128,9 @@
   </data>
   <data name="Manage" xml:space="preserve">
     <value>Gerenciar</value>
+  </data>
+  <data name="Manage Paper Roles" xml:space="preserve">
+    <value>Gerenciar Papéis de Prova</value>
   </data>
   <data name="Manage Question Bank Roles" xml:space="preserve">
     <value>Gerenciar Funções do Banco de Questões</value>

@@ -24,8 +24,14 @@
   <data name="Back to List" xml:space="preserve">
     <value>Terug naar lijst</value>
   </data>
+  <data name="If no roles are selected, this paper will be public to all users with exam permissions." xml:space="preserve">
+    <value>Als er geen rollen zijn geselecteerd, is dit document openbaar voor alle gebruikers met examenmogelijkheden.</value>
+  </data>
   <data name="If no roles are selected, this question bank will be public to all users with exam permissions." xml:space="preserve">
     <value>Als er geen rollen worden geselecteerd, is deze vraagbank openbaar voor alle gebruikers met examenmachtigingen.</value>
+  </data>
+  <data name="Manage Paper Roles" xml:space="preserve">
+    <value>Paperrollen beheren</value>
   </data>
   <data name="Manage Question Bank Roles" xml:space="preserve">
     <value>Rolken beheren voor vraagbank</value>

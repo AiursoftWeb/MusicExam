@@ -24,20 +24,32 @@
   <data name="All Question Banks" xml:space="preserve">
     <value>Toutes les banques de questions</value>
   </data>
+  <data name="All Question Papers" xml:space="preserve">
+    <value>Tous les sujets d&apos;examen</value>
+  </data>
   <data name="Authorized Roles" xml:space="preserve">
     <value>Rôles autorisés</value>
   </data>
   <data name="Global Management" xml:space="preserve">
     <value>Gestion globale</value>
   </data>
+  <data name="Global Question Bank Management" xml:space="preserve">
+    <value>Gestion de la banque de questions mondiale</value>
+  </data>
   <data name="Manage Roles" xml:space="preserve">
     <value>Gérer les rôles</value>
+  </data>
+  <data name="Manage which roles are authorized to access each paper." xml:space="preserve">
+    <value>Gérer les rôles autorisés à accéder à chaque document.</value>
   </data>
   <data name="Manage which roles are authorized to access each question bank." xml:space="preserve">
     <value>Gérer les rôles autorisés à accéder à chaque banque de questions.</value>
   </data>
   <data name="No roles authorized (Public)" xml:space="preserve">
     <value>Aucun rôle autorisé (Public)</value>
+  </data>
+  <data name="Paper Title" xml:space="preserve">
+    <value>Titre du document</value>
   </data>
   <data name="Question Bank Name" xml:space="preserve">
     <value>Nom de la banque de questions</value>

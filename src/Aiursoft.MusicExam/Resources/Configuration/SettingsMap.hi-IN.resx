@@ -30,6 +30,9 @@
   <data name="Brand Home URL" xml:space="preserve">
     <value>ब्रांड होम यूआरएल</value>
   </data>
+  <data name="Brand Logo" xml:space="preserve">
+    <value>ब्रांड लोगो</value>
+  </data>
   <data name="Brand Name" xml:space="preserve">
     <value>ब्रांड नाम</value>
   </data>
@@ -38,6 +41,9 @@
   </data>
   <data name="Project Name" xml:space="preserve">
     <value>प्रोजेक्ट नाम</value>
+  </data>
+  <data name="The brand logo displayed in the navbar and sidebar. Will fallback to default logo if not set." xml:space="preserve">
+    <value>ब्रांड लोगो नेवबार और साइडबार में प्रदर्शित किया जाता है। यदि सेट नहीं किया गया है तो डिफ़ॉल्ट लोगो पर फॉलबैक हो जाएगा।</value>
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>फुटर में प्रदर्शित ब्रांड का नाम</value>

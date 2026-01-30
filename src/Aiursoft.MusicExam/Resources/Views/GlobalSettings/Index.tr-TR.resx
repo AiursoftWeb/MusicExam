@@ -54,6 +54,9 @@
   <data name="This setting is overridden by configuration." xml:space="preserve">
     <value>Bu ayar yapılandırması tarafından geçersiz kılınmıştır.</value>
   </data>
+  <data name="Upload" xml:space="preserve">
+    <value>Yükle</value>
+  </data>
   <data name="Value" xml:space="preserve">
     <value>Değer</value>
   </data>

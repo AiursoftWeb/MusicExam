@@ -30,6 +30,9 @@
   <data name="Brand Home URL" xml:space="preserve">
     <value>Marka Ana Sayfa URL&apos;si</value>
   </data>
+  <data name="Brand Logo" xml:space="preserve">
+    <value>Marka Logosu</value>
+  </data>
   <data name="Brand Name" xml:space="preserve">
     <value>Marka Adı</value>
   </data>
@@ -38,6 +41,9 @@
   </data>
   <data name="Project Name" xml:space="preserve">
     <value>Proje Adı</value>
+  </data>
+  <data name="The brand logo displayed in the navbar and sidebar. Will fallback to default logo if not set." xml:space="preserve">
+    <value>Navbar ve sidebar&apos;da görünen marka logosu. Ayarlanmazsa varsayılan logoya geçiş yapılır.</value>
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>Sayfanın alt kısmında gösterilen marka adı.</value>

@@ -94,6 +94,9 @@ public class ViewModelArgsInjector(
 
         _ = localizer["Global Management"];
         _ = localizer["Manage Question Bank Roles"];
+    
+        _ = localizer["Global Question Bank Management"];
+        _ = localizer["Manage Paper Roles"];
     }
 
     public void InjectSimple(

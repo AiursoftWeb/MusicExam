@@ -54,6 +54,9 @@
   <data name="This setting is overridden by configuration." xml:space="preserve">
     <value>Ta opcja została zastąpiona konfiguracją.</value>
   </data>
+  <data name="Upload" xml:space="preserve">
+    <value>Prześlij</value>
+  </data>
   <data name="Value" xml:space="preserve">
     <value>Wartość</value>
   </data>

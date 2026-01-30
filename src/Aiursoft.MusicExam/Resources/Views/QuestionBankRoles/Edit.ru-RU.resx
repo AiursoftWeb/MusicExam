@@ -24,8 +24,14 @@
   <data name="Back to List" xml:space="preserve">
     <value>Назад к списку</value>
   </data>
+  <data name="If no roles are selected, this paper will be public to all users with exam permissions." xml:space="preserve">
+    <value>Если роли не выбраны, этот тест будет доступен всем пользователям с разрешениями на прохождение экзаменов.</value>
+  </data>
   <data name="If no roles are selected, this question bank will be public to all users with exam permissions." xml:space="preserve">
     <value>Если роли не выбраны, этот банк вопросов будет доступен всем пользователям с разрешениями на экзамены.</value>
+  </data>
+  <data name="Manage Paper Roles" xml:space="preserve">
+    <value>Управление ролями для бумаги</value>
   </data>
   <data name="Manage Question Bank Roles" xml:space="preserve">
     <value>Управление ролями банка вопросов</value>

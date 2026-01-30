@@ -54,6 +54,9 @@
   <data name="This setting is overridden by configuration." xml:space="preserve">
     <value>Cài đặt này bị ghi đè bởi cấu hình.</value>
   </data>
+  <data name="Upload" xml:space="preserve">
+    <value>Tải lên</value>
+  </data>
   <data name="Value" xml:space="preserve">
     <value>Giá trị</value>
   </data>

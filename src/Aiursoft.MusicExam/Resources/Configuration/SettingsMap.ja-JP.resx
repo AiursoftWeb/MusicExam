@@ -30,6 +30,9 @@
   <data name="Brand Home URL" xml:space="preserve">
     <value>ブランド ホーム URL</value>
   </data>
+  <data name="Brand Logo" xml:space="preserve">
+    <value>ブランドロゴ</value>
+  </data>
   <data name="Brand Name" xml:space="preserve">
     <value>ブランド名</value>
   </data>
@@ -38,6 +41,9 @@
   </data>
   <data name="Project Name" xml:space="preserve">
     <value>プロジェクト名</value>
+  </data>
+  <data name="The brand logo displayed in the navbar and sidebar. Will fallback to default logo if not set." xml:space="preserve">
+    <value>ナビゲーションバーおよびサイドバーに表示されるブランドロゴ。設定されていない場合はデフォルトのロゴにフォールバックします。</value>
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>フッターに表示されるブランド名。</value>

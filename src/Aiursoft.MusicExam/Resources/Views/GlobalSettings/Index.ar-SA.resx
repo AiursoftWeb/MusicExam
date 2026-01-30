@@ -54,6 +54,9 @@
   <data name="This setting is overridden by configuration." xml:space="preserve">
     <value>تم تجاوز إعداد هذا الإعداد من خلال التهيئة.</value>
   </data>
+  <data name="Upload" xml:space="preserve">
+    <value>رفع</value>
+  </data>
   <data name="Value" xml:space="preserve">
     <value>القيمة</value>
   </data>

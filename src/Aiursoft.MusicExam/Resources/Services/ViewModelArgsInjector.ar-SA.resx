@@ -99,6 +99,9 @@
   <data name="Global Management" xml:space="preserve">
     <value>الإدارة العالمية</value>
   </data>
+  <data name="Global Question Bank Management" xml:space="preserve">
+    <value>إدارة مخزن الأسئلة العالمي</value>
+  </data>
   <data name="Global Settings" xml:space="preserve">
     <value>الإعدادات العامة</value>
   </data>
@@ -125,6 +128,9 @@
   </data>
   <data name="Manage" xml:space="preserve">
     <value>إدارة</value>
+  </data>
+  <data name="Manage Paper Roles" xml:space="preserve">
+    <value>إدارة أدوار الورق</value>
   </data>
   <data name="Manage Question Bank Roles" xml:space="preserve">
     <value>إدارة أدوار مخزن الأسئلة</value>

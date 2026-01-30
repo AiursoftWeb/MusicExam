@@ -30,6 +30,9 @@
   <data name="Brand Home URL" xml:space="preserve">
     <value>品牌主页链接</value>
   </data>
+  <data name="Brand Logo" xml:space="preserve">
+    <value>品牌标志</value>
+  </data>
   <data name="Brand Name" xml:space="preserve">
     <value>品牌名称</value>
   </data>
@@ -38,6 +41,9 @@
   </data>
   <data name="Project Name" xml:space="preserve">
     <value>项目名称</value>
+  </data>
+  <data name="The brand logo displayed in the navbar and sidebar. Will fallback to default logo if not set." xml:space="preserve">
+    <value>导航栏和侧边栏中显示的品牌标志。未设置时将回退到默认标志。</value>
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>页脚中显示的品牌名称。</value>

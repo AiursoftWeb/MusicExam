@@ -30,6 +30,9 @@
   <data name="Brand Home URL" xml:space="preserve">
     <value>URL pagina principală a brandului</value>
   </data>
+  <data name="Brand Logo" xml:space="preserve">
+    <value>Logo marca</value>
+  </data>
   <data name="Brand Name" xml:space="preserve">
     <value>Numele mărcii</value>
   </data>
@@ -38,6 +41,9 @@
   </data>
   <data name="Project Name" xml:space="preserve">
     <value>Numele proiectului</value>
+  </data>
+  <data name="The brand logo displayed in the navbar and sidebar. Will fallback to default logo if not set." xml:space="preserve">
+    <value>Logoul mărcii afișat în bara de navigare și bara laterală. Va reveni la logoul implicit dacă nu este setat.</value>
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>Numele mărcii afișat în subsol.</value>

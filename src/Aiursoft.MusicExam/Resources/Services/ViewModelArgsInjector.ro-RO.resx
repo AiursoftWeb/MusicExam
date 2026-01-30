@@ -99,6 +99,9 @@
   <data name="Global Management" xml:space="preserve">
     <value>Gestionare globală</value>
   </data>
+  <data name="Global Question Bank Management" xml:space="preserve">
+    <value>Gestionează biblioteca globală de întrebări</value>
+  </data>
   <data name="Global Settings" xml:space="preserve">
     <value>Setări globale</value>
   </data>
@@ -125,6 +128,9 @@
   </data>
   <data name="Manage" xml:space="preserve">
     <value>Gestionează</value>
+  </data>
+  <data name="Manage Paper Roles" xml:space="preserve">
+    <value>Gestionare roluri hârtie</value>
   </data>
   <data name="Manage Question Bank Roles" xml:space="preserve">
     <value>Gestionare roluri banca de întrebări</value>

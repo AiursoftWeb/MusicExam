@@ -99,6 +99,9 @@
   <data name="Global Management" xml:space="preserve">
     <value>Global hantering</value>
   </data>
+  <data name="Global Question Bank Management" xml:space="preserve">
+    <value>Global frågebankhantering</value>
+  </data>
   <data name="Global Settings" xml:space="preserve">
     <value>Globala inställningar</value>
   </data>
@@ -125,6 +128,9 @@
   </data>
   <data name="Manage" xml:space="preserve">
     <value>Hantera</value>
+  </data>
+  <data name="Manage Paper Roles" xml:space="preserve">
+    <value>Hantera pappersroller</value>
   </data>
   <data name="Manage Question Bank Roles" xml:space="preserve">
     <value>Hantera frågebankroller</value>

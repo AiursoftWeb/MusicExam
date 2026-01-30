@@ -24,8 +24,14 @@
   <data name="Back to List" xml:space="preserve">
     <value>Kembali ke Daftar</value>
   </data>
+  <data name="If no roles are selected, this paper will be public to all users with exam permissions." xml:space="preserve">
+    <value>Jika tidak ada peran yang dipilih, kertas ini akan bersifat publik bagi semua pengguna dengan izin ujian.</value>
+  </data>
   <data name="If no roles are selected, this question bank will be public to all users with exam permissions." xml:space="preserve">
     <value>Jika tidak ada peran yang dipilih, bank soal ini akan bersifat publik bagi semua pengguna yang memiliki izin ujian.</value>
+  </data>
+  <data name="Manage Paper Roles" xml:space="preserve">
+    <value>Kelola Peran Kertas</value>
   </data>
   <data name="Manage Question Bank Roles" xml:space="preserve">
     <value>Kelola Peran Bank Soal</value>
