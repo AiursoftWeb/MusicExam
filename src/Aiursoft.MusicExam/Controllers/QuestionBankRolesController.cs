@@ -23,11 +23,11 @@ public class QuestionBankRolesController(
         CascadedLinksGroupName = "Directory",
         CascadedLinksIcon = "users",
         CascadedLinksOrder = 9998,
-        LinkText = "Global Management",
+        LinkText = "Global Question Bank Management",
         LinkOrder = 3)]
     public async Task<IActionResult> Index()
     {
-        var schools = await dbContext.Schools
+        var papers = await dbContext.ExamPapers
             .OrderBy(s => s.Id)
             .ToListAsync();
 
@@ -37,11 +37,11 @@ public class QuestionBankRolesController(
 
         var model = new IndexViewModel
         {
-            Schools = schools.Select(s => new SchoolWithRoles
+            Papers = papers.Select(s => new PaperWithRoles
             {
-                School = s,
+                Paper = s,
                 Roles = qbRoles
-                    .Where(r => r.SchoolId == s.Id && r.Role != null)
+                    .Where(r => r.ExamPaperId == s.Id && r.Role != null)
                     .Select(r => r.Role!)
                     .ToList()
             }).ToList()
@@ -53,22 +53,22 @@ public class QuestionBankRolesController(
     [HttpGet]
     public async Task<IActionResult> Edit(int id)
     {
-        var school = await dbContext.Schools.FirstOrDefaultAsync(s => s.Id == id);
-        if (school == null)
+        var paper = await dbContext.ExamPapers.FirstOrDefaultAsync(s => s.Id == id);
+        if (paper == null)
         {
             return NotFound();
         }
 
         var allRoles = await roleManager.Roles.ToListAsync();
         var selectedRoleIds = await dbContext.QuestionBankRoles
-            .Where(r => r.SchoolId == id)
+            .Where(r => r.ExamPaperId == id)
             .Select(r => r.RoleId)
             .ToListAsync();
 
         var model = new EditViewModel
         {
-            SchoolId = school.Id,
-            SchoolName = school.Name,
+            PaperId = paper.Id,
+            PaperTitle = paper.Title,
             Roles = allRoles.Select(r => new RoleSelectionViewModel
             {
                 RoleId = r.Id,
@@ -84,14 +84,14 @@ public class QuestionBankRolesController(
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Edit(EditViewModel model)
     {
-        var school = await dbContext.Schools.FirstOrDefaultAsync(s => s.Id == model.SchoolId);
-        if (school == null)
+        var paper = await dbContext.ExamPapers.FirstOrDefaultAsync(s => s.Id == model.PaperId);
+        if (paper == null)
         {
             return NotFound();
         }
 
         var existingRoles = await dbContext.QuestionBankRoles
-            .Where(r => r.SchoolId == model.SchoolId)
+            .Where(r => r.ExamPaperId == model.PaperId)
             .ToListAsync();
 
         // Remove unselected
@@ -105,7 +105,7 @@ public class QuestionBankRolesController(
             .Where(mr => mr.IsSelected && !existingRoles.Any(er => er.RoleId == mr.RoleId))
             .Select(mr => new QuestionBankRole
             {
-                SchoolId = model.SchoolId,
+                ExamPaperId = model.PaperId,
                 RoleId = mr.RoleId
             });
         dbContext.QuestionBankRoles.AddRange(toAdd);

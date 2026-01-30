@@ -30,7 +30,7 @@ public class ExamController : Controller
             .ToListAsync();
 
         var requiredRoles = await _dbContext.QuestionBankRoles
-            .Where(r => r.SchoolId == paper.SchoolId)
+            .Where(r => r.ExamPaperId == paper.Id)
             .ToListAsync();
 
         if (!requiredRoles.Any())

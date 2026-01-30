@@ -201,18 +201,18 @@ namespace Aiursoft.MusicExam.Sqlite.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<int>("ExamPaperId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("RoleId")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("SchoolId")
-                        .HasColumnType("INTEGER");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("RoleId");
+                    b.HasIndex("ExamPaperId");
 
-                    b.HasIndex("SchoolId");
+                    b.HasIndex("RoleId");
 
                     b.ToTable("QuestionBankRoles");
                 });
@@ -530,21 +530,21 @@ namespace Aiursoft.MusicExam.Sqlite.Migrations
 
             modelBuilder.Entity("Aiursoft.MusicExam.Entities.QuestionBankRole", b =>
                 {
+                    b.HasOne("Aiursoft.MusicExam.Entities.ExamPaper", "ExamPaper")
+                        .WithMany("AuthorizedRoles")
+                        .HasForeignKey("ExamPaperId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", "Role")
                         .WithMany()
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Aiursoft.MusicExam.Entities.School", "School")
-                        .WithMany()
-                        .HasForeignKey("SchoolId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Navigation("ExamPaper");
 
                     b.Navigation("Role");
-
-                    b.Navigation("School");
                 });
 
             modelBuilder.Entity("Aiursoft.MusicExam.Entities.QuestionSubmission", b =>
@@ -619,6 +619,8 @@ namespace Aiursoft.MusicExam.Sqlite.Migrations
 
             modelBuilder.Entity("Aiursoft.MusicExam.Entities.ExamPaper", b =>
                 {
+                    b.Navigation("AuthorizedRoles");
+
                     b.Navigation("Questions");
 
                     b.Navigation("Submissions");
