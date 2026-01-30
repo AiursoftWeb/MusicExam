@@ -45,7 +45,7 @@
                         }
                         else
                         {
-                            <form asp-action="Edit" method="post" id="form-@item.Key">
+                            <form asp-action="Edit" method="post" id="form-@item.Key" enctype="multipart/form-data">
                                 <input type="hidden" name="Key" value="@item.Key" />
                                 @if (item.Type == SettingType.Bool)
                                 {
@@ -69,6 +69,19 @@
                                         <input type="number" name="Value" value="@item.Value" class="form-control" />
                                         <button class="btn btn-outline-secondary" type="submit">@Localizer["Save"]</button>
                                     </div>
+                                }
+                                else if (item.Type == SettingType.File)
+                                {
+                                    <div class="input-group input-group-sm">
+                                        <input type="file" name="FileValue" class="form-control" accept="image/*,image/svg+xml" />
+                                        <button class="btn btn-outline-secondary" type="submit">@Localizer["Upload"]</button>
+                                    </div>
+                                    @if (!string.IsNullOrEmpty(item.Value))
+                                    {
+                                        <div class="mt-2">
+                                            <img src="/download/@item.Value" alt="logo" style="max-width: 100px; max-height: 100px;" />
+                                        </div>
+                                    }
                                 }
                                 else
                                 {
