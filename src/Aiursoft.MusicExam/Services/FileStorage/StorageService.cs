@@ -42,11 +42,11 @@ public class StorageService(
         var directory = Path.GetDirectoryName(physicalPath);
         if (File.Exists(directory))
         {
-            File.Delete(directory);
+            throw new IOException($"Target directory '{directory}' exists as a file.");
         }
         if (!Directory.Exists(directory))
         {
-             Directory.CreateDirectory(directory!);
+            Directory.CreateDirectory(directory!);
         }
 
         // 5. Handle collisions (Renaming)
@@ -109,7 +109,7 @@ public class StorageService(
         var directory = Path.GetDirectoryName(physicalPath);
         if (!Directory.Exists(directory))
         {
-             Directory.CreateDirectory(directory!);
+            Directory.CreateDirectory(directory!);
         }
 
         // 6. Handle collisions (Renaming)
