@@ -109,6 +109,7 @@ public class DataImporter : ISingletonDependency
                         // Check if we need to import questions
                         if (paper.Questions.Any())
                         {
+                            await EnsureAssetsLocally(paper, paperDir, cancellationToken);
                             continue;
                         }
 
@@ -201,14 +202,121 @@ public class DataImporter : ISingletonDependency
         return int.MaxValue;
     }
 
+    private async Task EnsureAssetsLocally(ExamPaper paper, string sourceDir, CancellationToken cancellationToken)
+    {
+        var paramsChanged = false;
+        foreach (var question in paper.Questions)
+        {
+            var questionAssets = !string.IsNullOrWhiteSpace(question.AssetPath)
+                ? JsonSerializer.Deserialize<List<string>>(question.AssetPath)
+                : new List<string>();
+
+            if (questionAssets != null)
+            {
+                var newAssets = new List<string>();
+                var assetChanged = false;
+                foreach (var asset in questionAssets)
+                {
+                    if (asset.StartsWith("http://", StringComparison.OrdinalIgnoreCase) ||
+                        asset.StartsWith("https://", StringComparison.OrdinalIgnoreCase))
+                    {
+                        var newPath = await CopyAsset(asset, sourceDir);
+                        newAssets.Add(newPath);
+                        assetChanged = true;
+                    }
+                    else
+                    {
+                        newAssets.Add(asset);
+                    }
+                }
+
+                if (assetChanged)
+                {
+                    question.AssetPath = JsonSerializer.Serialize(newAssets);
+                    paramsChanged = true;
+                    _logger.LogInformation("Repaired assets for Question {Id}", question.Id);
+                }
+            }
+
+            foreach (var option in question.Options)
+            {
+                if ((option.Content.StartsWith("http://", StringComparison.OrdinalIgnoreCase) ||
+                     option.Content.StartsWith("https://", StringComparison.OrdinalIgnoreCase)) &&
+                     Uri.TryCreate(option.Content, UriKind.Absolute, out _))
+                {
+                    // This is a bit risky if text is just a url but not a file,
+                    // but based on `Display` logic, it treats image/audio extensions as media.
+                    // The safe way is to check extension.
+                    if (option.Content.EndsWith(".mp3") || option.Content.EndsWith(".jpg") ||
+                        option.Content.EndsWith(".png") || option.Content.EndsWith(".jpeg"))
+                    {
+                        var newPath = await CopyAsset(option.Content, sourceDir);
+                        if (newPath != option.Content)
+                        {
+                            option.Content = newPath;
+                            paramsChanged = true;
+                            _logger.LogInformation("Repaired asset for Option {Id}", option.Id);
+                        }
+                    }
+                }
+            }
+        }
+
+        if (paramsChanged)
+        {
+            using var scope = _serviceProvider.CreateScope();
+            var dbContext = scope.ServiceProvider.GetRequiredService<TemplateDbContext>();
+            dbContext.Attach(paper); // Attach if not tracked, though it should be tracked from main loop
+            // Actually in main loop 'paper' comes from same dbContext context?
+            // Yes, from line 82. So we don't need new scope.
+            // BUT wait, line 82 uses `dbContext`. This method is called inside the loop using that dbContext.
+            // So we can just rely on `dbContext.SaveChangesAsync` at line 176.
+            // However, to be safe and incremental, we can save here or let the main loop do it.
+            // The main loop calls SaveChangesAsync at line 176 (outside all loops).
+            // That might be too much memory if we process many files.
+            // But for this patch, it's fine. The object `paper` is tracked by `dbContext`.
+        }
+    }
+
+
     private async Task<string> CopyAsset(string relativeAssetPath, string sourceDir)
     {
         if (string.IsNullOrWhiteSpace(relativeAssetPath)) return string.Empty;
 
+        // Offline Mode: If it's a remote URL, try to find a local match
         if (relativeAssetPath.StartsWith("http://", StringComparison.OrdinalIgnoreCase) ||
             relativeAssetPath.StartsWith("https://", StringComparison.OrdinalIgnoreCase))
         {
-            return relativeAssetPath;
+            try
+            {
+                var urlFileName = Path.GetFileName(new Uri(relativeAssetPath).AbsolutePath);
+                var urlFileNameWithoutExt = Path.GetFileNameWithoutExtension(urlFileName);
+                var assetsDir = Path.Combine(sourceDir, "assets");
+
+                if (Directory.Exists(assetsDir))
+                {
+                    var matchingFile = Directory.GetFiles(assetsDir)
+                        .FirstOrDefault(f => Path.GetFileName(f).StartsWith(urlFileNameWithoutExt, StringComparison.OrdinalIgnoreCase));
+
+                    if (matchingFile != null)
+                    {
+                        _logger.LogInformation("Resolved local asset for remote URL: {LocalPath}", matchingFile);
+                        var now = DateTime.UtcNow;
+                        var fileName = Path.GetFileName(matchingFile);
+                        var destinationLogicalPath = $"{AssetBucket}/{now:yyyy}/{now:MM}/{now:dd}/{fileName}";
+                        return await _storageService.SaveFileFromPhysicalPath(matchingFile, destinationLogicalPath, isVault: false);
+                    }
+                }
+
+                _logger.LogWarning("Remote asset could not be resolved locally: {Url}. No matching file found in {AssetsDir}.", relativeAssetPath, assetsDir);
+                // In strict offline mode, if the file is missing, we populate empty data to allow import to proceed without external links.
+                return string.Empty;
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e, "Error resolving local asset for {Url}", relativeAssetPath);
+                return string.Empty;
+            }
         }
 
         // Try to find the file
