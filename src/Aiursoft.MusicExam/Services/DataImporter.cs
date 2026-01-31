@@ -109,7 +109,7 @@ public class DataImporter : ISingletonDependency
                         // Check if we need to import questions
                         if (paper.Questions.Any())
                         {
-                            await EnsureAssetsLocally(paper, paperDir, cancellationToken);
+                            await EnsureAssetsLocally(paper, paperDir);
                             continue;
                         }
 
@@ -202,7 +202,7 @@ public class DataImporter : ISingletonDependency
         return int.MaxValue;
     }
 
-    private async Task EnsureAssetsLocally(ExamPaper paper, string sourceDir, CancellationToken cancellationToken)
+    private async Task EnsureAssetsLocally(ExamPaper paper, string sourceDir)
     {
         var paramsChanged = false;
         foreach (var question in paper.Questions)
