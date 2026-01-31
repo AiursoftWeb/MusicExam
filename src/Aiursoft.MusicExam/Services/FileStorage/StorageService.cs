@@ -33,7 +33,7 @@ public class StorageService(
         var physicalPath = Path.GetFullPath(Path.Combine(root, logicalPath));
 
         // 3. Security check: Ensure path is within Workspace
-        if (!physicalPath.StartsWith(root, StringComparison.OrdinalIgnoreCase))
+        if (!physicalPath.StartsWith(root + Path.DirectorySeparatorChar, StringComparison.OrdinalIgnoreCase))
         {
             throw new ArgumentException("Path traversal attempt detected!");
         }
@@ -100,13 +100,17 @@ public class StorageService(
         var physicalPath = Path.GetFullPath(Path.Combine(root, destinationLogicalPath));
 
         // 4. Security check: Ensure path is within Workspace
-        if (!physicalPath.StartsWith(root, StringComparison.OrdinalIgnoreCase))
+        if (!physicalPath.StartsWith(root + Path.DirectorySeparatorChar, StringComparison.OrdinalIgnoreCase))
         {
             throw new ArgumentException("Path traversal attempt detected!");
         }
 
         // 5. Create directory if needed
         var directory = Path.GetDirectoryName(physicalPath);
+        if (File.Exists(directory))
+        {
+            throw new IOException($"Target directory '{directory}' exists as a file.");
+        }
         if (!Directory.Exists(directory))
         {
             Directory.CreateDirectory(directory!);
@@ -151,7 +155,7 @@ public class StorageService(
         var root = isVault ? folders.GetVaultFolder() : folders.GetWorkspaceFolder();
         var physicalPath = Path.GetFullPath(Path.Combine(root, logicalPath));
 
-        if (!physicalPath.StartsWith(root, StringComparison.OrdinalIgnoreCase))
+        if (!physicalPath.StartsWith(root + Path.DirectorySeparatorChar, StringComparison.OrdinalIgnoreCase))
         {
             throw new ArgumentException("Restricted path access!");
         }

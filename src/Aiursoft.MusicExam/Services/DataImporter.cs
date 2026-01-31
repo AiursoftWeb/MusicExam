@@ -212,7 +212,14 @@ public class DataImporter : ISingletonDependency
         }
 
         // Try to find the file
-        var sourcePath = Path.Combine(sourceDir, relativeAssetPath);
+        var fullSourceDir = Path.GetFullPath(sourceDir);
+        var sourcePath = Path.GetFullPath(Path.Combine(fullSourceDir, relativeAssetPath));
+
+        if (!sourcePath.StartsWith(fullSourceDir, StringComparison.OrdinalIgnoreCase))
+        {
+            _logger.LogWarning("Potential path traversal attempt in asset path: {Path}", relativeAssetPath);
+            return string.Empty;
+        }
 
         if (!File.Exists(sourcePath))
         {
