@@ -60,5 +60,14 @@
   <data name="Value" xml:space="preserve">
     <value>值</value>
   </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Are you sure to reset this setting to default?" xml:space="preserve">
+    <value>确定要将此设置重置为默认值吗？</value>
+  </data>
+  <data name="Confirm Reset" xml:space="preserve">
+    <value>确认重置</value>
+  </data>
 
 </root>

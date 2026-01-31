@@ -60,5 +60,14 @@
   <data name="Value" xml:space="preserve">
     <value>値</value>
   </data>
+  <data name="Are you sure to reset this setting to default?" xml:space="preserve">
+    <value>この設定をデフォルトに戻してもよろしいですか？</value>
+  </data>
+  <data name="Confirm Reset" xml:space="preserve">
+    <value>リセットの確認</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
 
 </root>

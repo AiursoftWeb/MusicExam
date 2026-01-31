@@ -60,5 +60,14 @@
   <data name="Value" xml:space="preserve">
     <value>Value</value>
   </data>
+  <data name="Confirm Reset" xml:space="preserve">
+    <value>Confirm Reset</value>
+  </data>
+  <data name="Are you sure to reset this setting to default?" xml:space="preserve">
+    <value>Are you sure to reset this setting to default?</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
 
 </root>
