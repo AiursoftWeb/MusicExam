@@ -57,5 +57,11 @@
   <data name="This is a sight-singing question. Please review the sheet music and sing aloud." xml:space="preserve">
     <value>Esta es una pregunta de lectura a primera vista. Por favor, revise la partitura y cante en voz alta.</value>
   </data>
+  <data name="Notice" xml:space="preserve">
+    <value>Aviso</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>Aceptar</value>
+  </data>
 
 </root>

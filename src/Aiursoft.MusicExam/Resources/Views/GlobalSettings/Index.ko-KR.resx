@@ -60,5 +60,14 @@
   <data name="Value" xml:space="preserve">
     <value>값</value>
   </data>
+  <data name="Confirm Reset" xml:space="preserve">
+    <value>초기화 확인</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>취소</value>
+  </data>
+  <data name="Are you sure to reset this setting to default?" xml:space="preserve">
+    <value>이 설정을 기본값으로 재설정하시겠습니까?</value>
+  </data>
 
 </root>

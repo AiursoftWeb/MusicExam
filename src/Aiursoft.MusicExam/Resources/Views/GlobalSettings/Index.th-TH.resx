@@ -60,5 +60,14 @@
   <data name="Value" xml:space="preserve">
     <value>ค่า</value>
   </data>
+  <data name="Confirm Reset" xml:space="preserve">
+    <value>ยืนยันการรีเซ็ต</value>
+  </data>
+  <data name="Are you sure to reset this setting to default?" xml:space="preserve">
+    <value>คุณแน่ใจหรือไม่ว่าต้องการรีเซ็ตการตั้งค่านี้ให้เป็นค่าเริ่มต้น?</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>ยกเลิก</value>
+  </data>
 
 </root>

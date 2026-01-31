@@ -28,7 +28,7 @@
             <tbody>
             @foreach (var item in Model.Settings)
             {
-                <tr>
+                <tr class="align-middle">
                     <td>
                         <div class="fw-bold">@SettingsLocalizer[item.Name]</div>
                         <code class="small text-muted">@item.Key</code>
@@ -72,16 +72,16 @@
                                 }
                                 else if (item.Type == SettingType.File)
                                 {
-                                    <div class="input-group input-group-sm">
-                                        <input type="file" name="FileValue" class="form-control" accept="image/*,image/svg+xml" />
-                                        <button class="btn btn-outline-secondary" type="submit">@Localizer["Upload"]</button>
-                                    </div>
-                                    @if (!string.IsNullOrEmpty(item.Value))
-                                    {
-                                        <div class="mt-2">
-                                            <img src="/download/@item.Value" alt="logo" style="max-width: 100px; max-height: 100px;" />
+                                    <div class="d-flex align-items-center gap-2">
+                                        @if (!string.IsNullOrEmpty(item.Value))
+                                        {
+                                            <img src="/download/@item.Value" alt="logo" class="rounded border p-1 bg-light" style="width: 40px; height: 40px; object-fit: contain;" />
+                                        }
+                                        <div class="input-group input-group-sm">
+                                            <input type="file" name="FileValue" class="form-control" accept="image/*,image/svg+xml" />
+                                            <button class="btn btn-outline-secondary" type="submit">@Localizer["Upload"]</button>
                                         </div>
-                                    }
+                                    </div>
                                 }
                                 else
                                 {
@@ -97,11 +97,11 @@
                     <td class="text-end">
                         @if (item.Value != item.DefaultValue && !item.IsOverriddenByConfig)
                         {
-                            <form asp-action="Edit" method="post" class="d-inline">
+                            <form asp-action="Edit" method="post" class="d-inline" id="reset-form-@item.Key">
                                 <input type="hidden" name="Key" value="@item.Key" />
                                 <input type="hidden" name="Value" value="@item.DefaultValue" />
                                 @Html.AntiForgeryToken()
-                                <button type="submit" class="btn btn-sm btn-outline-secondary" title="@Localizer["Reset to default"]">
+                                <button type="button" class="btn btn-sm btn-outline-secondary" title="@Localizer["Reset to default"]" onclick="openResetModal('reset-form-@item.Key')">
                                     <i class="align-middle" data-lucide="rotate-ccw"></i> @Localizer["Reset"]
                                 </button>
                             </form>
@@ -120,3 +120,36 @@
         <div asp-validation-summary="All"></div>
     </div>
 }
+
+<div class="modal fade" id="confirm-reset-modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">@Localizer["Confirm Reset"]</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                @Localizer["Are you sure to reset this setting to default?"]
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@Localizer["Cancel"]</button>
+                <button type="button" class="btn btn-danger" id="confirm-reset-btn">@Localizer["Reset"]</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let targetFormId = null;
+
+    function openResetModal(formId) {
+        targetFormId = formId;
+        new bootstrap.Modal(document.getElementById('confirm-reset-modal')).show();
+    }
+
+    document.getElementById('confirm-reset-btn').addEventListener('click', function() {
+        if (targetFormId) {
+            document.getElementById(targetFormId).submit();
+        }
+    });
+</script>
