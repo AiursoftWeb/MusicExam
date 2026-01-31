@@ -39,6 +39,12 @@
   <data name="Next" xml:space="preserve">
     <value>Далее</value>
   </data>
+  <data name="Notice" xml:space="preserve">
+    <value>Уведомление</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>ОК</value>
+  </data>
   <data name="Please check the correct answer highlighted above." xml:space="preserve">
     <value>Пожалуйста, проверьте правильный ответ, выделенный выше.</value>
   </data>

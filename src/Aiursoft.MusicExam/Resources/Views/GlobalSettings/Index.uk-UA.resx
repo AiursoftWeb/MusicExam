@@ -21,6 +21,15 @@
       <data name="Actions" xml:space="preserve">
     <value>Дії</value>
   </data>
+  <data name="Are you sure to reset this setting to default?" xml:space="preserve">
+    <value>Ви впевнені, що хочете скинути це налаштування до значень за замовчуванням?</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Скасувати</value>
+  </data>
+  <data name="Confirm Reset" xml:space="preserve">
+    <value>Підтвердити скидання</value>
+  </data>
   <data name="Description" xml:space="preserve">
     <value>Опис</value>
   </data>

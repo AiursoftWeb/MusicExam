@@ -21,6 +21,15 @@
       <data name="Actions" xml:space="preserve">
     <value>Hành động</value>
   </data>
+  <data name="Are you sure to reset this setting to default?" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn đặt lại cài đặt này về mặc định không?</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Hủy</value>
+  </data>
+  <data name="Confirm Reset" xml:space="preserve">
+    <value>Xác nhận Đặt lại</value>
+  </data>
   <data name="Description" xml:space="preserve">
     <value>Mô tả</value>
   </data>
@@ -59,15 +68,6 @@
   </data>
   <data name="Value" xml:space="preserve">
     <value>Giá trị</value>
-  </data>
-  <data name="Are you sure to reset this setting to default?" xml:space="preserve">
-    <value>Bạn có chắc chắn muốn đặt lại cài đặt này về mặc định không?</value>
-  </data>
-  <data name="Confirm Reset" xml:space="preserve">
-    <value>Xác nhận Đặt lại</value>
-  </data>
-  <data name="Cancel" xml:space="preserve">
-    <value>Hủy</value>
   </data>
 
 </root>

@@ -21,6 +21,15 @@
       <data name="Actions" xml:space="preserve">
     <value>إجراءات</value>
   </data>
+  <data name="Are you sure to reset this setting to default?" xml:space="preserve">
+    <value>هل أنت متأكد من إعادة تعيين هذا الإعداد إلى القيمة الافتراضية؟</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>إلغاء</value>
+  </data>
+  <data name="Confirm Reset" xml:space="preserve">
+    <value>تأكيد إعادة التعيين</value>
+  </data>
   <data name="Description" xml:space="preserve">
     <value>الوصف</value>
   </data>

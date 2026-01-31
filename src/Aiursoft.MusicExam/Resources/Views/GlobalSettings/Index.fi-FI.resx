@@ -21,6 +21,15 @@
       <data name="Actions" xml:space="preserve">
     <value>Toiminnot</value>
   </data>
+  <data name="Are you sure to reset this setting to default?" xml:space="preserve">
+    <value>Oletko varma, että haluat palauttaa tämän asetuksen oletusarvoon?</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Peruuta</value>
+  </data>
+  <data name="Confirm Reset" xml:space="preserve">
+    <value>Vahvista nollaus</value>
+  </data>
   <data name="Description" xml:space="preserve">
     <value>Kuvaus</value>
   </data>

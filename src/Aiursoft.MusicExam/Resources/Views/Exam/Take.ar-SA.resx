@@ -39,6 +39,12 @@
   <data name="Next" xml:space="preserve">
     <value>التالي</value>
   </data>
+  <data name="Notice" xml:space="preserve">
+    <value>إشعار</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>موافق</value>
+  </data>
   <data name="Please check the correct answer highlighted above." xml:space="preserve">
     <value>يرجى التحقق من الإجابة الصحيحة المميزة أعلاه.</value>
   </data>
