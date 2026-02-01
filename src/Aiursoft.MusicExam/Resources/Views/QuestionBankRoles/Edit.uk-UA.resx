@@ -24,11 +24,17 @@
   <data name="Back to List" xml:space="preserve">
     <value>Повернутися до списку</value>
   </data>
+  <data name="If no roles are selected, all papers in this level will be public to all users with exam permissions. Note: This authorization applies to ALL papers under" xml:space="preserve">
+    <value>Якщо жодна роль не вибрана, всі роботи на цьому рівні будуть доступні для всіх користувачів з дозволом на проведення іспитів. Зауваження: цей дозвіл поширюється на УСІ роботи під</value>
+  </data>
   <data name="If no roles are selected, this paper will be public to all users with exam permissions." xml:space="preserve">
     <value>Якщо ролі не вибрано, цей тест буде доступний для всіх користувачів з дозволами на проведення екзаменів.</value>
   </data>
   <data name="If no roles are selected, this question bank will be public to all users with exam permissions." xml:space="preserve">
     <value>Якщо жодна роль не вибрана, цей банк запитань буде доступним для всіх користувачів із дозволом на проведення іспитів.</value>
+  </data>
+  <data name="Manage Level Authorization" xml:space="preserve">
+    <value>Керування авторизацією рівня</value>
   </data>
   <data name="Manage Paper Roles" xml:space="preserve">
     <value>Керування ролями паперу</value>

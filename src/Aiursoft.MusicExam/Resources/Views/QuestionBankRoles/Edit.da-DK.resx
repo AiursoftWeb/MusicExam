@@ -24,11 +24,17 @@
   <data name="Back to List" xml:space="preserve">
     <value>Tilbage til liste</value>
   </data>
+  <data name="If no roles are selected, all papers in this level will be public to all users with exam permissions. Note: This authorization applies to ALL papers under" xml:space="preserve">
+    <value>Hvis ingen roller er valgt, vil alle opgaver på dette niveau være offentlige for alle brugere med eksamensrettigheder. Bemærk: Denne tilladelse gælder for ALLE opgaver under</value>
+  </data>
   <data name="If no roles are selected, this paper will be public to all users with exam permissions." xml:space="preserve">
     <value>Hvis ingen roller er valgt, vil dette papir være offentligt tilgængeligt for alle brugere med eksamensrettigheder.</value>
   </data>
   <data name="If no roles are selected, this question bank will be public to all users with exam permissions." xml:space="preserve">
     <value>Hvis ingen roller er valgt, vil denne spørgsmålsbank være offentlig for alle brugere med eksamensrettigheder.</value>
+  </data>
+  <data name="Manage Level Authorization" xml:space="preserve">
+    <value>Styring af niveau tilladelse</value>
   </data>
   <data name="Manage Paper Roles" xml:space="preserve">
     <value>Styr Papirroller</value>

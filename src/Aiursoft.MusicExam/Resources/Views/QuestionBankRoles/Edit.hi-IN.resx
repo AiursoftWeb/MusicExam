@@ -24,11 +24,17 @@
   <data name="Back to List" xml:space="preserve">
     <value>सूची पर वापस जाएं</value>
   </data>
+  <data name="If no roles are selected, all papers in this level will be public to all users with exam permissions. Note: This authorization applies to ALL papers under" xml:space="preserve">
+    <value>यदि कोई भी भूमिका चयनित नहीं की जाती है, तो इस स्तर के सभी पेपर सभी परीक्षा अनुमति वाले उपयोगकर्ताओं के लिए सार्वजनिक होंगे। नोट: यह अनुमति सभी पेपर्स के लिए लागू होती है जो नीचे दिए गए हैं @Model.SchoolName - @Model.Level.</value>
+  </data>
   <data name="If no roles are selected, this paper will be public to all users with exam permissions." xml:space="preserve">
     <value>यदि कोई भी भूमिका चुनी नहीं गई है, तो इस पेपर को परीक्षा की अनुमति वाले सभी उपयोगकर्ताओं के लिए सार्वजनिक कर दिया जाएगा।</value>
   </data>
   <data name="If no roles are selected, this question bank will be public to all users with exam permissions." xml:space="preserve">
     <value>यदि कोई भी भूमिकाएँ चुनी नहीं जाती हैं, तो इस प्रश्न बैंक को सभी परीक्षा अनुमतियाँ वाले उपयोगकर्ताओं के लिए सार्वजनिक कर दिया जाएगा।</value>
+  </data>
+  <data name="Manage Level Authorization" xml:space="preserve">
+    <value>स्तर प्राधिकरण प्रबंधित करें</value>
   </data>
   <data name="Manage Paper Roles" xml:space="preserve">
     <value>पेपर भूमिकाओं का प्रबंधन करें</value>

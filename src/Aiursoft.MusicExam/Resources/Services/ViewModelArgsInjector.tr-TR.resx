@@ -129,6 +129,9 @@
   <data name="Manage" xml:space="preserve">
     <value>Yönet</value>
   </data>
+  <data name="Manage Level Authorization" xml:space="preserve">
+    <value>Seviye Yetkilendirmesini Yönet</value>
+  </data>
   <data name="Manage Paper Roles" xml:space="preserve">
     <value>Sınav Rollerini Yönet</value>
   </data>

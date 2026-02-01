@@ -129,6 +129,9 @@
   <data name="Manage" xml:space="preserve">
     <value>Hallinnoi</value>
   </data>
+  <data name="Manage Level Authorization" xml:space="preserve">
+    <value>Hallinnoi tason käyttöoikeuksia</value>
+  </data>
   <data name="Manage Paper Roles" xml:space="preserve">
     <value>Hallinnoi paperin rooleja</value>
   </data>

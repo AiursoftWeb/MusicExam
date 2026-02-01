@@ -24,11 +24,17 @@
   <data name="Back to List" xml:space="preserve">
     <value>一覧へ戻る</value>
   </data>
+  <data name="If no roles are selected, all papers in this level will be public to all users with exam permissions. Note: This authorization applies to ALL papers under" xml:space="preserve">
+    <value>ロールが選択されていない場合、このレベルのすべての問題が、試験権限を持つすべてのユーザーに公開されます。注：この権限設定は、@Model.SchoolName - @Model.Level以下のすべての問題に適用されます。</value>
+  </data>
   <data name="If no roles are selected, this paper will be public to all users with exam permissions." xml:space="preserve">
     <value>ロールが選択されていない場合、この試験問題は試験権限を持つすべてのユーザーに公開されます。</value>
   </data>
   <data name="If no roles are selected, this question bank will be public to all users with exam permissions." xml:space="preserve">
     <value>ロールが選択されていない場合、この問題バンクは試験の権限を持つすべてのユーザーに公開されます。</value>
+  </data>
+  <data name="Manage Level Authorization" xml:space="preserve">
+    <value>レベル権限の管理</value>
   </data>
   <data name="Manage Paper Roles" xml:space="preserve">
     <value>用紙のロールを管理する</value>

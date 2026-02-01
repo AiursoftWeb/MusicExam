@@ -24,11 +24,17 @@
   <data name="Back to List" xml:space="preserve">
     <value>Tillbaka till listan</value>
   </data>
+  <data name="If no roles are selected, all papers in this level will be public to all users with exam permissions. Note: This authorization applies to ALL papers under" xml:space="preserve">
+    <value>Om inga roller har valts kommer alla prov i detta nivå att vara offentliga för alla användare med tillgång till prov. Obs: Denna auktorisering gäller för ALLA prov under</value>
+  </data>
   <data name="If no roles are selected, this paper will be public to all users with exam permissions." xml:space="preserve">
     <value>Om inga roller har valts blir detta prov tillgängligt för alla användare med provbehörighet.</value>
   </data>
   <data name="If no roles are selected, this question bank will be public to all users with exam permissions." xml:space="preserve">
     <value>Om inga roller är valda kommer denna frågebank att vara offentlig för alla användare med tillgång till prov.</value>
+  </data>
+  <data name="Manage Level Authorization" xml:space="preserve">
+    <value>Hantera nivåbehörighet</value>
   </data>
   <data name="Manage Paper Roles" xml:space="preserve">
     <value>Hantera pappersroller</value>

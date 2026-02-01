@@ -132,6 +132,9 @@
   <data name="Manage" xml:space="preserve">
     <value>Quản lý</value>
   </data>
+  <data name="Manage Level Authorization" xml:space="preserve">
+    <value>Quản lý quyền cấp độ</value>
+  </data>
   <data name="Manage Paper Roles" xml:space="preserve">
     <value>Quản lý vai trò đề thi</value>
   </data>

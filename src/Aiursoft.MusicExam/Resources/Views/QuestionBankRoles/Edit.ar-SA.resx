@@ -24,11 +24,17 @@
   <data name="Back to List" xml:space="preserve">
     <value>العودة إلى القائمة</value>
   </data>
+  <data name="If no roles are selected, all papers in this level will be public to all users with exam permissions. Note: This authorization applies to ALL papers under" xml:space="preserve">
+    <value>إذا لم تُختار أي أدوار، فسيكون جميع الأوراق في هذا المستوى متاحًا للجميع من المستخدمين ذوي صلاحيات الامتحان. ملاحظة: تنطبق هذه الصلاحية على جميع الأوراق تحت @Model.SchoolName - @Model.Level.</value>
+  </data>
   <data name="If no roles are selected, this paper will be public to all users with exam permissions." xml:space="preserve">
     <value>إذا لم تُختار أي أدوار، فسيكون هذا الامتحان متاحًا للجميع من المستخدمين الذين لديهم صلاحيات الامتحان.</value>
   </data>
   <data name="If no roles are selected, this question bank will be public to all users with exam permissions." xml:space="preserve">
     <value>إذا لم تُحدد أي أدوار، فسيصبح هذا المخزن العام متاحًا لجميع المستخدمين الذين لديهم صلاحيات الامتحان.</value>
+  </data>
+  <data name="Manage Level Authorization" xml:space="preserve">
+    <value>إدارة إذن المستوى</value>
   </data>
   <data name="Manage Paper Roles" xml:space="preserve">
     <value>إدارة أدوار الورقة</value>

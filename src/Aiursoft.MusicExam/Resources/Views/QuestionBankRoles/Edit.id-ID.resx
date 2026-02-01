@@ -24,11 +24,17 @@
   <data name="Back to List" xml:space="preserve">
     <value>Kembali ke Daftar</value>
   </data>
+  <data name="If no roles are selected, all papers in this level will be public to all users with exam permissions. Note: This authorization applies to ALL papers under" xml:space="preserve">
+    <value>Jika tidak ada peran yang dipilih, semua naskah di tingkat ini akan bersifat umum bagi semua pengguna yang memiliki izin ujian. Catatan: Izin ini berlaku untuk SEMUA naskah di bawah @Model.SchoolName - @Model.Level.</value>
+  </data>
   <data name="If no roles are selected, this paper will be public to all users with exam permissions." xml:space="preserve">
     <value>Jika tidak ada peran yang dipilih, kertas ini akan bersifat publik bagi semua pengguna dengan izin ujian.</value>
   </data>
   <data name="If no roles are selected, this question bank will be public to all users with exam permissions." xml:space="preserve">
     <value>Jika tidak ada peran yang dipilih, bank soal ini akan bersifat publik bagi semua pengguna yang memiliki izin ujian.</value>
+  </data>
+  <data name="Manage Level Authorization" xml:space="preserve">
+    <value>Kelola Otorisasi Tingkat</value>
   </data>
   <data name="Manage Paper Roles" xml:space="preserve">
     <value>Kelola Peran Kertas</value>
