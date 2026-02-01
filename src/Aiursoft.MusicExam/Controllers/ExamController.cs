@@ -29,8 +29,9 @@ public class ExamController : Controller
             .Select(ur => ur.RoleId)
             .ToListAsync();
 
+        // Check Level-based authorization
         var requiredRoles = await _dbContext.QuestionBankRoles
-            .Where(r => r.ExamPaperId == paper.Id)
+            .Where(r => r.SchoolId == paper.SchoolId && r.Level == paper.Level)
             .ToListAsync();
 
         if (!requiredRoles.Any())

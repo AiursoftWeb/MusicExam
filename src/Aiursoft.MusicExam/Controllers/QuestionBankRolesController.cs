@@ -28,47 +28,68 @@ public class QuestionBankRolesController(
     public async Task<IActionResult> Index()
     {
         var papers = await dbContext.ExamPapers
-            .OrderBy(s => s.Id)
+            .Include(p => p.School)
+            .OrderBy(p => p.SchoolId)
+            .ThenBy(p => p.Level ?? "")
             .ToListAsync();
 
         var qbRoles = await dbContext.QuestionBankRoles
             .Include(r => r.Role)
             .ToListAsync();
 
-        var model = new IndexViewModel
-        {
-            Papers = papers.Select(s => new PaperWithRoles
+        // Group papers by (SchoolId, Level) to get unique levels
+        var levelGroups = papers
+            .GroupBy(p => new { p.SchoolId, Level = p.Level ?? "Uncategorized", SchoolName = p.School?.Name ?? "Unknown" })
+            .Select(g => new LevelWithRoles
             {
-                Paper = s,
+                SchoolId = g.Key.SchoolId,
+                SchoolName = g.Key.SchoolName,
+                Level = g.Key.Level,
+                PaperCount = g.Count(),
                 Roles = qbRoles
-                    .Where(r => r.ExamPaperId == s.Id && r.Role != null)
+                    .Where(r => r.SchoolId == g.Key.SchoolId && r.Level == g.Key.Level && r.Role != null)
                     .Select(r => r.Role!)
                     .ToList()
-            }).ToList()
+            })
+            .ToList();
+
+        var model = new IndexViewModel
+        {
+            Levels = levelGroups
         };
 
         return this.StackView(model);
     }
 
     [HttpGet]
-    public async Task<IActionResult> Edit(int id)
+    public async Task<IActionResult> Edit(int schoolId, string level)
     {
-        var paper = await dbContext.ExamPapers.FirstOrDefaultAsync(s => s.Id == id);
-        if (paper == null)
+        var school = await dbContext.Schools.FirstOrDefaultAsync(s => s.Id == schoolId);
+        if (school == null)
+        {
+            return NotFound();
+        }
+
+        // Verify this level exists in this school
+        var levelExists = await dbContext.ExamPapers
+            .AnyAsync(p => p.SchoolId == schoolId && p.Level == level);
+        
+        if (!levelExists)
         {
             return NotFound();
         }
 
         var allRoles = await roleManager.Roles.ToListAsync();
         var selectedRoleIds = await dbContext.QuestionBankRoles
-            .Where(r => r.ExamPaperId == id)
+            .Where(r => r.SchoolId == schoolId && r.Level == level)
             .Select(r => r.RoleId)
             .ToListAsync();
 
         var model = new EditViewModel
         {
-            PaperId = paper.Id,
-            PaperTitle = paper.Title,
+            SchoolId = schoolId,
+            SchoolName = school.Name,
+            Level = level,
             Roles = allRoles.Select(r => new RoleSelectionViewModel
             {
                 RoleId = r.Id,
@@ -84,14 +105,14 @@ public class QuestionBankRolesController(
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Edit(EditViewModel model)
     {
-        var paper = await dbContext.ExamPapers.FirstOrDefaultAsync(s => s.Id == model.PaperId);
-        if (paper == null)
+        var school = await dbContext.Schools.FirstOrDefaultAsync(s => s.Id == model.SchoolId);
+        if (school == null)
         {
             return NotFound();
         }
 
         var existingRoles = await dbContext.QuestionBankRoles
-            .Where(r => r.ExamPaperId == model.PaperId)
+            .Where(r => r.SchoolId == model.SchoolId && r.Level == model.Level)
             .ToListAsync();
 
         // Remove unselected
@@ -105,7 +126,8 @@ public class QuestionBankRolesController(
             .Where(mr => mr.IsSelected && !existingRoles.Any(er => er.RoleId == mr.RoleId))
             .Select(mr => new QuestionBankRole
             {
-                ExamPaperId = model.PaperId,
+                SchoolId = model.SchoolId,
+                Level = model.Level,
                 RoleId = mr.RoleId
             });
         dbContext.QuestionBankRoles.AddRange(toAdd);

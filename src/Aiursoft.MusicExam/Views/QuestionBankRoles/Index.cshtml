@@ -15,16 +15,22 @@
         <table class="table table-hover mb-0">
             <thead>
             <tr>
-                <th>@Localizer["Paper Title"]</th>
+                <th>@Localizer["School / Level"]</th>
+                <th>@Localizer["Paper Count"]</th>
                 <th>@Localizer["Authorized Roles"]</th>
                 <th class="text-end">@Localizer["Actions"]</th>
             </tr>
             </thead>
             <tbody>
-            @foreach (var item in Model.Papers)
+            @foreach (var item in Model.Levels)
             {
                 <tr>
-                    <td>@item.Paper.Title</td>
+                    <td>
+                        <strong>@item.SchoolName</strong> - @item.Level
+                    </td>
+                    <td>
+                        <span class="badge bg-secondary">@item.PaperCount @Localizer["paper(s)"]</span>
+                    </td>
                     <td>
                         @if (item.Roles.Any())
                         {
@@ -36,7 +42,7 @@
                         }
                     </td>
                     <td class="text-end">
-                        <a asp-action="Edit" asp-route-id="@item.Paper.Id" class="btn btn-sm btn-outline-primary">
+                        <a asp-action="Edit" asp-route-schoolId="@item.SchoolId" asp-route-level="@item.Level" class="btn btn-sm btn-outline-primary">
                             <i class="align-middle" data-lucide="edit-2"></i> @Localizer["Manage Roles"]
                         </a>
                     </td>

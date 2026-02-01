@@ -1,20 +1,21 @@
 @model Aiursoft.MusicExam.Models.QuestionBankRolesViewModels.EditViewModel
 
-<h1 class="h3 mb-3">@Localizer["Manage Paper Roles"]</h1>
+<h1 class="h3 mb-3">@Localizer["Manage Level Authorization"]</h1>
 
 <div class="row justify-content-center">
     <div class="col-lg-10 col-xl-8">
         <form asp-action="Edit">
-            <input type="hidden" asp-for="PaperId" />
+            <input type="hidden" asp-for="SchoolId" />
+            <input type="hidden" asp-for="Level" />
             <div class="card">
                 <div class="card-header">
-                    <h5 class="card-title mb-0">@Localizer["Access Control for"] @Model.PaperTitle</h5>
+                    <h5 class="card-title mb-0">@Localizer["Access Control for"] @Model.SchoolName - @Model.Level</h5>
                 </div>
                 <div class="card-body">
                     <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
 
                     <h5 class="mb-3">@Localizer["Select Roles Authorized to Access"]</h5>
-                    <p class="text-muted mb-4">@Localizer["If no roles are selected, this paper will be public to all users with exam permissions."]</p>
+                    <p class="text-muted mb-4">@Localizer["If no roles are selected, all papers in this level will be public to all users with exam permissions. Note: This authorization applies to ALL papers under"] @Model.SchoolName - @Model.Level.</p>
                     
                     <div class="list-group list-group-flush border rounded">
                         @for (var i = 0; i < Model.Roles.Count; i++)

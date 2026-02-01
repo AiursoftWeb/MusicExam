@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 namespace Aiursoft.MusicExam.Entities;
 
 /// <summary>
-/// 代表授权了特定 Role 访问特定题库（School）。
+/// 代表授权了特定 Role 访问特定学校中的特定级别（Level）。
 /// </summary>
 public class QuestionBankRole
 {
@@ -18,9 +18,15 @@ public class QuestionBankRole
     [ForeignKey(nameof(RoleId))]
     public IdentityRole? Role { get; set; }
 
-    public int ExamPaperId { get; set; }
+    public int SchoolId { get; set; }
 
     [JsonIgnore]
-    [ForeignKey(nameof(ExamPaperId))]
-    public ExamPaper? ExamPaper { get; set; }
+    [ForeignKey(nameof(SchoolId))]
+    public School? School { get; set; }
+
+    /// <summary>
+    /// 授权访问的级别。如果为 null，表示授权访问该学校的所有级别。
+    /// </summary>
+    [MaxLength(200)]
+    public string? Level { get; set; }
 }

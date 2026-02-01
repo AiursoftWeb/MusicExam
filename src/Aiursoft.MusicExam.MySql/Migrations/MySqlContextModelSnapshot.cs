@@ -216,18 +216,22 @@ namespace Aiursoft.MusicExam.MySql.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("ExamPaperId")
-                        .HasColumnType("int");
+                    b.Property<string>("Level")
+                        .HasMaxLength(200)
+                        .HasColumnType("varchar(200)");
 
                     b.Property<string>("RoleId")
                         .IsRequired()
                         .HasColumnType("varchar(255)");
 
+                    b.Property<int>("SchoolId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("ExamPaperId");
-
                     b.HasIndex("RoleId");
+
+                    b.HasIndex("SchoolId");
 
                     b.ToTable("QuestionBankRoles");
                 });
@@ -551,21 +555,21 @@ namespace Aiursoft.MusicExam.MySql.Migrations
 
             modelBuilder.Entity("Aiursoft.MusicExam.Entities.QuestionBankRole", b =>
                 {
-                    b.HasOne("Aiursoft.MusicExam.Entities.ExamPaper", "ExamPaper")
-                        .WithMany("AuthorizedRoles")
-                        .HasForeignKey("ExamPaperId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", "Role")
                         .WithMany()
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("ExamPaper");
+                    b.HasOne("Aiursoft.MusicExam.Entities.School", "School")
+                        .WithMany("AuthorizedRoles")
+                        .HasForeignKey("SchoolId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Role");
+
+                    b.Navigation("School");
                 });
 
             modelBuilder.Entity("Aiursoft.MusicExam.Entities.QuestionSubmission", b =>
@@ -640,8 +644,6 @@ namespace Aiursoft.MusicExam.MySql.Migrations
 
             modelBuilder.Entity("Aiursoft.MusicExam.Entities.ExamPaper", b =>
                 {
-                    b.Navigation("AuthorizedRoles");
-
                     b.Navigation("Questions");
 
                     b.Navigation("Submissions");
@@ -659,6 +661,8 @@ namespace Aiursoft.MusicExam.MySql.Migrations
 
             modelBuilder.Entity("Aiursoft.MusicExam.Entities.School", b =>
                 {
+                    b.Navigation("AuthorizedRoles");
+
                     b.Navigation("Papers");
                 });
 #pragma warning restore 612, 618

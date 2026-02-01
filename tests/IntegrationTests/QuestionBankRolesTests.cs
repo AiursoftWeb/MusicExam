@@ -17,6 +17,9 @@ public class QuestionBankRolesTests : TestBase
         var roleName = "TestRole-" + Guid.NewGuid();
         string roleId;
         int privatePaperId;
+        int schoolId;
+        const string privateLevel = "Advanced";
+        const string publicLevel = "Beginner";
 
         using (var scope = Server!.Services.CreateScope())
         {
@@ -32,18 +35,20 @@ public class QuestionBankRolesTests : TestBase
             var school = new School { Name = "Test School" };
             db.Schools.Add(school);
             await db.SaveChangesAsync();
+            schoolId = school.Id;
 
-            // Create papers
-            var privatePaper = new ExamPaper { Title = "Private Paper", SchoolId = school.Id };
-            var publicPaper = new ExamPaper { Title = "Public Paper", SchoolId = school.Id };
+            // Create papers with different levels
+            var privatePaper = new ExamPaper { Title = "Private Paper", SchoolId = school.Id, Level = privateLevel };
+            var publicPaper = new ExamPaper { Title = "Public Paper", SchoolId = school.Id, Level = publicLevel };
             db.ExamPapers.AddRange(privatePaper, publicPaper);
             await db.SaveChangesAsync();
             privatePaperId = privatePaper.Id;
 
-            // Authorize the role to the private paper
+            // Authorize the role to the Advanced level (not specific paper)
             db.QuestionBankRoles.Add(new QuestionBankRole
             {
-                ExamPaperId = privatePaperId,
+                SchoolId = schoolId,
+                Level = privateLevel,
                 RoleId = roleId
             });
             await db.SaveChangesAsync();
@@ -121,19 +126,20 @@ public class QuestionBankRolesTests : TestBase
         var mgmtResponse = await Http.GetAsync("/QuestionBankRoles/Index");
         mgmtResponse.EnsureSuccessStatusCode();
         var mgmtHtml = await mgmtResponse.Content.ReadAsStringAsync();
-        Assert.Contains("Private Paper", mgmtHtml);
-        Assert.Contains("Public Paper", mgmtHtml);
+        Assert.Contains("Test School", mgmtHtml);
+        Assert.Contains(privateLevel, mgmtHtml);
         Assert.Contains(roleName, mgmtHtml);
 
-        // Test Edit page
-        var editUrl = $"/QuestionBankRoles/Edit/{privatePaperId}";
+        // Test Edit page for the Advanced level
+        var editUrl = $"/QuestionBankRoles/Edit?schoolId={schoolId}&level={privateLevel}";
         var editResponse = await Http.GetAsync(editUrl);
         editResponse.EnsureSuccessStatusCode();
         
-        // Test POST Edit
+        // Test POST Edit - remove authorization
         await PostForm(editUrl, new Dictionary<string, string>
         {
-            { "PaperId", privatePaperId.ToString() },
+            { "SchoolId", schoolId.ToString() },
+            { "Level", privateLevel },
             { "Roles[0].RoleId", roleId },
             { "Roles[0].RoleName", roleName },
             { "Roles[0].IsSelected", "false" } // Unselect
@@ -142,8 +148,8 @@ public class QuestionBankRolesTests : TestBase
         using (var scope = Server!.Services.CreateScope())
         {
             var db = scope.ServiceProvider.GetRequiredService<TemplateDbContext>();
-            var anyRole = await db.QuestionBankRoles.AnyAsync(r => r.ExamPaperId == privatePaperId);
-            Assert.IsFalse(anyRole, "Role should have been removed");
+            var anyRole = await db.QuestionBankRoles.AnyAsync(r => r.SchoolId == schoolId && r.Level == privateLevel);
+            Assert.IsFalse(anyRole, "Role should have been removed from this level");
         }
     }
 }
