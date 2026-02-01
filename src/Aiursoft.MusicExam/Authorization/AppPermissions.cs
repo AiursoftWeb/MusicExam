@@ -81,7 +81,13 @@ public class AppPermissions
                 localizer["Allows viewing system statistics like user counts and usage data."]),
             new(AppPermissionNames.CanManageQuestionBankRoles,
                 localizer["Manage Question Bank Roles"],
-                localizer["Allows managing the roles authorized to access each question bank."])
+                localizer["Allows managing the roles authorized to access each question bank."]),
+            new(AppPermissionNames.CanManageQuestions,
+                localizer["Manage Questions"],
+                localizer["Allows full management of questions and exam papers."]),
+            new(AppPermissionNames.CanModifyQuestions,
+                localizer["Modify Questions"],
+                localizer["Allows modifying question content and answers."])
         ];
         return allPermission;
     }
