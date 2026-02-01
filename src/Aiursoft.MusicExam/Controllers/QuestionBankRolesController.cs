@@ -39,7 +39,7 @@ public class QuestionBankRolesController(
 
         // Group papers by (SchoolId, Level) to get unique levels
         var levelGroups = papers
-            .GroupBy(p => new { p.SchoolId, Level = p.Level ?? "Uncategorized", SchoolName = p.School?.Name ?? "Unknown" })
+            .GroupBy(p => new { p.SchoolId, Level = p.Level ?? "Uncategorized", SchoolName = p.School.Name })
             .Select(g => new LevelWithRoles
             {
                 SchoolId = g.Key.SchoolId,
