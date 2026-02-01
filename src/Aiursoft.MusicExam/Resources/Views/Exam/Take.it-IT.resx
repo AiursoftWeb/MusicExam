@@ -39,6 +39,12 @@
   <data name="Next" xml:space="preserve">
     <value>Avanti</value>
   </data>
+  <data name="Notice" xml:space="preserve">
+    <value>Avviso</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
   <data name="Please check the correct answer highlighted above." xml:space="preserve">
     <value>Verifica la risposta corretta evidenziata sopra.</value>
   </data>

@@ -39,6 +39,12 @@
   <data name="Next" xml:space="preserve">
     <value>Далі</value>
   </data>
+  <data name="Notice" xml:space="preserve">
+    <value>Увага</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
   <data name="Please check the correct answer highlighted above." xml:space="preserve">
     <value>Будь ласка, перевірте правильну відповідь, виділену вище.</value>
   </data>

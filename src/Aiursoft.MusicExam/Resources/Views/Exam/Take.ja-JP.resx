@@ -39,6 +39,12 @@
   <data name="Next" xml:space="preserve">
     <value>次へ</value>
   </data>
+  <data name="Notice" xml:space="preserve">
+    <value>お知らせ</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
   <data name="Please check the correct answer highlighted above." xml:space="preserve">
     <value>正解は上記で強調されているので、確認してください。</value>
   </data>
@@ -56,12 +62,6 @@
   </data>
   <data name="This is a sight-singing question. Please review the sheet music and sing aloud." xml:space="preserve">
     <value>これは視唱問題です。楽譜を確認し、声に出して歌ってください。</value>
-  </data>
-  <data name="Notice" xml:space="preserve">
-    <value>お知らせ</value>
-  </data>
-  <data name="OK" xml:space="preserve">
-    <value>OK</value>
   </data>
 
 </root>

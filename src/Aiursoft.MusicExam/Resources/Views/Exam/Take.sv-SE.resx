@@ -39,6 +39,12 @@
   <data name="Next" xml:space="preserve">
     <value>Nästa</value>
   </data>
+  <data name="Notice" xml:space="preserve">
+    <value>Meddelande</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
   <data name="Please check the correct answer highlighted above." xml:space="preserve">
     <value>Vänligen kontrollera det rätta svaret som är markerat ovanför.</value>
   </data>
