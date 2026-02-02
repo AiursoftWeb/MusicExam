@@ -80,7 +80,7 @@ public class QuestionBankRolesTests : TestBase
         var dashboardHtml = await dashboardResponse.Content.ReadAsStringAsync();
         
         Assert.Contains("Public Paper", dashboardHtml);
-        Assert.IsFalse(dashboardHtml.Contains("Private Paper"));
+        Assert.DoesNotContain("Private Paper", dashboardHtml);
 
         // 4. Try to access private paper directly - should be forbidden
         var takeResponse = await Http.GetAsync($"/Exam/Take/{privatePaperId}");

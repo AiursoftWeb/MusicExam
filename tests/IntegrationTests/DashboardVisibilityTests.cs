@@ -1,8 +1,6 @@
 using System.Net;
 using Aiursoft.MusicExam.Entities;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace Aiursoft.MusicExam.Tests.IntegrationTests;
 
@@ -60,7 +58,7 @@ public class DashboardVisibilityTests : TestBase
         response.EnsureSuccessStatusCode();
         var html = await response.Content.ReadAsStringAsync();
         
-        Assert.IsFalse(html.Contains(uniqueTitle), "Restricted paper should not be visible.");
+        Assert.DoesNotContain(uniqueTitle, html);
 
         // 4. Grant permission
         using (var scope = Server.Services.CreateScope())
@@ -84,6 +82,6 @@ public class DashboardVisibilityTests : TestBase
         response.EnsureSuccessStatusCode();
         html = await response.Content.ReadAsStringAsync();
 
-        Assert.IsTrue(html.Contains(uniqueTitle), "Authorized paper should be visible.");
+        Assert.Contains(uniqueTitle, html);
     }
 }
