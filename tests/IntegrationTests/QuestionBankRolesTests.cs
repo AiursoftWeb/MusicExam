@@ -74,13 +74,13 @@ public class QuestionBankRolesTests : TestBase
         });
         Assert.AreEqual(HttpStatusCode.Found, loginResponse.StatusCode);
 
-        // 3. Check Dashboard - should see BOTH (requirement: all visible, access restricted)
+        // 3. Check Dashboard - should see Public Paper only (requirement: Private Paper hidden)
         var dashboardResponse = await Http.GetAsync("/Dashboard/Index");
         dashboardResponse.EnsureSuccessStatusCode();
         var dashboardHtml = await dashboardResponse.Content.ReadAsStringAsync();
         
         Assert.Contains("Public Paper", dashboardHtml);
-        Assert.Contains("Private Paper", dashboardHtml);
+        Assert.IsFalse(dashboardHtml.Contains("Private Paper"));
 
         // 4. Try to access private paper directly - should be forbidden
         var takeResponse = await Http.GetAsync($"/Exam/Take/{privatePaperId}");

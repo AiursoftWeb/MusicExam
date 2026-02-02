@@ -41,14 +41,49 @@ public class DashboardController : Controller
             return Forbid();
         }
 
+        var userRoleIds = await _dbContext.UserRoles
+            .Where(ur => ur.UserId == user.Id)
+            .Select(ur => ur.RoleId)
+            .ToListAsync();
+
+        var allPermissions = await _dbContext.QuestionBankRoles.ToListAsync();
+
         var schools = await _dbContext.Schools
             .Include(s => s.Papers)
             .OrderBy(s => s.Id)
             .ToListAsync();
 
+        var schoolViewModels = new List<SchoolViewModel>();
+
+        foreach (var school in schools)
+        {
+            var accessiblePapers = school.Papers.Where(paper =>
+            {
+                var requiredRoles = allPermissions
+                    .Where(r => r.SchoolId == paper.SchoolId && r.Level == paper.Level)
+                    .ToList();
+
+                if (!requiredRoles.Any())
+                {
+                    return true;
+                }
+
+                return requiredRoles.Any(rr => userRoleIds.Contains(rr.RoleId));
+            }).ToList();
+            
+            if (accessiblePapers.Any())
+            {
+                schoolViewModels.Add(new SchoolViewModel
+                {
+                    Name = school.Name,
+                    Papers = accessiblePapers
+                });
+            }
+        }
+
         var model = new IndexViewModel
         {
-            Schools = schools
+            Schools = schoolViewModels
         };
         return this.StackView(model);
     }
