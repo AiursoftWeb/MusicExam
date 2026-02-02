@@ -24,11 +24,17 @@
   <data name="Back to List" xml:space="preserve">
     <value>Înapoi la listă</value>
   </data>
+  <data name="If no roles are selected, all papers in this level will be public to all users with exam permissions. Note: This authorization applies to ALL papers under" xml:space="preserve">
+    <value>Dacă nu sunt selectate roluri, toate lucrările de la acest nivel vor fi publice pentru toți utilizatorii cu permisiuni de examen. Notă: Această autorizare se aplică tuturor lucrărilor de sub</value>
+  </data>
   <data name="If no roles are selected, this paper will be public to all users with exam permissions." xml:space="preserve">
     <value>Dacă nu sunt selectate roluri, acest document va fi accesibil tuturor utilizatorilor cu permisiuni de examen.</value>
   </data>
   <data name="If no roles are selected, this question bank will be public to all users with exam permissions." xml:space="preserve">
     <value>Dacă nu sunt selectate roluri, această bancă de întrebări va fi disponibilă public pentru toți utilizatorii cu permisiuni de examen.</value>
+  </data>
+  <data name="Manage Level Authorization" xml:space="preserve">
+    <value>Gestionare autorizare nivel</value>
   </data>
   <data name="Manage Paper Roles" xml:space="preserve">
     <value>Gestionare roluri pentru lucrare</value>

@@ -48,11 +48,20 @@
   <data name="No roles authorized (Public)" xml:space="preserve">
     <value>Geen rollen geautoriseerd (Openbaar)</value>
   </data>
+  <data name="Paper Count" xml:space="preserve">
+    <value>Aantal papieren</value>
+  </data>
   <data name="Paper Title" xml:space="preserve">
     <value>Paper Titel</value>
   </data>
+  <data name="paper(s)" xml:space="preserve">
+    <value>vraagstuk(ken)</value>
+  </data>
   <data name="Question Bank Name" xml:space="preserve">
     <value>Naam vraagbank</value>
+  </data>
+  <data name="School / Level" xml:space="preserve">
+    <value>School / Niveau</value>
   </data>
 
 </root>

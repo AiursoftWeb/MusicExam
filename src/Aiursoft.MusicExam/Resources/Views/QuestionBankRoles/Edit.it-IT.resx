@@ -24,11 +24,17 @@
   <data name="Back to List" xml:space="preserve">
     <value>Torna all&apos;elenco</value>
   </data>
+  <data name="If no roles are selected, all papers in this level will be public to all users with exam permissions. Note: This authorization applies to ALL papers under" xml:space="preserve">
+    <value>Se non vengono selezionate ruoli, tutti i compiti di questo livello saranno pubblici per tutti gli utenti con i permessi d&apos;esame. Nota: questa autorizzazione si applica a TUTTI i compiti sotto a @Model.SchoolName - @Model.Level.</value>
+  </data>
   <data name="If no roles are selected, this paper will be public to all users with exam permissions." xml:space="preserve">
     <value>Se non vengono selezionate ruoli, questo compito sarà accessibile a tutti gli utenti con i permessi d&apos;esame.</value>
   </data>
   <data name="If no roles are selected, this question bank will be public to all users with exam permissions." xml:space="preserve">
     <value>Se non vengono selezionate autorizzazioni, questa banca domande sarà accessibile a tutti gli utenti con i permessi per gli esami.</value>
+  </data>
+  <data name="Manage Level Authorization" xml:space="preserve">
+    <value>Gestisci l&apos;autorizzazione al livello</value>
   </data>
   <data name="Manage Paper Roles" xml:space="preserve">
     <value>Gestisci i Ruoli del Foglio</value>

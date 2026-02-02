@@ -24,11 +24,17 @@
   <data name="Back to List" xml:space="preserve">
     <value>Quay lại danh sách</value>
   </data>
+  <data name="If no roles are selected, all papers in this level will be public to all users with exam permissions. Note: This authorization applies to ALL papers under" xml:space="preserve">
+    <value>Nếu không có vai trò nào được chọn, tất cả các đề thi ở cấp độ này sẽ công khai với mọi người dùng có quyền thi. Lưu ý: Quyền hạn này áp dụng cho TẤT CẢ các đề thi thuộc về</value>
+  </data>
   <data name="If no roles are selected, this paper will be public to all users with exam permissions." xml:space="preserve">
     <value>Nếu không chọn vai trò nào, bài kiểm tra này sẽ công khai với tất cả người dùng có quyền truy cập kỳ thi.</value>
   </data>
   <data name="If no roles are selected, this question bank will be public to all users with exam permissions." xml:space="preserve">
     <value>Nếu không có vai trò nào được chọn, ngân hàng câu hỏi này sẽ công khai với tất cả người dùng có quyền truy cập kỳ thi.</value>
+  </data>
+  <data name="Manage Level Authorization" xml:space="preserve">
+    <value>Quản lý quyền truy cập theo cấp độ</value>
   </data>
   <data name="Manage Paper Roles" xml:space="preserve">
     <value>Quản lý vai trò bài thi</value>

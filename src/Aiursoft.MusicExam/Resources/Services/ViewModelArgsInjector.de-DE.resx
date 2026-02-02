@@ -132,6 +132,9 @@
   <data name="Manage" xml:space="preserve">
     <value>Verwalten</value>
   </data>
+  <data name="Manage Level Authorization" xml:space="preserve">
+    <value>Ebenenberechtigungen verwalten</value>
+  </data>
   <data name="Manage Paper Roles" xml:space="preserve">
     <value>Verwaltung von Papierrollen</value>
   </data>

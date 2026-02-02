@@ -24,11 +24,17 @@
   <data name="Back to List" xml:space="preserve">
     <value>Retour à la liste</value>
   </data>
+  <data name="If no roles are selected, all papers in this level will be public to all users with exam permissions. Note: This authorization applies to ALL papers under" xml:space="preserve">
+    <value>Si aucun rôle n&apos;est sélectionné, tous les documents de ce niveau seront publics pour tous les utilisateurs ayant des autorisations d&apos;examen. Remarque : cette autorisation s&apos;applique à TOUS les documents sous</value>
+  </data>
   <data name="If no roles are selected, this paper will be public to all users with exam permissions." xml:space="preserve">
     <value>Si aucun rôle n&apos;est sélectionné, ce document sera accessible à tous les utilisateurs ayant les autorisations d&apos;examen.</value>
   </data>
   <data name="If no roles are selected, this question bank will be public to all users with exam permissions." xml:space="preserve">
     <value>Si aucun rôle n&apos;est sélectionné, cette banque de questions sera accessible à tous les utilisateurs disposant des autorisations d&apos;examen.</value>
+  </data>
+  <data name="Manage Level Authorization" xml:space="preserve">
+    <value>Gérer l&apos;autorisation de niveau</value>
   </data>
   <data name="Manage Paper Roles" xml:space="preserve">
     <value>Gérer les rôles du document</value>

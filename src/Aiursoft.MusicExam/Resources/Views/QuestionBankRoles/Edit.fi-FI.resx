@@ -24,11 +24,17 @@
   <data name="Back to List" xml:space="preserve">
     <value>Takaisin luetteloon</value>
   </data>
+  <data name="If no roles are selected, all papers in this level will be public to all users with exam permissions. Note: This authorization applies to ALL papers under" xml:space="preserve">
+    <value>Jos roolia ei valita, kaikki tämän tason kokeet ovat julkaistuja kaikille käyttäjille, joilla on koekäyttöoikeudet. Huom: Tämä käyttöoikeus koskee KAIKKIA tätä koulun tason alaisia kokeita.</value>
+  </data>
   <data name="If no roles are selected, this paper will be public to all users with exam permissions." xml:space="preserve">
     <value>Jos rooleja ei ole valittu, tämä paperi on julkinen kaikille käyttäjille, joilla on kokeen käyttöoikeudet.</value>
   </data>
   <data name="If no roles are selected, this question bank will be public to all users with exam permissions." xml:space="preserve">
     <value>Jos roolia ei valita, tämä kysymysarkisto on julkinen kaikille käyttäjille, joilla on koepalvelun käyttöoikeudet.</value>
+  </data>
+  <data name="Manage Level Authorization" xml:space="preserve">
+    <value>Hallinnoi tason käyttöoikeuksia</value>
   </data>
   <data name="Manage Paper Roles" xml:space="preserve">
     <value>Hallitse paperin rooleja</value>

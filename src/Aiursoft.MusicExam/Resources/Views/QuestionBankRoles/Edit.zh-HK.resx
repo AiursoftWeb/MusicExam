@@ -24,11 +24,17 @@
   <data name="Back to List" xml:space="preserve">
     <value>返回列表</value>
   </data>
+  <data name="If no roles are selected, all papers in this level will be public to all users with exam permissions. Note: This authorization applies to ALL papers under" xml:space="preserve">
+    <value>如未選擇任何角色，此級別的所有試卷將對所有具備考試權限的用戶公開。注意：此授權適用於所有於 @Model.SchoolName - @Model.Level 下的試卷。</value>
+  </data>
   <data name="If no roles are selected, this paper will be public to all users with exam permissions." xml:space="preserve">
     <value>如沒有選擇任何角色，此試卷將對所有擁有考試權限的用戶公開。</value>
   </data>
   <data name="If no roles are selected, this question bank will be public to all users with exam permissions." xml:space="preserve">
     <value>如果沒有選擇任何角色，此題庫將對所有具備考試權限的用戶公開。</value>
+  </data>
+  <data name="Manage Level Authorization" xml:space="preserve">
+    <value>管理等級授權</value>
   </data>
   <data name="Manage Paper Roles" xml:space="preserve">
     <value>管理試卷角色</value>

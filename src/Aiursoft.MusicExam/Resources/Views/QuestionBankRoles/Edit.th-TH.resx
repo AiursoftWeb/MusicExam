@@ -24,11 +24,17 @@
   <data name="Back to List" xml:space="preserve">
     <value>กลับไปยังรายการ</value>
   </data>
+  <data name="If no roles are selected, all papers in this level will be public to all users with exam permissions. Note: This authorization applies to ALL papers under" xml:space="preserve">
+    <value>หากไม่มีบทบาทใดถูกเลือก กระดาษทุกชิ้นในระดับนี้จะเปิดให้ผู้ใช้ทุกคนที่มีสิทธิ์เข้าสอบสามารถเข้าถึงได้ หมายเหตุ: การอนุญาตนี้ใช้กับกระดาษทุกชิ้นภายใต้ @Model.SchoolName - @Model.Level</value>
+  </data>
   <data name="If no roles are selected, this paper will be public to all users with exam permissions." xml:space="preserve">
     <value>หากไม่มีบทบาทใดถูกเลือก กระดาษนี้จะเปิดให้ทุกผู้ใช้ที่มีสิทธิ์เข้าสอบเข้าถึงได้</value>
   </data>
   <data name="If no roles are selected, this question bank will be public to all users with exam permissions." xml:space="preserve">
     <value>หากไม่มีบทบาทใดถูกเลือก ชุดข้อสอบนี้จะเปิดให้ผู้ใช้ทุกคนที่มีสิทธิ์เข้าสอบเข้าถึงได้</value>
+  </data>
+  <data name="Manage Level Authorization" xml:space="preserve">
+    <value>จัดการการยืนยันสิทธิ์ระดับ</value>
   </data>
   <data name="Manage Paper Roles" xml:space="preserve">
     <value>จัดการบทบาทกระดาษ</value>

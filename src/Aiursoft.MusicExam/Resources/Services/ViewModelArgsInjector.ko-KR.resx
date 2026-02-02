@@ -132,6 +132,9 @@
   <data name="Manage" xml:space="preserve">
     <value>관리</value>
   </data>
+  <data name="Manage Level Authorization" xml:space="preserve">
+    <value>레벨 권한 관리</value>
+  </data>
   <data name="Manage Paper Roles" xml:space="preserve">
     <value>시험지 역할 관리</value>
   </data>
