@@ -20,6 +20,11 @@ public class School
     [MaxLength(1000)]
     public string? Description { get; set; }
 
+    /// <summary>
+    /// 显示顺序，用于自定义排序。
+    /// </summary>
+    public int DisplayOrder { get; set; }
+
     [InverseProperty(nameof(ExamPaper.School))]
     public IEnumerable<ExamPaper> Papers { get; init; } = new List<ExamPaper>();
 

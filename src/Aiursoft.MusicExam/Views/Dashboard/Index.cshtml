@@ -14,7 +14,8 @@
         {
             var levels = school.Papers
             .GroupBy(p => p.Level ?? "Uncategorized")
-            .OrderBy(g => g.Min(p => p.Id));
+            .OrderBy(g => g.Min(p => p.DisplayOrder))
+            .ThenBy(g => g.Min(p => p.Id));
 
             foreach (var levelGroup in levels)
             {
@@ -34,7 +35,8 @@
                             @{
                                 var categories = levelGroup
                                 .GroupBy(p => p.Category ?? "General")
-                                .OrderBy(g => g.Min(p => p.Id));
+                                .OrderBy(g => g.Min(p => p.DisplayOrder))
+                                .ThenBy(g => g.Min(p => p.Id));
                             }
 
                             @foreach (var categoryGroup in categories)
@@ -43,7 +45,7 @@
                                     <h5 class="text-uppercase text-muted fw-bold small ls-1 mb-3"><i
                                             class="bi bi-collection me-2"></i>@categoryGroup.Key</h5>
                                     <div class="row g-3">
-                                        @foreach (var paper in categoryGroup.OrderBy(p => p.Id))
+                                        @foreach (var paper in categoryGroup.OrderBy(p => p.DisplayOrder).ThenBy(p => p.Id))
                                         {
                                             <div class="col-md-6 col-lg-4">
                                                 <a asp-controller="Exam" asp-action="Take" asp-route-id="@paper.Id"

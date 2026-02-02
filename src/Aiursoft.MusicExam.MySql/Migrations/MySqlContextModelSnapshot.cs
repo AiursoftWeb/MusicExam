@@ -78,6 +78,9 @@ namespace Aiursoft.MusicExam.MySql.Migrations
                     b.Property<DateTime>("CreationTime")
                         .HasColumnType("datetime(6)");
 
+                    b.Property<int>("DisplayOrder")
+                        .HasColumnType("int");
+
                     b.Property<string>("Level")
                         .HasMaxLength(200)
                         .HasColumnType("varchar(200)");
@@ -272,6 +275,9 @@ namespace Aiursoft.MusicExam.MySql.Migrations
                     b.Property<string>("Description")
                         .HasMaxLength(1000)
                         .HasColumnType("varchar(1000)");
+
+                    b.Property<int>("DisplayOrder")
+                        .HasColumnType("int");
 
                     b.Property<string>("Name")
                         .IsRequired()
