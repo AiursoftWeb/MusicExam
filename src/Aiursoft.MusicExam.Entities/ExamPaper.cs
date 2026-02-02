@@ -24,6 +24,11 @@ public class ExamPaper
 
     public DateTime CreationTime { get; init; } = DateTime.UtcNow;
 
+    /// <summary>
+    /// 显示顺序，用于自定义排序。
+    /// </summary>
+    public int DisplayOrder { get; set; }
+
     // ================= 关联关系 =================
 
     public int SchoolId { get; set; }

@@ -50,7 +50,8 @@ public class DashboardController : Controller
 
         var schools = await _dbContext.Schools
             .Include(s => s.Papers)
-            .OrderBy(s => s.Id)
+            .OrderBy(s => s.DisplayOrder)
+            .ThenBy(s => s.Id)
             .ToListAsync();
 
         var schoolViewModels = new List<SchoolViewModel>();
