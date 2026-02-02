@@ -129,6 +129,9 @@
   <data name="Manage" xml:space="preserve">
     <value>Διαχείριση</value>
   </data>
+  <data name="Manage Display Order" xml:space="preserve">
+    <value>Διαχείριση Τάξης Εμφάνισης</value>
+  </data>
   <data name="Manage Level Authorization" xml:space="preserve">
     <value>Διαχείριση Επιπέδου Εξουσιοδότησης</value>
   </data>

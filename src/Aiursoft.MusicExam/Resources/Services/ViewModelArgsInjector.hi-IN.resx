@@ -129,6 +129,9 @@
   <data name="Manage" xml:space="preserve">
     <value>प्रबंधित करें</value>
   </data>
+  <data name="Manage Display Order" xml:space="preserve">
+    <value>प्रदर्शन क्रम का प्रबंधन करें</value>
+  </data>
   <data name="Manage Level Authorization" xml:space="preserve">
     <value>स्तर प्राधिकरण प्रबंधन</value>
   </data>

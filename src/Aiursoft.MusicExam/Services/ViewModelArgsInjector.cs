@@ -99,6 +99,8 @@ public class ViewModelArgsInjector(
         _ = localizer["Manage Paper Roles"];
     
         _ = localizer["Manage Level Authorization"];
+    
+        _ = localizer["Manage Display Order"];
     }
 
     public void InjectSimple(

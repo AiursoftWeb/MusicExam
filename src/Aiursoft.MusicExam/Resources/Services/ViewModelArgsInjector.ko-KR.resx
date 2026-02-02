@@ -132,6 +132,9 @@
   <data name="Manage" xml:space="preserve">
     <value>관리</value>
   </data>
+  <data name="Manage Display Order" xml:space="preserve">
+    <value>표시 순서 관리</value>
+  </data>
   <data name="Manage Level Authorization" xml:space="preserve">
     <value>레벨 권한 관리</value>
   </data>
