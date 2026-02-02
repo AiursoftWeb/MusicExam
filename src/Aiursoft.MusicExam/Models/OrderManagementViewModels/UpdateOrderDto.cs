@@ -2,7 +2,7 @@ namespace Aiursoft.MusicExam.Models.OrderManagementViewModels;
 
 public class UpdateOrderDto
 {
-    public required List<OrderItem> Items { get; init; }
+    public required IEnumerable<OrderItem> Items { get; init; }
 }
 
 public class OrderItem
