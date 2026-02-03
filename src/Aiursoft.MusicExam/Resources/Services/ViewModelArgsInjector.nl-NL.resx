@@ -129,6 +129,9 @@
   <data name="Manage" xml:space="preserve">
     <value>Beheren</value>
   </data>
+  <data name="Manage Display Order" xml:space="preserve">
+    <value>Beheer weergavevolgorde</value>
+  </data>
   <data name="Manage Level Authorization" xml:space="preserve">
     <value>Niveaubevoegdheden beheren</value>
   </data>

@@ -132,6 +132,9 @@
   <data name="Manage" xml:space="preserve">
     <value>จัดการ</value>
   </data>
+  <data name="Manage Display Order" xml:space="preserve">
+    <value>จัดการลำดับการจัดแสดง</value>
+  </data>
   <data name="Manage Level Authorization" xml:space="preserve">
     <value>จัดการสิทธิ์ระดับ</value>
   </data>

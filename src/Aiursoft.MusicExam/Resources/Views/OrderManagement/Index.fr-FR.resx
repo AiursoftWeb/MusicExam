@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Drag and drop items to reorder them. Click Save when finished." xml:space="preserve">
+    <value>Faites glisser et déposez les éléments pour les réorganiser. Cliquez sur Enregistrer lorsque vous avez terminé.</value>
+  </data>
+  <data name="Failed to save order. Please try again." xml:space="preserve">
+    <value>Échec de l&apos;enregistrement de la commande. Veuillez réessayer.</value>
+  </data>
+  <data name="Manage Display Order" xml:space="preserve">
+    <value>Gérer l&apos;ordre d&apos;affichage</value>
+  </data>
+  <data name="Order saved successfully!" xml:space="preserve">
+    <value>Commande enregistrée avec succès !</value>
+  </data>
+  <data name="Save Order" xml:space="preserve">
+    <value>Enregistrer l&apos;ordre</value>
+  </data>
+
+</root>
