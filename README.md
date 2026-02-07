@@ -4,28 +4,18 @@
 [![Pipeline stat](https://gitlab.aiursoft.com/aiursoft/musicexam/badges/master/pipeline.svg)](https://gitlab.aiursoft.com/aiursoft/musicexam/-/pipelines)
 [![Test Coverage](https://gitlab.aiursoft.com/aiursoft/musicexam/badges/master/coverage.svg)](https://gitlab.aiursoft.com/aiursoft/musicexam/-/pipelines)
 [![Man hours](https://manhours.aiursoft.com/r/gitlab.aiursoft.com/aiursoft/musicexam.svg)](https://manhours.aiursoft.com/r/gitlab.aiursoft.com/aiursoft/musicexam.html)
-[![Website](https://img.shields.io/website?url=https%3A%2F%2Fmusicexam.aiursoft.com)](https://musicexam.aiursoft.com)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fmusicexam.aiursoft.cn)](https://musicexam.aiursoft.cn)
 [![Docker](https://img.shields.io/docker/pulls/aiursoft/musicexam.svg)](https://hub.docker.com/r/aiursoft/musicexam)
 
-MusicExam is a sample project.
+MusicExam is an enterprise project for a company to host exam for their students.
 
 ![screenshot](./screenshot.png)
 
 Default user name is `admin@default.com` and default password is `admin123`.
 
-## Projects using Aiursoft MusicExam
-
-* [Stathub](https://gitlab.aiursoft.com/aiursoft/stathub)
-* [MarkToHtml](https://gitlab.aiursoft.com/aiursoft/marktohtml)
-* [MusicTools](https://gitlab.aiursoft.com/aiursoft/musictools)
-* [AnduinOS Home](https://gitlab.aiursoft.com/anduin/AnduinOS-Home)
-* [Manhours](https://gitlab.aiursoft.com/aiursoft/manhours)
-* [Tracer](https://gitlab.aiursoft.com/aiursoft/tracer)
-* [Warp](https://gitlab.aiursoft.com/aiursoft/warp)
-
 ## Try
 
-Try a running MusicExam [here](https://musicexam.aiursoft.com).
+Try a running MusicExam [here](https://musicexam.aiursoft.cn).
 
 ## Run in Ubuntu
 
