@@ -7,25 +7,35 @@
 }
 
 <div class="container">
-    <div class="card my-4">
-        <div class="card-body text-center">
-            <h1 class="card-title">@Model.Title</h1>
-            <h2 class="display-4 my-3">
-                @Localizer["Score"]: @Model.Score / @Model.TotalQuestions
-            </h2>
-            <div class="progress mb-4" style="height: 12px; border-radius: 6px;">
-                <div class="progress-bar @(Model.Score == Model.TotalQuestions ? "bg-success" : "bg-primary")"
+    <div class="card my-4 shadow-sm">
+        <div class="card-body text-center py-5">
+            <h1 class="card-title mb-4">@Model.Title</h1>
+
+            <div class="mb-4">
+                <div class="display-1 fw-bold @(Model.FinalScore >= 80 ? "text-success" : Model.FinalScore >= 60 ? "text-warning" : "text-danger")">
+                    @Model.FinalScore
+                </div>
+                <div class="text-muted text-uppercase small">@Localizer["Final Score"]</div>
+            </div>
+
+            <h5 class="my-3 text-muted">
+                @Localizer["Correct Answers"]: @Model.CorrectCount / @Model.TotalQuestions
+            </h5>
+
+            <div class="progress mb-4 w-50 mx-auto" style="height: 12px; border-radius: 6px;">
+                <div class="progress-bar @(Model.FinalScore >= 80 ? "bg-success" : Model.FinalScore >= 60 ? "bg-warning" : "bg-danger")"
                      role="progressbar"
-                     style="width: @((double)Model.Score / Model.TotalQuestions * 100)%;"
-                     aria-valuenow="@Model.Score"
+                     style="width: @(Model.FinalScore)%;"
+                     aria-valuenow="@Model.FinalScore"
                      aria-valuemin="0"
-                     aria-valuemax="@Model.TotalQuestions">
+                     aria-valuemax="100">
                 </div>
             </div>
-            <div class="mt-4">
+
+            <div class="mt-5">
                 <a asp-controller="Dashboard" asp-action="Index"
-                   class="btn btn-secondary">@Localizer["Back to Dashboard"]</a>
-                <a asp-controller="Manage" asp-action="ExamHistory" class="btn btn-info">@Localizer["View History"]</a>
+                   class="btn btn-secondary me-2">@Localizer["Back to Dashboard"]</a>
+                <a asp-controller="Manage" asp-action="ExamHistory" class="btn btn-info me-2">@Localizer["View History"]</a>
                 <a asp-controller="Exam" asp-action="Take" asp-route-id="@Model.PaperId" class="btn btn-primary">@Localizer["Retake Exam"]</a>
             </div>
         </div>
