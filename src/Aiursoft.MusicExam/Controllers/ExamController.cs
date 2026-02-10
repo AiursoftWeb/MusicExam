@@ -104,7 +104,7 @@ public class ExamController : Controller
             Title = paper.Title,
             PaperId = paper.Id,
             TotalQuestions = paper.Questions.Count,
-            Score = 0
+            CorrectCount = 0
         };
 
         foreach (var question in paper.Questions)
@@ -138,11 +138,15 @@ public class ExamController : Controller
 
             if (result.IsCorrect)
             {
-                model.Score++;
+                model.CorrectCount++;
             }
 
             model.Answers.Add(result);
         }
+
+        model.FinalScore = model.TotalQuestions > 0 
+            ? (int)Math.Floor((double)model.CorrectCount / model.TotalQuestions * 100)
+            : 0;
 
         // Save Attempt
         var submission = new ExamPaperSubmission
@@ -150,7 +154,7 @@ public class ExamController : Controller
             Id = Guid.NewGuid(),
             UserId = user.Id,
             PaperId = paper.Id,
-            Score = model.Score,
+            Score = model.CorrectCount, // Save CorrectCount (raw count) to DB for compatibility
             SubmissionTime = DateTime.UtcNow
         };
         _dbContext.ExamPaperSubmissions.Add(submission);
@@ -228,9 +232,14 @@ public class ExamController : Controller
             Title = paper.Title,
             PaperId = paper.Id,
             TotalQuestions = paper.Questions.Count,
-            Score = submission.Score ?? 0,
+            CorrectCount = submission.Score ?? 0, // Score in DB is CorrectCount
             PageTitle = "Review - " + paper.Title
         };
+        
+        // Calculate FinalScore (Percentage)
+        model.FinalScore = model.TotalQuestions > 0 
+            ? (int)Math.Floor((double)model.CorrectCount / model.TotalQuestions * 100)
+            : 0;
 
         foreach (var question in paper.Questions)
         {
@@ -259,6 +268,11 @@ public class ExamController : Controller
             else
             {
                 result.IsCorrect = true;
+            }
+
+            if (result.IsCorrect)
+            {
+                model.CorrectCount++;
             }
 
             model.Answers.Add(result);

@@ -36,21 +36,22 @@
                                 </td>                                <td>
                                     @if (submission.Score.HasValue)
                                     {
+                                        var correctCount = submission.Score.Value;
                                         var totalQuestions = submission.Paper.Questions.Count;
-                                        var percentage = totalQuestions > 0 ? (double)submission.Score.Value / totalQuestions * 100 : 0;
+                                        var percentage = totalQuestions > 0 ? (int)Math.Floor((double)correctCount / totalQuestions * 100) : 0;
                                         
                                         <div>
-                                            <span class="badge @(submission.Score == totalQuestions ? "bg-success" : "bg-primary")">
-                                                @submission.Score / @totalQuestions
+                                            <span class="badge @(percentage >= 80 ? "bg-success" : percentage >= 60 ? "bg-warning" : "bg-danger")">
+                                                @percentage
                                             </span>
                                         </div>
                                         <div class="progress mt-2" style="height: 5px; width: 100px;">
-                                            <div class="progress-bar @(submission.Score == totalQuestions ? "bg-success" : "bg-primary")" 
+                                            <div class="progress-bar @(percentage >= 80 ? "bg-success" : percentage >= 60 ? "bg-warning" : "bg-danger")" 
                                                  role="progressbar" 
                                                  style="width: @percentage%" 
-                                                 aria-valuenow="@submission.Score" 
+                                                 aria-valuenow="@percentage" 
                                                  aria-valuemin="0" 
-                                                 aria-valuemax="@totalQuestions">
+                                                 aria-valuemax="100">
                                             </div>
                                         </div>
                                     }
