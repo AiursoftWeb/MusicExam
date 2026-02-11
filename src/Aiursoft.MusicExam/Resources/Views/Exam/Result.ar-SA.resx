@@ -27,8 +27,14 @@
   <data name="Correct Answer" xml:space="preserve">
     <value>الإجابة الصحيحة</value>
   </data>
+  <data name="Correct Answers" xml:space="preserve">
+    <value>الإجابات الصحيحة</value>
+  </data>
   <data name="Explanation" xml:space="preserve">
     <value>التفسير</value>
+  </data>
+  <data name="Final Score" xml:space="preserve">
+    <value>النتيجة النهائية</value>
   </data>
   <data name="Incorrect" xml:space="preserve">
     <value>خاطئ</value>

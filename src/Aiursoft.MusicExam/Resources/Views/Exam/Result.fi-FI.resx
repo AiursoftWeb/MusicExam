@@ -27,8 +27,14 @@
   <data name="Correct Answer" xml:space="preserve">
     <value>Oikea vastaus</value>
   </data>
+  <data name="Correct Answers" xml:space="preserve">
+    <value>Oikeat vastaukset</value>
+  </data>
   <data name="Explanation" xml:space="preserve">
     <value>Selitys</value>
+  </data>
+  <data name="Final Score" xml:space="preserve">
+    <value>Lopullinen pistemäärä</value>
   </data>
   <data name="Incorrect" xml:space="preserve">
     <value>Väärin</value>

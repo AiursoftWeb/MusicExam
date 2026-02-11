@@ -27,8 +27,14 @@
   <data name="Correct Answer" xml:space="preserve">
     <value>Doğru Cevap</value>
   </data>
+  <data name="Correct Answers" xml:space="preserve">
+    <value>Doğru Cevaplar</value>
+  </data>
   <data name="Explanation" xml:space="preserve">
     <value>Açıklama</value>
+  </data>
+  <data name="Final Score" xml:space="preserve">
+    <value>Son Skor</value>
   </data>
   <data name="Incorrect" xml:space="preserve">
     <value>Yanlış</value>

@@ -27,8 +27,14 @@
   <data name="Correct Answer" xml:space="preserve">
     <value>Jawaban Benar</value>
   </data>
+  <data name="Correct Answers" xml:space="preserve">
+    <value>Jawaban Benar</value>
+  </data>
   <data name="Explanation" xml:space="preserve">
     <value>Penjelasan</value>
+  </data>
+  <data name="Final Score" xml:space="preserve">
+    <value>Skor Akhir</value>
   </data>
   <data name="Incorrect" xml:space="preserve">
     <value>Salah</value>

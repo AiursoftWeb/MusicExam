@@ -27,8 +27,14 @@
   <data name="Correct Answer" xml:space="preserve">
     <value>正确答案</value>
   </data>
+  <data name="Correct Answers" xml:space="preserve">
+    <value>正确答案</value>
+  </data>
   <data name="Explanation" xml:space="preserve">
     <value>解释</value>
+  </data>
+  <data name="Final Score" xml:space="preserve">
+    <value>最终得分</value>
   </data>
   <data name="Incorrect" xml:space="preserve">
     <value>错误</value>

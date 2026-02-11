@@ -27,8 +27,14 @@
   <data name="Correct Answer" xml:space="preserve">
     <value>Juiste Antwoord</value>
   </data>
+  <data name="Correct Answers" xml:space="preserve">
+    <value>Juiste antwoorden</value>
+  </data>
   <data name="Explanation" xml:space="preserve">
     <value>Uitleg</value>
+  </data>
+  <data name="Final Score" xml:space="preserve">
+    <value>Eindcijfer</value>
   </data>
   <data name="Incorrect" xml:space="preserve">
     <value>Fout</value>
