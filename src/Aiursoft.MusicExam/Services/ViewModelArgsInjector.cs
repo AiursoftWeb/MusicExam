@@ -134,7 +134,7 @@ public class ViewModelArgsInjector(
             Links =
             [
                 new Link { Text = localizer["Home"], Href = "/" },
-                new Link { Text = brandName, Href = brandHomeUrl },
+                new Link { Text = "Aiursoft", Href = "https://www.aiursoft.com" },
             ]
         };
         toInject.Navbar = new NavbarViewModel
