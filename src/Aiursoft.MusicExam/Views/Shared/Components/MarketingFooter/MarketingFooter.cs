@@ -1,5 +1,4 @@
 using Aiursoft.MusicExam.Services.FileStorage;
-using Aiursoft.MusicExam.Configuration;
 using Aiursoft.MusicExam.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,17 +11,16 @@ public class MarketingFooter(
     public async Task<IViewComponentResult> InvokeAsync(MarketingFooterViewModel? model = null)
     {
         model ??= new MarketingFooterViewModel();
-        model.ProjectName = await globalSettingsService.GetSettingValueAsync(SettingsMap.ProjectName);
-        model.BrandName = await globalSettingsService.GetSettingValueAsync(SettingsMap.BrandName);
-        model.BrandHomeUrl = await globalSettingsService.GetSettingValueAsync(SettingsMap.BrandHomeUrl);
-        model.Icp = await globalSettingsService.GetSettingValueAsync(SettingsMap.Icp);
-        
-        var logoPath = await globalSettingsService.GetSettingValueAsync(SettingsMap.ProjectLogo);
+        model.BrandName = await globalSettingsService.GetSettingValueAsync("BrandName");
+        model.BrandHomeUrl = await globalSettingsService.GetSettingValueAsync("BrandHomeUrl");
+        model.Icp = await globalSettingsService.GetSettingValueAsync("Icp");
+
+        var logoPath = await globalSettingsService.GetSettingValueAsync("ProjectLogo");
         if (!string.IsNullOrWhiteSpace(logoPath))
         {
             model.LogoUrl = storageService.RelativePathToInternetUrl(logoPath, HttpContext);
         }
-        
+
         return View(model);
     }
 }

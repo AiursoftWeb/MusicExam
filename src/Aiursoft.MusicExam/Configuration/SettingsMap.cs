@@ -5,11 +5,6 @@ namespace Aiursoft.MusicExam.Configuration;
 public class SettingsMap
 {
     public const string AllowUserAdjustNickname = "Allow_User_Adjust_Nickname";
-    public const string BrandName = "BrandName";
-    public const string BrandHomeUrl = "BrandHomeUrl";
-    public const string Icp = "Icp";
-    public const string ProjectName = "ProjectName";
-    public const string ProjectLogo = "ProjectLogo";
 
     public class FakeLocalizer
     {
@@ -30,7 +25,7 @@ public class SettingsMap
         },
         new GlobalSettingDefinition
         {
-            Key = BrandName,
+            Key = "BrandName",
             Name = Localizer["Brand Name"],
             Description = Localizer["The brand name displayed in the footer."],
             Type = SettingType.Text,
@@ -38,7 +33,7 @@ public class SettingsMap
         },
         new GlobalSettingDefinition
         {
-            Key = BrandHomeUrl,
+            Key = "BrandHomeUrl",
             Name = Localizer["Brand Home URL"],
             Description = Localizer[" The link to the brand's home page."],
             Type = SettingType.Text,
@@ -46,7 +41,7 @@ public class SettingsMap
         },
         new GlobalSettingDefinition
         {
-            Key = Icp,
+            Key = "Icp",
             Name = Localizer["ICP Number"],
             Description = Localizer["The ICP license number for China mainland users. Leave empty to hide."],
             Type = SettingType.Text,
@@ -54,7 +49,7 @@ public class SettingsMap
         },
         new GlobalSettingDefinition
         {
-            Key = ProjectName,
+            Key = "ProjectName",
             Name = Localizer["Project Name"],
             Description = Localizer["The name of the project displayed in the frontend."],
             Type = SettingType.Text,

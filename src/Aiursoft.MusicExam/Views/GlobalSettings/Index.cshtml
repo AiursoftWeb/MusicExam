@@ -29,7 +29,7 @@
             <tbody>
             @foreach (var item in Model.Settings)
             {
-                <tr class="align-middle">
+                <tr>
                     <td>
                         <div class="fw-bold">@SettingsLocalizer[item.Name]</div>
                         <code class="small text-muted">@item.Key</code>
@@ -46,7 +46,7 @@
                         }
                         else
                         {
-                            <form asp-action="Edit" method="post" id="form-@item.Key" enctype="multipart/form-data">
+                            <form asp-action="Edit" method="post" id="form-@item.Key">
                                 <input type="hidden" name="Key" value="@item.Key" />
                                 @if (item.Type == SettingType.Bool)
                                 {
@@ -77,13 +77,15 @@
                                         @if (!string.IsNullOrWhiteSpace(item.Value))
                                         {
                                             <div>
-                                                                                                <a href="@Storage.RelativePathToInternetUrl(item.Value, Context)"                                                    target="_blank"
+                                                <a href="@Storage.RelativePathToInternetUrl(item.Value)"
+                                                   target="_blank"
                                                    class="btn btn-sm btn-outline-info">
                                                     <i class="align-middle" data-lucide="eye"></i>
                                                     @Localizer["View Current File"]
                                                 </a>
                                             </div>
                                         }
+
                                         <vc:file-upload
                                             asp-for="@item.Value"
                                             subfolder="@item.Subfolder"
@@ -91,6 +93,7 @@
                                             max-size-in-mb="@item.MaxSizeInMb"
                                             field-name="Value">
                                         </vc:file-upload>
+
                                         <div>
                                             <button class="btn btn-outline-secondary btn-sm" type="submit">@Localizer["Save"]</button>
                                         </div>
@@ -110,11 +113,11 @@
                     <td class="text-end">
                         @if (item.Value != item.DefaultValue && !item.IsOverriddenByConfig)
                         {
-                            <form asp-action="Edit" method="post" class="d-inline" id="reset-form-@item.Key">
+                            <form asp-action="Edit" method="post" class="d-inline">
                                 <input type="hidden" name="Key" value="@item.Key" />
                                 <input type="hidden" name="Value" value="@item.DefaultValue" />
                                 @Html.AntiForgeryToken()
-                                <button type="button" class="btn btn-sm btn-outline-secondary" title="@Localizer["Reset to default"]" onclick="openResetModal('reset-form-@item.Key')">
+                                <button type="submit" class="btn btn-sm btn-outline-secondary" title="@Localizer["Reset to default"]">
                                     <i class="align-middle" data-lucide="rotate-ccw"></i> @Localizer["Reset"]
                                 </button>
                             </form>
@@ -133,39 +136,6 @@
         <div asp-validation-summary="All"></div>
     </div>
 }
-
-<div class="modal fade" id="confirm-reset-modal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">@Localizer["Confirm Reset"]</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                @Localizer["Are you sure to reset this setting to default?"]
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@Localizer["Cancel"]</button>
-                <button type="button" class="btn btn-danger" id="confirm-reset-btn">@Localizer["Reset"]</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    let targetFormId = null;
-
-    function openResetModal(formId) {
-        targetFormId = formId;
-        new bootstrap.Modal(document.getElementById('confirm-reset-modal')).show();
-    }
-
-    document.getElementById('confirm-reset-btn').addEventListener('click', function() {
-        if (targetFormId) {
-            document.getElementById(targetFormId).submit();
-        }
-    });
-</script>
 
 @* ReSharper disable once Razor.SectionNotResolved *@
 @section styles {

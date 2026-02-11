@@ -1,9 +1,7 @@
 using Aiursoft.MusicExam.Authorization;
 using Aiursoft.MusicExam.Configuration;
-using Aiursoft.MusicExam.Models;
 using Aiursoft.MusicExam.Models.GlobalSettingsViewModels;
 using Aiursoft.MusicExam.Services;
-using Aiursoft.MusicExam.Services.FileStorage;
 using Aiursoft.UiStack.Navigation;
 using Aiursoft.WebTools.Attributes;
 using Microsoft.AspNetCore.Authorization;
@@ -13,9 +11,7 @@ namespace Aiursoft.MusicExam.Controllers;
 
 [Authorize(Policy = AppPermissionNames.CanManageGlobalSettings)]
 [LimitPerMin]
-public class GlobalSettingsController(
-    GlobalSettingsService settingsService,
-    StorageService storageService) : Controller
+public class GlobalSettingsController(GlobalSettingsService settingsService) : Controller
 {
     [RenderInNavBar(
         NavGroupName = "Administration",
@@ -25,7 +21,7 @@ public class GlobalSettingsController(
         CascadedLinksOrder = 9999,
         LinkText = "Global Settings",
         LinkOrder = 1)]
-    public async Task<IActionResult> Index()
+    public IActionResult Index()
     {
         var model = new IndexViewModel();
         foreach (var definition in SettingsMap.Definitions)
@@ -38,8 +34,12 @@ public class GlobalSettingsController(
                 Type = definition.Type,
                 DefaultValue = definition.DefaultValue,
                 ChoiceOptions = definition.ChoiceOptions,
-                Value = await settingsService.GetSettingValueAsync(definition.Key),
-                IsOverriddenByConfig = settingsService.IsOverriddenByConfig(definition.Key)
+                Value = settingsService.GetSettingValueAsync(definition.Key).GetAwaiter().GetResult(),
+                IsOverriddenByConfig = settingsService.IsOverriddenByConfig(definition.Key),
+                // File upload settings
+                Subfolder = definition.Subfolder,
+                AllowedExtensions = definition.AllowedExtensions,
+                MaxSizeInMb = definition.MaxSizeInMb
             });
         }
         return this.StackView(model);
@@ -56,23 +56,7 @@ public class GlobalSettingsController(
 
         try
         {
-            var definition = SettingsMap.Definitions.First(d => d.Key == model.Key);
-            if (definition.Type == SettingType.File)
-            {
-                if (model.FileValue is { Length: > 0 })
-                {
-                    var savedFilePath = await storageService.Save(Path.Combine("logos", model.FileValue.FileName), model.FileValue);
-                    await settingsService.UpdateSettingAsync(model.Key, savedFilePath);
-                }
-                else if (model.Value != null)
-                {
-                    await settingsService.UpdateSettingAsync(model.Key, model.Value);
-                }
-            }
-            else
-            {
-                await settingsService.UpdateSettingAsync(model.Key, model.Value ?? string.Empty);
-            }
+            await settingsService.UpdateSettingAsync(model.Key, model.Value ?? string.Empty);
         }
         catch (InvalidOperationException e)
         {

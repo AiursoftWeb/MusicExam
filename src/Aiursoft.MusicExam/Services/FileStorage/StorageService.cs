@@ -229,7 +229,7 @@ public class StorageService(
         return $"{context.Request.Scheme}://{context.Request.Host}/download/{RelativePathToUriPath(relativePath)}";
     }
 
-    public string RelativePathToInternetUrl(string relativePath, bool isVault)
+    public string RelativePathToInternetUrl(string relativePath, bool isVault = false)
     {
         if (isVault)
         {

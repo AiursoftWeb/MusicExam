@@ -94,12 +94,12 @@ public class ViewModelArgsInjector(
 
         _ = localizer["Global Management"];
         _ = localizer["Manage Question Bank Roles"];
-    
+
         _ = localizer["Global Question Bank Management"];
         _ = localizer["Manage Paper Roles"];
-    
+
         _ = localizer["Manage Level Authorization"];
-    
+
         _ = localizer["Manage Display Order"];
     }
 
@@ -108,7 +108,7 @@ public class ViewModelArgsInjector(
         UiStackLayoutViewModel toInject)
     {
         toInject.PageTitle = localizer[toInject.PageTitle ?? "View"];
-        toInject.AppName = globalSettingsService.GetSettingValueAsync(SettingsMap.ProjectName).Result;
+        toInject.AppName = globalSettingsService.GetSettingValueAsync("ProjectName").GetAwaiter().GetResult();
         toInject.Theme = UiTheme.Light;
         toInject.SidebarTheme = UiSidebarTheme.Default;
         toInject.Layout = UiLayout.Fluid;
@@ -120,14 +120,14 @@ public class ViewModelArgsInjector(
         UiStackLayoutViewModel toInject)
     {
         var preferDarkTheme = context.Request.Cookies[ThemeController.ThemeCookieKey] == true.ToString();
+        var projectName = globalSettingsService.GetSettingValueAsync("ProjectName").GetAwaiter().GetResult();
+        var brandName = globalSettingsService.GetSettingValueAsync("BrandName").GetAwaiter().GetResult();
+        var brandHomeUrl = globalSettingsService.GetSettingValueAsync("BrandHomeUrl").GetAwaiter().GetResult();
         toInject.PageTitle = localizer[toInject.PageTitle ?? "View"];
-        var projectName = globalSettingsService.GetSettingValueAsync(SettingsMap.ProjectName).Result;
         toInject.AppName = projectName;
         toInject.Theme = preferDarkTheme ? UiTheme.Dark : UiTheme.Light;
         toInject.SidebarTheme = preferDarkTheme ? UiSidebarTheme.Dark : UiSidebarTheme.Default;
         toInject.Layout = UiLayout.Fluid;
-        var brandName = Task.Run(() => globalSettingsService.GetSettingValueAsync(SettingsMap.BrandName)).Result;
-        var brandHomeUrl = Task.Run(() => globalSettingsService.GetSettingValueAsync(SettingsMap.BrandHomeUrl)).Result;
         toInject.FooterMenu = new FooterMenuViewModel
         {
             AppBrand = new Link { Text = brandName, Href = brandHomeUrl },
