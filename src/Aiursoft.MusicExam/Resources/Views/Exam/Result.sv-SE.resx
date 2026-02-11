@@ -27,8 +27,14 @@
   <data name="Correct Answer" xml:space="preserve">
     <value>Rätt svar</value>
   </data>
+  <data name="Correct Answers" xml:space="preserve">
+    <value>Rätta svar</value>
+  </data>
   <data name="Explanation" xml:space="preserve">
     <value>Förklaring</value>
+  </data>
+  <data name="Final Score" xml:space="preserve">
+    <value>Slutpoäng</value>
   </data>
   <data name="Incorrect" xml:space="preserve">
     <value>Fel</value>

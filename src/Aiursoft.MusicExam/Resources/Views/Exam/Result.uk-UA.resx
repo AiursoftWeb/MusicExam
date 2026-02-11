@@ -27,8 +27,14 @@
   <data name="Correct Answer" xml:space="preserve">
     <value>Правильна відповідь</value>
   </data>
+  <data name="Correct Answers" xml:space="preserve">
+    <value>Правильні відповіді</value>
+  </data>
   <data name="Explanation" xml:space="preserve">
     <value>Пояснення</value>
+  </data>
+  <data name="Final Score" xml:space="preserve">
+    <value>Підсумковий бал</value>
   </data>
   <data name="Incorrect" xml:space="preserve">
     <value>Неправильно</value>

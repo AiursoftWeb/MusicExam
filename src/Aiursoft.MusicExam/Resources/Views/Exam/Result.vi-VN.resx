@@ -27,8 +27,14 @@
   <data name="Correct Answer" xml:space="preserve">
     <value>Đáp án đúng</value>
   </data>
+  <data name="Correct Answers" xml:space="preserve">
+    <value>Câu trả lời đúng</value>
+  </data>
   <data name="Explanation" xml:space="preserve">
     <value>Giải thích</value>
+  </data>
+  <data name="Final Score" xml:space="preserve">
+    <value>Điểm cuối cùng</value>
   </data>
   <data name="Incorrect" xml:space="preserve">
     <value>Sai</value>

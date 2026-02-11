@@ -27,8 +27,14 @@
   <data name="Correct Answer" xml:space="preserve">
     <value>คำตอบที่ถูกต้อง</value>
   </data>
+  <data name="Correct Answers" xml:space="preserve">
+    <value>คำตอบที่ถูกต้อง</value>
+  </data>
   <data name="Explanation" xml:space="preserve">
     <value>คำอธิบาย</value>
+  </data>
+  <data name="Final Score" xml:space="preserve">
+    <value>คะแนนสุดท้าย</value>
   </data>
   <data name="Incorrect" xml:space="preserve">
     <value>ผิด</value>
