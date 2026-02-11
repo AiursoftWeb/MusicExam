@@ -1,19 +1,10 @@
 @model Aiursoft.MusicExam.Views.Shared.Components.MarketingNavbar.MarketingNavbarViewModel
-@using Aiursoft.MusicExam.Services
-@using Aiursoft.MusicExam.Services.FileStorage
-@inject GlobalSettingsService GlobalSettingsService
-@inject StorageService StorageService
-
-@{
-    var brandLogo = await GlobalSettingsService.GetSettingValueAsync("BrandLogo");
-    var logoUrl = string.IsNullOrEmpty(brandLogo) ? "/logo.svg" : StorageService.RelativePathToInternetUrl(brandLogo, Context, false);
-}
 
 
 <nav class="navbar navbar-expand-md navbar-dark bg-dark landing-navbar">
     <div class="container">
         <a class="navbar-brand landing-brand text-white" href="/">
-            <img src="@logoUrl" alt="logo" style="width: 24px; height: 24px;" />
+            <img src="@Model.LogoUrl" alt="logo" style="width: 24px; height: 24px;" />
             @Model.ProjectName
         </a>
         <ul class="navbar-nav ms-auto">

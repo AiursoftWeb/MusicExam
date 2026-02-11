@@ -203,13 +203,13 @@ public class ViewModelArgsInjector(
             }
         }
 
-        var brandLogo = globalSettingsService.GetSettingValueAsync("BrandLogo").Result;
+        var projectLogo = globalSettingsService.GetSettingValueAsync(SettingsMap.ProjectLogo).Result;
         toInject.Sidebar = new SidebarViewModel
         {
             SideLogo = new SideLogoViewModel
             {
                 AppName = projectName,
-                LogoUrl = string.IsNullOrEmpty(brandLogo) ? "/logo.svg" : storageService.RelativePathToInternetUrl(brandLogo, context, false),
+                LogoUrl = GetLogoUrl(context).GetAwaiter().GetResult(),
                 Href = "/"
             },
             SideMenu = new SideMenuViewModel
@@ -311,5 +311,16 @@ public class ViewModelArgsInjector(
                 ]
             };
         }
+    }
+
+
+    private async Task<string> GetLogoUrl(HttpContext context)
+    {
+        var logoPath = await globalSettingsService.GetSettingValueAsync("ProjectLogo");
+        if (string.IsNullOrWhiteSpace(logoPath))
+        {
+            return "/logo.svg";
+        }
+        return storageService.RelativePathToInternetUrl(logoPath, context);
     }
 }

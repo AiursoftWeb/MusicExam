@@ -61,11 +61,14 @@ public class SettingsMap
         },
         new GlobalSettingDefinition
         {
-            Key = "BrandLogo",
-            Name = Localizer["Brand Logo"],
-            Description = Localizer["The brand logo displayed in the navbar and sidebar. Will fallback to default logo if not set."],
+            Key = "ProjectLogo",
+            Name = Localizer["Project Logo"],
+            Description = Localizer["The logo of the project displayed in the navbar and footer. Support jpg, png, svg."],
             Type = SettingType.File,
-            DefaultValue = ""
+            DefaultValue = "",
+            Subfolder = "project-logo",
+            AllowedExtensions = "jpg png svg",
+            MaxSizeInMb = 5
         }
     };
 }

@@ -7,5 +7,8 @@ public class GlobalSettingDefinition
     public required string Description { get; init; }
     public required SettingType Type { get; init; }
     public required string DefaultValue { get; init; }
+    public string? Subfolder { get; init; }
+    public string? AllowedExtensions { get; init; }
+    public int? MaxSizeInMb { get; init; }
     public Dictionary<string, string>? ChoiceOptions { get; init; }
 }
