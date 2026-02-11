@@ -48,7 +48,7 @@
                     @* The clickable-row class and data-href attribute are fully preserved. *@
                     <tr class="clickable-row" data-href="@Url.Action("Details", new { id = item.User.Id })">
                         <td>
-                            <img src="@StorageService.RelativePathToInternetUrl(item.User.AvatarRelativePath, Context, false)?w=72&square=true"
+                            <img src="@StorageService.RelativePathToInternetUrl(item.User.AvatarRelativePath, Context)?w=72&square=true"
                                 alt="@item.User.DisplayName" class="rounded-circle" width="36" height="36" />
                         </td>
                         <td>@item.User.UserName</td>

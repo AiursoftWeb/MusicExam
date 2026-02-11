@@ -1,3 +1,4 @@
+@inject Aiursoft.MusicExam.Services.FileStorage.StorageService Storage
 @using Aiursoft.MusicExam.Models
 @using Aiursoft.MusicExam.Configuration
 @using Microsoft.Extensions.Localization
@@ -72,14 +73,26 @@
                                 }
                                 else if (item.Type == SettingType.File)
                                 {
-                                    <div class="d-flex align-items-center gap-2">
-                                        @if (!string.IsNullOrEmpty(item.Value))
+                                    <div class="d-flex flex-column gap-2">
+                                        @if (!string.IsNullOrWhiteSpace(item.Value))
                                         {
-                                            <img src="/download/@item.Value" alt="logo" class="rounded border p-1 bg-light" style="width: 40px; height: 40px; object-fit: contain;" />
+                                            <div>
+                                                                                                <a href="@Storage.RelativePathToInternetUrl(item.Value, Context)"                                                    target="_blank"
+                                                   class="btn btn-sm btn-outline-info">
+                                                    <i class="align-middle" data-lucide="eye"></i>
+                                                    @Localizer["View Current File"]
+                                                </a>
+                                            </div>
                                         }
-                                        <div class="input-group input-group-sm">
-                                            <input type="file" name="FileValue" class="form-control" accept="image/*,image/svg+xml" />
-                                            <button class="btn btn-outline-secondary" type="submit">@Localizer["Upload"]</button>
+                                        <vc:file-upload
+                                            asp-for="@item.Value"
+                                            subfolder="@item.Subfolder"
+                                            allowed-extensions="@item.AllowedExtensions"
+                                            max-size-in-mb="@item.MaxSizeInMb"
+                                            field-name="Value">
+                                        </vc:file-upload>
+                                        <div>
+                                            <button class="btn btn-outline-secondary btn-sm" type="submit">@Localizer["Save"]</button>
                                         </div>
                                     </div>
                                 }
@@ -153,3 +166,14 @@
         }
     });
 </script>
+
+@* ReSharper disable once Razor.SectionNotResolved *@
+@section styles {
+    <link rel="stylesheet" href="~/node_modules/dropify/dist/css/dropify.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/styles/uploader.css" asp-append-version="true" />
+}
+
+@* ReSharper disable once Razor.SectionNotResolved *@
+@section scripts {
+    <script src="~/node_modules/dropify/dist/js/dropify.min.js" asp-append-version="true"></script>
+}

@@ -2,11 +2,15 @@ using Aiursoft.Scanner.Abstractions;
 using Aiursoft.MusicExam.Configuration;
 using Aiursoft.MusicExam.Entities;
 using Aiursoft.MusicExam.Models;
+using Aiursoft.MusicExam.Services.FileStorage; // Added
 using Microsoft.EntityFrameworkCore;
 
 namespace Aiursoft.MusicExam.Services;
 
-public class GlobalSettingsService(TemplateDbContext dbContext, IConfiguration configuration) : IScopedDependency
+public class GlobalSettingsService(
+    TemplateDbContext dbContext,
+    IConfiguration configuration,
+    StorageService storageService) : IScopedDependency // Modified constructor
 {
     public async Task<string> GetSettingValueAsync(string key)
     {
@@ -77,6 +81,25 @@ public class GlobalSettingsService(TemplateDbContext dbContext, IConfiguration c
                 if (definition.ChoiceOptions != null && !definition.ChoiceOptions.ContainsKey(value))
                 {
                     throw new InvalidOperationException($"Value '{value}' is not a valid choice for setting {key}.");
+                }
+                break;
+            case SettingType.File:
+                if (string.IsNullOrWhiteSpace(value))
+                {
+                    throw new InvalidOperationException($"File path cannot be empty for setting {key}.");
+                }
+                // Validate that the file exists and path is secure using StorageService
+                try
+                {
+                    var physicalPath = storageService.GetFilePhysicalPath(value, isVault: false);
+                    if (!File.Exists(physicalPath))
+                    {
+                        throw new InvalidOperationException($"File not found for setting {key}.");
+                    }
+                }
+                catch (ArgumentException)
+                {
+                    throw new InvalidOperationException($"Invalid file path for setting {key}.");
                 }
                 break;
             case SettingType.Text:

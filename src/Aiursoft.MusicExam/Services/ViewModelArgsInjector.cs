@@ -130,7 +130,7 @@ public class ViewModelArgsInjector(
         var brandHomeUrl = Task.Run(() => globalSettingsService.GetSettingValueAsync(SettingsMap.BrandHomeUrl)).Result;
         toInject.FooterMenu = new FooterMenuViewModel
         {
-            AppBrand = new Link { Text = projectName, Href = brandHomeUrl },
+            AppBrand = new Link { Text = brandName, Href = brandHomeUrl },
             Links =
             [
                 new Link { Text = localizer["Home"], Href = "/" },
@@ -203,7 +203,7 @@ public class ViewModelArgsInjector(
             }
         }
 
-        var projectLogo = globalSettingsService.GetSettingValueAsync(SettingsMap.ProjectLogo).Result;
+
         toInject.Sidebar = new SidebarViewModel
         {
             SideLogo = new SideLogoViewModel
@@ -249,7 +249,7 @@ public class ViewModelArgsInjector(
             toInject.Navbar.UserDropdown = new UserDropdownViewModel
             {
                 UserName = context.User.Claims.First(c => c.Type == UserClaimsPrincipalFactory.DisplayNameClaimType).Value,
-                UserAvatarUrl = $"{storageService.RelativePathToInternetUrl(avatarPath, context, false)}?w=100&square=true",
+                UserAvatarUrl = $"{storageService.RelativePathToInternetUrl(avatarPath, context)}?w=100&square=true",
                 IconLinkGroups =
                 [
                     new IconLinkGroup

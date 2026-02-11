@@ -219,7 +219,7 @@ public class StorageService(
         return urlPath;
     }
 
-    public string RelativePathToInternetUrl(string relativePath, HttpContext context, bool isVault)
+    public string RelativePathToInternetUrl(string relativePath, HttpContext context, bool isVault = false)
     {
         if (isVault)
         {

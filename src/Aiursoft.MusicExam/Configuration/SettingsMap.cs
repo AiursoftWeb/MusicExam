@@ -9,6 +9,7 @@ public class SettingsMap
     public const string BrandHomeUrl = "BrandHomeUrl";
     public const string Icp = "Icp";
     public const string ProjectName = "ProjectName";
+    public const string ProjectLogo = "ProjectLogo";
 
     public class FakeLocalizer
     {
