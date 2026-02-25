@@ -1,0 +1,67 @@
+@model Aiursoft.MusicExam.Models.QuestionsViewModels.CreateViewModel
+@using Aiursoft.MusicExam.Entities
+
+@{
+    ViewData["Title"] = Localizer["Add New Question"];
+}
+
+<div class="container-fluid p-0">
+    <h1 class="h3 mb-3">@ViewData["Title"]</h1>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <form asp-action="Create" method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="PaperId" />
+
+                        <div class="mb-3">
+                            <label asp-for="Content" class="form-label"></label>
+                            <textarea asp-for="Content" class="form-control" rows="3"></textarea>
+                            <span asp-validation-for="Content" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="QuestionType" class="form-label"></label>
+                            <select asp-for="QuestionType" asp-items="Html.GetEnumSelectList<QuestionType>()" class="form-select"></select>
+                            <span asp-validation-for="QuestionType" class="text-danger"></span>
+                        </div>
+
+                         <div class="mb-3">
+                            <label asp-for="Explanation" class="form-label"></label>
+                            <textarea asp-for="Explanation" class="form-control" rows="2"></textarea>
+                            <span asp-validation-for="Explanation" class="text-danger"></span>
+                            <div class="form-text">@Localizer["Explanation for the answer."]</div>
+                        </div>
+
+                        <h5 class="mt-4">@Localizer["Options"]</h5>
+                        <div id="options-container">
+                            @for (int i = 0; i < Model.Options.Count; i++)
+                            {
+                                <div class="card mb-2">
+                                    <div class="card-body p-3">
+                                        <div class="mb-2">
+                                            <label class="form-label">@Localizer["Option Content"]</label>
+                                            <input asp-for="Options[i].Content" class="form-control" />
+                                            <span asp-validation-for="Options[i].Content" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-check">
+                                            <input asp-for="Options[i].IsCorrect" class="form-check-input" type="checkbox" />
+                                            <label class="form-check-label" asp-for="Options[i].IsCorrect">@Localizer["Is Correct Answer"]</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+
+                        <div class="mt-3">
+                            <button type="submit" class="btn btn-primary">@Localizer["Add Question"]</button>
+                            <a asp-action="Index" class="btn btn-secondary">@Localizer["Cancel"]</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
