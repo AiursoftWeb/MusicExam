@@ -21,7 +21,7 @@ public class CreateViewModel : UiStackLayoutViewModel
 
     [Display(Name = "Question Asset")]
     [MaxLength(500)]
-    [RegularExpression(@"^questions/.*", ErrorMessage = "Please upload a valid asset file.")]
+    [RegularExpression(@"^(questions/.*|importer-assets/.*)$", ErrorMessage = "Please upload a valid asset file.")]
     public string? AssetPath { get; set; }
 
     public List<OptionViewModel> Options { get; set; } = new();

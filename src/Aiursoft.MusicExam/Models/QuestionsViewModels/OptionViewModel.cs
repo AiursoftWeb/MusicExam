@@ -14,6 +14,6 @@ public class OptionViewModel
 
     [Display(Name = "Option Asset")]
     [MaxLength(500)]
-    [RegularExpression(@"^questions/.*", ErrorMessage = "Please upload a valid asset file.")]
+    [RegularExpression(@"^(questions/.*|importer-assets/.*)$", ErrorMessage = "Please upload a valid asset file.")]
     public string? AssetPath { get; set; }
 }
