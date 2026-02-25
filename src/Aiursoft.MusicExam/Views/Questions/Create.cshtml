@@ -32,7 +32,7 @@
                                 if (Model.AssetPath.EndsWith(".mp3", StringComparison.OrdinalIgnoreCase) || Model.AssetPath.EndsWith(".wav", StringComparison.OrdinalIgnoreCase) || Model.AssetPath.EndsWith(".ogg", StringComparison.OrdinalIgnoreCase))
                                 {
                                     <div class="mb-2">
-                                        <audio controls src="@assetUrl"></audio>
+                                        <div class="audio-player-wrapper d-inline-block mb-2 me-2" data-audio-src="@assetUrl"></div>
                                     </div>
                                 }
                                 else if (Model.AssetPath.EndsWith(".mp4", StringComparison.OrdinalIgnoreCase))
@@ -84,7 +84,7 @@
                                                 if (Model.Options[i].AssetPath!.EndsWith(".mp3", StringComparison.OrdinalIgnoreCase) || Model.Options[i].AssetPath!.EndsWith(".wav", StringComparison.OrdinalIgnoreCase) || Model.Options[i].AssetPath!.EndsWith(".ogg", StringComparison.OrdinalIgnoreCase))
                                                 {
                                                     <div class="mb-2">
-                                                        <audio controls src="@optAssetUrl"></audio>
+                                                        <div class="audio-player-wrapper d-inline-block mb-2 me-2" data-audio-src="@optAssetUrl"></div>
                                                     </div>
                                                 }
                                                 else if (Model.Options[i].AssetPath!.EndsWith(".mp4", StringComparison.OrdinalIgnoreCase))
@@ -132,4 +132,14 @@
 @* ReSharper disable once Razor.SectionNotResolved *@
 @section scripts {
     <script src="~/node_modules/dropify/dist/js/dropify.min.js" asp-append-version="true"></script>
+    <script src="~/scripts/audioPlayer.js" asp-append-version="true"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Initialize Custom Audio Players
+            document.querySelectorAll('.audio-player-wrapper').forEach(wrapper => {
+                const src = wrapper.getAttribute('data-audio-src');
+                wrapper.musicPlayer = new MusicExamAudioPlayer(wrapper, src);
+            });
+        });
+    </script>
 }
