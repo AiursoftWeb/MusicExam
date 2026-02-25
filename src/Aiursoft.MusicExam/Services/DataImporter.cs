@@ -153,14 +153,17 @@ public class DataImporter : ISingletonDependency
                             foreach (var optionDto in questionDto.Options)
                             {
                                 string optionContent = optionDto.Content;
+                                string? optionAssetPath = null;
                                 if (optionDto.Type != "text" && !string.IsNullOrEmpty(optionDto.LocalContent))
                                 {
-                                    optionContent = await CopyAsset(optionDto.LocalContent, sourceAssetDir);
+                                    optionAssetPath = await CopyAsset(optionDto.LocalContent, sourceAssetDir);
+                                    optionContent = string.IsNullOrWhiteSpace(optionContent) ? " " : optionContent;
                                 }
 
                                 var newOption = new Option
                                 {
-                                    Content = optionContent,
+                                    Content = string.IsNullOrWhiteSpace(optionContent) ? " " : optionContent,
+                                    AssetPath = optionAssetPath,
                                     DisplayOrder = optionDisplayOrder++,
                                     Question = newQuestion,
                                     IsCorrect = correctAnswers.Contains(IndexToLetter(optionDto.Value))
@@ -253,7 +256,11 @@ public class DataImporter : ISingletonDependency
                         var newPath = await CopyAsset(option.Content, sourceDir);
                         if (newPath != option.Content)
                         {
-                            option.Content = newPath;
+                            option.AssetPath = newPath;
+                            if (option.Content == option.AssetPath)
+                            {
+                                option.Content = " ";
+                            }
                             paramsChanged = true;
                             _logger.LogInformation("Repaired asset for Option {Id}", option.Id);
                         }

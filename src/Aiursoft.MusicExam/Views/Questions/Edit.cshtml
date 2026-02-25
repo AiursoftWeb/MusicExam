@@ -27,11 +27,27 @@
                         
                         <div class="mb-3">
                             <label asp-for="AssetPath" class="form-label">@Localizer["Question Media (Optional)"]</label>
-                            @if (!string.IsNullOrWhiteSpace(Model.AssetPath) && (Model.AssetPath.EndsWith(".mp3") || Model.AssetPath.EndsWith(".wav") || Model.AssetPath.EndsWith(".ogg")))
+                            @if (!string.IsNullOrWhiteSpace(Model.AssetPath))
                             {
-                                <div class="mb-2">
-                                    <audio controls src="@Storage.RelativePathToInternetUrl(Model.AssetPath!)"></audio>
-                                </div>
+                                var assetUrl = Storage.RelativePathToInternetUrl(Model.AssetPath!);
+                                if (Model.AssetPath.EndsWith(".mp3", StringComparison.OrdinalIgnoreCase) || Model.AssetPath.EndsWith(".wav", StringComparison.OrdinalIgnoreCase) || Model.AssetPath.EndsWith(".ogg", StringComparison.OrdinalIgnoreCase))
+                                {
+                                    <div class="mb-2">
+                                        <audio controls src="@assetUrl"></audio>
+                                    </div>
+                                }
+                                else if (Model.AssetPath.EndsWith(".mp4", StringComparison.OrdinalIgnoreCase))
+                                {
+                                    <div class="mb-2">
+                                        <video controls src="@assetUrl" style="max-width: 100%; max-height: 200px;"></video>
+                                    </div>
+                                }
+                                else if (Model.AssetPath.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.AssetPath.EndsWith(".png", StringComparison.OrdinalIgnoreCase) || Model.AssetPath.EndsWith(".bmp", StringComparison.OrdinalIgnoreCase) || Model.AssetPath.EndsWith(".gif", StringComparison.OrdinalIgnoreCase))
+                                {
+                                    <div class="mb-2">
+                                        <img src="@assetUrl" class="img-fluid" style="max-height: 200px;" alt="Question Asset Preview" />
+                                    </div>
+                                }
                             }
                             <vc:file-upload asp-for="@Model.AssetPath" subfolder="questions" allowed-extensions="jpg png bmp gif mp3 wav ogg mp4" max-size-in-mb="50"></vc:file-upload>
                             <span asp-validation-for="AssetPath" class="text-danger"></span>
@@ -64,11 +80,27 @@
                                         </div>
                                         <div class="mb-2">
                                             <label class="form-label">@Localizer["Option Media (Optional)"]</label>
-                                            @if (!string.IsNullOrWhiteSpace(Model.Options[i].AssetPath) && (Model.Options[i].AssetPath!.EndsWith(".mp3") || Model.Options[i].AssetPath!.EndsWith(".wav") || Model.Options[i].AssetPath!.EndsWith(".ogg")))
+                                            @if (!string.IsNullOrWhiteSpace(Model.Options[i].AssetPath))
                                             {
-                                                <div class="mb-2">
-                                                    <audio controls src="@Storage.RelativePathToInternetUrl(Model.Options[i].AssetPath!)"></audio>
-                                                </div>
+                                                var optAssetUrl = Storage.RelativePathToInternetUrl(Model.Options[i].AssetPath!);
+                                                if (Model.Options[i].AssetPath!.EndsWith(".mp3", StringComparison.OrdinalIgnoreCase) || Model.Options[i].AssetPath!.EndsWith(".wav", StringComparison.OrdinalIgnoreCase) || Model.Options[i].AssetPath!.EndsWith(".ogg", StringComparison.OrdinalIgnoreCase))
+                                                {
+                                                    <div class="mb-2">
+                                                        <audio controls src="@optAssetUrl"></audio>
+                                                    </div>
+                                                }
+                                                else if (Model.Options[i].AssetPath!.EndsWith(".mp4", StringComparison.OrdinalIgnoreCase))
+                                                {
+                                                    <div class="mb-2">
+                                                        <video controls src="@optAssetUrl" style="max-width: 100%; max-height: 200px;"></video>
+                                                    </div>
+                                                }
+                                                else if (Model.Options[i].AssetPath!.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.Options[i].AssetPath!.EndsWith(".png", StringComparison.OrdinalIgnoreCase) || Model.Options[i].AssetPath!.EndsWith(".bmp", StringComparison.OrdinalIgnoreCase) || Model.Options[i].AssetPath!.EndsWith(".gif", StringComparison.OrdinalIgnoreCase))
+                                                {
+                                                    <div class="mb-2">
+                                                        <img src="@optAssetUrl" class="img-fluid" style="max-height: 200px;" alt="Option Asset Preview" />
+                                                    </div>
+                                                }
                                             }
                                             <vc:file-upload asp-for="@Model.Options[i].AssetPath" subfolder="questions" allowed-extensions="jpg png bmp gif mp3 wav ogg mp4" max-size-in-mb="50" field-name="Options[@i].AssetPath"></vc:file-upload>
                                             <span asp-validation-for="Options[i].AssetPath" class="text-danger"></span>
@@ -94,11 +126,13 @@
     </div>
 </div>
 
+@* ReSharper disable once Razor.SectionNotResolved *@
 @section styles {
     <link rel="stylesheet" href="~/node_modules/dropify/dist/css/dropify.min.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/styles/uploader.css" asp-append-version="true" />
 }
 
+@* ReSharper disable once Razor.SectionNotResolved *@
 @section scripts {
     <script src="~/node_modules/dropify/dist/js/dropify.min.js" asp-append-version="true"></script>
 }

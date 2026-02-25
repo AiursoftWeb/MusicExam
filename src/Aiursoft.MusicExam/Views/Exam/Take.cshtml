@@ -56,17 +56,37 @@
                                                                            value="@option.Id"
                                                                            data-is-correct="@option.IsCorrect.ToString().ToLower()">
 
-                                    @if (option.Content.EndsWith(".mp3", StringComparison.OrdinalIgnoreCase))
+                                    @if (!string.IsNullOrWhiteSpace(option.AssetPath))
                                     {
-                                                                                <div class="audio-player-wrapper d-inline-block align-middle mb-1" style="width: auto;" data-audio-src="@Storage.RelativePathToInternetUrl(option.Content, Context)"></div>
+                                        if (option.AssetPath.EndsWith(".mp3", StringComparison.OrdinalIgnoreCase) || option.AssetPath.EndsWith(".wav", StringComparison.OrdinalIgnoreCase) || option.AssetPath.EndsWith(".ogg", StringComparison.OrdinalIgnoreCase))
+                                        {
+                                            <div class="audio-player-wrapper d-inline-block align-middle mb-1" style="width: auto;" data-audio-src="@Storage.RelativePathToInternetUrl(option.AssetPath, Context)"></div>
+                                        }
+                                        else if (option.AssetPath.EndsWith(".mp4", StringComparison.OrdinalIgnoreCase))
+                                        {
+                                            <video controls src="@Storage.RelativePathToInternetUrl(option.AssetPath, Context)" style="max-width: 100%; max-height: 200px;" class="my-2"></video>
+                                        }
+                                        else if (option.AssetPath.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || option.AssetPath.EndsWith(".png", StringComparison.OrdinalIgnoreCase) || option.AssetPath.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || option.AssetPath.EndsWith(".gif", StringComparison.OrdinalIgnoreCase) || option.AssetPath.EndsWith(".bmp", StringComparison.OrdinalIgnoreCase))
+                                        {
+                                            <img src="@Storage.RelativePathToInternetUrl(option.AssetPath, Context)" class="img-fluid my-2" style="max-height: 100px;" alt="Option asset" />
+                                        }
                                     }
-                                    else if (option.Content.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || option.Content.EndsWith(".png", StringComparison.OrdinalIgnoreCase) || option.Content.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase))
+
+                                    @if (!string.IsNullOrWhiteSpace(option.Content) && string.IsNullOrWhiteSpace(option.AssetPath) && (option.Content.EndsWith(".mp3", StringComparison.OrdinalIgnoreCase) || option.Content.EndsWith(".wav", StringComparison.OrdinalIgnoreCase) || option.Content.EndsWith(".ogg", StringComparison.OrdinalIgnoreCase)))
                                     {
-                                                                                <img src="@Storage.RelativePathToInternetUrl(option.Content, Context)" class="img-fluid my-2" style="max-height: 100px;" alt="Option asset" />
+                                        <div class="audio-player-wrapper d-inline-block align-middle mb-1" style="width: auto;" data-audio-src="@Storage.RelativePathToInternetUrl(option.Content, Context)"></div>
                                     }
-                                    else
+                                    else if (!string.IsNullOrWhiteSpace(option.Content) && string.IsNullOrWhiteSpace(option.AssetPath) && option.Content.EndsWith(".mp4", StringComparison.OrdinalIgnoreCase))
                                     {
-                                        @option.Content
+                                        <video controls src="@Storage.RelativePathToInternetUrl(option.Content, Context)" style="max-width: 100%; max-height: 200px;" class="my-2"></video>
+                                    }
+                                    else if (!string.IsNullOrWhiteSpace(option.Content) && string.IsNullOrWhiteSpace(option.AssetPath) && (option.Content.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || option.Content.EndsWith(".png", StringComparison.OrdinalIgnoreCase) || option.Content.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || option.Content.EndsWith(".gif", StringComparison.OrdinalIgnoreCase) || option.Content.EndsWith(".bmp", StringComparison.OrdinalIgnoreCase)))
+                                    {
+                                        <img src="@Storage.RelativePathToInternetUrl(option.Content, Context)" class="img-fluid my-2" style="max-height: 100px;" alt="Option asset" />
+                                    }
+                                    else if (!string.IsNullOrWhiteSpace(option.Content) && option.Content.Trim() != "")
+                                    {
+                                        <span class="ms-1 align-middle">@option.Content</span>
                                     }
                                                                 </label>
                             }

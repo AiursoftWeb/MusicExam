@@ -13,7 +13,7 @@ public class QuestionsControllerTests : TestBase
         // 1. Login as admin
         await LoginAsAdmin();
 
-        var schoolId = 0;
+        int schoolId;
         using (var scope = Server!.Services.CreateScope())
         {
             var db = scope.ServiceProvider.GetRequiredService<TemplateDbContext>();
@@ -36,7 +36,7 @@ public class QuestionsControllerTests : TestBase
 
         AssertRedirect(createResponse, "/Questions");
 
-        int paperId = 0;
+        int paperId;
         using (var scope = Server!.Services.CreateScope())
         {
             var db = scope.ServiceProvider.GetRequiredService<TemplateDbContext>();
@@ -69,7 +69,7 @@ public class QuestionsControllerTests : TestBase
         
         AssertRedirect(createQResponse, "/Questions");
 
-        int questionId = 0;
+        int questionId;
         using (var scope = Server!.Services.CreateScope())
         {
             var db = scope.ServiceProvider.GetRequiredService<TemplateDbContext>();

@@ -1,3 +1,4 @@
+using System.Text.Json;
 using Aiursoft.MusicExam.Authorization;
 using Aiursoft.MusicExam.Services;
 using Aiursoft.MusicExam.Services.FileStorage;
@@ -217,15 +218,15 @@ public class QuestionsController : Controller
         {
             PaperId = model.PaperId,
             Content = model.Content,
-            AssetPath = model.AssetPath,
+            AssetPath = !string.IsNullOrWhiteSpace(model.AssetPath) ? JsonSerializer.Serialize(new List<string> { model.AssetPath }) : null,
             Explanation = model.Explanation,
             QuestionType = model.QuestionType,
             Order = maxOrder + 1,
             Options = model.Options
-                .Where(o => !string.IsNullOrWhiteSpace(o.Content))
+                .Where(o => !string.IsNullOrWhiteSpace(o.Content) || !string.IsNullOrWhiteSpace(o.AssetPath))
                 .Select(o => new Option
                 {
-                    Content = o.Content!,
+                    Content = string.IsNullOrWhiteSpace(o.Content) ? " " : o.Content,
                     AssetPath = o.AssetPath,
                     IsCorrect = o.IsCorrect
                 })
@@ -255,15 +256,32 @@ public class QuestionsController : Controller
             QuestionId = question.Id,
             PaperId = question.PaperId,
             Content = question.Content,
-            AssetPath = question.AssetPath,
+            AssetPath = !string.IsNullOrWhiteSpace(question.AssetPath) && question.AssetPath.TrimStart().StartsWith('[') 
+                ? JsonSerializer.Deserialize<List<string>>(question.AssetPath)?.FirstOrDefault() 
+                : question.AssetPath,
             Explanation = question.Explanation,
             QuestionType = question.QuestionType,
-            Options = question.Options.OrderBy(o => o.Id).Select(o => new OptionViewModel
+            Options = question.Options.OrderBy(o => o.Id).Select(o =>
             {
-                Id = o.Id,
-                Content = o.Content,
-                AssetPath = o.AssetPath,
-                IsCorrect = o.IsCorrect
+                var content = o.Content;
+                var assetPath = o.AssetPath;
+
+                // Migrate legacy media URL in Content to AssetPath if AssetPath is empty
+                if (string.IsNullOrWhiteSpace(assetPath) && !string.IsNullOrWhiteSpace(content) &&
+                    (content.StartsWith("importer-assets/", StringComparison.OrdinalIgnoreCase) || content.StartsWith("questions/", StringComparison.OrdinalIgnoreCase) || content.StartsWith("http", StringComparison.OrdinalIgnoreCase)) &&
+                    (content.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || content.EndsWith(".png", StringComparison.OrdinalIgnoreCase) || content.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || content.EndsWith(".gif", StringComparison.OrdinalIgnoreCase) || content.EndsWith(".bmp", StringComparison.OrdinalIgnoreCase) || content.EndsWith(".mp3", StringComparison.OrdinalIgnoreCase) || content.EndsWith(".mp4", StringComparison.OrdinalIgnoreCase) || content.EndsWith(".wav", StringComparison.OrdinalIgnoreCase) || content.EndsWith(".ogg", StringComparison.OrdinalIgnoreCase)))
+                {
+                    assetPath = content;
+                    content = string.Empty;
+                }
+
+                return new OptionViewModel
+                {
+                    Id = o.Id,
+                    Content = content,
+                    AssetPath = assetPath,
+                    IsCorrect = o.IsCorrect
+                };
             }).ToList()
         };
 
@@ -327,7 +345,7 @@ public class QuestionsController : Controller
         }
 
         question.Content = model.Content;
-        question.AssetPath = model.AssetPath;
+        question.AssetPath = !string.IsNullOrWhiteSpace(model.AssetPath) ? JsonSerializer.Serialize(new List<string> { model.AssetPath }) : null;
         question.Explanation = model.Explanation;
         question.QuestionType = model.QuestionType;
 
@@ -336,10 +354,10 @@ public class QuestionsController : Controller
         // For production, diff-ing is better, but this works for now.
         _dbContext.Options.RemoveRange(question.Options);
         question.Options = model.Options
-            .Where(o => !string.IsNullOrWhiteSpace(o.Content))
+            .Where(o => !string.IsNullOrWhiteSpace(o.Content) || !string.IsNullOrWhiteSpace(o.AssetPath))
             .Select(o => new Option
             {
-                Content = o.Content!,
+                Content = string.IsNullOrWhiteSpace(o.Content) ? " " : o.Content,
                 AssetPath = o.AssetPath,
                 IsCorrect = o.IsCorrect
             })
