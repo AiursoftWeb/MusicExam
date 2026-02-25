@@ -1,6 +1,5 @@
 using System.Net;
 using Aiursoft.MusicExam.Entities;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace Aiursoft.MusicExam.Tests.IntegrationTests;
@@ -53,14 +52,19 @@ public class QuestionsControllerTests : TestBase
         {
             { "PaperId", paperId.ToString() },
             { "Content", questionContent },
+            { "AssetPath", "" },
             { "QuestionType", "MultipleChoice" },
             { "Explanation", "Basic math" },
             { "Options[0].Content", "2" },
+            { "Options[0].AssetPath", "" },
             { "Options[0].IsCorrect", "true" },
             { "Options[1].Content", "3" },
+            { "Options[1].AssetPath", "" },
             { "Options[1].IsCorrect", "false" },
             { "Options[2].Content", "" },
-            { "Options[3].Content", "" }
+            { "Options[2].AssetPath", "" },
+            { "Options[3].Content", "" },
+            { "Options[3].AssetPath", "" }
         });
         
         AssertRedirect(createQResponse, "/Questions");
@@ -83,12 +87,15 @@ public class QuestionsControllerTests : TestBase
             { "QuestionId", questionId.ToString() },
             { "PaperId", paperId.ToString() },
             { "Content", newContent },
+            { "AssetPath", "" },
             { "QuestionType", "MultipleChoice" },
             { "Explanation", "Advanced math" },
             { "Options[0].Content", "4" },
+            { "Options[0].AssetPath", "" },
             { "Options[0].Id", "0" }, // ID is ignored in simplistic controller logic but let's pass it
             { "Options[0].IsCorrect", "true" },
             { "Options[1].Content", "5" },
+            { "Options[1].AssetPath", "" },
             { "Options[1].IsCorrect", "false" }
         });
 
@@ -120,7 +127,7 @@ public class QuestionsControllerTests : TestBase
     public async Task TestPermissionEnforcement()
     {
          // Register a normal user
-        var (userId, email, password) = await RegisterNewUserAsync();
+        var (_, email, password) = await RegisterNewUserAsync();
         
         // Login as user
         await PostForm("/Account/Login", new Dictionary<string, string>

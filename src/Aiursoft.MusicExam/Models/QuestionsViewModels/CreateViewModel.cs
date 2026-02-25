@@ -19,4 +19,10 @@ public class CreateViewModel : UiStackLayoutViewModel
     [Display(Name = "Question Type")]
     public QuestionType QuestionType { get; set; } = QuestionType.MultipleChoice;
 
-    public List<OptionViewModel> Options { get; set; } = new();}
+    [Display(Name = "Question Asset")]
+    [MaxLength(500)]
+    [RegularExpression(@"^questions/.*", ErrorMessage = "Please upload a valid asset file.")]
+    public string? AssetPath { get; set; }
+
+    public List<OptionViewModel> Options { get; set; } = new();
+}

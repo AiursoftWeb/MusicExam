@@ -11,4 +11,9 @@ public class OptionViewModel
 
     [Display(Name = "Is Correct Answer")]
     public bool IsCorrect { get; set; }
+
+    [Display(Name = "Option Asset")]
+    [MaxLength(500)]
+    [RegularExpression(@"^questions/.*", ErrorMessage = "Please upload a valid asset file.")]
+    public string? AssetPath { get; set; }
 }

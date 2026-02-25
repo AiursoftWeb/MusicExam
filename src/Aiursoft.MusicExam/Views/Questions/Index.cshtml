@@ -1,6 +1,4 @@
 @model Aiursoft.MusicExam.Models.QuestionsViewModels.IndexViewModel
-@using Aiursoft.MusicExam.Entities
-
 @{
     ViewData["Title"] = Localizer["Question Management"];
 }
@@ -58,7 +56,24 @@
                                                     <div class="list-group-item">
                                                         <div class="d-flex justify-content-between align-items-center">
                                                             <div>
-                                                                <h6 class="mb-1">@question.Content</h6>
+                                                                <h6 class="mb-1">
+                                                                    @question.Content
+                                                                    @if (!string.IsNullOrWhiteSpace(question.AssetPath))
+                                                                    {
+                                                                        if (question.AssetPath.EndsWith(".mp3") || question.AssetPath.EndsWith(".wav") || question.AssetPath.EndsWith(".ogg"))
+                                                                        {
+                                                                            <span class="badge bg-info ms-2" title="@Localizer["Audio"]"><i class="align-middle" data-lucide="music"></i></span>
+                                                                        }
+                                                                        else if (question.AssetPath.EndsWith(".mp4"))
+                                                                        {
+                                                                            <span class="badge bg-primary ms-2" title="@Localizer["Video"]"><i class="align-middle" data-lucide="video"></i></span>
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                            <span class="badge bg-success ms-2" title="@Localizer["Image"]"><i class="align-middle" data-lucide="image"></i></span>
+                                                                        }
+                                                                    }
+                                                                </h6>
                                                                 <small class="text-muted">@question.QuestionType</small>
                                                             </div>
                                                             <div>

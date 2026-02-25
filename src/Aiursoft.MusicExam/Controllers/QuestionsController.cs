@@ -1,8 +1,10 @@
 using Aiursoft.MusicExam.Authorization;
 using Aiursoft.MusicExam.Services;
+using Aiursoft.MusicExam.Services.FileStorage;
 using Aiursoft.MusicExam.Entities;
 using Aiursoft.MusicExam.Models.QuestionsViewModels;
 using Aiursoft.WebTools.Attributes;
+using Aiursoft.UiStack.Navigation;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -15,13 +17,15 @@ namespace Aiursoft.MusicExam.Controllers;
 public class QuestionsController : Controller
 {
     private readonly TemplateDbContext _dbContext;
+    private readonly StorageService _storageService;
 
-    public QuestionsController(TemplateDbContext dbContext)
+    public QuestionsController(TemplateDbContext dbContext, StorageService storageService)
     {
         _dbContext = dbContext;
+        _storageService = storageService;
     }
     
-    [Aiursoft.UiStack.Navigation.RenderInNavBar(
+    [RenderInNavBar(
         NavGroupName = "Administration",
         NavGroupOrder = 9999,
         CascadedLinksGroupName = "Directory",
@@ -163,6 +167,44 @@ public class QuestionsController : Controller
             return this.StackView(model);
         }
 
+        if (!string.IsNullOrWhiteSpace(model.AssetPath))
+        {
+            try
+            {
+                var physicalPath = _storageService.GetFilePhysicalPath(model.AssetPath);
+                if (!System.IO.File.Exists(physicalPath))
+                {
+                    ModelState.AddModelError(nameof(model.AssetPath), "Question media file upload failed or missing. Please re-upload.");
+                    return this.StackView(model);
+                }
+            }
+            catch (ArgumentException)
+            {
+                return BadRequest();
+            }
+        }
+
+        for (int i = 0; i < model.Options.Count; i++)
+        {
+            var opt = model.Options[i];
+            if (!string.IsNullOrWhiteSpace(opt.AssetPath))
+            {
+                try
+                {
+                    var physicalPath = _storageService.GetFilePhysicalPath(opt.AssetPath);
+                    if (!System.IO.File.Exists(physicalPath))
+                    {
+                        ModelState.AddModelError($"Options[{i}].AssetPath", "Option media file upload failed or missing. Please re-upload.");
+                        return this.StackView(model);
+                    }
+                }
+                catch (ArgumentException)
+                {
+                    return BadRequest();
+                }
+            }
+        }
+
         var paper = await _dbContext.ExamPapers.Include(p => p.Questions).FirstOrDefaultAsync(p => p.Id == model.PaperId);
         if (paper == null)
         {
@@ -175,6 +217,7 @@ public class QuestionsController : Controller
         {
             PaperId = model.PaperId,
             Content = model.Content,
+            AssetPath = model.AssetPath,
             Explanation = model.Explanation,
             QuestionType = model.QuestionType,
             Order = maxOrder + 1,
@@ -183,6 +226,7 @@ public class QuestionsController : Controller
                 .Select(o => new Option
                 {
                     Content = o.Content!,
+                    AssetPath = o.AssetPath,
                     IsCorrect = o.IsCorrect
                 })
                 .ToList()
@@ -211,12 +255,14 @@ public class QuestionsController : Controller
             QuestionId = question.Id,
             PaperId = question.PaperId,
             Content = question.Content,
+            AssetPath = question.AssetPath,
             Explanation = question.Explanation,
             QuestionType = question.QuestionType,
             Options = question.Options.OrderBy(o => o.Id).Select(o => new OptionViewModel
             {
                 Id = o.Id,
                 Content = o.Content,
+                AssetPath = o.AssetPath,
                 IsCorrect = o.IsCorrect
             }).ToList()
         };
@@ -233,6 +279,44 @@ public class QuestionsController : Controller
             return this.StackView(model);
         }
 
+        if (!string.IsNullOrWhiteSpace(model.AssetPath))
+        {
+            try
+            {
+                var physicalPath = _storageService.GetFilePhysicalPath(model.AssetPath);
+                if (!System.IO.File.Exists(physicalPath))
+                {
+                    ModelState.AddModelError(nameof(model.AssetPath), "Question media file upload failed or missing. Please re-upload.");
+                    return this.StackView(model);
+                }
+            }
+            catch (ArgumentException)
+            {
+                return BadRequest();
+            }
+        }
+
+        for (int i = 0; i < model.Options.Count; i++)
+        {
+            var opt = model.Options[i];
+            if (!string.IsNullOrWhiteSpace(opt.AssetPath))
+            {
+                try
+                {
+                    var physicalPath = _storageService.GetFilePhysicalPath(opt.AssetPath);
+                    if (!System.IO.File.Exists(physicalPath))
+                    {
+                        ModelState.AddModelError($"Options[{i}].AssetPath", "Option media file upload failed or missing. Please re-upload.");
+                        return this.StackView(model);
+                    }
+                }
+                catch (ArgumentException)
+                {
+                    return BadRequest();
+                }
+            }
+        }
+
         var question = await _dbContext.Questions
             .Include(q => q.Options)
             .FirstOrDefaultAsync(q => q.Id == model.QuestionId);
@@ -243,6 +327,7 @@ public class QuestionsController : Controller
         }
 
         question.Content = model.Content;
+        question.AssetPath = model.AssetPath;
         question.Explanation = model.Explanation;
         question.QuestionType = model.QuestionType;
 
@@ -255,6 +340,7 @@ public class QuestionsController : Controller
             .Select(o => new Option
             {
                 Content = o.Content!,
+                AssetPath = o.AssetPath,
                 IsCorrect = o.IsCorrect
             })
             .ToList();

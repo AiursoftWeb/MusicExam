@@ -1,5 +1,4 @@
 using System.ComponentModel.DataAnnotations;
-using Aiursoft.MusicExam.Entities;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 using Aiursoft.UiStack.Layout;

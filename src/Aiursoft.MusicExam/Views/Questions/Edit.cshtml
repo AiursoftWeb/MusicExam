@@ -1,5 +1,7 @@
 @model Aiursoft.MusicExam.Models.QuestionsViewModels.EditViewModel
 @using Aiursoft.MusicExam.Entities
+@using Aiursoft.MusicExam.Services.FileStorage
+@inject StorageService Storage
 
 @{
     ViewData["Title"] = Localizer["Edit Question"];
@@ -21,6 +23,18 @@
                             <label asp-for="Content" class="form-label"></label>
                             <textarea asp-for="Content" class="form-control" rows="3"></textarea>
                             <span asp-validation-for="Content" class="text-danger"></span>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label asp-for="AssetPath" class="form-label">@Localizer["Question Media (Optional)"]</label>
+                            @if (!string.IsNullOrWhiteSpace(Model.AssetPath) && (Model.AssetPath.EndsWith(".mp3") || Model.AssetPath.EndsWith(".wav") || Model.AssetPath.EndsWith(".ogg")))
+                            {
+                                <div class="mb-2">
+                                    <audio controls src="@Storage.RelativePathToInternetUrl(Model.AssetPath!)"></audio>
+                                </div>
+                            }
+                            <vc:file-upload asp-for="@Model.AssetPath" subfolder="questions" allowed-extensions="jpg png bmp gif mp3 wav ogg mp4" max-size-in-mb="50"></vc:file-upload>
+                            <span asp-validation-for="AssetPath" class="text-danger"></span>
                         </div>
 
                         <div class="mb-3">
@@ -48,6 +62,17 @@
                                             <input asp-for="Options[i].Content" class="form-control" />
                                             <span asp-validation-for="Options[i].Content" class="text-danger"></span>
                                         </div>
+                                        <div class="mb-2">
+                                            <label class="form-label">@Localizer["Option Media (Optional)"]</label>
+                                            @if (!string.IsNullOrWhiteSpace(Model.Options[i].AssetPath) && (Model.Options[i].AssetPath!.EndsWith(".mp3") || Model.Options[i].AssetPath!.EndsWith(".wav") || Model.Options[i].AssetPath!.EndsWith(".ogg")))
+                                            {
+                                                <div class="mb-2">
+                                                    <audio controls src="@Storage.RelativePathToInternetUrl(Model.Options[i].AssetPath!)"></audio>
+                                                </div>
+                                            }
+                                            <vc:file-upload asp-for="@Model.Options[i].AssetPath" subfolder="questions" allowed-extensions="jpg png bmp gif mp3 wav ogg mp4" max-size-in-mb="50" field-name="Options[@i].AssetPath"></vc:file-upload>
+                                            <span asp-validation-for="Options[i].AssetPath" class="text-danger"></span>
+                                        </div>
                                         <div class="form-check">
                                             <input asp-for="Options[i].IsCorrect" class="form-check-input" type="checkbox" />
                                             <label class="form-check-label" asp-for="Options[i].IsCorrect">@Localizer["Is Correct Answer"]</label>
@@ -68,3 +93,12 @@
         </div>
     </div>
 </div>
+
+@section styles {
+    <link rel="stylesheet" href="~/node_modules/dropify/dist/css/dropify.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/styles/uploader.css" asp-append-version="true" />
+}
+
+@section scripts {
+    <script src="~/node_modules/dropify/dist/js/dropify.min.js" asp-append-version="true"></script>
+}
