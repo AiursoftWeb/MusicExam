@@ -25,40 +25,70 @@
                         <strong>@school.Name</strong>
                         <span class="badge bg-light text-dark ms-auto">School</span>
                     </div>
-                    <div class="card-body">
-                        @foreach (var level in school.Levels)
-                        {
-                            <div class="level-group mb-3">
-                                <div class="d-flex align-items-center mb-2">
-                                    <span class="badge bg-info text-dark me-2">Level:</span>
-                                    <strong>@level.Name</strong>
-                                </div>
-                                
-                                @foreach (var category in level.Categories)
-                                {
-                                    <div class="category-group ms-3 mb-3">
-                                        <div class="d-flex align-items-center mb-2">
-                                            <span class="badge bg-secondary me-2">Category:</span>
-                                            <strong>@category.Name</strong>
-                                        </div>
-                                        
-                                        <div class="paper-list sortable-container ms-3" 
-                                             data-school-id="@school.Id"
-                                             data-level="@level.Name"
-                                             data-category="@category.Name">
-                                            @foreach (var paper in category.Papers)
-                                            {
-                                                <div class="sortable-item paper-item list-group-item d-flex align-items-center mb-1" 
-                                                     data-id="@paper.Id">
-                                                    <i class="drag-handle bi bi-grip-vertical me-2" style="cursor: grab;"></i>
-                                                    <span>@paper.Title</span>
-                                                </div>
-                                            }
+                    <div class="card-body p-0">
+                        <div class="level-list sortable-container" data-school-id="@school.Id">
+                            @foreach (var level in school.Levels)
+                            {
+                                var levelCollapseId = $"collapse-level-{school.Id}-{Math.Abs(level.Name.GetHashCode())}";
+                                <div class="sortable-item level-item accordion-item" data-level="@level.Name">
+                                    <h2 class="accordion-header d-flex align-items-center" id="heading-@levelCollapseId">
+                                        <i class="drag-handle bi bi-grip-vertical ms-2 me-1" style="cursor: grab; font-size: 1.2rem;"></i>
+                                        <button class="accordion-button collapsed flex-grow-1" type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#@levelCollapseId"
+                                                aria-expanded="false"
+                                                aria-controls="@levelCollapseId">
+                                            <i class="bi bi-layers me-2"></i>
+                                            @Localizer["Level"]: @level.Name
+                                            <span class="badge bg-info text-dark ms-2">@level.Categories.Sum(c => c.Papers.Count) @Localizer["Papers"]</span>
+                                        </button>
+                                    </h2>
+                                    <div id="@levelCollapseId" class="accordion-collapse collapse"
+                                         aria-labelledby="heading-@levelCollapseId">
+                                        <div class="accordion-body p-2">
+                                            <div class="category-list sortable-container" data-school-id="@school.Id" data-level="@level.Name">
+                                                @foreach (var category in level.Categories)
+                                                {
+                                                    var catCollapseId = $"collapse-cat-{school.Id}-{Math.Abs(level.Name.GetHashCode())}-{Math.Abs(category.Name.GetHashCode())}";
+                                                    <div class="sortable-item category-item accordion-item" data-category="@category.Name">
+                                                        <h2 class="accordion-header d-flex align-items-center" id="heading-@catCollapseId">
+                                                            <i class="drag-handle bi bi-grip-vertical ms-2 me-1" style="cursor: grab; font-size: 1.1rem;"></i>
+                                                            <button class="accordion-button collapsed flex-grow-1" type="button"
+                                                                    data-bs-toggle="collapse"
+                                                                    data-bs-target="#@catCollapseId"
+                                                                    aria-expanded="false"
+                                                                    aria-controls="@catCollapseId">
+                                                                <i class="bi bi-folder me-2"></i>
+                                                                @category.Name
+                                                                <span class="badge bg-secondary ms-2">@category.Papers.Count @Localizer["Papers"]</span>
+                                                            </button>
+                                                        </h2>
+                                                        <div id="@catCollapseId" class="accordion-collapse collapse"
+                                                             aria-labelledby="heading-@catCollapseId">
+                                                            <div class="accordion-body p-2">
+                                                                <div class="paper-list sortable-container"
+                                                                     data-school-id="@school.Id"
+                                                                     data-level="@level.Name"
+                                                                     data-category="@category.Name">
+                                                                    @foreach (var paper in category.Papers)
+                                                                    {
+                                                                        <div class="sortable-item paper-item list-group-item d-flex align-items-center mb-1"
+                                                                             data-id="@paper.Id">
+                                                                            <i class="drag-handle bi bi-grip-vertical me-2" style="cursor: grab;"></i>
+                                                                            <span>@paper.Title</span>
+                                                                        </div>
+                                                                    }
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                }
+                                            </div>
                                         </div>
                                     </div>
-                                }
-                            </div>
-                        }
+                                </div>
+                            }
+                        </div>
                     </div>
                 </div>
             }
@@ -68,6 +98,14 @@
 
 <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
 <script>
+    const sortableOptions = {
+        animation: 150,
+        handle: '> .accordion-header > .drag-handle',
+        ghostClass: 'sortable-ghost',
+        chosenClass: 'sortable-chosen',
+        dragClass: 'sortable-drag'
+    };
+
     // Initialize SortableJS for Schools
     const schoolList = document.getElementById('schoolList');
     if (schoolList) {
@@ -80,7 +118,17 @@
         });
     }
 
-    // Initialize SortableJS for all Paper lists
+    // Initialize SortableJS for Level lists
+    document.querySelectorAll('.level-list').forEach(list => {
+        Sortable.create(list, sortableOptions);
+    });
+
+    // Initialize SortableJS for Category lists
+    document.querySelectorAll('.category-list').forEach(list => {
+        Sortable.create(list, sortableOptions);
+    });
+
+    // Initialize SortableJS for Paper lists
     document.querySelectorAll('.paper-list').forEach(paperList => {
         Sortable.create(paperList, {
             animation: 150,
@@ -91,55 +139,59 @@
         });
     });
 
-    // Get anti-forgery token
-    function getAntiForgeryToken() {
-        return document.querySelector('input[name="__RequestVerificationToken"]')?.value || '';
-    }
-
     // Save order button
+    // Traverses the full DOM hierarchy to compute paper DisplayOrder values:
+    // School → Level → Category → Paper
+    // Since Level and Category are string fields on ExamPaper (not separate entities),
+    // reordering them is reflected by adjusting the DisplayOrder of all papers within.
     document.getElementById('saveOrderBtn').addEventListener('click', async () => {
         const saveBtn = document.getElementById('saveOrderBtn');
         saveBtn.disabled = true;
         saveBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Saving...';
-        
+
         try {
-            // Collect school order
-            const schoolItems = [...schoolList.querySelectorAll('.school-item')];
+            // 1. Save school order
+            const schoolItems = [...schoolList.querySelectorAll(':scope > .school-item')];
             const schoolOrder = schoolItems.map((item, index) => ({
                 id: parseInt(item.dataset.id),
                 displayOrder: index
             }));
-            
-            // Save school order
+
             await fetch('/OrderManagement/UpdateSchoolOrder', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ items: schoolOrder })
             });
-            
-            // Collect and save paper orders
-            const paperLists = document.querySelectorAll('.paper-list');
-            for (const paperList of paperLists) {
-                const paperItems = [...paperList.querySelectorAll('.paper-item')];
-                const paperOrder = paperItems.map((item, index) => ({
-                    id: parseInt(item.dataset.id),
-                    displayOrder: index
-                }));
-                
-                if (paperOrder.length > 0) {
-                    await fetch('/OrderManagement/UpdatePaperOrder', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({ items: paperOrder })
+
+            // 2. Compute paper order from full hierarchy
+            // Walk School → Level → Category → Paper in DOM order
+            const allPaperOrders = [];
+            let globalOrder = 0;
+
+            schoolItems.forEach(schoolEl => {
+                const levelItems = schoolEl.querySelectorAll(':scope > .card-body > .level-list > .level-item');
+                levelItems.forEach(levelEl => {
+                    const categoryItems = levelEl.querySelectorAll(':scope > .accordion-collapse > .accordion-body > .category-list > .category-item');
+                    categoryItems.forEach(categoryEl => {
+                        const paperItems = categoryEl.querySelectorAll(':scope > .accordion-collapse > .accordion-body > .paper-list > .paper-item');
+                        paperItems.forEach(paperEl => {
+                            allPaperOrders.push({
+                                id: parseInt(paperEl.dataset.id),
+                                displayOrder: globalOrder++
+                            });
+                        });
                     });
-                }
+                });
+            });
+
+            if (allPaperOrders.length > 0) {
+                await fetch('/OrderManagement/UpdatePaperOrder', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ items: allPaperOrders })
+                });
             }
-            
-            // Show success message
+
             alert('@Localizer["Order saved successfully!"]');
             saveBtn.disabled = false;
             saveBtn.innerHTML = '<i class="bi bi-save"></i> @Localizer["Save Order"]';

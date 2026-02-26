@@ -39,7 +39,7 @@ public class QuestionsController : Controller
         var schools = await _dbContext.Schools
             .Include(s => s.Papers)
             .ThenInclude(p => p.Questions)
-            .OrderBy(s => s.Id)
+            .OrderBy(s => s.DisplayOrder)
             .ToListAsync();
 
         var model = new IndexViewModel

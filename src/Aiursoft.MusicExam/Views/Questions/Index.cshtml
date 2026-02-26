@@ -32,7 +32,8 @@
                 {
                     var levels = school.Papers
                         .GroupBy(p => p.Level ?? "Uncategorized")
-                        .OrderBy(g => g.Key);
+                        .OrderBy(g => g.Min(p => p.DisplayOrder))
+                        .ThenBy(g => g.Min(p => p.Id));
 
                     <div class="accordion" id="accordion-school-@school.Id">
                         @foreach (var levelGroup in levels)
@@ -57,7 +58,8 @@
                                         @{
                                             var categories = levelGroup
                                                 .GroupBy(p => p.Category ?? "Uncategorized")
-                                                .OrderBy(g => g.Key);
+                                                .OrderBy(g => g.Min(p => p.DisplayOrder))
+                                                .ThenBy(g => g.Min(p => p.Id));
                                         }
 
                                         <div class="accordion" id="accordion-cat-school-@school.Id-level-@Math.Abs(levelGroup.Key.GetHashCode())">
@@ -81,7 +83,7 @@
                                                      data-bs-parent="#accordion-cat-school-@school.Id-level-@Math.Abs(levelGroup.Key.GetHashCode())">
                                                     <div class="accordion-body p-2">
                                                         <div class="accordion" id="accordion-paper-@school.Id-@Math.Abs(levelGroup.Key.GetHashCode())-@Math.Abs(categoryGroup.Key.GetHashCode())">
-                                                            @foreach (var paper in categoryGroup.OrderBy(p => p.Title))
+                                                            @foreach (var paper in categoryGroup.OrderBy(p => p.DisplayOrder).ThenBy(p => p.Id))
                                                             {
                                                                 <div class="accordion-item border mb-2 rounded">
                                                                     <h2 class="accordion-header" id="heading-paper-@paper.Id">
