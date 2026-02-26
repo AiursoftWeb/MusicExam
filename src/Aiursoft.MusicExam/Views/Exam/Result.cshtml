@@ -74,7 +74,7 @@
                     }
                 }
 
-                @if (question.QuestionType == QuestionType.MultipleChoice)
+                @if (question.QuestionType == QuestionType.MultipleChoice || question.QuestionType == QuestionType.SingleChoice)
                 {
                     <div class="list-group mt-3">
                         @foreach (var option in question.Options.OrderBy(o => o.Id))

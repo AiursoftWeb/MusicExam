@@ -150,8 +150,8 @@ public class QuestionsController : Controller
             PaperId = id,
             Options = new List<OptionViewModel>()
         };
-        // Add some default empty options
-        for (int i = 0; i < 4; i++)
+        // Add some default empty options (up to 20 for dynamic display)
+        for (int i = 0; i < 20; i++)
         {
             model.Options.Add(new OptionViewModel { Content = "" });
         }
@@ -165,6 +165,22 @@ public class QuestionsController : Controller
     {
         if (!ModelState.IsValid)
         {
+            return this.StackView(model);
+        }
+
+        var validOptions = model.Options
+            .Where(o => !string.IsNullOrWhiteSpace(o.Content) || !string.IsNullOrWhiteSpace(o.AssetPath))
+            .ToList();
+
+        var selectedCorrectCount = validOptions.Count(o => o.IsCorrect);
+        if (model.QuestionType == QuestionType.SingleChoice && selectedCorrectCount != 1)
+        {
+            ModelState.AddModelError(string.Empty, "A single-choice question must have exactly one correct option.");
+            return this.StackView(model);
+        }
+        if (model.QuestionType == QuestionType.MultipleChoice && selectedCorrectCount < 1)
+        {
+            ModelState.AddModelError(string.Empty, "A multiple-choice question must have at least one correct option.");
             return this.StackView(model);
         }
 
@@ -284,6 +300,12 @@ public class QuestionsController : Controller
                 };
             }).ToList()
         };
+        
+        // Add some default empty options (up to 20 for dynamic display)
+        while (model.Options.Count < 20)
+        {
+            model.Options.Add(new OptionViewModel());
+        }
 
         return this.StackView(model);
     }
@@ -294,6 +316,22 @@ public class QuestionsController : Controller
     {
         if (!ModelState.IsValid)
         {
+            return this.StackView(model);
+        }
+
+        var validOptions = model.Options
+            .Where(o => !string.IsNullOrWhiteSpace(o.Content) || !string.IsNullOrWhiteSpace(o.AssetPath))
+            .ToList();
+
+        var selectedCorrectCount = validOptions.Count(o => o.IsCorrect);
+        if (model.QuestionType == QuestionType.SingleChoice && selectedCorrectCount != 1)
+        {
+            ModelState.AddModelError(string.Empty, "A single-choice question must have exactly one correct option.");
+            return this.StackView(model);
+        }
+        if (model.QuestionType == QuestionType.MultipleChoice && selectedCorrectCount < 1)
+        {
+            ModelState.AddModelError(string.Empty, "A multiple-choice question must have at least one correct option.");
             return this.StackView(model);
         }
 

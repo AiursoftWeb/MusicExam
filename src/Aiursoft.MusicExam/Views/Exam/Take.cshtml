@@ -44,17 +44,19 @@
 
                 @switch (question.QuestionType)
                 {
+                    case QuestionType.SingleChoice:
                     case QuestionType.MultipleChoice:
                         var correctAnswersCount = question.Options.Count(o => o.IsCorrect);
-                                                <div class="list-group mt-3" id="options-group-@i">
+                        var isSingleChoice = question.QuestionType == QuestionType.SingleChoice || correctAnswersCount <= 1;
+                        <div class="list-group mt-3" id="options-group-@i">
                             @foreach (var option in question.Options.OrderBy(o => o.Id))
                             {
-                                                                <label class="list-group-item option-label" id="label-@option.Id">
-                                                                    <input class="form-check-input me-2"
-                                                                           type="@(correctAnswersCount > 1 ? "checkbox" : "radio")"
-                                                                           name="question-@question.Id"
-                                                                           value="@option.Id"
-                                                                           data-is-correct="@option.IsCorrect.ToString().ToLower()">
+                                <label class="list-group-item option-label" id="label-@option.Id">
+                                    <input class="form-check-input me-2"
+                                           type="@(isSingleChoice ? "radio" : "checkbox")"
+                                           name="question-@question.Id"
+                                           value="@option.Id"
+                                           data-is-correct="@option.IsCorrect.ToString().ToLower()">
 
                                     @if (!string.IsNullOrWhiteSpace(option.AssetPath))
                                     {

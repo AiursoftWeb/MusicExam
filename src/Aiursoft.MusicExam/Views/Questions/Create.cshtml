@@ -69,11 +69,11 @@
                         <div id="options-container">
                             @for (int i = 0; i < Model.Options.Count; i++)
                             {
-                                <div class="card mb-2">
+                                <div class="card mb-2 option-slot" style="@(i >= 4 ? "display:none" : "")">
                                     <div class="card-body p-3">
                                         <div class="mb-2">
                                             <label class="form-label">@Localizer["Option Content"]</label>
-                                            <input asp-for="Options[i].Content" class="form-control" />
+                                            <input asp-for="Options[i].Content" class="form-control option-content" />
                                             <span asp-validation-for="Options[i].Content" class="text-danger"></span>
                                         </div>
                                         <div class="mb-2">
@@ -104,12 +104,18 @@
                                             <span asp-validation-for="Options[i].AssetPath" class="text-danger"></span>
                                         </div>
                                         <div class="form-check">
-                                            <input asp-for="Options[i].IsCorrect" class="form-check-input" type="checkbox" />
+                                            <input asp-for="Options[i].IsCorrect" class="form-check-input option-check" type="checkbox" />
                                             <label class="form-check-label" asp-for="Options[i].IsCorrect">@Localizer["Is Correct Answer"]</label>
                                         </div>
                                     </div>
                                 </div>
                             }
+                        </div>
+                        
+                        <div class="mb-3">
+                            <button type="button" class="btn btn-outline-secondary btn-sm" onclick="addOptionSlot()">
+                                <i class="align-middle" data-lucide="plus"></i> @Localizer["Add Another Option"]
+                            </button>
                         </div>
 
                         <div class="mt-3">
@@ -134,11 +140,53 @@
     <script src="~/node_modules/dropify/dist/js/dropify.min.js" asp-append-version="true"></script>
     <script src="~/scripts/audioPlayer.js" asp-append-version="true"></script>
     <script>
+        function addOptionSlot() {
+            const slots = document.querySelectorAll('.option-slot');
+            for (let i = 0; i < slots.length; i++) {
+                if (slots[i].style.display === 'none') {
+                    slots[i].style.display = 'block';
+                    break;
+                }
+            }
+        }
+
         document.addEventListener("DOMContentLoaded", function () {
             // Initialize Custom Audio Players
             document.querySelectorAll('.audio-player-wrapper').forEach(wrapper => {
                 const src = wrapper.getAttribute('data-audio-src');
                 wrapper.musicPlayer = new MusicExamAudioPlayer(wrapper, src);
+            });
+
+            // Handle Single Choice selection
+            const questionTypeSelect = document.getElementById('QuestionType');
+            const optionChecks = document.querySelectorAll('.option-check');
+
+            function enforceSingleChoice() {
+                if (questionTypeSelect.value === '2') { // QuestionType.SingleChoice is 2
+                    let checkedFound = false;
+                    optionChecks.forEach(check => {
+                        if (check.checked) {
+                            if (checkedFound) {
+                                check.checked = false;
+                            }
+                            checkedFound = true;
+                        }
+                    });
+                }
+            }
+
+            questionTypeSelect.addEventListener('change', enforceSingleChoice);
+
+            optionChecks.forEach(check => {
+                check.addEventListener('change', function() {
+                    if (questionTypeSelect.value === '2' && this.checked) {
+                        optionChecks.forEach(other => {
+                            if (other !== this) {
+                                other.checked = false;
+                            }
+                        });
+                    }
+                });
             });
         });
     </script>
