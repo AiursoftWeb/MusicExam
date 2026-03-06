@@ -101,6 +101,8 @@ public class ViewModelArgsInjector(
         _ = localizer["Manage Level Authorization"];
 
         _ = localizer["Manage Display Order"];
+    
+        _ = localizer["Manage Questions"];
     }
 
     public void InjectSimple(
