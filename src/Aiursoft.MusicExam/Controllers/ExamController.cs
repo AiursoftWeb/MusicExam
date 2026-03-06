@@ -122,11 +122,11 @@ public class ExamController : Controller
             }
 
             // Grading Logic
-            if (question.QuestionType == QuestionType.MultipleChoice)
+            if (question.QuestionType == QuestionType.MultipleChoice || question.QuestionType == QuestionType.SingleChoice)
             {
                 var correctIds = result.CorrectOptionIds.OrderBy(x => x).ToList();
                 var userIds = result.UserSelectedOptionIds.OrderBy(x => x).ToList();
-                result.IsCorrect = correctIds.SequenceEqual(userIds);
+                result.IsCorrect = correctIds.Any() && correctIds.SequenceEqual(userIds);
             }
             else
             {
@@ -259,11 +259,11 @@ public class ExamController : Controller
             }
 
             // Re-calculate correctness for display purposes
-             if (question.QuestionType == QuestionType.MultipleChoice)
+             if (question.QuestionType == QuestionType.MultipleChoice || question.QuestionType == QuestionType.SingleChoice)
             {
                 var correctIds = result.CorrectOptionIds.OrderBy(x => x).ToList();
                 var userIds = result.UserSelectedOptionIds.OrderBy(x => x).ToList();
-                result.IsCorrect = correctIds.SequenceEqual(userIds);
+                result.IsCorrect = correctIds.Any() && correctIds.SequenceEqual(userIds);
             }
             else
             {

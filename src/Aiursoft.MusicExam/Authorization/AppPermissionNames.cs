@@ -35,4 +35,6 @@ public static class AppPermissionNames
 
     // Question Bank Management
     public const string CanManageQuestionBankRoles = nameof(CanManageQuestionBankRoles);
+    public const string CanManageQuestions = nameof(CanManageQuestions);
+    public const string CanModifyQuestions = nameof(CanModifyQuestions);
 }

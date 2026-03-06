@@ -1,0 +1,49 @@
+@model Aiursoft.MusicExam.Models.QuestionsViewModels.EditPaperViewModel
+
+@{
+    ViewData["Title"] = Localizer["Edit Exam Paper"];
+}
+
+<div class="container-fluid p-0">
+    <h1 class="h3 mb-3">@ViewData["Title"]</h1>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <form asp-action="EditPaper" method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="PaperId" />
+                        
+                        <div class="mb-3">
+                            <label asp-for="SchoolId" class="form-label"></label>
+                            <select asp-for="SchoolId" asp-items="Model.AvailableSchools" class="form-select"></select>
+                            <span asp-validation-for="SchoolId" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Title" class="form-label"></label>
+                            <input asp-for="Title" class="form-control" />
+                            <span asp-validation-for="Title" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Level" class="form-label"></label>
+                            <input asp-for="Level" class="form-control" />
+                            <span asp-validation-for="Level" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Category" class="form-label"></label>
+                            <input asp-for="Category" class="form-control" />
+                            <span asp-validation-for="Category" class="text-danger"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">@Localizer["Save Changes"]</button>
+                        <a asp-action="Index" class="btn btn-secondary">@Localizer["Cancel"]</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

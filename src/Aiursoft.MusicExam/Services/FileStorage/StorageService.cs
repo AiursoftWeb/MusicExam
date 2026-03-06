@@ -221,6 +221,12 @@ public class StorageService(
 
     public string RelativePathToInternetUrl(string relativePath, HttpContext context, bool isVault = false)
     {
+        if (relativePath.StartsWith("http://", StringComparison.OrdinalIgnoreCase) ||
+            relativePath.StartsWith("https://", StringComparison.OrdinalIgnoreCase))
+        {
+            return relativePath;
+        }
+
         if (isVault)
         {
             var token = GetToken(relativePath, FilePermission.Download);
@@ -231,6 +237,12 @@ public class StorageService(
 
     public string RelativePathToInternetUrl(string relativePath, bool isVault = false)
     {
+        if (relativePath.StartsWith("http://", StringComparison.OrdinalIgnoreCase) ||
+            relativePath.StartsWith("https://", StringComparison.OrdinalIgnoreCase))
+        {
+            return relativePath;
+        }
+
         if (isVault)
         {
             var token = GetToken(relativePath, FilePermission.Download);

@@ -1,0 +1,193 @@
+@model Aiursoft.MusicExam.Models.QuestionsViewModels.CreateViewModel
+@using Aiursoft.MusicExam.Entities
+@using Aiursoft.MusicExam.Services.FileStorage
+@inject StorageService Storage
+
+@{
+    ViewData["Title"] = Localizer["Add New Question"];
+}
+
+<div class="container-fluid p-0">
+    <h1 class="h3 mb-3">@ViewData["Title"]</h1>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <form asp-action="Create" method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="PaperId" />
+
+                        <div class="mb-3">
+                            <label asp-for="Content" class="form-label"></label>
+                            <textarea asp-for="Content" class="form-control" rows="3"></textarea>
+                            <span asp-validation-for="Content" class="text-danger"></span>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label asp-for="AssetPath" class="form-label">@Localizer["Question Media (Optional)"]</label>
+                            @if (!string.IsNullOrWhiteSpace(Model.AssetPath))
+                            {
+                                var assetUrl = Storage.RelativePathToInternetUrl(Model.AssetPath!);
+                                if (Model.AssetPath.EndsWith(".mp3", StringComparison.OrdinalIgnoreCase) || Model.AssetPath.EndsWith(".wav", StringComparison.OrdinalIgnoreCase) || Model.AssetPath.EndsWith(".ogg", StringComparison.OrdinalIgnoreCase))
+                                {
+                                    <div class="mb-2">
+                                        <div class="audio-player-wrapper d-inline-block mb-2 me-2" data-audio-src="@assetUrl"></div>
+                                    </div>
+                                }
+                                else if (Model.AssetPath.EndsWith(".mp4", StringComparison.OrdinalIgnoreCase))
+                                {
+                                    <div class="mb-2">
+                                        <video controls src="@assetUrl" style="max-width: 100%; max-height: 200px;"></video>
+                                    </div>
+                                }
+                                else if (Model.AssetPath.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.AssetPath.EndsWith(".png", StringComparison.OrdinalIgnoreCase) || Model.AssetPath.EndsWith(".bmp", StringComparison.OrdinalIgnoreCase) || Model.AssetPath.EndsWith(".gif", StringComparison.OrdinalIgnoreCase))
+                                {
+                                    <div class="mb-2">
+                                        <img src="@assetUrl" class="img-fluid" style="max-height: 200px;" alt="Question Asset Preview" />
+                                    </div>
+                                }
+                            }
+                            <vc:file-upload asp-for="@Model.AssetPath" subfolder="questions" allowed-extensions="jpg png bmp gif mp3 wav ogg mp4" max-size-in-mb="50"></vc:file-upload>
+                            <span asp-validation-for="AssetPath" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="QuestionType" class="form-label"></label>
+                            <select asp-for="QuestionType" asp-items="Html.GetEnumSelectList<QuestionType>()" class="form-select"></select>
+                            <span asp-validation-for="QuestionType" class="text-danger"></span>
+                        </div>
+
+                         <div class="mb-3">
+                            <label asp-for="Explanation" class="form-label"></label>
+                            <textarea asp-for="Explanation" class="form-control" rows="2"></textarea>
+                            <span asp-validation-for="Explanation" class="text-danger"></span>
+                            <div class="form-text">@Localizer["Explanation for the answer."]</div>
+                        </div>
+
+                        <h5 class="mt-4">@Localizer["Options"]</h5>
+                        <div id="options-container">
+                            @for (int i = 0; i < Model.Options.Count; i++)
+                            {
+                                <div class="card mb-2 option-slot" style="@(i >= 4 ? "display:none" : "")">
+                                    <div class="card-body p-3">
+                                        <div class="mb-2">
+                                            <label class="form-label">@Localizer["Option Content"]</label>
+                                            <input asp-for="Options[i].Content" class="form-control option-content" />
+                                            <span asp-validation-for="Options[i].Content" class="text-danger"></span>
+                                        </div>
+                                        <div class="mb-2">
+                                            <label class="form-label">@Localizer["Option Media (Optional)"]</label>
+                                            @if (!string.IsNullOrWhiteSpace(Model.Options[i].AssetPath))
+                                            {
+                                                var optAssetUrl = Storage.RelativePathToInternetUrl(Model.Options[i].AssetPath!);
+                                                if (Model.Options[i].AssetPath!.EndsWith(".mp3", StringComparison.OrdinalIgnoreCase) || Model.Options[i].AssetPath!.EndsWith(".wav", StringComparison.OrdinalIgnoreCase) || Model.Options[i].AssetPath!.EndsWith(".ogg", StringComparison.OrdinalIgnoreCase))
+                                                {
+                                                    <div class="mb-2">
+                                                        <div class="audio-player-wrapper d-inline-block mb-2 me-2" data-audio-src="@optAssetUrl"></div>
+                                                    </div>
+                                                }
+                                                else if (Model.Options[i].AssetPath!.EndsWith(".mp4", StringComparison.OrdinalIgnoreCase))
+                                                {
+                                                    <div class="mb-2">
+                                                        <video controls src="@optAssetUrl" style="max-width: 100%; max-height: 200px;"></video>
+                                                    </div>
+                                                }
+                                                else if (Model.Options[i].AssetPath!.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.Options[i].AssetPath!.EndsWith(".png", StringComparison.OrdinalIgnoreCase) || Model.Options[i].AssetPath!.EndsWith(".bmp", StringComparison.OrdinalIgnoreCase) || Model.Options[i].AssetPath!.EndsWith(".gif", StringComparison.OrdinalIgnoreCase))
+                                                {
+                                                    <div class="mb-2">
+                                                        <img src="@optAssetUrl" class="img-fluid" style="max-height: 200px;" alt="Option Asset Preview" />
+                                                    </div>
+                                                }
+                                            }
+                                            <vc:file-upload asp-for="@Model.Options[i].AssetPath" subfolder="questions" allowed-extensions="jpg png bmp gif mp3 wav ogg mp4" max-size-in-mb="50" field-name="Options[@i].AssetPath"></vc:file-upload>
+                                            <span asp-validation-for="Options[i].AssetPath" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-check">
+                                            <input asp-for="Options[i].IsCorrect" class="form-check-input option-check" type="checkbox" />
+                                            <label class="form-check-label" asp-for="Options[i].IsCorrect">@Localizer["Is Correct Answer"]</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                        
+                        <div class="mb-3">
+                            <button type="button" class="btn btn-outline-secondary btn-sm" onclick="addOptionSlot()">
+                                <i class="align-middle" data-lucide="plus"></i> @Localizer["Add Another Option"]
+                            </button>
+                        </div>
+
+                        <div class="mt-3">
+                            <button type="submit" class="btn btn-primary">@Localizer["Add Question"]</button>
+                            <a asp-action="Index" class="btn btn-secondary">@Localizer["Cancel"]</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* ReSharper disable once Razor.SectionNotResolved *@
+@section styles {
+    <link rel="stylesheet" href="~/node_modules/dropify/dist/css/dropify.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/styles/uploader.css" asp-append-version="true" />
+}
+
+@* ReSharper disable once Razor.SectionNotResolved *@
+@section scripts {
+    <script src="~/node_modules/dropify/dist/js/dropify.min.js" asp-append-version="true"></script>
+    <script src="~/scripts/audioPlayer.js" asp-append-version="true"></script>
+    <script>
+        function addOptionSlot() {
+            const slots = document.querySelectorAll('.option-slot');
+            for (let i = 0; i < slots.length; i++) {
+                if (slots[i].style.display === 'none') {
+                    slots[i].style.display = 'block';
+                    break;
+                }
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Initialize Custom Audio Players
+            document.querySelectorAll('.audio-player-wrapper').forEach(wrapper => {
+                const src = wrapper.getAttribute('data-audio-src');
+                wrapper.musicPlayer = new MusicExamAudioPlayer(wrapper, src);
+            });
+
+            // Handle Single Choice selection
+            const questionTypeSelect = document.getElementById('QuestionType');
+            const optionChecks = document.querySelectorAll('.option-check');
+
+            function enforceSingleChoice() {
+                if (questionTypeSelect.value === '2') { // QuestionType.SingleChoice is 2
+                    let checkedFound = false;
+                    optionChecks.forEach(check => {
+                        if (check.checked) {
+                            if (checkedFound) {
+                                check.checked = false;
+                            }
+                            checkedFound = true;
+                        }
+                    });
+                }
+            }
+
+            questionTypeSelect.addEventListener('change', enforceSingleChoice);
+
+            optionChecks.forEach(check => {
+                check.addEventListener('change', function() {
+                    if (questionTypeSelect.value === '2' && this.checked) {
+                        optionChecks.forEach(other => {
+                            if (other !== this) {
+                                other.checked = false;
+                            }
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+}
