@@ -24,11 +24,17 @@
   <data name="Failed to save order. Please try again." xml:space="preserve">
     <value>Nu s-a reușit salvarea comenzii. Vă rugăm să încercați din nou.</value>
   </data>
+  <data name="Level" xml:space="preserve">
+    <value>Nivel</value>
+  </data>
   <data name="Manage Display Order" xml:space="preserve">
     <value>Gestionează ordinea afișării</value>
   </data>
   <data name="Order saved successfully!" xml:space="preserve">
     <value>Comanda a fost salvată cu succes!</value>
+  </data>
+  <data name="Papers" xml:space="preserve">
+    <value>Subiecte</value>
   </data>
   <data name="Save Order" xml:space="preserve">
     <value>Salvează Ordinea</value>

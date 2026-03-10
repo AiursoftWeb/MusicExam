@@ -24,11 +24,17 @@
   <data name="Failed to save order. Please try again." xml:space="preserve">
     <value>Не вдалося зберегти замовлення. Спробуйте ще раз.</value>
   </data>
+  <data name="Level" xml:space="preserve">
+    <value>Рівень</value>
+  </data>
   <data name="Manage Display Order" xml:space="preserve">
     <value>Керування порядком відображення</value>
   </data>
   <data name="Order saved successfully!" xml:space="preserve">
     <value>Замовлення успішно збережено!</value>
+  </data>
+  <data name="Papers" xml:space="preserve">
+    <value>Роботи</value>
   </data>
   <data name="Save Order" xml:space="preserve">
     <value>Зберегти порядок</value>

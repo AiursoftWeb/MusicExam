@@ -24,11 +24,17 @@
   <data name="Failed to save order. Please try again." xml:space="preserve">
     <value>Misslyckades med att spara ordern. Försök igen.</value>
   </data>
+  <data name="Level" xml:space="preserve">
+    <value>Nivå</value>
+  </data>
   <data name="Manage Display Order" xml:space="preserve">
     <value>Hantera visningsordning</value>
   </data>
   <data name="Order saved successfully!" xml:space="preserve">
     <value>Beställning sparad framgångsrikt!</value>
+  </data>
+  <data name="Papers" xml:space="preserve">
+    <value>Examinationer</value>
   </data>
   <data name="Save Order" xml:space="preserve">
     <value>Spara ordning</value>

@@ -24,11 +24,17 @@
   <data name="Failed to save order. Please try again." xml:space="preserve">
     <value>Nie udało się zapisać kolejności. Spróbuj ponownie.</value>
   </data>
+  <data name="Level" xml:space="preserve">
+    <value>Poziom</value>
+  </data>
   <data name="Manage Display Order" xml:space="preserve">
     <value>Zarządzaj kolejnością wyświetlania</value>
   </data>
   <data name="Order saved successfully!" xml:space="preserve">
     <value>Zamówienie zostało pomyślnie zapisane!</value>
+  </data>
+  <data name="Papers" xml:space="preserve">
+    <value>Arkusze</value>
   </data>
   <data name="Save Order" xml:space="preserve">
     <value>Zapisz kolejność</value>

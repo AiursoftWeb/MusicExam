@@ -18,26 +18,11 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Drag and drop items to reorder them. Click Save when finished." xml:space="preserve">
-    <value>Træk og slip elementer for at omordne dem. Klik på Gem, når du er færdig.</value>
+      <data name="Cancel" xml:space="preserve">
+    <value>Peruuta</value>
   </data>
-  <data name="Failed to save order. Please try again." xml:space="preserve">
-    <value>Mislykkedes at gemme rækkefølge. Prøv venligst igen.</value>
-  </data>
-  <data name="Level" xml:space="preserve">
-    <value>Niveau</value>
-  </data>
-  <data name="Manage Display Order" xml:space="preserve">
-    <value>Håndtér visningsrækkefølge</value>
-  </data>
-  <data name="Order saved successfully!" xml:space="preserve">
-    <value>Ord gemt succesfuldt!</value>
-  </data>
-  <data name="Papers" xml:space="preserve">
-    <value>Opgaver</value>
-  </data>
-  <data name="Save Order" xml:space="preserve">
-    <value>Gem rækkefølge</value>
+  <data name="Create" xml:space="preserve">
+    <value>Luo</value>
   </data>
 
 </root>

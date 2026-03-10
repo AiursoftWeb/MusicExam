@@ -24,11 +24,17 @@
   <data name="Failed to save order. Please try again." xml:space="preserve">
     <value>Απέτυχε η αποθήκευση της παραγγελίας. Παρακαλούμε δοκιμάστε ξανά.</value>
   </data>
+  <data name="Level" xml:space="preserve">
+    <value>Επίπεδο</value>
+  </data>
   <data name="Manage Display Order" xml:space="preserve">
     <value>Διαχείριση Τάξης Εμφάνισης</value>
   </data>
   <data name="Order saved successfully!" xml:space="preserve">
     <value>Η διάταξη αποθηκεύτηκε επιτυχώς!</value>
+  </data>
+  <data name="Papers" xml:space="preserve">
+    <value>Δοκιμασίες</value>
   </data>
   <data name="Save Order" xml:space="preserve">
     <value>Αποθήκευση Τάξης</value>

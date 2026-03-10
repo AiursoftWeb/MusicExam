@@ -18,26 +18,32 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Drag and drop items to reorder them. Click Save when finished." xml:space="preserve">
-    <value>Öğeleri sürükleyip bırakarak sıralarını değiştirin. Tamamlandığında Kaydet&apos;e tıklayın.</value>
+      <data name="Add Another Option" xml:space="preserve">
+    <value>Başka Bir Seçenek Ekle</value>
   </data>
-  <data name="Failed to save order. Please try again." xml:space="preserve">
-    <value>Sipariş kaydedilemedi. Lütfen tekrar deneyin.</value>
+  <data name="Add Question" xml:space="preserve">
+    <value>Soru Ekle</value>
   </data>
-  <data name="Level" xml:space="preserve">
-    <value>Seviye</value>
+  <data name="Cancel" xml:space="preserve">
+    <value>İptal</value>
   </data>
-  <data name="Manage Display Order" xml:space="preserve">
-    <value>Görüntü Sırasını Yönet</value>
+  <data name="Explanation for the answer." xml:space="preserve">
+    <value>Cevabın açıklaması.</value>
   </data>
-  <data name="Order saved successfully!" xml:space="preserve">
-    <value>Sipariş başarıyla kaydedildi!</value>
+  <data name="Is Correct Answer" xml:space="preserve">
+    <value>Doğru Cevap</value>
   </data>
-  <data name="Papers" xml:space="preserve">
-    <value>Sınavlar</value>
+  <data name="Option Content" xml:space="preserve">
+    <value>Seçenek İçeriği</value>
   </data>
-  <data name="Save Order" xml:space="preserve">
-    <value>Sırayı Kaydet</value>
+  <data name="Option Media (Optional)" xml:space="preserve">
+    <value>Seçenek Medyası (İsteğe Bağlı)</value>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>Seçenekler</value>
+  </data>
+  <data name="Question Media (Optional)" xml:space="preserve">
+    <value>Soru Medyası (İsteğe Bağlı)</value>
   </data>
 
 </root>

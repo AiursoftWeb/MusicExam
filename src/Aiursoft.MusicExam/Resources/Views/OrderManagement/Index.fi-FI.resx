@@ -24,11 +24,17 @@
   <data name="Failed to save order. Please try again." xml:space="preserve">
     <value>Tallennus epäonnistui. Yritä uudelleen.</value>
   </data>
+  <data name="Level" xml:space="preserve">
+    <value>Taso</value>
+  </data>
   <data name="Manage Display Order" xml:space="preserve">
     <value>Näytön järjestämisen hallinta</value>
   </data>
   <data name="Order saved successfully!" xml:space="preserve">
     <value>Tilaus tallennettu onnistuneesti!</value>
+  </data>
+  <data name="Papers" xml:space="preserve">
+    <value>Kokeet</value>
   </data>
   <data name="Save Order" xml:space="preserve">
     <value>Tallenna järjestys</value>
