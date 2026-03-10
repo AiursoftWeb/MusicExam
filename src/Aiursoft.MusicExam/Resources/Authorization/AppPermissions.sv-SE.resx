@@ -27,6 +27,9 @@
   <data name="Allows assigning or removing roles for any user." xml:space="preserve">
     <value>Tillåter att tilldela eller ta bort roller för alla användare.</value>
   </data>
+  <data name="Allows full management of questions and exam papers." xml:space="preserve">
+    <value>Tillåter fullständig hantering av frågor och tentamenspapper.</value>
+  </data>
   <data name="Allows managing the roles authorized to access each question bank." xml:space="preserve">
     <value>Tillåter hantering av roller som har behörighet att komma åt varje frågebank.</value>
   </data>
@@ -35,6 +38,9 @@
   </data>
   <data name="Allows modification of user details like email and roles, and can also reset user passwords." xml:space="preserve">
     <value>Tillåter ändring av användardetaljer som e-post och roller, och kan också återställa användarlösenord.</value>
+  </data>
+  <data name="Allows modifying question content and answers." xml:space="preserve">
+    <value>Tillåter ändring av frågeinnehåll och svar.</value>
   </data>
   <data name="Allows the permanent deletion of roles." xml:space="preserve">
     <value>Tillåter permanent borttagning av roller.</value>
@@ -101,6 +107,12 @@
   </data>
   <data name="Manage Question Bank Roles" xml:space="preserve">
     <value>Hantera frågebankroller</value>
+  </data>
+  <data name="Manage Questions" xml:space="preserve">
+    <value>Hantera frågor</value>
+  </data>
+  <data name="Modify Questions" xml:space="preserve">
+    <value>Ändra frågor</value>
   </data>
   <data name="Read Permissions" xml:space="preserve">
     <value>Läs behörigheter</value>

@@ -24,11 +24,17 @@
   <data name="Failed to save order. Please try again." xml:space="preserve">
     <value>保存订单失败，请重试。</value>
   </data>
+  <data name="Level" xml:space="preserve">
+    <value>级别</value>
+  </data>
   <data name="Manage Display Order" xml:space="preserve">
     <value>管理显示顺序</value>
   </data>
   <data name="Order saved successfully!" xml:space="preserve">
     <value>订单保存成功！</value>
+  </data>
+  <data name="Papers" xml:space="preserve">
+    <value>试卷</value>
   </data>
   <data name="Save Order" xml:space="preserve">
     <value>保存顺序</value>

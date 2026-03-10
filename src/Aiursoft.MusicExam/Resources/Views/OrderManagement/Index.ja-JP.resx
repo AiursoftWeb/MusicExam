@@ -24,11 +24,17 @@
   <data name="Failed to save order. Please try again." xml:space="preserve">
     <value>注文の保存に失敗しました。もう一度お試しください。</value>
   </data>
+  <data name="Level" xml:space="preserve">
+    <value>レベル</value>
+  </data>
   <data name="Manage Display Order" xml:space="preserve">
     <value>表示順の管理</value>
   </data>
   <data name="Order saved successfully!" xml:space="preserve">
     <value>注文が正常に保存されました！</value>
+  </data>
+  <data name="Papers" xml:space="preserve">
+    <value>問題集</value>
   </data>
   <data name="Save Order" xml:space="preserve">
     <value>順序を保存</value>

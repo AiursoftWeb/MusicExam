@@ -27,6 +27,9 @@
   <data name="Allows assigning or removing roles for any user." xml:space="preserve">
     <value>Allows assigning or removing roles for any user.</value>
   </data>
+  <data name="Allows full management of questions and exam papers." xml:space="preserve">
+    <value>Allows full management of questions and exam papers.</value>
+  </data>
   <data name="Allows managing the roles authorized to access each question bank." xml:space="preserve">
     <value>Allows managing the roles authorized to access each question bank.</value>
   </data>
@@ -35,6 +38,9 @@
   </data>
   <data name="Allows modification of user details like email and roles, and can also reset user passwords." xml:space="preserve">
     <value>Allows modification of user details such as email and roles, and can also reset user passwords.</value>
+  </data>
+  <data name="Allows modifying question content and answers." xml:space="preserve">
+    <value>Allows modifying question content and answers.</value>
   </data>
   <data name="Allows the permanent deletion of roles." xml:space="preserve">
     <value>Allows the permanent deletion of roles.</value>
@@ -101,6 +107,12 @@
   </data>
   <data name="Manage Question Bank Roles" xml:space="preserve">
     <value>Manage Question Bank Roles</value>
+  </data>
+  <data name="Manage Questions" xml:space="preserve">
+    <value>Manage Questions</value>
+  </data>
+  <data name="Modify Questions" xml:space="preserve">
+    <value>Modify Questions</value>
   </data>
   <data name="Read Permissions" xml:space="preserve">
     <value>Read Permissions</value>

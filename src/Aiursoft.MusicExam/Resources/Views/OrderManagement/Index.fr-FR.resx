@@ -24,11 +24,17 @@
   <data name="Failed to save order. Please try again." xml:space="preserve">
     <value>Échec de l&apos;enregistrement de la commande. Veuillez réessayer.</value>
   </data>
+  <data name="Level" xml:space="preserve">
+    <value>Niveau</value>
+  </data>
   <data name="Manage Display Order" xml:space="preserve">
     <value>Gérer l&apos;ordre d&apos;affichage</value>
   </data>
   <data name="Order saved successfully!" xml:space="preserve">
     <value>Commande enregistrée avec succès !</value>
+  </data>
+  <data name="Papers" xml:space="preserve">
+    <value>Documents</value>
   </data>
   <data name="Save Order" xml:space="preserve">
     <value>Enregistrer l&apos;ordre</value>

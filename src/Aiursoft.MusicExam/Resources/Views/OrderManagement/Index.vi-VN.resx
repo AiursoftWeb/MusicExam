@@ -24,11 +24,17 @@
   <data name="Failed to save order. Please try again." xml:space="preserve">
     <value>Thất bại khi lưu thứ tự. Vui lòng thử lại.</value>
   </data>
+  <data name="Level" xml:space="preserve">
+    <value>Mức</value>
+  </data>
   <data name="Manage Display Order" xml:space="preserve">
     <value>Quản lý thứ tự hiển thị</value>
   </data>
   <data name="Order saved successfully!" xml:space="preserve">
     <value>Đã lưu thứ tự thành công!</value>
+  </data>
+  <data name="Papers" xml:space="preserve">
+    <value>Đề thi</value>
   </data>
   <data name="Save Order" xml:space="preserve">
     <value>Lưu thứ tự</value>
