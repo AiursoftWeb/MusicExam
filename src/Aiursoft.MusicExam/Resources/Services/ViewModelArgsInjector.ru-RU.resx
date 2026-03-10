@@ -141,6 +141,9 @@
   <data name="Manage Question Bank Roles" xml:space="preserve">
     <value>Управление ролями банка вопросов</value>
   </data>
+  <data name="Manage Questions" xml:space="preserve">
+    <value>Управление вопросами</value>
+  </data>
   <data name="Monthly finance report" xml:space="preserve">
     <value>Ежемесячный финансовый отчет</value>
   </data>

@@ -144,6 +144,9 @@
   <data name="Manage Question Bank Roles" xml:space="preserve">
     <value>Gestionar roles de la biblioteca de preguntas</value>
   </data>
+  <data name="Manage Questions" xml:space="preserve">
+    <value>Gestionar preguntas</value>
+  </data>
   <data name="Monthly finance report" xml:space="preserve">
     <value>Informe financiero mensual</value>
   </data>

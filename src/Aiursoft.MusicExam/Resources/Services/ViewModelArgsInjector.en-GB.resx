@@ -144,6 +144,9 @@
   <data name="Manage Question Bank Roles" xml:space="preserve">
     <value>Manage Question Bank Roles</value>
   </data>
+  <data name="Manage Questions" xml:space="preserve">
+    <value>Manage Questions</value>
+  </data>
   <data name="Monthly finance report" xml:space="preserve">
     <value>Monthly finance report</value>
   </data>

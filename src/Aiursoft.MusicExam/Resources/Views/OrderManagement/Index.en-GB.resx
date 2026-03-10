@@ -24,11 +24,17 @@
   <data name="Failed to save order. Please try again." xml:space="preserve">
     <value>Failed to save order. Please try again.</value>
   </data>
+  <data name="Level" xml:space="preserve">
+    <value>Level</value>
+  </data>
   <data name="Manage Display Order" xml:space="preserve">
     <value>Manage Display Order</value>
   </data>
   <data name="Order saved successfully!" xml:space="preserve">
     <value>Order saved successfully!</value>
+  </data>
+  <data name="Papers" xml:space="preserve">
+    <value>Papers</value>
   </data>
   <data name="Save Order" xml:space="preserve">
     <value>Save Order</value>

@@ -24,11 +24,17 @@
   <data name="Failed to save order. Please try again." xml:space="preserve">
     <value>ไม่สามารถบันทึกลำดับได้ กรุณาลองอีกครั้ง</value>
   </data>
+  <data name="Level" xml:space="preserve">
+    <value>ระดับ</value>
+  </data>
   <data name="Manage Display Order" xml:space="preserve">
     <value>จัดการลำดับการแสดงผล</value>
   </data>
   <data name="Order saved successfully!" xml:space="preserve">
     <value>บันทึกลำดับเรียบร้อยแล้ว!</value>
+  </data>
+  <data name="Papers" xml:space="preserve">
+    <value>เอกสาร</value>
   </data>
   <data name="Save Order" xml:space="preserve">
     <value>บันทึกลำดับ</value>
