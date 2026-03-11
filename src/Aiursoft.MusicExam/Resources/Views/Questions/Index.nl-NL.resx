@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Add Question" xml:space="preserve">
+    <value>Vraag toevoegen</value>
+  </data>
+  <data name="Are you sure to delete this question?" xml:space="preserve">
+    <value>Weet u zeker dat u deze vraag wilt verwijderen?</value>
+  </data>
+  <data name="Audio" xml:space="preserve">
+    <value>Audio</value>
+  </data>
+  <data name="Create New Exam Paper" xml:space="preserve">
+    <value>Nieuw examenpapier maken</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Verwijderen</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Bewerken</value>
+  </data>
+  <data name="Edit Paper" xml:space="preserve">
+    <value>Examen bewerken</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>Afbeelding</value>
+  </data>
+  <data name="Level" xml:space="preserve">
+    <value>Niveau</value>
+  </data>
+  <data name="No exam papers found in this school." xml:space="preserve">
+    <value>Geen examenvragen gevonden in deze school.</value>
+  </data>
+  <data name="No questions yet." xml:space="preserve">
+    <value>Nog geen vragen.</value>
+  </data>
+  <data name="Papers" xml:space="preserve">
+    <value>Examententamen</value>
+  </data>
+  <data name="Questions" xml:space="preserve">
+    <value>Vragen</value>
+  </data>
+  <data name="Video" xml:space="preserve">
+    <value>Video</value>
+  </data>
+
+</root>

@@ -24,11 +24,17 @@
   <data name="Failed to save order. Please try again." xml:space="preserve">
     <value>Mislukt om bestelling op te slaan. Probeer het opnieuw.</value>
   </data>
+  <data name="Level" xml:space="preserve">
+    <value>Niveau</value>
+  </data>
   <data name="Manage Display Order" xml:space="preserve">
     <value>Beheer weergavevolgorde</value>
   </data>
   <data name="Order saved successfully!" xml:space="preserve">
     <value>Bestelling succesvol opgeslagen!</value>
+  </data>
+  <data name="Papers" xml:space="preserve">
+    <value>Documenten</value>
   </data>
   <data name="Save Order" xml:space="preserve">
     <value>Opslaan volgorde</value>
