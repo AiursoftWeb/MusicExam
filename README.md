@@ -1,4 +1,4 @@
-# MusicExam - A sample project
+# MusicExam
 
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/aiursoftweb/musicexam/blob/master/LICENSE)
 [![Pipeline stat](https://gitlab.aiursoft.com/aiursoft/musicexam/badges/master/pipeline.svg)](https://gitlab.aiursoft.com/aiursoft/musicexam/-/pipelines)
