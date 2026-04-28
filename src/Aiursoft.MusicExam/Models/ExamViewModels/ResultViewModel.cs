@@ -5,6 +5,11 @@ namespace Aiursoft.MusicExam.Models.ExamViewModels;
 
 public class ResultViewModel : UiStackLayoutViewModel
 {
+    public ResultViewModel()
+    {
+        PageTitle = "Result";
+    }
+
     public required string Title { get; set; }
     public int PaperId { get; set; }
     public int CorrectCount { get; set; }

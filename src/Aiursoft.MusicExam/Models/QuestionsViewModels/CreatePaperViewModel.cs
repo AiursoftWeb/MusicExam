@@ -7,6 +7,11 @@ namespace Aiursoft.MusicExam.Models.QuestionsViewModels;
 
 public class CreatePaperViewModel : UiStackLayoutViewModel
 {
+    public CreatePaperViewModel()
+    {
+        PageTitle = "Create Exam Paper";
+    }
+
     [Display(Name = "School")]
     public int SchoolId { get; set; }
 

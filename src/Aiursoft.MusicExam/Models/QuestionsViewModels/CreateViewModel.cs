@@ -7,6 +7,11 @@ namespace Aiursoft.MusicExam.Models.QuestionsViewModels;
 
 public class CreateViewModel : UiStackLayoutViewModel
 {
+    public CreateViewModel()
+    {
+        PageTitle = "Add New Question";
+    }
+
     public int PaperId { get; set; }
 
     [Display(Name = "Question Content")]
