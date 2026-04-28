@@ -7,6 +7,11 @@ namespace Aiursoft.MusicExam.Models.QuestionsViewModels;
 
 public class EditViewModel : UiStackLayoutViewModel
 {
+    public EditViewModel()
+    {
+        PageTitle = "Edit Question";
+    }
+
     public int QuestionId { get; set; }
     public int PaperId { get; set; }
 

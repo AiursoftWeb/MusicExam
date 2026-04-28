@@ -1,12 +1,11 @@
 @model Aiursoft.MusicExam.Models.QuestionsViewModels.IndexViewModel
 @{
-    ViewData["Title"] = Localizer["Question Management"];
 }
 
 <div class="container-fluid p-0">
     <div class="row mb-2 mb-xl-3">
         <div class="col-auto d-none d-sm-block">
-            <h3>@ViewData["Title"]</h3>
+            <h3>@Model.PageTitle</h3>
         </div>
         <div class="col-auto ms-auto text-end mt-n1">
             <a asp-action="CreatePaper" class="btn btn-primary">@Localizer["Create New Exam Paper"]</a>

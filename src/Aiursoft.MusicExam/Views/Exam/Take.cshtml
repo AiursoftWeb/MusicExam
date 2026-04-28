@@ -3,7 +3,6 @@
 @inject Aiursoft.MusicExam.Services.FileStorage.StorageService Storage
 @model Aiursoft.MusicExam.Models.ExamViewModels.TakeViewModel
 @{
-    ViewData["Title"] = Model.Paper.Title;
     var orderedQuestions = Model.Paper.Questions.OrderBy(q => q.Id).ToList();
 }
 
