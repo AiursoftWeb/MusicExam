@@ -33,6 +33,9 @@
   <data name="Active Users Statistics" xml:space="preserve">
     <value>Etkin Kullanıcı İstatistikleri</value>
   </data>
+  <data name="Add New Question" xml:space="preserve">
+    <value>Yeni Soru Ekle</value>
+  </data>
   <data name="Admin" xml:space="preserve">
     <value>Yönetici</value>
   </data>
@@ -66,6 +69,9 @@
   <data name="Click to login" xml:space="preserve">
     <value>Giriş yapmak için tıklayın</value>
   </data>
+  <data name="Create Exam Paper" xml:space="preserve">
+    <value>Sınav Kağıdı Oluştur</value>
+  </data>
   <data name="Create Role" xml:space="preserve">
     <value>Rol Oluştur</value>
   </data>
@@ -80,6 +86,12 @@
   </data>
   <data name="Directory" xml:space="preserve">
     <value>Dizin</value>
+  </data>
+  <data name="Edit Exam Paper" xml:space="preserve">
+    <value>Sınav Kağıdını Düzenle</value>
+  </data>
+  <data name="Edit Question" xml:space="preserve">
+    <value>Soru Düzenle</value>
   </data>
   <data name="Edit Role" xml:space="preserve">
     <value>Rolü Düzenle</value>
@@ -171,8 +183,14 @@
   <data name="Profile Settings" xml:space="preserve">
     <value>Profil Ayarları</value>
   </data>
+  <data name="Question Management" xml:space="preserve">
+    <value>Soru Yönetimi</value>
+  </data>
   <data name="Register" xml:space="preserve">
     <value>Kayıt Ol</value>
+  </data>
+  <data name="Result" xml:space="preserve">
+    <value>Sonuç</value>
   </data>
   <data name="Result - " xml:space="preserve">
     <value>Sonuç -</value>

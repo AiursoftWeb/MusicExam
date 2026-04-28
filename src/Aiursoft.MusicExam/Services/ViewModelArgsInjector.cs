@@ -103,6 +103,13 @@ public class ViewModelArgsInjector(
         _ = localizer["Manage Display Order"];
     
         _ = localizer["Manage Questions"];
+    
+        _ = localizer["Add New Question"];
+        _ = localizer["Create Exam Paper"];
+        _ = localizer["Edit Exam Paper"];
+        _ = localizer["Edit Question"];
+        _ = localizer["Question Management"];
+        _ = localizer["Result"];
     }
 
     public void InjectSimple(

@@ -36,6 +36,9 @@
   <data name="Active Users Statistics" xml:space="preserve">
     <value>Thống kê người dùng đang hoạt động</value>
   </data>
+  <data name="Add New Question" xml:space="preserve">
+    <value>Thêm Câu Hỏi Mới</value>
+  </data>
   <data name="Admin" xml:space="preserve">
     <value>Quản trị viên</value>
   </data>
@@ -69,6 +72,9 @@
   <data name="Click to login" xml:space="preserve">
     <value>Nhấp để đăng nhập</value>
   </data>
+  <data name="Create Exam Paper" xml:space="preserve">
+    <value>Tạo Đề Thi</value>
+  </data>
   <data name="Create Role" xml:space="preserve">
     <value>Tạo Vai Trò</value>
   </data>
@@ -83,6 +89,12 @@
   </data>
   <data name="Directory" xml:space="preserve">
     <value>Thư mục</value>
+  </data>
+  <data name="Edit Exam Paper" xml:space="preserve">
+    <value>Chỉnh sửa đề thi</value>
+  </data>
+  <data name="Edit Question" xml:space="preserve">
+    <value>Sửa Câu hỏi</value>
   </data>
   <data name="Edit Role" xml:space="preserve">
     <value>Chỉnh sửa Vai trò</value>
@@ -174,8 +186,14 @@
   <data name="Profile Settings" xml:space="preserve">
     <value>Cài đặt Hồ sơ</value>
   </data>
+  <data name="Question Management" xml:space="preserve">
+    <value>Quản lý Câu hỏi</value>
+  </data>
   <data name="Register" xml:space="preserve">
     <value>Đăng ký</value>
+  </data>
+  <data name="Result" xml:space="preserve">
+    <value>Kết quả</value>
   </data>
   <data name="Result - " xml:space="preserve">
     <value>Kết quả -</value>

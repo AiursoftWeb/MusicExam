@@ -36,6 +36,9 @@
   <data name="Active Users Statistics" xml:space="preserve">
     <value>สถิติผู้ใช้งานที่ใช้งานอยู่</value>
   </data>
+  <data name="Add New Question" xml:space="preserve">
+    <value>เพิ่มคำถามใหม่</value>
+  </data>
   <data name="Admin" xml:space="preserve">
     <value>ผู้ดูแลระบบ</value>
   </data>
@@ -69,6 +72,9 @@
   <data name="Click to login" xml:space="preserve">
     <value>คลิกเพื่อเข้าสู่ระบบ</value>
   </data>
+  <data name="Create Exam Paper" xml:space="preserve">
+    <value>สร้างกระดาษข้อสอบ</value>
+  </data>
   <data name="Create Role" xml:space="preserve">
     <value>สร้างบทบาท</value>
   </data>
@@ -83,6 +89,12 @@
   </data>
   <data name="Directory" xml:space="preserve">
     <value>ไดเรกทอรี</value>
+  </data>
+  <data name="Edit Exam Paper" xml:space="preserve">
+    <value>แก้ไขข้อสอบ</value>
+  </data>
+  <data name="Edit Question" xml:space="preserve">
+    <value>แก้ไขคำถาม</value>
   </data>
   <data name="Edit Role" xml:space="preserve">
     <value>แก้ไขบทบาท</value>
@@ -174,8 +186,14 @@
   <data name="Profile Settings" xml:space="preserve">
     <value>การตั้งค่าโปรไฟล์</value>
   </data>
+  <data name="Question Management" xml:space="preserve">
+    <value>การจัดการคำถาม</value>
+  </data>
   <data name="Register" xml:space="preserve">
     <value>สมัครสมาชิก</value>
+  </data>
+  <data name="Result" xml:space="preserve">
+    <value>ผลลัพธ์</value>
   </data>
   <data name="Result - " xml:space="preserve">
     <value>ผลลัพธ์ -</value>

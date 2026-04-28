@@ -36,6 +36,9 @@
   <data name="Active Users Statistics" xml:space="preserve">
     <value>Aktive Nutzerstatistiken</value>
   </data>
+  <data name="Add New Question" xml:space="preserve">
+    <value>Neue Frage hinzufügen</value>
+  </data>
   <data name="Admin" xml:space="preserve">
     <value>Administrator</value>
   </data>
@@ -69,6 +72,9 @@
   <data name="Click to login" xml:space="preserve">
     <value>Zum Anmelden klicken</value>
   </data>
+  <data name="Create Exam Paper" xml:space="preserve">
+    <value>Prüfungsblatt erstellen</value>
+  </data>
   <data name="Create Role" xml:space="preserve">
     <value>Rolle erstellen</value>
   </data>
@@ -83,6 +89,12 @@
   </data>
   <data name="Directory" xml:space="preserve">
     <value>Verzeichnis</value>
+  </data>
+  <data name="Edit Exam Paper" xml:space="preserve">
+    <value>Prüfungsbogen bearbeiten</value>
+  </data>
+  <data name="Edit Question" xml:space="preserve">
+    <value>Frage bearbeiten</value>
   </data>
   <data name="Edit Role" xml:space="preserve">
     <value>Rolle bearbeiten</value>
@@ -174,8 +186,14 @@
   <data name="Profile Settings" xml:space="preserve">
     <value>Profileinstellungen</value>
   </data>
+  <data name="Question Management" xml:space="preserve">
+    <value>Fragenverwaltung</value>
+  </data>
   <data name="Register" xml:space="preserve">
     <value>Registrieren</value>
+  </data>
+  <data name="Result" xml:space="preserve">
+    <value>Ergebnis</value>
   </data>
   <data name="Result - " xml:space="preserve">
     <value>Ergebnis -</value>

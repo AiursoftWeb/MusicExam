@@ -33,6 +33,9 @@
   <data name="Active Users Statistics" xml:space="preserve">
     <value>Aktiivisten käyttäjien tilastot</value>
   </data>
+  <data name="Add New Question" xml:space="preserve">
+    <value>Lisää uusi kysymys</value>
+  </data>
   <data name="Admin" xml:space="preserve">
     <value>Ylläpitäjä</value>
   </data>
@@ -66,6 +69,9 @@
   <data name="Click to login" xml:space="preserve">
     <value>Klikkaa kirjautuaksesi</value>
   </data>
+  <data name="Create Exam Paper" xml:space="preserve">
+    <value>Luo koe-paperi</value>
+  </data>
   <data name="Create Role" xml:space="preserve">
     <value>Luo rooli</value>
   </data>
@@ -80,6 +86,12 @@
   </data>
   <data name="Directory" xml:space="preserve">
     <value>Hakemisto</value>
+  </data>
+  <data name="Edit Exam Paper" xml:space="preserve">
+    <value>Muokkaa kokeen paperia</value>
+  </data>
+  <data name="Edit Question" xml:space="preserve">
+    <value>Muokkaa kysymystä</value>
   </data>
   <data name="Edit Role" xml:space="preserve">
     <value>Muokkaa roolia</value>
@@ -171,8 +183,14 @@
   <data name="Profile Settings" xml:space="preserve">
     <value>Profiilin asetukset</value>
   </data>
+  <data name="Question Management" xml:space="preserve">
+    <value>Kysymysten hallinta</value>
+  </data>
   <data name="Register" xml:space="preserve">
     <value>Rekisteröidy</value>
+  </data>
+  <data name="Result" xml:space="preserve">
+    <value>Tulos</value>
   </data>
   <data name="Result - " xml:space="preserve">
     <value>Tulos -</value>
