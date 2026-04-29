@@ -33,6 +33,9 @@
   <data name="Active Users Statistics" xml:space="preserve">
     <value>Στατιστικά Ενεργών Χρηστών</value>
   </data>
+  <data name="Add New Question" xml:space="preserve">
+    <value>Προσθήκη Νέας Ερώτησης</value>
+  </data>
   <data name="Admin" xml:space="preserve">
     <value>Διαχειριστής</value>
   </data>
@@ -66,6 +69,9 @@
   <data name="Click to login" xml:space="preserve">
     <value>Κάντε κλικ για σύνδεση</value>
   </data>
+  <data name="Create Exam Paper" xml:space="preserve">
+    <value>Δημιουργία Εξεταστικού Δελτίου</value>
+  </data>
   <data name="Create Role" xml:space="preserve">
     <value>Δημιουργία Ρόλου</value>
   </data>
@@ -80,6 +86,12 @@
   </data>
   <data name="Directory" xml:space="preserve">
     <value>Κατάλογος</value>
+  </data>
+  <data name="Edit Exam Paper" xml:space="preserve">
+    <value>Επεξεργασία Εξεταστικού Δελτίου</value>
+  </data>
+  <data name="Edit Question" xml:space="preserve">
+    <value>Επεξεργασία Ερώτησης</value>
   </data>
   <data name="Edit Role" xml:space="preserve">
     <value>Επεξεργασία Ρόλου</value>
@@ -171,8 +183,14 @@
   <data name="Profile Settings" xml:space="preserve">
     <value>Ρυθμίσεις Προφίλ</value>
   </data>
+  <data name="Question Management" xml:space="preserve">
+    <value>Διαχείριση Ερωτήσεων</value>
+  </data>
   <data name="Register" xml:space="preserve">
     <value>Εγγραφή</value>
+  </data>
+  <data name="Result" xml:space="preserve">
+    <value>Αποτέλεσμα</value>
   </data>
   <data name="Result - " xml:space="preserve">
     <value>Αποτέλεσμα -</value>

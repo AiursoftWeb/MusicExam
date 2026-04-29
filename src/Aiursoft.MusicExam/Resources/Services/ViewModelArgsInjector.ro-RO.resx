@@ -33,6 +33,9 @@
   <data name="Active Users Statistics" xml:space="preserve">
     <value>Statistici utilizatori activi</value>
   </data>
+  <data name="Add New Question" xml:space="preserve">
+    <value>Adaugă întrebare nouă</value>
+  </data>
   <data name="Admin" xml:space="preserve">
     <value>Administrator</value>
   </data>
@@ -66,6 +69,9 @@
   <data name="Click to login" xml:space="preserve">
     <value>Apasă pentru a te autentifica</value>
   </data>
+  <data name="Create Exam Paper" xml:space="preserve">
+    <value>Creează fișă de examen</value>
+  </data>
   <data name="Create Role" xml:space="preserve">
     <value>Creează Rol</value>
   </data>
@@ -80,6 +86,12 @@
   </data>
   <data name="Directory" xml:space="preserve">
     <value>Director</value>
+  </data>
+  <data name="Edit Exam Paper" xml:space="preserve">
+    <value>Editează foaia de examen</value>
+  </data>
+  <data name="Edit Question" xml:space="preserve">
+    <value>Editare întrebare</value>
   </data>
   <data name="Edit Role" xml:space="preserve">
     <value>Editează Rol</value>
@@ -171,8 +183,14 @@
   <data name="Profile Settings" xml:space="preserve">
     <value>Setări Profil</value>
   </data>
+  <data name="Question Management" xml:space="preserve">
+    <value>Gestionarea întrebărilor</value>
+  </data>
   <data name="Register" xml:space="preserve">
     <value>Înregistrare</value>
+  </data>
+  <data name="Result" xml:space="preserve">
+    <value>Rezultat</value>
   </data>
   <data name="Result - " xml:space="preserve">
     <value>Rezultat -</value>
