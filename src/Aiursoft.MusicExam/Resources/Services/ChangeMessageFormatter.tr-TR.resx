@@ -34,10 +34,10 @@
     <value>KullanıcıSilindi</value>
   </data>
   <data name="UserJoinedRole" xml:space="preserve">
-    <value>{userName} rolüne katıldı</value>
+    <value>{{userName}} rolüne katıldı</value>
   </data>
   <data name="UserLeftRole" xml:space="preserve">
-    <value>{userName} rolünden ayrıldı</value>
+    <value>{{userName}} rolünden ayrıldı</value>
   </data>
 
 </root>
