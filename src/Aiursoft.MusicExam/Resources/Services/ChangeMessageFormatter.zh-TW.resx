@@ -37,7 +37,7 @@
     <value>使用者已加入角色</value>
   </data>
   <data name="UserLeftRole" xml:space="preserve">
-    <value>{userName} 已離開 {roleName}</value>
+    <value>{{userName}} 已離開 {{roleName}}</value>
   </data>
 
 </root>

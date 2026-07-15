@@ -37,7 +37,7 @@
     <value>{0} has joined the {1} role.</value>
   </data>
   <data name="UserLeftRole" xml:space="preserve">
-    <value>{userName} has left the {roleName} role.</value>
+    <value>{{userName}} has left the {{roleName}} role.</value>
   </data>
 
 </root>
