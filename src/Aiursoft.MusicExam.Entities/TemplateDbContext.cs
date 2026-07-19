@@ -24,4 +24,15 @@ public abstract class TemplateDbContext(DbContextOptions options) : IdentityDbCo
 
     public virtual  Task<bool> CanConnectAsync() =>
         Database.CanConnectAsync();
+
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+        base.OnModelCreating(builder);
+
+        builder.Entity<Change>()
+            .HasOne(c => c.TriggerUser)
+            .WithMany()
+            .HasForeignKey(c => c.TriggerUserId)
+            .OnDelete(DeleteBehavior.SetNull);
+    }
 }

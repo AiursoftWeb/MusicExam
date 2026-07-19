@@ -17,7 +17,7 @@ namespace Aiursoft.MusicExam.MySql.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "10.0.2")
+                .HasAnnotation("ProductVersion", "10.0.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
@@ -502,7 +502,8 @@ namespace Aiursoft.MusicExam.MySql.Migrations
                 {
                     b.HasOne("Aiursoft.MusicExam.Entities.User", "TriggerUser")
                         .WithMany()
-                        .HasForeignKey("TriggerUserId");
+                        .HasForeignKey("TriggerUserId")
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.Navigation("TriggerUser");
                 });
