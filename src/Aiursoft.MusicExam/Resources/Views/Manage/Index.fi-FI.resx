@@ -39,6 +39,15 @@
   <data name="Change your profile" xml:space="preserve">
     <value>Muuta profiiliasi</value>
   </data>
+  <data name="Danger Zone" xml:space="preserve">
+    <value>Vaaravyöhyke</value>
+  </data>
+  <data name="Delete your account" xml:space="preserve">
+    <value>Poista tilisi</value>
+  </data>
+  <data name="Delete your account data" xml:space="preserve">
+    <value>Poista tilitietosi</value>
+  </data>
   <data name="My Exam Records" xml:space="preserve">
     <value>Omat kokeeni tulokset</value>
   </data>
