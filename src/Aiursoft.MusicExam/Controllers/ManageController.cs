@@ -4,6 +4,7 @@ using Aiursoft.MusicExam.Models.ManageViewModels;
 using Aiursoft.MusicExam.Services;
 using Aiursoft.MusicExam.Services.FileStorage;
 using Aiursoft.UiStack.Navigation;
+using Aiursoft.UiStack.Layout;
 using Aiursoft.WebTools.Attributes;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -232,7 +233,7 @@ public class ManageController(
     [HttpGet]
     public IActionResult DeleteAccount()
     {
-        return this.StackView(new Aiursoft.UiStack.Layout.UiStackLayoutViewModel { PageTitle = "Delete Account" });
+        return this.StackView(new UiStackLayoutViewModel { PageTitle = "Delete Account" });
     }
 
     //

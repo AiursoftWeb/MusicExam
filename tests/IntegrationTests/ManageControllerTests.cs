@@ -4,7 +4,6 @@ using Aiursoft.MusicExam.Entities;
 using System.Net;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 namespace Aiursoft.MusicExam.Tests.IntegrationTests;
 
 [TestClass]
@@ -58,8 +57,7 @@ public class ManageControllerTests : TestBase
         // Arrange: register, login, create content owned by the user
         var (email, _) = await RegisterAndLoginAsync();
 
-        string userId;
-        int entityId; // or Guid
+        string userId; // or Guid
         using (var scope = Server!.Services.CreateScope())
         {
             var userManager = scope.ServiceProvider.GetRequiredService<UserManager<User>>();
