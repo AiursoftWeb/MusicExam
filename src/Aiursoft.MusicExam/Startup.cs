@@ -7,6 +7,7 @@ using Aiursoft.MusicExam.InMemory;
 using Aiursoft.MusicExam.MySql;
 using Aiursoft.MusicExam.Services.Authentication;
 using Aiursoft.MusicExam.Sqlite;
+using Aiursoft.UiStack;
 using Aiursoft.UiStack.Layout;
 using Aiursoft.UiStack.Navigation;
 using Microsoft.AspNetCore.Mvc.Razor;
@@ -77,6 +78,7 @@ public class Startup : IWebStartup
     {
         app.UseExceptionHandler("/Error/Code500");
         app.UseStatusCodePagesWithReExecute("/Error/Code{0}");
+        app.UseUIStack();
         app.UseStaticFiles();
         app.UseRouting();
         app.UseAuthentication();
