@@ -6,13 +6,11 @@
   "license": "MIT",
   "dependencies": {
     "bootstrap-icons": "1.11.3",
-    "chart.js": "2.9.4",
     "sortablejs": "1.15.0",
     "dropify": "^0.2.2"
   },
   "keep": {
     "bootstrap-icons": "font",
-    "chart.js": "dist",
     "sortablejs": "Sortable.min.js",
     "dropify": "dist"
   },

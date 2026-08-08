@@ -86,7 +86,8 @@
     </div>
 </div>
 
-<script src="~/node_modules/chart.js/dist/Chart.min.js" asp-append-version="true"></script>
+@* ReSharper disable once Razor.SectionNotResolved *@
+@section scripts {
 <script>
     var ctx1 = document.getElementById("usersChart");
     var myLineChart1 = new Chart(ctx1, {
@@ -178,3 +179,4 @@
         }
     });
 </script>
+}
