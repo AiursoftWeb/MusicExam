@@ -1,3 +1,5 @@
+using Aiursoft.MusicExam.Services.FileStorage;
+
 namespace Aiursoft.MusicExam.Tests.IntegrationTests;
 
 // JB scanner bug. Not a warning.
@@ -13,15 +15,17 @@ public class AvatarTests : TestBase
         await RegisterAndLoginAsync();
 
         // 2. Upload a file
-        // 1x1 PNG
-        var pngBytes = Convert.FromBase64String("iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==");
-        var fileContent = new ByteArrayContent(pngBytes);
-        fileContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("image/png");
+        // 1x1 transparent GIF
+        var gifBytes = Convert.FromBase64String("R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
+        var fileContent = new ByteArrayContent(gifBytes);
+        fileContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("image/gif");
 
         var multipartContent = new MultipartFormDataContent();
-        multipartContent.Add(fileContent, "file", "avatar.png");
+        multipartContent.Add(fileContent, "file", "avatar.gif");
 
-        var uploadResponse = await Http.PostAsync("/upload/avatars", multipartContent);
+        var storage = GetService<StorageService>();
+        var uploadUrl = storage.GetUploadUrl("avatars", isVault: false);
+        var uploadResponse = await Http.PostAsync(uploadUrl, multipartContent);
         uploadResponse.EnsureSuccessStatusCode();
 
         var uploadResult = await uploadResponse.Content.ReadFromJsonAsync<UploadResult>();
@@ -52,7 +56,9 @@ public class AvatarTests : TestBase
         var multipartContent = new MultipartFormDataContent();
         multipartContent.Add(fileContent, "file", "avatar.gif");
 
-        var uploadResponse = await Http.PostAsync("/upload/avatars", multipartContent);
+        var storage = GetService<StorageService>();
+        var uploadUrl = storage.GetUploadUrl("avatars", isVault: false);
+        var uploadResponse = await Http.PostAsync(uploadUrl, multipartContent);
         uploadResponse.EnsureSuccessStatusCode();
 
         var uploadResult = await uploadResponse.Content.ReadFromJsonAsync<UploadResult>();
@@ -62,12 +68,13 @@ public class AvatarTests : TestBase
         // 3. Test Clear EXIF (Default download)
         var downloadResponse = await Http.GetAsync(uploadResult.InternetPath);
         downloadResponse.EnsureSuccessStatusCode();
-        Assert.AreEqual("image/gif", downloadResponse.Content.Headers.ContentType?.MediaType);
+        Assert.AreEqual("application/octet-stream", downloadResponse.Content.Headers.ContentType?.MediaType);
+        Assert.AreEqual("attachment", downloadResponse.Content.Headers.ContentDisposition?.DispositionType);
 
         // 4. Test Compression
         var compressedResponse = await Http.GetAsync(uploadResult.InternetPath + "?w=100");
         compressedResponse.EnsureSuccessStatusCode();
-        Assert.AreEqual("image/gif", compressedResponse.Content.Headers.ContentType?.MediaType);
+        Assert.AreEqual("application/octet-stream", compressedResponse.Content.Headers.ContentType?.MediaType);
     }
 
     [TestMethod]
@@ -85,7 +92,9 @@ public class AvatarTests : TestBase
         var multipartContent = new MultipartFormDataContent();
         multipartContent.Add(fileContent, "file", "avatar.png");
 
-        var uploadResponse = await Http.PostAsync("/upload/avatars", multipartContent);
+        var storage = GetService<StorageService>();
+        var uploadUrl = storage.GetUploadUrl("avatars", isVault: false);
+        var uploadResponse = await Http.PostAsync(uploadUrl, multipartContent);
         uploadResponse.EnsureSuccessStatusCode();
 
         var uploadResult = await uploadResponse.Content.ReadFromJsonAsync<UploadResult>();
@@ -121,7 +130,9 @@ public class AvatarTests : TestBase
         var multipartContent = new MultipartFormDataContent();
         multipartContent.Add(fileContent, "file", "avatar.png");
 
-        var uploadResponse = await Http.PostAsync("/upload/avatars", multipartContent);
+        var storage = GetService<StorageService>();
+        var uploadUrl = storage.GetUploadUrl("avatars", isVault: false);
+        var uploadResponse = await Http.PostAsync(uploadUrl, multipartContent);
         uploadResponse.EnsureSuccessStatusCode();
 
         var uploadResult = await uploadResponse.Content.ReadFromJsonAsync<UploadResult>();
@@ -156,7 +167,9 @@ public class AvatarTests : TestBase
         var multipartContent = new MultipartFormDataContent();
         multipartContent.Add(fileContent, "file", "avatar.png");
 
-        var uploadResponse = await Http.PostAsync("/upload/avatars", multipartContent);
+        var storage = GetService<StorageService>();
+        var uploadUrl = storage.GetUploadUrl("avatars", isVault: false);
+        var uploadResponse = await Http.PostAsync(uploadUrl, multipartContent);
         uploadResponse.EnsureSuccessStatusCode();
 
         var uploadResult = await uploadResponse.Content.ReadFromJsonAsync<UploadResult>();
@@ -169,6 +182,67 @@ public class AvatarTests : TestBase
         await using var stream = await compressedResponse.Content.ReadAsStreamAsync();
         using var image = SkiaSharp.SKBitmap.Decode(stream);
         Assert.AreEqual(128, image.Width);
+    }
+
+    [TestMethod]
+    public async Task TestClearExif()
+    {
+        await RegisterAndLoginAsync();
+
+        // Upload a PNG file
+        var pngBytes = Convert.FromBase64String("iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAIAAAAW4yFwAAAAEElEQVR4nGP4z8DAxMDAAAAHCQEClNBcOwAAAABJRU5ErkJggg==");
+        var fileContent = new ByteArrayContent(pngBytes);
+        fileContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("image/png");
+
+        var multipartContent = new MultipartFormDataContent();
+        multipartContent.Add(fileContent, "file", "avatar.png");
+
+        var storage = GetService<StorageService>();
+        var uploadUrl = storage.GetUploadUrl("avatars", isVault: false);
+        var uploadResponse = await Http.PostAsync(uploadUrl, multipartContent);
+        uploadResponse.EnsureSuccessStatusCode();
+
+        var uploadResult = await uploadResponse.Content.ReadFromJsonAsync<UploadResult>();
+        Assert.IsNotNull(uploadResult);
+
+        // Download without any parameters should trigger ClearExif
+        var downloadResponse = await Http.GetAsync(uploadResult.InternetPath);
+        downloadResponse.EnsureSuccessStatusCode();
+        Assert.AreEqual("image/png", downloadResponse.Content.Headers.ContentType?.MediaType);
+    }
+
+    [TestMethod]
+    public async Task TestProcessNonImage()
+    {
+        await RegisterAndLoginAsync();
+
+        // Upload a text file but give it an image extension to try to trick the processor
+        var content = new StringContent("Not an image");
+        var multipartContent = new MultipartFormDataContent();
+        multipartContent.Add(content, "file", "fake.jpg");
+
+        var storage = GetService<StorageService>();
+        var uploadUrl = storage.GetUploadUrl("test", isVault: false);
+        var uploadResponse = await Http.PostAsync(uploadUrl, multipartContent);
+        uploadResponse.EnsureSuccessStatusCode();
+
+        var uploadResult = await uploadResponse.Content.ReadFromJsonAsync<UploadResult>();
+        Assert.IsNotNull(uploadResult);
+
+        // Try to compress it. FilesController.Download will call physicalPath.IsStaticImage()
+        // which might return true based on extension, but SKBitmap.Decode will fail.
+        var compressedResponse = await Http.GetAsync(uploadResult.InternetPath + "?w=100");
+
+        // It should still return the file (original) or successfully handle the error.
+        compressedResponse.EnsureSuccessStatusCode();
+    }
+
+    [TestMethod]
+    public async Task TestIsValidImageWithNonExistingFile()
+    {
+        var service = GetService<ImageProcessingService>();
+        var result = await service.IsValidImageAsync("/non/existing/path.jpg");
+        Assert.IsFalse(result);
     }
 
     private class UploadResult
