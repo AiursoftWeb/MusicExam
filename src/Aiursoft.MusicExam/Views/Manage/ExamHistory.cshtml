@@ -10,8 +10,10 @@
     <div class="card-body">
         @if (!Model.Submissions.Any())
         {
-            <div class="alert alert-info">
-                @Localizer["You haven't taken any exams yet."]
+            <div class="alert alert-info" role="alert">
+                <div class="alert-message">
+                    @Localizer["You haven't taken any exams yet."]
+                </div>
             </div>
         }
         else
