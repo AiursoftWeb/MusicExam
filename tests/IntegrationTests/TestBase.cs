@@ -1,6 +1,5 @@
 using System.Net;
 using System.Text.RegularExpressions;
-using Aiursoft.CSTools.Tools;
 using Aiursoft.DbTools;
 using Aiursoft.MusicExam.Entities;
 using static Aiursoft.WebTools.Extends;
@@ -9,7 +8,6 @@ namespace Aiursoft.MusicExam.Tests.IntegrationTests;
 
 public abstract class TestBase
 {
-    protected readonly int Port;
     protected readonly HttpClient Http;
     protected IHost? Server;
 
@@ -21,11 +19,7 @@ public abstract class TestBase
             CookieContainer = cookieContainer,
             AllowAutoRedirect = false
         };
-        Port = Network.GetAvailablePort();
-        Http = new HttpClient(handler)
-        {
-            BaseAddress = new Uri($"http://localhost:{Port}")
-        };
+        Http = new HttpClient(handler);
     }
 
     protected int SeededExamPaperId { get; set; }
@@ -33,30 +27,42 @@ public abstract class TestBase
     [TestInitialize]
     public virtual async Task CreateServer()
     {
-        Server = await AppAsync<Startup>([], port: Port);
-        await Server.UpdateDbAsync<TemplateDbContext>();
-        await Server.SeedAsync();
-
-        using (var scope = Server.Services.CreateScope())
+        using var reservation = new TestPortReservation();
+        Http.BaseAddress = new Uri($"http://localhost:{reservation.Port}");
+        Server = await AppAsync<Startup>([], port: reservation.Port);
+        try
         {
-            var db = scope.ServiceProvider.GetRequiredService<TemplateDbContext>();
-            var school = new School { Name = "Test School" };
-            db.Schools.Add(school);
-            await db.SaveChangesAsync();
+            reservation.ConfigureServer(Server);
+            await Server.UpdateDbAsync<TemplateDbContext>();
+            await Server.SeedAsync();
 
-            var paper = new ExamPaper
+            using (var scope = Server.Services.CreateScope())
             {
-                Title = "Test Paper",
-                SchoolId = school.Id,
-                Category = "General",
-                Level = "1"
-            };
-            db.ExamPapers.Add(paper);
-            await db.SaveChangesAsync();
-            SeededExamPaperId = paper.Id;
-        }
+                var db = scope.ServiceProvider.GetRequiredService<TemplateDbContext>();
+                var school = new School { Name = "Test School" };
+                db.Schools.Add(school);
+                await db.SaveChangesAsync();
 
-        await Server.StartAsync();
+                var paper = new ExamPaper
+                {
+                    Title = "Test Paper",
+                    SchoolId = school.Id,
+                    Category = "General",
+                    Level = "1"
+                };
+                db.ExamPapers.Add(paper);
+                await db.SaveChangesAsync();
+                SeededExamPaperId = paper.Id;
+            }
+
+            await Server.StartAsync();
+        }
+        catch
+        {
+            Server.Dispose();
+            Server = null;
+            throw;
+        }
     }
 
     [TestCleanup]
