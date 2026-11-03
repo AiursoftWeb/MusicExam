@@ -1,8 +1,8 @@
 # MusicExam
 
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/aiursoftweb/musicexam/blob/master/LICENSE)
-[![Pipeline stat](https://gitlab.aiursoft.com/aiursoft/musicexam/badges/master/pipeline.svg)](https://gitlab.aiursoft.com/aiursoft/musicexam/-/pipelines)
-[![Test Coverage](https://gitlab.aiursoft.com/aiursoft/musicexam/badges/master/coverage.svg)](https://gitlab.aiursoft.com/aiursoft/musicexam/-/pipelines)
+[![Pipeline stat](https://badge-proxy.aiursoft.com/aiursoft/musicexam/badges/master/pipeline.svg)](https://gitlab.aiursoft.com/aiursoft/musicexam/-/pipelines)
+[![Test Coverage](https://badge-proxy.aiursoft.com/aiursoft/musicexam/badges/master/coverage.svg)](https://gitlab.aiursoft.com/aiursoft/musicexam/-/pipelines)
 [![S360 compliance](https://s360.aiursoft.com/badge.svg?project=aiursoft%2Fmusicexam)](https://s360.aiursoft.com/SupplyChain?tab=projects&project=aiursoft%2Fmusicexam&scope=baseline&ecosystem=all)
 [![Man hours](https://manhours.aiursoft.com/r/github.com/aiursoftweb/musicexam.svg)](https://manhours.aiursoft.com/r/github.com/aiursoftweb/musicexam.html)
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fmusicexam.aiursoft.cn)](https://musicexam.aiursoft.cn)
