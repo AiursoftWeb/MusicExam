@@ -118,7 +118,15 @@ public class ExamController : Controller
             var userSelection = form[$"question-{question.Id}"];
             if (!string.IsNullOrEmpty(userSelection))
             {
-                result.UserSelectedOptionIds = userSelection.Select(s => int.Parse(s!)).ToList();
+                foreach (var selection in userSelection)
+                {
+                    if (!int.TryParse(selection, out var optionId) ||
+                        !question.Options.Any(option => option.Id == optionId))
+                    {
+                        return BadRequest();
+                    }
+                    result.UserSelectedOptionIds.Add(optionId);
+                }
             }
 
             // Grading Logic
