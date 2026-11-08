@@ -9,6 +9,24 @@ namespace Aiursoft.MusicExam.Tests.IntegrationTests;
 public class BasicTests : TestBase
 {
     [TestMethod]
+    public async Task SeedingExistingDatabasePreservesAccountsAndRoles()
+    {
+        var db = GetService<TemplateDbContext>();
+        var admin = await db.Users.SingleAsync(user => user.UserName == "admin");
+        admin.DisplayName = "Administrator with saved changes";
+        await db.SaveChangesAsync();
+        var userCount = await db.Users.CountAsync();
+        var roleIds = await db.Roles.Select(role => role.Id).ToListAsync();
+
+        await Server!.SeedAsync();
+
+        Assert.AreEqual(userCount, await db.Users.CountAsync());
+        var savedAdmin = await db.Users.AsNoTracking().SingleAsync(user => user.Id == admin.Id);
+        Assert.AreEqual("Administrator with saved changes", savedAdmin.DisplayName);
+        CollectionAssert.AreEquivalent(roleIds, await db.Roles.Select(role => role.Id).ToListAsync());
+    }
+
+    [TestMethod]
     [DataRow("/")]
     [DataRow("/hOmE?aaaaaa=bbbbbb")]
     [DataRow("/hOmE/InDeX")]
