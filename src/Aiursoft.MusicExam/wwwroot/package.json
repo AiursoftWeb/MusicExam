@@ -5,8 +5,8 @@
   "author": "Anduin Xue",
   "license": "MIT",
   "dependencies": {
-    "bootstrap-icons": "1.11.3",
-    "sortablejs": "1.15.0",
+    "bootstrap-icons": "1.13.2",
+    "sortablejs": "1.15.7",
     "dropify": "^0.2.2"
   },
   "keep": {
