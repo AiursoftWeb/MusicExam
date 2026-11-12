@@ -1,3 +1,4 @@
+using Microsoft.Extensions.Localization;
 using Aiursoft.MusicExam.Authorization;
 using Aiursoft.MusicExam.Entities;
 using Aiursoft.MusicExam.Models.UsersViewModels;
@@ -21,7 +22,8 @@ public class UsersController(
     UserManager<User> userManager,
     TemplateDbContext context,
     ChangeRecorder changeRecorder,
-    ChangeMessageFormatter messageFormatter)
+    ChangeMessageFormatter messageFormatter,
+    IStringLocalizer<AppPermissions> permissionLocalizer)
     : Controller
 {
     [Authorize(Policy = AppPermissionNames.CanReadUsers)]
@@ -81,7 +83,8 @@ public class UsersController(
 
         var permissions = AppPermissions.GetAllPermissions()
             .Where(p => allPermissionValues.Contains(p.Key))
-            .OrderBy(p => p.Name)
+            .OrderBy(p => permissionLocalizer[p.Name].Value, StringComparer.CurrentCulture)
+            .ThenBy(p => p.Key, StringComparer.Ordinal)
             .ToList();
 
         return this.StackView(new DetailsViewModel
