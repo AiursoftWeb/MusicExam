@@ -1,3 +1,4 @@
+@using System.Globalization
 @using Aiursoft.WebTools
 @using Aiursoft.MusicExam.Services.FileStorage
 @model Aiursoft.MusicExam.Models.ChangesViewModels.ActiveUsersDetailsViewModel
@@ -5,7 +6,7 @@
 
 <div class="row mb-2 mb-xl-3">
     <div class="col-auto d-none d-sm-block">
-        <h3>@Localizer["Active Users Details"] - @Model.Report.Month.ToString("MMMM yyyy")</h3>
+        <h3>@Localizer["Active Users Details"] - @Model.Report.Month.ToString("MMMM yyyy", CultureInfo.CurrentCulture)</h3>
     </div>
 </div>
 

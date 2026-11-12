@@ -55,7 +55,7 @@
                                            type="@(isSingleChoice ? "radio" : "checkbox")"
                                            name="question-@question.Id"
                                            value="@option.Id"
-                                           data-is-correct="@option.IsCorrect.ToString().ToLower()">
+                                           data-is-correct="@option.IsCorrect.ToString().ToLowerInvariant()">
 
                                     @if (!string.IsNullOrWhiteSpace(option.AssetPath))
                                     {
