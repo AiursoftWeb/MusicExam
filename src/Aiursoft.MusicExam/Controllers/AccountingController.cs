@@ -1,3 +1,4 @@
+using System.Globalization;
 using Aiursoft.MusicExam.Authorization;
 using Aiursoft.MusicExam.Entities;
 using Aiursoft.MusicExam.Models.AccountingViewModels;
@@ -64,7 +65,7 @@ public class AccountingController(TemplateDbContext dbContext) : Controller
         for (var i = 0; i <= 30; i++)
         {
             var date = day30DaysAgo.AddDays(i);
-            model.ChartLabels.Add(date.ToString("MM-dd"));
+            model.ChartLabels.Add(date.ToString("MM-dd", CultureInfo.InvariantCulture));
             model.NewUsersData.Add(usersHistory.FirstOrDefault(t => t.Time == date)?.Count ?? 0);
             model.NewSubmissionsData.Add(submissionHistory.FirstOrDefault(t => t.Time == date)?.Count ?? 0);
         }
