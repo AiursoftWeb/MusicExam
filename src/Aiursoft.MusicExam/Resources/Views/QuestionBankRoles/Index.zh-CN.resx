@@ -54,14 +54,14 @@
   <data name="Paper Title" xml:space="preserve">
     <value>试卷标题</value>
   </data>
-  <data name="paper(s)" xml:space="preserve">
-    <value>试卷</value>
-  </data>
   <data name="Question Bank Name" xml:space="preserve">
     <value>题库名称</value>
   </data>
   <data name="School / Level" xml:space="preserve">
     <value>学校 / 等级</value>
+  </data>
+  <data name="paper(s)" xml:space="preserve">
+    <value>试卷</value>
   </data>
 
 </root>

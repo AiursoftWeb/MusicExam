@@ -45,14 +45,14 @@
   <data name="Project Name" xml:space="preserve">
     <value>프로젝트 이름</value>
   </data>
+  <data name="The ICP license number for China mainland users. Leave empty to hide." xml:space="preserve">
+    <value>중국 대륙 사용자를 위한 ICP 라이선스 번호입니다. 숨기려면 비워 두세요.</value>
+  </data>
   <data name="The brand logo displayed in the navbar and sidebar. Will fallback to default logo if not set." xml:space="preserve">
     <value>네비게이션 바와 사이드바에 표시되는 브랜드 로고입니다. 설정되지 않은 경우 기본 로고로 대체됩니다.</value>
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>푸터에 표시되는 브랜드 이름</value>
-  </data>
-  <data name="The ICP license number for China mainland users. Leave empty to hide." xml:space="preserve">
-    <value>중국 대륙 사용자를 위한 ICP 라이선스 번호입니다. 숨기려면 비워 두세요.</value>
   </data>
   <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
     <value>네비게이션 바와 푸터에 표시되는 프로젝트의 로고입니다. jpg, png, svg 파일을 지원합니다.</value>

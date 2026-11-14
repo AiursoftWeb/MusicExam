@@ -54,14 +54,14 @@
   <data name="Paper Title" xml:space="preserve">
     <value>論文タイトル</value>
   </data>
-  <data name="paper(s)" xml:space="preserve">
-    <value>用紙（複数可）</value>
-  </data>
   <data name="Question Bank Name" xml:space="preserve">
     <value>問題バンク名</value>
   </data>
   <data name="School / Level" xml:space="preserve">
     <value>学校 / レベル</value>
+  </data>
+  <data name="paper(s)" xml:space="preserve">
+    <value>用紙（複数可）</value>
   </data>
 
 </root>

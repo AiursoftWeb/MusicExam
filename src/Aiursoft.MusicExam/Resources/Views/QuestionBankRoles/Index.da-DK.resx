@@ -54,14 +54,14 @@
   <data name="Paper Title" xml:space="preserve">
     <value>Opgavetitel</value>
   </data>
-  <data name="paper(s)" xml:space="preserve">
-    <value>opgave(r)</value>
-  </data>
   <data name="Question Bank Name" xml:space="preserve">
     <value>Spørgsmålsbanknavn</value>
   </data>
   <data name="School / Level" xml:space="preserve">
     <value>Skole / Niveau</value>
+  </data>
+  <data name="paper(s)" xml:space="preserve">
+    <value>opgave(r)</value>
   </data>
 
 </root>

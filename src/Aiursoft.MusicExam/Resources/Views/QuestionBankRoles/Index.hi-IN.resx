@@ -54,14 +54,14 @@
   <data name="Paper Title" xml:space="preserve">
     <value>पेपर शीर्षक</value>
   </data>
-  <data name="paper(s)" xml:space="preserve">
-    <value>पेपर(स)</value>
-  </data>
   <data name="Question Bank Name" xml:space="preserve">
     <value>प्रश्न बैंक नाम</value>
   </data>
   <data name="School / Level" xml:space="preserve">
     <value>स्कूल / स्तर</value>
+  </data>
+  <data name="paper(s)" xml:space="preserve">
+    <value>पेपर(स)</value>
   </data>
 
 </root>

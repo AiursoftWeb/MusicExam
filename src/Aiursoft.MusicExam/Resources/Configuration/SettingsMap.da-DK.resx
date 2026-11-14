@@ -45,14 +45,14 @@
   <data name="Project Name" xml:space="preserve">
     <value>Projektnavn</value>
   </data>
+  <data name="The ICP license number for China mainland users. Leave empty to hide." xml:space="preserve">
+    <value>ICP-licensenr. for brugere fra Kina&apos;s fastland. Lad stå tomt for at skjule.</value>
+  </data>
   <data name="The brand logo displayed in the navbar and sidebar. Will fallback to default logo if not set." xml:space="preserve">
     <value>Det brandlogo der vises i navigationsbaren og sidebaren. Fallback til standardlogo, hvis ikke sat.</value>
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>Det brandnavn, der vises i foden.</value>
-  </data>
-  <data name="The ICP license number for China mainland users. Leave empty to hide." xml:space="preserve">
-    <value>ICP-licensenr. for brugere fra Kina&apos;s fastland. Lad stå tomt for at skjule.</value>
   </data>
   <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
     <value>Det projektlogo der vises i navigationen og foden. Støtter jpg, png, svg.</value>

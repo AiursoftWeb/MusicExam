@@ -54,14 +54,14 @@
   <data name="Paper Title" xml:space="preserve">
     <value>Назва паперу</value>
   </data>
-  <data name="paper(s)" xml:space="preserve">
-    <value>папір(ів)</value>
-  </data>
   <data name="Question Bank Name" xml:space="preserve">
     <value>Назва банку питань</value>
   </data>
   <data name="School / Level" xml:space="preserve">
     <value>Навчальний заклад / Рівень</value>
+  </data>
+  <data name="paper(s)" xml:space="preserve">
+    <value>папір(ів)</value>
   </data>
 
 </root>

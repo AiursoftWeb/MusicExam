@@ -39,11 +39,11 @@
   <data name="A modern, feature-rich, and highly extensible foundation for your next web application." xml:space="preserve">
     <value>Una base moderna, rica en funciones y altamente extensible para tu próxima aplicación web.</value>
   </data>
-  <data name="Achieve more with Aiursoft Template" xml:space="preserve">
-    <value>Logra más con Aiursoft Template</value>
-  </data>
   <data name="AI-Powered Translations" xml:space="preserve">
     <value>Traducciones con IA</value>
+  </data>
+  <data name="Achieve more with Aiursoft Template" xml:space="preserve">
+    <value>Logra más con Aiursoft Template</value>
   </data>
   <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
     <value>¡Aiursoft Template es nuestra elección definitiva para proyectos empresariales! Está construido para desarrolladores y es ligero pero potente. Podemos omitir todo el código repetitivo para autenticación y gestión de usuarios.</value>
@@ -138,9 +138,6 @@
   <data name="FAQ" xml:space="preserve">
     <value>Preguntas frecuentes</value>
   </data>
-  <data name="faster" xml:space="preserve">
-    <value>más rápido</value>
-  </data>
   <data name="Features" xml:space="preserve">
     <value>Características</value>
   </data>
@@ -149,9 +146,6 @@
   </data>
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>Incluye un sistema de gestión de archivos integrado con compresión automática de avatares.</value>
-  </data>
-  <data name="for any inquiries or to report issues." xml:space="preserve">
-    <value>para cualquier consulta o para informar de problemas.</value>
   </data>
   <data name="Free" xml:space="preserve">
     <value>Gratis</value>
@@ -195,14 +189,14 @@
   <data name="Join our community and start building today!" xml:space="preserve">
     <value>¡Únete a nuestra comunidad y empieza a construir hoy!</value>
   </data>
+  <data name="MIT Licence" xml:space="preserve">
+    <value>Licencia MIT</value>
+  </data>
   <data name="Markdown To HTML" xml:space="preserve">
     <value>Markdown a HTML</value>
   </data>
   <data name="Master Your Music Theory" xml:space="preserve">
     <value>Domina tu teoría musical</value>
-  </data>
-  <data name="MIT Licence" xml:space="preserve">
-    <value>Licencia MIT</value>
   </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>Los modelos se validan en ambos lados, cliente y servidor, basándose en las anotaciones de datos.</value>
@@ -279,11 +273,11 @@
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>Modo oscuro inteligente que se adapta automáticamente a la configuración del sistema del usuario.</value>
   </data>
-  <data name="Start a new project" xml:space="preserve">
-    <value>Iniciar un nuevo proyecto</value>
-  </data>
   <data name="Start Practice" xml:space="preserve">
     <value>Empezar práctica</value>
+  </data>
+  <data name="Start a new project" xml:space="preserve">
+    <value>Iniciar un nuevo proyecto</value>
   </data>
   <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
     <value>Admite tanto variables de entorno como ajustes basados en base de datos, con prioridad automática a las variables de entorno para sobrescribir de forma fluida.</value>
@@ -335,6 +329,12 @@
   </data>
   <data name="You&apos;ll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
     <value>Necesitarás el SDK de .NET 10, npm y tu IDE favorito, como Visual Studio o JetBrains Rider. Puedes encontrar la guía de configuración completa en nuestra documentación.</value>
+  </data>
+  <data name="faster" xml:space="preserve">
+    <value>más rápido</value>
+  </data>
+  <data name="for any inquiries or to report issues." xml:space="preserve">
+    <value>para cualquier consulta o para informar de problemas.</value>
   </data>
 
 </root>

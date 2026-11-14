@@ -39,11 +39,11 @@
   <data name="A modern, feature-rich, and highly extensible foundation for your next web application." xml:space="preserve">
     <value>モダンで機能豊富、かつ高度に拡張可能な基盤を、あなたの次のWebアプリケーションに提供します。</value>
   </data>
-  <data name="Achieve more with Aiursoft Template" xml:space="preserve">
-    <value>Aiursoft Templateでさらに多くのことを実現</value>
-  </data>
   <data name="AI-Powered Translations" xml:space="preserve">
     <value>AIによる翻訳</value>
+  </data>
+  <data name="Achieve more with Aiursoft Template" xml:space="preserve">
+    <value>Aiursoft Templateでさらに多くのことを実現</value>
   </data>
   <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
     <value>Aiursoft Templateは、エンタープライズプロジェクトにおける私たちの確固たる選択です！開発者のために構築されており、軽量でありながら強力です。認証やユーザー管理に関する定型コードをすべて省略できます。</value>
@@ -138,9 +138,6 @@
   <data name="FAQ" xml:space="preserve">
     <value>よくある質問</value>
   </data>
-  <data name="faster" xml:space="preserve">
-    <value>より迅速に</value>
-  </data>
   <data name="Features" xml:space="preserve">
     <value>機能</value>
   </data>
@@ -149,9 +146,6 @@
   </data>
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>自動アバター圧縮機能を備えた組み込みファイル管理システムを特徴としています。</value>
-  </data>
-  <data name="for any inquiries or to report issues." xml:space="preserve">
-    <value>お問い合わせや問題の報告はこちらへ。</value>
   </data>
   <data name="Free" xml:space="preserve">
     <value>無料</value>
@@ -195,14 +189,14 @@
   <data name="Join our community and start building today!" xml:space="preserve">
     <value>コミュニティに参加して、今すぐ構築を始めましょう！</value>
   </data>
+  <data name="MIT Licence" xml:space="preserve">
+    <value>MITライセンス</value>
+  </data>
   <data name="Markdown To HTML" xml:space="preserve">
     <value>MarkdownからHTMLへ</value>
   </data>
   <data name="Master Your Music Theory" xml:space="preserve">
     <value>音楽理論をマスターしよう</value>
-  </data>
-  <data name="MIT Licence" xml:space="preserve">
-    <value>MITライセンス</value>
   </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>モデルはデータ注釈に基づいて、クライアントおよびサーバーの両方で検証されます。</value>
@@ -279,11 +273,11 @@
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>ユーザーのシステム設定に自動的に適応するスマートダークモード。</value>
   </data>
-  <data name="Start a new project" xml:space="preserve">
-    <value>新規プロジェクトを開始</value>
-  </data>
   <data name="Start Practice" xml:space="preserve">
     <value>練習を開始する</value>
+  </data>
+  <data name="Start a new project" xml:space="preserve">
+    <value>新規プロジェクトを開始</value>
   </data>
   <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
     <value>環境変数とデータベースベースの設定の両方をサポートしており、環境変数に自動的に優先順位が与えられ、スムーズな上書きが可能になります。</value>
@@ -335,6 +329,12 @@
   </data>
   <data name="You&apos;ll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
     <value>.NET 10 SDK、npm、そしてVisual StudioやJetBrains Riderのようなお好みのIDEが必要です。完全なセットアップガイドはドキュメントでご覧いただけます。</value>
+  </data>
+  <data name="faster" xml:space="preserve">
+    <value>より迅速に</value>
+  </data>
+  <data name="for any inquiries or to report issues." xml:space="preserve">
+    <value>お問い合わせや問題の報告はこちらへ。</value>
   </data>
 
 </root>

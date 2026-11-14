@@ -198,11 +198,11 @@
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>Розумний темний режим, який автоматично адаптується до системних налаштувань користувача.</value>
   </data>
-  <data name="Start a new project" xml:space="preserve">
-    <value>Розпочати новий проєкт</value>
-  </data>
   <data name="Start Practice" xml:space="preserve">
     <value>Почати тренування</value>
+  </data>
+  <data name="Start a new project" xml:space="preserve">
+    <value>Розпочати новий проєкт</value>
   </data>
   <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
     <value>Підтримує як змінні середовища, так і налаштування, зберігаються в базі даних, з автоматичним пріоритетом для змінних середовища для безперервного перекриття.</value>

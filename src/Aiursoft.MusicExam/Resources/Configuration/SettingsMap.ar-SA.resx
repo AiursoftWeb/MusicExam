@@ -45,14 +45,14 @@
   <data name="Project Name" xml:space="preserve">
     <value>اسم المشروع</value>
   </data>
+  <data name="The ICP license number for China mainland users. Leave empty to hide." xml:space="preserve">
+    <value>رقم ترخيص ICP للمستخدمين في البر الرئيسي للصين. اتركه فارغًا لإخفائه.</value>
+  </data>
   <data name="The brand logo displayed in the navbar and sidebar. Will fallback to default logo if not set." xml:space="preserve">
     <value>الشعار الخاص بالعلامة التجارية المُعرض في شريط التنقل والشريط الجانبي. سيتم التراجع إلى الشعار الافتراضي إذا لم يتم تعيينه.</value>
   </data>
   <data name="The brand name displayed in the footer." xml:space="preserve">
     <value>اسم العلامة التجارية المُعرض في التذييل.</value>
-  </data>
-  <data name="The ICP license number for China mainland users. Leave empty to hide." xml:space="preserve">
-    <value>رقم ترخيص ICP للمستخدمين في البر الرئيسي للصين. اتركه فارغًا لإخفائه.</value>
   </data>
   <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
     <value>الشعار الخاص بالمشروع يتم عرضه في شريط التنقل والقدم. يدعم jpg، png، svg.</value>
