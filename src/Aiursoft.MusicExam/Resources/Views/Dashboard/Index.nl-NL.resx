@@ -198,11 +198,11 @@
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>Slimme donkere modus die automatisch aanpast aan de systeeminstellingen van de gebruiker.</value>
   </data>
-  <data name="Start a new project" xml:space="preserve">
-    <value>Start een nieuw project</value>
-  </data>
   <data name="Start Practice" xml:space="preserve">
     <value>Start met oefenen</value>
+  </data>
+  <data name="Start a new project" xml:space="preserve">
+    <value>Start een nieuw project</value>
   </data>
   <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
     <value>Ondersteunt zowel omgevingsvariabelen als database-gebaseerde instellingen, met automatische prioriteit voor omgevingsvariabelen voor naadloze overschrijvingen.</value>

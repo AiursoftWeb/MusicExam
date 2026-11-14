@@ -54,14 +54,14 @@
   <data name="Paper Title" xml:space="preserve">
     <value>Judul Kertas Soal</value>
   </data>
-  <data name="paper(s)" xml:space="preserve">
-    <value>kertas(u)</value>
-  </data>
   <data name="Question Bank Name" xml:space="preserve">
     <value>Nama Bank Soal</value>
   </data>
   <data name="School / Level" xml:space="preserve">
     <value>Sekolah / Tingkat</value>
+  </data>
+  <data name="paper(s)" xml:space="preserve">
+    <value>kertas(u)</value>
   </data>
 
 </root>

@@ -54,14 +54,14 @@
   <data name="Paper Title" xml:space="preserve">
     <value>Título del examen</value>
   </data>
-  <data name="paper(s)" xml:space="preserve">
-    <value>examen(es)</value>
-  </data>
   <data name="Question Bank Name" xml:space="preserve">
     <value>Nombre del banco de preguntas</value>
   </data>
   <data name="School / Level" xml:space="preserve">
     <value>Centro / Nivel</value>
+  </data>
+  <data name="paper(s)" xml:space="preserve">
+    <value>examen(es)</value>
   </data>
 
 </root>

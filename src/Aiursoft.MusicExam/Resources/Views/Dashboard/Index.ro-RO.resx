@@ -198,11 +198,11 @@
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>Mod întunecat inteligent care se adaptează automat la setările de sistem ale utilizatorului.</value>
   </data>
-  <data name="Start a new project" xml:space="preserve">
-    <value>Începeți un proiect nou</value>
-  </data>
   <data name="Start Practice" xml:space="preserve">
     <value>Începeți exersarea</value>
+  </data>
+  <data name="Start a new project" xml:space="preserve">
+    <value>Începeți un proiect nou</value>
   </data>
   <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
     <value>Suportă atât variabilele de mediu, cât și setările stocate în baza de date, cu prioritate automată acordată variabilelor de mediu pentru suprascrieri fără efort.</value>

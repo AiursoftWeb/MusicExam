@@ -198,11 +198,11 @@
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>智能深色模式，可自动适应用户系统设置。</value>
   </data>
-  <data name="Start a new project" xml:space="preserve">
-    <value>开始新项目</value>
-  </data>
   <data name="Start Practice" xml:space="preserve">
     <value>开始练习</value>
+  </data>
+  <data name="Start a new project" xml:space="preserve">
+    <value>开始新项目</value>
   </data>
   <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
     <value>支持环境变量和数据库配置，环境变量具有自动优先级，可实现无缝覆盖。</value>

@@ -198,11 +198,11 @@
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>Modo oscuro inteligente que se adapta automáticamente a la configuración del sistema del usuario.</value>
   </data>
-  <data name="Start a new project" xml:space="preserve">
-    <value>Comenzar un nuevo proyecto</value>
-  </data>
   <data name="Start Practice" xml:space="preserve">
     <value>Comenzar Práctica</value>
+  </data>
+  <data name="Start a new project" xml:space="preserve">
+    <value>Comenzar un nuevo proyecto</value>
   </data>
   <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
     <value>Soporta tanto variables de entorno como ajustes basados en base de datos, con prioridad automática a las variables de entorno para sobrescribir de forma fluida.</value>

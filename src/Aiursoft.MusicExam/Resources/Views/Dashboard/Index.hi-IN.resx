@@ -198,11 +198,11 @@
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>स्मार्ट डार्क मोड जो स्वचालित रूप से उपयोगकर्ता की सिस्टम सेटिंग्स के अनुकूल हो जाता है।</value>
   </data>
-  <data name="Start a new project" xml:space="preserve">
-    <value>नया प्रोजेक्ट शुरू करें</value>
-  </data>
   <data name="Start Practice" xml:space="preserve">
     <value>अभ्यास शुरू करें</value>
+  </data>
+  <data name="Start a new project" xml:space="preserve">
+    <value>नया प्रोजेक्ट शुरू करें</value>
   </data>
   <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
     <value>पर्यावरण चर के साथ-साथ डेटाबेस-आधारित सेटिंग्स का समर्थन करता है, जहां पर्यावरण चर को बिना किसी दिक्कत के ओवरराइड करने के लिए स्वचालित प्राथमिकता दी जाती है।</value>

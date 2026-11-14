@@ -39,11 +39,11 @@
   <data name="A modern, feature-rich, and highly extensible foundation for your next web application." xml:space="preserve">
     <value>Eine moderne, funktionsreiche und hochgradig erweiterbare Grundlage für Ihre nächste Webanwendung.</value>
   </data>
-  <data name="Achieve more with Aiursoft Template" xml:space="preserve">
-    <value>Erreichen Sie mehr mit Aiursoft Template</value>
-  </data>
   <data name="AI-Powered Translations" xml:space="preserve">
     <value>KI-gestützte Übersetzungen</value>
+  </data>
+  <data name="Achieve more with Aiursoft Template" xml:space="preserve">
+    <value>Erreichen Sie mehr mit Aiursoft Template</value>
   </data>
   <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
     <value>Aiursoft Template ist unsere endgültige Wahl für Unternehmensprojekte! Er wurde für Entwickler entwickelt und ist leichtgewichtig, aber dennoch leistungsstark. Wir können den gesamten Standardcode für Authentifizierung und Benutzerverwaltung überspringen.</value>
@@ -138,9 +138,6 @@
   <data name="FAQ" xml:space="preserve">
     <value>FAQ</value>
   </data>
-  <data name="faster" xml:space="preserve">
-    <value>schneller</value>
-  </data>
   <data name="Features" xml:space="preserve">
     <value>Funktionen</value>
   </data>
@@ -149,9 +146,6 @@
   </data>
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>Bietet ein integriertes Dateiverwaltungssystem mit automatischer Avatar-Komprimierung.</value>
-  </data>
-  <data name="for any inquiries or to report issues." xml:space="preserve">
-    <value>für Anfragen oder zum Melden von Problemen.</value>
   </data>
   <data name="Free" xml:space="preserve">
     <value>Kostenlos</value>
@@ -195,14 +189,14 @@
   <data name="Join our community and start building today!" xml:space="preserve">
     <value>Treten Sie unserer Community bei und beginnen Sie noch heute mit dem Entwickeln!</value>
   </data>
+  <data name="MIT Licence" xml:space="preserve">
+    <value>MIT-Lizenz</value>
+  </data>
   <data name="Markdown To HTML" xml:space="preserve">
     <value>Markdown zu HTML</value>
   </data>
   <data name="Master Your Music Theory" xml:space="preserve">
     <value>Beherrsche Deine Musiktheorie</value>
-  </data>
-  <data name="MIT Licence" xml:space="preserve">
-    <value>MIT-Lizenz</value>
   </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>Modelle werden auf Client- und Serverseite basierend auf Datenanmerkungen validiert.</value>
@@ -279,11 +273,11 @@
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>Intelligenter Dunkelmodus, der sich automatisch an die Systemeinstellungen des Benutzers anpasst.</value>
   </data>
-  <data name="Start a new project" xml:space="preserve">
-    <value>Ein neues Projekt starten</value>
-  </data>
   <data name="Start Practice" xml:space="preserve">
     <value>Übung starten</value>
+  </data>
+  <data name="Start a new project" xml:space="preserve">
+    <value>Ein neues Projekt starten</value>
   </data>
   <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
     <value>Unterstützt sowohl Umgebungsvariablen als auch datenbankbasierte Einstellungen, wobei Umgebungsvariablen automatisch Vorrang erhalten, um nahtlose Überschreibungen zu ermöglichen.</value>
@@ -335,6 +329,12 @@
   </data>
   <data name="You&apos;ll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
     <value>Sie benötigen das .NET 10 SDK, npm und Ihre bevorzugte IDE, wie Visual Studio oder JetBrains Rider. Die vollständige Anleitung zur Einrichtung finden Sie in unserer Dokumentation.</value>
+  </data>
+  <data name="faster" xml:space="preserve">
+    <value>schneller</value>
+  </data>
+  <data name="for any inquiries or to report issues." xml:space="preserve">
+    <value>für Anfragen oder zum Melden von Problemen.</value>
   </data>
 
 </root>

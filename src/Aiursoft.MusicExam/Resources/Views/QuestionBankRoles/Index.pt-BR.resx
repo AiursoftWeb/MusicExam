@@ -54,14 +54,14 @@
   <data name="Paper Title" xml:space="preserve">
     <value>Título do Questionário</value>
   </data>
-  <data name="paper(s)" xml:space="preserve">
-    <value>prova(s)</value>
-  </data>
   <data name="Question Bank Name" xml:space="preserve">
     <value>Nome da Banca de Questões</value>
   </data>
   <data name="School / Level" xml:space="preserve">
     <value>Escola / Nível</value>
+  </data>
+  <data name="paper(s)" xml:space="preserve">
+    <value>prova(s)</value>
   </data>
 
 </root>
