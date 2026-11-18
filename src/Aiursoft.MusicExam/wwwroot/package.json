@@ -5,11 +5,13 @@
   "author": "Anduin Xue",
   "license": "MIT",
   "dependencies": {
+    "@aiursoft/uistack": "^2.0.25",
     "bootstrap-icons": "1.13.2",
     "sortablejs": "1.15.7",
     "dropify": "^0.2.2"
   },
   "keep": {
+    "@aiursoft/uistack": "dist",
     "bootstrap-icons": "font",
     "sortablejs": "Sortable.min.js",
     "dropify": "dist"
