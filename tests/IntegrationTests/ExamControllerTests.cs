@@ -116,4 +116,32 @@ public class ExamControllerTests : TestBase
         await db.SaveChangesAsync();
         return question;
     }
+
+    [TestMethod]
+    public async Task Review_Submission_ReturnsSuccess()
+    {
+        await LoginAsAdmin();
+
+        // Submit an exam to create submission
+        var postResponse = await PostForm($"/Exam/Result/{SeededExamPaperId}", new Dictionary<string, string>(), tokenUrl: $"/Exam/Take/{SeededExamPaperId}");
+        Assert.AreEqual(HttpStatusCode.OK, postResponse.StatusCode);
+
+        Guid submissionId;
+        using (var scope = Server!.Services.CreateScope())
+        {
+            var db = scope.ServiceProvider.GetRequiredService<TemplateDbContext>();
+            var admin = await db.Users.FirstAsync(u => u.UserName == "admin");
+            var sub = await db.ExamPaperSubmissions
+                .Where(s => s.UserId == admin.Id)
+                .OrderByDescending(s => s.SubmissionTime)
+                .FirstAsync();
+            submissionId = sub.Id;
+        }
+
+        var reviewResponse = await Http.GetAsync($"/Exam/Review/{submissionId}");
+        Assert.AreEqual(HttpStatusCode.OK, reviewResponse.StatusCode);
+        var html = await reviewResponse.Content.ReadAsStringAsync();
+        Assert.Contains("Test Paper", html);
+    }
+
 }

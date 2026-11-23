@@ -13,6 +13,12 @@ public class QuestionsControllerTests : TestBase
         // 1. Login as admin
         await LoginAsAdmin();
 
+        var indexResp = await Http.GetAsync("/Questions");
+        Assert.AreEqual(HttpStatusCode.OK, indexResp.StatusCode);
+
+        var createPaperGet = await Http.GetAsync("/Questions/CreatePaper");
+        Assert.AreEqual(HttpStatusCode.OK, createPaperGet.StatusCode);
+
         int schoolId;
         using (var scope = Server!.Services.CreateScope())
         {
@@ -46,6 +52,22 @@ public class QuestionsControllerTests : TestBase
         }
 
         // 3. Create Question
+        var createQGet = await Http.GetAsync($"/Questions/Create/{paperId}");
+        Assert.AreEqual(HttpStatusCode.OK, createQGet.StatusCode);
+
+        var editPaperGet = await Http.GetAsync($"/Questions/EditPaper/{paperId}");
+        Assert.AreEqual(HttpStatusCode.OK, editPaperGet.StatusCode);
+
+        var editPaperPost = await PostForm($"/Questions/EditPaper/{paperId}", new Dictionary<string, string>
+        {
+            { "PaperId", paperId.ToString() },
+            { "SchoolId", schoolId.ToString() },
+            { "Title", "Updated Paper Title " + Guid.NewGuid() },
+            { "Level", "6" },
+            { "Category", "Advanced" }
+        });
+        AssertRedirect(editPaperPost, "/Questions");
+
         var createQuestionUrl = $"/Questions/Create/{paperId}";
         var questionContent = "What is 1+1?";
         var createQResponse = await PostForm(createQuestionUrl, new Dictionary<string, string>
@@ -80,6 +102,9 @@ public class QuestionsControllerTests : TestBase
         }
 
         // 4. Edit Question
+        var editQGet = await Http.GetAsync($"/Questions/Edit/{questionId}");
+        Assert.AreEqual(HttpStatusCode.OK, editQGet.StatusCode);
+
         var editQuestionUrl = $"/Questions/Edit/{questionId}";
         var newContent = "What is 2+2?";
         var editQResponse = await PostForm(editQuestionUrl, new Dictionary<string, string>

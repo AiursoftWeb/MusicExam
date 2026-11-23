@@ -13,6 +13,9 @@ public class ChangesTests : TestBase
     {
         await LoginAsAdmin();
 
+        var changesResp = await Http.GetAsync("/Changes/History");
+        Assert.AreEqual(System.Net.HttpStatusCode.OK, changesResp.StatusCode);
+
         // 1. Create a user
         var userName = $"test-{Guid.NewGuid()}";
         var email = $"{userName}@aiursoft.com";
@@ -83,6 +86,9 @@ public class ChangesTests : TestBase
     public async Task TestActiveUserTimeSpans()
     {
         await LoginAsAdmin();
+
+        var changesResp = await Http.GetAsync("/Changes/History");
+        Assert.AreEqual(System.Net.HttpStatusCode.OK, changesResp.StatusCode);
 
         // 1. Create a user
         var userName = $"test-span-{Guid.NewGuid()}";
