@@ -25,6 +25,8 @@ public abstract class TestBase
 
     protected int SeededExamPaperId { get; set; }
 
+    protected virtual string[] ServerArguments => [];
+
     [TestInitialize]
     public virtual async Task CreateServer()
     {
@@ -33,14 +35,17 @@ public abstract class TestBase
         _storagePath = Directory.CreateTempSubdirectory("AiursoftTests-").FullName;
         try
         {
-            Server = await AppAsync<Startup>([$"Storage:Path={_storagePath}"], port: reservation.Port);
+            Server = await AppAsync<Startup>([..ServerArguments, $"Storage:Path={_storagePath}"], port: reservation.Port);
             reservation.ConfigureServer(Server);
             await Server.UpdateDbAsync<TemplateDbContext>();
             // Each test owns its identity data; application seeding must never clear it.
-            var context = Server.Services.GetRequiredService<TemplateDbContext>();
-            context.Users.RemoveRange(context.Users);
-            context.Roles.RemoveRange(context.Roles);
-            await context.SaveChangesAsync();
+            await using (var identityScope = Server.Services.CreateAsyncScope())
+            {
+                var context = identityScope.ServiceProvider.GetRequiredService<TemplateDbContext>();
+                context.Users.RemoveRange(context.Users);
+                context.Roles.RemoveRange(context.Roles);
+                await context.SaveChangesAsync();
+            }
             await Server.SeedAsync();
 
             using (var scope = Server.Services.CreateScope())
