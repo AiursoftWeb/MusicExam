@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="A comprehensive platform designed to help you excel in your music exams. Practice with thousands of questions from official sources." xml:space="preserve">
+    <value>Sveobuhvatna platforma osmišljena da vam pomogne odlično položiti glazbene ispite. Vježbajte s tisućama pitanja iz službenih izvora.</value>
+  </data>
+  <data name="All content is based on the official curriculum of major music conservatories." xml:space="preserve">
+    <value>Sav sadržaj temelji se na službenom kurikulumu vodećih glazbenih konzervatorija.</value>
+  </data>
+  <data name="Comprehensive Question Bank" xml:space="preserve">
+    <value>Sveobuhvatna banka pitanja</value>
+  </data>
+  <data name="Comprehensive Question Bank, Realistic Mock Exams, Detailed Analytics." xml:space="preserve">
+    <value>Sveobuhvatna banka pitanja, realistične simulirane ispite, detaljne analitike.</value>
+  </data>
+  <data name="Cross-Platform Access" xml:space="preserve">
+    <value>Pristup na više platformi</value>
+  </data>
+  <data name="Detailed Analytics" xml:space="preserve">
+    <value>Detaljne analitike</value>
+  </data>
+  <data name="Features" xml:space="preserve">
+    <value>Mogućnosti</value>
+  </data>
+  <data name="Free" xml:space="preserve">
+    <value>Besplatno</value>
+  </data>
+  <data name="Master Your Music Theory" xml:space="preserve">
+    <value>Osvojite svoju glazbenu teoriju</value>
+  </data>
+  <data name="Official Curriculum" xml:space="preserve">
+    <value>Zvanični kurikulum</value>
+  </data>
+  <data name="Open Source" xml:space="preserve">
+    <value>Otvoreni izvor</value>
+  </data>
+  <data name="Practice anytime, anywhere. Our platform is fully responsive and works on all your devices." xml:space="preserve">
+    <value>Vježbajte bilo kada, bilo gdje. Naša platforma je potpuno responzivna i radi na svim vašim uređajima.</value>
+  </data>
+  <data name="Practice with thousands of questions from official sources, covering all levels and topics." xml:space="preserve">
+    <value>Vježbajte s tisućama pitanja iz službenih izvora, koja pokrivaju sve razine i teme.</value>
+  </data>
+  <data name="Progress" xml:space="preserve">
+    <value>Napredak</value>
+  </data>
+  <data name="Realistic Mock Exams" xml:space="preserve">
+    <value>Realistične simulirane ispite</value>
+  </data>
+  <data name="Sharpen your sight-singing skills with a vast library of melodies and interactive exercises." xml:space="preserve">
+    <value>Usavršite svoje vještine solfeggia s opsežnom bibliotekom melodija i interaktivnih vježbi.</value>
+  </data>
+  <data name="Sight-Singing Practice" xml:space="preserve">
+    <value>Vježbanje pjevanja po pogledu</value>
+  </data>
+  <data name="Simulate the real exam environment with timed mock tests and get a feel for the actual challenge." xml:space="preserve">
+    <value>Simulirajte stvarno ispitno okruženje s vremenski ograničenim probnim ispitima i osjetite stvarno izazov.</value>
+  </data>
+  <data name="Start Practice" xml:space="preserve">
+    <value>Počni vježbati</value>
+  </data>
+  <data name="Track your performance, view detailed score reports, and identify your strengths and weaknesses." xml:space="preserve">
+    <value>Pratite svoj učinak, pregledajte detaljne izvještaje o ocjenama i prepoznajte svoje snage i slabosti.</value>
+  </data>
+  <data name="Why choose Music Exam Platform?" xml:space="preserve">
+    <value>Zašto odabrati Music Exam Platform?</value>
+  </data>
+
+</root>
